@@ -1,0 +1,86 @@
+# How each question in tension_questions.yaml maps onto the non-Polymarket sources.
+#
+# tension_questions.yaml is the single source of the questions, their ids and their Polymarket
+# markets; it is copied verbatim from EthanC100/gold-events. This file only adds the other
+# sources. Every mismatch between a source's question and ours is written into `note`, and the
+# snapshot copies that note into the notes column of data/panel_log.csv.
+#
+# metaculus:   post_id of a binary Metaculus question, or `search` text used to auto-match the
+#              closest open binary question when post_id is null (the match is flagged in notes).
+#              `invert: true` logs 1 - P(Yes). Needs METACULUS_TOKEN (the API refuses anonymous
+#              calls). Untested here for that reason - see README.
+# swift_centre: a Substack post slug and a regex for the question label as it appears in the post,
+#              immediately before "Swift Centre Forecast ...: NN%". `as_of` is the date the forecast
+#              was made, when the post says so. `keywords` are used to flag newer posts that may
+#              cover the question so the mapping can be updated by hand.
+# gjopen:      a Good Judgment Open question id and the answer labels whose crowd percentages
+#              add up to P(question as worded). `keywords` as above.
+# Any source left out, or set to null, is logged as NaN with the reason in notes.
+
+matched_on: 2026-10-28
+
+questions:
+  q1:   # US-Iran ceasefire still in effect on 31 December 2026?
+    metaculus:
+      post_id: null
+      search: "US Iran ceasefire 2026"
+      note: "post_id not yet matched: the Metaculus API refused anonymous search; set METACULUS_TOKEN or fill post_id by hand"
+    swift_centre: null
+    swift_centre_note: "no Swift Centre forecast on a US-Iran ceasefire holding; their nearest, 'US and Iran agree to a permanent peace deal by 31st May 2026' (6.5% on 27 Apr 2026), is a different question and has expired"
+    swift_keywords: ["iran", "ceasefire"]
+    gjopen: null
+    gjopen_note: "no GJ Open question on a US-Iran ceasefire; GJO 5630 (US deploys armed forces to mainland Iran before 19 Dec 2026) is about ground deployment, not strikes, so it was not used"
+    gjopen_keywords: ["iran", "ceasefire"]
+
+  q2:   # Official Russia-Ukraine ceasefire agreed by 31 December 2026?
+    metaculus:
+      post_id: null
+      search: "Russia Ukraine ceasefire 2026"
+      note: "post_id not yet matched: the Metaculus API refused anonymous search; set METACULUS_TOKEN or fill post_id by hand"
+    swift_centre:
+      post: "polymarket-vs-swift-centre-round"
+      label: "Russia-Ukraine ceasefire in 2026\\?"
+      as_of: "2026-01-27"
+      note: "Swift Centre forecast made in late January 2026 (restated 1 May 2026) for 'Russia and Ukraine agreeing to an indefinite ceasefire or peace agreement this year'; a one-off published number, not updated since, carried forward"
+    swift_keywords: ["ukraine", "russia", "ceasefire"]
+    gjopen: null
+    gjopen_note: "no GJ Open question on a Russia-Ukraine ceasefire as of 2026-10-28"
+    gjopen_keywords: ["ukraine", "russia", "ceasefire"]
+
+  q3:   # Official Russia-Ukraine ceasefire agreed by 30 June 2027?
+    metaculus:
+      post_id: null
+      search: "Russia Ukraine ceasefire 2027"
+      note: "post_id not yet matched: the Metaculus API refused anonymous search; set METACULUS_TOKEN or fill post_id by hand"
+    swift_centre: null
+    swift_centre_note: "Swift Centre has only the 2026 ceasefire forecast (see q2), no 2027 horizon"
+    swift_keywords: ["ukraine", "russia", "ceasefire"]
+    gjopen: null
+    gjopen_note: "no GJ Open question on a Russia-Ukraine ceasefire as of 2026-10-28"
+    gjopen_keywords: ["ukraine", "russia", "ceasefire"]
+
+  q4:   # Sudan ceasefire agreed by 31 December 2026?
+    metaculus:
+      post_id: null
+      search: "Sudan ceasefire SAF RSF"
+      note: "post_id not yet matched: the Metaculus API refused anonymous search; set METACULUS_TOKEN or fill post_id by hand"
+    swift_centre: null
+    swift_centre_note: "no Swift Centre forecast on Sudan"
+    swift_keywords: ["sudan"]
+    gjopen: null
+    gjopen_note: "no GJ Open question on Sudan as of 2026-10-28"
+    gjopen_keywords: ["sudan"]
+
+  q5:   # US or Israeli strikes on Iranian territory resume by 31 March 2027?
+    metaculus:
+      post_id: null
+      search: "strike Iran 2027"
+      note: "post_id not yet matched: the Metaculus API refused anonymous search; set METACULUS_TOKEN or fill post_id by hand"
+    swift_centre: null
+    swift_centre_note: "Swift Centre's 'US military strike on Iran by March 31, 2026' (68%) resolved Yes in February 2026 and does not cover a resumption"
+    swift_keywords: ["iran", "strike"]
+    gjopen:
+      question_id: 5487
+      yes_answers: ["Before 24 July 2026", "Between 24 July 2026 and 17 September 2026", "Between 18 September 2026 and 10 December 2026"]
+      note: "GJO 5487 'When will the IDF next attempt a military strike within Iran?': P(before 11 Dec 2026) = sum of the dated buckets. Differences: Israel only (no US strikes); 'attempt' rather than impact; deadline 10 Dec 2026, not 31 Mar 2027, so it is a lower bound on our question"
+    gjopen_keywords: ["iran", "strike"]

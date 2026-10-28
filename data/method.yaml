@@ -1,0 +1,6 @@
+# Parameters of the live aggregation (forecast_panel/aggregate.py). See reports/method.md.
+extremizing_a: 1.5        # exponent of the logit extremizing transform; chosen from reports/validation.md
+brier_floor: 0.01         # a source's Brier is floored here before taking 1/Brier, so no weight is infinite
+unscored_brier: 0.25      # a source with no resolved questions yet is weighted as if its Brier were this (a 50% forecast)
+clip: 0.01                # probabilities are clipped to [clip, 1 - clip] before extremizing
+min_sources: 1            # aggregate only when at least this many sources have a value on the day

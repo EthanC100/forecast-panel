@@ -1,0 +1,61 @@
+name: Daily panel snapshot
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # daily 06:17 UTC; the Monday run also rebuilds the scorecard
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The human columns (my_prob, claude_prob) live in gold-events/data/forward_log.csv. That repo is
+      # private, so a token with read access to it is needed (secret GOLD_EVENTS_TOKEN, a fine-grained
+      # PAT with Contents: read on EthanC100/gold-events). Without it the two columns are logged as NaN
+      # with the reason in the notes column.
+      - name: Check out gold-events (human forecasts)
+        id: gold
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: EthanC100/gold-events
+          token: ${{ secrets.GOLD_EVENTS_TOKEN || github.token }}
+          path: gold-events
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Snapshot every source
+        env:
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+          GOLD_EVENTS_DIR: ${{ steps.gold.outcome == 'success' && format('{0}/gold-events', github.workspace) || '' }}
+        run: python snapshot.py
+
+      - name: Score (Mondays and manual runs)
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python score.py
+          else
+            echo "not Monday: scorecard untouched"
+          fi
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/panel_log.csv data/aggregate_log.csv reports/panel_latest.md reports/scorecard.md
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "Panel snapshot: $(date -u +%Y-%m-%d)"
+            git push
+          fi

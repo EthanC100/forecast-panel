@@ -1,0 +1,6 @@
+date,question_id,aggregate_plain,aggregate_extremized,n_sources,weights,extremizing_a
+2026-10-28,q1,0.2650,0.1780,1,"{""polymarket"": 1.0}",1.5000
+2026-10-28,q2,0.1925,0.1043,2,"{""polymarket"": 0.5, ""swift_centre"": 0.5}",1.5000
+2026-10-28,q3,0.5400,0.5598,1,"{""polymarket"": 1.0}",1.5000
+2026-10-28,q4,0.1050,0.0386,1,"{""polymarket"": 1.0}",1.5000
+2026-10-28,q5,0.5151,0.5226,2,"{""gjopen"": 0.5, ""polymarket"": 0.5}",1.5000

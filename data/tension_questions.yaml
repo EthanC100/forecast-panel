@@ -1,0 +1,83 @@
+# Fixed list of questions for the weekly forward log (log_week.py).
+#
+# Supported sources:
+#   polymarket: any https://polymarket.com/event/<event-slug>/<market-slug> link; the probability
+#               of the first outcome (Yes) is logged, or 1 - P(Yes) when invert: true.
+#   metaculus:  any https://www.metaculus.com/questions/<id>/... link (binary questions);
+#               set METACULUS_TOKEN in the environment if the API refuses anonymous calls.
+# When a question resolves, set resolved: true and outcome: 1 (yes) or 0 (no) *for the question as
+# worded here* (so for an inverted market, outcome 1 means strikes resumed); score_week.py then
+# scores every logged probability for it.
+#
+# The ids are column suffixes in data/forward_log.csv (market_prob_<id>, my_prob_<id>),
+# so keep them fixed. Market matching done 2026-10-28 via the Polymarket public API; each
+# market's resolution text was read and the differences from the question are noted below.
+
+questions:
+  - id: q1
+    question: "US-Iran ceasefire still in effect on 31 December 2026?"
+    source: polymarket
+    url: "https://polymarket.com/event/us-iran-ceasefire-continues-throughptptpt/us-x-iran-ceasefire-continues-through-december-31-20260918"
+    market: "US x Iran ceasefire continues through December 31?"
+    resolution_date: 2026-12-31
+    resolution_note: >
+      Resolves Yes unless the United States carries out a qualifying air or missile strike that impacts
+      Iranian territory by 31 Dec 2026, 11:59 PM Iran time. Match is good but narrower than the wording:
+      "ceasefire continues" means only "no US strike on Iran"; Iranian action against US forces, or a
+      formal collapse without a strike, would not resolve it No.
+    resolved: false
+    outcome: null
+  - id: q2
+    question: "Official Russia-Ukraine ceasefire agreed by 31 December 2026?"
+    source: polymarket
+    url: "https://polymarket.com/event/russia-x-ukraine-ceasefire-agreement-by/russia-x-ukraine-ceasefire-agreement-by-december-31-2026"
+    market: "Russia x Ukraine ceasefire agreement by December 31, 2026?"
+    resolution_date: 2026-12-31
+    resolution_note: >
+      Resolves Yes if a mutually agreed, general suspension of direct military engagement is officially
+      announced by both countries (or confirmed by a consensus of credible reporting) by 31 Dec 2026,
+      11:59 PM ET, whether or not it has taken effect. Matches the wording. The sibling market
+      "Russia x Ukraine ceasefire by December 31, 2026" instead requires the ceasefire to take effect and
+      hold for 10 days, so it was not used.
+    resolved: false
+    outcome: null
+  - id: q3
+    question: "Official Russia-Ukraine ceasefire agreed by 30 June 2027?"
+    source: polymarket
+    url: "https://polymarket.com/event/russia-x-ukraine-ceasefire-agreement-by/russia-x-ukraine-ceasefire-agreement-by-june-30-2027"
+    market: "Russia x Ukraine ceasefire agreement by June 30, 2027?"
+    resolution_date: 2027-06-30
+    resolution_note: >
+      Same resolution rules as q2 with a 30 Jun 2027 deadline. Matches the wording.
+    resolved: false
+    outcome: null
+  - id: q4
+    question: "Sudan ceasefire agreed by 31 December 2026?"
+    source: polymarket
+    url: "https://polymarket.com/event/sudan-civil-war-ceasefire-by/sudan-civil-war-ceasefire-by-december-31-2026"
+    market: "Sudan civil war ceasefire by December 31, 2026?"
+    resolution_date: 2026-12-31
+    resolution_note: >
+      Resolves Yes on an official, publicly announced and mutually agreed halt in military engagement
+      between the Sudanese Armed Forces and the Rapid Support Forces by 31 Dec 2026, 11:59 PM ET;
+      humanitarian pauses and informal agreements do not count. Matches the wording, with the ceasefire
+      defined as SAF-RSF specifically.
+    resolved: false
+    outcome: null
+  - id: q5
+    question: "US or Israeli strikes on Iranian territory resume by 31 March 2027?"
+    source: polymarket
+    url: "https://polymarket.com/event/israel-x-iran-ceasefire-continues-throughptptpt-20260716224448963/israel-x-iran-ceasefire-continues-through-december-31-415"
+    market: "Israel x Iran ceasefire continues through December 31?"
+    invert: true
+    resolution_date: 2026-12-31
+    resolution_note: >
+      NO LIVE MARKET MATCHES THIS QUESTION. The "US/Israel strikes Iran by ..." event is closed (its
+      31 Dec 2026 market already resolved Yes, strikes having occurred earlier in 2026), and no market
+      exists for strikes resuming by 31 Mar 2027. Closest live market: "Israel x Iran ceasefire continues
+      through December 31?", logged inverted (1 - P(Yes)) as the probability that strikes resume.
+      Differences: (1) covers Israel-Iran only; US strikes are covered separately by q1's market;
+      (2) it resolves No on a qualifying strike by EITHER side, so an Iranian strike on Israel also counts
+      as "resumed"; (3) the deadline is 31 Dec 2026, not 31 Mar 2027. Replace when a 2027 market appears.
+    resolved: false
+    outcome: null
