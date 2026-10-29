@@ -108,11 +108,15 @@ those sources show red on the Status page and the keyless fallbacks carry the da
 **Inauguration date.** Brazil's presidential inauguration is entered as **5 January 2027**, not 1
 January. Constitutional Amendment 111/2021 moved it, starting with the president elected in 2026.
 
-**Attention score.** For each event query, the share of all GDELT-monitored articles that match it
-over the last 30 days, divided by the median share across that country's event queries. 1.0 means
-the coverage this country's catalysts usually get. An event is **under-attended** when its
-importance is 3, its score is below 0.5 and it is 30 or more days away. Daily shares are kept in
-`attention.json`.
+**Attention score.** For each event, the share of all GDELT-monitored articles matching its
+keywords over the last 30 days, divided by the same share over the past 12 months. 1.0 means normal
+coverage for those keywords, and 0.5 means half of normal. Each query is compared with its own
+history, not with other queries. A first version compared queries with each other, which mostly
+measured how broad their wording was, and it flagged every FOMC meeting. An event is
+**under-attended** when its importance is 3, its score is below 0.5 and it is 30 or more days away.
+For recurring meetings the 12-month normal includes past decision weeks, so scores sit below 1
+between meetings. One 12-month GDELT call per query gives both shares, and daily results are kept
+in `attention.json`.
 
 ## Editable tables
 

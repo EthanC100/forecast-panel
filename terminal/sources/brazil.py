@@ -162,7 +162,11 @@ def tesouro() -> list[str]:
 # B3 DI x pré reference rates
 # --------------------------------------------------------------------------
 
-B3_REF_URL = "https://www2.bmf.com.br/pages/portal/bmfbovespa/lumis/lum-taxas-referenciais-bmf-ptBR.asp"
+# The "lumis" page is a wrapper that loads the table from boletim1/TxRef1.asp in an iframe, so the
+# inner page is tried first and the wrapper second.
+B3_REF_URLS = ["https://www2.bmf.com.br/pages/portal/bmfbovespa/boletim1/TxRef1.asp",
+               "https://www2.bmf.com.br/pages/portal/bmfbovespa/lumis/lum-taxas-referenciais-bmf-ptBR.asp"]
+B3_REF_URL = B3_REF_URLS[0]
 # DI1 futures mature on the first business day of the contract month.
 DI_CONTRACTS = {"br.di.f27": ("Jan-27", "2027-01-04"), "br.di.f29": ("Jan-29", "2029-01-02"),
                 "br.di.f31": ("Jan-31", "2031-01-02")}
@@ -212,17 +216,25 @@ def b3_di() -> list[str]:
     older = [d for d in _weekdays(DI_BACKFILL_START, today - dt.timedelta(days=8)) if d.isoformat() not in have]
     todo = recent + sorted(older, reverse=True)[:DI_BACKFILL_PER_RUN]
     rows = {sid: [] for sid in DI_CONTRACTS}
-    empty, errors = [], 0
+    empty, errors, diag = [], 0, ""
     for d in todo:
-        try:
-            r = get(B3_REF_URL, params={"Data": d.strftime("%d/%m/%Y"), "Data1": d.strftime("%Y%m%d"), "slcTaxa": "PRE"},
-                    timeout=45, retries=0)
-        except Exception:  # noqa: BLE001
-            errors += 1
-            if errors >= 3 and not any(rows.values()):
-                raise
-            continue
-        curve = parse_b3_curve(r.text)
+        curve = []
+        for url in B3_REF_URLS:
+            try:
+                r = get(url, params={"Data": d.strftime("%d/%m/%Y"), "Data1": d.strftime("%Y%m%d"), "slcTaxa": "PRE"},
+                        timeout=45, retries=0)
+            except Exception as exc:  # noqa: BLE001
+                errors += 1
+                diag = diag or f"{url.split('/')[-1]}: {exc}"[:200]
+                continue
+            curve = parse_b3_curve(r.content.decode("latin-1", errors="replace"))
+            if curve:
+                break
+            if not diag:
+                text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", r.content.decode("latin-1", errors="replace"))).strip()
+                diag = f"{url.split('/')[-1]} HTTP {r.status_code}, {len(r.content)} bytes, no curve; text starts: {text[:160]!r}"
+        if errors >= 6 and not any(rows.values()):
+            raise RuntimeError(f"B3 unreachable ({diag})")
         if not curve:
             if d < today - dt.timedelta(days=3):
                 empty.append(d.isoformat())
@@ -232,7 +244,7 @@ def b3_di() -> list[str]:
             if v is not None:
                 rows[sid].append([d.isoformat(), v])
     if not any(rows.values()):
-        raise RuntimeError(f"B3 returned no DI curve for {len(todo)} dates tried")
+        raise RuntimeError(f"B3 returned no DI curve for {len(todo)} dates tried. First response: {diag}")
     written = []
     for sid, (label, mat) in DI_CONTRACTS.items():
         meta = {"id": sid, "name": f"DI1 {label} (DI x pré, interpolated)", "country": "BR", "unit": "% p.a. (252)",

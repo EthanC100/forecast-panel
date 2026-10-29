@@ -158,9 +158,9 @@
     const d = daysUntil(e.date), ua = underAttended(e);
     const att = e.attention;
     const attCell = el("div", { class: "att" },
-      att ? el("div", { class: "v", title: "30-day GDELT coverage relative to this country's typical catalyst (1.0 = normal)" }, "×" + fmt(att.score, 2)) : el("div", { class: "tiny" }, "no attention data"),
+      att ? el("div", { class: "v", title: "GDELT coverage of this event's keywords: last 30 days vs the past 12 months (1.0 = normal)" }, "×" + fmt(att.score, 2)) : el("div", { class: "tiny" }, "no attention data"),
       ua ? el("span", { class: "chip flag", title: "Importance 3, attention under half the country's normal, 30+ days away" }, "under-attended") : null,
-      att ? meta({ source: "GDELT", source_url: "https://api.gdeltproject.org/api/v2/doc/doc?query=" + encodeURIComponent(att.query) + "&mode=timelinevolraw&timespan=30d",
+      att ? meta({ source: "GDELT", source_url: "https://api.gdeltproject.org/api/v2/doc/doc?query=" + encodeURIComponent(att.query) + "&mode=timelinevolraw&timespan=12m",
         source_id: att.query, as_of: att.as_of, evidence: (S.summary && S.summary.evidence_defaults.attention) }, { noId: true }) : null);
     return el("div", { class: "ev" + (ua ? " under" : "") },
       el("div", { class: "date" }, e.date.slice(5), el("small", {}, weekday(e.date) + " · " + (d === 0 ? "today" : "in " + d + "d"))),
@@ -207,7 +207,7 @@
     ["ALL", "FR", "BR", "MX", "GLOBAL"].forEach((c) => fl.appendChild(el("button", { type: "button", class: S.calCountry === c ? "on" : "", onclick: () => { S.calCountry = c; route(); } }, c === "ALL" ? "All" : c === "GLOBAL" ? "Global" : COUNTRY[c])));
     fl.appendChild(el("button", { type: "button", class: S.calRoutine ? "on" : "", onclick: () => { S.calRoutine = !S.calRoutine; route(); }, title: "Weekly/monthly surveys (importance 1)" }, S.calRoutine ? "Routine shown" : "Routine hidden"));
     f.append(el("div", { class: "sec" }, el("h1", {}, "Calendar"), tabs), fl,
-      el("p", { class: "small muted" }, evs.length + " events · " + ua + " under-attended. Attention ×1.0 = the coverage this country's catalysts usually get (GDELT, last 30 days)."));
+      el("p", { class: "small muted" }, evs.length + " events · " + ua + " under-attended. Attention = news coverage of the event's keywords over the last 30 days relative to their normal level over the past year (GDELT); ×1.0 is normal."));
     const list = el("div", { class: "evlist" });
     evs.forEach((e) => list.appendChild(eventRow(e, cal.generated_at)));
     if (!evs.length) list.appendChild(el("div", { class: "empty" }, "No events in this window."));

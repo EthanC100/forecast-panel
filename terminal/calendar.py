@@ -3,15 +3,18 @@ Brazil/Mexico decisions and elections from em-macro, and a GDELT market-attentio
 
 Attention score (definition)
 ----------------------------
-For each event query q (GDELT DOC 2.0 keywords in events.yaml):
+For each event query q (GDELT DOC 2.0 keywords in events.yaml, which name the country or its
+institutions):
 
-    share(q)  = matching articles / all articles monitored by GDELT, over the last 30 days
-    normal(c) = median share(q) over the distinct event queries of the same country c
-    score     = share(q) / normal(c)        1.0 = as much coverage as this country's catalysts usually get
+    share_30d(q)  = matching articles / all articles monitored by GDELT, last 30 days
+    share_12m(q)  = the same over the last 12 months (the normal level for those keywords)
+    score         = share_30d(q) / share_12m(q)      1.0 = normal coverage; 0.5 = half of normal
 
-An event is **under-attended** when importance = 3, score < 0.5 (less than half the country's
-normal catalyst coverage) and it is 30 or more days away. Shares are kept per query per day in
-data/terminal/attention.json, so the measure has its own history for later phases.
+Each query is compared with its own normal level, not with other queries: comparing different
+queries mostly measures how broad their wording is (the first version did that and flagged every
+FOMC meeting). An event is **under-attended** when importance = 3, score < 0.5 and it is 30 or
+more days away. One 12-month GDELT call per query gives both shares; daily results are kept in
+data/terminal/attention.json as [date, matches_30d, total_30d, share_30d, share_12m].
 """
 
 from __future__ import annotations
@@ -219,14 +222,16 @@ def em_macro_events(notes: list[str]) -> list[dict]:
 _last_call = 0.0
 
 
-def gdelt_share(query: str, days: int = 30, tries: int = 4) -> tuple[float, float]:
-    """(matching articles, all monitored articles) over the last ``days`` days. Same request
-    pattern as tension-index: timelinevolraw, one call every 6 seconds, back-off on the notice."""
+def gdelt_share(query: str, days: int = 30, base_days: int = 365, tries: int = 4) -> tuple[float, float, float | None]:
+    """(matching articles over the last ``days``, all monitored articles over the same window,
+    share over the last ``base_days``). Same request pattern as tension-index: timelinevolraw,
+    one call every 6 seconds, back-off on the rate-limit notice."""
     global _last_call
     end = dt.datetime.now(dt.timezone.utc)
     params = {"query": query, "mode": "timelinevolraw", "format": "json",
-              "startdatetime": (end - dt.timedelta(days=days)).strftime("%Y%m%d%H%M%S"),
+              "startdatetime": (end - dt.timedelta(days=base_days)).strftime("%Y%m%d%H%M%S"),
               "enddatetime": end.strftime("%Y%m%d%H%M%S")}
+    cut = (end - dt.timedelta(days=days)).strftime("%Y%m%d")
     delay = 10.0
     for _ in range(tries):
         wait = 6.0 - (time.monotonic() - _last_call)
@@ -238,7 +243,10 @@ def gdelt_share(query: str, days: int = 30, tries: int = 4) -> tuple[float, floa
         if text.lstrip().startswith("{"):
             series = json.loads(text).get("timeline", [])
             rows = series[0]["data"] if series else []
-            return float(sum(x.get("value", 0) for x in rows)), float(sum(x.get("norm", 0) for x in rows))
+            recent = [x for x in rows if str(x.get("date", ""))[:8] >= cut]
+            v30, n30 = float(sum(x.get("value", 0) for x in recent)), float(sum(x.get("norm", 0) for x in recent))
+            v_all, n_all = float(sum(x.get("value", 0) for x in rows)), float(sum(x.get("norm", 0) for x in rows))
+            return v30, n30, (v_all / n_all) if n_all else None
         if r.status_code == 429 or "limit requests" in text:
             time.sleep(delay)
             delay = min(delay * 1.6, 90)
@@ -255,19 +263,19 @@ def refresh_attention(events: list[dict], notes: list[str], do_fetch: bool = Tru
             queries.setdefault(e["query"], e["country"])
     today = store.today()
     failures = successes = 0
-    deadline = time.monotonic() + 360  # the whole refresh gets six minutes
+    deadline = time.monotonic() + 540  # the whole refresh gets nine minutes
     if do_fetch:
         for q, country in queries.items():
             if time.monotonic() > deadline:
-                notes.append("GDELT attention refresh stopped at its 6-minute budget; remaining queries keep their last values.")
+                notes.append("GDELT attention refresh stopped at its 9-minute budget; remaining queries keep their last values.")
                 break
             rec = att["queries"].setdefault(q, {"country": country, "history": []})
             rec["country"] = country
             if rec["history"] and rec["history"][-1][0] == today:
                 continue
             try:
-                v, n = gdelt_share(q)
-                rec["history"].append([today, v, n, (v / n) if n else None])
+                v, n, base = gdelt_share(q)
+                rec["history"].append([today, v, n, (v / n) if n else None, base])
                 rec["last_success"] = store.now_iso()
                 rec.pop("error", None)
                 successes += 1
@@ -278,8 +286,9 @@ def refresh_attention(events: list[dict], notes: list[str], do_fetch: bool = Tru
                     notes.append(f"GDELT attention not refreshed today ({exc}); showing the last values.")
                     break
     att["updated_at"] = store.now_iso()
-    att["definition"] = ("score = 30-day GDELT share of articles matching the event query / median share of the same "
-                         "country's event queries; under-attended = importance 3, score < 0.5, 30+ days away")
+    att["definition"] = ("score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / "
+                         "the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, "
+                         "score < 0.5, 30+ days away")
     ATT_PATH.write_text(json.dumps(att, ensure_ascii=False, indent=1) + "\n")
     return att
 
@@ -287,19 +296,14 @@ def refresh_attention(events: list[dict], notes: list[str], do_fetch: bool = Tru
 def score_events(events: list[dict], att: dict) -> None:
     latest = {}
     for q, rec in att.get("queries", {}).items():
-        h = [r for r in rec.get("history", []) if r[3] is not None]
+        h = [r for r in rec.get("history", []) if len(r) >= 5 and r[3] is not None and r[4]]
         if h:
-            latest[q] = (h[-1][3], h[-1][0], rec.get("country"))
-    normal = {}
-    for c in {e["country"] for e in events}:
-        shares = [s for q, (s, _, qc) in latest.items() if qc == c and s and s > 0]
-        normal[c] = statistics.median(shares) if shares else None
+            latest[q] = h[-1]
     today = dt.date.today()
     for e in events:
-        share = latest.get(e["query"])
-        n = normal.get(e["country"])
-        if share and n:
-            e["attention"] = {"score": round(share[0] / n, 3), "share": share[0], "as_of": share[1],
+        r = latest.get(e["query"])
+        if r:
+            e["attention"] = {"score": round(r[3] / r[4], 3), "share_30d": r[3], "share_12m": r[4], "as_of": r[0],
                               "source": "GDELT DOC 2.0 (timelinevolraw)", "query": e["query"]}
         else:
             e["attention"] = None

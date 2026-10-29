@@ -68,20 +68,17 @@ def test_attention_score_and_under_attended():
     near = (dt.date.today() + dt.timedelta(days=10)).isoformat()
     events = [calendar.ev(far, "BR", "rates", "A", 3, "confirmed", "", "qa"),
               calendar.ev(near, "BR", "rates", "B", 3, "confirmed", "", "qb"),
-              calendar.ev(far, "BR", "fiscal", "C", 3, "confirmed", "", "qc")]
-    att = {"queries": {"qa": {"country": "BR", "history": [["d", 1, 100, 0.01]]},
-                       "qb": {"country": "BR", "history": [["d", 1, 100, 0.01]]},
-                       "qc": {"country": "BR", "history": [["d", 1, 100, 0.10]]}}}
+              calendar.ev(far, "GLOBAL", "rates", "C", 3, "confirmed", "", "qc"),
+              calendar.ev(far, "BR", "fiscal", "D", 3, "confirmed", "", "qd")]
+    att = {"queries": {"qa": {"history": [["d", 1, 100, 0.002, 0.001]]},         # twice its normal
+                       "qb": {"history": [["d", 1, 100, 0.0001, 0.001]]},        # a tenth of normal but near
+                       "qc": {"history": [["d", 1, 100, 0.00004, 0.0001]]},      # 0.4 of normal, far: flagged
+                       "qd": {"history": [["d", 1, 100, 0.01]]}}}                # old 4-field row: no score
     calendar.score_events(events, att)
-    assert events[0]["attention"]["score"] == pytest.approx(1.0)       # median share is 0.01
-    assert events[2]["attention"]["score"] == pytest.approx(10.0)
-    assert not events[0]["under_attended"]
-    att["queries"]["qa"]["history"][0][3] = 0.001
-    calendar.score_events(events, att)
-    assert events[0]["under_attended"]          # importance 3, score 0.1, 60 days away
-    att["queries"]["qb"]["history"][0][3] = 0.001
-    calendar.score_events(events, att)
-    assert not events[1]["under_attended"]      # only 10 days away
+    assert events[0]["attention"]["score"] == pytest.approx(2.0) and not events[0]["under_attended"]
+    assert events[1]["attention"]["score"] == pytest.approx(0.1) and not events[1]["under_attended"]
+    assert events[2]["attention"]["score"] == pytest.approx(0.4) and events[2]["under_attended"]
+    assert events[3]["attention"] is None and not events[3]["under_attended"]
 
 
 def test_stats_changes_and_z():
