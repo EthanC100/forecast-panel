@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-29T13:52:18Z",
+ "fetched_at": "2026-10-29T14:07:34Z",
  "source": "Polymarket Gamma API",
  "events": [
   {
@@ -10,7 +10,7 @@
    "question": "Macron out by December 31, 2026?",
    "slug": "macron-out-by-december-31-2026-20260728190614227",
    "yes": 0.0335,
-   "volume": 114960.31152200002,
+   "volume": 114960.311522,
    "end_date": "2027-01-01",
    "yes_token": "92851423033817768518321486213778110446684071477423410956369859539830113572619"
   },
@@ -33,8 +33,8 @@
    "id": "813508",
    "question": "Lecornu  out as French PM by December 31, 2026?",
    "slug": "lecornu-out-as-french-pm-by-december-31-2026",
-   "yes": 0.16,
-   "volume": 28668.302976,
+   "yes": 0.15,
+   "volume": 28668.302976000003,
    "end_date": "2027-01-01",
    "yes_token": "45247925163337548516450961452956274949575184679540134533316027163190332762926"
   },
@@ -70,7 +70,7 @@
    "question": "Will Jordan Bardella win the 2027 French presidential election?",
    "slug": "will-jordan-bardella-win-the-2027-french-presidential-election",
    "yes": 0.024,
-   "volume": 3176239.31614,
+   "volume": 3176359.3161400002,
    "end_date": "2027-04-19",
    "yes_token": "1114938555853162662375805609341386795965961002028313810409954359771505507177"
   },
@@ -82,7 +82,7 @@
    "question": "Will Éric Zemmour win the 2027 French presidential election?",
    "slug": "will-ric-zemmour-win-the-2027-french-presidential-election",
    "yes": 0.0085,
-   "volume": 3284820.1400059997,
+   "volume": 3284920.1400059997,
    "end_date": "2027-04-19",
    "yes_token": "51126599157451146230415396920771455069752975116525743821340393650626382714261"
   },
@@ -94,7 +94,7 @@
    "question": "Will Édouard Philippe win the 2027 French presidential election?",
    "slug": "will-douard-philippe-win-the-2027-french-presidential-election",
    "yes": 0.165,
-   "volume": 2690845.1834380003,
+   "volume": 2690858.0657910006,
    "end_date": "2027-04-19",
    "yes_token": "84846382165343032223975853870946110241285484772019446686866815597350660955868"
   },
@@ -118,7 +118,7 @@
    "question": "Will Xavier Bertrand win the 2027 French presidential election?",
    "slug": "will-xavier-bertrand-win-the-2027-french-presidential-election",
    "yes": 0.0005,
-   "volume": 6374646.690838999,
+   "volume": 6374646.690839001,
    "end_date": "2027-04-19",
    "yes_token": "71877540523534201212958253000589157055215242511161152819251873195807458559662"
   },
@@ -142,7 +142,7 @@
    "question": "Will François Ruffin win the 2027 French presidential election?",
    "slug": "will-franois-ruffin-win-the-2027-french-presidential-election",
    "yes": 0.0005,
-   "volume": 4848019.546626999,
+   "volume": 4848019.546627,
    "end_date": "2027-04-19",
    "yes_token": "47932068816905215490793160305898678677032574034362693398677274085713911110765"
   },
@@ -154,7 +154,7 @@
    "question": "Will Gabriel Attal win the 2027 French presidential election?",
    "slug": "will-gabriel-attal-win-the-2027-french-presidential-election",
    "yes": 0.0055,
-   "volume": 3324188.695272,
+   "volume": 3324218.7202720004,
    "end_date": "2027-04-19",
    "yes_token": "39040993339692011893931540077322383339631602451525460031216774971808386681386"
   },
@@ -166,7 +166,7 @@
    "question": "Will Bruno Retailleau win the 2027 French presidential election?",
    "slug": "will-bruno-retailleau-win-the-2027-french-presidential-election",
    "yes": 0.0115,
-   "volume": 3440478.9705800004,
+   "volume": 3440578.9705800004,
    "end_date": "2027-04-19",
    "yes_token": "76158784025338420583901765224531190025719662766883390440253608804161057467141"
   },
@@ -178,7 +178,7 @@
    "question": "Will François Hollande win the 2027 French presidential election?",
    "slug": "will-franois-hollande-win-the-2027-french-presidential-election",
    "yes": 0.0175,
-   "volume": 2779704.0782089997,
+   "volume": 2779811.708209,
    "end_date": "2027-04-19",
    "yes_token": "35420390481420086914303850503269939905315993511859334440549793606783994509563"
   },
@@ -190,7 +190,7 @@
    "question": "Will Raphaël Glucksmann win the 2027 French presidential election?",
    "slug": "will-raphal-glucksmann-win-the-2027-french-presidential-election",
    "yes": 0.0395,
-   "volume": 3166225.2718029995,
+   "volume": 3166325.271803,
    "end_date": "2027-04-19",
    "yes_token": "97531408855841405410232789703119036119573635076996943730887685044477538494161"
   },
@@ -202,7 +202,7 @@
    "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
    "slug": "will-jean-luc-mlenchon-win-the-2027-french-presidential-election",
    "yes": 0.105,
-   "volume": 2663810.155914,
+   "volume": 2664644.6586419996,
    "end_date": "2027-04-19",
    "yes_token": "88550326946437280548248031502775629664259630024343210447063397951616199975032"
   },
@@ -250,7 +250,7 @@
    "question": "Will Dominique de Villepin win the 2027 French presidential election?",
    "slug": "will-dominique-de-villepin-win-the-2027-french-presidential-election",
    "yes": 0.006,
-   "volume": 2936515.848440001,
+   "volume": 2936545.883440001,
    "end_date": "2027-04-19",
    "yes_token": "94391324985187701312427605791553049327097814064787849723991205429060004737042"
   },
@@ -406,7 +406,7 @@
    "question": "Will Bernard Cazeneuve win the 2027 French presidential election?",
    "slug": "will-bernard-cazeneuve-win-the-2027-french-presidential-election",
    "yes": 0.0005,
-   "volume": 2469731.9019419993,
+   "volume": 2469731.901941999,
    "end_date": "2027-04-19",
    "yes_token": "66544527271490346064341740627732239789974358897543481449359429783712570106189"
   },
@@ -454,7 +454,7 @@
    "question": "Will Sarah Knafo win the 2027 French presidential election?",
    "slug": "will-sarah-knafo-win-the-2027-french-presidential-election",
    "yes": 0.0065,
-   "volume": 2861843.724783001,
+   "volume": 2861955.732783,
    "end_date": "2027-04-19",
    "yes_token": "66728948856278657077046599284055693271321320423192674643305547174515874533859"
   },
@@ -490,7 +490,7 @@
    "question": "Will Sébastien Lecornu win the 2027 French presidential election?",
    "slug": "will-sbastien-lecornu-win-the-2027-french-presidential-election",
    "yes": 0.0015,
-   "volume": 2439106.3646560004,
+   "volume": 2439106.364656,
    "end_date": "2027-04-19",
    "yes_token": "56479574037559870494474863426788778064776404338812899351171813846265674472432"
   },
@@ -550,7 +550,7 @@
    "question": "Will Marion Maréchal win the 2027 French presidential election?",
    "slug": "will-marion-marchal-win-the-2027-french-presidential-election",
    "yes": 0.001,
-   "volume": 1009357.328,
+   "volume": 1009357.3280000001,
    "end_date": "2027-04-19",
    "yes_token": "86695393007503841267832546360139611672940518779922043030510495683789250918831"
   },
@@ -561,8 +561,8 @@
    "id": "679060",
    "question": "Will Christine Lagarde win the 2027 French presidential election?",
    "slug": "will-christine-lagarde-win-the-2027-french-presidential-election",
-   "yes": 0.0215,
-   "volume": 1390984.1997229997,
+   "yes": 0.023,
+   "volume": 1408826.1811819999,
    "end_date": "2027-04-19",
    "yes_token": "99240068351455574729467629800805892674088563638353047506523604209057843144195"
   },
@@ -1593,8 +1593,8 @@
    "id": "1722538",
    "question": "Will France pass a national budget by December 31?",
    "slug": "will-france-pass-a-national-budget-by-december-31",
-   "yes": 0.51,
-   "volume": 22057.999729000003,
+   "yes": 0.515,
+   "volume": 22057.999729,
    "end_date": "2026-12-31",
    "yes_token": "83366601025064914569346173587137003767309282287673123797445039836022857196088"
   },
@@ -1605,7 +1605,7 @@
    "id": "2054223",
    "question": "Will Marine Le Pen be on the ballot for the 2027 French presidential election?",
    "slug": "will-marine-le-pen-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.87,
+   "yes": 0.875,
    "volume": 38719.537787,
    "end_date": "2027-07-01",
    "yes_token": "7754512371734273015215938178714173418935846391326977358390432779966177844819"
@@ -1617,7 +1617,7 @@
    "id": "2054224",
    "question": "Will Jordan Bardella be on the ballot for the 2027 French presidential election?",
    "slug": "will-jordan-bardella-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.113,
+   "yes": 0.1135,
    "volume": 33906.381803000004,
    "end_date": "2027-07-01",
    "yes_token": "79573545395113607499457980203629849481438069774375121306971189413049799198986"
@@ -1630,7 +1630,7 @@
    "question": "Will Éric Zemmour be on the ballot for the 2027 French presidential election?",
    "slug": "will-ric-zemmour-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.76,
-   "volume": 21266.795134000004,
+   "volume": 21266.795134,
    "end_date": "2027-07-01",
    "yes_token": "13019807592263695743949854781611320015506457057015747150989705856401994056334"
   },
@@ -1653,8 +1653,8 @@
    "id": "2054227",
    "question": "Will David Lisnard be on the ballot for the 2027 French presidential election?",
    "slug": "will-david-lisnard-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.735,
-   "volume": 27310.999253,
+   "yes": 0.705,
+   "volume": 27310.999252999998,
    "end_date": "2027-07-01",
    "yes_token": "25289984257308580510407237998971414805223283688571155012417809412464840569087"
   },
@@ -1665,7 +1665,7 @@
    "id": "2054228",
    "question": "Will Xavier Bertrand be on the ballot for the 2027 French presidential election?",
    "slug": "will-xavier-bertrand-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.0645,
+   "yes": 0.064,
    "volume": 14245.576529,
    "end_date": "2027-07-01",
    "yes_token": "66298839693870143784069281344389868325781257903639405617638366780584964735856"
@@ -1689,7 +1689,7 @@
    "id": "2054230",
    "question": "Will François Ruffin be on the ballot for the 2027 French presidential election?",
    "slug": "will-franois-ruffin-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.2,
+   "yes": 0.195,
    "volume": 3587.0030279999996,
    "end_date": "2027-07-01",
    "yes_token": "8218933591218521191568748491997678960877502694016647511529255769025902596712"
@@ -1702,7 +1702,7 @@
    "question": "Will Gabriel Attal be on the ballot for the 2027 French presidential election?",
    "slug": "will-gabriel-attal-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.19,
-   "volume": 19265.334485,
+   "volume": 19265.334484999996,
    "end_date": "2027-07-01",
    "yes_token": "107522054548411774619306634308113991946472753213652905906071779736176841571061"
   },
@@ -1713,8 +1713,8 @@
    "id": "2054232",
    "question": "Will Bruno Retailleau be on the ballot for the 2027 French presidential election?",
    "slug": "will-bruno-retailleau-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.445,
-   "volume": 20129.826960000002,
+   "yes": 0.44,
+   "volume": 20129.82696,
    "end_date": "2027-07-01",
    "yes_token": "7593969562324822692501363565205182443860928099163461045185140593084672689930"
   },
@@ -1738,7 +1738,7 @@
    "question": "Will Raphaël Glucksmann be on the ballot for the 2027 French presidential election?",
    "slug": "will-raphal-glucksmann-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.81,
-   "volume": 30365.449777,
+   "volume": 30365.449777000005,
    "end_date": "2027-07-01",
    "yes_token": "95128328459600672872431663414733611782699451407655762383098119578070541934329"
   },
@@ -1822,7 +1822,7 @@
    "question": "Will François Asselineau be on the ballot for the 2027 French presidential election?",
    "slug": "will-franois-asselineau-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.12,
-   "volume": 15806.972905000002,
+   "volume": 15806.972905,
    "end_date": "2027-07-01",
    "yes_token": "3169490839458870712170059782036116592435875549142224457893926188976932171850"
   },
@@ -1846,7 +1846,7 @@
    "question": "Will Nicolas Dupont-Aignan be on the ballot for the 2027 French presidential election?",
    "slug": "will-nicolas-dupont-aignan-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.615,
-   "volume": 3625.0988170000005,
+   "volume": 3625.098817,
    "end_date": "2027-07-01",
    "yes_token": "82903121930807702786217480234428931109017472227532892624292356390819776768070"
   },
@@ -1894,7 +1894,7 @@
    "question": "Will Élisabeth Borne be on the ballot for the 2027 French presidential election?",
    "slug": "will-lisabeth-borne-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.063,
-   "volume": 2555.613176,
+   "volume": 2555.6131759999994,
    "end_date": "2027-04-18",
    "yes_token": "8860012426958685731454203405258790742902329807161167919632370365768793032281"
   },
@@ -1989,7 +1989,7 @@
    "id": "2054255",
    "question": "Will Sarah Knafo be on the ballot for the 2027 French presidential election?",
    "slug": "will-sarah-knafo-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.19,
+   "yes": 0.215,
    "volume": 41357.760371,
    "end_date": "2027-04-18",
    "yes_token": "32703530330841809083326703664829964876273408924688319566138202568488320027766"
@@ -2097,7 +2097,7 @@
    "id": "2070036",
    "question": "Will Teddy Riner be on the ballot for the 2027 French presidential election?",
    "slug": "will-teddy-riner-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.1025,
+   "yes": 0.1115,
    "volume": 19024.6508,
    "end_date": "2027-04-18",
    "yes_token": "40995683008041413879274660138689441449955120271551174442478302728270900913923"
@@ -2109,7 +2109,7 @@
    "id": "2070037",
    "question": "Will Matthieu Pigasse be on the ballot for the 2027 French presidential election?",
    "slug": "will-matthieu-pigasse-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.0875,
+   "yes": 0.086,
    "volume": 17541.262479,
    "end_date": "2027-04-18",
    "yes_token": "85594230755006330412802529167670839947980682586468224034376082975592287962216"
@@ -2121,7 +2121,7 @@
    "id": "2070038",
    "question": "Will Juan Branco be on the ballot for the 2027 French presidential election?",
    "slug": "will-juan-branco-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.12,
+   "yes": 0.125,
    "volume": 13487.259399,
    "end_date": "2027-04-18",
    "yes_token": "45653051387889888285212763206559291811850816584064099609044725631152369656210"
@@ -2314,7 +2314,7 @@
    "question": "Will Mathilde Panot announce their candidacy for the 2027 French presidential election in 2026?",
    "slug": "will-mathilde-panot-announce-their-candidacy-for-the-2027-french-presidential-election-in-2026",
    "yes": 0.0295,
-   "volume": 19645.905060000005,
+   "volume": 19645.90506000001,
    "end_date": "2027-04-18",
    "yes_token": "11611898691849005794825546161717454592813845447967422091648963877916360548695"
   },
@@ -2386,7 +2386,7 @@
    "question": "Will David Lisnard advance to the second round of the next French presidential election?",
    "slug": "will-david-lisnard-advance-to-the-second-round-of-the-next-french-presidential-election",
    "yes": 0.176,
-   "volume": 225118.78210600003,
+   "volume": 225118.7821060001,
    "end_date": "2027-04-19",
    "yes_token": "60664469699546499364262515572828056576567344311187200566614415417264494676821"
   },
@@ -2397,7 +2397,7 @@
    "id": "2371050",
    "question": "Will Xavier Bertrand advance to the second round of the next French presidential election?",
    "slug": "will-xavier-bertrand-advance-to-the-second-round-of-the-next-french-presidential-election",
-   "yes": 0.0675,
+   "yes": 0.065,
    "volume": 1601.1615640000002,
    "end_date": "2027-04-19",
    "yes_token": "47889871484404073838634554017780540933423305392865398663980709898626594461483"
@@ -2457,7 +2457,7 @@
    "id": "2371055",
    "question": "Will François Hollande advance to the second round of the next French presidential election?",
    "slug": "will-franois-hollande-advance-to-the-second-round-of-the-next-french-presidential-election",
-   "yes": 0.0575,
+   "yes": 0.058,
    "volume": 17444.140256,
    "end_date": "2027-04-19",
    "yes_token": "44999095853030381046411629116917169992182882103958144512547614835465764855410"
@@ -2517,7 +2517,7 @@
    "id": "2371060",
    "question": "Will Olivier Faure advance to the second round of the next French presidential election?",
    "slug": "will-olivier-faure-advance-to-the-second-round-of-the-next-french-presidential-election",
-   "yes": 0.0285,
+   "yes": 0.028,
    "volume": 6236.0996190000005,
    "end_date": "2027-04-19",
    "yes_token": "54731401187677640651369950401005293598961421725770099229922042648893180451068"
@@ -2589,7 +2589,7 @@
    "id": "2371071",
    "question": "Will Michel Barnier advance to the second round of the next French presidential election?",
    "slug": "will-michel-barnier-advance-to-the-second-round-of-the-next-french-presidential-election",
-   "yes": 0.025,
+   "yes": 0.024,
    "volume": 3489.0256820000004,
    "end_date": "2027-04-19",
    "yes_token": "45506506441457258464065608721557943777878101705622785922641457833940225730228"
@@ -2625,8 +2625,8 @@
    "id": "2371077",
    "question": "Will Élisabeth Borne advance to the second round of the next French presidential election?",
    "slug": "will-lisabeth-borne-advance-to-the-second-round-of-the-next-french-presidential-election",
-   "yes": 0.033,
-   "volume": 7375.824942,
+   "yes": 0.031,
+   "volume": 7375.824942000001,
    "end_date": "2027-04-19",
    "yes_token": "95359077629374752283576281276688091942687298297885612283505605671038732443300"
   },
@@ -2782,7 +2782,7 @@
    "question": "Marine Le Pen out as Member of the National Assembly by October 31, 2026?",
    "slug": "marine-le-pen-out-as-member-of-the-national-assembly-byptptpt-20260706153645649",
    "yes": 0.0145,
-   "volume": 2771.4380119999996,
+   "volume": 2771.438012,
    "end_date": "2026-11-01",
    "yes_token": "48035914342105417499337479344678750601364668427491342069553071289338227529197"
   },
@@ -2829,8 +2829,8 @@
    "id": "2859587",
    "question": "Will Jordan Bardella leave the National Rally by December 31, 2026?",
    "slug": "will-jordan-bardella-leave-the-national-rally-by-december-31-2026-20260709012217844",
-   "yes": 0.0405,
-   "volume": 37173.357512,
+   "yes": 0.042,
+   "volume": 37173.35751200001,
    "end_date": "2027-01-01",
    "yes_token": "45194905032462571598110028711804988703841797634478800160281433693037612455989"
   },
@@ -2841,7 +2841,7 @@
    "id": "2859588",
    "question": "Will Jordan Bardella leave the National Rally by March 31, 2027?",
    "slug": "will-jordan-bardella-leave-the-national-rally-by-march-31-2027-20260709012217845",
-   "yes": 0.0465,
+   "yes": 0.047,
    "volume": 7982.4799239999975,
    "end_date": "2027-04-01",
    "yes_token": "59096253558858403526142079529153596669286133323574262146536074295365940588804"
@@ -2877,7 +2877,7 @@
    "id": "3764697",
    "question": "Will Macron call a referendum by December 31?",
    "slug": "will-macron-call-a-referendum-by-december-31-2026",
-   "yes": 0.0875,
+   "yes": 0.0885,
    "volume": 1660.902752,
    "end_date": "2027-01-01",
    "yes_token": "87680474189704445448748810907688738506620862308563148848516148004368086495668"
@@ -2890,7 +2890,7 @@
    "question": "Will Gabriel Attal, but not Édouard Philippe, be on the ballot for the 2027 French presidential election?",
    "slug": "will-only-gabriel-attal-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.149,
-   "volume": 1856.3830190000003,
+   "volume": 1856.3830190000006,
    "end_date": "2027-04-18",
    "yes_token": "71280430104761647991139191157436383034182653386074573188752641470994698435053"
   },
@@ -2902,7 +2902,7 @@
    "question": "Will Édouard Philippe, but not Gabriel Attal, be on the ballot for the 2027 French presidential election?",
    "slug": "will-only-edouard-philippe-be-on-the-ballot-for-the-2027-french-presidential-election",
    "yes": 0.585,
-   "volume": 4178.182088,
+   "volume": 4178.1820880000005,
    "end_date": "2027-04-18",
    "yes_token": "90093229115596918498930544461654854308072746046958118554986502878386272553714"
   },
@@ -2913,8 +2913,8 @@
    "id": "4095932",
    "question": "Will both Gabriel Attal and Édouard Philippe be on the ballot for the 2027 French presidential election?",
    "slug": "will-both-attal-and-philippe-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.089,
-   "volume": 2493.446751,
+   "yes": 0.0855,
+   "volume": 2493.4467509999995,
    "end_date": "2027-04-18",
    "yes_token": "29771179370782312194964435733652780378549777787679901965113842648442655792459"
   },
@@ -2925,7 +2925,7 @@
    "id": "4095933",
    "question": "Will neither Gabriel Attal nor Édouard Philippe be on the ballot for the 2027 French presidential election?",
    "slug": "will-neither-attal-nor-philippe-be-on-the-ballot-for-the-2027-french-presidential-election",
-   "yes": 0.1565,
+   "yes": 0.159,
    "volume": 1542.6042499999999,
    "end_date": "2027-04-18",
    "yes_token": "93939047032176967695454809492972494763628188579292775551669335430906890192521"
@@ -2950,7 +2950,7 @@
    "question": "France, UK, or Germany military action against Yemen by October 31, 2026?",
    "slug": "france-uk-or-germany-military-action-against-yemen-by-october-31-2026-20260914",
    "yes": 0.0215,
-   "volume": 6874.005710999999,
+   "volume": 6874.005710999998,
    "end_date": "2026-10-31",
    "yes_token": "87271147365664603825030025084492406863367981140558015724294062599537665779407"
   },
@@ -2961,7 +2961,7 @@
    "id": "4603352",
    "question": "France, UK, or Germany military action against Yemen by December 31, 2026?",
    "slug": "france-uk-or-germany-military-action-against-yemen-by-december-31-2026-20260914",
-   "yes": 0.0545,
+   "yes": 0.0565,
    "volume": 6499.178213,
    "end_date": "2026-12-31",
    "yes_token": "2948813168708501583478180179385303425006961937611224501960893053224559752507"
@@ -2997,7 +2997,7 @@
    "id": "5204870",
    "question": "Will EU emergency diesel stocks be at least 32M tonnes at end of December 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-32m-tonnes-at-end-of-december-2026",
-   "yes": 0.625,
+   "yes": 0.6,
    "volume": 4366.650906,
    "end_date": "2027-01-01",
    "yes_token": "28883861388474963785837816975724435057132652254794134849581529099746479976665"
@@ -3022,7 +3022,7 @@
    "question": "Will EU emergency diesel stocks be at least 34M tonnes at end of December 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-34m-tonnes-at-end-of-december-2026",
    "yes": 0.375,
-   "volume": 6484.761735,
+   "volume": 6484.761735000001,
    "end_date": "2027-01-01",
    "yes_token": "86127556415793509519501646457869667577058636880614104874680769033011776375615"
   },
@@ -3033,7 +3033,7 @@
    "id": "5204873",
    "question": "Will EU emergency diesel stocks be at least 35M tonnes at end of December 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-35m-tonnes-at-end-of-december-2026",
-   "yes": 0.07,
+   "yes": 0.065,
    "volume": 10244.794146,
    "end_date": "2027-01-01",
    "yes_token": "15676277337888130543997455286555296976838032373807276569349583212927696033577"
@@ -3045,7 +3045,7 @@
    "id": "5204874",
    "question": "Will EU emergency diesel stocks be at least 36M tonnes at end of December 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-36m-tonnes-at-end-of-december-2026",
-   "yes": 0.055,
+   "yes": 0.06,
    "volume": 1575.2600000000002,
    "end_date": "2027-01-01",
    "yes_token": "82788549875193346190620566220738911222174502013295241762605048240327943098917"
@@ -3093,8 +3093,8 @@
    "id": "5219279",
    "question": "Will EU emergency diesel stocks be at least 30M tonnes at end of October 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-30m-tonnes-at-end-of-october-2026",
-   "yes": 0.9595,
-   "volume": 2231.601183,
+   "yes": 0.958,
+   "volume": 2231.6011830000007,
    "end_date": "2026-11-01",
    "yes_token": "88596821693915146257084347688695661977099782283273479495515432434093555648152"
   },
@@ -3117,7 +3117,7 @@
    "id": "5219281",
    "question": "Will EU emergency diesel stocks be at least 32M tonnes at end of October 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-32m-tonnes-at-end-of-october-2026",
-   "yes": 0.953,
+   "yes": 0.9525,
    "volume": 12197.896501,
    "end_date": "2026-11-01",
    "yes_token": "8092929168767976737924653094933103764160504328098716069205797806541637075845"
@@ -3130,7 +3130,7 @@
    "question": "Will EU emergency diesel stocks be at least 33M tonnes at end of October 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-33m-tonnes-at-end-of-october-2026",
    "yes": 0.8765,
-   "volume": 9824.627017,
+   "volume": 9824.627016999999,
    "end_date": "2026-11-01",
    "yes_token": "19641821860370966822103914366035279490221741440244852296922979135661471685904"
   },
@@ -3142,7 +3142,7 @@
    "question": "Will EU emergency diesel stocks be at least 34M tonnes at end of October 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-34m-tonnes-at-end-of-october-2026",
    "yes": 0.645,
-   "volume": 15805.915868,
+   "volume": 15805.915868000002,
    "end_date": "2026-11-01",
    "yes_token": "81343753629223261353317646733491659254867651310639530961014293616096801985479"
   },
@@ -3154,7 +3154,7 @@
    "question": "Will EU emergency diesel stocks be at least 35M tonnes at end of October 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-35m-tonnes-at-end-of-october-2026",
    "yes": 0.485,
-   "volume": 14992.9269,
+   "volume": 14992.926899999999,
    "end_date": "2026-11-01",
    "yes_token": "51879335021378343360477507633521504845823995484078674932415773394568199307347"
   },
@@ -3166,7 +3166,7 @@
    "question": "Will EU emergency diesel stocks be at least 36M tonnes at end of October 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-36m-tonnes-at-end-of-october-2026",
    "yes": 0.15,
-   "volume": 6842.712141000001,
+   "volume": 7021.552141000001,
    "end_date": "2026-11-01",
    "yes_token": "2069426205096970238309395970746538335277876473567893161704692696448283269170"
   },
@@ -3177,7 +3177,7 @@
    "id": "5219289",
    "question": "Will EU emergency diesel stocks be at least 37M tonnes at end of October 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-37m-tonnes-at-end-of-october-2026",
-   "yes": 0.0415,
+   "yes": 0.0405,
    "volume": 2820.329191,
    "end_date": "2026-11-01",
    "yes_token": "46880580762110730753545528505762984530908096510016118559847921222009512008975"
@@ -3201,7 +3201,7 @@
    "id": "5219291",
    "question": "Will EU emergency diesel stocks be at least 31M tonnes at end of November 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-31m-tonnes-at-end-of-november-2026",
-   "yes": 0.705,
+   "yes": 0.735,
    "volume": 5146.717600999999,
    "end_date": "2026-12-01",
    "yes_token": "43816001129242210232492233697530723681915761103648394781643036017085608704654"
@@ -3213,7 +3213,7 @@
    "id": "5219292",
    "question": "Will EU emergency diesel stocks be at least 32M tonnes at end of November 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-32m-tonnes-at-end-of-november-2026",
-   "yes": 0.805,
+   "yes": 0.81,
    "volume": 6313.3272719999995,
    "end_date": "2026-12-01",
    "yes_token": "12089384470749777174532465845775210476023873072136626702080506976094209526086"
@@ -3225,7 +3225,7 @@
    "id": "5219293",
    "question": "Will EU emergency diesel stocks be at least 33M tonnes at end of November 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-33m-tonnes-at-end-of-november-2026",
-   "yes": 0.615,
+   "yes": 0.595,
    "volume": 5926.687137000001,
    "end_date": "2026-12-01",
    "yes_token": "11324439395639967596245308542413041117082792803498710351571498934839499654917"
@@ -3261,7 +3261,7 @@
    "id": "5219296",
    "question": "Will EU emergency diesel stocks be at least 36M tonnes at end of November 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-36m-tonnes-at-end-of-november-2026",
-   "yes": 0.31,
+   "yes": 0.305,
    "volume": 1383.1,
    "end_date": "2026-12-01",
    "yes_token": "59707870738323083655615950937928591987179656355083633086493839947983193891168"
@@ -3273,7 +3273,7 @@
    "id": "5219297",
    "question": "Will EU emergency diesel stocks be at least 37M tonnes at end of November 2026?",
    "slug": "will-eu-emergency-diesel-stocks-be-at-least-37m-tonnes-at-end-of-november-2026",
-   "yes": 0.1175,
+   "yes": 0.117,
    "volume": 2756.872071,
    "end_date": "2026-12-01",
    "yes_token": "62025902520130710002798520219822567904487788174381429749136326119355935801570"
@@ -3286,7 +3286,7 @@
    "question": "Moody's or S&P downgrades France by October 31, 2026?",
    "slug": "moodys-or-sp-downgrades-france-by-october-31-2026",
    "yes": 0.003,
-   "volume": 15627.084250000002,
+   "volume": 15717.08425,
    "end_date": "2026-11-01",
    "yes_token": "22414653865772883038466778925488148503433137858959148916487798852457357270122"
   },
@@ -3297,8 +3297,8 @@
    "id": "5458390",
    "question": "Moody's or S&P downgrades France by November 30, 2026?",
    "slug": "moodys-or-sp-downgrades-france-by-november-30-2026",
-   "yes": 0.175,
-   "volume": 7107.663171,
+   "yes": 0.145,
+   "volume": 7107.663170999999,
    "end_date": "2026-12-01",
    "yes_token": "38160199475768127298846650553782761147082757198308469176446029555290763982746"
   },
@@ -3345,7 +3345,7 @@
    "id": "5621941",
    "question": "Will Jean-Luc Mélenchon win the most votes in the first round of the 2027 French presidential election?",
    "slug": "will-jean-luc-melenchon-win-the-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
-   "yes": 0.0475,
+   "yes": 0.047,
    "volume": 15603.304309000001,
    "end_date": "2027-04-18",
    "yes_token": "44843612293642480292950110498928513630782368661929321511903833281946858354171"
@@ -3826,7 +3826,7 @@
    "question": "Will Marine Le Pen win the second-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-marine-le-pen-win-the-second-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
    "yes": 0.095,
-   "volume": 6160.711821,
+   "volume": 6160.711820999999,
    "end_date": "2027-04-18",
    "yes_token": "88961885167320224751138073482857652457506331561547610313398553734648847769357"
   },
@@ -3837,7 +3837,7 @@
    "id": "5622455",
    "question": "Will Édouard Philippe win the second-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-edouard-philippe-win-the-second-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
-   "yes": 0.265,
+   "yes": 0.27,
    "volume": 10107.777191000001,
    "end_date": "2027-04-18",
    "yes_token": "89230993105896855470331736072465307350804419058123057060493186551997108436238"
@@ -3850,7 +3850,7 @@
    "question": "Will David Lisnard win the second-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-david-lisnard-win-the-second-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
    "yes": 0.172,
-   "volume": 13345.842131000001,
+   "volume": 13345.842131,
    "end_date": "2027-04-18",
    "yes_token": "63881974729104693127129758204219721133847241015140587445115764334858724870496"
   },
@@ -3898,7 +3898,7 @@
    "question": "Will Raphaël Glucksmann win the second-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-raphael-glucksmann-win-the-second-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
    "yes": 0.095,
-   "volume": 5823.660970999999,
+   "volume": 5823.660971,
    "end_date": "2027-04-18",
    "yes_token": "65456112231290593213006964266530803563000959703149823128210489789220047671688"
   },
@@ -3910,7 +3910,7 @@
    "question": "Will Bruno Retailleau win the second-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-bruno-retailleau-win-the-second-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
    "yes": 0.013,
-   "volume": 2927.956969,
+   "volume": 2927.9569689999994,
    "end_date": "2027-04-18",
    "yes_token": "109555724624156328406256182574547054827353678783980446213055602381507269863425"
   },
@@ -3945,7 +3945,7 @@
    "id": "5622472",
    "question": "Will Christine Lagarde win the second-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-christine-lagarde-win-the-second-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
-   "yes": 0.0245,
+   "yes": 0.035,
    "volume": 2250.024587,
    "end_date": "2027-04-18",
    "yes_token": "74491730937145754167184196136692275943014285786666868966405262073292196072822"
@@ -3982,7 +3982,7 @@
    "question": "Will Sébastien Lecornu win the second-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-sebastien-lecornu-win-the-second-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
    "yes": 0.0055,
-   "volume": 2253.6210709999996,
+   "volume": 2253.621071,
    "end_date": "2027-04-18",
    "yes_token": "51254612009746258433996735122482278626124294132616409150450840332811750092399"
   },
@@ -4366,7 +4366,7 @@
    "question": "Will David Lisnard win the third-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-david-lisnard-win-the-third-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
    "yes": 0.1665,
-   "volume": 3564.254588,
+   "volume": 3564.2545880000002,
    "end_date": "2027-04-18",
    "yes_token": "7886642791689506744562727240536682725857112649973358833187297005618697417252"
   },
@@ -4509,7 +4509,7 @@
    "id": "5622545",
    "question": "Will François Ruffin win the third-most votes in the first round of the 2027 French presidential election?",
    "slug": "will-francois-ruffin-win-the-third-most-votes-in-the-first-round-of-the-2027-french-presidential-election",
-   "yes": 0.0035,
+   "yes": 0.0015,
    "volume": 717.0558329999999,
    "end_date": "2027-04-18",
    "yes_token": "23909907034739759558853878204012996125769187041288110367897983652605884359518"
@@ -4917,8 +4917,8 @@
    "id": "5880857",
    "question": "France declares state of siege (martial law) by December 31, 2026?",
    "slug": "france-declares-state-of-siege-by-december-31-2026",
-   "yes": 0.0275,
-   "volume": 87631.05302800001,
+   "yes": 0.034,
+   "volume": 99301.593028,
    "end_date": "2027-01-01",
    "yes_token": "98300747575943666981953102009676738049595855669850669634992891922326850198402"
   },
@@ -4965,7 +4965,7 @@
    "id": "6017072",
    "question": "France accuses foreign country of provoking unrest by November 30?",
    "slug": "france-accuses-foreign-country-of-provoking-unrest-by-november-30-20261021154154939",
-   "yes": 0.075,
+   "yes": 0.07,
    "volume": 30811.92436,
    "end_date": "2026-12-01",
    "yes_token": "91204506993960602829073698184439434971767580258777654601209453117254395037164"
@@ -4989,7 +4989,7 @@
    "id": "6267530",
    "question": "Will Jordan Bardella receive the most signatures from elected officials in the 2027 French presidential election?",
    "slug": "will-jordan-bardella-receive-the-most-signatures-from-elected-officials-in-the-2027-french-presidential-election-20261019133954357",
-   "yes": 0.051,
+   "yes": 0.046,
    "volume": 317.863154,
    "end_date": "2027-03-13",
    "yes_token": "64196952487758987167454388723290524951443397239303792934832248246302711850369"
@@ -5001,7 +5001,7 @@
    "id": "6267531",
    "question": "Will Édouard Philippe receive the most signatures from elected officials in the 2027 French presidential election?",
    "slug": "will-edouard-philippe-receive-the-most-signatures-from-elected-officials-in-the-2027-french-presidential-election-20261019133954357",
-   "yes": 0.2,
+   "yes": 0.205,
    "volume": 242.56751599999998,
    "end_date": "2027-03-13",
    "yes_token": "103828464302992223076815333075489985621390733236477359608670856502963800288429"
@@ -5013,7 +5013,7 @@
    "id": "6267532",
    "question": "Will Bruno Retailleau receive the most signatures from elected officials in the 2027 French presidential election?",
    "slug": "will-bruno-retailleau-receive-the-most-signatures-from-elected-officials-in-the-2027-french-presidential-election-20261019133954357",
-   "yes": 0.405,
+   "yes": 0.395,
    "volume": 469.061352,
    "end_date": "2027-03-13",
    "yes_token": "20674163950613352131001027382922815036738192856964074333795418259807493331459"
@@ -5025,7 +5025,7 @@
    "id": "6267533",
    "question": "Will David Lisnard receive the most signatures from elected officials in the 2027 French presidential election?",
    "slug": "will-david-lisnard-receive-the-most-signatures-from-elected-officials-in-the-2027-french-presidential-election-20261019133954357",
-   "yes": 0.265,
+   "yes": 0.26,
    "volume": 677.483649,
    "end_date": "2027-03-13",
    "yes_token": "111033881376588783307913166512008181623789196641363174964559423578959778621703"
@@ -5085,7 +5085,7 @@
    "id": "6267538",
    "question": "Will Fabien Roussel receive the most signatures from elected officials in the 2027 French presidential election?",
    "slug": "will-fabien-roussel-receive-the-most-signatures-from-elected-officials-in-the-2027-french-presidential-election-20261019133954357",
-   "yes": 0.0485,
+   "yes": 0.0465,
    "volume": 221.81,
    "end_date": "2027-03-13",
    "yes_token": "57301300932816660786042296825905562409746890414413111487255086560430486132095"
@@ -5133,7 +5133,7 @@
    "id": "6267542",
    "question": "Will Sarah Knafo receive the most signatures from elected officials in the 2027 French presidential election?",
    "slug": "will-sarah-knafo-receive-the-most-signatures-from-elected-officials-in-the-2027-french-presidential-election-20261019133954357",
-   "yes": 0.06,
+   "yes": 0.056,
    "volume": 257.34099999999995,
    "end_date": "2027-03-13",
    "yes_token": "56596916192884889243064134037179422038198465870366164486817983780183110558283"
@@ -5638,7 +5638,7 @@
    "question": "Will the lowest temperature in Paris be 6°C on October 29?",
    "slug": "lowest-temperature-in-paris-on-october-29-2026-6c",
    "yes": 0.003,
-   "volume": 3777.4384690000006,
+   "volume": 3777.4384689999997,
    "end_date": "2026-10-29",
    "yes_token": "63522459400879977887875494083979297489653542833460799971919354512535894686526"
   },
@@ -5758,7 +5758,7 @@
    "question": "Will the highest temperature in Paris be 14°C on October 29?",
    "slug": "highest-temperature-in-paris-on-october-29-2026-14c",
    "yes": 0.0005,
-   "volume": 7761.702865,
+   "volume": 7761.702864999999,
    "end_date": "2026-10-29",
    "yes_token": "69607992034777911786732450669601455668888627531999800650057508426484990953367"
   },
@@ -5769,8 +5769,8 @@
    "id": "6290141",
    "question": "Will the highest temperature in Paris be 15°C on October 29?",
    "slug": "highest-temperature-in-paris-on-october-29-2026-15c",
-   "yes": 0.001,
-   "volume": 8829.082244,
+   "yes": 0.0005,
+   "volume": 10216.540244,
    "end_date": "2026-10-29",
    "yes_token": "65901747488634881883397761715989742256276568266683496493501908458608932812124"
   },
@@ -5781,8 +5781,8 @@
    "id": "6290142",
    "question": "Will the highest temperature in Paris be 16°C on October 29?",
    "slug": "highest-temperature-in-paris-on-october-29-2026-16c",
-   "yes": 0.9905,
-   "volume": 8702.511983,
+   "yes": 0.9925,
+   "volume": 9814.535687,
    "end_date": "2026-10-29",
    "yes_token": "55093477858486202998177828455413520124809256479932203512831590648925077961102"
   },
@@ -5793,8 +5793,8 @@
    "id": "6290143",
    "question": "Will the highest temperature in Paris be 17°C on October 29?",
    "slug": "highest-temperature-in-paris-on-october-29-2026-17c",
-   "yes": 0.009,
-   "volume": 5648.045689999999,
+   "yes": 0.006,
+   "volume": 6440.19569,
    "end_date": "2026-10-29",
    "yes_token": "59647936637802875872957125083564961416825482084917771990613932431433299927873"
   },
@@ -5806,7 +5806,7 @@
    "question": "Will the highest temperature in Paris be 18°C on October 29?",
    "slug": "highest-temperature-in-paris-on-october-29-2026-18c",
    "yes": 0.005,
-   "volume": 2862.7643529999996,
+   "volume": 3363.9243530000003,
    "end_date": "2026-10-29",
    "yes_token": "71505879701806854059671258030631388583870375068130759563467120769246906203978"
   },
@@ -5829,7 +5829,7 @@
    "id": "6331319",
    "question": "Will the lowest temperature in Paris be 1°C or below on October 30?",
    "slug": "lowest-temperature-in-paris-on-october-30-2026-1corbelow",
-   "yes": 0.041,
+   "yes": 0.043,
    "volume": 0.0,
    "end_date": "2026-10-30",
    "yes_token": "25955095401377307239723605787236720527452254012664319978211960960764194049076"
@@ -5877,7 +5877,7 @@
    "id": "6331323",
    "question": "Will the lowest temperature in Paris be 5°C on October 30?",
    "slug": "lowest-temperature-in-paris-on-october-30-2026-5c",
-   "yes": 0.47,
+   "yes": 0.475,
    "volume": 559.6198139999999,
    "end_date": "2026-10-30",
    "yes_token": "16205632152923324787981964916970274890091436298557097989413782890795532762078"
@@ -5890,7 +5890,7 @@
    "question": "Will the lowest temperature in Paris be 6°C on October 30?",
    "slug": "lowest-temperature-in-paris-on-october-30-2026-6c",
    "yes": 0.17,
-   "volume": 90.08777699999999,
+   "volume": 105.87725099999999,
    "end_date": "2026-10-30",
    "yes_token": "59858179371522715332620898310066216142404014146570527593235379931479180083008"
   },
@@ -5901,8 +5901,8 @@
    "id": "6331325",
    "question": "Will the lowest temperature in Paris be 7°C on October 30?",
    "slug": "lowest-temperature-in-paris-on-october-30-2026-7c",
-   "yes": 0.048,
-   "volume": 0.0,
+   "yes": 0.052,
+   "volume": 25.0,
    "end_date": "2026-10-30",
    "yes_token": "68865405305272662344965536449944664252473119440917393531673625925929544308216"
   },
@@ -5913,7 +5913,7 @@
    "id": "6331326",
    "question": "Will the lowest temperature in Paris be 8°C on October 30?",
    "slug": "lowest-temperature-in-paris-on-october-30-2026-8c",
-   "yes": 0.038,
+   "yes": 0.0405,
    "volume": 0.0,
    "end_date": "2026-10-30",
    "yes_token": "88937690709007730343834767685012710406571770118272306425887708390434028462436"
@@ -5962,7 +5962,7 @@
    "question": "Will the highest temperature in Paris be 9°C or below on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-9corbelow",
    "yes": 0.0015,
-   "volume": 1522.259,
+   "volume": 1550.893,
    "end_date": "2026-10-30",
    "yes_token": "65730979329530448854295190946916465321753361751668129302730364151013310292165"
   },
@@ -5974,7 +5974,7 @@
    "question": "Will the highest temperature in Paris be 10°C on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-10c",
    "yes": 0.0015,
-   "volume": 1494.259,
+   "volume": 1522.893,
    "end_date": "2026-10-30",
    "yes_token": "35449270154619047693828218743511015454849555568252989415543330787338108328557"
   },
@@ -5986,7 +5986,7 @@
    "question": "Will the highest temperature in Paris be 11°C on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-11c",
    "yes": 0.0015,
-   "volume": 1847.36042,
+   "volume": 1875.995058,
    "end_date": "2026-10-30",
    "yes_token": "35268601650248175403975660508057701354072185708456153050330013838917609343374"
   },
@@ -6010,7 +6010,7 @@
    "question": "Will the highest temperature in Paris be 13°C on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-13c",
    "yes": 0.0005,
-   "volume": 1049.990471,
+   "volume": 1064.493471,
    "end_date": "2026-10-30",
    "yes_token": "73028729337727294365401926514342876072208793133119151612052593326696664186715"
   },
@@ -6021,8 +6021,8 @@
    "id": "6332412",
    "question": "Will the highest temperature in Paris be 14°C on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-14c",
-   "yes": 0.037,
-   "volume": 1588.971182,
+   "yes": 0.0275,
+   "volume": 1617.616681,
    "end_date": "2026-10-30",
    "yes_token": "33536360766887075633818409088196571966856707057645951702394279574998514990237"
   },
@@ -6033,8 +6033,8 @@
    "id": "6332413",
    "question": "Will the highest temperature in Paris be 15°C on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-15c",
-   "yes": 0.42,
-   "volume": 4428.750786999999,
+   "yes": 0.425,
+   "volume": 4511.955337,
    "end_date": "2026-10-30",
    "yes_token": "966075814600554936331519098259048206156991786845341940641725782340147092899"
   },
@@ -6046,7 +6046,7 @@
    "question": "Will the highest temperature in Paris be 16°C on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-16c",
    "yes": 0.515,
-   "volume": 4017.6884990000003,
+   "volume": 4043.1584989999997,
    "end_date": "2026-10-30",
    "yes_token": "91382728038249174207006651457161942300650486597024402935248905393364767451439"
   },
@@ -6058,7 +6058,7 @@
    "question": "Will the highest temperature in Paris be 17°C on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-17c",
    "yes": 0.041,
-   "volume": 2098.377507,
+   "volume": 2127.024816,
    "end_date": "2026-10-30",
    "yes_token": "36669588769292602751511437364427968477991977533068390820550831672896947423227"
   },
@@ -6082,7 +6082,7 @@
    "question": "Will the highest temperature in Paris be 19°C or higher on October 30?",
    "slug": "highest-temperature-in-paris-on-october-30-2026-19corhigher",
    "yes": 0.002,
-   "volume": 302.027,
+   "volume": 302.02700000000004,
    "end_date": "2026-10-30",
    "yes_token": "29638041563153023082189665219420756895112283830811798338885100916433381310158"
   },
@@ -6129,7 +6129,7 @@
    "id": "6377986",
    "question": "Will the lowest temperature in Paris be 3°C on October 31?",
    "slug": "lowest-temperature-in-paris-on-october-31-2026-3c",
-   "yes": 0.095,
+   "yes": 0.1,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "55542510962233674147249186928364006457500663213333723800697254807128896355470"
@@ -6141,7 +6141,7 @@
    "id": "6377987",
    "question": "Will the lowest temperature in Paris be 4°C on October 31?",
    "slug": "lowest-temperature-in-paris-on-october-31-2026-4c",
-   "yes": 0.235,
+   "yes": 0.23,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "7882017113309786099537109797834489196072151234177827007915674019849718051044"
@@ -6153,7 +6153,7 @@
    "id": "6377988",
    "question": "Will the lowest temperature in Paris be 5°C on October 31?",
    "slug": "lowest-temperature-in-paris-on-october-31-2026-5c",
-   "yes": 0.37,
+   "yes": 0.455,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "8337596344973794103697288649521270839772582647229935438933910418561951971992"
@@ -6165,7 +6165,7 @@
    "id": "6377989",
    "question": "Will the lowest temperature in Paris be 6°C on October 31?",
    "slug": "lowest-temperature-in-paris-on-october-31-2026-6c",
-   "yes": 0.225,
+   "yes": 0.37,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "51967117948375287397977065380288785624625912656310043758582499939892513603313"
@@ -6177,7 +6177,7 @@
    "id": "6377990",
    "question": "Will the lowest temperature in Paris be 7°C on October 31?",
    "slug": "lowest-temperature-in-paris-on-october-31-2026-7c",
-   "yes": 0.08,
+   "yes": 0.315,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "79192727225940483145149708361202516976155016072783684690164815351451916342415"
@@ -6189,7 +6189,7 @@
    "id": "6377991",
    "question": "Will the lowest temperature in Paris be 8°C on October 31?",
    "slug": "lowest-temperature-in-paris-on-october-31-2026-8c",
-   "yes": 0.075,
+   "yes": 0.315,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "58855730812167520942321153087878952974354679445479658730448467436536248386156"
@@ -6249,7 +6249,7 @@
    "id": "6378718",
    "question": "Will the highest temperature in Paris be 11°C on October 31?",
    "slug": "highest-temperature-in-paris-on-october-31-2026-11c",
-   "yes": 0.003,
+   "yes": 0.0035,
    "volume": 126.646,
    "end_date": "2026-10-31",
    "yes_token": "72623126059844347627088123404726123647191457528999090653999211693512910093962"
@@ -6261,7 +6261,7 @@
    "id": "6378719",
    "question": "Will the highest temperature in Paris be 12°C on October 31?",
    "slug": "highest-temperature-in-paris-on-october-31-2026-12c",
-   "yes": 0.009,
+   "yes": 0.0085,
    "volume": 170.648,
    "end_date": "2026-10-31",
    "yes_token": "16796303652033846167502777899563175306552256270780972026711141408393120510331"
@@ -6285,7 +6285,7 @@
    "id": "6378721",
    "question": "Will the highest temperature in Paris be 14°C on October 31?",
    "slug": "highest-temperature-in-paris-on-october-31-2026-14c",
-   "yes": 0.09,
+   "yes": 0.085,
    "volume": 487.05494899999997,
    "end_date": "2026-10-31",
    "yes_token": "47441852735165973149351660851052415043711178199090758146469499112578925289939"
@@ -6309,8 +6309,8 @@
    "id": "6378723",
    "question": "Will the highest temperature in Paris be 16°C on October 31?",
    "slug": "highest-temperature-in-paris-on-october-31-2026-16c",
-   "yes": 0.305,
-   "volume": 1677.7468009999998,
+   "yes": 0.31,
+   "volume": 1894.8350370000003,
    "end_date": "2026-10-31",
    "yes_token": "91741608543919008520559898966670700684839348653175923963988274085422239876833"
   },
@@ -6322,7 +6322,7 @@
    "question": "Will the highest temperature in Paris be 17°C on October 31?",
    "slug": "highest-temperature-in-paris-on-october-31-2026-17c",
    "yes": 0.065,
-   "volume": 555.941819,
+   "volume": 584.236539,
    "end_date": "2026-10-31",
    "yes_token": "10690058079002926675383834384865946747221692182716637656905723277941422129231"
   },
@@ -6334,7 +6334,7 @@
    "question": "Will the highest temperature in Paris be 18°C on October 31?",
    "slug": "highest-temperature-in-paris-on-october-31-2026-18c",
    "yes": 0.0045,
-   "volume": 176.90141599999998,
+   "volume": 176.901416,
    "end_date": "2026-10-31",
    "yes_token": "51169779547317462781217365827559876997959493234909805376192437501906560695019"
   },
@@ -6346,7 +6346,7 @@
    "question": "Will the highest temperature in Paris be 19°C or higher on October 31?",
    "slug": "highest-temperature-in-paris-on-october-31-2026-19corhigher",
    "yes": 0.004,
-   "volume": 168.37699999999998,
+   "volume": 168.377,
    "end_date": "2026-10-31",
    "yes_token": "104588772393170177728754850460407359835255443799201397638799702306871307742481"
   },
@@ -6357,8 +6357,8 @@
    "id": "1125087",
    "question": "Any Brazil STF Justice removed by impeachment before 2027?",
    "slug": "any-brazil-stf-justice-removed-by-impeachment-before-2027",
-   "yes": 0.049,
-   "volume": 101454.931526,
+   "yes": 0.0465,
+   "volume": 101454.93152599999,
    "end_date": "2027-01-01",
    "yes_token": "57447493927506792441927955469357830923481354210210100770826102565874646658296"
   },
@@ -6369,7 +6369,7 @@
    "id": "1243896",
    "question": "Will Brazil’s Annual Inflation in 2026 be less than 3.00%?",
    "slug": "will-brazils-annual-inflation-in-2026-be-less-than-3pt00",
-   "yes": 0.0035,
+   "yes": 0.004,
    "volume": 10343.387543,
    "end_date": "2027-01-13",
    "yes_token": "11416444860904738115226751140005854166423655215867059829644030833423737951308"
@@ -6406,7 +6406,7 @@
    "question": "Will Brazil’s Annual Inflation in 2026 be between 4.00% and 4.49%?",
    "slug": "will-brazils-annual-inflation-in-2026-be-between-4pt00-and-4pt49",
    "yes": 0.0055,
-   "volume": 20231.369029999994,
+   "volume": 20231.36903,
    "end_date": "2027-01-13",
    "yes_token": "49025414458508263799014461367388137954595313517938691131902390844157416670964"
   },
@@ -6418,7 +6418,7 @@
    "question": "Will Brazil’s Annual Inflation in 2026 be between 4.50% and 4.99%?",
    "slug": "will-brazils-annual-inflation-in-2026-be-between-4pt50-and-4pt99",
    "yes": 0.057,
-   "volume": 37446.644703,
+   "volume": 37446.64470299999,
    "end_date": "2027-01-13",
    "yes_token": "24813573888096936431248907171074227805792304642433856217563094722570850613417"
   },
@@ -6430,7 +6430,7 @@
    "question": "Will Brazil’s Annual Inflation in 2026 be between 5.00% and 5.49%?",
    "slug": "will-brazils-annual-inflation-in-2026-be-between-5pt00-and-5pt49",
    "yes": 0.4365,
-   "volume": 33132.168817,
+   "volume": 33132.16881699999,
    "end_date": "2027-01-13",
    "yes_token": "114464265820505292830736313996844584541383631416434730994675512950614434514489"
   },
@@ -6441,8 +6441,8 @@
    "id": "1243902",
    "question": "Will Brazil’s Annual Inflation in 2026 be between 5.50% and 5.99%?",
    "slug": "will-brazils-annual-inflation-in-2026-be-between-5pt50-and-5pt99",
-   "yes": 0.3025,
-   "volume": 27180.900853,
+   "yes": 0.3425,
+   "volume": 27180.900852999996,
    "end_date": "2027-01-13",
    "yes_token": "87466602052387452294616110610310550902071045306815153645457437261325145577793"
   },
@@ -6454,7 +6454,7 @@
    "question": "Will Brazil’s Annual Inflation in 2026 be between 6.00% and 6.49%?",
    "slug": "will-brazils-annual-inflation-in-2026-be-between-6pt00-and-6pt49",
    "yes": 0.0605,
-   "volume": 15346.916172,
+   "volume": 15346.916171999997,
    "end_date": "2027-01-13",
    "yes_token": "76704139201748371565357305250127095891809271555930588672046602404458557989220"
   },
@@ -6477,7 +6477,7 @@
    "id": "1243905",
    "question": "Will Brazil’s Annual Inflation in 2026 be at least 7.00%?",
    "slug": "will-brazils-annual-inflation-in-2026-be-at-least-7pt00",
-   "yes": 0.018,
+   "yes": 0.0195,
    "volume": 11953.424815,
    "end_date": "2027-01-13",
    "yes_token": "101681044989077940258762060944932754052281997432059023703348495711408219022913"
@@ -6501,8 +6501,8 @@
    "id": "2423671",
    "question": "Will Lula announce the nomination of an individual for Minister of the Supreme Federal Court of Brazil by December 31?",
    "slug": "will-lula-announce-the-nomination-of-an-individual-for-minister-of-the-supreme-federal-court-of-brazil-by-december-31-20260602182956656",
-   "yes": 0.87,
-   "volume": 12974.361891,
+   "yes": 0.865,
+   "volume": 12974.361890999999,
    "end_date": "2027-01-01",
    "yes_token": "17621917707005698074320587804035308740088543202984301215741359840361590143755"
   },
@@ -6513,8 +6513,8 @@
    "id": "5180507",
    "question": "Will Lula announce the nomination of an individual for Minister of the Supreme Federal Court of Brazil by October 31?",
    "slug": "will-lula-announce-the-nomination-of-an-individual-for-minister-of-the-supreme-federal-court-of-brazil-by-october-310602182956655",
-   "yes": 0.205,
-   "volume": 387.87310999999994,
+   "yes": 0.23,
+   "volume": 388.91475999999994,
    "end_date": "2026-11-01",
    "yes_token": "635452351918036386098711591285824730987216788266792510673269311573622351576"
   },
@@ -6549,8 +6549,8 @@
    "id": "2439579",
    "question": "Will USD/BRL hit 6.75 (High) in 2026?",
    "slug": "will-usdbrl-hit-6pt75-high-in-2026",
-   "yes": 0.255,
-   "volume": 152.28870999999998,
+   "yes": 0.26,
+   "volume": 152.28871,
    "end_date": "2027-01-01",
    "yes_token": "27969749562548963056023502351580899690245049551824143911507624902634919411958"
   },
@@ -6573,7 +6573,7 @@
    "id": "2439581",
    "question": "Will USD/BRL hit 6.25 (High) in 2026?",
    "slug": "will-usdbrl-hit-6pt25-high-in-2026",
-   "yes": 0.29,
+   "yes": 0.285,
    "volume": 156.80046,
    "end_date": "2027-01-01",
    "yes_token": "65821581807507499737856226152486529133979096674815905095640601402512412969017"
@@ -6621,7 +6621,7 @@
    "id": "2439586",
    "question": "Will USD/BRL hit 4.25 (Low) in 2026?",
    "slug": "will-usdbrl-hit-4pt25-low-in-2026",
-   "yes": 0.225,
+   "yes": 0.255,
    "volume": 234.970908,
    "end_date": "2027-01-01",
    "yes_token": "10198569827956481536181693588692968860822116911505919359376493380035655028751"
@@ -6633,7 +6633,7 @@
    "id": "2439587",
    "question": "Will USD/BRL hit 4 (Low) in 2026?",
    "slug": "will-usdbrl-hit-4-low-in-2026",
-   "yes": 0.38,
+   "yes": 0.43,
    "volume": 168.8,
    "end_date": "2027-01-01",
    "yes_token": "2473756566973123196616969589153531422606289420258756390203158844580449890845"
@@ -6645,7 +6645,7 @@
    "id": "2439588",
    "question": "Will USD/BRL hit 3.75 (Low) in 2026?",
    "slug": "will-usdbrl-hit-3pt75-low-in-2026",
-   "yes": 0.44,
+   "yes": 0.451,
    "volume": 149.094176,
    "end_date": "2027-01-01",
    "yes_token": "37549409830831601976246980977147844543002006080396151392827518811060683208774"
@@ -6670,7 +6670,7 @@
    "question": "Will the Bank of Brazil increase the target for the Selic rate by 25 bps at the November meeting?",
    "slug": "will-the-bank-of-brazil-increase-the-target-for-the-selic-rate-by-25-bps-at-the-november-meeting-1785878499380",
    "yes": 0.0065,
-   "volume": 12802.961401,
+   "volume": 12802.961400999999,
    "end_date": "2026-11-04",
    "yes_token": "49749831611498836909454765353834100207348252043868943570573506981991477409618"
   },
@@ -6681,7 +6681,7 @@
    "id": "3347918",
    "question": "Will the Bank of Brazil make no change to the target for the Selic rate at the November meeting?",
    "slug": "will-the-bank-of-brazil-make-no-change-to-the-target-for-the-selic-rate-at-the-november-meeting-1785878499381",
-   "yes": 0.6955,
+   "yes": 0.697,
    "volume": 33120.81032899999,
    "end_date": "2026-11-04",
    "yes_token": "62898448752974352041395049351563686685817602221345159614956764716429452414447"
@@ -6694,7 +6694,7 @@
    "question": "Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the November meeting?",
    "slug": "will-the-bank-of-brazil-decrease-the-target-for-the-selic-rate-by-25-bps-at-the-november-meeting-1785878499382",
    "yes": 0.28,
-   "volume": 45245.341006,
+   "volume": 45245.341005999995,
    "end_date": "2026-11-04",
    "yes_token": "80000998308040935617816019189304588759503393911315444390303332990325308634750"
   },
@@ -6729,7 +6729,7 @@
    "id": "4386140",
    "question": "Will the peak severe (S2+) drought coverage in Minas Gerais be 5% to 19.99%?",
    "slug": "will-the-peak-severe-s2-drought-coverage-in-minas-gerais-be-5-to-19pt99",
-   "yes": 0.23,
+   "yes": 0.235,
    "volume": 2662.604026,
    "end_date": "2027-05-01",
    "yes_token": "79743667960138293942749213494054248227811922267211557653207187828099808272134"
@@ -6741,7 +6741,7 @@
    "id": "4386141",
    "question": "Will the peak severe (S2+) drought coverage in Minas Gerais be 20% to 39.99%?",
    "slug": "will-the-peak-severe-s2-drought-coverage-in-minas-gerais-be-20-to-39pt99",
-   "yes": 0.295,
+   "yes": 0.285,
    "volume": 5369.638728,
    "end_date": "2027-05-01",
    "yes_token": "51940293779303060318436618423959206175461135402236534467578066684710777821485"
@@ -6753,7 +6753,7 @@
    "id": "4386142",
    "question": "Will the peak severe (S2+) drought coverage in Minas Gerais be 40% to 59.99%?",
    "slug": "will-the-peak-severe-s2-drought-coverage-in-minas-gerais-be-40-to-59pt99",
-   "yes": 0.335,
+   "yes": 0.315,
    "volume": 3464.414226000001,
    "end_date": "2027-05-01",
    "yes_token": "73509617197790891271543305013198947216763038030747094462830352647953034859888"
@@ -6778,7 +6778,7 @@
    "question": "Will Brazil's Q3 2026 GDP growth rate (QoQ) be less than -0.3%?",
    "slug": "will-brazils-q3-2026-gdp-growth-rate-qoq-be-less-than-negative-0pt3",
    "yes": 0.1985,
-   "volume": 2534.372597,
+   "volume": 2534.3725970000005,
    "end_date": "2026-12-02",
    "yes_token": "89668175962268775579156032483300556241997798289086522152774179382532025370793"
   },
@@ -6801,7 +6801,7 @@
    "id": "4391803",
    "question": "Will Brazil's Q3 2026 GDP growth rate (QoQ) be between 0.0% and 0.2%?",
    "slug": "will-brazils-q3-2026-gdp-growth-rate-qoq-be-between-0pt0-and-0pt2",
-   "yes": 0.29,
+   "yes": 0.31,
    "volume": 16553.330638,
    "end_date": "2026-12-02",
    "yes_token": "110441938068770825708421802822506161576294917755107482718557238867939280780665"
@@ -6873,7 +6873,7 @@
    "id": "4713377",
    "question": "Will the Bank of Brazil increase the target for the Selic rate by 50+ bps at the December meeting?",
    "slug": "will-the-bank-of-brazil-increase-the-target-for-the-selic-rate-by-50-bps-at-the-december-meeting-20260918",
-   "yes": 0.0735,
+   "yes": 0.079,
    "volume": 2584.329413,
    "end_date": "2026-12-09",
    "yes_token": "30195904220375335194125356574073101897040709003172941794939105447116405699995"
@@ -6885,7 +6885,7 @@
    "id": "4713378",
    "question": "Will the Bank of Brazil increase the target for the Selic rate by 25 bps at the December meeting?",
    "slug": "will-the-bank-of-brazil-increase-the-target-for-the-selic-rate-by-25-bps-at-the-december-meeting-20260918",
-   "yes": 0.176,
+   "yes": 0.1405,
    "volume": 2867.422505,
    "end_date": "2026-12-09",
    "yes_token": "41198242470253749962432838432926634303889494719212403349631761283499090544513"
@@ -6898,7 +6898,7 @@
    "question": "Will the Bank of Brazil make no change to the target for the Selic rate at the December meeting?",
    "slug": "will-the-bank-of-brazil-make-no-change-to-the-target-for-the-selic-rate-at-the-december-meeting-20260918",
    "yes": 0.53,
-   "volume": 17293.839426,
+   "volume": 17293.839426000002,
    "end_date": "2026-12-09",
    "yes_token": "67229367617858153249105054589104548461331275253138487917870065113219641428440"
   },
@@ -6910,7 +6910,7 @@
    "question": "Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the December meeting?",
    "slug": "will-the-bank-of-brazil-decrease-the-target-for-the-selic-rate-by-25-bps-at-the-december-meeting-20260918",
    "yes": 0.24,
-   "volume": 17825.780225,
+   "volume": 17825.780225000002,
    "end_date": "2026-12-09",
    "yes_token": "56157995303115559326792157616050491782775058260850031123564922550470220648714"
   },
@@ -6933,8 +6933,8 @@
    "id": "5211868",
    "question": "Flávio Bolsonaro charged or arrested by October 31?",
    "slug": "flavio-bolsonaro-charged-or-arrested-by-september-30-20260609144215531-20261001003357876",
-   "yes": 0.0635,
-   "volume": 27906.598754000002,
+   "yes": 0.0555,
+   "volume": 27917.147273000002,
    "end_date": "2026-11-01",
    "yes_token": "18543375126809870900251079011750118581792388072844828839324758095022873872366"
   },
@@ -6946,7 +6946,7 @@
    "question": "Will Luiz Inácio Lula da Silva win Brazil, Gadi Eizenkot become Israeli PM, and Republicans win the US Senate?",
    "slug": "will-luiz-inacio-lula-da-silva-win-brazil-gadi-eizenkot-become-israeli-pm-and-republicans-win-the-us-senate",
    "yes": 0.073,
-   "volume": 2376.115842,
+   "volume": 2376.1158419999997,
    "end_date": "2026-11-05",
    "yes_token": "98190261221644796087397099034215730281824108111870562799195085127668902534765"
   },
@@ -6957,7 +6957,7 @@
    "id": "5336164",
    "question": "Will Luiz Inácio Lula da Silva win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?",
    "slug": "will-luiz-inacio-lula-da-silva-win-brazil-gadi-eizenkot-become-israeli-pm-and-democrats-win-the-us-senate",
-   "yes": 0.241,
+   "yes": 0.2385,
    "volume": 59428.11425,
    "end_date": "2026-11-05",
    "yes_token": "88158660877205717851165837264098041815303285547920117100420136852989334624206"
@@ -6970,7 +6970,7 @@
    "question": "Will Luiz Inácio Lula da Silva win Brazil, Benjamin Netanyahu become Israeli PM, and Republicans win the US Senate?",
    "slug": "will-luiz-inacio-lula-da-silva-win-brazil-benjamin-netanyahu-become-israeli-pm-and-republicans-win-the-us-senate",
    "yes": 0.139,
-   "volume": 2969.2284959999997,
+   "volume": 2969.228496,
    "end_date": "2026-11-05",
    "yes_token": "15902997820269716738413224195207966770017394449791215228785014386679509338755"
   },
@@ -6982,7 +6982,7 @@
    "question": "Will Luiz Inácio Lula da Silva win Brazil, Benjamin Netanyahu become Israeli PM, and Democrats win the US Senate?",
    "slug": "will-luiz-inacio-lula-da-silva-win-brazil-benjamin-netanyahu-become-israeli-pm-and-democrats-win-the-us-senate",
    "yes": 0.3135,
-   "volume": 17782.759235,
+   "volume": 17782.759235000005,
    "end_date": "2026-11-05",
    "yes_token": "66982749260372124071095577328485371131043076630160314663319696662098743766985"
   },
@@ -7425,7 +7425,7 @@
    "id": "5371682",
    "question": "Will Douglas Ruas win the 2026 Rio de Janeiro gubernatorial second round by less than 5%?",
    "slug": "will-douglas-ruas-win-the-2026-rio-de-janeiro-gubernatorial-second-round-by-less-than-5",
-   "yes": 0.0685,
+   "yes": 0.056,
    "volume": 8172.646728,
    "end_date": "2026-10-26",
    "yes_token": "99259176593585583433517891266309090248873863226594878171278837007852154392806"
@@ -7462,7 +7462,7 @@
    "question": "Jair Bolsonaro pardoned by March 31, 2027?",
    "slug": "jair-bolsonaro-pardoned-by-march-31-2027-1791185062998",
    "yes": 0.1,
-   "volume": 2792.213788,
+   "volume": 2794.364316,
    "end_date": "2027-04-01",
    "yes_token": "83342545242959094535337046971464685050912455434874315328451643274632605267343"
   },
@@ -7473,7 +7473,7 @@
    "id": "5419367",
    "question": "Jair Bolsonaro released from custody by March 31, 2027?",
    "slug": "jair-bolsonaro-released-from-custody-by-march-31-2027-1791185062998",
-   "yes": 0.195,
+   "yes": 0.2,
    "volume": 18417.598797000002,
    "end_date": "2027-04-01",
    "yes_token": "25804370558540735923033549162203798428179342555307355916957825285336677320927"
@@ -7498,7 +7498,7 @@
    "question": "Flávio Bolsonaro arrested before 2027?",
    "slug": "flavio-bolsonaro-arrested-before-2027",
    "yes": 0.065,
-   "volume": 24166.109588,
+   "volume": 24168.237247999998,
    "end_date": "2027-01-01",
    "yes_token": "84073041526484149978974719760345683815878869820787583290845291643622820531217"
   },
@@ -7533,8 +7533,8 @@
    "id": "6329507",
    "question": "Will the US grant Flávio Bolsonaro political asylum in 2026?",
    "slug": "will-the-us-grant-flavio-bolsonaro-political-asylum-in-2026",
-   "yes": 0.17,
-   "volume": 4049.6374890000006,
+   "yes": 0.165,
+   "volume": 4059.6374890000006,
    "end_date": "2027-01-01",
    "yes_token": "42918300458965456325810259104368923024296480778652007946562735349258085259912"
   },
@@ -7546,7 +7546,7 @@
    "question": "Will Flávio Bolsonaro return to Brazil by November 30, 2026?",
    "slug": "will-flavio-bolsonaro-return-to-brazil-by-november-30-2026-20261028",
    "yes": 0.0155,
-   "volume": 7481.633555,
+   "volume": 7484.6258,
    "end_date": "2026-12-01",
    "yes_token": "32920048109139315123834574336933294901271078055949958596499249907752850499479"
   },
@@ -7570,7 +7570,7 @@
    "question": "Will Flávio Bolsonaro return to Brazil by March 31, 2027?",
    "slug": "will-flavio-bolsonaro-return-to-brazil-by-march-31-2027-20261028",
    "yes": 0.135,
-   "volume": 3520.2704759999997,
+   "volume": 3520.2704760000006,
    "end_date": "2027-04-01",
    "yes_token": "73434527239853507434828382905910374716028620233151297457563031384167447308972"
   },
@@ -7606,7 +7606,7 @@
    "question": "Claudia Sheinbaum out as President of Mexico by December 31?",
    "slug": "claudia-sheinbaum-out-as-president-of-mexico-by-december-31",
    "yes": 0.0295,
-   "volume": 41161.17075999999,
+   "volume": 41161.17076,
    "end_date": "2027-01-01",
    "yes_token": "37420960410686813395557335016879819995125177048572256914080578977464572399999"
   },
@@ -7641,7 +7641,7 @@
    "id": "1353323",
    "question": "Will Mexico’s 2026 Annual Inflation be between 3.00% and 3.49%?",
    "slug": "will-mexicos-2026-annual-inflation-be-between-3pt00-and-3pt49",
-   "yes": 0.106,
+   "yes": 0.1055,
    "volume": 38130.757062000004,
    "end_date": "2027-01-09",
    "yes_token": "90738193109690042349566092619083117027971273174656983832853411849337357965180"
@@ -7666,7 +7666,7 @@
    "question": "Will Mexico’s 2026 Annual Inflation be between 4.00% and 4.49%?",
    "slug": "will-mexicos-2026-annual-inflation-be-between-4pt00-and-4pt49",
    "yes": 0.255,
-   "volume": 26545.020263000002,
+   "volume": 26545.02026300001,
    "end_date": "2027-01-09",
    "yes_token": "79402468117150049985541869481803337023372823866628213782593630232147374951131"
   },
@@ -7677,8 +7677,8 @@
    "id": "1353326",
    "question": "Will Mexico’s 2026 Annual Inflation be between 4.50% and 4.99%?",
    "slug": "will-mexicos-2026-annual-inflation-be-between-4pt50-and-4pt99",
-   "yes": 0.042,
-   "volume": 6019.478115,
+   "yes": 0.0415,
+   "volume": 6019.478114999999,
    "end_date": "2027-01-09",
    "yes_token": "109327336242900111489374106476178896281080742558089234534508688376936591295130"
   },
@@ -7690,7 +7690,7 @@
    "question": "Will Mexico’s 2026 Annual Inflation be between 5.00% and 5.49%?",
    "slug": "will-mexicos-2026-annual-inflation-be-between-5pt00-and-5pt49",
    "yes": 0.0085,
-   "volume": 3651.386479,
+   "volume": 3651.3864789999993,
    "end_date": "2027-01-09",
    "yes_token": "337230410537961262283185469912385340301479386063555686254309004119216422269"
   },
@@ -7713,8 +7713,8 @@
    "id": "1419322",
    "question": "Will Iván Archivaldo Guzmán Salazar be arrested in 2026?",
    "slug": "will-ivn-archivaldo-guzmn-salazar-be-arrested-in-2026",
-   "yes": 0.227,
-   "volume": 11250.092355,
+   "yes": 0.22,
+   "volume": 11320.304731000002,
    "end_date": "2027-01-01",
    "yes_token": "62445277470992789532776426010992494888480592422220766675067715183741884188791"
   },
@@ -7737,7 +7737,7 @@
    "id": "1419324",
    "question": "Will Ricardo Ruiz Velasco be arrested in 2026?",
    "slug": "will-ricardo-ruiz-velasco-be-arrested-in-2026",
-   "yes": 0.1295,
+   "yes": 0.131,
    "volume": 63656.29130599999,
    "end_date": "2027-01-01",
    "yes_token": "66308564831690081656975437521823601885814005556957413511084968749762852082378"
@@ -7749,7 +7749,7 @@
    "id": "1419326",
    "question": "Will Hugo Gonzalo Mendoza Gaytan be arrested in 2026?",
    "slug": "will-hugo-gonzalo-mendoza-gaytan-be-arrested-in-2026",
-   "yes": 0.112,
+   "yes": 0.1125,
    "volume": 5428.433481000001,
    "end_date": "2027-01-01",
    "yes_token": "42841150234485460797845625357348767924315135994747196112735829527497428056359"
@@ -7798,7 +7798,7 @@
    "question": "Sinaloa Gov. Ruben Rocha arrested by December 31?",
    "slug": "sinaloa-govpt-ruben-rocha-arrested-by-december-31-20260728192035733",
    "yes": 0.1685,
-   "volume": 8434.075203,
+   "volume": 8434.075203000002,
    "end_date": "2027-01-01",
    "yes_token": "101367678174213189677798755692802292816965013341539036902251481093173242664302"
   },
@@ -7821,7 +7821,7 @@
    "id": "2271398",
    "question": "Will the National Action Party (PAN) win the most seats in the 2027 Mexico legislative election?",
    "slug": "will-the-national-action-party-pan-win-the-most-seats-in-the-2027-mexico-legislative-election",
-   "yes": 0.051,
+   "yes": 0.0505,
    "volume": 22490.126137999996,
    "end_date": "2027-06-07",
    "yes_token": "28558543616774131221649737292304876369334578248322086800155890030213686717768"
@@ -8217,7 +8217,7 @@
    "id": "2325445",
    "question": "Will the National Action Party (PAN) win the second most seats in the 2027 Mexico legislative election?",
    "slug": "will-the-national-action-party-pan-win-the-second-most-seats-in-the-2027-mexico-legislative-election",
-   "yes": 0.77,
+   "yes": 0.765,
    "volume": 39929.438279999995,
    "end_date": "2027-06-07",
    "yes_token": "101415128960931753169197757425422352807810116146153999980562981314532126125970"
@@ -8229,7 +8229,7 @@
    "id": "2325446",
    "question": "Will the Institutional Revolutionary Party (PRI) win the second most seats in the 2027 Mexico legislative election?",
    "slug": "will-the-institutional-revolutionary-party-pri-win-the-second-most-seats-in-the-2027-mexico-legislative-election",
-   "yes": 0.1425,
+   "yes": 0.1455,
    "volume": 15393.450763,
    "end_date": "2027-06-07",
    "yes_token": "55919604840450207250163124607284452041172505492731304114184471282834139858540"
@@ -8265,7 +8265,7 @@
    "id": "2325449",
    "question": "Will Citizens’ Movement (MC) win the second most seats in the 2027 Mexico legislative election?",
    "slug": "will-citizens-movement-mc-win-the-second-most-seats-in-the-2027-mexico-legislative-election",
-   "yes": 0.0385,
+   "yes": 0.04,
    "volume": 5129.562322,
    "end_date": "2027-06-07",
    "yes_token": "423364479193680239850423411416135854096787857763853938539897635809886919056"
@@ -8277,7 +8277,7 @@
    "id": "2325450",
    "question": "Will the National Regeneration Movement (Morena) win the second most seats in the 2027 Mexico legislative election?",
    "slug": "will-the-national-regeneration-movement-morena-win-the-second-most-seats-in-the-2027-mexico-legislative-election",
-   "yes": 0.031,
+   "yes": 0.0315,
    "volume": 5541.094336999999,
    "end_date": "2027-06-07",
    "yes_token": "8878055197628183805609226668273767044901432874217313308044969492807238164703"
@@ -8650,7 +8650,7 @@
    "question": "Will Mexico GDP growth in Q3 2026 be between 0.5% and 1.0%?",
    "slug": "will-mexico-gdp-growth-in-q3-2026-be-between-0pt5-and-1pt0-20260731151540697",
    "yes": 0.0055,
-   "volume": 2003.171,
+   "volume": 2003.1709999999998,
    "end_date": "2026-10-30",
    "yes_token": "48581509383278914376920122545589955851481825488837130828267777575405555568673"
   },
@@ -8673,7 +8673,7 @@
    "id": "3251595",
    "question": "Will Mexico GDP growth in Q3 2026 be between 1.5% and 2.0%?",
    "slug": "will-mexico-gdp-growth-in-q3-2026-be-between-1pt5-and-2pt0-20260731151540699",
-   "yes": 0.0015,
+   "yes": 0.001,
    "volume": 17692.126941,
    "end_date": "2026-10-30",
    "yes_token": "78707877367835773752112963826616740089702756046506863043639633316839331961538"
@@ -8685,8 +8685,8 @@
    "id": "3251596",
    "question": "Will Mexico GDP growth in Q3 2026 be between 2.0% and 2.5%?",
    "slug": "will-mexico-gdp-growth-in-q3-2026-be-between-2pt0-and-2pt5-20260731151540700",
-   "yes": 0.07,
-   "volume": 23919.919401,
+   "yes": 0.065,
+   "volume": 23919.919401000003,
    "end_date": "2026-10-30",
    "yes_token": "20689121921907902334732566559705908339926978977876299662460309631875227519503"
   },
@@ -8697,7 +8697,7 @@
    "id": "3251597",
    "question": "Will Mexico GDP growth in Q3 2026 be between 2.5% and 3.0%?",
    "slug": "will-mexico-gdp-growth-in-q3-2026-be-between-2pt5-and-3pt0-20260731151540701",
-   "yes": 0.102,
+   "yes": 0.1045,
    "volume": 9208.846577000002,
    "end_date": "2026-10-30",
    "yes_token": "12304957773396951228870812415104578610579077584393294778599675151769463216692"
@@ -8710,7 +8710,7 @@
    "question": "Will Mexico GDP growth in Q3 2026 be between 3.0% and 3.5%?",
    "slug": "will-mexico-gdp-growth-in-q3-2026-be-between-3pt0-and-3pt5-20260731151540702",
    "yes": 0.444,
-   "volume": 8465.631331999999,
+   "volume": 8517.311332000001,
    "end_date": "2026-10-30",
    "yes_token": "13253859794492090687027508379001989679918098637230602722539964405634753255851"
   },
@@ -8721,8 +8721,8 @@
    "id": "3251599",
    "question": "Will Mexico GDP growth in Q3 2026 be at least 3.5%?",
    "slug": "will-mexico-gdp-growth-in-q3-2026-be-at-least-3pt5-20260731151540703",
-   "yes": 0.359,
-   "volume": 7576.391706,
+   "yes": 0.3285,
+   "volume": 7625.211706,
    "end_date": "2026-10-30",
    "yes_token": "4474605496154897916590824601551433388249266707863423544376636826511259905069"
   },
@@ -8733,8 +8733,8 @@
    "id": "3357587",
    "question": "Will Ulises Mejía Haro win the 2027 Zacatecas Governor Election?",
    "slug": "will-ulises-mejia-haro-win-the-2027-zacatecas-governor-election-20260803173858832",
-   "yes": 0.215,
-   "volume": 22120.117604,
+   "yes": 0.21,
+   "volume": 22120.117604000003,
    "end_date": "2027-06-07",
    "yes_token": "102400853698619422310938792776151967024584902839344726785939373549151857351305"
   },
@@ -8745,8 +8745,8 @@
    "id": "3357588",
    "question": "Will Verónica Díaz Robles win the 2027 Zacatecas Governor Election?",
    "slug": "will-veronica-diaz-robles-win-the-2027-zacatecas-governor-election-20260803173858833",
-   "yes": 0.595,
-   "volume": 9276.092644999999,
+   "yes": 0.59,
+   "volume": 9276.092644999997,
    "end_date": "2027-06-07",
    "yes_token": "11638061166736033273933185245188608407131084194662600067052951462725350312489"
   },
@@ -8829,7 +8829,7 @@
    "id": "3357595",
    "question": "Will Geovanna Bañuelos de la Torre win the 2027 Zacatecas Governor Election?",
    "slug": "will-geovanna-banuelos-de-la-torre-win-the-2027-zacatecas-governor-election-20260803173858840",
-   "yes": 0.0845,
+   "yes": 0.085,
    "volume": 787.6522689999999,
    "end_date": "2027-06-07",
    "yes_token": "22062362659276707432995958455494661194946684103259297312261775035961228110865"
@@ -8913,7 +8913,7 @@
    "id": "3357602",
    "question": "Will Jorge Álvarez Máynez win the 2027 Zacatecas Governor Election?",
    "slug": "will-jorge-alvarez-maynez-win-the-2027-zacatecas-governor-election-20260803173858847",
-   "yes": 0.1735,
+   "yes": 0.1525,
    "volume": 824.375789,
    "end_date": "2027-06-07",
    "yes_token": "17237086810734487898367502121242891837391858685750284829170010810519813690492"
@@ -9249,7 +9249,7 @@
    "id": "3357682",
    "question": "Will Alfonso Sánchez García win the 2027 Tlaxcala Governor Election?",
    "slug": "will-alfonso-sanchez-garcia-win-the-2027-tlaxcala-governor-election-20260803173858357",
-   "yes": 0.066,
+   "yes": 0.064,
    "volume": 31754.708033999996,
    "end_date": "2027-06-07",
    "yes_token": "48988015240538282183261135263700690789088422778776065691220312017785360950153"
@@ -9369,7 +9369,7 @@
    "id": "3357692",
    "question": "Will Anabell Ávalos Zempoalteca win the 2027 Tlaxcala Governor Election?",
    "slug": "will-anabell-avalos-zempoalteca-win-the-2027-tlaxcala-governor-election-20260803173858367",
-   "yes": 0.017,
+   "yes": 0.025,
    "volume": 3916.0340589999996,
    "end_date": "2027-06-07",
    "yes_token": "7085380576775176952651913020984803408128724232805697686450830940278152707232"
@@ -9729,7 +9729,7 @@
    "id": "3357729",
    "question": "Will Lorenia Valles Sampedro win the 2027 Sonora Governor Election?",
    "slug": "will-lorenia-valles-sampedro-win-the-2027-sonora-governor-election-20260803173857684",
-   "yes": 0.585,
+   "yes": 0.59,
    "volume": 28625.484894999998,
    "end_date": "2027-06-07",
    "yes_token": "96207782958507667751702281190314286811280227123234871664762330367537107397974"
@@ -9861,7 +9861,7 @@
    "id": "3357741",
    "question": "Will Sylvana Beltrones Sánchez win the 2027 Sonora Governor Election?",
    "slug": "will-sylvana-beltrones-sanchez-win-the-2027-sonora-governor-election-20260803173857695",
-   "yes": 0.093,
+   "yes": 0.092,
    "volume": 705.5523660000001,
    "end_date": "2027-06-07",
    "yes_token": "107195911485783417066245421201094495187392247965662728998643310244113900309377"
@@ -9945,7 +9945,7 @@
    "id": "3357748",
    "question": "Will Luis Donaldo Colosio Riojas win the 2027 Sonora Governor Election?",
    "slug": "will-luis-donaldo-colosio-riojas-win-the-2027-sonora-governor-election-20260803173857702",
-   "yes": 0.2135,
+   "yes": 0.2055,
    "volume": 2270.537223,
    "end_date": "2027-06-07",
    "yes_token": "12443059458717334677429397997329361441443775562660101219802457703427958743918"
@@ -10281,7 +10281,7 @@
    "id": "3357829",
    "question": "Will Imelda Castro Castro win the 2027 Sinaloa Governor Election?",
    "slug": "will-imelda-castro-castro-win-the-2027-sinaloa-governor-election-20260803173857212",
-   "yes": 0.7,
+   "yes": 0.695,
    "volume": 19502.931316000002,
    "end_date": "2027-06-07",
    "yes_token": "66936422140555732950907857263941789122611262487933097219950094048174761096774"
@@ -10342,7 +10342,7 @@
    "question": "Will Estrella Palacios Domínguez win the 2027 Sinaloa Governor Election?",
    "slug": "will-estrella-palacios-dominguez-win-the-2027-sinaloa-governor-election-20260803173857217",
    "yes": 0.004,
-   "volume": 763.3820000000001,
+   "volume": 763.382,
    "end_date": "2027-06-07",
    "yes_token": "91918968871794614161509599217227941565555522198422223657080618808598147551503"
   },
@@ -10402,7 +10402,7 @@
    "question": "Will Tomás de Jesús López Bajo win the 2027 Sinaloa Governor Election?",
    "slug": "will-tomas-de-jesus-lopez-bajo-win-the-2027-sinaloa-governor-election-20260803173857222",
    "yes": 0.0045,
-   "volume": 1479.9859999999999,
+   "volume": 1479.986,
    "end_date": "2027-06-07",
    "yes_token": "53750761798729724562811602583540158115664353830479566709172498180798361757389"
   },
@@ -10414,7 +10414,7 @@
    "question": "Will Omar López Campos win the 2027 Sinaloa Governor Election?",
    "slug": "will-omar-lopez-campos-win-the-2027-sinaloa-governor-election-20260803173857223",
    "yes": 0.0015,
-   "volume": 1736.7835,
+   "volume": 1736.7835000000002,
    "end_date": "2027-06-07",
    "yes_token": "31004164073145808010095808939988405419524796760802099855312883175712602272905"
   },
@@ -10486,7 +10486,7 @@
    "question": "Will Roxana Rubio Valdez win the 2027 Sinaloa Governor Election?",
    "slug": "will-roxana-rubio-valdez-win-the-2027-sinaloa-governor-election-20260803173857229",
    "yes": 0.003,
-   "volume": 1254.8760000000002,
+   "volume": 1254.876,
    "end_date": "2027-06-07",
    "yes_token": "41464624090045146310118838777588198175900808392500037370126145108155644849022"
   },
@@ -10521,7 +10521,7 @@
    "id": "3357849",
    "question": "Will María Fernanda Rivera win the 2027 Sinaloa Governor Election?",
    "slug": "will-maria-fernanda-rivera-win-the-2027-sinaloa-governor-election-20260803173857232",
-   "yes": 0.0755,
+   "yes": 0.078,
    "volume": 1449.802,
    "end_date": "2027-06-07",
    "yes_token": "64231703177080717736107565016780157719398750659697749309978490478531043607462"
@@ -10857,7 +10857,7 @@
    "id": "3357885",
    "question": "Will Ruth González Silva win the 2027 San Luis Potosí Governor Election?",
    "slug": "will-ruth-gonzalez-silva-win-the-2027-san-luis-potosi-governor-election-20260803173856690",
-   "yes": 0.715,
+   "yes": 0.72,
    "volume": 28600.366785000002,
    "end_date": "2027-06-07",
    "yes_token": "37805700765244835619663528206007338589024740680940238455901703575756896158353"
@@ -10989,7 +10989,7 @@
    "id": "3357896",
    "question": "Will Ana Dora Cabrera win the 2027 San Luis Potosí Governor Election?",
    "slug": "will-ana-dora-cabrera-win-the-2027-san-luis-potosi-governor-election-20260803173856701",
-   "yes": 0.024,
+   "yes": 0.0265,
    "volume": 2088.716866,
    "end_date": "2027-06-07",
    "yes_token": "81748708273354714104070618015616444907517068283687570689555790227575967077149"
@@ -11457,7 +11457,7 @@
    "id": "3357935",
    "question": "Will Rafael Marín Mollinedo win the 2027 Quintana Roo Governor Election?",
    "slug": "will-rafael-marin-mollinedo-win-the-2027-quintana-roo-governor-election-20260803173856150",
-   "yes": 0.0415,
+   "yes": 0.041,
    "volume": 10602.070252,
    "end_date": "2027-06-07",
    "yes_token": "9677514585416994107484262587196067949878168750358267421197100713851796061235"
@@ -11517,7 +11517,7 @@
    "id": "3357940",
    "question": "Will Lidia Rojas Fabro win the 2027 Quintana Roo Governor Election?",
    "slug": "will-lidia-rojas-fabro-win-the-2027-quintana-roo-governor-election-20260803173856155",
-   "yes": 0.0635,
+   "yes": 0.0625,
    "volume": 743.1800000000001,
    "end_date": "2027-06-07",
    "yes_token": "90824573167652575293821063141309529339477156038624415459269403706519764067744"
@@ -11553,7 +11553,7 @@
    "id": "3357943",
    "question": "Will Reyna Tamayo Carballo win the 2027 Quintana Roo Governor Election?",
    "slug": "will-reyna-tamayo-carballo-win-the-2027-quintana-roo-governor-election-20260803173856158",
-   "yes": 0.0335,
+   "yes": 0.032,
    "volume": 740.47,
    "end_date": "2027-06-07",
    "yes_token": "114584389799168387020388602214613326118951099813683119482558738680981987257851"
@@ -12093,7 +12093,7 @@
    "id": "3358007",
    "question": "Will Felipe Fernando Macías Olvera win the 2027 Querétaro Governor Election?",
    "slug": "will-felipe-fernando-macias-olvera-win-the-2027-queretaro-governor-election-20260803173855635",
-   "yes": 0.55,
+   "yes": 0.58,
    "volume": 6450.885793,
    "end_date": "2027-06-07",
    "yes_token": "34602588006107954283250102169960822864436990785485869983257659674649836785414"
@@ -12513,7 +12513,7 @@
    "id": "3358042",
    "question": "Will Luis Donaldo Colosio Riojas win the 2027 Nuevo León Governor Election?",
    "slug": "will-luis-donaldo-colosio-riojas-win-the-2027-nuevo-leon-governor-election-20260803173854387",
-   "yes": 0.0865,
+   "yes": 0.0845,
    "volume": 4040.8744140000003,
    "end_date": "2027-06-07",
    "yes_token": "80862579263827051752035827029356614471428573893481976901725853791885200164385"
@@ -12525,7 +12525,7 @@
    "id": "3358043",
    "question": "Will Mariana Rodríguez Cantú win the 2027 Nuevo León Governor Election?",
    "slug": "will-mariana-rodriguez-cantu-win-the-2027-nuevo-leon-governor-election-20260803173854388",
-   "yes": 0.2095,
+   "yes": 0.209,
    "volume": 18283.316058,
    "end_date": "2027-06-07",
    "yes_token": "59549902807583035000156857708326770811556077098947738918861024123511510711948"
@@ -12681,7 +12681,7 @@
    "id": "3358056",
    "question": "Will Jesús Alberto Elizondo win the 2027 Nuevo León Governor Election?",
    "slug": "will-jesus-alberto-elizondo-win-the-2027-nuevo-leon-governor-election-20260803173854401",
-   "yes": 0.0875,
+   "yes": 0.087,
    "volume": 579.803698,
    "end_date": "2027-06-07",
    "yes_token": "23296128083514192624982285228944890852377883120722443198100100980570205572565"
@@ -12694,7 +12694,7 @@
    "question": "Will Adrián de la Garza Santos win the 2027 Nuevo León Governor Election?",
    "slug": "will-adrian-de-la-garza-santos-win-the-2027-nuevo-leon-governor-election-20260803173854402",
    "yes": 0.36,
-   "volume": 13444.554003,
+   "volume": 13444.554003000001,
    "end_date": "2027-06-07",
    "yes_token": "12206202383048763739203752968052479150215818417728063734995465572010710652157"
   },
@@ -12705,7 +12705,7 @@
    "id": "3358058",
    "question": "Will Carlos de la Fuente Flores win the 2027 Nuevo León Governor Election?",
    "slug": "will-carlos-de-la-fuente-flores-win-the-2027-nuevo-leon-governor-election-20260803173854403",
-   "yes": 0.0785,
+   "yes": 0.0805,
    "volume": 401.572727,
    "end_date": "2027-06-07",
    "yes_token": "83671893704847349838677536988022731731033953340949274910391553046163361874686"
@@ -12741,7 +12741,7 @@
    "id": "3358061",
    "question": "Will Fernando Margáin Berlanga win the 2027 Nuevo León Governor Election?",
    "slug": "will-fernando-margain-berlanga-win-the-2027-nuevo-leon-governor-election-20260803173854406",
-   "yes": 0.031,
+   "yes": 0.0265,
    "volume": 491.06000000000006,
    "end_date": "2027-06-07",
    "yes_token": "95705262456087099410951558100708751420498737326859482761543837290174989691101"
@@ -13101,7 +13101,7 @@
    "id": "3358091",
    "question": "Will Héctor Santana García win the 2027 Nayarit Governor Election?",
    "slug": "will-hector-santana-garcia-win-the-2027-nayarit-governor-election-20260803173853871",
-   "yes": 0.0505,
+   "yes": 0.05,
    "volume": 2354.9234410000004,
    "end_date": "2027-06-07",
    "yes_token": "99737710449693974544395295007143665674396095721008766265369876778763908081441"
@@ -13113,7 +13113,7 @@
    "id": "3358092",
    "question": "Will Pavel Jarero Velázquez win the 2027 Nayarit Governor Election?",
    "slug": "will-pavel-jarero-velazquez-win-the-2027-nayarit-governor-election-20260803173853872",
-   "yes": 0.0555,
+   "yes": 0.045,
    "volume": 555.4132359999999,
    "end_date": "2027-06-07",
    "yes_token": "39611575904860813558608302363319832283414122848055700503145423644120689166067"
@@ -13185,7 +13185,7 @@
    "id": "3358098",
    "question": "Will Luis Zamora Carrillo win the 2027 Nayarit Governor Election?",
    "slug": "will-luis-zamora-carrillo-win-the-2027-nayarit-governor-election-20260803173853878",
-   "yes": 0.0065,
+   "yes": 0.008,
    "volume": 552.116512,
    "end_date": "2027-06-07",
    "yes_token": "83328040905522583845333494433105184215814956757374577340781050199912497763228"
@@ -13221,7 +13221,7 @@
    "id": "3358101",
    "question": "Will Citlalli Rubí Huerta win the 2027 Nayarit Governor Election?",
    "slug": "will-citlalli-rubi-huerta-win-the-2027-nayarit-governor-election-20260803173853881",
-   "yes": 0.065,
+   "yes": 0.062,
    "volume": 527.2233319999999,
    "end_date": "2027-06-07",
    "yes_token": "60847808006755269404698008315396426416084871435237217485420660011386587506027"
@@ -13281,7 +13281,7 @@
    "id": "3358106",
    "question": "Will Manuel Cota Jiménez win the 2027 Nayarit Governor Election?",
    "slug": "will-manuel-cota-jimenez-win-the-2027-nayarit-governor-election-20260803173853886",
-   "yes": 0.0425,
+   "yes": 0.053,
    "volume": 519.047333,
    "end_date": "2027-06-07",
    "yes_token": "14546589269159931075728673896150928090659320534088322237321015071724675406263"
@@ -13317,7 +13317,7 @@
    "id": "3358109",
    "question": "Will Hilaria Domínguez Arvizu win the 2027 Nayarit Governor Election?",
    "slug": "will-hilaria-dominguez-arvizu-win-the-2027-nayarit-governor-election-20260803173853889",
-   "yes": 0.1165,
+   "yes": 0.117,
    "volume": 880.5849389999998,
    "end_date": "2027-06-07",
    "yes_token": "52461491958772872248070094565316972597781730597583635897663681937651615395479"
@@ -13665,8 +13665,8 @@
    "id": "3358329",
    "question": "Will Beatriz Mojica Morga win the 2027 Guerrero Governor Election?",
    "slug": "will-beatriz-mojica-morga-win-the-2027-guerrero-governor-election-20260803173852824",
-   "yes": 0.7275,
-   "volume": 18440.684062000004,
+   "yes": 0.72,
+   "volume": 18440.684062,
    "end_date": "2027-06-07",
    "yes_token": "61889085640552111843028636333447991114876962739017843222174185342801218738156"
   },
@@ -13677,7 +13677,7 @@
    "id": "3358330",
    "question": "Will Esthela Damián Peralta win the 2027 Guerrero Governor Election?",
    "slug": "will-esthela-damian-peralta-win-the-2027-guerrero-governor-election-20260803173852825",
-   "yes": 0.0415,
+   "yes": 0.0375,
    "volume": 32872.258499,
    "end_date": "2027-06-07",
    "yes_token": "5779534472424681211816455695539945839240394574261907634498621410382462980007"
@@ -13761,8 +13761,8 @@
    "id": "3358337",
    "question": "Will Marcial Rodríguez Saldaña win the 2027 Guerrero Governor Election?",
    "slug": "will-marcial-rodriguez-saldana-win-the-2027-guerrero-governor-election-20260803173852832",
-   "yes": 0.2315,
-   "volume": 2239.53377,
+   "yes": 0.23,
+   "volume": 2239.5337699999995,
    "end_date": "2027-06-07",
    "yes_token": "78011617507187608915028771160666122263784375019501950875152822156320157348923"
   },
@@ -13774,7 +13774,7 @@
    "question": "Will Rubén Cayetano García win the 2027 Guerrero Governor Election?",
    "slug": "will-ruben-cayetano-garcia-win-the-2027-guerrero-governor-election-20260803173852833",
    "yes": 0.016,
-   "volume": 1451.3515790000001,
+   "volume": 1451.351579,
    "end_date": "2027-06-07",
    "yes_token": "65645123906692773417368920506628777650975422083648163742715905486875536198451"
   },
@@ -13857,7 +13857,7 @@
    "id": "3358345",
    "question": "Will Manuel Añorve Baños win the 2027 Guerrero Governor Election?",
    "slug": "will-manuel-anorve-banos-win-the-2027-guerrero-governor-election-20260803173852840",
-   "yes": 0.049,
+   "yes": 0.0425,
    "volume": 3603.241766,
    "end_date": "2027-06-07",
    "yes_token": "52180554159572222992374622899715559723726032683083445441025780890556732765134"
@@ -14385,7 +14385,7 @@
    "id": "3358405",
    "question": "Will Gricelda Valencia de la Mora win the 2027 Colima Governor Election?",
    "slug": "will-gricelda-valencia-de-la-mora-win-the-2027-colima-governor-election-20260803173852326",
-   "yes": 0.0235,
+   "yes": 0.019,
    "volume": 1470.65825,
    "end_date": "2027-06-07",
    "yes_token": "16011506989635770356526449972949421901242536822826887037170250117765504800782"
@@ -14410,7 +14410,7 @@
    "question": "Will Joel Padilla Peña win the 2027 Colima Governor Election?",
    "slug": "will-joel-padilla-pena-win-the-2027-colima-governor-election-20260803173852328",
    "yes": 0.0085,
-   "volume": 956.3266669999999,
+   "volume": 956.326667,
    "end_date": "2027-06-07",
    "yes_token": "57103798439201856879700993509893504874469049129393214597363052679386432003682"
   },
@@ -14457,7 +14457,7 @@
    "id": "3358411",
    "question": "Will Riult Rivera Gutiérrez win the 2027 Colima Governor Election?",
    "slug": "will-riult-rivera-gutierrez-win-the-2027-colima-governor-election-20260803173852332",
-   "yes": 0.128,
+   "yes": 0.1295,
    "volume": 2978.72456,
    "end_date": "2027-06-07",
    "yes_token": "5612676450163064208156709047133798251756967231144484450837574479576290834896"
@@ -14553,7 +14553,7 @@
    "id": "3358419",
    "question": "Will Margarita Moreno González win the 2027 Colima Governor Election?",
    "slug": "will-margarita-moreno-gonzalez-win-the-2027-colima-governor-election-20260803173852340",
-   "yes": 0.053,
+   "yes": 0.0505,
    "volume": 1178.403211,
    "end_date": "2027-06-07",
    "yes_token": "94491628250485278175433311903733460276073395661867037400542127502707546554210"
@@ -14926,7 +14926,7 @@
    "question": "Will Cruz Pérez Cuéllar win the 2027 Chihuahua Governor Election?",
    "slug": "will-cruz-perez-cuellar-win-the-2027-chihuahua-governor-election-20260803173851746",
    "yes": 0.36,
-   "volume": 4358.783619999999,
+   "volume": 4358.78362,
    "end_date": "2027-06-07",
    "yes_token": "112595784623246158000276710037893598177629119201615914154709417335397816345362"
   },
@@ -15429,7 +15429,7 @@
    "id": "3358501",
    "question": "Will Pablo Gutiérrez Lazarus win the 2027 Campeche Governor Election?",
    "slug": "will-pablo-gutierrez-lazarus-win-the-2027-campeche-governor-election-20260803173851218",
-   "yes": 0.75,
+   "yes": 0.745,
    "volume": 12083.967768000002,
    "end_date": "2027-06-07",
    "yes_token": "105954038929904951223913309533896596919957310397238488670024090129299987106604"
@@ -15633,7 +15633,7 @@
    "id": "3358518",
    "question": "Will Yolanda Valladares Valle win the 2027 Campeche Governor Election?",
    "slug": "will-yolanda-valladares-valle-win-the-2027-campeche-governor-election-20260803173851235",
-   "yes": 0.018,
+   "yes": 0.016,
    "volume": 674.3199999999999,
    "end_date": "2027-06-07",
    "yes_token": "10852130478212842054491724397197266580710359334964732322242690440137103631250"
@@ -16077,7 +16077,7 @@
    "id": "3358555",
    "question": "Will Manuel Cota Cárdenas win the 2027 Baja California Sur Governor Election?",
    "slug": "will-manuel-cota-cardenas-win-the-2027-baja-california-sur-governor-election-20260803173850743",
-   "yes": 0.392,
+   "yes": 0.396,
    "volume": 4007.7395240000005,
    "end_date": "2027-06-07",
    "yes_token": "51000576699362018277764614334792310099870821238940184718610434499101729337865"
@@ -16581,7 +16581,7 @@
    "id": "3358609",
    "question": "Will Julieta Ramírez Padilla win the 2027 Baja California Governor Election?",
    "slug": "will-julieta-ramirez-padilla-win-the-2027-baja-california-governor-election-20260803173850226",
-   "yes": 0.6285,
+   "yes": 0.6355,
    "volume": 13918.015279,
    "end_date": "2027-06-07",
    "yes_token": "22725017164931715877004300542746396089798700282008364271642922708234583516916"
@@ -16593,7 +16593,7 @@
    "id": "3358610",
    "question": "Will Ismael Burgueño Ruiz win the 2027 Baja California Governor Election?",
    "slug": "will-ismael-burgueno-ruiz-win-the-2027-baja-california-governor-election-20260803173850227",
-   "yes": 0.166,
+   "yes": 0.152,
    "volume": 14437.804487,
    "end_date": "2027-06-07",
    "yes_token": "41484352129316488145815451890178194937385240350988439873296110176828794638362"
@@ -17158,7 +17158,7 @@
    "question": "Will Antonio Martín del Campo win the 2027 Aguascalientes Governor Election?",
    "slug": "will-antonio-martin-del-campo-win-the-2027-aguascalientes-governor-election-20260803173849648",
    "yes": 0.5,
-   "volume": 15812.797532,
+   "volume": 15812.797531999999,
    "end_date": "2027-06-07",
    "yes_token": "39498219653529674491204140737993290491987374782250656758245879166630165519896"
   },
@@ -17169,8 +17169,8 @@
    "id": "3358660",
    "question": "Will Leonardo Montañez Castro win the 2027 Aguascalientes Governor Election?",
    "slug": "will-leonardo-montanez-castro-win-the-2027-aguascalientes-governor-election-20260803173849649",
-   "yes": 0.38,
-   "volume": 12528.226989000003,
+   "yes": 0.375,
+   "volume": 12552.176989000005,
    "end_date": "2027-06-07",
    "yes_token": "101193114156033093834343898215934339098255480208121736129828380301983770130728"
   },
@@ -17662,7 +17662,7 @@
    "question": "Will Raúl Morón Orozco win the 2027 Michoacán Governor Election?",
    "slug": "will-raul-moron-orozco-win-the-2027-michoacan-governor-election-20260803173853367",
    "yes": 0.01,
-   "volume": 3426.2932610000003,
+   "volume": 3449.2932610000003,
    "end_date": "2027-06-07",
    "yes_token": "109394615563404239005288623656462129832170958922073735722537246004447567653656"
   },
@@ -17709,8 +17709,8 @@
    "id": "3377750",
    "question": "Will Gladyz Butanda Macías win the 2027 Michoacán Governor Election?",
    "slug": "will-gladyz-butanda-macias-win-the-2027-michoacan-governor-election-20260803173853371",
-   "yes": 0.0075,
-   "volume": 16585.980432,
+   "yes": 0.007,
+   "volume": 16608.980432,
    "end_date": "2027-06-07",
    "yes_token": "95474090051374982994794632192867347943934813474823848812696554980435980011833"
   },
@@ -17793,8 +17793,8 @@
    "id": "3377757",
    "question": "Will Alfonso Martínez Alcázar win the 2027 Michoacán Governor Election?",
    "slug": "will-alfonso-martinez-alcazar-win-the-2027-michoacan-governor-election-20260803173853378",
-   "yes": 0.054,
-   "volume": 2305.0174279999997,
+   "yes": 0.0555,
+   "volume": 2328.0174279999997,
    "end_date": "2027-06-07",
    "yes_token": "89451542031626791061302300486936335039915906788714699761910119333531008967706"
   },
@@ -17913,7 +17913,7 @@
    "id": "3377767",
    "question": "Will Grecia Quiroz win the 2027 Michoacán Governor Election?",
    "slug": "will-grecia-quiroz-win-the-2027-michoacan-governor-election-20260803173853388",
-   "yes": 0.2485,
+   "yes": 0.2565,
    "volume": 8613.54399,
    "end_date": "2027-06-07",
    "yes_token": "84723300746717566697837118014997640455864920167235013485536858683810624122232"
@@ -18261,8 +18261,8 @@
    "id": "3388092",
    "question": "Bank of Mexico decreases interest rates by 25 bps after November 2026 meeting?",
    "slug": "bank-of-mexico-decreases-interest-rates-by-25-bps-after-november-2026-meeting-1786030375139",
-   "yes": 0.198,
-   "volume": 39189.157595,
+   "yes": 0.202,
+   "volume": 39465.031875,
    "end_date": "2026-11-05",
    "yes_token": "79935321123546292962195856591175158928949469679115949589340432812674795298180"
   },
@@ -18274,7 +18274,7 @@
    "question": "No change in Bank of Mexico’s interest rates after November 2026 meeting?",
    "slug": "no-change-in-bank-of-mexicos-interest-rates-after-november-2026-meeting-1786030375140",
    "yes": 0.78,
-   "volume": 60313.696168999995,
+   "volume": 61167.996621,
    "end_date": "2026-11-05",
    "yes_token": "11926886673861323673303266481104837693521054590342453631742272222765437806896"
   },
@@ -18286,7 +18286,7 @@
    "question": "Bank of Mexico increases interest rates by 25 bps after November 2026 meeting?",
    "slug": "bank-of-mexico-increases-interest-rates-by-25-bps-after-november-2026-meeting-1786030375141",
    "yes": 0.0015,
-   "volume": 25570.837539,
+   "volume": 25800.707539000003,
    "end_date": "2026-11-05",
    "yes_token": "111584157720509239561996004898835802868818519978845946077730412200387078584001"
   },
@@ -18322,7 +18322,7 @@
    "question": "Will a 6.0+ magnitude earthquake occur in Japan this month?",
    "slug": "where-will-a-6pt0-magnitude-earthquake-occur-by-end-of-october-20260928t160000000z-will-a-6pt0-magnitude-earthquake-occur-in-japan-this-month",
    "yes": 0.98,
-   "volume": 2651.42753,
+   "volume": 2651.4275300000004,
    "end_date": "2026-11-04",
    "yes_token": "44179778767805473477496238632697743173936087800007916732941293140512939261097"
   },
@@ -18382,7 +18382,7 @@
    "question": "Will a 6.0+ magnitude earthquake occur in Peru this month?",
    "slug": "where-will-a-6pt0-magnitude-earthquake-occur-by-end-of-october-20260928t160000000z-will-a-6pt0-magnitude-earthquake-occur-in-peru-this-month",
    "yes": 0.1,
-   "volume": 1653.347471,
+   "volume": 1653.3474710000003,
    "end_date": "2026-11-04",
    "yes_token": "40813976575839607777676154630170103632527753753837699172782428191464347417043"
   },
@@ -18406,7 +18406,7 @@
    "question": "U.S. anti-cartel operation outside of the U.S. by December 31?",
    "slug": "uptspt-anti-cartel-operation-outside-of-the-uptspt-by-december-31-20260929",
    "yes": 0.815,
-   "volume": 8187.127089,
+   "volume": 8187.127089000001,
    "end_date": "2027-01-01",
    "yes_token": "14566984956358697696682921099332872844562090068344807092210440834950202545857"
   },
@@ -18873,7 +18873,7 @@
    "id": "5462703",
    "question": "Will PAN win the most seats in the 2027 Baja California Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-baja-california-congress-election",
-   "yes": 0.037,
+   "yes": 0.035,
    "volume": 1159.855811,
    "end_date": "2027-06-07",
    "yes_token": "811381634509244341117232645368427628991140126323432978307070959062720199196"
@@ -18921,7 +18921,7 @@
    "id": "5462707",
    "question": "Will MC win the most seats in the 2027 Baja California Congress election?",
    "slug": "will-mc-win-the-most-seats-in-the-2027-baja-california-congress-election",
-   "yes": 0.05,
+   "yes": 0.0535,
    "volume": 2931.25311,
    "end_date": "2027-06-07",
    "yes_token": "3062349493430346752210349350502986822799537660550159899315385746042273156459"
@@ -19305,8 +19305,8 @@
    "id": "5462776",
    "question": "Will Morena win the most seats in the 2027 Baja California Sur Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-baja-california-sur-congress-election",
-   "yes": 0.68,
-   "volume": 4214.832368,
+   "yes": 0.665,
+   "volume": 4214.832367999999,
    "end_date": "2027-06-07",
    "yes_token": "23177206528463240246532816158284758365599988753711210884892258925261220090004"
   },
@@ -19317,8 +19317,8 @@
    "id": "5462778",
    "question": "Will PAN win the most seats in the 2027 Baja California Sur Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-baja-california-sur-congress-election",
-   "yes": 0.185,
-   "volume": 1274.0055010000003,
+   "yes": 0.175,
+   "volume": 1294.005501,
    "end_date": "2027-06-07",
    "yes_token": "24574120951290256892152768624476011645648210258501275389375401849297636682717"
   },
@@ -19341,7 +19341,7 @@
    "id": "5462782",
    "question": "Will PVEM win the most seats in the 2027 Baja California Sur Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-baja-california-sur-congress-election",
-   "yes": 0.05,
+   "yes": 0.035,
    "volume": 1717.466373,
    "end_date": "2027-06-07",
    "yes_token": "95797474500593285443955101022841327741591216244509860804386129999420281471273"
@@ -19773,7 +19773,7 @@
    "id": "5462822",
    "question": "Will PRI win the most seats in the 2027 Campeche Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-campeche-congress-election",
-   "yes": 0.076,
+   "yes": 0.056,
    "volume": 1388.2356370000002,
    "end_date": "2027-06-07",
    "yes_token": "63579939877540140975660159360510617651697634024260957316273353554855015858130"
@@ -20194,7 +20194,7 @@
    "question": "Will Morena win the most seats in the 2027 Chiapas Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-chiapas-congress-election",
    "yes": 0.815,
-   "volume": 3448.0995810000004,
+   "volume": 3448.099581,
    "end_date": "2027-06-07",
    "yes_token": "85514817912449607417165134325119162017043172000641822360263987561286128101502"
   },
@@ -21082,7 +21082,7 @@
    "question": "Will Morena win the most seats in the 2027 Colima Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-colima-congress-election",
    "yes": 0.67,
-   "volume": 4636.856478000001,
+   "volume": 4636.856478,
    "end_date": "2027-06-07",
    "yes_token": "106015695697077981547145967510434609624285245501720830544922969706676952389036"
   },
@@ -21525,7 +21525,7 @@
    "id": "5463012",
    "question": "Will Morena win the most seats in the 2027 Durango Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-durango-congress-election",
-   "yes": 0.5,
+   "yes": 0.495,
    "volume": 4402.757131,
    "end_date": "2027-06-07",
    "yes_token": "5774717941280790411171794915839650583206322323102820337305715665639510801744"
@@ -21549,8 +21549,8 @@
    "id": "5463019",
    "question": "Will PRI win the most seats in the 2027 Durango Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-durango-congress-election",
-   "yes": 0.205,
-   "volume": 1803.105516,
+   "yes": 0.225,
+   "volume": 1843.105516,
    "end_date": "2027-06-07",
    "yes_token": "104805204275353274209700706152053608279264503162812873086745126457515410935469"
   },
@@ -21969,7 +21969,7 @@
    "id": "5463081",
    "question": "Will Morena win the most seats in the 2027 Guanajuato Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-guanajuato-congress-election",
-   "yes": 0.26,
+   "yes": 0.29,
    "volume": 1941.179474,
    "end_date": "2027-06-07",
    "yes_token": "28453240230968493463616274801059831744223320383669679310476695135460545824220"
@@ -21981,7 +21981,7 @@
    "id": "5463082",
    "question": "Will PAN win the most seats in the 2027 Guanajuato Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-guanajuato-congress-election",
-   "yes": 0.675,
+   "yes": 0.68,
    "volume": 2619.4645960000003,
    "end_date": "2027-06-07",
    "yes_token": "52853206855735733793774293157002861140361857174121255809579873860362675176869"
@@ -22437,7 +22437,7 @@
    "id": "5463148",
    "question": "Will PRI win the most seats in the 2027 Guerrero Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-guerrero-congress-election",
-   "yes": 0.08,
+   "yes": 0.0795,
    "volume": 405.04325000000006,
    "end_date": "2027-06-07",
    "yes_token": "92493322177130342078660383906687757053065972147104151397639035187454140393647"
@@ -22857,7 +22857,7 @@
    "id": "5463222",
    "question": "Will Morena win the most seats in the 2027 Hidalgo Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-hidalgo-congress-election",
-   "yes": 0.77,
+   "yes": 0.78,
    "volume": 4917.991298999999,
    "end_date": "2027-06-07",
    "yes_token": "103992516895604469166082904087650901610026244293944090886595726606583115183685"
@@ -22869,8 +22869,8 @@
    "id": "5463224",
    "question": "Will PAN win the most seats in the 2027 Hidalgo Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-hidalgo-congress-election",
-   "yes": 0.039,
-   "volume": 603.6004110000001,
+   "yes": 0.049,
+   "volume": 603.600411,
    "end_date": "2027-06-07",
    "yes_token": "102670727804723217411997918095276600568724787402410993055292368620117336659555"
   },
@@ -22894,7 +22894,7 @@
    "question": "Will PVEM win the most seats in the 2027 Hidalgo Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-hidalgo-congress-election",
    "yes": 0.065,
-   "volume": 5143.419591,
+   "volume": 5143.419590999999,
    "end_date": "2027-06-07",
    "yes_token": "30538768263376128273256809182739411956034509760213188463041948477926560005094"
   },
@@ -22905,7 +22905,7 @@
    "id": "5463230",
    "question": "Will PT win the most seats in the 2027 Hidalgo Congress election?",
    "slug": "will-pt-win-the-most-seats-in-the-2027-hidalgo-congress-election",
-   "yes": 0.0075,
+   "yes": 0.0085,
    "volume": 387.79718299999996,
    "end_date": "2027-06-07",
    "yes_token": "103376940554576029023772275544834405997027029258188141363061667414623746863531"
@@ -23302,7 +23302,7 @@
    "question": "Will Morena win the most seats in the 2027 Jalisco Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-jalisco-congress-election",
    "yes": 0.33,
-   "volume": 1912.0560059999998,
+   "volume": 1912.056006,
    "end_date": "2027-06-07",
    "yes_token": "87606783396000036367703712899706814305648946637809700886614841900709311334715"
   },
@@ -23746,7 +23746,7 @@
    "question": "Will Morena win the most seats in the 2027 Mexico City Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-mexico-city-congress-election",
    "yes": 0.76,
-   "volume": 3403.659258,
+   "volume": 3403.6592580000006,
    "end_date": "2027-06-07",
    "yes_token": "20049372954378660250520717417143426229016605449509577284073726878560760897131"
   },
@@ -23757,7 +23757,7 @@
    "id": "5463342",
    "question": "Will PAN win the most seats in the 2027 Mexico City Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-mexico-city-congress-election",
-   "yes": 0.0735,
+   "yes": 0.074,
    "volume": 528.89418,
    "end_date": "2027-06-07",
    "yes_token": "36061282501843443510649693957343877899727229233469996242532426045714716812073"
@@ -23769,7 +23769,7 @@
    "id": "5463346",
    "question": "Will PRI win the most seats in the 2027 Mexico City Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-mexico-city-congress-election",
-   "yes": 0.134,
+   "yes": 0.1345,
    "volume": 551.976296,
    "end_date": "2027-06-07",
    "yes_token": "16734152212546456266659172271342967883080116249341098829767608284451281784916"
@@ -24189,7 +24189,7 @@
    "id": "5463479",
    "question": "Will Morena win the most seats in the 2027 Michoacán Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-michoacan-congress-election",
-   "yes": 0.735,
+   "yes": 0.755,
    "volume": 2083.1693940000005,
    "end_date": "2027-06-07",
    "yes_token": "59084337595347545868949545794521681963141295011049619961001929250437565393748"
@@ -24633,7 +24633,7 @@
    "id": "5463513",
    "question": "Will Morena win the most seats in the 2027 Morelos Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-morelos-congress-election",
-   "yes": 0.79,
+   "yes": 0.78,
    "volume": 3792.421302,
    "end_date": "2027-06-07",
    "yes_token": "58057924402133124041672440650957844022720802344054733120850072650814764368042"
@@ -24657,7 +24657,7 @@
    "id": "5463519",
    "question": "Will PRI win the most seats in the 2027 Morelos Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-morelos-congress-election",
-   "yes": 0.095,
+   "yes": 0.1,
    "volume": 500.67583599999995,
    "end_date": "2027-06-07",
    "yes_token": "28749859389345080015334257005349414191500993122881974568326358653940507634506"
@@ -25077,8 +25077,8 @@
    "id": "5463662",
    "question": "Will Morena win the most seats in the 2027 Nayarit Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-nayarit-congress-election",
-   "yes": 0.85,
-   "volume": 3139.907765,
+   "yes": 0.835,
+   "volume": 3139.9077650000004,
    "end_date": "2027-06-07",
    "yes_token": "1935957085969777156492216363446285606463344666555225448374704036288154071082"
   },
@@ -25137,7 +25137,7 @@
    "id": "5463672",
    "question": "Will MC win the most seats in the 2027 Nayarit Congress election?",
    "slug": "will-mc-win-the-most-seats-in-the-2027-nayarit-congress-election",
-   "yes": 0.044,
+   "yes": 0.0465,
    "volume": 192.16,
    "end_date": "2027-06-07",
    "yes_token": "33521746057208663095421169631705344741579430940546494380372628717976070094127"
@@ -25522,7 +25522,7 @@
    "question": "Will Morena win the most seats in the 2027 Nuevo León Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-nuevo-leon-congress-election",
    "yes": 0.255,
-   "volume": 874.5245859999999,
+   "volume": 874.524586,
    "end_date": "2027-06-07",
    "yes_token": "59587519072380006770682437893776070184507613414842014450581478235422002054199"
   },
@@ -25533,7 +25533,7 @@
    "id": "5463710",
    "question": "Will PAN win the most seats in the 2027 Nuevo León Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-nuevo-leon-congress-election",
-   "yes": 0.19,
+   "yes": 0.2,
    "volume": 1902.388617,
    "end_date": "2027-06-07",
    "yes_token": "95061518882030674387294415650193141971601773782396876302607454729434509424674"
@@ -25546,7 +25546,7 @@
    "question": "Will PRI win the most seats in the 2027 Nuevo León Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-nuevo-leon-congress-election",
    "yes": 0.225,
-   "volume": 2374.021827,
+   "volume": 2374.0218270000005,
    "end_date": "2027-06-07",
    "yes_token": "13797152570905432731129366035656471539024866251984687080803638989579540611996"
   },
@@ -25557,7 +25557,7 @@
    "id": "5463716",
    "question": "Will PVEM win the most seats in the 2027 Nuevo León Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-nuevo-leon-congress-election",
-   "yes": 0.085,
+   "yes": 0.08,
    "volume": 684.645264,
    "end_date": "2027-06-07",
    "yes_token": "10222442624347038948355610787810808741551960603546461353753246083208937424477"
@@ -25581,7 +25581,7 @@
    "id": "5463723",
    "question": "Will MC win the most seats in the 2027 Nuevo León Congress election?",
    "slug": "will-mc-win-the-most-seats-in-the-2027-nuevo-leon-congress-election",
-   "yes": 0.1945,
+   "yes": 0.1955,
    "volume": 599.128637,
    "end_date": "2027-06-07",
    "yes_token": "29223847181460852609676595145473631962686628780360406530937607520674797030777"
@@ -25966,7 +25966,7 @@
    "question": "Will Morena win the most seats in the 2027 Oaxaca Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-oaxaca-congress-election",
    "yes": 0.795,
-   "volume": 3578.582483,
+   "volume": 3578.5824829999997,
    "end_date": "2027-06-07",
    "yes_token": "314000085851768454167149190540902977348581513468694271634368873970104180826"
   },
@@ -26025,7 +26025,7 @@
    "id": "5463777",
    "question": "Will MC win the most seats in the 2027 Oaxaca Congress election?",
    "slug": "will-mc-win-the-most-seats-in-the-2027-oaxaca-congress-election",
-   "yes": 0.0055,
+   "yes": 0.005,
    "volume": 568.2255,
    "end_date": "2027-06-07",
    "yes_token": "101177879227977280099594424154548510487651587621100420837819591092786720741539"
@@ -26421,7 +26421,7 @@
    "id": "5463842",
    "question": "Will PAN win the most seats in the 2027 Puebla Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-puebla-congress-election",
-   "yes": 0.042,
+   "yes": 0.0415,
    "volume": 887.4232309999999,
    "end_date": "2027-06-07",
    "yes_token": "106388774700515531140279507169776500923628369869683056230814313459751709051915"
@@ -26445,7 +26445,7 @@
    "id": "5463846",
    "question": "Will PVEM win the most seats in the 2027 Puebla Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-puebla-congress-election",
-   "yes": 0.04,
+   "yes": 0.0395,
    "volume": 1482.332897,
    "end_date": "2027-06-07",
    "yes_token": "71367489547526075796344615263279442679526446204225084718108419720233376293216"
@@ -26458,7 +26458,7 @@
    "question": "Will PT win the most seats in the 2027 Puebla Congress election?",
    "slug": "will-pt-win-the-most-seats-in-the-2027-puebla-congress-election",
    "yes": 0.0205,
-   "volume": 1851.1399999999999,
+   "volume": 1851.14,
    "end_date": "2027-06-07",
    "yes_token": "63328709193880562010447421562930779726357153581397645424275491078681866761584"
   },
@@ -26469,7 +26469,7 @@
    "id": "5463850",
    "question": "Will MC win the most seats in the 2027 Puebla Congress election?",
    "slug": "will-mc-win-the-most-seats-in-the-2027-puebla-congress-election",
-   "yes": 0.032,
+   "yes": 0.0315,
    "volume": 475.25325,
    "end_date": "2027-06-07",
    "yes_token": "99975397463261539970927093190564729139798277546204663252595804838798786086749"
@@ -26865,7 +26865,7 @@
    "id": "5463873",
    "question": "Will PAN win the most seats in the 2027 Querétaro Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-queretaro-congress-election",
-   "yes": 0.8,
+   "yes": 0.79,
    "volume": 2487.8504860000003,
    "end_date": "2027-06-07",
    "yes_token": "54454609239194938099947124294580158972919342445410425183090566827870950348600"
@@ -26890,7 +26890,7 @@
    "question": "Will PVEM win the most seats in the 2027 Querétaro Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-queretaro-congress-election",
    "yes": 0.0055,
-   "volume": 696.893225,
+   "volume": 696.8932249999999,
    "end_date": "2027-06-07",
    "yes_token": "10316926926812543723589988664257913581909760200245303014165565703639724160751"
   },
@@ -26914,7 +26914,7 @@
    "question": "Will MC win the most seats in the 2027 Querétaro Congress election?",
    "slug": "will-mc-win-the-most-seats-in-the-2027-queretaro-congress-election",
    "yes": 0.075,
-   "volume": 1989.215783,
+   "volume": 1989.2157829999999,
    "end_date": "2027-06-07",
    "yes_token": "6851295068156823397707398216567125120919897842677682370366989094122846823743"
   },
@@ -27309,7 +27309,7 @@
    "id": "5463937",
    "question": "Will PAN win the most seats in the 2027 Quintana Roo Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-quintana-roo-congress-election",
-   "yes": 0.038,
+   "yes": 0.048,
    "volume": 407.28,
    "end_date": "2027-06-07",
    "yes_token": "106460124557931525643320693061036941303259587737492696787518213564396271774685"
@@ -27333,7 +27333,7 @@
    "id": "5463943",
    "question": "Will PVEM win the most seats in the 2027 Quintana Roo Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-quintana-roo-congress-election",
-   "yes": 0.303,
+   "yes": 0.248,
    "volume": 433.34999999999997,
    "end_date": "2027-06-07",
    "yes_token": "110218148857443803867369557393288954415156482530487671150621198875873738289730"
@@ -27790,7 +27790,7 @@
    "question": "Will PT win the most seats in the 2027 San Luis Potosí Congress election?",
    "slug": "will-pt-win-the-most-seats-in-the-2027-san-luis-potosi-congress-election",
    "yes": 0.011,
-   "volume": 386.7195,
+   "volume": 386.71950000000004,
    "end_date": "2027-06-07",
    "yes_token": "39843864974573451159897973870192463627787105743378745706681611918245433940882"
   },
@@ -28185,7 +28185,7 @@
    "id": "5464237",
    "question": "Will Morena win the most seats in the 2027 Sinaloa Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-sinaloa-congress-election",
-   "yes": 0.59,
+   "yes": 0.5,
    "volume": 5403.882524,
    "end_date": "2027-06-07",
    "yes_token": "60291990623513705982923776118630886806676362413304758173328625633660255813580"
@@ -28197,7 +28197,7 @@
    "id": "5464241",
    "question": "Will PAN win the most seats in the 2027 Sinaloa Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-sinaloa-congress-election",
-   "yes": 0.036,
+   "yes": 0.03,
    "volume": 581.870778,
    "end_date": "2027-06-07",
    "yes_token": "31210612695981449941418454568150017622755709721949617057964259517968128604532"
@@ -28221,7 +28221,7 @@
    "id": "5464250",
    "question": "Will PVEM win the most seats in the 2027 Sinaloa Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-sinaloa-congress-election",
-   "yes": 0.114,
+   "yes": 0.1135,
    "volume": 625.044273,
    "end_date": "2027-06-07",
    "yes_token": "14593340796685391177626553505055097111585009817338063325283255985901251038890"
@@ -28629,7 +28629,7 @@
    "id": "5464322",
    "question": "Will Morena win the most seats in the 2027 Sonora Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-sonora-congress-election",
-   "yes": 0.755,
+   "yes": 0.74,
    "volume": 3324.854128,
    "end_date": "2027-06-07",
    "yes_token": "85481779620053431262015398436928234595122787168240149740213460927841270680609"
@@ -29074,7 +29074,7 @@
    "question": "Will Morena win the most seats in the 2027 State of Mexico Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-state-of-mexico-congress-election",
    "yes": 0.94,
-   "volume": 8386.442656000001,
+   "volume": 8386.442656,
    "end_date": "2027-06-07",
    "yes_token": "15354207141173403665416052286129544084267554334525398440305256305176469108565"
   },
@@ -29973,7 +29973,7 @@
    "id": "5464516",
    "question": "Will PAN win the most seats in the 2027 Tamaulipas Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-tamaulipas-congress-election",
-   "yes": 0.15,
+   "yes": 0.145,
    "volume": 943.263994,
    "end_date": "2027-06-07",
    "yes_token": "57727262402287918289789285726627092552927892629412665069243540313986197048837"
@@ -29985,7 +29985,7 @@
    "id": "5464519",
    "question": "Will PRI win the most seats in the 2027 Tamaulipas Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-tamaulipas-congress-election",
-   "yes": 0.038,
+   "yes": 0.0425,
    "volume": 782.3777040000001,
    "end_date": "2027-06-07",
    "yes_token": "92328177801006548515220756480652023035620588474789597842160713162226950889800"
@@ -29997,7 +29997,7 @@
    "id": "5464523",
    "question": "Will PVEM win the most seats in the 2027 Tamaulipas Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-tamaulipas-congress-election",
-   "yes": 0.04,
+   "yes": 0.045,
    "volume": 1195.256809,
    "end_date": "2027-06-07",
    "yes_token": "30844565884076561424836348547095827392669439799140072896989237352079404841384"
@@ -30405,8 +30405,8 @@
    "id": "5464575",
    "question": "Will Morena win the most seats in the 2027 Tlaxcala Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-tlaxcala-congress-election",
-   "yes": 0.84,
-   "volume": 3113.938077,
+   "yes": 0.845,
+   "volume": 3113.9380770000002,
    "end_date": "2027-06-07",
    "yes_token": "88007263289126193421247217772225792827493301040842064139909584857302963301767"
   },
@@ -30430,7 +30430,7 @@
    "question": "Will PRI win the most seats in the 2027 Tlaxcala Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-tlaxcala-congress-election",
    "yes": 0.06,
-   "volume": 2812.6339249999996,
+   "volume": 2812.633925,
    "end_date": "2027-06-07",
    "yes_token": "105783251872258315472017231356067399831381882280281571638948377963924518279832"
   },
@@ -30441,7 +30441,7 @@
    "id": "5464584",
    "question": "Will PVEM win the most seats in the 2027 Tlaxcala Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-tlaxcala-congress-election",
-   "yes": 0.0025,
+   "yes": 0.0015,
    "volume": 416.93733399999996,
    "end_date": "2027-06-07",
    "yes_token": "83706598779202939699800172345785299762731601386360551828167604489294652891350"
@@ -30885,7 +30885,7 @@
    "id": "5464627",
    "question": "Will PVEM win the most seats in the 2027 Veracruz Congress election?",
    "slug": "will-pvem-win-the-most-seats-in-the-2027-veracruz-congress-election",
-   "yes": 0.068,
+   "yes": 0.0555,
    "volume": 974.3509680000001,
    "end_date": "2027-06-07",
    "yes_token": "40645817066733165993684893685173640098578668559758710953022952003740525501548"
@@ -30898,7 +30898,7 @@
    "question": "Will PT win the most seats in the 2027 Veracruz Congress election?",
    "slug": "will-pt-win-the-most-seats-in-the-2027-veracruz-congress-election",
    "yes": 0.028,
-   "volume": 464.223216,
+   "volume": 464.22321600000004,
    "end_date": "2027-06-07",
    "yes_token": "43722949358307842183505197142743270327391444140465392751702625974269462244208"
   },
@@ -30910,7 +30910,7 @@
    "question": "Will MC win the most seats in the 2027 Veracruz Congress election?",
    "slug": "will-mc-win-the-most-seats-in-the-2027-veracruz-congress-election",
    "yes": 0.058,
-   "volume": 372.20043300000003,
+   "volume": 372.200433,
    "end_date": "2027-06-07",
    "yes_token": "104475039398692627409805371185904773513080130056529998530861455403606540898017"
   },
@@ -31294,7 +31294,7 @@
    "question": "Will Morena win the most seats in the 2027 Yucatán Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-yucatan-congress-election",
    "yes": 0.59,
-   "volume": 3580.8953229999997,
+   "volume": 3580.895323,
    "end_date": "2027-06-07",
    "yes_token": "56989011812774015784032465776679244956916226247394898755661488520655668947750"
   },
@@ -31305,7 +31305,7 @@
    "id": "5464676",
    "question": "Will PAN win the most seats in the 2027 Yucatán Congress election?",
    "slug": "will-pan-win-the-most-seats-in-the-2027-yucatan-congress-election",
-   "yes": 0.18,
+   "yes": 0.185,
    "volume": 3512.872504,
    "end_date": "2027-06-07",
    "yes_token": "72815080448708996042594023824767446178339962158430685920194152660107333379404"
@@ -31737,8 +31737,8 @@
    "id": "5464904",
    "question": "Will Morena win the most seats in the 2027 Zacatecas Congress election?",
    "slug": "will-morena-win-the-most-seats-in-the-2027-zacatecas-congress-election",
-   "yes": 0.715,
-   "volume": 5257.45202,
+   "yes": 0.72,
+   "volume": 5257.452020000001,
    "end_date": "2027-06-07",
    "yes_token": "113964276370125672386446430108100103740016159745049516658490579237003167877686"
   },
@@ -31761,7 +31761,7 @@
    "id": "5464910",
    "question": "Will PRI win the most seats in the 2027 Zacatecas Congress election?",
    "slug": "will-pri-win-the-most-seats-in-the-2027-zacatecas-congress-election",
-   "yes": 0.061,
+   "yes": 0.063,
    "volume": 524.622633,
    "end_date": "2027-06-07",
    "yes_token": "102506584566009829649764569214499604423074628501462306920969834689298858514971"
@@ -32218,7 +32218,7 @@
    "question": "Bank of Mexico increases interest rates by 25 bps after December 2026 meeting?",
    "slug": "bank-of-mexico-increases-interest-rates-by-25-bps-after-december-2026-meeting",
    "yes": 0.014,
-   "volume": 627.33975,
+   "volume": 627.3397500000001,
    "end_date": "2026-12-17",
    "yes_token": "98081936569238960481538606381315742209036105480289603462202644448451219022002"
   },
@@ -32277,7 +32277,7 @@
    "id": "6297539",
    "question": "Will the lowest temperature in Mexico City be 9°C on October 29?",
    "slug": "lowest-temperature-in-mexico-city-on-october-29-2026-9c",
-   "yes": 0.0055,
+   "yes": 0.005,
    "volume": 15.0,
    "end_date": "2026-10-29",
    "yes_token": "112603795538628021105772831187099712438722683083530087596100417217028867222063"
@@ -32301,7 +32301,7 @@
    "id": "6297541",
    "question": "Will the lowest temperature in Mexico City be 11°C on October 29?",
    "slug": "lowest-temperature-in-mexico-city-on-october-29-2026-11c",
-   "yes": 0.5,
+   "yes": 0.45,
    "volume": 0.0,
    "end_date": "2026-10-29",
    "yes_token": "66987506940864832714543656581076264049286791947555319428286167567958734812190"
@@ -32350,7 +32350,7 @@
    "question": "Will the lowest temperature in Mexico City be 15°C on October 29?",
    "slug": "lowest-temperature-in-mexico-city-on-october-29-2026-15c",
    "yes": 0.001,
-   "volume": 84.99499999999999,
+   "volume": 84.995,
    "end_date": "2026-10-29",
    "yes_token": "51531567242092075134035994301821922798771878620211091813158836836187215278766"
   },
@@ -32457,8 +32457,8 @@
    "id": "6298833",
    "question": "Will the highest temperature in Mexico City be 23°C on October 29?",
    "slug": "highest-temperature-in-mexico-city-on-october-29-2026-23c",
-   "yes": 0.0275,
-   "volume": 1740.94623,
+   "yes": 0.0265,
+   "volume": 1742.9932729999998,
    "end_date": "2026-10-29",
    "yes_token": "57884150327114322145452692876440795051246997971720059993142298619249966521404"
   },
@@ -32469,7 +32469,7 @@
    "id": "6298834",
    "question": "Will the highest temperature in Mexico City be 24°C on October 29?",
    "slug": "highest-temperature-in-mexico-city-on-october-29-2026-24c",
-   "yes": 0.225,
+   "yes": 0.235,
    "volume": 3194.491422,
    "end_date": "2026-10-29",
    "yes_token": "33041569018759586006780814581017751815761326471348378538868997311939953376562"
@@ -32481,7 +32481,7 @@
    "id": "6298835",
    "question": "Will the highest temperature in Mexico City be 25°C on October 29?",
    "slug": "highest-temperature-in-mexico-city-on-october-29-2026-25c",
-   "yes": 0.585,
+   "yes": 0.575,
    "volume": 3983.600716,
    "end_date": "2026-10-29",
    "yes_token": "106806052422818914767812473950581354098904411750141370937787064716133017787115"
@@ -32493,8 +32493,8 @@
    "id": "6298836",
    "question": "Will the highest temperature in Mexico City be 26°C or higher on October 29?",
    "slug": "highest-temperature-in-mexico-city-on-october-29-2026-26corhigher",
-   "yes": 0.17,
-   "volume": 6999.908681,
+   "yes": 0.185,
+   "volume": 7031.978680999999,
    "end_date": "2026-10-29",
    "yes_token": "483905514123999168994871693353483088079311472341412125824698078126746567237"
   },
@@ -32577,7 +32577,7 @@
    "id": "6340016",
    "question": "Will the lowest temperature in Mexico City be 13°C on October 30?",
    "slug": "lowest-temperature-in-mexico-city-on-october-30-2026-13c",
-   "yes": 0.385,
+   "yes": 0.38,
    "volume": 0.0,
    "end_date": "2026-10-30",
    "yes_token": "7756521309540387817162065785874885633482501198976288197015832513573269870967"
@@ -32757,8 +32757,8 @@
    "id": "6341474",
    "question": "Will the highest temperature in Mexico City be 26°C or higher on October 30?",
    "slug": "highest-temperature-in-mexico-city-on-october-30-2026-26corhigher",
-   "yes": 0.775,
-   "volume": 2245.102246,
+   "yes": 0.77,
+   "volume": 2250.102246,
    "end_date": "2026-10-30",
    "yes_token": "5514434523606097258538442626453593926366362408538127700186593128567262685330"
   },
@@ -32793,7 +32793,7 @@
    "id": "6384419",
    "question": "Will the lowest temperature in Mexico City be 8°C on October 31?",
    "slug": "lowest-temperature-in-mexico-city-on-october-31-2026-8c",
-   "yes": 0.335,
+   "yes": 0.33,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "49573430408906870025837147498529307020556299959440152296154165771293419255417"
@@ -32805,7 +32805,7 @@
    "id": "6384420",
    "question": "Will the lowest temperature in Mexico City be 9°C on October 31?",
    "slug": "lowest-temperature-in-mexico-city-on-october-31-2026-9c",
-   "yes": 0.335,
+   "yes": 0.33,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "69153753094259804203313009442374329064416371830657436515405742149806866926232"
@@ -32817,7 +32817,7 @@
    "id": "6384421",
    "question": "Will the lowest temperature in Mexico City be 10°C on October 31?",
    "slug": "lowest-temperature-in-mexico-city-on-october-31-2026-10c",
-   "yes": 0.335,
+   "yes": 0.33,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "103239791433614746563437085123173478546630235288860061237515272305853730774127"
@@ -32829,7 +32829,7 @@
    "id": "6384422",
    "question": "Will the lowest temperature in Mexico City be 11°C on October 31?",
    "slug": "lowest-temperature-in-mexico-city-on-october-31-2026-11c",
-   "yes": 0.255,
+   "yes": 0.35,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "92833190430137574688384908641585577846725149009159537263108085454625457997939"
@@ -32841,7 +32841,7 @@
    "id": "6384423",
    "question": "Will the lowest temperature in Mexico City be 12°C on October 31?",
    "slug": "lowest-temperature-in-mexico-city-on-october-31-2026-12c",
-   "yes": 0.345,
+   "yes": 0.33,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "110317097470134477203936337097383395312120968454332420488157146551250241824911"
@@ -32865,7 +32865,7 @@
    "id": "6384425",
    "question": "Will the lowest temperature in Mexico City be 14°C on October 31?",
    "slug": "lowest-temperature-in-mexico-city-on-october-31-2026-14c",
-   "yes": 0.335,
+   "yes": 0.33,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "42205414082640873473931790452535963452271707953872824339715835412393055345167"
@@ -32877,7 +32877,7 @@
    "id": "6384426",
    "question": "Will the lowest temperature in Mexico City be 15°C on October 31?",
    "slug": "lowest-temperature-in-mexico-city-on-october-31-2026-15c",
-   "yes": 0.335,
+   "yes": 0.33,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "95390165789376180202309951536707320883420502019120677373178500449579524187255"
@@ -32913,7 +32913,7 @@
    "id": "6384939",
    "question": "Will the highest temperature in Mexico City be 19°C on October 31?",
    "slug": "highest-temperature-in-mexico-city-on-october-31-2026-19c",
-   "yes": 0.195,
+   "yes": 0.19,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "107326307381082405145522100194609606352413014611869712192577448659840283365773"
@@ -32925,7 +32925,7 @@
    "id": "6384940",
    "question": "Will the highest temperature in Mexico City be 20°C on October 31?",
    "slug": "highest-temperature-in-mexico-city-on-october-31-2026-20c",
-   "yes": 0.195,
+   "yes": 0.19,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "33305932702942644890642500838511626057417072182834468134643725663262141025648"
@@ -32937,7 +32937,7 @@
    "id": "6384941",
    "question": "Will the highest temperature in Mexico City be 21°C on October 31?",
    "slug": "highest-temperature-in-mexico-city-on-october-31-2026-21c",
-   "yes": 0.19,
+   "yes": 0.185,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "34418284407973457208864017673934913792142349945748549946332555490969556774096"
@@ -32949,7 +32949,7 @@
    "id": "6384942",
    "question": "Will the highest temperature in Mexico City be 22°C on October 31?",
    "slug": "highest-temperature-in-mexico-city-on-october-31-2026-22c",
-   "yes": 0.075,
+   "yes": 0.07,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "89714420278586382663021720805458788430574851065019734711267024153328703437591"
@@ -32961,7 +32961,7 @@
    "id": "6384943",
    "question": "Will the highest temperature in Mexico City be 23°C on October 31?",
    "slug": "highest-temperature-in-mexico-city-on-october-31-2026-23c",
-   "yes": 0.075,
+   "yes": 0.07,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "19028868275588898254774014146188512871340452954226908258935520345574872309027"
@@ -33021,7 +33021,7 @@
    "id": "6384948",
    "question": "Will the highest temperature in Mexico City be 28°C or higher on October 31?",
    "slug": "highest-temperature-in-mexico-city-on-october-31-2026-28corhigher",
-   "yes": 0.475,
+   "yes": 0.45,
    "volume": 0.0,
    "end_date": "2026-10-31",
    "yes_token": "114915095427641480036374992885296594790794160795285632171759737743448352267421"
