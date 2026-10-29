@@ -68,14 +68,21 @@ jobs:
           python -m terminal.run book
           python -m terminal.run judge
 
-      - name: Summary for the site
+      - name: Crowd lab tests (Mondays, full runs; reads em-macro)
+        if: steps.pick.outputs.full == 'yes'
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ ! -f data/terminal/lab/crowd_tests.json ]; then
+            python -m terminal.run lab || echo "::warning::lab tests failed; badges keep their last values"
+          fi
+
+      - name: Summary, scenarios and crowd for the site
         run: python -m terminal.run summary
 
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/terminal data/trades data/judgements data/book
+          git add data/terminal data/trades data/judgements data/book reports/crowd_lab.md
           if git diff --cached --quiet; then
             echo "nothing to commit"
           else

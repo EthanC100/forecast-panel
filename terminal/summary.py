@@ -56,8 +56,18 @@ EVIDENCE = None
 DEGRADED: list[dict] = []
 
 
+LAB_GAUGE = {"br.cot": "e", "mx.cot": "e", "za.cot": "e"}
+
+
 def evidence(key: str) -> dict:
+    """Badge for a series: from the Crowd lab tests where one covers it, else inputs/evidence.yaml."""
     global EVIDENCE
+    gauge = next((g for p, g in LAB_GAUGE.items() if key.startswith(p)), None)
+    lab = store.DATA / "lab" / "crowd_tests.json"
+    if gauge and lab.exists():
+        t = json.loads(lab.read_text())["tests"].get(gauge)
+        if t and t.get("badge"):
+            return {"badge": t["badge"], "reason": "Crowd lab test (" + gauge + "): " + t.get("reason", "")}
     if EVIDENCE is None:
         EVIDENCE = _yaml("evidence")
     table = EVIDENCE.get("series", {})

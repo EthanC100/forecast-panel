@@ -131,6 +131,8 @@
   const formBtn = (...a) => (TERM.formBtn ? TERM.formBtn(...a) : null);
   const blindKey = "terminal.revealed";
   let revealed = {}; try { revealed = JSON.parse(store.get(blindKey, "{}")) || {}; } catch (e) { revealed = {}; }
+  Object.assign(TERM, { store, COUNTRY, INSTRUMENTS, daysUntil, weekday, imp: (n) => imp(n), ctryChip: (c) => ctryChip(c), route: () => route(),
+    isRevealed: (k) => !!revealed[k], reveal: (k) => { revealed[k] = 1; store.set(blindKey, JSON.stringify(revealed)); route(); } });
 
   // ---------------- shared pieces ----------------
   const ctryChip = (c) => el("span", { class: "chip ctry", title: COUNTRY[c] || c }, c === "GLOBAL" ? "GL" : c);
@@ -178,6 +180,7 @@
         el("div", { class: "row2" }, ctryChip(e.country), el("span", {}, e.type), imp(e.importance), statusChip(e.status),
           e.source ? el("a", { href: e.source, target: "_blank", rel: "noopener" }, "source") : null),
         e.note ? el("details", {}, el("summary", {}, "note"), el("div", { class: "small muted" }, e.note)) : null,
+        TERM.scenarioFor && TERM.scenarioFor(e.id) ? el("div", { class: "small" }, el("a", { href: "#scenarios/" + TERM.scenarioFor(e.id).id }, "Scenario page: " + TERM.scenarioFor(e.id).title + " →")) : null,
         meta({ source: "calendar", as_of: calGenerated, evidence: S.summary && S.summary.evidence_defaults.countdown, source_url: e.source }, { noId: true }),
         e.importance >= 2 ? el("div", { class: "row", style: "margin-top:6px" },
           formBtn("Open trade", "open-trade", { instrument: (INSTRUMENTS[e.country] || ["US10Y"])[0], link: e.id, horizon: e.date, title: "[Open trade] " + e.title }, "small"),
@@ -371,18 +374,6 @@
     return f;
   }
 
-  function placeholder(title, phase, lines) {
-    return el("div", { class: "ph" }, el("h1", {}, title), el("div", { class: "chip" }, "Coming in " + phase), el("ul", { class: "small" }, ...lines.map((l) => el("li", {}, l))));
-  }
-  function pageCrowd() {
-    let n = 0; Object.values(S.summary.countries).forEach((c) => { n += (c.markets || []).length; });
-    const st = S.summary.status.sources || {};
-    return placeholder("Crowd", "Phase 4: crowd-error monitor", [
-      "Will compare prediction-market, survey and futures-implied expectations with outcomes and flag where the crowd is systematically wrong.",
-      "Already stored with full daily history: Polymarket (" + ((st.polymarket && st.polymarket.n_series) || 0) + " markets), Kalshi (" + ((st.kalshi && st.kalshi.n_series) || 0) + "), the Focus and Banxico surveys with dispersion, and CFTC positioning.",
-      "Country pages already show the top markets by volume (" + n + " shown now)."]);
-  }
-
   // ---------------- routing ----------------
   function route() {
     const h = (location.hash || "#today").slice(1), [page, arg] = h.split("/");
@@ -394,8 +385,8 @@
     if (page === "calendar") node = pageCalendar();
     else if (page === "country") node = pageCountry((arg || "BR").toUpperCase());
     else if (page === "status") node = pageStatus();
-    else if (page === "scenarios") node = placeholder("Scenarios", "Phase 3", ["Scenario pages per country: what each catalyst outcome implies for the instruments on the Today page, with probabilities taken from the calendar and the crowd.", "Built on the stored series and the catalyst calendar (" + S.calendar.events.length + " upcoming events)."]);
-    else if (page === "crowd") node = pageCrowd();
+    else if (page === "scenarios") node = TERM.pageScenarios ? TERM.pageScenarios(arg) : el("div", { class: "empty" }, "Loading…");
+    else if (page === "crowd") node = TERM.pageCrowd ? TERM.pageCrowd() : el("div", { class: "empty" }, "Loading…");
     else if (page === "record") node = TERM.pageRecord ? TERM.pageRecord(arg) : el("div", { class: "empty" }, "Loading…");
     else node = pageToday();
     app.appendChild(node);

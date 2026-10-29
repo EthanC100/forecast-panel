@@ -1,0 +1,16 @@
+# Current head-to-head polls for the Crowd page's poll-vs-market gauge (a).
+# Add one entry per contest; keep old entries (the gauge uses the latest per scenario and label).
+# a_pct / b_pct: the two candidates' shares as published; the margin is a_pct - b_pct.
+# a_branch: the scenario branch candidate A's win corresponds to (see inputs/scenarios.yaml).
+# iso3 picks that country's historical poll error from em-macro.
+#
+# Example:
+#  - scenario: fr-pres-2027
+#    label: "France 2027 run-off: RN candidate vs leading centre-right candidate"
+#    iso3: FRA
+#    a_branch: rn
+#    a_pct: 52
+#    b_pct: 48
+#    date: 2026-10-20
+#    source: "https://..."
+polls: []

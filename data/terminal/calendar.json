@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T14:42:09Z",
+ "generated_at": "2026-10-29T15:45:37Z",
  "horizon": "2027-10-30",
  "events": [
   {
@@ -258,6 +258,21 @@
    "under_attended": false
   },
   {
+   "date": "2026-12-10",
+   "country": "FR",
+   "type": "fiscal",
+   "title": "Budget (PLF 2027): Article 47 70-day deadline",
+   "importance": 3,
+   "status": "confirmed",
+   "source": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
+   "query": "France budget \"National Assembly\"",
+   "note": "Constitution art. 47: if Parliament has not decided within 70 days of the bill being tabled, the budget can be enacted by ordinance. The PLF 2027 was filed at the National Assembly on 1 Oct 2026 (Senate legislative file, as recorded in em-macro), so day 70 is 10 Dec 2026.",
+   "origin": "manual",
+   "id": "2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
+   "attention": null,
+   "under_attended": false
+  },
+  {
    "date": "2026-12-11",
    "country": "FR",
    "type": "ratings",
@@ -284,21 +299,6 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-12-14-br-focus-survey-bcb",
-   "attention": null,
-   "under_attended": false
-  },
-  {
-   "date": "2026-12-15",
-   "country": "FR",
-   "type": "fiscal",
-   "title": "Budget (PLF 2027): Article 47 70-day deadline",
-   "importance": 3,
-   "status": "estimated",
-   "source": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur",
-   "query": "France budget \"National Assembly\"",
-   "note": "Constitution art. 47: if Parliament has not decided within 70 days of the bill being tabled, the budget can be enacted by ordinance. 70 days from tabling on the first Tuesday of October (6 Oct 2026) = 15 Dec; confirm against the actual tabling date.",
-   "origin": "manual",
-   "id": "2026-12-15-fr-budget-plf-2027-article-47-70-day-deadline",
    "attention": null,
    "under_attended": false
   },

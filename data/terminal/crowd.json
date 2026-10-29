@@ -1,0 +1,1458 @@
+{
+ "generated_at": "2026-10-29T15:53:31Z",
+ "gauges": [
+  {
+   "id": "a",
+   "title": "Poll vs prediction-market gap",
+   "evidence": {
+    "badge": "tested_no_lead",
+    "reason": "|gap| vs size of the poll miss: rho -0.141, p=0.7152, n=18; vs FX move: rho 0.238, n=8. Small sample: a lead of moderate size could be missed.",
+    "report": "reports/crowd_lab.md"
+   },
+   "what": "Poll-implied probability = Phi(poll lead / that country's historical RMS poll error); compared with the prediction-market price for the same outcome. A large gap means one of the two crowds is wrong.",
+   "readings": [],
+   "latest_resolved": {
+    "election": "Brazil 2026 general election r2",
+    "date": "2026-10-25",
+    "p_poll_a": 0.506,
+    "p_market_a": 0.804,
+    "gap": 0.298,
+    "sigma_pp": 8.44,
+    "sigma_basis": "BRA (12 earlier)",
+    "a_won": false,
+    "poll_error_pp": 3.7,
+    "fx_move_sd": null
+   },
+   "note": "No current polls entered. Add the latest head-to-head poll for a scenario to data/terminal/inputs/polls.yaml (format in the file) and this gauge computes the gap."
+  },
+  {
+   "id": "b",
+   "title": "Pollster concentration and house effects",
+   "evidence": {
+    "badge": "untested",
+    "reason": "Not tested: em-macro has pollster-level polls for 8 countries' recent elections, too few to test whether concentration or herding predicts the size of the miss."
+   },
+   "what": "Final 14 days before each vote: how many pollsters, the largest pollster's share of polls (HHI), each pollster's lean against the average (house effect), and whether polls spread less than sampling error alone implies (herding ratio < 1). The miss is actual margin minus the final-polls average.",
+   "elections": [
+    {
+     "election": "BRA 2026-10-25 runoff",
+     "iso3": "BRA",
+     "date": "2026-10-25",
+     "n_polls": 53,
+     "n_pollsters": 25,
+     "top_pollster": "Gerp",
+     "top_share": 0.09,
+     "hhi": 0.052,
+     "mean_margin": 2.01,
+     "sd_margin": 1.98,
+     "expected_sd": 2.04,
+     "herding_ratio": 0.97,
+     "house_effects": {
+      "Phoenix": -4.6,
+      "Vox": -3.6,
+      "Ranking": -2.8,
+      "Colectta": -2.5,
+      "Nexus/BTG": -1.1,
+      "Futura": -0.8,
+      "CNT/MDA": -0.8,
+      "Palver": -0.7,
+      "DataFolha": -0.6,
+      "PoderData": -0.5,
+      "Quaest": -0.5,
+      "Ipespe": -0.4,
+      "Verita": -0.2,
+      "Indexa": -0.2,
+      "AtlasIntel": -0.1,
+      "Meio/Ideia": 0.1,
+      "França": 0.2,
+      "Veritá": 0.4,
+      "Alfa Inteligência": 1.1,
+      "BTG/Nexus": 1.2,
+      "DataTrends": 1.7,
+      "Real Time Big Data": 1.7,
+      "Alfa": 2.1,
+      "Vetor Arrow": 3.4,
+      "Gerp": 3.6
+     },
+     "actual_margin": -3.58,
+     "miss": -5.59
+    },
+    {
+     "election": "BRA 2026-10-04 round1",
+     "iso3": "BRA",
+     "date": "2026-10-04",
+     "n_polls": 36,
+     "n_pollsters": 19,
+     "top_pollster": "DataFolha",
+     "top_share": 0.11,
+     "hhi": 0.066,
+     "mean_margin": 2.22,
+     "sd_margin": 3.51,
+     "expected_sd": 2.18,
+     "herding_ratio": 1.61,
+     "house_effects": {
+      "Futura": -5.0,
+      "Gerp": -4.6,
+      "Palver": -3.7,
+      "Veritá": -3.6,
+      "Vox": -3.2,
+      "Meio/Ideia": -0.9,
+      "PoderData/Aya": -0.4,
+      "DataTrends": 0.3,
+      "AtlasIntel": 0.9,
+      "DataFolha": 1.6,
+      "IFP": 1.8,
+      "Vox Brasil": 1.8,
+      "Real Time Big Data": 2.8,
+      "Quaest": 2.8,
+      "Nexus/BTG": 2.9,
+      "American Analytics": 3.3,
+      "CNT/MDA": 4.1,
+      "Indexa": 4.6,
+      "Alfa Inteligência": 7.4
+     },
+     "actual_margin": -1.87,
+     "miss": -4.09
+    },
+    {
+     "election": "POL 2025-06-01 runoff",
+     "iso3": "POL",
+     "date": "2025-06-01",
+     "n_polls": 22,
+     "n_pollsters": 18,
+     "top_pollster": "Social Changes / wnet.fm Top to bottom: 75%, 71%, 64% turnout scenarios",
+     "top_share": 0.14,
+     "hhi": 0.066,
+     "mean_margin": 0.48,
+     "sd_margin": 1.59,
+     "expected_sd": 3.14,
+     "herding_ratio": 0.51,
+     "house_effects": {
+      "OGB": -3.1,
+      "Opinia24": -2.6,
+      "OGB / “WP.pl”": -1.7,
+      "Social Changes / wnet.fm Top to bottom: 75%, 71%, 64% turnout scenarios": -1.4,
+      "United Surveys / WP.pl": -0.9,
+      "Research Partner / ARIADNA": -0.8,
+      "AtlasIntel": -0.3,
+      "IPSOS / \"19:30\" TVP Info": 0.0,
+      "CBOS": 0.1,
+      "IBRiS / Polskie Radio 24": 0.4,
+      "IPSOS / “OKO.press”": 0.6,
+      "IBRiS / Polsat News": 0.6,
+      "Opinia24 / \"Fakty\" TVN, TVN24": 0.7,
+      "Opinia24 / RMF FM": 1.2,
+      "IBRiS / Onet": 1.3,
+      "Pollster / “SE.pl”": 2.0,
+      "United Surveys / “WP.pl”": 2.1,
+      "Opinia24 / Radio ZET": 2.6
+     },
+     "actual_margin": -1.78,
+     "miss": -2.26
+    },
+    {
+     "election": "POL 2025-05-18 round1",
+     "iso3": "POL",
+     "date": "2025-05-18",
+     "n_polls": 19,
+     "n_pollsters": 15,
+     "top_pollster": "Opinia24 / \"Fakty\" TVN, TVN24",
+     "top_share": 0.11,
+     "hhi": 0.075,
+     "mean_margin": 11.11,
+     "sd_margin": 4.27,
+     "expected_sd": 3.04,
+     "herding_ratio": 1.4,
+     "house_effects": {
+      "ewybory.eu": -6.2,
+      "IPSOS / TVP Info": -3.4,
+      "OGB": -3.2,
+      "CBOS": -2.5,
+      "Opinia24 / RMF FM": -2.5,
+      "Opinia24 / \"Newsweek\"": -2.0,
+      "Opinia24 / \"Fakty\" TVN, TVN24": -2.0,
+      "IBRiS / Polsat News": -0.8,
+      "IBRiS / Onet": -0.6,
+      "IBRiS / \"RZ\"": 1.2,
+      "United Surveys / WP.pl": 2.0,
+      "Research Partner": 2.2,
+      "IBRiS / Polskie Radio 24": 3.2,
+      "Pollster / \"SE.pl\"": 3.6,
+      "IBRiS / \"Polityka\"": 10.8
+     },
+     "actual_margin": 1.82,
+     "miss": -9.29
+    },
+    {
+     "election": "MEX 2024-06-02 round1",
+     "iso3": "MEX",
+     "date": "2024-06-02",
+     "n_polls": 6,
+     "n_pollsters": 6,
+     "top_pollster": "Mitofsky",
+     "top_share": 0.17,
+     "hhi": 0.167,
+     "mean_margin": 21.08,
+     "sd_margin": 11.26,
+     "expected_sd": 2.52,
+     "herding_ratio": 4.46,
+     "house_effects": {
+      "LaEncuesta.mx": -13.6,
+      "Áltica": -7.8,
+      "AtlasIntel": -5.1,
+      "Reforma": 1.1,
+      "Mitofsky": 8.1,
+      "MEBA": 17.2
+     },
+     "actual_margin": 33.07,
+     "miss": 11.99
+    },
+    {
+     "election": "ZAF 2024-05-29 single",
+     "iso3": "ZAF",
+     "date": "2024-05-29",
+     "n_polls": 4,
+     "n_pollsters": 3,
+     "top_pollster": "Social Research Foundation",
+     "top_share": 0.5,
+     "hhi": 0.375,
+     "mean_margin": 30.83,
+     "sd_margin": 2.9,
+     "expected_sd": 2.22,
+     "herding_ratio": 1.31,
+     "house_effects": {
+      "Social Research Foundation": -1.3,
+      "AtlasIntel": 0.1,
+      "AFROBAROMETER": 2.5
+     },
+     "actual_margin": 18.37,
+     "miss": -12.46
+    },
+    {
+     "election": "IDN 2024-02-14 single",
+     "iso3": "IDN",
+     "date": "2024-02-14",
+     "n_polls": 6,
+     "n_pollsters": 6,
+     "top_pollster": "Poltracking",
+     "top_share": 0.17,
+     "hhi": 0.167,
+     "mean_margin": 38.35,
+     "sd_margin": 2.97,
+     "expected_sd": 2.66,
+     "herding_ratio": 1.12,
+     "house_effects": {
+      "Poltracking": -4.4,
+      "Indikator": -1.8,
+      "Lembaga Survei Indonesia": -0.3,
+      "SPIN": 0.2,
+      "Populi Center": 2.4,
+      "LSI Denny JA": 3.9
+     },
+     "actual_margin": 33.64,
+     "miss": -4.71
+    },
+    {
+     "election": "POL 2023-10-15 single",
+     "iso3": "POL",
+     "date": "2023-10-15",
+     "n_polls": 27,
+     "n_pollsters": 17,
+     "top_pollster": "Opinia24 / \"GW\"",
+     "top_share": 0.11,
+     "hhi": 0.067,
+     "mean_margin": 9.14,
+     "sd_margin": 4.44,
+     "expected_sd": 3.04,
+     "herding_ratio": 1.46,
+     "house_effects": {
+      "PGB Opinium": -6.6,
+      "ewybory.eu": -5.1,
+      "IPC / tuwroclaw.com": -4.8,
+      "United Surveys / DGP, RMF": -2.8,
+      "Opinia24 / \"GW\"": -2.7,
+      "Pollster / SE.pl": -2.5,
+      "Kantar / TVN": -1.6,
+      "IBRiS / RMF, \"Rz\"": -0.2,
+      "IBRiS / Onet": 0.3,
+      "United Surveys / WP.pl": 0.5,
+      "Estymator / DoRzeczy.pl": 0.7,
+      "IBRiS / \"Wydarzenia\" Polsat": 1.9,
+      "IPSOS / OKO.press, TOK FM": 3.4,
+      "Social Changes / wPolityce.pl": 4.0,
+      "Research Partner": 4.8,
+      "IBSP / Stan Polityki": 5.6,
+      "CBOS": 13.7
+     },
+     "actual_margin": 4.68,
+     "miss": -4.46
+    },
+    {
+     "election": "TUR 2023-05-28 runoff",
+     "iso3": "TUR",
+     "date": "2023-05-28",
+     "n_polls": 10,
+     "n_pollsters": 9,
+     "top_pollster": "Özdemir",
+     "top_share": 0.2,
+     "hhi": 0.12,
+     "mean_margin": 2.85,
+     "sd_margin": 4.02,
+     "expected_sd": 1.66,
+     "herding_ratio": 2.41,
+     "house_effects": {
+      "SER-AR": -5.4,
+      "ORC": -4.4,
+      "Area": -4.0,
+      "ALF": -3.4,
+      "İEA": 1.0,
+      "BETİMAR": 1.6,
+      "Areda": 2.0,
+      "KONDA": 2.6,
+      "Özdemir": 5.2
+     },
+     "actual_margin": 4.36,
+     "miss": 1.51
+    },
+    {
+     "election": "TUR 2023-05-14 round1",
+     "iso3": "TUR",
+     "date": "2023-05-14",
+     "n_polls": 47,
+     "n_pollsters": 32,
+     "top_pollster": "SAROS",
+     "top_share": 0.06,
+     "hhi": 0.037,
+     "mean_margin": 2.15,
+     "sd_margin": 5.42,
+     "expected_sd": 1.59,
+     "herding_ratio": 3.4,
+     "house_effects": {
+      "AREDA Survey": -10.7,
+      "GENAR": -9.6,
+      "ADA": -8.2,
+      "Optimar": -8.1,
+      "SONAR": -7.2,
+      "Özdemir": -7.1,
+      "Argetus": -6.8,
+      "BETİMAR": -6.5,
+      "ASAL": -5.8,
+      "İVEM": -4.1,
+      "HBS": -2.7,
+      "AtlasIntel": -2.5,
+      "MetroPOLL": 0.1,
+      "Aksoy": 0.3,
+      "AR-G": 0.7,
+      "Area": 1.0,
+      "İEA": 1.9,
+      "SAROS": 2.1,
+      "ARL": 2.2,
+      "EuroPoll": 3.3,
+      "MAK": 3.6,
+      "ORC": 3.6,
+      "Artıbir": 3.7,
+      "KONDA": 3.9,
+      "Yöneylem": 3.9,
+      "PİAR": 4.1,
+      "ALF": 4.6,
+      "TAG": 5.2,
+      "Avrasya": 5.4,
+      "BULGU": 5.6,
+      "SER-AR": 5.7,
+      "Remres": 6.7
+     },
+     "actual_margin": -4.64,
+     "miss": -6.79
+    },
+    {
+     "election": "BRA 2022-10-30 runoff",
+     "iso3": "BRA",
+     "date": "2022-10-30",
+     "n_polls": 34,
+     "n_pollsters": 14,
+     "top_pollster": "Brasmarket",
+     "top_share": 0.12,
+     "hhi": 0.08,
+     "mean_margin": 2.04,
+     "sd_margin": 4.68,
+     "expected_sd": 2.04,
+     "herding_ratio": 2.29,
+     "house_effects": {
+      "Brasmarket": -8.3,
+      "Gerp": -6.5,
+      "Instituto Veritá": -4.7,
+      "IFP": -3.5,
+      "Modalmais/Futura": -2.9,
+      "Paraná Pesquisas": -0.7,
+      "Ideia": 2.1,
+      "Datafolha": 2.6,
+      "CNT/MDA": 2.6,
+      "PoderData": 2.8,
+      "Genial/Quaest": 3.2,
+      "AtlasIntel": 4.4,
+      "Abrapel/Ipespe": 4.4,
+      "Globo/Ipec": 5.5
+     },
+     "actual_margin": 1.8,
+     "miss": -0.24
+    },
+    {
+     "election": "BRA 2022-10-02 round1",
+     "iso3": "BRA",
+     "date": "2022-10-02",
+     "n_polls": 30,
+     "n_pollsters": 14,
+     "top_pollster": "Arko Advice/AtlasIntel",
+     "top_share": 0.13,
+     "hhi": 0.082,
+     "mean_margin": 8.36,
+     "sd_margin": 9.94,
+     "expected_sd": 1.92,
+     "herding_ratio": 5.19,
+     "house_effects": {
+      "Brasmarket": -27.0,
+      "Equilíbrio Brasil": -14.4,
+      "Instituto Veritá": -10.7,
+      "Modalmais/Futura": -6.6,
+      "Paraná Pesquisas": -1.4,
+      "PoderData": 1.5,
+      "CNT/MDA": 1.5,
+      "Arko Advice/AtlasIntel": 1.6,
+      "Exame/Ideia": 3.5,
+      "BTG Pactual/FSB": 3.6,
+      "Genial/Quaest": 6.3,
+      "Abrapel/Ipespe": 6.7,
+      "Globo/Datafolha": 8.9,
+      "Globo/IPEC": 11.0
+     },
+     "actual_margin": 5.23,
+     "miss": -3.13
+    },
+    {
+     "election": "POL 2020-07-12 runoff",
+     "iso3": "POL",
+     "date": "2020-07-12",
+     "n_polls": 23,
+     "n_pollsters": 10,
+     "top_pollster": "IBRiS",
+     "top_share": 0.22,
+     "hhi": 0.127,
+     "mean_margin": 0.87,
+     "sd_margin": 3.15,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "PGB Opinium": -2.1,
+      "Kantar": -1.8,
+      "IBRiS": -1.0,
+      "United Surveys": 0.1,
+      "Social Changes": 0.2,
+      "IPSOS": 0.2,
+      "Indicator": 0.5,
+      "Estymator": 0.9,
+      "Pollster": 1.0,
+      "CBOS": 5.8
+     },
+     "actual_margin": 2.06,
+     "miss": 1.19
+    },
+    {
+     "election": "POL 2020-06-28 round1",
+     "iso3": "POL",
+     "date": "2020-06-28",
+     "n_polls": 24,
+     "n_pollsters": 12,
+     "top_pollster": "IBRiS",
+     "top_share": 0.21,
+     "hhi": 0.108,
+     "mean_margin": 17.67,
+     "sd_margin": 5.57,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "Maison & Partners": -7.1,
+      "Indicator": -2.4,
+      "Kantar": -2.4,
+      "IBSP": -2.3,
+      "Pollster": -2.2,
+      "PGB Opinium": -1.6,
+      "Social Changes": -0.9,
+      "IPSOS": -0.8,
+      "United Survey": 1.2,
+      "IBRiS": 1.9,
+      "Estymator": 2.7,
+      "CBOS": 20.8
+     },
+     "actual_margin": 13.04,
+     "miss": -4.63
+    },
+    {
+     "election": "POL 2019-10-13 single",
+     "iso3": "POL",
+     "date": "2019-10-13",
+     "n_polls": 19,
+     "n_pollsters": 13,
+     "top_pollster": "Social Changes / wpolityce.pl",
+     "top_share": 0.11,
+     "hhi": 0.086,
+     "mean_margin": 28.13,
+     "sd_margin": 5.3,
+     "expected_sd": 2.95,
+     "herding_ratio": 1.8,
+     "house_effects": {
+      "Kantar Public / \"GW\"": -9.8,
+      "Kantar Public / TVN": -6.9,
+      "IBSP": -6.3,
+      "Pollster / SE.pl": -5.2,
+      "Dobra Opinia / PPG": -1.0,
+      "Indicator / TVP": -0.9,
+      "IBRiS / ZET": 0.2,
+      "IBRiS / RMF": 1.9,
+      "Social Changes / wpolityce.pl": 2.2,
+      "IBRiS / Onet": 2.6,
+      "Estymator / \"Do Rzeczy\"": 2.7,
+      "IBRiS / \"Rz\"": 2.8,
+      "CBOS": 13.4
+     },
+     "actual_margin": 16.19,
+     "miss": -11.94
+    },
+    {
+     "election": "IDN 2019-04-17 single",
+     "iso3": "IDN",
+     "date": "2019-04-17",
+     "n_polls": 12,
+     "n_pollsters": 11,
+     "top_pollster": "SMRC",
+     "top_share": 0.17,
+     "hhi": 0.097,
+     "mean_margin": 20.59,
+     "sd_margin": 5.72,
+     "expected_sd": 2.64,
+     "herding_ratio": 2.16,
+     "house_effects": {
+      "Median": -11.7,
+      "Poltracking": -6.0,
+      "Alvara": -5.9,
+      "Charta Politika": -2.7,
+      "Indo Barometer": -0.8,
+      "Y-Publica": 1.6,
+      "NIRC": 2.4,
+      "LSI Denny JA": 3.5,
+      "SMRC": 3.8,
+      "Indodata": 4.9,
+      "Indopolling": 7.1
+     },
+     "actual_margin": 11.0,
+     "miss": -9.59
+    },
+    {
+     "election": "BRA 2018-10-28 runoff",
+     "iso3": "BRA",
+     "date": "2018-10-28",
+     "n_polls": 21,
+     "n_pollsters": 9,
+     "top_pollster": "RecordTV/RealTime Big Data",
+     "top_share": 0.19,
+     "hhi": 0.125,
+     "mean_margin": 15.14,
+     "sd_margin": 5.83,
+     "expected_sd": 1.97,
+     "herding_ratio": 2.95,
+     "house_effects": {
+      "CUT/Vox Populi": -9.1,
+      "Globo e Folha/Datafolha": -2.3,
+      "Globo e O Estado de S. Paulo/IBOPE": -2.3,
+      "CNT/MDA": -1.3,
+      "RecordTV/RealTime Big Data": -0.6,
+      "XP/Ipespe": 0.8,
+      "BTG Pactual/FSB Pesquisa": 3.9,
+      "Empiricus/Paraná Pesquisas": 6.4,
+      "DataPoder360": 14.4
+     },
+     "actual_margin": 10.26,
+     "miss": -4.88
+    },
+    {
+     "election": "BRA 2018-10-07 round1",
+     "iso3": "BRA",
+     "date": "2018-10-07",
+     "n_polls": 24,
+     "n_pollsters": 14,
+     "top_pollster": "Globo e O Estado de S. Paulo/IBOPE",
+     "top_share": 0.17,
+     "hhi": 0.09,
+     "mean_margin": 17.25,
+     "sd_margin": 7.02,
+     "expected_sd": 1.97,
+     "herding_ratio": 3.56,
+     "house_effects": {
+      "DataPoder360": -8.2,
+      "Genial Investimentos/Brasilis": -7.0,
+      "IstoÉ/Sensus": -6.2,
+      "CNI/IBOPE": -4.8,
+      "CNT/MDA": -4.0,
+      "RecordTV/RealTime Big Data": -3.9,
+      "BTG Pactual/FSB Pesquisa": -2.0,
+      "Movimento Parlamentarista Brasileiro/Amostra": -1.9,
+      "Globo e O Estado de S. Paulo/IBOPE": 0.7,
+      "XP/Ipespe": 2.0,
+      "Globo e Folha/Datafolha": 2.4,
+      "Folha/Datafolha": 3.5,
+      "Empiricus/Paraná Pesquisas": 5.0,
+      "Veritá": 20.4
+     },
+     "actual_margin": 16.75,
+     "miss": -0.5
+    },
+    {
+     "election": "TUR 2018-06-24 round1",
+     "iso3": "TUR",
+     "date": "2018-06-24",
+     "n_polls": 11,
+     "n_pollsters": 9,
+     "top_pollster": "AKAM",
+     "top_share": 0.2,
+     "hhi": 0.12,
+     "mean_margin": 24.02,
+     "sd_margin": 4.17,
+     "expected_sd": 1.97,
+     "herding_ratio": 2.12,
+     "house_effects": {
+      "CHP": -6.8,
+      "REMRES": -4.7,
+      "AKAM": -2.4,
+      "Plus Mayak": -1.4,
+      "Mediar": -0.8,
+      "Gezici": 0.7,
+      "Foresight": 1.6,
+      "ORC": 4.7,
+      "Konda": 5.9
+     },
+     "actual_margin": 21.95,
+     "miss": -2.07
+    },
+    {
+     "election": "TUR 2017-04-16 single",
+     "iso3": "TUR",
+     "date": "2017-04-16",
+     "n_polls": 15,
+     "n_pollsters": 12,
+     "top_pollster": "Gezici",
+     "top_share": 0.13,
+     "hhi": 0.093,
+     "mean_margin": 4.83,
+     "sd_margin": 10.94,
+     "expected_sd": 1.64,
+     "herding_ratio": 6.68,
+     "house_effects": {
+      "CHP": -17.7,
+      "AKAM": -12.4,
+      "THEMİS": -11.9,
+      "NET": -6.3,
+      "Konsensus": -2.4,
+      "KONDA": -1.7,
+      "ANAR": -0.8,
+      "Gezici": 0.2,
+      "MAK": 8.9,
+      "Qriously": 12.5,
+      "ORC": 14.0,
+      "A&G": 16.8
+     },
+     "actual_margin": 2.82,
+     "miss": -2.01
+    },
+    {
+     "election": "TUR 2015-11-01 single",
+     "iso3": "TUR",
+     "date": "2015-11-01",
+     "n_polls": 11,
+     "n_pollsters": 10,
+     "top_pollster": "Konda",
+     "top_share": 0.18,
+     "hhi": 0.107,
+     "mean_margin": 22.39,
+     "sd_margin": 4.14,
+     "expected_sd": 1.9,
+     "herding_ratio": 2.18,
+     "house_effects": {
+      "Kurd-Tek": -6.0,
+      "AKAM": -4.5,
+      "Konda": -2.8,
+      "Konsensus": -2.3,
+      "ORC": 0.1,
+      "Andy-Ar": 1.1,
+      "Gezici": 2.1,
+      "Metropoll": 2.8,
+      "Betimar": 4.5,
+      "A&G": 7.8
+     },
+     "actual_margin": 24.18,
+     "miss": 1.79
+    },
+    {
+     "election": "POL 2015-10-25 single",
+     "iso3": "POL",
+     "date": "2015-10-25",
+     "n_polls": 18,
+     "n_pollsters": 8,
+     "top_pollster": "IBRiS",
+     "top_share": 0.33,
+     "hhi": 0.185,
+     "mean_margin": 21.08,
+     "sd_margin": 5.15,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "CBOS": -6.3,
+      "TNS Poland": -5.9,
+      "Millward Brown": -0.3,
+      "IBRiS": 2.3,
+      "Dobra Opinia": 2.4,
+      "Estymator": 3.1,
+      "IPSOS": 3.1,
+      "Ipsos": 5.7
+     },
+     "actual_margin": 13.49,
+     "miss": -7.59
+    },
+    {
+     "election": "TUR 2015-06-07 single",
+     "iso3": "TUR",
+     "date": "2015-06-07",
+     "n_polls": 11,
+     "n_pollsters": 10,
+     "top_pollster": "Gezici",
+     "top_share": 0.18,
+     "hhi": 0.107,
+     "mean_margin": 21.56,
+     "sd_margin": 5.57,
+     "expected_sd": 1.51,
+     "herding_ratio": 3.68,
+     "house_effects": {
+      "KamuAR": -9.8,
+      "Gezici": -6.1,
+      "Konda": -2.4,
+      "ANAR": 0.2,
+      "SONAR": 0.8,
+      "Andy-Ar": 2.2,
+      "Aksoy": 2.3,
+      "Denge": 5.7,
+      "MAK": 5.7,
+      "ORC": 7.5
+     },
+     "actual_margin": 15.92,
+     "miss": -5.64
+    },
+    {
+     "election": "POL 2015-05-24 runoff",
+     "iso3": "POL",
+     "date": "2015-05-24",
+     "n_polls": 13,
+     "n_pollsters": 6,
+     "top_pollster": "IBRiS",
+     "top_share": 0.31,
+     "hhi": 0.219,
+     "mean_margin": -1.34,
+     "sd_margin": 3.58,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "CBOS": -3.0,
+      "Estymator": -2.3,
+      "PPG/DO": -0.7,
+      "IBRiS": 0.6,
+      "Millward Brown": 1.6,
+      "TNS Polska": 3.6
+     },
+     "actual_margin": 3.1,
+     "miss": 4.44
+    },
+    {
+     "election": "POL 2015-05-10 round1",
+     "iso3": "POL",
+     "date": "2015-05-10",
+     "n_polls": 13,
+     "n_pollsters": 7,
+     "top_pollster": "IBRiS",
+     "top_share": 0.31,
+     "hhi": 0.183,
+     "mean_margin": 14.78,
+     "sd_margin": 6.01,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "Pressmix": -14.8,
+      "ewybory.eu": -3.6,
+      "PPG/DO": -3.1,
+      "Estymator": 1.2,
+      "IBRiS": 2.1,
+      "TNS Polska": 2.6,
+      "Millward Brown": 5.2
+     },
+     "actual_margin": -0.99,
+     "miss": -15.77
+    },
+    {
+     "election": "BRA 2014-10-26 runoff",
+     "iso3": "BRA",
+     "date": "2014-10-26",
+     "n_polls": 13,
+     "n_pollsters": 4,
+     "top_pollster": "Datafolha",
+     "top_share": 0.38,
+     "hhi": 0.278,
+     "mean_margin": 3.28,
+     "sd_margin": 3.69,
+     "expected_sd": 1.82,
+     "herding_ratio": 2.03,
+     "house_effects": {
+      "CNT/MDA": -3.1,
+      "Datafolha": 0.1,
+      "Vox Populi": 0.8,
+      "Ibope": 1.1
+     },
+     "actual_margin": 3.28,
+     "miss": 0.0
+    },
+    {
+     "election": "BRA 2014-10-05 round1",
+     "iso3": "BRA",
+     "date": "2014-10-05",
+     "n_polls": 15,
+     "n_pollsters": 4,
+     "top_pollster": "Vox Populi",
+     "top_share": 0.27,
+     "hhi": 0.253,
+     "mean_margin": 32.98,
+     "sd_margin": 5.0,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "CNT/MDA": -1.6,
+      "Datafolha": -1.1,
+      "Ibope": -0.9,
+      "Vox Populi": 3.2
+     },
+     "actual_margin": 8.04,
+     "miss": -24.94
+    },
+    {
+     "election": "IDN 2014-07-09 single",
+     "iso3": "IDN",
+     "date": "2014-07-09",
+     "n_polls": 8,
+     "n_pollsters": 7,
+     "top_pollster": "Lingkaran Survey Indonesia (LSI)",
+     "top_share": 0.25,
+     "hhi": 0.156,
+     "mean_margin": 1.84,
+     "sd_margin": 9.87,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "Indonesia Network Election Survey (INES)": -20.0,
+      "Lembaga Survei Nasional (LSN)": -9.6,
+      "Saiful Mujani Research and Consulting (SMRC)": 1.1,
+      "Lingkaran Survey Indonesia (LSI)": 3.8,
+      "Politicawave": 5.8,
+      "Alvara Research Center": 7.2,
+      "Litbang Kompas": 7.9
+     },
+     "actual_margin": 6.3,
+     "miss": 4.46
+    },
+    {
+     "election": "POL 2011-10-09 single",
+     "iso3": "POL",
+     "date": "2011-10-09",
+     "n_polls": 5,
+     "n_pollsters": 5,
+     "top_pollster": "TNS OBOP",
+     "top_share": 0.2,
+     "hhi": 0.2,
+     "mean_margin": 15.09,
+     "sd_margin": 10.74,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "Homo Homini": -10.9,
+      "SMG/KRC": -10.2,
+      "TNS OBOP": 1.9,
+      "GfK Polonia": 4.4,
+      "CBOS": 14.7
+     },
+     "actual_margin": 9.29,
+     "miss": -5.8
+    },
+    {
+     "election": "BRA 2010-10-31 runoff",
+     "iso3": "BRA",
+     "date": "2010-10-31",
+     "n_polls": 13,
+     "n_pollsters": 4,
+     "top_pollster": "Datafolha",
+     "top_share": 0.31,
+     "hhi": 0.254,
+     "mean_margin": 12.44,
+     "sd_margin": 2.65,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "Datafolha": -1.0,
+      "CNT/Sensus": -0.0,
+      "Ibope": 0.7,
+      "Vox Populi": 0.7
+     },
+     "actual_margin": 12.1,
+     "miss": -0.34
+    },
+    {
+     "election": "BRA 2010-10-03 round1",
+     "iso3": "BRA",
+     "date": "2010-10-03",
+     "n_polls": 22,
+     "n_pollsters": 4,
+     "top_pollster": "Vox Populi",
+     "top_share": 0.64,
+     "hhi": 0.459,
+     "mean_margin": 31.26,
+     "sd_margin": 4.78,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "Datafolha": -6.1,
+      "Ibope": -4.0,
+      "CNT/Sensus": -1.3,
+      "Vox Populi": 2.7
+     },
+     "actual_margin": 14.3,
+     "miss": -16.96
+    },
+    {
+     "election": "POL 2010-07-04 runoff",
+     "iso3": "POL",
+     "date": "2010-07-04",
+     "n_polls": 4,
+     "n_pollsters": 4,
+     "top_pollster": "TNS OBOP",
+     "top_share": 0.25,
+     "hhi": 0.25,
+     "mean_margin": 4.41,
+     "sd_margin": 5.25,
+     "expected_sd": null,
+     "herding_ratio": null,
+     "house_effects": {
+      "GfK Polonia": -6.5,
+      "Homo Homini": -1.8,
+      "Millward Brown SMG/KRC": 3.0,
+      "TNS OBOP": 5.3
+     },
+     "actual_margin": 6.02,
+     "miss": 1.61
+    },
+    {
+     "election": "POL 2010-06-20 round1",
+     "iso3": "POL",
+     "date": "2010-06-20",
+     "n_polls": 9,
+     "n_pollsters": 5,
+     "top_pollster": "SMG/KRC Millward Brown",
+     "top_share": 0.22,
+     "hhi": 0.21,
+     "mean_margin": 16.57,
+     "sd_margin": 3.56,
+     "expected_sd": 3.16,
+     "herding_ratio": 1.13,
+     "house_effects": {
+      "TNS OBOP": -5.1,
+      "SMG/KRC Millward Brown": -0.0,
+      "GfK Polonia": 1.1,
+      "Millward Brown SMG/KRC": 2.3,
+      "CBOS": 3.4
+     },
+     "actual_margin": 5.08,
+     "miss": -11.49
+    }
+   ],
+   "upcoming": "No polls yet for Mexico's June 2027 midterms in em-macro; Mexico's history is shown for its pollsters."
+  },
+  {
+   "id": "c",
+   "title": "Survey dispersion percentile",
+   "evidence": {
+    "badge": "tested_leads",
+    "reason": "BR: tested_leads - move size: tested_no_lead (fit effect not significant (fit diff +0.26 sd, p=0.0669; hold-out diff +0.40 sd, p=0.0127)); miss vs survey median: tested_leads (fit p=0.0003, hold-out p=0.0071); MX: tested_no_lead - move size: tested_no_lead (fit effect not significant (fit diff +0.08 sd, p=0.2819; hold-out diff +0.19 sd, p=0.1307)); miss vs survey median: untested (only 1 extreme readings in the fit period (need 8))",
+    "report": "reports/crowd_lab.md"
+   },
+   "readings": [
+    {
+     "label": "Focus: Selic for the next Copom (R7/2026)",
+     "country": "BR",
+     "value": 0.0839,
+     "unit": "pp (sd)",
+     "median": 13.5,
+     "respondents": 133.0,
+     "as_of": "2026-10-23",
+     "percentile": 60.0,
+     "percentile_basis": "vs the last survey before each of the previous 40 meetings",
+     "extreme": false,
+     "event": {
+      "date": "2026-11-04",
+      "title": "Copom decision (3-4 Nov)"
+     },
+     "evidence": {
+      "badge": "tested_leads",
+      "reason": "move size: tested_no_lead (fit effect not significant (fit diff +0.26 sd, p=0.0669; hold-out diff +0.40 sd, p=0.0127)); miss vs survey median: tested_leads (fit p=0.0003, hold-out p=0.0071)",
+      "report": "reports/crowd_lab.md"
+     },
+     "meta": {
+      "source": "BCB Focus (Olinda)",
+      "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
+      "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
+      "as_of": "2026-10-23",
+      "fetched_at": "2026-10-29T15:31:36Z",
+      "frequency": "daily (business days)",
+      "series": "br.focus.selic_meeting",
+      "evidence": {
+       "badge": "tested_no_lead",
+       "reason": "em-macro used Focus Selic expectations to measure Copom surprises; the surprise regressions added almost nothing out of sample (pooled FX correlation 0.18)."
+      }
+     }
+    },
+    {
+     "label": "Focus: 2027 primary balance",
+     "country": "BR",
+     "value": 0.2865,
+     "unit": "pp of GDP (sd)",
+     "median": -0.3,
+     "respondents": 57,
+     "as_of": "2026-10-23",
+     "percentile": 27.9,
+     "percentile_basis": "vs readings at the same horizon over 10 years",
+     "extreme": false,
+     "scenarios": [
+      "br-fiscal-2027"
+     ],
+     "evidence": {
+      "badge": "untested",
+      "reason": "The lab test covered dispersion before rate decisions, not fiscal surveys."
+     },
+     "meta": {
+      "source": "BCB Focus (Olinda)",
+      "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
+      "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+      "as_of": "2026-10-23",
+      "fetched_at": "2026-10-29T14:04:30Z",
+      "frequency": "daily (business days)",
+      "series": "br.focus.primary",
+      "evidence": {
+       "badge": "untested",
+       "reason": "Focus survey levels and dispersion are not tested as signals."
+      }
+     }
+    },
+    {
+     "label": "Banxico survey: 2026 inflation",
+     "country": "MX",
+     "value": 0.18,
+     "unit": "pp (sd)",
+     "median": 3.87,
+     "as_of": "2026-09-01",
+     "percentile": 25.8,
+     "percentile_basis": "vs the same month +/-1 over the previous 10 years",
+     "extreme": false,
+     "event": {
+      "date": "2026-11-05",
+      "title": "Banxico monetary policy decision"
+     },
+     "evidence": {
+      "badge": "tested_no_lead",
+      "reason": "move size: tested_no_lead (fit effect not significant (fit diff +0.08 sd, p=0.2819; hold-out diff +0.19 sd, p=0.1307)); miss vs survey median: untested (only 1 extreme readings in the fit period (need 8))",
+      "report": "reports/crowd_lab.md"
+     },
+     "meta": {
+      "source": "Banxico SIE (public chart data)",
+      "source_id": "SIE SR14139, SR14144, SR14146, SR14151 (median, sd for years t and t+1)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14146,SR14151,CF300,1",
+      "as_of": "2026-09-01",
+      "fetched_at": "2026-10-29T14:07:17Z",
+      "frequency": "monthly",
+      "series": "mx.survey.inflation",
+      "evidence": {
+       "badge": "untested",
+       "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+      }
+     }
+    }
+   ],
+   "what": "How much forecasters disagree before a decision, against their own history. Wide disagreement before a Copom meeting has been followed by decisions further from the survey median and larger moves."
+  },
+  {
+   "id": "d",
+   "title": "Official optimism gap",
+   "evidence": {
+    "badge": "untested",
+    "reason": "Not tested: em-macro has no history of official targets against independent estimates."
+   },
+   "what": "Government target minus the median independent estimate for the same year and measure (positive = government more optimistic). From the fiscal table on each country page.",
+   "rows": [
+    {
+     "country": "FR",
+     "year": 2026,
+     "measure": "General government balance (solde effectif)",
+     "official": -5.0,
+     "independent_median": null,
+     "n_independent": 0,
+     "gap": null,
+     "verified": false
+    },
+    {
+     "country": "BR",
+     "year": 2026,
+     "measure": "Primary balance (official: central government; Focus: consolidated public sector)",
+     "official": 0.25,
+     "independent_median": -0.48,
+     "n_independent": 1,
+     "gap": 0.73,
+     "verified": true
+    },
+    {
+     "country": "BR",
+     "year": 2027,
+     "measure": "Primary balance (official: central government; Focus: consolidated public sector)",
+     "official": 0.5,
+     "independent_median": -0.3,
+     "n_independent": 1,
+     "gap": 0.8,
+     "verified": true
+    },
+    {
+     "country": "MX",
+     "year": 2026,
+     "measure": "Public sector borrowing requirements (RFSP, broadest balance)",
+     "official": -4.1,
+     "independent_median": -4.5,
+     "n_independent": 2,
+     "gap": 0.48,
+     "verified": true
+    },
+    {
+     "country": "MX",
+     "year": 2026,
+     "measure": "Public balance (traditional / budget balance)",
+     "official": -3.6,
+     "independent_median": -3.8,
+     "n_independent": 2,
+     "gap": 0.23,
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "e",
+   "title": "CFTC net positioning percentile",
+   "evidence": {
+    "badge": "tested_no_lead",
+    "reason": "leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)",
+    "report": "reports/crowd_lab.md"
+   },
+   "readings": [
+    {
+     "country": "BR",
+     "label": "BRL futures, leveraged funds",
+     "as_of": "2026-10-20",
+     "net": 18677,
+     "net_pct_oi": 13.8,
+     "percentile": 92.3,
+     "extreme": true,
+     "crowded": "long BRL",
+     "catalysts_30d": [
+      {
+       "date": "2026-11-04",
+       "title": "Copom decision (3-4 Nov)"
+      }
+     ],
+     "flag": true,
+     "meta": {
+      "source": "CFTC Commitments of Traders",
+      "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
+      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
+      "as_of": "2026-10-20",
+      "fetched_at": "2026-10-29T15:31:38Z",
+      "frequency": "weekly (Tuesday positions, released Friday)",
+      "series": "br.cot.brl",
+      "evidence": {
+       "badge": "tested_no_lead",
+       "reason": "Crowd lab test (e): leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)"
+      }
+     }
+    },
+    {
+     "country": "MX",
+     "label": "MXN futures, leveraged funds",
+     "as_of": "2026-10-20",
+     "net": 63814,
+     "net_pct_oi": 22.9,
+     "percentile": 73.7,
+     "extreme": false,
+     "crowded": null,
+     "catalysts_30d": [
+      {
+       "date": "2026-11-05",
+       "title": "Banxico monetary policy decision"
+      }
+     ],
+     "flag": false,
+     "meta": {
+      "source": "CFTC Commitments of Traders",
+      "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
+      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
+      "as_of": "2026-10-20",
+      "fetched_at": "2026-10-29T15:31:46Z",
+      "frequency": "weekly (Tuesday positions, released Friday)",
+      "series": "mx.cot.mxn",
+      "evidence": {
+       "badge": "tested_no_lead",
+       "reason": "Crowd lab test (e): leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)"
+      }
+     }
+    }
+   ],
+   "what": "Leveraged funds' net futures position / open interest, percentile over 3 years (BRL and MXN futures; long = long the local currency). Shown as a flag only when a dated catalyst for that country is within 30 days."
+  },
+  {
+   "id": "f",
+   "title": "Forced-flow thresholds",
+   "evidence": {
+    "badge": "context",
+    "reason": "Mechanical thresholds, not forecasts; not tested."
+   },
+   "what": "Distance from today's ratings to levels that force buying or selling: index investment-grade eligibility (middle of S&P, Moody's and Fitch), losing the last AA-category rating, ECB collateral and TPI conditions, and auction stress.",
+   "items": [
+    {
+     "country": "MX",
+     "threshold": "Investment-grade index eligibility (middle rating BBB- or better)",
+     "scenarios": [
+      "mx-midterms-2027",
+      "usmca-2027"
+     ],
+     "ratings": [
+      {
+       "agency": "Fitch",
+       "rating": "BBB-",
+       "outlook": "stable",
+       "date": "2020-04-15",
+       "notch": 9
+      },
+      {
+       "agency": "Moody's",
+       "rating": "Baa3",
+       "outlook": "stable",
+       "date": "2026-05-20",
+       "notch": 9
+      },
+      {
+       "agency": "S&P",
+       "rating": "BBB",
+       "outlook": "negative",
+       "date": "2026-05-12",
+       "notch": 8
+      }
+     ],
+     "middle": "BBB-",
+     "distance": "1 notch (Fitch) and 1 notch (Moody's) cuts take the middle rating to junk",
+     "notches_to_trigger": 2,
+     "negative_outlooks": [
+      "S&P"
+     ],
+     "near": true,
+     "why": "Global aggregate and IG-only mandates sell when the middle rating drops below BBB- (index rules use the middle of the three)."
+    },
+    {
+     "country": "BR",
+     "threshold": "Investment-grade index eligibility (upgrade side)",
+     "ratings": [
+      {
+       "agency": "Fitch",
+       "rating": "BB",
+       "outlook": "stable",
+       "date": "2026-06-16",
+       "notch": 11
+      },
+      {
+       "agency": "Moody's",
+       "rating": "Ba1",
+       "outlook": "stable",
+       "date": "2025-05-30",
+       "notch": 10
+      },
+      {
+       "agency": "S&P",
+       "rating": "BB",
+       "outlook": "stable",
+       "date": "2026-06-25",
+       "notch": 11
+      }
+     ],
+     "scenarios": [],
+     "middle": "BB",
+     "distance": "2 notch (Fitch) and 2 notch (S&P) upgrades needed for an investment-grade middle rating",
+     "notches_to_trigger": 4,
+     "near": false,
+     "why": "Forced buying only on a return to investment grade; far away."
+    },
+    {
+     "country": "FR",
+     "threshold": "Last AA-category rating among the big three",
+     "ratings": [
+      {
+       "agency": "Fitch",
+       "rating": "A+",
+       "outlook": "stable",
+       "date": "2026-08-28",
+       "notch": 4
+      },
+      {
+       "agency": "Moody's",
+       "rating": "Aa3",
+       "outlook": "negative",
+       "date": "2026-10-23",
+       "notch": 3
+      },
+      {
+       "agency": "S&P",
+       "rating": "A+",
+       "outlook": "stable",
+       "date": "2025-10-17",
+       "notch": 4
+      }
+     ],
+     "scenarios": [
+      "fr-sp-2026-11"
+     ],
+     "distance": "Moody's at Aa3 (negative) is the last; one notch removes it",
+     "near": true,
+     "notches_to_trigger": 1,
+     "why": "Some reserve-manager and insurer mandates key on the AA category; mandates differ and are not public."
+    },
+    {
+     "country": "FR",
+     "threshold": "ECB collateral eligibility (best rating BBB- or better)",
+     "scenarios": [],
+     "distance": "6 notches above the floor at the best agency",
+     "near": false,
+     "notches_to_trigger": 7,
+     "why": "The Eurosystem's credit-quality floor; not close."
+    },
+    {
+     "country": "FR",
+     "threshold": "ECB TPI eligibility: compliance with the EU fiscal framework",
+     "scenarios": [
+      "fr-budget-2027",
+      "fr-pres-2027"
+     ],
+     "distance": "France is under an excessive deficit procedure (since Jul 2024) with a Council recommendation (2025-01-21); em-macro records no finding that it failed to take effective action, so this criterion is met today.",
+     "near": false,
+     "notches_to_trigger": null,
+     "why": "TPI purchases need compliance with the EU fiscal framework; a Council finding of no effective action under the EDP would remove it. Next checkpoint: the Commission's autumn package.",
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/data/events/calendar_13.csv"
+    },
+    {
+     "country": "BR",
+     "threshold": "Auction stress: Tesouro shrinks or cancels fixed-rate auctions in volatile weeks",
+     "scenarios": [
+      "br-fiscal-2027"
+     ],
+     "distance": "20-day move in DI Jan-29 (proxy) is 101 bp, percentile 92.1 over 3 years",
+     "near": true,
+     "percentile": 92.1,
+     "why": "When rates gap, the Treasury cuts fixed-rate supply and leans on floating (LFT) issuance; a move above the 90th percentile is the zone where that has happened."
+    }
+   ]
+  }
+ ],
+ "shared_errors": [
+  {
+   "scenario": "br-fiscal-2027",
+   "title": "Brazil 2027: fiscal-framework credibility",
+   "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
+   "date": "2027-01-05",
+   "days": 68,
+   "score": 0.7,
+   "signals": [
+    {
+     "signal": "official optimism gap",
+     "detail": "2027 Primary balance (official: central government; Focus: consolidated public sector): official 0.5 vs independent -0.3",
+     "strength": 0.8,
+     "badge": "untested"
+    },
+    {
+     "signal": "forced-flow threshold",
+     "detail": "Auction stress: Tesouro shrinks or cancels fixed-rate auctions in volatile weeks: 20-day move in DI Jan-29 (proxy) is 101 bp, percentile 92.1 over 3 years",
+     "strength": 1.0,
+     "badge": "context"
+    }
+   ]
+  },
+  {
+   "scenario": "fr-sp-2026-11",
+   "title": "S&P review of France, 27 Nov 2026",
+   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
+   "date": "2026-11-27",
+   "days": 29,
+   "score": 0.542,
+   "signals": [
+    {
+     "signal": "market vs base rate",
+     "detail": "market 14% vs base rate 0%",
+     "strength": 0.48333333333333334,
+     "badge": "untested",
+     "hidden_market": true
+    },
+    {
+     "signal": "forced-flow threshold",
+     "detail": "Last AA-category rating among the big three: Moody's at Aa3 (negative) is the last; one notch removes it",
+     "strength": 1.0,
+     "badge": "context"
+    }
+   ]
+  },
+  {
+   "scenario": "fr-budget-2027",
+   "title": "France 2027 budget and the Article 47 deadline",
+   "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
+   "date": "2026-12-10",
+   "days": 42,
+   "score": 0.025,
+   "signals": [
+    {
+     "signal": "market vs base rate",
+     "detail": "market 52% vs base rate 50%",
+     "strength": 0.050000000000000044,
+     "badge": "untested",
+     "hidden_market": true
+    }
+   ]
+  },
+  {
+   "scenario": "fr-pres-2027",
+   "title": "France 2027 presidential election",
+   "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
+   "date": "2027-04-25",
+   "days": 178,
+   "score": 0,
+   "signals": []
+  }
+ ],
+ "ranking_method": "Heuristic, not a tested model. For each scenario due within 6 months: each signal that applies scores 0-1 for strength and is weighted by its evidence (Tested-leads 1, Untested 0.5, Context 0.3, Tested-no-lead 0.25); the score is the sum. Market-vs-base-rate gap counts when both exist.",
+ "lab": {
+  "generated_at": "2026-10-29T15:36:04Z",
+  "report": "reports/crowd_lab.md"
+ }
+}

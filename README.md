@@ -4,10 +4,10 @@ A macro research terminal for **France, Brazil and Mexico**, published at
 **https://ethanc100.github.io/forecast-panel/**. The original forecast panel lives on under the
 **Lab** link (https://ethanc100.github.io/forecast-panel/lab/).
 
-This is **Phase 1 of 5: the data spine and the catalyst calendar.** Later phases add a paper
-trading book, judgement forms and scoring, scenario pages, a crowd-error monitor and an AI brief.
-Everything they need is already being stored: every price series keeps its full daily history,
-its upstream source and source ID, and fetch timestamps.
+Phases done: **1** the data spine and the catalyst calendar, **2** the paper book, judgement forms
+and scoring, **3** scenario pages and the crowd module. Still to come: **4** an AI brief (and AI
+probabilities on the scenario pages), **5** (to be specified). Every price series keeps its full
+daily history, its upstream source and source ID, and fetch timestamps.
 
 ## The site
 
@@ -18,7 +18,8 @@ Mobile-first, light and dark mode, bottom navigation:
 | **Today** | The next three catalysts with countdowns. Instrument tiles for USD/BRL, USD/MXN, Brazil DI Jan-27/29/31, the Brazil 10-year proxy, the France OAT-Bund spread, US 10-year and Mexico 10-year (context), each with level, 1-week and 1-month change, and a z-score of the level against the past year. |
 | **Calendar** | Next 2 weeks, 3 months and 12 months. Each row: date, country, type, importance 1-3, confirmed or estimated, source, and a market-attention score with an under-attended flag. |
 | **Record** | Phase 2: the paper book (Portfolio), scored calls (Judgements) and the Journal. See below. |
-| **Scenarios, Crowd** | Placeholders for later phases, listing the data already stored for them. |
+| **Scenarios** | Phase 3: six scenario pages linked to calendar events. See below. |
+| **Crowd** | Phase 3: six crowd-error gauges and a ranked list of the most likely shared errors. See below. |
 
 Also: a page per country (header links **FR / BR / MX**) and a **Status** page.
 
@@ -33,8 +34,10 @@ Every number carries its **source** (linked, with the source ID), an **as-of** t
 | Context | background, not meant as a signal |
 
 Badges come from `data/terminal/inputs/evidence.yaml`, with the reason and the test behind each
-one (em-macro's hold-out and repricing sections, tension-index's validation). Hover a badge for its
-reason.
+one (em-macro's hold-out and repricing sections, tension-index's validation), except the Crowd
+gauges (a), (c) and (e) and CFTC positioning, whose badges are set by the lab tests in
+`reports/crowd_lab.md`. Hover a badge for its reason. An amber **degraded** chip marks a number
+built on a substitute source (see Degraded data below).
 
 **Country pages** show market charts (1 year and 5 years), the **fiscal optimism gap** (the
 official target against independent estimates, from an editable table), **expectations and
@@ -121,6 +124,114 @@ happened, clipped at 1%, where higher is better. Both are compared with the mark
 probability recorded at the same submission. The **calibration chart** appears after 30 resolved
 questions. Questions linked to q1-q5, a Polymarket market (`pm:<id>`) or a Kalshi market
 (`ks:<ticker>`) resolve automatically; the rest use the Resolve form.
+
+## Phase 3: scenario pages and the crowd
+
+### Scenario pages (`#scenarios`)
+
+Defined in `data/terminal/inputs/scenarios.yaml` and built by `terminal/scenarios.py` into
+`data/terminal/scenarios.json` on every summary run. The six:
+
+| scenario | question (YES =) | catalyst |
+|---|---|---|
+| `fr-sp-2026-11` | S&P lowers France below A+ by its 27 Nov 2026 review | S&P review, 27 Nov 2026 |
+| `fr-budget-2027` | the 2027 budget law is promulgated by 31 Dec 2026 | Article 47 70-day deadline, **10 Dec 2026** (PLF filed 1 Oct; the calendar's earlier 15 Dec estimate is corrected) |
+| `fr-pres-2027` | the RN candidate wins the presidency | second round, 25 Apr 2027 (estimated) |
+| `br-fiscal-2027` | by 31 Mar 2027 Brazil keeps the +0.5% 2027 primary target and LC 200/2023 unchanged | inauguration, 5 Jan 2027 |
+| `mx-midterms-2027` | Morena + PVEM + PT hold two-thirds of the Chamber (334 seats) | midterms, 6 Jun 2027 |
+| `usmca-2027` | all three parties confirm a 16-year extension by 1 Jul 2027 | annual joint review, 1 Jul 2027 |
+
+Each page has:
+
+* **The question**, its resolution source and date, and the linked calendar event with a countdown.
+  Calendar rows link back to their scenario page.
+* **Base rate**, computed from em-macro with the reference class stated:
+  * S&P: S&P actions on the six EU sovereigns since 2014 with a stable outlook going in: 0
+    downgrades in 36 recorded actions. Affirmations are under-recorded, so a second denominator (two
+    scheduled reviews a year) gives the lower bound.
+  * Budget: 19 of 21 French budgets were promulgated by 31 December. Since the government lost its
+    majority in 2022 the record is 2 of 4: both were special laws, and all four budgets used 49.3.
+  * Presidential and Mexico midterms: final-poll leader's record and RMS poll error.
+  * Brazil and USMCA: **not computable**. em-macro has no fiscal-target revisions and no
+    trade-agreement events, and the page says so.
+* **Branch tree** (3-4 branches). Each branch shows my probability (from the latest Full call with
+  question id `sc:<id>`), the AI's ("Phase 4") and the market's. It also shows the expected move
+  per instrument with its basis: em-macro's what-if table (with 90% interval), its event study,
+  an analog measured on this terminal's own series (for example the Nov 2024 Brazil package:
+  DI Jan-29 +112 bp and USD/BRL +4.4% in 3 days), or a judgement. Anything that is not a direct
+  em-macro estimate carries an **assumption** chip. Each branch has its signposts. Brazil adds
+  live signposts from Focus: the 2027 primary-balance median (−0.3% against the +0.5% target) and
+  net debt.
+* **Market-implied probability calculator**: P(good) = (now − bad level) / (good level − bad
+  level). The defaults are today's level plus each side's expected move. With those defaults the
+  answer only restates the move estimates, so the page asks for your own outcome levels. They are
+  saved in your browser, and everything recomputes as you type.
+* **Asymmetry check**. It flags when all three hold:
+  * my P(YES) differs from the market's by 15 points or more. The market is the linked prediction
+    market, or the calculator once you have entered your own levels;
+  * reward:risk toward my view is at least 2:1 (distance to the favoured outcome's level over
+    distance to the other);
+  * the event is 14 to 183 days away.
+* **Make a call** pre-fills the Full call form with the question, the id `sc:<id>`, the
+  resolution date, the base rate and the branch names (fill in the percentages). Calls on
+  `sc:` ids record the scenario's market probability at entry and are scored like any other call.
+  **Open trade: good / bad outcome** pre-fills the instrument, link, horizon, target and stop at
+  the two outcome levels, and states the direction in the thesis (the direction itself is a
+  dropdown, which GitHub cannot pre-fill).
+* Market prices stay hidden until you press **reveal** or have made a call on that scenario.
+
+### Crowd page (`#crowd`)
+
+Built by `terminal/crowd.py` into `data/terminal/crowd.json`. Six gauges, each with its badge:
+
+| gauge | what | badge |
+|---|---|---|
+| (a) poll vs prediction market | poll-implied probability = Φ(lead / the country's historical RMS poll error) against the market | **Tested-no-lead** |
+| (b) pollster concentration and house effects | final-14-day polls per election: pollsters, top share, HHI, herding ratio (spread of polls / sampling error), house effects, the miss | Untested |
+| (c) survey dispersion | Focus per-meeting Selic sd before the next Copom (percentile vs the last 40 meetings); Banxico survey inflation sd (same month, 10 years); Focus 2027 primary-balance sd | **Tested-leads** (Focus, per meeting); Tested-no-lead (Banxico); Untested (fiscal) |
+| (d) official optimism gap | government target minus the median independent estimate, from the fiscal table | Untested |
+| (e) CFTC positioning | leveraged funds' net / open interest, 3-year percentile, BRL and MXN; a **flag only when a dated catalyst is within 30 days** | **Tested-no-lead** |
+| (f) forced-flow thresholds | Mexico's middle rating vs investment grade (one notch at Moody's and Fitch), France's last AA-category rating (Moody's Aa3 negative), ECB collateral floor, TPI's EU-fiscal-framework condition (from em-macro's EDP events), Brazil auction stress (20-day DI move percentile) | Context |
+
+Polls for upcoming votes are not in em-macro. Enter the latest head-to-head poll in
+`data/terminal/inputs/polls.yaml` and gauge (a) computes the gap. Until then it shows the latest
+resolved case: Brazil's 2026 run-off, where polls gave Flávio Bolsonaro 51%, the market 80%, and
+he lost.
+
+**Most likely shared errors in the next 6 months.** This is a ranked list of the scenarios due
+within six months, each linked to its page. Every applicable signal scores 0-1 and is weighted by
+its evidence (Tested-leads 1, Untested 0.5, Context 0.3, Tested-no-lead 0.25). The signals are
+market vs base rate, survey dispersion, positioning near the event, the official optimism gap and
+nearby forced-flow thresholds. The ranking is a heuristic, not a tested model, and the page says
+so.
+
+### Lab tests (`reports/crowd_lab.md`)
+
+`python -m terminal.labtests` (or `python -m terminal.run lab`; the data workflow reruns it on
+Mondays) tests gauges (a), (c) and (e) on em-macro's history. The question is whether extreme
+readings before events were followed by larger or more surprising moves. Moves are em-macro's day-1
+abnormal moves divided by each asset's normal daily sd. The split is em-macro's own: fit to 2021,
+hold-out from 2022. The badge rule was fixed before the results: Tested-leads needs the fit effect
+at p < 0.05 and the same sign in the hold-out at p < 0.10. Results:
+
+* **(a) Tested-no-lead.** 18 elections in 13 countries have both polls and recorded odds. The size
+  of the poll-market gap did not predict the size of the poll miss (rho −0.14, p = 0.72). Only 8
+  have FX moves in em-macro. The sample is small, so a moderate effect could be missed. There is no
+  hold-out, but nothing is fitted: each election's poll error uses only earlier elections.
+* **(c) Tested-leads for Focus (Brazil).** When the Focus per-meeting Selic dispersion was in the
+  top fifth, the Copom decision differed from the survey median by 15 bp on average versus 4 bp
+  (fit p = 0.0003), and by 9 bp versus 0 in the hold-out (p = 0.007). Market moves were larger too
+  (hold-out p = 0.013, fit p = 0.07). Part of the miss effect is mechanical, as the report notes.
+  **Banxico: Tested-no-lead.** That test uses inflation-forecast dispersion, because the survey's
+  rate expectations cannot be fetched without a key.
+* **(e) Tested-no-lead.** 350 events in Brazil, Mexico and South Africa: extreme leveraged-fund
+  positioning was followed by slightly larger FX moves in the fit period (p = 0.09), not in the
+  hold-out (p = 0.37). The legacy non-commercial measure shows the same.
+* em-macro's event-move file covers six of its 13 countries (BR, MX, PL, TR, ZA, ID), so tests
+  that need market moves use those six.
+
+New stored series for these tests: `br.focus.selic_meeting` (Focus expectation for every Copom
+meeting since 2004) and `za.cot.zar` (CFTC ZAR futures).
 
 ## Daily flow
 
@@ -227,13 +338,15 @@ Values marked `verified: false` show a "to verify" chip until you check them aga
 ```
 pip install -e .[test]
 python -m terminal.run all          # fetch every source, build the calendar and the summary
+python -m terminal.run lab          # crowd lab tests (reads em-macro)
 python -m terminal.run site         # copy data/terminal into site/data
 cd site && python -m http.server    # open http://localhost:8000
 pytest
 ```
 
 Set `BANXICO_TOKEN`, `WEBSTAT_CLIENT_ID` and `FRED_API_KEY` in the environment to use those APIs.
-`python -m terminal.run fetch --only bcb_sgs,cftc` runs selected sources.
+`python -m terminal.run fetch --only bcb_sgs,cftc` runs selected sources. em-macro files are read
+from GitHub; set `EM_MACRO_DIR=../em-macro` to read a local checkout instead.
 
 ## Data layout
 
@@ -246,14 +359,19 @@ data/terminal/status.json        every source: state, last attempt, last success
 data/terminal/calendar.json      upcoming events and imported past events
 data/terminal/attention.json     GDELT share per query per day
 data/terminal/summary.json       what the site reads first
+data/terminal/scenarios.json     scenario pages (rebuilt from inputs/scenarios.yaml)
+data/terminal/crowd.json         crowd gauges and the ranked shared-error list
+data/terminal/lab/crowd_tests.json   lab-test results that set the crowd badges (report: reports/crowd_lab.md)
+data/terminal/inputs/            hand-edited: events, evidence, fiscal_gap, france_ratings, scenarios, polls
 data/book/config.yaml            paper book: capital, instruments, costs, durations, close times
 data/book/state.json             positions, marks, equity curve, stats, benchmarks, systematic (rebuilt)
 data/book/judgements.json        calls, updates, resolutions and scores (rebuilt)
 data/book/journal.json           every record in date order (rebuilt)
 data/trades/, data/judgements/   write-once form records
 .github/ISSUE_TEMPLATE/          the five forms; .github/workflows/forms.yml processes them
-terminal/                        the package: store, sources/, calendar, summary, book, forms, judgement, run
-site/                            index.html, terminal.js, terminal.css (and lab/)
+terminal/                        the package: store, sources/, calendar, summary, book, forms, judgement,
+                                 degraded, emmacro, scenarios, crowd, labtests, run
+site/                            index.html, terminal.js, record.js, scenarios.js, terminal.css (and lab/)
 ```
 
 ---

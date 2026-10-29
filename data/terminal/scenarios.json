@@ -1,0 +1,2096 @@
+{
+ "generated_at": "2026-10-29T15:53:29Z",
+ "asymmetry_rules": {
+  "gap_pp": 15,
+  "reward_risk": 2.0,
+  "min_days": 14,
+  "max_days": 183
+ },
+ "scenarios": [
+  {
+   "id": "fr-sp-2026-11",
+   "title": "S&P review of France, 27 Nov 2026",
+   "country": "FR",
+   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
+   "resolution": "YES if S&P publishes a downgrade of France (to A or lower) dated on or before 27 Nov 2026. NO if France is still A+ after S&P's 27 Nov publication. An outlook change alone is NO. Sources: S&P research update; AFT ratings table.",
+   "resolution_date": "2026-11-27",
+   "question_id": "sc:fr-sp-2026-11",
+   "yes_branches": [
+    "downgrade"
+   ],
+   "instruments": [
+    "OATBUND"
+   ],
+   "event": {
+    "id": "2026-11-27-fr-s-p-global-sovereign-rating-review-france",
+    "date": "2026-11-27",
+    "title": "S&P Global sovereign rating review: France",
+    "status": "confirmed",
+    "source": "https://disclosure.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101599026",
+    "importance": 3
+   },
+   "days_to_event": 29,
+   "base_rate": {
+    "kind": "rating_review",
+    "reference_class": "S&P actions on the six EU sovereigns em-macro tracks (France, Germany, Italy, Spain, UK, Poland) since 2014, when the EU began requiring a published calendar of scheduled sovereign reviews, where the outlook going in was stable.",
+    "context": [],
+    "computed": true,
+    "n": 36,
+    "counts": {
+     "affirmed": 19,
+     "outlook or watch to negative": 7,
+     "upgrade": 5,
+     "outlook to positive": 5
+    },
+    "p_yes": 0.0,
+    "p_yes_low": 0.0,
+    "headline": "0 downgrades in 36 recorded S&P actions on a stable outlook (0%)",
+    "range_note": "Recorded affirmations are incomplete. Assuming two scheduled reviews a year for each of the 6 sovereigns since 2014 (156 reviews) gives 0% as a lower bound. Both counts include unscheduled actions; em-macro does not mark which were scheduled.",
+    "recent": [
+     {
+      "iso3": "POL",
+      "date": "2024-05-10",
+      "action": "affirmation",
+      "rating_before": "A-",
+      "outlook_before": "stable",
+      "rating_after": "A-",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "POL",
+      "date": "2024-11-08",
+      "action": "affirmation",
+      "rating_before": "A-",
+      "outlook_before": "stable",
+      "rating_after": "A-",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "FRA",
+      "date": "2024-11-29",
+      "action": "affirmation",
+      "rating_before": "AA-",
+      "outlook_before": "stable",
+      "rating_after": "AA-",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "FRA",
+      "date": "2025-02-28",
+      "action": "outlook_change",
+      "rating_before": "AA-",
+      "outlook_before": "stable",
+      "rating_after": "AA-",
+      "outlook_after": "negative"
+     },
+     {
+      "iso3": "ITA",
+      "date": "2025-04-11",
+      "action": "upgrade",
+      "rating_before": "BBB",
+      "outlook_before": "stable",
+      "rating_after": "BBB+",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "DEU",
+      "date": "2025-06-13",
+      "action": "affirmation",
+      "rating_before": "AAA",
+      "outlook_before": "stable",
+      "rating_after": "AAA",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "ESP",
+      "date": "2025-09-12",
+      "action": "upgrade",
+      "rating_before": "A",
+      "outlook_before": "stable",
+      "rating_after": "A+",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "ITA",
+      "date": "2025-10-10",
+      "action": "affirmation",
+      "rating_before": "BBB+",
+      "outlook_before": "stable",
+      "rating_after": "BBB+",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "POL",
+      "date": "2025-11-07",
+      "action": "affirmation",
+      "rating_before": "A-",
+      "outlook_before": "stable",
+      "rating_after": "A-",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "ITA",
+      "date": "2026-01-30",
+      "action": "outlook_change",
+      "rating_before": "BBB+",
+      "outlook_before": "stable",
+      "rating_after": "BBB+",
+      "outlook_after": "positive"
+     },
+     {
+      "iso3": "DEU",
+      "date": "2026-04-24",
+      "action": "affirmation",
+      "rating_before": "AAA",
+      "outlook_before": "stable",
+      "rating_after": "AAA",
+      "outlook_after": "stable"
+     },
+     {
+      "iso3": "POL",
+      "date": "2026-05-08",
+      "action": "affirmation",
+      "rating_before": "A-",
+      "outlook_before": "stable",
+      "rating_after": "A-",
+      "outlook_after": "stable"
+     }
+    ],
+    "source_url": "https://github.com/EthanC100/em-macro/blob/main/data/events/raw/rating_actions_eu.csv"
+   },
+   "branches": [
+    {
+     "id": "affirm_stable",
+     "label": "Affirmed A+, stable outlook",
+     "side": "good",
+     "signposts": [
+      "Moody's affirmed Aa3 negative on 23 Oct 2026 (done): no peer pressure from a fresh cut",
+      "The National Assembly's first-reading vote on PLF 2027 passes the revenue part (November)",
+      "No censure motion succeeds before 27 Nov"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "small relief from removing a tail; em-macro has no estimate for affirmations",
+       "assumption": true,
+       "value": -2.0,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "affirm_negative",
+     "label": "Affirmed A+, outlook to negative",
+     "side": "mixed",
+     "signposts": [
+      "PLF 2027 progresses only through Article 49.3, with a 2027 deficit target above the medium-term path",
+      "S&P sector commentary in November stresses political risk to consolidation"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "about one third of the one-agency downgrade effect below",
+       "assumption": true,
+       "value": 4.0,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "downgrade",
+     "label": "Downgraded to A or lower",
+     "side": "bad",
+     "signposts": [
+      "The government falls on a censure motion before 27 Nov",
+      "PLF 2027 rejected at first reading and a special law becomes the base case",
+      "The government raises its 2026 deficit estimate above the budget-law target"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "em-macro what-if: a one-notch cut by all three agencies widens the spread 37 bp [29, 45]; one agency taken as one third (assumption)",
+       "assumption": true,
+       "value": 12.3,
+       "lo": 9.69,
+       "hi": 14.92,
+       "interval": "90%",
+       "source": "em-macro what-if FRA spread_bp downgrade_1 (as of 2026-09-01) x 0.333",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    }
+   ],
+   "markets": {
+    "rows": [
+     {
+      "venue": "Polymarket",
+      "id": "5458390",
+      "prob": 0.145,
+      "question": "Moody's or S&P downgrades France by November 30, 2026?",
+      "volume": 7107.663170999999,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt",
+      "note": "Moody's or S&P by 30 Nov 2026; Moody's already reviewed on 23 Oct, so this is mostly S&P",
+      "related": false,
+      "branches": [
+       "downgrade"
+      ]
+     },
+     {
+      "venue": "Kalshi",
+      "id": "KXFRANCEDOWNGRADE-27JAN01-1",
+      "prob": 0.31,
+      "question": "France credit rating downgrade in 2026?: Downgrade before 2027?",
+      "volume": 2000.09,
+      "as_of": "2026-10-29T14:07:53Z",
+      "url": "https://kalshi.com/markets/kxfrancedowngrade",
+      "note": "any agency, any time in 2026: wider than this question",
+      "related": true,
+      "branches": []
+     }
+    ],
+    "yes": 0.145,
+    "how": "Polymarket 5458390",
+    "by_branch": null
+   },
+   "mine": null,
+   "ai": {
+    "available": false,
+    "note": "AI probabilities arrive in Phase 4"
+   },
+   "calculator": {
+    "instrument": "OATBUND",
+    "name": "France OAT-Bund 10-year spread",
+    "kind": "spread_bp",
+    "series": "fr.spread.oat_bund.ecb_m",
+    "current": 96.7,
+    "as_of": "2026-09-01",
+    "unit": "bp",
+    "good_branch": "affirm_stable",
+    "bad_branch": "downgrade",
+    "good_move": -2.0,
+    "bad_move": 12.3,
+    "move_unit": "bp",
+    "range_12m": [
+     65.6,
+     96.7
+    ],
+    "proxy": false,
+    "frequency": "monthly",
+    "source": "ECB Data Portal (IRS, derived)",
+    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE.L.L40.CI.0000.EUR.N.Z",
+    "levels_are_defaults": true,
+    "degraded": {
+     "id": "webstat",
+     "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+     "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+    },
+    "default_basis": "today's level plus the expected move of the good and bad branches",
+    "good_level": 94.7,
+    "bad_level": 109.0
+   },
+   "asymmetry": {
+    "yes_is_good": false,
+    "market_yes": 0.145,
+    "market_source": "prediction market",
+    "days": 29,
+    "rules": {
+     "gap_pp": 15,
+     "reward_risk": 2.0,
+     "min_days": 14,
+     "max_days": 183
+    },
+    "checks": {
+     "gap": {
+      "value": null,
+      "ok": false,
+      "why": "no call yet"
+     },
+     "reward_risk": {
+      "value": null,
+      "ok": false,
+      "why": "needs the gap first"
+     },
+     "timing": {
+      "value": 29,
+      "ok": true
+     }
+    },
+    "flag": false
+   },
+   "indicators": []
+  },
+  {
+   "id": "fr-budget-2027",
+   "title": "France 2027 budget and the Article 47 deadline",
+   "country": "FR",
+   "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
+   "resolution": "YES if a loi de finances pour 2027 is published in the Journal officiel dated on or before 31 Dec 2026, including one enacted by ordinance under Article 47. A special law (loi spéciale) is NO. Source: Légifrance / Journal officiel.",
+   "resolution_date": "2026-12-31",
+   "question_id": "sc:fr-budget-2027",
+   "yes_branches": [
+    "adopted",
+    "ordinance"
+   ],
+   "instruments": [
+    "OATBUND"
+   ],
+   "event": {
+    "id": "2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
+    "date": "2026-12-10",
+    "title": "Budget (PLF 2027): Article 47 70-day deadline",
+    "status": "confirmed",
+    "source": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
+    "importance": 3
+   },
+   "days_to_event": 42,
+   "base_rate": {
+    "kind": "budget_cycles",
+    "reference_class": "Every French budget cycle in em-macro's calendar (budget laws for 2006-2026): was the budget law promulgated by 31 December, and did it need Article 49.3 or a special law? The subset since June 2022, when the government lost its majority, is shown separately.",
+    "context": [],
+    "computed": true,
+    "n": 21,
+    "p_yes": 0.905,
+    "headline": "19 of 21 budgets promulgated by 31 December",
+    "subset": {
+     "label": "since the government lost its majority (June 2022)",
+     "n": 4,
+     "on_time": 2,
+     "special_law": 2,
+     "art_49_3": 4,
+     "p_yes": 0.5
+    },
+    "rows": [
+     {
+      "budget_year": 2006,
+      "filed": "2005-09-28",
+      "promulgated": "2005-12-30",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2007,
+      "filed": "2006-09-27",
+      "promulgated": "2006-12-21",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2008,
+      "filed": "2007-09-26",
+      "promulgated": "2007-12-24",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2009,
+      "filed": "2008-09-26",
+      "promulgated": "2008-12-27",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2010,
+      "filed": "2009-09-30",
+      "promulgated": "2009-12-30",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2011,
+      "filed": "2010-09-29",
+      "promulgated": "2010-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2012,
+      "filed": "2011-09-28",
+      "promulgated": "2011-12-28",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2013,
+      "filed": "2012-09-28",
+      "promulgated": "2012-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2014,
+      "filed": "2013-09-25",
+      "promulgated": "2013-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2015,
+      "filed": "2014-10-01",
+      "promulgated": "2014-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2016,
+      "filed": "2015-09-30",
+      "promulgated": "2015-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2017,
+      "filed": "2016-09-28",
+      "promulgated": "2016-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2018,
+      "filed": "2017-09-27",
+      "promulgated": "2017-12-30",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2019,
+      "filed": "2018-09-24",
+      "promulgated": "2018-12-28",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2020,
+      "filed": "2019-09-27",
+      "promulgated": "2019-12-28",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2021,
+      "filed": "2020-09-28",
+      "promulgated": "2020-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2022,
+      "filed": "2021-09-22",
+      "promulgated": "2021-12-30",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": false
+     },
+     {
+      "budget_year": 2023,
+      "filed": "2022-09-26",
+      "promulgated": "2022-12-30",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": true
+     },
+     {
+      "budget_year": 2024,
+      "filed": "2023-09-27",
+      "promulgated": "2023-12-29",
+      "by_31_dec": true,
+      "special_law": false,
+      "art_49_3": true
+     },
+     {
+      "budget_year": 2025,
+      "filed": "2024-10-10",
+      "promulgated": "2025-02-14",
+      "by_31_dec": false,
+      "special_law": true,
+      "art_49_3": true
+     },
+     {
+      "budget_year": 2026,
+      "filed": "2025-10-14",
+      "promulgated": "2026-02-19",
+      "by_31_dec": false,
+      "special_law": true,
+      "art_49_3": true
+     }
+    ],
+    "source_url": "https://github.com/EthanC100/em-macro/blob/main/data/events/calendar_13.csv"
+   },
+   "branches": [
+    {
+     "id": "adopted",
+     "label": "Adopted and promulgated by 31 Dec (vote or 49.3)",
+     "side": "good",
+     "signposts": [
+      "PS or LR signals it will not vote a censure motion on the budget",
+      "Joint committee (CMP) agreement in mid-December",
+      "Government uses 49.3 on the CMP text and survives the censure vote"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "analog: the month the 2026 budget was finally adopted (monthly averages, Jan to Feb 2026)",
+       "assumption": false,
+       "value": -6.7,
+       "lo": null,
+       "hi": null,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2026-01-01 72.3 to 2026-02-01 65.6",
+       "from_level": 72.3,
+       "to_level": 65.6
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "special_law",
+     "label": "Special law in December, budget adopted in early 2027",
+     "side": "mixed",
+     "signposts": [
+      "No CMP agreement by mid-December",
+      "The government tables a loi spéciale (2024 and 2025 pattern)"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "analog: December 2025, when a special law replaced the budget (monthly averages); it was widely expected",
+       "assumption": false,
+       "value": -3.6,
+       "lo": null,
+       "hi": null,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2025-11-01 78.3 to 2025-12-01 74.7",
+       "from_level": 78.3,
+       "to_level": 74.7
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "censure_fall",
+     "label": "Government falls over the budget",
+     "side": "bad",
+     "signposts": [
+      "A censure motion gathers PS votes",
+      "Lecornu uses 49.3 without a non-censure agreement"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "analog: December 2024, when the Barnier government fell over the budget (monthly averages understate the daily move)",
+       "assumption": false,
+       "value": 4.7,
+       "lo": null,
+       "hi": null,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2024-11-01 78.5 to 2024-12-01 83.2",
+       "from_level": 78.5,
+       "to_level": 83.2
+      },
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "em-macro what-if: government's seat share falls 10 points (already a minority)",
+       "assumption": false,
+       "value": 19.08,
+       "lo": 9.0,
+       "hi": 29.16,
+       "interval": "90%",
+       "source": "em-macro what-if FRA spread_bp lose_majority (as of 2026-09-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "ordinance",
+     "label": "Enacted by ordinance under Article 47",
+     "side": "mixed",
+     "signposts": [
+      "Parliament has not voted by day 70 (10 Dec) and the government says it will use Article 47"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "never used under the Fifth Republic; a budget in force but a constitutional fight; judgement",
+       "assumption": true,
+       "value": 8.0,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    }
+   ],
+   "markets": {
+    "rows": [
+     {
+      "venue": "Polymarket",
+      "id": "1722538",
+      "prob": 0.515,
+      "question": "Will France pass a national budget by December 31?",
+      "volume": 22057.999729,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31",
+      "note": "\"Will France pass a national budget by December 31?\"",
+      "related": false,
+      "branches": [
+       "adopted",
+       "ordinance"
+      ]
+     },
+     {
+      "venue": "Kalshi",
+      "id": "KXFRANCEBUDGET-27JAN01",
+      "prob": 0.49,
+      "question": "Will France enact its 2027 budget in 2026?: Yes",
+      "volume": 4034.62,
+      "as_of": "2026-10-29T14:07:53Z",
+      "url": "https://kalshi.com/markets/kxfrancebudget",
+      "note": "\"Will France enact its 2027 budget in 2026?\"",
+      "related": false,
+      "branches": [
+       "adopted",
+       "ordinance"
+      ]
+     },
+     {
+      "venue": "Kalshi",
+      "id": "KXFRANCE493-27JAN01",
+      "prob": 0.66,
+      "question": "Will France use Article 49.3 on its 2027 state budget in 2026?: Yes",
+      "volume": 573.79,
+      "as_of": "2026-10-29T14:07:53Z",
+      "url": "https://kalshi.com/markets/kxfrance493",
+      "note": "49.3 used on the 2027 state budget in 2026",
+      "related": true,
+      "branches": []
+     }
+    ],
+    "yes": 0.515,
+    "how": "Polymarket 1722538",
+    "by_branch": null
+   },
+   "mine": null,
+   "ai": {
+    "available": false,
+    "note": "AI probabilities arrive in Phase 4"
+   },
+   "calculator": {
+    "instrument": "OATBUND",
+    "name": "France OAT-Bund 10-year spread",
+    "kind": "spread_bp",
+    "series": "fr.spread.oat_bund.ecb_m",
+    "current": 96.7,
+    "as_of": "2026-09-01",
+    "unit": "bp",
+    "good_branch": "adopted",
+    "bad_branch": "censure_fall",
+    "good_move": -6.7,
+    "bad_move": 4.7,
+    "move_unit": "bp",
+    "range_12m": [
+     65.6,
+     96.7
+    ],
+    "proxy": false,
+    "frequency": "monthly",
+    "source": "ECB Data Portal (IRS, derived)",
+    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE.L.L40.CI.0000.EUR.N.Z",
+    "levels_are_defaults": true,
+    "degraded": {
+     "id": "webstat",
+     "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+     "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+    },
+    "default_basis": "today's level plus the expected move of the good and bad branches",
+    "good_level": 90.0,
+    "bad_level": 101.4
+   },
+   "asymmetry": {
+    "yes_is_good": true,
+    "market_yes": 0.515,
+    "market_source": "prediction market",
+    "days": 42,
+    "rules": {
+     "gap_pp": 15,
+     "reward_risk": 2.0,
+     "min_days": 14,
+     "max_days": 183
+    },
+    "checks": {
+     "gap": {
+      "value": null,
+      "ok": false,
+      "why": "no call yet"
+     },
+     "reward_risk": {
+      "value": null,
+      "ok": false,
+      "why": "needs the gap first"
+     },
+     "timing": {
+      "value": 42,
+      "ok": true
+     }
+    },
+    "flag": false
+   },
+   "indicators": []
+  },
+  {
+   "id": "fr-pres-2027",
+   "title": "France 2027 presidential election",
+   "country": "FR",
+   "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
+   "resolution": "YES if the Conseil constitutionnel proclaims the RN candidate elected (second round expected 25 Apr 2027). Source: Conseil constitutionnel proclamation.",
+   "resolution_date": "2027-04-25",
+   "question_id": "sc:fr-pres-2027",
+   "yes_branches": [
+    "rn"
+   ],
+   "instruments": [
+    "OATBUND"
+   ],
+   "event": {
+    "id": "2027-04-25-fr-presidential-election-second-round",
+    "date": "2027-04-25",
+    "title": "Presidential election, second round",
+    "status": "estimated",
+    "source": "https://www.interieur.gouv.fr/Elections",
+    "importance": 3
+   },
+   "days_to_event": 178,
+   "base_rate": {
+    "kind": "election_polls",
+    "reference_class": "Final pre-vote polls in presidential run-offs: France 2012-2022, and all run-offs in em-macro's 13 countries. These are final polls; six months out the error is larger.",
+    "context": [],
+    "computed": true,
+    "own": {
+     "n": 4,
+     "leader_won": 4,
+     "rms_error_pp": 5.78,
+     "mean_abs_error_pp": 4.97
+    },
+    "rows": [
+     {
+      "election": "2007 presidential election",
+      "vote_date": "2007-05-06",
+      "cand_a": "Nicolas Sarkozy (UMP)",
+      "cand_b": "Segolene Royal (PS)",
+      "poll_margin_pp": 8.16,
+      "actual_margin_pp": 6.12,
+      "winner": "Sarkozy"
+     },
+     {
+      "election": "2012 presidential election",
+      "vote_date": "2012-05-06",
+      "cand_a": "Francois Hollande (PS)",
+      "cand_b": "Nicolas Sarkozy (UMP)",
+      "poll_margin_pp": 5.5,
+      "actual_margin_pp": 3.28,
+      "winner": "Hollande"
+     },
+     {
+      "election": "2017 presidential election",
+      "vote_date": "2017-05-07",
+      "cand_a": "Emmanuel Macron (EM)",
+      "cand_b": "Marine Le Pen (FN)",
+      "poll_margin_pp": 23.24,
+      "actual_margin_pp": 32.2,
+      "winner": "Macron"
+     },
+     {
+      "election": "2022 presidential election",
+      "vote_date": "2022-04-24",
+      "cand_a": "Emmanuel Macron (LREM)",
+      "cand_b": "Marine Le Pen (RN)",
+      "poll_margin_pp": 10.46,
+      "actual_margin_pp": 17.1,
+      "winner": "Macron"
+     }
+    ],
+    "source_url": "https://github.com/EthanC100/em-macro/blob/main/data/events/elections.csv",
+    "pooled": {
+     "n": 27,
+     "leader_won": 23,
+     "rms_error_pp": 4.78,
+     "mean_abs_error_pp": 3.72
+    },
+    "headline": "final-poll leader won 4 of 4; RMS poll error 5.78 pp"
+   },
+   "branches": [
+    {
+     "id": "rn",
+     "label": "RN candidate wins",
+     "side": "bad",
+     "signposts": [
+      "Whether Le Pen is on the ballot (her ineligibility case) or Bardella runs",
+      "RN programme costing: pension-age and VAT pledges kept or dropped",
+      "Second-round polls against the leading centre-right candidate"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "analog: the June 2024 dissolution, when an RN majority became possible (monthly averages, May to July 2024)",
+       "assumption": false,
+       "value": 17.0,
+       "lo": null,
+       "hi": null,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2024-05-01 51.2 to 2024-07-01 68.2",
+       "from_level": 51.2,
+       "to_level": 68.2
+      },
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "em-macro what-if: governing parties' populism +1 sd (interval includes zero)",
+       "assumption": false,
+       "value": 12.44,
+       "lo": -9.15,
+       "hi": 34.02,
+       "interval": "90%",
+       "source": "em-macro what-if FRA spread_bp populism_plus1sd (as of 2026-09-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": 0.4647,
+     "p_ai": null
+    },
+    {
+     "id": "centre_right",
+     "label": "Centre or centre-right candidate wins",
+     "side": "good",
+     "signposts": [
+      "One centre-right candidate consolidates (Philippe, Lisnard, Retailleau or Attal): others withdraw",
+      "Sponsorship (parrainages) totals in March 2027"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "em-macro what-if, reversed: populism -1 sd",
+       "assumption": false,
+       "value": -12.44,
+       "lo": -34.02,
+       "hi": 9.15,
+       "interval": "90%",
+       "source": "em-macro what-if FRA spread_bp populism_plus1sd (as of 2026-09-01) x -1",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": 0.3694,
+     "p_ai": null
+    },
+    {
+     "id": "left",
+     "label": "Left candidate wins",
+     "side": "bad",
+     "signposts": [
+      "A single left candidate (primary or withdrawal) and first-round polls above 20%"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "em-macro what-if for a deficit 1 point of GDP higher; that the left programme adds a point is an assumption",
+       "assumption": true,
+       "value": 9.34,
+       "lo": 6.24,
+       "hi": 12.44,
+       "interval": "90%",
+       "source": "em-macro what-if FRA spread_bp deficit_plus1 (as of 2026-09-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      },
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "basis": "em-macro what-if: populism +1 sd",
+       "assumption": false,
+       "value": 12.44,
+       "lo": -9.15,
+       "hi": 34.02,
+       "interval": "90%",
+       "source": "em-macro what-if FRA spread_bp populism_plus1sd (as of 2026-09-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": 0.166,
+     "p_ai": null
+    }
+   ],
+   "markets": {
+    "rows": [
+     {
+      "venue": "Polymarket",
+      "id": "679018",
+      "prob": 0.4295,
+      "question": "Will Marine Le Pen win the 2027 French presidential election?",
+      "volume": 4634398.535088001,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Le Pen",
+      "related": false,
+      "branches": [
+       "rn"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679019",
+      "prob": 0.024,
+      "question": "Will Jordan Bardella win the 2027 French presidential election?",
+      "volume": 3176359.3161400002,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Bardella",
+      "related": false,
+      "branches": [
+       "rn"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679021",
+      "prob": 0.165,
+      "question": "Will Édouard Philippe win the 2027 French presidential election?",
+      "volume": 2690858.0657910006,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Philippe",
+      "related": false,
+      "branches": [
+       "centre_right"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679022",
+      "prob": 0.1555,
+      "question": "Will David Lisnard win the 2027 French presidential election?",
+      "volume": 5727191.420671,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Lisnard",
+      "related": false,
+      "branches": [
+       "centre_right"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679027",
+      "prob": 0.0115,
+      "question": "Will Bruno Retailleau win the 2027 French presidential election?",
+      "volume": 3440578.9705800004,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Retailleau",
+      "related": false,
+      "branches": [
+       "centre_right"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679026",
+      "prob": 0.0055,
+      "question": "Will Gabriel Attal win the 2027 French presidential election?",
+      "volume": 3324218.7202720004,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Attal",
+      "related": false,
+      "branches": [
+       "centre_right"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679060",
+      "prob": 0.023,
+      "question": "Will Christine Lagarde win the 2027 French presidential election?",
+      "volume": 1408826.1811819999,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Lagarde",
+      "related": false,
+      "branches": [
+       "centre_right"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679030",
+      "prob": 0.105,
+      "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+      "volume": 2664644.6586419996,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Mélenchon",
+      "related": false,
+      "branches": [
+       "left"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679029",
+      "prob": 0.0395,
+      "question": "Will Raphaël Glucksmann win the 2027 French presidential election?",
+      "volume": 3166325.271803,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Glucksmann",
+      "related": false,
+      "branches": [
+       "left"
+      ]
+     },
+     {
+      "venue": "Polymarket",
+      "id": "679028",
+      "prob": 0.0175,
+      "question": "Will François Hollande win the 2027 French presidential election?",
+      "volume": 2779811.708209,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "note": "Hollande",
+      "related": false,
+      "branches": [
+       "left"
+      ]
+     }
+    ],
+    "yes": 0.4647,
+    "how": "sum of 10 candidate markets, normalised to 100%; 0.0% on unlisted outcomes",
+    "by_branch": {
+     "rn": 0.4647,
+     "centre_right": 0.3694,
+     "left": 0.166
+    }
+   },
+   "mine": null,
+   "ai": {
+    "available": false,
+    "note": "AI probabilities arrive in Phase 4"
+   },
+   "calculator": {
+    "instrument": "OATBUND",
+    "name": "France OAT-Bund 10-year spread",
+    "kind": "spread_bp",
+    "series": "fr.spread.oat_bund.ecb_m",
+    "current": 96.7,
+    "as_of": "2026-09-01",
+    "unit": "bp",
+    "good_branch": "centre_right",
+    "bad_branch": "rn",
+    "good_move": -12.44,
+    "bad_move": 17.0,
+    "move_unit": "bp",
+    "range_12m": [
+     65.6,
+     96.7
+    ],
+    "proxy": false,
+    "frequency": "monthly",
+    "source": "ECB Data Portal (IRS, derived)",
+    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE.L.L40.CI.0000.EUR.N.Z",
+    "levels_are_defaults": true,
+    "degraded": {
+     "id": "webstat",
+     "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+     "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+    },
+    "default_basis": "today's level plus the expected move of the good and bad branches",
+    "good_level": 84.26,
+    "bad_level": 113.7
+   },
+   "asymmetry": {
+    "yes_is_good": false,
+    "market_yes": 0.4647,
+    "market_source": "prediction market",
+    "days": 178,
+    "rules": {
+     "gap_pp": 15,
+     "reward_risk": 2.0,
+     "min_days": 14,
+     "max_days": 183
+    },
+    "checks": {
+     "gap": {
+      "value": null,
+      "ok": false,
+      "why": "no call yet"
+     },
+     "reward_risk": {
+      "value": null,
+      "ok": false,
+      "why": "needs the gap first"
+     },
+     "timing": {
+      "value": 178,
+      "ok": true
+     }
+    },
+    "flag": false
+   },
+   "indicators": []
+  },
+  {
+   "id": "br-fiscal-2027",
+   "title": "Brazil 2027: fiscal-framework credibility",
+   "country": "BR",
+   "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
+   "resolution": "YES if, on 31 Mar 2027, the 2027 target in force is +0.5% of GDP, no PLN/PLP changing the target or the LC 200/2023 limits has been sent, and the first bimonthly report (RARDP, ~22 Mar 2027) does not propose one. Sources: LDO 2027, Câmara/Senado bill trackers, Tesouro RARDP.",
+   "resolution_date": "2027-03-31",
+   "question_id": "sc:br-fiscal-2027",
+   "yes_branches": [
+    "credible",
+    "kept_exclusions"
+   ],
+   "instruments": [
+    "DI29",
+    "BR10Y",
+    "USDBRL"
+   ],
+   "event": {
+    "id": "2027-01-05-br-presidential-inauguration-5-jan-not-1-jan",
+    "date": "2027-01-05",
+    "title": "Presidential inauguration (5 Jan, not 1 Jan)",
+    "status": "confirmed",
+    "source": "https://www12.senado.leg.br/radio/1/noticia/2026/01/05/posse-presidencial-em-2027-sera-em-5-de-janeiro-e-governadores-tomam-posse-no-dia-6",
+    "importance": 3
+   },
+   "days_to_event": 68,
+   "base_rate": {
+    "kind": "none",
+    "reference_class": null,
+    "context": [
+     "Context, not computed: Brazil cut a primary target it had set for itself in July 2015 (2015 target 1.1% to 0.15% of GDP) and in April 2024 (2025 target 0.5% to 0%, in the PLDO 2025)."
+    ],
+    "computed": false,
+    "reason": "em-macro records no fiscal-target revisions for Brazil, so there is no computed reference class.",
+    "event_study": {
+     "label": "Brazil election days in em-macro (day-1 abnormal moves)",
+     "rows": [
+      {
+       "event": "EL_BR_20061001",
+       "date": "2006-10-01",
+       "subtype": "general",
+       "usd_fx_pct": -0.35,
+       "y10_bp": -0.4
+      },
+      {
+       "event": "EL_BR_20061029",
+       "date": "2006-10-29",
+       "subtype": "presidential_r2",
+       "usd_fx_pct": 0.09,
+       "y10_bp": -12.5
+      },
+      {
+       "event": "EL_BR_20101003",
+       "date": "2010-10-03",
+       "subtype": "general",
+       "usd_fx_pct": -0.14,
+       "y10_bp": 1.3
+      },
+      {
+       "event": "EL_BR_20101031",
+       "date": "2010-10-31",
+       "subtype": "presidential_r2",
+       "usd_fx_pct": 0.27,
+       "y10_bp": -30.3
+      },
+      {
+       "event": "EL_BR_20141005",
+       "date": "2014-10-05",
+       "subtype": "general",
+       "usd_fx_pct": -2.66,
+       "y10_bp": -81.5
+      },
+      {
+       "event": "EL_BR_20141026",
+       "date": "2014-10-26",
+       "subtype": "presidential_r2",
+       "usd_fx_pct": 3.22,
+       "y10_bp": -14.2
+      },
+      {
+       "event": "EL_BR_20181007",
+       "date": "2018-10-07",
+       "subtype": "general",
+       "y10_bp": -24.5
+      },
+      {
+       "event": "EL_BR_20181028",
+       "date": "2018-10-28",
+       "subtype": "presidential_r2",
+       "usd_fx_pct": -0.33,
+       "y10_bp": -47.5
+      },
+      {
+       "event": "EL_BR_20221002",
+       "date": "2022-10-02",
+       "subtype": "general",
+       "usd_fx_pct": -4.11,
+       "y10_bp": -30.6
+      },
+      {
+       "event": "EL_BR_20221030",
+       "date": "2022-10-30",
+       "subtype": "presidential_r2",
+       "usd_fx_pct": -2.46,
+       "y10_bp": -6.4
+      },
+      {
+       "event": "EL_BR_20261004",
+       "date": "2026-10-04",
+       "subtype": "general",
+       "usd_fx_pct": -4.76,
+       "y10_bp": -119.6
+      },
+      {
+       "event": "EL_BR_20261025",
+       "date": "2026-10-25",
+       "subtype": "presidential_r2",
+       "y10_bp": 255.5
+      }
+     ],
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/test/event_moves.csv"
+    }
+   },
+   "branches": [
+    {
+     "id": "credible",
+     "label": "Target kept and backed by a spending freeze",
+     "side": "good",
+     "signposts": [
+      "2027 budget (PLOA) voted in December without new exclusions from the spending limit",
+      "Finance minister named in January who keeps the framework",
+      "First 2027 bimonthly report (~22 Mar) freezes spending to hit 0.5%",
+      "Focus 2027 primary-balance median moves toward the target"
+     ],
+     "moves": [
+      {
+       "instrument": "DI29",
+       "unit": "bp",
+       "basis": "partial reversal of the post-run-off repricing (em-macro: Brazil 10y +255 bp abnormal on the day after the 25 Oct 2026 run-off); judgement",
+       "assumption": true,
+       "value": -30.0,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "basis": "judgement, same reasoning",
+       "assumption": true,
+       "value": -1.5,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "kept_exclusions",
+     "label": "Target kept on paper, met through exclusions or one-offs",
+     "side": "mixed",
+     "signposts": [
+      "New spending carved out of the limit in the 2027 budget or by provisional measure",
+      "Revenue measures counted that Congress has not passed"
+     ],
+     "moves": [
+      {
+       "instrument": "DI29",
+       "unit": "bp",
+       "basis": "about one third of the Nov 2024 package analog below; judgement",
+       "assumption": true,
+       "value": 35.0,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "basis": "about one third of the Nov 2024 analog; judgement",
+       "assumption": true,
+       "value": 1.5,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "target_cut",
+     "label": "Target cut or spending rule loosened",
+     "side": "bad",
+     "signposts": [
+      "PLN to change the 2027 target or a PLP to change LC 200/2023 sent to Congress",
+      "Ministers publicly question the 0.5% target",
+      "Focus 2027 primary-balance median falls further below the target"
+     ],
+     "moves": [
+      {
+       "instrument": "DI29",
+       "unit": "bp",
+       "basis": "analog: the Nov 2024 spending package paired with an income-tax exemption (3 trading days)",
+       "assumption": false,
+       "value": 112.0,
+       "lo": null,
+       "hi": null,
+       "source": "analog on br.di.f29.proxy: 2024-11-26 13.17 to 2024-11-29 14.29",
+       "from_level": 13.17,
+       "to_level": 14.29
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "basis": "analog: same episode",
+       "assumption": false,
+       "value": 4.39,
+       "lo": null,
+       "hi": null,
+       "source": "analog on br.usdbrl.ptax: 2024-11-26 5.799 to 2024-11-29 6.0535",
+       "from_level": 5.799,
+       "to_level": 6.0535
+      },
+      {
+       "instrument": "BR10Y",
+       "unit": "bp",
+       "basis": "em-macro what-if: deficit +1 point of GDP (slow-moving; assumes the US 10y is unchanged)",
+       "assumption": false,
+       "value": 5.01,
+       "lo": 0.68,
+       "hi": 9.34,
+       "interval": "90%",
+       "source": "em-macro what-if BRA spread_bp deficit_plus1 (as of 2026-10-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "basis": "em-macro what-if: deficit +1 point of GDP (sign counter to intuition; interval excludes zero)",
+       "assumption": false,
+       "value": -0.51,
+       "lo": -0.94,
+       "hi": -0.08,
+       "interval": "90%",
+       "source": "em-macro what-if BRA fx_pct deficit_plus1 (as of 2026-09-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    }
+   ],
+   "markets": {
+    "rows": [],
+    "yes": null,
+    "how": null,
+    "by_branch": null
+   },
+   "mine": null,
+   "ai": {
+    "available": false,
+    "note": "AI probabilities arrive in Phase 4"
+   },
+   "calculator": {
+    "instrument": "DI29",
+    "name": "DI Jan-29 (proxy until B3 is reachable)",
+    "kind": "yield",
+    "series": "br.di.f29.proxy",
+    "current": 14.94,
+    "as_of": "2026-10-28",
+    "unit": "% p.a. (252)",
+    "good_branch": "credible",
+    "bad_branch": "target_cut",
+    "good_move": -30.0,
+    "bad_move": 112.0,
+    "move_unit": "bp",
+    "range_12m": [
+     12.36,
+     15.46
+    ],
+    "proxy": true,
+    "frequency": "daily",
+    "source": "Tesouro Direto (Tesouro Transparente)",
+    "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+    "levels_are_defaults": true,
+    "degraded": {
+     "id": "b3",
+     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+     "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
+    },
+    "default_basis": "today's level plus the expected move of the good and bad branches",
+    "good_level": 14.64,
+    "bad_level": 16.06
+   },
+   "asymmetry": {
+    "yes_is_good": true,
+    "market_yes": null,
+    "market_source": null,
+    "days": 68,
+    "rules": {
+     "gap_pp": 15,
+     "reward_risk": 2.0,
+     "min_days": 14,
+     "max_days": 183
+    },
+    "checks": {
+     "gap": {
+      "value": null,
+      "ok": false,
+      "why": "no call yet"
+     },
+     "reward_risk": {
+      "value": null,
+      "ok": false,
+      "why": "needs the gap first"
+     },
+     "timing": {
+      "value": 68,
+      "ok": true
+     }
+    },
+    "flag": false
+   },
+   "indicators": [
+    {
+     "label": "Focus median for the 2027 primary balance (% of GDP)",
+     "value": -0.3,
+     "as_of": "2026-10-23",
+     "target": 0.5,
+     "three_months_ago": -0.4,
+     "series": "br.focus.primary",
+     "source": "BCB Focus (Olinda)",
+     "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais"
+    },
+    {
+     "label": "Focus median for 2027 net public debt (% of GDP)",
+     "value": 74.0,
+     "as_of": "2026-10-23",
+     "target": null,
+     "three_months_ago": 73.4,
+     "series": "br.focus.net_debt",
+     "source": "BCB Focus (Olinda)",
+     "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais"
+    }
+   ]
+  },
+  {
+   "id": "mx-midterms-2027",
+   "title": "Mexico midterms, 6 Jun 2027",
+   "country": "MX",
+   "question": "Will Morena and its allies (PVEM, PT) hold at least two-thirds of the Chamber of Deputies (334 of 500 seats) after the 6 June 2027 election?",
+   "resolution": "YES if the INE's seat allocation (proportional-representation seats are assigned in August) gives Morena, PVEM and PT together 334 or more seats. Source: INE acuerdo de asignación.",
+   "resolution_date": "2027-08-31",
+   "question_id": "sc:mx-midterms-2027",
+   "yes_branches": [
+    "supermajority"
+   ],
+   "instruments": [
+    "USDMXN",
+    "MX10Y"
+   ],
+   "event": {
+    "id": "2027-06-06-mx-midterm-elections-chamber-of-deputies-governorsh",
+    "date": "2027-06-06",
+    "title": "Midterm elections (Chamber of Deputies, governorships)",
+    "status": "confirmed",
+    "source": "https://www.ine.mx/",
+    "importance": 3
+   },
+   "days_to_event": 220,
+   "base_rate": {
+    "kind": "election_polls",
+    "reference_class": "Mexico's midterm legislative elections in em-macro (2009, 2015, 2021): final-poll leader vs result. In 2021 the governing coalition kept its majority but lost two-thirds.",
+    "context": [],
+    "computed": true,
+    "own": {
+     "n": 3,
+     "leader_won": 3,
+     "rms_error_pp": 4.12,
+     "mean_abs_error_pp": 3.98
+    },
+    "rows": [
+     {
+      "election": "2009 legislative election",
+      "vote_date": "2009-07-05",
+      "cand_a": "PRI",
+      "cand_b": "PAN",
+      "poll_margin_pp": 5.1,
+      "actual_margin_pp": 9.44,
+      "winner": "PRI"
+     },
+     {
+      "election": "2015 legislative election",
+      "vote_date": "2015-06-07",
+      "cand_a": "PRI",
+      "cand_b": "PAN",
+      "poll_margin_pp": 6.05,
+      "actual_margin_pp": 8.58,
+      "winner": "PRI"
+     },
+     {
+      "election": "2021 legislative election",
+      "vote_date": "2021-06-06",
+      "cand_a": "Morena",
+      "cand_b": "PRI",
+      "poll_margin_pp": 22.0,
+      "actual_margin_pp": 16.94,
+      "winner": "Morena (Juntos Hacemos Historia coalition kept majority, lost two-thirds)"
+     }
+    ],
+    "source_url": "https://github.com/EthanC100/em-macro/blob/main/data/events/elections.csv",
+    "headline": "final-poll leader won 3 of 3; RMS poll error 4.12 pp",
+    "event_study": {
+     "label": "Mexican midterm election days (day-1 abnormal moves)",
+     "rows": [
+      {
+       "event": "EL_MX_20090705",
+       "date": "2009-07-05",
+       "subtype": "legislative",
+       "usd_fx_pct": -0.3,
+       "y10_bp": -9.3
+      },
+      {
+       "event": "EL_MX_20150607",
+       "date": "2015-06-07",
+       "subtype": "legislative",
+       "usd_fx_pct": 0.14,
+       "y10_bp": -2.1
+      },
+      {
+       "event": "EL_MX_20210606",
+       "date": "2021-06-06",
+       "subtype": "legislative",
+       "usd_fx_pct": -0.64,
+       "y10_bp": -7.4
+      }
+     ],
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/test/event_moves.csv"
+    }
+   },
+   "branches": [
+    {
+     "id": "supermajority",
+     "label": "Coalition keeps two-thirds",
+     "side": "bad",
+     "signposts": [
+      "Polls put the coalition above 55% of the vote (two-thirds needs vote share plus the over-representation cap)",
+      "INE rules on coalition over-representation (the 2024 dispute)"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "basis": "event study: the June 2024 election that delivered the supermajority (5-day abnormal move)",
+       "assumption": false,
+       "value": 7.21,
+       "lo": null,
+       "hi": null,
+       "n": 1,
+       "events": [
+        "EL_MX_20240602"
+       ],
+       "interval": null,
+       "source": "em-macro event study, ab_5 abnormal move, 1 event(s)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/test/event_moves.csv"
+      },
+      {
+       "instrument": "MX10Y",
+       "unit": "bp",
+       "basis": "event study: same election, 10-year yield",
+       "assumption": false,
+       "value": 46.47,
+       "lo": null,
+       "hi": null,
+       "n": 1,
+       "events": [
+        "EL_MX_20240602"
+       ],
+       "interval": null,
+       "source": "em-macro event study, ab_5 abnormal move, 1 event(s)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/test/event_moves.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "majority",
+     "label": "Simple majority, below two-thirds",
+     "side": "good",
+     "signposts": [
+      "Coalition vote share polls between 45% and 55%",
+      "PAN-PRI or MC alliances in key districts"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "basis": "event study: average of Mexico's midterms (2009, 2015, 2021)",
+       "assumption": false,
+       "value": -0.27,
+       "lo": -0.64,
+       "hi": 0.14,
+       "n": 3,
+       "events": [
+        "EL_MX_20090705",
+        "EL_MX_20150607",
+        "EL_MX_20210606"
+       ],
+       "interval": "range of events",
+       "source": "em-macro event study, ab_1 abnormal move, 3 event(s)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/test/event_moves.csv"
+      },
+      {
+       "instrument": "MX10Y",
+       "unit": "bp",
+       "basis": "event study: same midterms",
+       "assumption": false,
+       "value": -6.26,
+       "lo": -9.27,
+       "hi": -2.13,
+       "n": 3,
+       "events": [
+        "EL_MX_20090705",
+        "EL_MX_20150607",
+        "EL_MX_20210606"
+       ],
+       "interval": "range of events",
+       "source": "em-macro event study, ab_1 abnormal move, 3 event(s)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/test/event_moves.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "lose_majority",
+     "label": "Coalition loses its majority",
+     "side": "mixed",
+     "signposts": [
+      "Coalition polls below 45%"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "basis": "em-macro what-if (pooled across countries): the peso weakens; this conflicts with the 2024 reaction to a stronger mandate",
+       "assumption": false,
+       "value": 4.14,
+       "lo": 3.11,
+       "hi": 5.18,
+       "interval": "90%",
+       "source": "em-macro what-if MEX fx_pct lose_majority (as of 2026-09-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      },
+      {
+       "instrument": "MX10Y",
+       "unit": "bp",
+       "basis": "em-macro what-if: spread narrows (interval includes zero); assumes the US 10y is unchanged",
+       "assumption": false,
+       "value": -29.76,
+       "lo": -69.1,
+       "hi": 9.58,
+       "interval": "90%",
+       "source": "em-macro what-if MEX spread_bp lose_majority (as of 2026-10-01)",
+       "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    }
+   ],
+   "markets": {
+    "rows": [
+     {
+      "venue": "Polymarket",
+      "id": "2271403",
+      "prob": 0.8875,
+      "question": "Will the National Regeneration Movement (Morena) win the most seats in the 2027 Mexico legislative election?",
+      "volume": 58259.82664800001,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/mexico-legislative-election-winner",
+      "note": "Morena wins the most seats: implied by every branch except a large loss",
+      "related": true,
+      "branches": []
+     },
+     {
+      "venue": "Kalshi",
+      "id": "KXMEXICODEPUTIES-27-MORENA",
+      "prob": 0.86,
+      "question": "Mexican Chamber of Deputies election winner?: Morena",
+      "volume": 1426.21,
+      "as_of": "2026-10-29T14:07:53Z",
+      "url": "https://kalshi.com/markets/kxmexicodeputies",
+      "note": "same: the party with most seats",
+      "related": true,
+      "branches": []
+     }
+    ],
+    "yes": null,
+    "how": null,
+    "by_branch": null
+   },
+   "mine": null,
+   "ai": {
+    "available": false,
+    "note": "AI probabilities arrive in Phase 4"
+   },
+   "calculator": {
+    "instrument": "USDMXN",
+    "name": "USD/MXN",
+    "kind": "fx",
+    "series": "mx.usdmxn.fix",
+    "current": 18.6673,
+    "as_of": "2026-10-28",
+    "unit": "MXN per USD",
+    "good_branch": "majority",
+    "bad_branch": "supermajority",
+    "good_move": -0.27,
+    "bad_move": 7.21,
+    "move_unit": "%",
+    "range_12m": [
+     16.8748,
+     18.7005
+    ],
+    "proxy": false,
+    "frequency": "daily",
+    "source": "Banxico SIE (public chart data)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
+    "levels_are_defaults": true,
+    "degraded": {
+     "id": "banxico",
+     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+    },
+    "default_basis": "today's level plus the expected move of the good and bad branches",
+    "good_level": 18.6169,
+    "bad_level": 20.0132
+   },
+   "asymmetry": {
+    "yes_is_good": false,
+    "market_yes": null,
+    "market_source": null,
+    "days": 220,
+    "rules": {
+     "gap_pp": 15,
+     "reward_risk": 2.0,
+     "min_days": 14,
+     "max_days": 183
+    },
+    "checks": {
+     "gap": {
+      "value": null,
+      "ok": false,
+      "why": "no call yet"
+     },
+     "reward_risk": {
+      "value": null,
+      "ok": false,
+      "why": "needs the gap first"
+     },
+     "timing": {
+      "value": 220,
+      "ok": false
+     }
+    },
+    "flag": false
+   },
+   "indicators": []
+  },
+  {
+   "id": "usmca-2027",
+   "title": "USMCA annual review, 1 Jul 2027",
+   "country": "MX",
+   "question": "At or before the 1 July 2027 joint review, will the United States, Mexico and Canada each confirm in writing that they wish to extend USMCA for a new 16-year term (art. 34.7)?",
+   "resolution": "YES if all three parties confirm the extension in writing by 1 Jul 2027. NO otherwise, including a withdrawal notice under art. 34.6. Sources: USTR, Secretaría de Economía, Global Affairs Canada.",
+   "resolution_date": "2027-07-01",
+   "question_id": "sc:usmca-2027",
+   "yes_branches": [
+    "extended"
+   ],
+   "instruments": [
+    "USDMXN"
+   ],
+   "event": {
+    "id": "2027-07-01-mx-usmca-annual-joint-review",
+    "date": "2027-07-01",
+    "title": "USMCA annual joint review",
+    "status": "confirmed",
+    "source": "https://ustr.gov/sites/default/files/files/agreements/FTA/USMCA/Text/34-Final-Provisions.pdf",
+    "importance": 3
+   },
+   "days_to_event": 245,
+   "base_rate": {
+    "kind": "none",
+    "reference_class": null,
+    "context": [],
+    "computed": false,
+    "reason": "No reference class: this is the agreement's first review cycle, and em-macro has no trade-agreement events."
+   },
+   "branches": [
+    {
+     "id": "extended",
+     "label": "Extended for 16 years",
+     "side": "good",
+     "signposts": [
+      "USTR's 2027 consultation report recommends extension",
+      "US tariffs on Mexican goods cut below 10%"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "basis": "judgement: removes the review overhang",
+       "assumption": true,
+       "value": -2.0,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "annual",
+     "label": "No extension; annual reviews continue",
+     "side": "mixed",
+     "signposts": [
+      "Review ends with a list of open issues and no withdrawal notice"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "basis": "judgement: the status quo after the 2026 review",
+       "assumption": true,
+       "value": 0.5,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "bilateral",
+     "label": "Replaced by bilateral deals",
+     "side": "bad",
+     "signposts": [
+      "US proposes separate US-Mexico and US-Canada texts"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "basis": "judgement: about a quarter of the 2016 analog below",
+       "assumption": true,
+       "value": 3.0,
+       "lo": null,
+       "hi": null,
+       "source": "judgement"
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    },
+    {
+     "id": "withdrawal",
+     "label": "US gives notice of withdrawal (art. 34.6)",
+     "side": "bad",
+     "signposts": [
+      "US officials describe withdrawal as leverage; Federal Register notice"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "basis": "analog: the 2016 US election, when a NAFTA withdrawal became likely (3 days; included other shocks)",
+       "assumption": false,
+       "value": 13.74,
+       "lo": null,
+       "hi": null,
+       "source": "analog on mx.usdmxn.fix: 2016-11-08 18.5089 to 2016-11-11 21.0511",
+       "from_level": 18.5089,
+       "to_level": 21.0511
+      }
+     ],
+     "p_mine": null,
+     "p_market": null,
+     "p_ai": null
+    }
+   ],
+   "markets": {
+    "rows": [
+     {
+      "venue": "Polymarket",
+      "id": "2761052",
+      "prob": 0.08,
+      "question": "USMCA extended in 2026?",
+      "volume": 11728.304944999998,
+      "as_of": "2026-10-29T14:07:34Z",
+      "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768",
+      "note": "USMCA extended in 2026: the earlier review",
+      "related": true,
+      "branches": []
+     },
+     {
+      "venue": "Kalshi",
+      "id": "KXUSMCAOUTCOMES-27-TRI",
+      "prob": 0.24,
+      "question": "Which USMCA outcomes will occur in 2026?: Trilateral revised deal",
+      "volume": 695.68,
+      "as_of": "2026-10-29T14:07:53Z",
+      "url": "https://kalshi.com/markets/kxusmcaoutcomes",
+      "note": "trilateral revised deal in 2026",
+      "related": true,
+      "branches": []
+     }
+    ],
+    "yes": null,
+    "how": null,
+    "by_branch": null
+   },
+   "mine": null,
+   "ai": {
+    "available": false,
+    "note": "AI probabilities arrive in Phase 4"
+   },
+   "calculator": {
+    "instrument": "USDMXN",
+    "name": "USD/MXN",
+    "kind": "fx",
+    "series": "mx.usdmxn.fix",
+    "current": 18.6673,
+    "as_of": "2026-10-28",
+    "unit": "MXN per USD",
+    "good_branch": "extended",
+    "bad_branch": "withdrawal",
+    "good_move": -2.0,
+    "bad_move": 13.74,
+    "move_unit": "%",
+    "range_12m": [
+     16.8748,
+     18.7005
+    ],
+    "proxy": false,
+    "frequency": "daily",
+    "source": "Banxico SIE (public chart data)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
+    "levels_are_defaults": true,
+    "degraded": {
+     "id": "banxico",
+     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+    },
+    "default_basis": "today's level plus the expected move of the good and bad branches",
+    "good_level": 18.294,
+    "bad_level": 21.2322
+   },
+   "asymmetry": {
+    "yes_is_good": true,
+    "market_yes": null,
+    "market_source": null,
+    "days": 245,
+    "rules": {
+     "gap_pp": 15,
+     "reward_risk": 2.0,
+     "min_days": 14,
+     "max_days": 183
+    },
+    "checks": {
+     "gap": {
+      "value": null,
+      "ok": false,
+      "why": "no call yet"
+     },
+     "reward_risk": {
+      "value": null,
+      "ok": false,
+      "why": "needs the gap first"
+     },
+     "timing": {
+      "value": 245,
+      "ok": false
+     }
+    },
+    "flag": false
+   },
+   "indicators": []
+  }
+ ],
+ "em_macro": "https://raw.githubusercontent.com/EthanC100/em-macro/main/",
+ "notes": [
+  "Moves marked assumption are judgements or rescalings, not em-macro estimates.",
+  "Market probabilities are hidden until you reveal them, as elsewhere on the site."
+ ]
+}

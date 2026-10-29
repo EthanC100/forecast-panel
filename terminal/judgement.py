@@ -51,6 +51,9 @@ def market_probability(qid: str | None) -> dict | None:
                 return None
             r = g.sort_values("date").iloc[-1]
             return {"prob": float(r["prob"]), "source": "Polymarket (forecast-panel log)", "as_of": r["date"]}
+        if qid.startswith("sc:"):
+            from terminal import scenarios
+            return scenarios.market_yes(qid[3:])
         if qid.startswith("pm:"):
             m = get(f"https://gamma-api.polymarket.com/markets/{qid[3:]}", timeout=30).json()
             prices = json.loads(m["outcomePrices"]) if isinstance(m.get("outcomePrices"), str) else m.get("outcomePrices")

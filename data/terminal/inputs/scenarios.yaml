@@ -1,0 +1,351 @@
+# Scenario pages. terminal/scenarios.py turns this into data/terminal/scenarios.json.
+#
+# Each scenario: a resolvable dated question; the calendar event it hangs on (matched by country
+# and title text); a base-rate spec computed from em-macro; 3-4 branches, each with a side (good /
+# bad / mixed for the instruments), expected moves and signposts; linked prediction markets; and a
+# market-implied-probability calculator.
+#
+# Moves. Units: % for USD/BRL and USD/MXN (+ = dollar up, local currency weaker), bp for yields and
+# the OAT-Bund spread (+ = higher yield / wider spread). Each move is one of:
+#   what_if:     em-macro results/risk_model/what_if.csv {country, asset, scenario, scale}. FX there is
+#                % with + = weaker local currency (same sign as USD/xxx); spread_bp is the 10-year
+#                spread over Bunds (France) or Treasuries (Brazil, Mexico). Applying a spread move to a
+#                local 10-year yield assumes the US 10-year does not move.
+#   event_study: em-macro event_moves.csv {country, event_type, subtype, asset, h, event_ids}: mean
+#                abnormal move over h days; FX there is the local currency's value (+ = stronger), so
+#                it is sign-flipped for USD/xxx.
+#   analog:      a past episode measured on this terminal's stored series {series, from, to}.
+#   value:       a judgement, always flagged as an assumption.
+# Every move carries `basis`; anything that is not a direct em-macro estimate is marked assumption.
+#
+# Markets: polymarket ids / kalshi tickers, each with the branches its YES maps to. `related` markets
+# are shown but do not answer this question.
+#
+# My probability comes from the latest Full call or Quick update whose question id is "sc:<id>".
+# The "Make a call" button pre-fills that id and the branch names.
+
+scenarios:
+
+  - id: fr-sp-2026-11
+    title: "S&P review of France, 27 Nov 2026"
+    country: FR
+    event: {country: FR, title: "S&P Global sovereign rating review"}
+    question: "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?"
+    resolution: "YES if S&P publishes a downgrade of France (to A or lower) dated on or before 27 Nov 2026. NO if France is still A+ after S&P's 27 Nov publication. An outlook change alone is NO. Sources: S&P research update; AFT ratings table."
+    resolution_date: 2026-11-27
+    yes_branches: [downgrade]
+    instruments: [OATBUND]
+    base_rate:
+      kind: rating_review
+      file: data/events/raw/rating_actions_eu.csv
+      agency: "S&P"
+      outlook_before: stable
+      since: 2014-01-01
+      reference_class: "S&P actions on the six EU sovereigns em-macro tracks (France, Germany, Italy, Spain, UK, Poland) since 2014, when the EU began requiring a published calendar of scheduled sovereign reviews, where the outlook going in was stable."
+    branches:
+      - id: affirm_stable
+        label: "Affirmed A+, stable outlook"
+        side: good
+        moves:
+          - {instrument: OATBUND, value: -2, assumption: true, basis: "small relief from removing a tail; em-macro has no estimate for affirmations"}
+        signposts:
+          - "Moody's affirmed Aa3 negative on 23 Oct 2026 (done): no peer pressure from a fresh cut"
+          - "The National Assembly's first-reading vote on PLF 2027 passes the revenue part (November)"
+          - "No censure motion succeeds before 27 Nov"
+      - id: affirm_negative
+        label: "Affirmed A+, outlook to negative"
+        side: mixed
+        moves:
+          - {instrument: OATBUND, value: 4, assumption: true, basis: "about one third of the one-agency downgrade effect below"}
+        signposts:
+          - "PLF 2027 progresses only through Article 49.3, with a 2027 deficit target above the medium-term path"
+          - "S&P sector commentary in November stresses political risk to consolidation"
+      - id: downgrade
+        label: "Downgraded to A or lower"
+        side: bad
+        moves:
+          - {instrument: OATBUND, what_if: {country: FRA, asset: spread_bp, scenario: downgrade_1, scale: 0.333}, assumption: true,
+             basis: "em-macro what-if: a one-notch cut by all three agencies widens the spread 37 bp [29, 45]; one agency taken as one third (assumption)"}
+        signposts:
+          - "The government falls on a censure motion before 27 Nov"
+          - "PLF 2027 rejected at first reading and a special law becomes the base case"
+          - "The government raises its 2026 deficit estimate above the budget-law target"
+    markets:
+      - {venue: polymarket, id: "5458390", yes_branches: [downgrade], note: "Moody's or S&P by 30 Nov 2026; Moody's already reviewed on 23 Oct, so this is mostly S&P"}
+      - {venue: kalshi, ticker: "KXFRANCEDOWNGRADE-27JAN01-1", related: true, note: "any agency, any time in 2026: wider than this question"}
+    calculator: {instrument: OATBUND, good_branch: affirm_stable, bad_branch: downgrade}
+
+  - id: fr-budget-2027
+    title: "France 2027 budget and the Article 47 deadline"
+    country: FR
+    event: {country: FR, title: "Article 47"}
+    question: "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?"
+    resolution: "YES if a loi de finances pour 2027 is published in the Journal officiel dated on or before 31 Dec 2026, including one enacted by ordinance under Article 47. A special law (loi spéciale) is NO. Source: Légifrance / Journal officiel."
+    resolution_date: 2026-12-31
+    yes_branches: [adopted, ordinance]
+    instruments: [OATBUND]
+    base_rate:
+      kind: budget_cycles
+      iso3: FRA
+      reference_class: "Every French budget cycle in em-macro's calendar (budget laws for 2006-2026): was the budget law promulgated by 31 December, and did it need Article 49.3 or a special law? The subset since June 2022, when the government lost its majority, is shown separately."
+    branches:
+      - id: adopted
+        label: "Adopted and promulgated by 31 Dec (vote or 49.3)"
+        side: good
+        moves:
+          - {instrument: OATBUND, analog: {series: fr.spread.oat_bund.ecb_m, from: 2026-01-01, to: 2026-02-01},
+             basis: "analog: the month the 2026 budget was finally adopted (monthly averages, Jan to Feb 2026)"}
+        signposts:
+          - "PS or LR signals it will not vote a censure motion on the budget"
+          - "Joint committee (CMP) agreement in mid-December"
+          - "Government uses 49.3 on the CMP text and survives the censure vote"
+      - id: special_law
+        label: "Special law in December, budget adopted in early 2027"
+        side: mixed
+        moves:
+          - {instrument: OATBUND, analog: {series: fr.spread.oat_bund.ecb_m, from: 2025-11-01, to: 2025-12-01},
+             basis: "analog: December 2025, when a special law replaced the budget (monthly averages); it was widely expected"}
+        signposts:
+          - "No CMP agreement by mid-December"
+          - "The government tables a loi spéciale (2024 and 2025 pattern)"
+      - id: censure_fall
+        label: "Government falls over the budget"
+        side: bad
+        moves:
+          - {instrument: OATBUND, analog: {series: fr.spread.oat_bund.ecb_m, from: 2024-11-01, to: 2024-12-01},
+             basis: "analog: December 2024, when the Barnier government fell over the budget (monthly averages understate the daily move)"}
+          - {instrument: OATBUND, what_if: {country: FRA, asset: spread_bp, scenario: lose_majority, scale: 1},
+             basis: "em-macro what-if: government's seat share falls 10 points (already a minority)"}
+        signposts:
+          - "A censure motion gathers PS votes"
+          - "Lecornu uses 49.3 without a non-censure agreement"
+      - id: ordinance
+        label: "Enacted by ordinance under Article 47"
+        side: mixed
+        moves:
+          - {instrument: OATBUND, value: 8, assumption: true, basis: "never used under the Fifth Republic; a budget in force but a constitutional fight; judgement"}
+        signposts:
+          - "Parliament has not voted by day 70 (10 Dec) and the government says it will use Article 47"
+    markets:
+      - {venue: polymarket, id: "1722538", yes_branches: [adopted, ordinance], note: "\"Will France pass a national budget by December 31?\""}
+      - {venue: kalshi, ticker: "KXFRANCEBUDGET-27JAN01", yes_branches: [adopted, ordinance], note: "\"Will France enact its 2027 budget in 2026?\""}
+      - {venue: kalshi, ticker: "KXFRANCE493-27JAN01", related: true, note: "49.3 used on the 2027 state budget in 2026"}
+    calculator: {instrument: OATBUND, good_branch: adopted, bad_branch: censure_fall}
+
+  - id: fr-pres-2027
+    title: "France 2027 presidential election"
+    country: FR
+    event: {country: FR, title: "Presidential election, second round"}
+    question: "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?"
+    resolution: "YES if the Conseil constitutionnel proclaims the RN candidate elected (second round expected 25 Apr 2027). Source: Conseil constitutionnel proclamation."
+    resolution_date: 2027-04-25
+    yes_branches: [rn]
+    instruments: [OATBUND]
+    base_rate:
+      kind: election_polls
+      iso3: FRA
+      subtypes: [presidential_r2]
+      pooled_subtypes: [presidential_r2]
+      reference_class: "Final pre-vote polls in presidential run-offs: France 2012-2022, and all run-offs in em-macro's 13 countries. These are final polls; six months out the error is larger."
+    branches:
+      - id: rn
+        label: "RN candidate wins"
+        side: bad
+        moves:
+          - {instrument: OATBUND, analog: {series: fr.spread.oat_bund.ecb_m, from: 2024-05-01, to: 2024-07-01},
+             basis: "analog: the June 2024 dissolution, when an RN majority became possible (monthly averages, May to July 2024)"}
+          - {instrument: OATBUND, what_if: {country: FRA, asset: spread_bp, scenario: populism_plus1sd, scale: 1},
+             basis: "em-macro what-if: governing parties' populism +1 sd (interval includes zero)"}
+        signposts:
+          - "Whether Le Pen is on the ballot (her ineligibility case) or Bardella runs"
+          - "RN programme costing: pension-age and VAT pledges kept or dropped"
+          - "Second-round polls against the leading centre-right candidate"
+      - id: centre_right
+        label: "Centre or centre-right candidate wins"
+        side: good
+        moves:
+          - {instrument: OATBUND, what_if: {country: FRA, asset: spread_bp, scenario: populism_plus1sd, scale: -1},
+             basis: "em-macro what-if, reversed: populism -1 sd"}
+        signposts:
+          - "One centre-right candidate consolidates (Philippe, Lisnard, Retailleau or Attal): others withdraw"
+          - "Sponsorship (parrainages) totals in March 2027"
+      - id: left
+        label: "Left candidate wins"
+        side: bad
+        moves:
+          - {instrument: OATBUND, what_if: {country: FRA, asset: spread_bp, scenario: deficit_plus1, scale: 1}, assumption: true,
+             basis: "em-macro what-if for a deficit 1 point of GDP higher; that the left programme adds a point is an assumption"}
+          - {instrument: OATBUND, what_if: {country: FRA, asset: spread_bp, scenario: populism_plus1sd, scale: 1},
+             basis: "em-macro what-if: populism +1 sd"}
+        signposts:
+          - "A single left candidate (primary or withdrawal) and first-round polls above 20%"
+    markets:
+      - {venue: polymarket, id: "679018", yes_branches: [rn], note: "Le Pen"}
+      - {venue: polymarket, id: "679019", yes_branches: [rn], note: "Bardella"}
+      - {venue: polymarket, id: "679021", branches: [centre_right], note: "Philippe"}
+      - {venue: polymarket, id: "679022", branches: [centre_right], note: "Lisnard"}
+      - {venue: polymarket, id: "679027", branches: [centre_right], note: "Retailleau"}
+      - {venue: polymarket, id: "679026", branches: [centre_right], note: "Attal"}
+      - {venue: polymarket, id: "679060", branches: [centre_right], note: "Lagarde"}
+      - {venue: polymarket, id: "679030", branches: [left], note: "Mélenchon"}
+      - {venue: polymarket, id: "679029", branches: [left], note: "Glucksmann"}
+      - {venue: polymarket, id: "679028", branches: [left], note: "Hollande"}
+    calculator: {instrument: OATBUND, good_branch: centre_right, bad_branch: rn}
+
+  - id: br-fiscal-2027
+    title: "Brazil 2027: fiscal-framework credibility"
+    country: BR
+    event: {country: BR, title: "Presidential inauguration"}
+    question: "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?"
+    resolution: "YES if, on 31 Mar 2027, the 2027 target in force is +0.5% of GDP, no PLN/PLP changing the target or the LC 200/2023 limits has been sent, and the first bimonthly report (RARDP, ~22 Mar 2027) does not propose one. Sources: LDO 2027, Câmara/Senado bill trackers, Tesouro RARDP."
+    resolution_date: 2027-03-31
+    yes_branches: [credible, kept_exclusions]
+    instruments: [DI29, BR10Y, USDBRL]
+    indicators:
+      - {series: br.focus.primary, ref: "2027", field: median, label: "Focus median for the 2027 primary balance (% of GDP)", target: 0.5}
+      - {series: br.focus.net_debt, ref: "2027", field: median, label: "Focus median for 2027 net public debt (% of GDP)"}
+    base_rate:
+      kind: none
+      reason: "em-macro records no fiscal-target revisions for Brazil, so there is no computed reference class."
+      context:
+        - "Context, not computed: Brazil cut a primary target it had set for itself in July 2015 (2015 target 1.1% to 0.15% of GDP) and in April 2024 (2025 target 0.5% to 0%, in the PLDO 2025)."
+      event_study: {country: BR, event_type: election, subtypes: [general, presidential_r2], label: "Brazil election days in em-macro (day-1 abnormal moves)"}
+    branches:
+      - id: credible
+        label: "Target kept and backed by a spending freeze"
+        side: good
+        moves:
+          - {instrument: DI29, value: -30, assumption: true, basis: "partial reversal of the post-run-off repricing (em-macro: Brazil 10y +255 bp abnormal on the day after the 25 Oct 2026 run-off); judgement"}
+          - {instrument: USDBRL, value: -1.5, assumption: true, basis: "judgement, same reasoning"}
+        signposts:
+          - "2027 budget (PLOA) voted in December without new exclusions from the spending limit"
+          - "Finance minister named in January who keeps the framework"
+          - "First 2027 bimonthly report (~22 Mar) freezes spending to hit 0.5%"
+          - "Focus 2027 primary-balance median moves toward the target"
+      - id: kept_exclusions
+        label: "Target kept on paper, met through exclusions or one-offs"
+        side: mixed
+        moves:
+          - {instrument: DI29, value: 35, assumption: true, basis: "about one third of the Nov 2024 package analog below; judgement"}
+          - {instrument: USDBRL, value: 1.5, assumption: true, basis: "about one third of the Nov 2024 analog; judgement"}
+        signposts:
+          - "New spending carved out of the limit in the 2027 budget or by provisional measure"
+          - "Revenue measures counted that Congress has not passed"
+      - id: target_cut
+        label: "Target cut or spending rule loosened"
+        side: bad
+        moves:
+          - {instrument: DI29, analog: {series: br.di.f29.proxy, from: 2024-11-26, to: 2024-11-29},
+             basis: "analog: the Nov 2024 spending package paired with an income-tax exemption (3 trading days)"}
+          - {instrument: USDBRL, analog: {series: br.usdbrl.ptax, from: 2024-11-26, to: 2024-11-29}, basis: "analog: same episode"}
+          - {instrument: BR10Y, what_if: {country: BRA, asset: spread_bp, scenario: deficit_plus1, scale: 1},
+             basis: "em-macro what-if: deficit +1 point of GDP (slow-moving; assumes the US 10y is unchanged)"}
+          - {instrument: USDBRL, what_if: {country: BRA, asset: fx_pct, scenario: deficit_plus1, scale: 1},
+             basis: "em-macro what-if: deficit +1 point of GDP (sign counter to intuition; interval excludes zero)"}
+        signposts:
+          - "PLN to change the 2027 target or a PLP to change LC 200/2023 sent to Congress"
+          - "Ministers publicly question the 0.5% target"
+          - "Focus 2027 primary-balance median falls further below the target"
+    markets: []
+    calculator: {instrument: DI29, good_branch: credible, bad_branch: target_cut}
+
+  - id: mx-midterms-2027
+    title: "Mexico midterms, 6 Jun 2027"
+    country: MX
+    event: {country: MX, title: "Midterm elections"}
+    question: "Will Morena and its allies (PVEM, PT) hold at least two-thirds of the Chamber of Deputies (334 of 500 seats) after the 6 June 2027 election?"
+    resolution: "YES if the INE's seat allocation (proportional-representation seats are assigned in August) gives Morena, PVEM and PT together 334 or more seats. Source: INE acuerdo de asignación."
+    resolution_date: 2027-08-31
+    yes_branches: [supermajority]
+    instruments: [USDMXN, MX10Y]
+    base_rate:
+      kind: election_polls
+      iso3: MEX
+      subtypes: [legislative]
+      reference_class: "Mexico's midterm legislative elections in em-macro (2009, 2015, 2021): final-poll leader vs result. In 2021 the governing coalition kept its majority but lost two-thirds."
+      event_study: {country: MX, event_type: election, subtypes: [legislative], label: "Mexican midterm election days (day-1 abnormal moves)"}
+    branches:
+      - id: supermajority
+        label: "Coalition keeps two-thirds"
+        side: bad
+        moves:
+          - {instrument: USDMXN, event_study: {country: MX, event_ids: [EL_MX_20240602], asset: FX, h: 5},
+             basis: "event study: the June 2024 election that delivered the supermajority (5-day abnormal move)"}
+          - {instrument: MX10Y, event_study: {country: MX, event_ids: [EL_MX_20240602], asset: Y10, h: 5},
+             basis: "event study: same election, 10-year yield"}
+        signposts:
+          - "Polls put the coalition above 55% of the vote (two-thirds needs vote share plus the over-representation cap)"
+          - "INE rules on coalition over-representation (the 2024 dispute)"
+      - id: majority
+        label: "Simple majority, below two-thirds"
+        side: good
+        moves:
+          - {instrument: USDMXN, event_study: {country: MX, event_type: election, subtypes: [legislative], asset: FX, h: 1},
+             basis: "event study: average of Mexico's midterms (2009, 2015, 2021)"}
+          - {instrument: MX10Y, event_study: {country: MX, event_type: election, subtypes: [legislative], asset: Y10, h: 1},
+             basis: "event study: same midterms"}
+        signposts:
+          - "Coalition vote share polls between 45% and 55%"
+          - "PAN-PRI or MC alliances in key districts"
+      - id: lose_majority
+        label: "Coalition loses its majority"
+        side: mixed
+        moves:
+          - {instrument: USDMXN, what_if: {country: MEX, asset: fx_pct, scenario: lose_majority, scale: 1},
+             basis: "em-macro what-if (pooled across countries): the peso weakens; this conflicts with the 2024 reaction to a stronger mandate"}
+          - {instrument: MX10Y, what_if: {country: MEX, asset: spread_bp, scenario: lose_majority, scale: 1},
+             basis: "em-macro what-if: spread narrows (interval includes zero); assumes the US 10y is unchanged"}
+        signposts:
+          - "Coalition polls below 45%"
+    markets:
+      - {venue: polymarket, id: "2271403", related: true, note: "Morena wins the most seats: implied by every branch except a large loss"}
+      - {venue: kalshi, ticker: "KXMEXICODEPUTIES-27-MORENA", related: true, note: "same: the party with most seats"}
+    calculator: {instrument: USDMXN, good_branch: majority, bad_branch: supermajority}
+
+  - id: usmca-2027
+    title: "USMCA annual review, 1 Jul 2027"
+    country: MX
+    event: {country: MX, title: "USMCA annual joint review"}
+    question: "At or before the 1 July 2027 joint review, will the United States, Mexico and Canada each confirm in writing that they wish to extend USMCA for a new 16-year term (art. 34.7)?"
+    resolution: "YES if all three parties confirm the extension in writing by 1 Jul 2027. NO otherwise, including a withdrawal notice under art. 34.6. Sources: USTR, Secretaría de Economía, Global Affairs Canada."
+    resolution_date: 2027-07-01
+    yes_branches: [extended]
+    instruments: [USDMXN]
+    base_rate:
+      kind: none
+      reason: "No reference class: this is the agreement's first review cycle, and em-macro has no trade-agreement events."
+    branches:
+      - id: extended
+        label: "Extended for 16 years"
+        side: good
+        moves:
+          - {instrument: USDMXN, value: -2, assumption: true, basis: "judgement: removes the review overhang"}
+        signposts:
+          - "USTR's 2027 consultation report recommends extension"
+          - "US tariffs on Mexican goods cut below 10%"
+      - id: annual
+        label: "No extension; annual reviews continue"
+        side: mixed
+        moves:
+          - {instrument: USDMXN, value: 0.5, assumption: true, basis: "judgement: the status quo after the 2026 review"}
+        signposts:
+          - "Review ends with a list of open issues and no withdrawal notice"
+      - id: bilateral
+        label: "Replaced by bilateral deals"
+        side: bad
+        moves:
+          - {instrument: USDMXN, value: 3, assumption: true, basis: "judgement: about a quarter of the 2016 analog below"}
+        signposts:
+          - "US proposes separate US-Mexico and US-Canada texts"
+      - id: withdrawal
+        label: "US gives notice of withdrawal (art. 34.6)"
+        side: bad
+        moves:
+          - {instrument: USDMXN, analog: {series: mx.usdmxn.fix, from: 2016-11-08, to: 2016-11-11},
+             basis: "analog: the 2016 US election, when a NAFTA withdrawal became likely (3 days; included other shocks)"}
+        signposts:
+          - "US officials describe withdrawal as leverage; Federal Register notice"
+    markets:
+      - {venue: polymarket, id: "2761052", related: true, note: "USMCA extended in 2026: the earlier review"}
+      - {venue: kalshi, ticker: "KXUSMCAOUTCOMES-27-TRI", related: true, note: "trilateral revised deal in 2026"}
+    calculator: {instrument: USDMXN, good_branch: extended, bad_branch: withdrawal}

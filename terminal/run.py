@@ -78,7 +78,7 @@ def copy_site(dest=store.ROOT / "site" / "data") -> None:
 def main(argv=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site"])
+    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab"])
     ap.add_argument("--only", default="", help="comma-separated source keys for fetch")
     ap.add_argument("--no-attention", action="store_true", help="calendar: skip the GDELT attention refresh")
     a = ap.parse_args(argv)
@@ -90,9 +90,10 @@ def main(argv=None) -> int:
     if a.cmd in ("calendar", "all"):
         from terminal import calendar
         calendar.build(attention=not a.no_attention)
-    if a.cmd in ("summary", "all"):
-        from terminal import summary
-        summary.build()
+    if a.cmd == "lab":
+        from terminal import labtests
+        for k, v in labtests.run()["tests"].items():
+            log.info("lab test %s: %s", k, v.get("badge"))
     if a.cmd in ("book", "all"):
         from terminal import book
         st = book.build()
@@ -102,6 +103,12 @@ def main(argv=None) -> int:
         from terminal import judgement
         js = judgement.build()
         log.info("judgements: %d questions, %d resolved", js["summary"]["n_questions"], js["summary"]["n_resolved"])
+    if a.cmd in ("summary", "all"):
+        # after book and judge, so scenario pages see the latest calls
+        from terminal import crowd, scenarios, summary
+        summary.build()
+        scenarios.build()
+        crowd.build()
     if a.cmd == "site":
         copy_site()
     return 0

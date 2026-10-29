@@ -156,3 +156,28 @@ details summary { cursor: pointer; color: var(--text-2); font-size: .82rem; }
 .chip.deg { background: transparent; border: 1px solid var(--warn-ink); color: var(--warn-ink); text-decoration: none; }
 .degrow { padding: 8px 0; border-top: 1px solid var(--border); }
 .degrow:first-of-type { border-top: 0; }
+/* scenarios and crowd */
+.card .lbl { font-size: .9rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap; }
+.card .lvl { font-size: 1.4rem; font-weight: 750; font-variant-numeric: tabular-nums; margin: 4px 0 2px; }
+.big { font-size: 1.05rem; font-weight: 650; line-height: 1.35; }
+.branch { border-top: 4px solid var(--border); }
+.branch.good { border-top-color: var(--good); } .branch.bad { border-top-color: var(--bad); } .branch.mixed { border-top-color: var(--warn); }
+.probs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px; text-align: center; }
+.probs .k, .k { font-size: .74rem; color: var(--text-2); text-transform: uppercase; letter-spacing: .03em; }
+.probs .v { font-size: 1.15rem; font-weight: 750; }
+.moves, .checks, .thresholds { padding-left: 1.1em; margin: 4px 0 8px; }
+.moves li, .thresholds li { margin-bottom: 6px; }
+.checks { list-style: none; padding-left: 0; }
+.checks li { padding: 3px 0; font-size: .86rem; }
+.checks li.ok { color: var(--good-ink); } .checks li.no { color: var(--text-2); }
+.calc { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: flex-end; margin: 10px 0 4px; }
+.calc label { display: flex; flex-direction: column; font-size: .78rem; color: var(--text-2); gap: 3px; flex: 1 1 130px; }
+.calc input { font: inherit; font-size: 1rem; padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); width: 100%; box-sizing: border-box; font-variant-numeric: tabular-nums; }
+.pbar { display: inline-flex; align-items: center; gap: 6px; min-width: 90px; }
+.pbar .track { display: inline-block; width: 60px; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.pbar i { display: block; height: 100%; background: var(--accent); }
+.ranked { padding-left: 0; list-style: none; counter-reset: r; display: grid; gap: 10px; }
+.ranked > li { counter-increment: r; position: relative; padding-left: 44px; }
+.ranked > li::before { content: counter(r); position: absolute; left: 14px; top: 14px; font-weight: 800; font-size: 1.1rem; color: var(--text-3); }
+.posrow { padding: 8px 0; border-top: 1px solid var(--border); }
+.posrow:first-child { border-top: 0; }
