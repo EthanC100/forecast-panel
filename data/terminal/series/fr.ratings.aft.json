@@ -1,0 +1,30 @@
+{
+ "id": "fr.ratings.aft",
+ "name": "France credit ratings (AFT table)",
+ "country": "FR",
+ "unit": "rating",
+ "frequency": "on change",
+ "source": "Agence France Trésor",
+ "source_id": "AFT credit ratings table",
+ "source_url": "https://www.aft.gouv.fr/en/frances-credit-ratings",
+ "fields": [
+  "cells",
+  "dates"
+ ],
+ "key": [
+  "date",
+  "ref"
+ ],
+ "fetched_at": "2026-10-29T13:52:15Z",
+ "updated_at": "2026-10-29T13:52:15Z",
+ "n": 5,
+ "first": "2026-10-29",
+ "last": "2026-10-29",
+ "history": [
+  ["2026-10-29","DBRS",["AA","Negative","18 September 2026","-"],["18 September 2026"]],
+  ["2026-10-29","Fitch",["A+","Stable","28 August 2026","-"],["28 August 2026"]],
+  ["2026-10-29","KBRA",["AA-","Stable","12 June 2026","11 December 2026"],["12 June 2026","11 December 2026"]],
+  ["2026-10-29","Moody's",["Aa3","Negative","23 October 2026","-"],["23 October 2026"]],
+  ["2026-10-29","Scope",["A+","Stable","18 September 2026","-"],["18 September 2026"]]
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T13:38:04Z",
+ "generated_at": "2026-10-29T14:00:06Z",
  "horizon": "2027-10-30",
  "events": [
   {
@@ -15,7 +15,7 @@
    "origin": "ecb:scraped",
    "id": "2026-10-29-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -36,7 +36,7 @@
    "origin": "rule:focus",
    "id": "2026-11-02-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -78,7 +78,7 @@
    "origin": "manual",
    "id": "2026-11-04-br-copom-decision-3-4-nov",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -120,7 +120,7 @@
    "origin": "rule:focus",
    "id": "2026-11-09-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -141,7 +141,7 @@
    "origin": "rule:focus",
    "id": "2026-11-16-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -161,7 +161,13 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 0.8,
+    "share": 2.5825845990150024e-06,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -177,7 +183,7 @@
    "origin": "rule:focus",
    "id": "2026-11-23-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -197,7 +203,13 @@
    "note": "EU-regulated sovereign calendar date (Friday, after market close).",
    "origin": "manual",
    "id": "2026-11-27-fr-s-p-global-sovereign-rating-review-france",
-   "attention": null,
+   "attention": {
+    "score": 0.452,
+    "share": 2.5825845990150022e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"S&P\" France rating"
+   },
    "under_attended": false
   },
   {
@@ -213,7 +225,7 @@
    "origin": "rule:focus",
    "id": "2026-11-30-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -270,7 +282,7 @@
    "origin": "rule:focus",
    "id": "2026-12-07-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -291,7 +303,7 @@
    "origin": "manual",
    "id": "2026-12-09-br-copom-decision-8-9-dec",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -311,8 +323,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2026-12-09-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2026-12-14",
@@ -327,7 +345,7 @@
    "origin": "rule:focus",
    "id": "2026-12-14-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -347,7 +365,13 @@
    "note": "Constitution art. 47: if Parliament has not decided within 70 days of the bill being tabled, the budget can be enacted by ordinance. 70 days from tabling on the first Tuesday of October (6 Oct 2026) = 15 Dec; confirm against the actual tabling date.",
    "origin": "manual",
    "id": "2026-12-15-fr-budget-plf-2027-article-47-70-day-deadline",
-   "attention": null,
+   "attention": {
+    "score": 1.548,
+    "share": 8.845352251626383e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "France budget \"National Assembly\""
+   },
    "under_attended": false
   },
   {
@@ -378,7 +402,7 @@
    "origin": "ecb:scraped",
    "id": "2026-12-17-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -420,7 +444,7 @@
    "origin": "rule:focus",
    "id": "2026-12-21-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -441,7 +465,7 @@
    "origin": "rule:focus",
    "id": "2026-12-28-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -483,7 +507,7 @@
    "origin": "rule:focus",
    "id": "2027-01-04-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -519,7 +543,7 @@
    "origin": "rule:focus",
    "id": "2027-01-11-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -555,7 +579,7 @@
    "origin": "rule:focus",
    "id": "2027-01-18-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -576,7 +600,7 @@
    "origin": "rule:focus",
    "id": "2027-01-25-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -597,7 +621,7 @@
    "origin": "manual",
    "id": "2027-01-27-br-copom-decision-26-27-jan",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -617,8 +641,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2027-01-27-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2027-02-01",
@@ -633,7 +663,7 @@
    "origin": "rule:focus",
    "id": "2027-02-01-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -690,7 +720,7 @@
    "origin": "ecb:scraped",
    "id": "2027-02-04-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -732,7 +762,7 @@
    "origin": "rule:focus",
    "id": "2027-02-08-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -753,7 +783,7 @@
    "origin": "rule:focus",
    "id": "2027-02-15-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -774,7 +804,7 @@
    "origin": "rule:focus",
    "id": "2027-02-22-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -795,7 +825,7 @@
    "origin": "rule:focus",
    "id": "2027-03-01-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -837,7 +867,7 @@
    "origin": "rule:focus",
    "id": "2027-03-08-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -858,7 +888,7 @@
    "origin": "rule:focus",
    "id": "2027-03-15-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -879,7 +909,7 @@
    "origin": "manual",
    "id": "2027-03-17-br-copom-decision-16-17-mar",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -899,8 +929,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2027-03-17-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2027-03-18",
@@ -915,7 +951,7 @@
    "origin": "ecb:scraped",
    "id": "2027-03-18-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -935,7 +971,13 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-03-22-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 0.8,
+    "share": 2.5825845990150024e-06,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -951,7 +993,7 @@
    "origin": "rule:focus",
    "id": "2027-03-22-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -993,7 +1035,7 @@
    "origin": "rule:focus",
    "id": "2027-03-29-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1050,7 +1092,7 @@
    "origin": "rule:focus",
    "id": "2027-04-05-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1086,7 +1128,7 @@
    "origin": "rule:focus",
    "id": "2027-04-12-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1122,7 +1164,7 @@
    "origin": "rule:focus",
    "id": "2027-04-19-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1158,7 +1200,7 @@
    "origin": "rule:focus",
    "id": "2027-04-26-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1179,7 +1221,7 @@
    "origin": "manual",
    "id": "2027-04-28-br-copom-decision-27-28-apr",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1199,8 +1241,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2027-04-28-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2027-04-29",
@@ -1215,7 +1263,7 @@
    "origin": "ecb:scraped",
    "id": "2027-04-29-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1236,7 +1284,7 @@
    "origin": "rule:focus",
    "id": "2027-05-03-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1299,7 +1347,7 @@
    "origin": "rule:focus",
    "id": "2027-05-10-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1320,7 +1368,7 @@
    "origin": "rule:focus",
    "id": "2027-05-17-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1340,7 +1388,13 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-05-21-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 0.8,
+    "share": 2.5825845990150024e-06,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -1356,7 +1410,7 @@
    "origin": "rule:focus",
    "id": "2027-05-24-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1377,7 +1431,7 @@
    "origin": "rule:focus",
    "id": "2027-05-31-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1434,7 +1488,7 @@
    "origin": "rule:focus",
    "id": "2027-06-07-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1454,8 +1508,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2027-06-09-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2027-06-10",
@@ -1470,7 +1530,7 @@
    "origin": "ecb:scraped",
    "id": "2027-06-10-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1491,7 +1551,7 @@
    "origin": "rule:focus",
    "id": "2027-06-14-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1512,7 +1572,7 @@
    "origin": "manual",
    "id": "2027-06-16-br-copom-decision-15-16-jun",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1533,7 +1593,7 @@
    "origin": "rule:focus",
    "id": "2027-06-21-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1575,7 +1635,7 @@
    "origin": "rule:focus",
    "id": "2027-06-28-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1632,7 +1692,7 @@
    "origin": "rule:focus",
    "id": "2027-07-05-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1653,7 +1713,7 @@
    "origin": "rule:focus",
    "id": "2027-07-12-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1674,7 +1734,7 @@
    "origin": "rule:focus",
    "id": "2027-07-19-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1694,7 +1754,13 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-07-22-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 0.8,
+    "share": 2.5825845990150024e-06,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -1710,7 +1776,7 @@
    "origin": "ecb:scraped",
    "id": "2027-07-22-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1731,7 +1797,7 @@
    "origin": "rule:focus",
    "id": "2027-07-26-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1751,8 +1817,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2027-07-28-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2027-08-02",
@@ -1767,7 +1839,7 @@
    "origin": "rule:focus",
    "id": "2027-08-02-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1809,7 +1881,7 @@
    "origin": "manual",
    "id": "2027-08-04-br-copom-decision-3-4-aug",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1851,7 +1923,7 @@
    "origin": "rule:focus",
    "id": "2027-08-09-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1872,7 +1944,7 @@
    "origin": "rule:focus",
    "id": "2027-08-16-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1893,7 +1965,7 @@
    "origin": "rule:focus",
    "id": "2027-08-23-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1914,7 +1986,7 @@
    "origin": "rule:focus",
    "id": "2027-08-30-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1956,7 +2028,7 @@
    "origin": "rule:focus",
    "id": "2027-09-06-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1977,7 +2049,7 @@
    "origin": "ecb:scraped",
    "id": "2027-09-09-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -1998,7 +2070,7 @@
    "origin": "rule:focus",
    "id": "2027-09-13-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2018,8 +2090,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2027-09-15-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2027-09-20",
@@ -2034,7 +2112,7 @@
    "origin": "rule:focus",
    "id": "2027-09-20-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2055,7 +2133,7 @@
    "origin": "manual",
    "id": "2027-09-22-br-copom-decision-21-22-sep",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2075,7 +2153,13 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-09-22-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 0.8,
+    "share": 2.5825845990150024e-06,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -2112,7 +2196,7 @@
    "origin": "rule:focus",
    "id": "2027-09-27-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2154,7 +2238,7 @@
    "origin": "rule:focus",
    "id": "2027-10-04-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2175,7 +2259,7 @@
    "origin": "rule:focus",
    "id": "2027-10-11-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2196,7 +2280,7 @@
    "origin": "rule:focus",
    "id": "2027-10-18-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2217,7 +2301,7 @@
    "origin": "rule:focus",
    "id": "2027-10-25-br-focus-survey-bcb",
    "attention": {
-    "score": 0.132,
+    "score": 1.0,
     "share": 3.2282307487687527e-06,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2238,7 +2322,7 @@
    "origin": "manual",
    "id": "2027-10-27-br-copom-decision-26-27-oct",
    "attention": {
-    "score": 1.868,
+    "score": 14.2,
     "share": 4.584087663251629e-05,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
@@ -2258,8 +2342,14 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2027-10-27-global-fomc-decision",
-   "attention": null,
-   "under_attended": false
+   "attention": {
+    "score": 0.426,
+    "share": 6.585590727488255e-05,
+    "as_of": "2026-10-29",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": true
   },
   {
    "date": "2027-10-28",
@@ -2274,7 +2364,7 @@
    "origin": "ecb:scraped",
    "id": "2027-10-28-global-ecb-monetary-policy-decision",
    "attention": {
-    "score": 1.0,
+    "score": 1.574,
     "share": 0.00024340859845716395,
     "as_of": "2026-10-29",
     "source": "GDELT DOC 2.0 (timelinevolraw)",

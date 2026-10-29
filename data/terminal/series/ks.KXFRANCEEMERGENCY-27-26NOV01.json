@@ -1,0 +1,34 @@
+{
+ "id": "ks.KXFRANCEEMERGENCY-27-26NOV01",
+ "name": "Will France declare a state of emergency?: Before Nov 1, 2026",
+ "country": "FR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Kalshi",
+ "source_id": "KXFRANCEEMERGENCY-27-26NOV01",
+ "source_url": "https://kalshi.com/markets/KXFRANCEEMERGENCY",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-29T13:53:22Z",
+ "updated_at": "2026-10-29T13:53:22Z",
+ "n": 11,
+ "first": "2026-10-19",
+ "last": "2026-10-29",
+ "history": [
+  ["2026-10-19",0.06],
+  ["2026-10-20",0.19],
+  ["2026-10-21",0.12],
+  ["2026-10-22",0.12],
+  ["2026-10-23",0.11],
+  ["2026-10-24",0.11],
+  ["2026-10-25",0.08],
+  ["2026-10-26",0.04],
+  ["2026-10-27",0.03],
+  ["2026-10-28",0.02],
+  ["2026-10-29",0.02]
+ ]
+}
