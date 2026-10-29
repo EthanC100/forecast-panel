@@ -66,7 +66,9 @@ def fred_public() -> list[str]:
 
 CFTC_TFF = "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
 CFTC_LEGACY = "https://publicreporting.cftc.gov/resource/6dca-aqww.json"
-COT = {"br.cot.brl": ("102741", "BRL futures (CME)", "BR"), "mx.cot.mxn": ("095741", "MXN futures (CME)", "MX")}
+COT = {"br.cot.brl": ("102741", "BRL futures (CME)", "BR"), "mx.cot.mxn": ("095741", "MXN futures (CME)", "MX"),
+       # ZAR is not a terminal country; it widens the Crowd positioning lab test to a third EM currency.
+       "za.cot.zar": ("122741", "ZAR futures (CME)", "ZA")}
 COT_FIELDS = ["lev_money_net", "asset_mgr_net", "dealer_net", "noncomm_net", "open_interest"]
 
 

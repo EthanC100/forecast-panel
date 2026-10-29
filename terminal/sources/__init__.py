@@ -17,7 +17,7 @@ SOURCES = [
     ("aft_ratings", "AFT France credit ratings table", "FR", france.aft_ratings, None, None, "on rating actions"),
     ("fred_api", "FRED API (US 10y, dollar, Mexico 10y)", "US", global_.fred_api, "FRED_API_KEY", None, "daily"),
     ("fred_public", "FRED public graph CSV (fallback)", "US", global_.fred_public, None, "fred_api", "daily"),
-    ("cftc", "CFTC Commitments of Traders (BRL, MXN)", "GLOBAL", global_.cftc, None, None, "Fridays 15:30 ET"),
+    ("cftc", "CFTC Commitments of Traders (BRL, MXN, ZAR)", "GLOBAL", global_.cftc, None, None, "Fridays 15:30 ET"),
     ("polymarket", "Polymarket (tags france, brazil, mexico)", "GLOBAL", global_.polymarket, None, None, "continuous"),
     ("kalshi", "Kalshi (titles matching FR/BR/MX)", "GLOBAL", global_.kalshi, None, None, "continuous"),
 ]

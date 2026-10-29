@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T15:28:54Z",
+ "generated_at": "2026-10-29T15:32:56Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -1297,7 +1297,7 @@
      "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-10-20",
-     "fetched_at": "2026-10-29T14:07:31Z",
+     "fetched_at": "2026-10-29T15:31:38Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "br.cot.brl",
      "evidence": {
@@ -2076,7 +2076,7 @@
      "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-10-20",
-     "fetched_at": "2026-10-29T14:07:34Z",
+     "fetched_at": "2026-10-29T15:31:46Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "mx.cot.mxn",
      "evidence": {

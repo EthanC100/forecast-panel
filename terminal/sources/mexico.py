@@ -58,9 +58,14 @@ def _api_series(ids: list[str], token: str) -> dict[str, list[list]]:
     return out
 
 
+# The chart endpoint fills days without an observation (holidays, non-auction days, survey questions
+# not asked that month) with this sentinel instead of leaving them out.
+NO_DATA = -989898.0
+
+
 def _chart_series(sie_id: str) -> list[list]:
     r = get(SIE_CHART, params={"s": f"{sie_id},CF300,1", "versionSerie": "LA-MAS-RECIENTE", "l": "es"}, timeout=120)
-    return [[v[0][:10], float(v[1])] for v in r.json().get("valores") or [] if v[1] is not None]
+    return [[v[0][:10], float(v[1])] for v in r.json().get("valores") or [] if v[1] is not None and float(v[1]) > NO_DATA + 1]
 
 
 def _write(fetch, source: str, how: str) -> list[str]:

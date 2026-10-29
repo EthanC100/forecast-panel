@@ -117,7 +117,39 @@ def focus() -> list[str]:
                            "source": "BCB Focus (Olinda)", "source_id": f"ExpectativasMercadoAnuais/{indicator}/baseCalculo=0",
                            "source_url": FOCUS_URL, "fields": FOCUS_FIELDS, "key": ["date", "ref"]}, rows, key_len=2)
         written.append(sid)
+    written.append(focus_meetings())
     return written
+
+
+FOCUS_SELIC_URL = "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic"
+
+
+def focus_meetings() -> str:
+    """Focus Selic expectation for each Copom meeting ("R5/2026" = fifth meeting of 2026), from 2004.
+    Key = (survey date, meeting); fields as the annual table. Dispersion before a meeting feeds the
+    Crowd page's survey-dispersion gauge and its lab test."""
+    sid = "br.focus.selic_meeting"
+    last = store.last_key(sid)
+    flt = "baseCalculo eq 0"
+    if last:
+        flt += f" and Data ge '{(dt.date.fromisoformat(last) - dt.timedelta(days=14)).isoformat()}'"
+    rows, skip = [], 0
+    while True:
+        qs = "&".join(k + "=" + quote(str(v), safe="',") for k, v in {
+            "$filter": flt, "$format": "json", "$top": 10000, "$skip": skip, "$orderby": "Data asc",
+            "$select": "Data,Reuniao,Media,Mediana,DesvioPadrao,Minimo,Maximo,numeroRespondentes"}.items())
+        vals = get(f"{FOCUS_SELIC_URL}?{qs}", timeout=180).json().get("value", [])
+        for v in vals:
+            rows.append([v["Data"][:10], v["Reuniao"], v.get("Mediana"), v.get("Media"), v.get("DesvioPadrao"),
+                         v.get("Minimo"), v.get("Maximo"), v.get("numeroRespondentes")])
+        if len(vals) < 10000:
+            break
+        skip += 10000
+    store.save_series({"id": sid, "name": "Focus: Selic expected at each Copom meeting", "country": "BR", "unit": "% p.a.",
+                       "frequency": "daily (business days)", "source": "BCB Focus (Olinda)",
+                       "source_id": "ExpectativasMercadoSelic/baseCalculo=0", "source_url": FOCUS_SELIC_URL,
+                       "fields": FOCUS_FIELDS, "key": ["date", "meeting"]}, rows, key_len=2)
+    return sid
 
 
 # --------------------------------------------------------------------------
