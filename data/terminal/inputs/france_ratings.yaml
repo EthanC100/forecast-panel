@@ -4,5 +4,8 @@ as_of: 2026-10-29
 source: "https://www.aft.gouv.fr/en/frances-credit-ratings"
 ratings:
   - {agency: "S&P Global", rating: "A+", outlook: "stable", last_action: "2026-05-29 (affirmed); downgraded from AA- on 2025-10-17", next_review: "2026-11-27", verified: false}
-  - {agency: "Fitch", rating: "A+", outlook: "stable", last_action: "2026-08-28 (affirmed)", next_review: null, verified: false}
-  - {agency: "Moody's", rating: "Aa3", outlook: "negative (check the 23 Oct 2026 review)", last_action: "2026-10-23 review reported as unchanged; outlook reported inconsistently", next_review: null, verified: false}
+  - {agency: "Fitch", rating: "A+", outlook: "stable", last_action: "2026-08-28 (per the AFT table)", next_review: null, verified: true}
+  - {agency: "DBRS", rating: "AA", outlook: "negative", last_action: "2026-09-18 (per the AFT table)", next_review: null, verified: true}
+  - {agency: "KBRA", rating: "AA-", outlook: "stable", last_action: "2026-06-12 (per the AFT table)", next_review: "2026-12-11", verified: true}
+  - {agency: "Scope", rating: "A+", outlook: "stable", last_action: "2026-09-18 (per the AFT table)", next_review: null, verified: true}
+  - {agency: "Moody's", rating: "Aa3", outlook: "negative", last_action: "2026-10-23 (per the AFT table)", next_review: null, verified: true}

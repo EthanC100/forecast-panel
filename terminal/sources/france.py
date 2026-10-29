@@ -4,6 +4,7 @@ long-term rates (fallback), Bundesbank daily Bund, AFT credit ratings table."""
 from __future__ import annotations
 
 import csv
+import html as html_lib
 import io
 import re
 
@@ -130,7 +131,7 @@ def parse_aft_ratings(html: str) -> list[dict]:
     """Rows of the AFT ratings table: agency, rating, outlook and dates where the table has them."""
     out = []
     for row in re.findall(r"<tr[^>]*>(.*?)</tr>", html, flags=re.S | re.I):
-        cells = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", c)).strip()
+        cells = [html_lib.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", c))).strip()
                  for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, flags=re.S | re.I)]
         if not cells or not any(a.lower() in cells[0].lower() for a in AGENCIES):
             continue

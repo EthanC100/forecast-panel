@@ -317,6 +317,26 @@ def score_events(events: list[dict], att: dict) -> None:
 # --------------------------------------------------------------------------
 
 
+def rating_reviews(notes: list[str]) -> list[dict]:
+    """France rating reviews from the AFT table's 'next review' column (when it has been fetched)."""
+    s = store.load_series("fr.ratings.aft")
+    if not s or not s.get("history"):
+        return []
+    last = s["history"][-1][0]
+    out = []
+    for r in (x for x in s["history"] if x[0] == last):
+        agency, cells = r[1], r[2] or []
+        nxt = cells[3] if len(cells) > 3 else None
+        try:
+            d = dt.datetime.strptime(nxt, "%d %B %Y").date()
+        except (TypeError, ValueError):
+            continue
+        out.append(ev(d, "FR", "ratings", f"{agency} sovereign rating review: France", 3, "confirmed", s["source_url"],
+                      f'"{agency.split()[0]}" France rating', note=f"Next review date from the AFT ratings table (fetched {last}).",
+                      origin="aft"))
+    return out
+
+
 def build(attention: bool = True) -> dict:
     notes: list[str] = []
     cfg = yaml.safe_load(EVENTS_YAML.read_text())
@@ -324,7 +344,7 @@ def build(attention: bool = True) -> dict:
     horizon = today + dt.timedelta(days=366)
     manual = [ev(e["date"], e["country"], e["type"], e["title"], e["importance"], e["status"], e.get("source", ""),
                  e.get("query", ""), e.get("note", "")) for e in cfg.get("events", [])]
-    events = manual + official_meetings(notes) + recurring(today, horizon)
+    events = manual + official_meetings(notes) + rating_reviews(notes) + recurring(today, horizon)
     seen, future = set(), []
     for e in sorted(events, key=lambda e: (e["date"], e["country"], -e["importance"])):
         if e["id"] in seen or not (today.isoformat() <= e["date"] <= horizon.isoformat()):

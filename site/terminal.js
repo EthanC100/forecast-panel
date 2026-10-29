@@ -300,7 +300,7 @@
     if (c.ratings) {
       const r = c.ratings, t = el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "agency"), el("th", {}, "rating"), el("th", {}, "outlook"), el("th", {}, "last action"), el("th", {}, "next review"))));
       const tb = el("tbody");
-      r.rows.forEach((x) => tb.appendChild(r.origin === "aft" ? el("tr", {}, el("td", {}, x.agency), el("td", { colspan: 4 }, (x.cells || []).join(" · ")))
+      r.rows.forEach((x) => tb.appendChild(r.origin === "aft" ? el("tr", {}, el("td", {}, x.agency), el("td", {}, el("b", {}, (x.cells || [])[0] || "–")), el("td", {}, (x.cells || [])[1] || "–"), el("td", { class: "small" }, (x.cells || [])[2] || "–"), el("td", {}, (x.cells || [])[3] || "–"))
         : el("tr", {}, el("td", {}, x.agency), el("td", {}, el("b", {}, x.rating)), el("td", {}, x.outlook || "–"), el("td", { class: "small" }, x.last_action || "–"), el("td", {}, x.next_review || "–", x.verified ? null : el("span", { class: "chip est", style: "margin-left:4px" }, "to verify")))));
       t.appendChild(tb);
       f.append(el("div", { class: "sec" }, el("h2", {}, "Credit ratings")), el("article", { class: "card" }, el("div", { class: "scroll" }, t), meta(r.meta)));

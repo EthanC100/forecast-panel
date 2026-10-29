@@ -117,10 +117,10 @@ def test_kalshi_country_filter_and_dollars():
 def test_webstat_csv_parser_and_aft_table():
     rows = france._parse_date_value_csv('time_period_start;obs_value\n"2026-10-27";3,45\n2026-10-28;3.47\nnoise')
     assert rows == [["2026-10-27", 3.45], ["2026-10-28", 3.47]]
-    html = ("<table><tr><th>Agency</th><th>Rating</th></tr><tr><td>Fitch Ratings</td><td>A+</td><td>Stable</td>"
+    html = ("<table><tr><th>Agency</th><th>Rating</th></tr><tr><td>S&amp;P Global</td><td>A+</td></tr><tr><td>Fitch Ratings</td><td>A+</td><td>Stable</td>"
             "<td>28/08/2026</td></tr><tr><td>Moody's</td><td>Aa3</td><td>Negative</td></tr></table>")
     out = france.parse_aft_ratings(html)
-    assert [r["agency"] for r in out] == ["Fitch Ratings", "Moody's"] and out[0]["dates"] == ["28/08/2026"]
+    assert [r["agency"] for r in out] == ["S&P Global", "Fitch Ratings", "Moody's"] and out[1]["dates"] == ["28/08/2026"]
 
 
 def test_evidence_lookup_prefix():
