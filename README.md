@@ -94,15 +94,19 @@ your probability in 5% steps, and **Resolve** for questions that cannot resolve 
 * **Bonds, DI and the spread**: P&L is −direction × notional × duration × change in yield. Long
   means long the bond, which gains when the yield falls. For OAT-Bund, long means long OAT against
   Bund, which gains when the spread narrows. Bond and spread positions earn no carry or roll-down.
-* **Duration** is 8 years for every 10-year position: US, France-Germany, Brazil and Mexico. Brazil's
-  and Mexico's high-coupon bonds are nearer 5-6 years, so edit it if you prefer. DI proxies are
-  zero-coupon: duration is years to maturity / (1 + yield), fixed at entry.
+* **Duration** is 8 years for the US 10-year and the France-Germany spread, and 5.5 years for
+  Brazil's and Mexico's 10-year positions. Brazil's NTN-F and Mexico's Mbonos pay coupons near
+  10-13% and yield 9-15%, so their modified duration is about 5-6 years, not the 8 of a low-coupon US
+  or euro bond; using 8 would overstate their P&L by about 45%. DI proxies are zero-coupon: duration
+  is years to maturity / (1 + yield), fixed at entry.
 * **Costs** are a full round trip charged at entry, so open P&L is liquidation value. FX costs
   0.075% (range 0.05-0.10%). Bonds cost 2 bp, the US 10-year 1 bp and the Mexico 10-year 3 bp.
 * **Fills**: each instrument has the time its daily value is published (`close_utc`). Entry and exit
   are the first close whose date plus that time is after the submission. Mexico 10-year is low
   frequency (auction yields about monthly), so its fills and stops can lag by weeks. While Webstat is
-  not configured, the France spread falls back to the ECB monthly series.
+  not configured, the France spread falls back to the ECB monthly series and the fill carries a
+  warning; once Webstat succeeds, new trades fill on the daily series and open trades keep the series
+  they were filled on.
 * **DI Jan-27/29/31 are proxies** until B3 is reachable. They use Tesouro's zero-coupon Tesouro
   Prefixado (LTN) bonds maturing on the same January dates, labelled "proxy". These are retail quotes:
   the mid of the morning buy and sell rates, not the end-of-day DI settlement. LTN usually yields a
@@ -143,6 +147,15 @@ end by calling `pages.yml`. A push that changes `site/` also redeploys.
 it is skipped and marked red on the Status page with the error, and everything else keeps
 working. Tiles whose source failed say so and link to Status. A fallback only runs when its
 primary did not succeed.
+
+**Degraded data.** Until the `BANXICO_TOKEN`, `FRED_API_KEY` and `WEBSTAT_CLIENT_ID` secrets are
+added, the keyless backups run instead (Banxico's public chart endpoint, FRED's graph CSV, the ECB's
+monthly French and German yields), and B3's DI curve is proxied by Tesouro LTN bonds. Every number
+built on a substitute carries an amber **degraded** chip, and the Status page lists what is
+degraded, why and how to fix it (`terminal/degraded.py`). Every feature lists its series best-first,
+so when a secret is added the next data run writes the better series and tiles, charts, the book,
+scenario calculators and crowd gauges switch to it with no edits. Add a secret under Settings >
+Secrets and variables > Actions > New repository secret.
 
 ## Sources
 

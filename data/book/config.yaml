@@ -10,7 +10,7 @@ assumptions:
   - "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t."
   - "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it. Policy rates stand in for deposit rates."
   - "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows)."
-  - "Duration: about 8 years for every 10-year position (US, France-Germany spread, Brazil and Mexico 10-year). Brazil's and Mexico's high-coupon 10-year bonds are nearer 5-6 years; edit `duration` to change it. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry."
+  - "Duration: 8 years for the US 10-year and the France-Germany spread, 5.5 years for Brazil's and Mexico's 10-year positions. Brazil's NTN-F and Mexico's Mbonos pay coupons near 10-13% (and yield 9-15%), so their modified duration is about 5-6 years, not the 8 of a low-coupon US or euro bond; using 8 would overstate their P&L by about 45%. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry."
   - "No carry or roll-down on bond and spread positions."
   - "Costs are a full round trip charged at entry, so open P&L is liquidation value: FX a percentage of notional, bonds a yield amount times duration times notional."
   - "Sizing by risk: notional = risk amount / loss per unit of notional between the entry close and the stop (costs excluded)."
@@ -40,7 +40,7 @@ instruments:
     kind: spread_bp
     series: [fr.spread.oat_bund, fr.spread.oat_bund.ecb_m]
     close_utc: "17:30"
-    duration: 8
+    duration: 8                   # low-coupon OAT/Bund 10-year: ~8-9 years
     cost_round_trip_bp: 2
     note: "Long = long OAT, short Bund: gains when the spread narrows. Falls back to the ECB monthly spread (low frequency) until Webstat is configured."
   BR10Y:
@@ -49,7 +49,7 @@ instruments:
     kind: yield
     series: [br.td.pre_longest]
     close_utc: "13:00"            # Tesouro Direto morning rates
-    duration: 8
+    duration: 5.5                 # high-coupon NTN-F at ~15%: modified duration ~5-6 years, not 8
     cost_round_trip_bp: 2
     note: "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged."
   DI27:
@@ -85,7 +85,7 @@ instruments:
     kind: yield
     series: [mx.mbono10y.auction, mx.10y.oecd_m]
     close_utc: "18:00"
-    duration: 8
+    duration: 5.5                 # Mbono 10y, coupon ~8-9% at ~9% yield: modified duration ~5.5-6.5 years
     cost_round_trip_bp: 3
     low_frequency: true
     note: "Only marked when a 10-year auction (about monthly) or the OECD monthly figure prints: fills, stops and marks can lag by weeks."
@@ -95,5 +95,5 @@ instruments:
     kind: yield
     series: [us.ust10y]
     close_utc: "21:00"
-    duration: 8
+    duration: 8                   # on-the-run 10-year Treasury: ~8 years
     cost_round_trip_bp: 1

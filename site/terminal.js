@@ -55,7 +55,10 @@
     return el("div", { class: "meta" },
       el("span", { class: "dot " + f.cls, role: "img", "aria-label": "freshness: " + f.label, title: "Freshness: " + f.label }),
       src, m.source_id && !(opts && opts.noId) ? el("span", { class: "tiny" }, m.source_id.length > 60 ? m.source_id.slice(0, 57) + "…" : m.source_id) : null,
-      el("span", {}, "as of " + asOf), badge(m.evidence));
+      el("span", {}, "as of " + asOf), badge(m.evidence), degradedChip(m.degraded));
+  }
+  function degradedChip(d) {
+    return d ? el("a", { class: "chip deg", href: "#status", title: d.effect + " Fix: " + d.upgrade }, "degraded") : null;
   }
 
   // ---------------- chart (SVG line, crosshair tooltip, data table) ----------------
@@ -340,6 +343,14 @@
   function pageStatus() {
     const st = S.summary.status.sources || {}, f = el("div");
     f.append(el("div", { class: "sec" }, el("h1", {}, "Source status"), el("span", { class: "tiny" }, "updated " + (S.summary.status.updated_at || ""))));
+    const deg = S.summary.degraded || [];
+    f.append(el("article", { class: "card" }, el("h2", {}, "Running on substitute data (" + deg.length + ")"),
+      deg.length ? el("div", {}, ...deg.map((d) => el("div", { class: "degrow" },
+        el("div", {}, el("span", { class: "chip deg" }, "degraded"), " ", el("b", {}, d.features)),
+        el("div", { class: "small" }, "Using " + (d.fallback_name || "a fallback") + " because " + d.primary + " is " + String(d.primary_state).replace("_", " ") + ". " + d.effect),
+        el("div", { class: "small" }, el("b", {}, "To upgrade: "), d.upgrade + "."))))
+        : el("p", { class: "small" }, "Every feature is on its preferred source."),
+      el("p", { class: "tiny" }, "Features list their sources best-first, so they switch to the better data on the first run after it appears; nothing needs editing.")));
     const rows = Object.entries(st).sort((a, b) => (a[1].country || "").localeCompare(b[1].country || "") || a[0].localeCompare(b[0]));
     const t = el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "source"), el("th", {}, "state"), el("th", {}, "last success"), el("th", {}, "last attempt"), el("th", {}, "detail"))));
     const tb = el("tbody");

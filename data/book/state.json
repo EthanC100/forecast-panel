@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T14:49:04Z",
+ "generated_at": "2026-10-29T15:28:54Z",
  "as_of": "2026-10-29",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
@@ -8,7 +8,7 @@
   "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t.",
   "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it. Policy rates stand in for deposit rates.",
   "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows).",
-  "Duration: about 8 years for every 10-year position (US, France-Germany spread, Brazil and Mexico 10-year). Brazil's and Mexico's high-coupon 10-year bonds are nearer 5-6 years; edit `duration` to change it. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry.",
+  "Duration: 8 years for the US 10-year and the France-Germany spread, 5.5 years for Brazil's and Mexico's 10-year positions. Brazil's NTN-F and Mexico's Mbonos pay coupons near 10-13% (and yield 9-15%), so their modified duration is about 5-6 years, not the 8 of a low-coupon US or euro bond; using 8 would overstate their P&L by about 45%. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry.",
   "No carry or roll-down on bond and spread positions.",
   "Costs are a full round trip charged at entry, so open P&L is liquidation value: FX a percentage of notional, bonds a yield amount times duration times notional.",
   "Sizing by risk: notional = risk amount / loss per unit of notional between the entry close and the stop (costs excluded)."
@@ -26,6 +26,7 @@
    "close_utc": "16:30",
    "low_frequency": false,
    "note": null,
+   "degraded": null,
    "duration": null,
    "cost": 0.075,
    "cost_unit": "% of notional"
@@ -41,6 +42,11 @@
    "close_utc": "18:30",
    "low_frequency": false,
    "note": null,
+   "degraded": {
+    "id": "banxico",
+    "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+    "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+   },
    "duration": null,
    "cost": 0.075,
    "cost_unit": "% of notional"
@@ -56,6 +62,11 @@
    "close_utc": "17:30",
    "low_frequency": false,
    "note": "Long = long OAT, short Bund: gains when the spread narrows. Falls back to the ECB monthly spread (low frequency) until Webstat is configured.",
+   "degraded": {
+    "id": "webstat",
+    "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+    "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+   },
    "duration": 8,
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -71,7 +82,8 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged.",
-   "duration": 8,
+   "degraded": null,
+   "duration": 5.5,
    "cost": 2,
    "cost_unit": "bp of yield"
   },
@@ -86,6 +98,11 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
+   "degraded": {
+    "id": "b3",
+    "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+    "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
+   },
    "duration": "zero_coupon",
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -101,6 +118,11 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
+   "degraded": {
+    "id": "b3",
+    "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+    "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
+   },
    "duration": "zero_coupon",
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -116,6 +138,11 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
+   "degraded": {
+    "id": "b3",
+    "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+    "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
+   },
    "duration": "zero_coupon",
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -131,7 +158,12 @@
    "close_utc": "18:00",
    "low_frequency": true,
    "note": "Only marked when a 10-year auction (about monthly) or the OECD monthly figure prints: fills, stops and marks can lag by weeks.",
-   "duration": 8,
+   "degraded": {
+    "id": "banxico",
+    "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+    "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+   },
+   "duration": 5.5,
    "cost": 3,
    "cost_unit": "bp of yield"
   },
@@ -146,6 +178,11 @@
    "close_utc": "21:00",
    "low_frequency": false,
    "note": null,
+   "degraded": {
+    "id": "fred",
+    "effect": "Same FRED series, read from the public fredgraph.csv download. Values are identical; there is no vintage/revision metadata and the endpoint is rate-limited more tightly.",
+    "upgrade": "add the FRED_API_KEY secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+   },
    "duration": 8,
    "cost": 1,
    "cost_unit": "bp of yield"
@@ -233,8 +270,8 @@
    "last_12m": {
     "from": "2025-10-29",
     "to": "2026-10-28",
-    "pnl_usd": -9280.0,
-    "return_pct": -9.28
+    "pnl_usd": -6380.0,
+    "return_pct": -6.38
    }
   },
   {
@@ -289,8 +326,8 @@
    "last_12m": {
     "from": "2025-11-27",
     "to": "2026-10-22",
-    "pnl_usd": -2320.0,
-    "return_pct": -2.32
+    "pnl_usd": -1595.0,
+    "return_pct": -1.59
    }
   },
   {

@@ -23,7 +23,7 @@ from pathlib import Path
 
 import yaml
 
-from terminal import store
+from terminal import degraded, store
 from terminal.http import get
 
 log = logging.getLogger(__name__)
@@ -241,6 +241,9 @@ def make_fill(cfg: dict, op: dict, inst: Instrument, close: tuple[str, float], e
         warnings.append("low-frequency instrument: marks, stops and exits can lag by weeks")
     if inst.series and inst.series.get("proxy"):
         warnings.append("marked on a proxy series: " + inst.series["name"])
+    if inst.series and inst.series.get("frequency") == "monthly" and not inst.cfg.get("low_frequency"):
+        warnings.append(f"marked on monthly data ({inst.series['name']}) because the daily source is unavailable; "
+                        "stops and targets are checked once a month for this trade")
     return {"type": "fill", "trade_id": op["trade_id"], "instrument": op["instrument"], "direction_sign": sign,
             "entry_date": date, "entry_value": v0, "entry_close_utc": inst.close_dt(date).isoformat(),
             "series_used": inst.series_id, "duration": dur, "notional_usd": round(notional, 2),
@@ -453,6 +456,7 @@ def build(today: str | None = None) -> dict:
     open_ = [v for v in views if v["status"] == "open"]
     risk = sum(v.get("risk_to_stop_now", 0) for v in open_)
     latest = {}
+    deg_rules = degraded.active()
     for code, icfg in cfg["instruments"].items():
         inst = Instrument(code, icfg)
         last = inst.latest()
@@ -460,6 +464,7 @@ def build(today: str | None = None) -> dict:
                         "proxy": bool(inst.series and inst.series.get("proxy")), "value": last[1] if last else None,
                         "date": last[0] if last else None, "close_utc": icfg.get("close_utc"),
                         "low_frequency": bool(icfg.get("low_frequency")), "note": icfg.get("note"),
+                        "degraded": degraded.for_series(inst.series_id, deg_rules),
                         "duration": icfg.get("duration"), "cost": icfg.get("cost_round_trip_pct", icfg.get("cost_round_trip_bp")),
                         "cost_unit": "% of notional" if icfg["kind"] == "fx" else "bp of yield"}
     state = {

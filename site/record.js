@@ -110,7 +110,7 @@
       meta({ source: "stored daily closes", as_of: b.as_of, evidence: { badge: "context", reason: "Benchmarks for the paper book." } }, { noId: true })));
     f.append(el("details", { style: "margin-top:10px" }, el("summary", {}, "Assumptions (data/book/config.yaml)"), el("ul", { class: "small muted" }, ...(b.assumptions || []).map((a) => el("li", {}, a))),
       tableOf(["code", "instrument", "series", "duration", "round-trip cost", "close (UTC)"], Object.entries(b.instruments).map(([k, i]) => el("tr", {}, el("td", {}, k), el("td", {}, i.name, i.low_frequency ? el("span", { class: "chip est", style: "margin-left:4px" }, "low frequency") : null),
-        el("td", { class: "small" }, i.series + (i.proxy ? " (proxy)" : "")), el("td", {}, i.duration == null ? "–" : String(i.duration)), el("td", {}, i.cost + " " + i.cost_unit), el("td", {}, i.close_utc || "–"))))));
+        el("td", { class: "small" }, i.series + (i.proxy ? " (proxy)" : ""), i.degraded ? el("a", { class: "chip deg", style: "margin-left:4px", href: "#status", title: i.degraded.effect }, "degraded") : null), el("td", {}, i.duration == null ? "–" : String(i.duration)), el("td", {}, i.cost + " " + i.cost_unit), el("td", {}, i.close_utc || "–"))))));
     return f;
   }
 

@@ -14,7 +14,7 @@ import statistics
 
 import yaml
 
-from terminal import store
+from terminal import degraded, store
 
 SUMMARY_PATH = store.DATA / "summary.json"
 
@@ -53,6 +53,7 @@ def _yaml(name: str) -> dict:
 
 
 EVIDENCE = None
+DEGRADED: list[dict] = []
 
 
 def evidence(key: str) -> dict:
@@ -70,6 +71,9 @@ def meta_of(s: dict, as_of: str | None = None, **extra) -> dict:
     m = {"source": s.get("source"), "source_id": s.get("source_id"), "source_url": s.get("source_url"),
          "as_of": as_of or s.get("last"), "fetched_at": s.get("fetched_at"), "frequency": s.get("frequency"),
          "series": s.get("id"), "evidence": evidence(s.get("id", ""))}
+    deg = degraded.for_series(s.get("id"), DEGRADED)
+    if deg:
+        m["degraded"] = deg
     m.update(extra)
     return m
 
@@ -288,7 +292,9 @@ def chart_list(groups: list[list[str]]) -> list[dict]:
 
 
 def build() -> dict:
+    global DEGRADED
     status = store.load_status()
+    DEGRADED = degraded.active(status)
     cal = json.loads((store.DATA / "calendar.json").read_text()) if (store.DATA / "calendar.json").exists() else {"events": []}
     today = dt.date.today().isoformat()
     upcoming = [e for e in cal.get("events", []) if e["date"] >= today]
@@ -303,6 +309,8 @@ def build() -> dict:
     countries["FR"]["ratings"] = ratings_block()
     out = {"generated_at": store.now_iso(), "tiles": tiles(status), "next_catalysts": nxt,
            "countries": countries, "status": status,
+           "degraded": [{k: r[k] for k in ("id", "features", "effect", "upgrade", "secret", "primary", "primary_state",
+                                           "fallback_name", "fallback_state")} for r in DEGRADED],
            "evidence_legend": {"tested_leads": "Tested-leads", "tested_no_lead": "Tested-no-lead",
                                "untested": "Untested", "context": "Context"},
            "evidence_defaults": {k: evidence(k) for k in ("countdown", "attention", "fiscal_gap", "ratings")}}

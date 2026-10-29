@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T14:49:06Z",
+ "generated_at": "2026-10-29T15:28:54Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -64,6 +64,11 @@
      "badge": "untested",
      "reason": "Primary Mexico instrument. Same as USD/BRL: reaction to events tested in em-macro, no lead test."
     },
+    "degraded": {
+     "id": "banxico",
+     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+    },
     "note": null
    }
   },
@@ -98,6 +103,11 @@
     "evidence": {
      "badge": "untested",
      "reason": "DI futures curve; not tested as a signal."
+    },
+    "degraded": {
+     "id": "b3",
+     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+     "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
     },
     "note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not."
    }
@@ -134,6 +144,11 @@
      "badge": "untested",
      "reason": "DI futures curve; not tested as a signal."
     },
+    "degraded": {
+     "id": "b3",
+     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+     "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
+    },
     "note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not."
    }
   },
@@ -168,6 +183,11 @@
     "evidence": {
      "badge": "untested",
      "reason": "DI futures curve; not tested as a signal."
+    },
+    "degraded": {
+     "id": "b3",
+     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+     "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
     },
     "note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not."
    }
@@ -236,6 +256,11 @@
      "badge": "untested",
      "reason": "OAT-Bund spread; not tested as a signal."
     },
+    "degraded": {
+     "id": "webstat",
+     "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+     "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
+    },
     "note": "fallback: France-Germany 10-year spread (ECB, monthly) (monthly); the preferred daily series is not available"
    }
   },
@@ -268,6 +293,11 @@
     "evidence": {
      "badge": "context",
      "reason": "Global rates backdrop."
+    },
+    "degraded": {
+     "id": "fred",
+     "effect": "Same FRED series, read from the public fredgraph.csv download. Values are identical; there is no vintage/revision metadata and the endpoint is rate-limited more tightly.",
+     "upgrade": "add the FRED_API_KEY secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "note": null
    }
@@ -302,6 +332,11 @@
     "evidence": {
      "badge": "context",
      "reason": "Mexico's bond yield is context only; the peso is the primary instrument."
+    },
+    "degraded": {
+     "id": "banxico",
+     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "note": null
    }
@@ -386,6 +421,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "OAT-Bund spread; not tested as a signal."
+      },
+      "degraded": {
+       "id": "webstat",
+       "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+       "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -407,6 +447,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "France 10-year yield; not tested as a signal."
+      },
+      "degraded": {
+       "id": "webstat",
+       "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+       "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -874,6 +919,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "DI futures curve; not tested as a signal."
+      },
+      "degraded": {
+       "id": "b3",
+       "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+       "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
       }
      }
     },
@@ -895,6 +945,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "DI futures curve; not tested as a signal."
+      },
+      "degraded": {
+       "id": "b3",
+       "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+       "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
       }
      }
     },
@@ -916,6 +971,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "DI futures curve; not tested as a signal."
+      },
+      "degraded": {
+       "id": "b3",
+       "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+       "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
       }
      }
     },
@@ -1688,6 +1748,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "Primary Mexico instrument. Same as USD/BRL: reaction to events tested in em-macro, no lead test."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -1709,6 +1774,11 @@
       "evidence": {
        "badge": "context",
        "reason": "Policy rate level."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -1730,6 +1800,11 @@
       "evidence": {
        "badge": "context",
        "reason": "Interbank rate level."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -1751,6 +1826,11 @@
       "evidence": {
        "badge": "context",
        "reason": "Mexico's bond yield is context only; the peso is the primary instrument."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     }
@@ -1830,6 +1910,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "%",
@@ -1868,6 +1953,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "%",
@@ -1906,6 +1996,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "MXN per USD",
@@ -1944,6 +2039,11 @@
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "% of GDP",
@@ -2776,6 +2876,52 @@
   },
   "updated_at": "2026-10-29T14:19:06Z"
  },
+ "degraded": [
+  {
+   "id": "banxico",
+   "features": "USD/MXN FIX, Banxico target rate, TIIE 28d, Mbono 10y auction yield, Banxico survey (country page, USDMXN and MX10Y in the book, Crowd survey dispersion)",
+   "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+   "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself",
+   "secret": "BANXICO_TOKEN",
+   "primary": "banxico_api",
+   "primary_state": "missing_secret",
+   "fallback_name": "Banxico SIE public chart data (fallback)",
+   "fallback_state": "ok"
+  },
+  {
+   "id": "fred",
+   "features": "US 10-year, broad dollar, fed funds (carry in the book), OECD Mexico 10y",
+   "effect": "Same FRED series, read from the public fredgraph.csv download. Values are identical; there is no vintage/revision metadata and the endpoint is rate-limited more tightly.",
+   "upgrade": "add the FRED_API_KEY secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself",
+   "secret": "FRED_API_KEY",
+   "primary": "fred_api",
+   "primary_state": "missing_secret",
+   "fallback_name": "FRED public graph CSV (fallback)",
+   "fallback_state": "ok"
+  },
+  {
+   "id": "webstat",
+   "features": "France OAT-Bund spread and OAT 10y (Today tile, France page, OATBUND in the book, scenario calculators)",
+   "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+   "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself",
+   "secret": "WEBSTAT_CLIENT_ID",
+   "primary": "webstat",
+   "primary_state": "missing_secret",
+   "fallback_name": "ECB monthly long-term rates (FR, DE)",
+   "fallback_state": "ok"
+  },
+  {
+   "id": "b3",
+   "features": "Brazil DI Jan-27/29/31 (Today tiles, Brazil page, DI trades in the book)",
+   "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
+   "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers",
+   "secret": null,
+   "primary": "b3_di",
+   "primary_state": "error",
+   "fallback_name": "Tesouro Direto daily CSV",
+   "fallback_state": "ok"
+  }
+ ],
  "evidence_legend": {
   "tested_leads": "Tested-leads",
   "tested_no_lead": "Tested-no-lead",

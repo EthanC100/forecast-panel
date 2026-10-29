@@ -130,3 +130,24 @@ def test_evidence_lookup_prefix():
     assert summary.evidence("pm.12345")["badge"] == "tested_no_lead"
     assert summary.evidence("zz.unknown")["badge"] == "untested"
     summary.EVIDENCE = None
+
+
+def test_degraded_then_upgrades_when_primary_appears(tmp_store):
+    from terminal import degraded
+    monthly = {"id": "fr.spread.oat_bund.ecb_m", "name": "spread (ECB monthly)", "frequency": "monthly"}
+    store.save_series(monthly, [["2026-08-31", 80.0], ["2026-09-30", 82.0]])
+    status = {"sources": {"webstat": {"state": "missing_secret"}, "ecb_monthly": {"state": "ok"},
+                          "banxico_api": {"state": "ok"}, "fred_api": {"state": "ok"}, "b3_di": {"state": "ok"}}}
+    rules = degraded.active(status)
+    assert [r["id"] for r in rules] == ["webstat"] and "WEBSTAT_CLIENT_ID" in rules[0]["upgrade"]
+    s, fallback = summary.first_series(["fr.spread.oat_bund", "fr.spread.oat_bund.ecb_m"])
+    assert fallback and degraded.for_series(s["id"], rules)["id"] == "webstat"
+    # the secret is added: Webstat succeeds and writes the daily series; nothing else changes
+    store.save_series({"id": "fr.spread.oat_bund", "name": "spread (daily)", "frequency": "daily"},
+                      [["2026-10-27", 79.0], ["2026-10-28", 78.5]])
+    status["sources"]["webstat"]["state"] = "ok"
+    rules = degraded.active(status)
+    s, fallback = summary.first_series(["fr.spread.oat_bund", "fr.spread.oat_bund.ecb_m"])
+    assert s["id"] == "fr.spread.oat_bund" and not fallback and rules == []
+    assert degraded.for_series("mx.survey.inflation", degraded.active({"sources": {}}))["id"] == "banxico"
+    assert degraded.for_series("mx.cot.mxn", degraded.active({"sources": {}})) is None
