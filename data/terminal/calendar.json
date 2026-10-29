@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T14:13:45Z",
+ "generated_at": "2026-10-29T14:19:06Z",
  "horizon": "2027-10-30",
  "events": [
   {
@@ -239,6 +239,21 @@
    "note": "Second day of the meeting; statement 14:00 ET.",
    "origin": "fed:scraped",
    "id": "2026-12-09-global-fomc-decision",
+   "attention": null,
+   "under_attended": false
+  },
+  {
+   "date": "2026-12-11",
+   "country": "FR",
+   "type": "ratings",
+   "title": "KBRA sovereign rating review: France",
+   "importance": 3,
+   "status": "confirmed",
+   "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
+   "query": "\"KBRA\" France rating",
+   "note": "Next review date from the AFT ratings table (fetched 2026-10-29).",
+   "origin": "aft",
+   "id": "2026-12-11-fr-kbra-sovereign-rating-review-france",
    "attention": null,
    "under_attended": false
   },

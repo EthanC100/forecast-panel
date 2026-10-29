@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T14:13:45Z",
+ "generated_at": "2026-10-29T14:19:23Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -628,6 +628,21 @@
      "note": "EU-regulated sovereign calendar date (Friday, after market close).",
      "origin": "manual",
      "id": "2026-11-27-fr-s-p-global-sovereign-rating-review-france",
+     "attention": null,
+     "under_attended": false
+    },
+    {
+     "date": "2026-12-11",
+     "country": "FR",
+     "type": "ratings",
+     "title": "KBRA sovereign rating review: France",
+     "importance": 3,
+     "status": "confirmed",
+     "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
+     "query": "\"KBRA\" France rating",
+     "note": "Next review date from the AFT ratings table (fetched 2026-10-29).",
+     "origin": "aft",
+     "id": "2026-12-11-fr-kbra-sovereign-rating-review-france",
      "attention": null,
      "under_attended": false
     },
@@ -2383,9 +2398,9 @@
     "country": "GLOBAL",
     "error": "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values.",
     "fallback_for": null,
-    "last_attempt": "2026-10-29T14:13:45Z",
+    "last_attempt": "2026-10-29T14:19:06Z",
     "last_success": "2026-10-29T14:00:06Z",
-    "n_series": 116,
+    "n_series": 117,
     "name": "Catalyst calendar (events.yaml, Fed, ECB, em-macro, GDELT)",
     "release": "daily",
     "secret": null,
@@ -2611,7 +2626,7 @@
     "state": "missing_secret"
    }
   },
-  "updated_at": "2026-10-29T14:13:45Z"
+  "updated_at": "2026-10-29T14:19:06Z"
  },
  "evidence_legend": {
   "tested_leads": "Tested-leads",

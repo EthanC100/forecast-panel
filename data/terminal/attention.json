@@ -87,7 +87,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -117,8 +117,13 @@
    "country": "BR",
    "history": [],
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+  },
+  "\"KBRA\" France rating": {
+   "country": "FR",
+   "history": [],
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-10-29T14:13:44Z",
+ "updated_at": "2026-10-29T14:19:06Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
