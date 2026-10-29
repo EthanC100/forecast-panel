@@ -1,10 +1,167 @@
-# forecast-panel
+# forecast-panel: macro research terminal
+
+A macro research terminal for **France, Brazil and Mexico**, published at
+**https://ethanc100.github.io/forecast-panel/**. The original forecast panel lives on under the
+**Lab** link (https://ethanc100.github.io/forecast-panel/lab/).
+
+This is **Phase 1 of 5: the data spine and the catalyst calendar.** Later phases add a paper
+trading book, judgement forms and scoring, scenario pages, a crowd-error monitor and an AI brief.
+Everything they need is already being stored: every price series keeps its full daily history,
+its upstream source and source ID, and fetch timestamps.
+
+## The site
+
+Mobile-first, light and dark mode, bottom navigation:
+
+| tab | what it shows |
+|---|---|
+| **Today** | The next three catalysts with countdowns. Instrument tiles for USD/BRL, USD/MXN, Brazil DI Jan-27/29/31, the Brazil 10-year proxy, the France OAT-Bund spread, US 10-year and Mexico 10-year (context), each with level, 1-week and 1-month change, and a z-score of the level against the past year. |
+| **Calendar** | Next 2 weeks, 3 months and 12 months. Each row: date, country, type, importance 1-3, confirmed or estimated, source, and a market-attention score with an under-attended flag. |
+| **Scenarios, Crowd, Record** | Placeholders for phases 2-5, listing the data already stored for them. |
+
+Also: a page per country (header links **FR / BR / MX**) and a **Status** page.
+
+Every number carries its **source** (linked, with the source ID), an **as-of** time, a
+**freshness dot** (green under 1 day old, amber under 1 week, red older) and an **evidence badge**:
+
+| badge | meaning |
+|---|---|
+| Tested-leads | tested in one of the research repos and found to lead its target |
+| Tested-no-lead | tested, and no lead was found (or it failed out of sample) |
+| Untested | not tested as a signal yet |
+| Context | background, not meant as a signal |
+
+Badges come from `data/terminal/inputs/evidence.yaml`, with the reason and the test behind each
+one (em-macro's hold-out and repricing sections, tension-index's validation). Hover a badge for its
+reason.
+
+**Country pages** show market charts (1 year and 5 years), the **fiscal optimism gap** (the
+official target against independent estimates, from an editable table), **expectations and
+positioning** (survey median, its dispersion as a percentile of 10 years of readings at the same
+horizon, and CFTC net positioning as a percentile of 3 years), France's credit ratings, and the
+most traded prediction markets.
+
+## Daily flow
+
+```
+weekdays 22:15 UTC (after the New York close)    terminal-data.yml: every source, then the calendar + GDELT attention
+release days                                      terminal-data.yml: just that source
+   Mon 12:20 UTC  BCB Focus survey                   Fri 20:40 UTC  CFTC Commitments of Traders
+   1st-3rd 19:10 UTC  Banxico survey                 8th-12th 12:30 UTC  IPCA inflation
+daily 06:17 UTC                                   panel.yml: the Lab's forecast snapshot (unchanged)
+          │
+          ▼
+python -m terminal.run fetch      -> data/terminal/series/<id>.json, data/terminal/status.json
+python -m terminal.run calendar   -> data/terminal/calendar.json, data/terminal/attention.json
+python -m terminal.run summary    -> data/terminal/summary.json
+          │  commit to main
+          ▼
+pages.yml copies data/terminal into site/data and deploys site/ to GitHub Pages
+```
+
+Both data workflows share one concurrency group, so they never push at the same time, and both
+end by calling `pages.yml`. A push that changes `site/` also redeploys.
+
+**Failure handling.** Each source runs on its own. If a source fails, or its secret is missing,
+it is skipped and marked red on the Status page with the error, and everything else keeps
+working. Tiles whose source failed say so and link to Status. A fallback only runs when its
+primary did not succeed.
+
+## Sources
+
+| key | source | what | needs | tested from the build sandbox |
+|---|---|---|---|---|
+| `bcb_sgs` | BCB SGS | Selic target (432), PTAX USD/BRL (1), IPCA m/m (433) and 12m (13522) | | yes |
+| `bcb_focus` | BCB Olinda Focus | annual expectations for IPCA, Selic, BRL, GDP, primary balance and net debt: median, mean, sd, min, max, respondents, every reference year | | yes |
+| `tesouro` | Tesouro Direto daily CSV | longest fixed-rate bond (10-year proxy) and longest IPCA+ bond; the bond used each day is stored | | yes |
+| `b3_di` | B3 reference rates (DI x pré) | DI1 Jan-27, Jan-29, Jan-31, interpolated on B3's daily curve; backfills 40 days per run to 2024 | | **no**: B3 times out from the sandbox; first verified on Actions |
+| `banxico_api` | Banxico SIE API | FIX USD/MXN, target rate, TIIE 28d, 10-year auction yield, private-sector survey (inflation, GDP, year-end peso, public balance: median and sd) | `BANXICO_TOKEN` | written to the documented API, **untested** (no token here) |
+| `banxico_public` | Banxico SIE public chart data | same series, keyless; runs only when the API did not | | yes |
+| `webstat` | Banque de France Webstat | daily OAT and Bund 10-year, and the daily spread | `WEBSTAT_CLIENT_ID` | **untested**: Webstat is unreachable from the sandbox and the series keys need confirming |
+| `ecb_monthly` | ECB Data Portal | France and Germany monthly 10-year yields and spread (the fallback for the spread tile) | | yes |
+| `bundesbank` | Bundesbank | daily Bund 10-year | | yes |
+| `aft_ratings` | Agence France Trésor | France credit ratings table | | **no**: AFT answers 403; the site shows `inputs/france_ratings.yaml` instead |
+| `fred_api` | FRED API | US 10-year (DGS10), broad dollar (DTWEXBGS), Mexico monthly 10-year | `FRED_API_KEY` | untested (no key here) |
+| `fred_public` | FRED graph CSV | same series, keyless fallback | | yes |
+| `cftc` | CFTC Commitments of Traders | BRL (102741) and MXN (095741) futures: leveraged funds, asset managers, dealers, non-commercial net, open interest | | yes |
+| `polymarket` | Polymarket | open markets tagged france, brazil, mexico (snapshot), plus full daily history for the top 15 per country | | yes |
+| `kalshi` | Kalshi | open politics, elections, economics, financials and world markets mentioning the three countries, plus daily history | | yes (history rate-limited from the sandbox) |
+| `calendar` | events.yaml, Fed, ECB, em-macro, GDELT | catalyst calendar and attention | | Fed, ECB and em-macro yes; GDELT partly (rate-limited) |
+
+Add the secrets under the repository's Settings > Secrets and variables > Actions. Until then
+those sources show red on the Status page and the keyless fallbacks carry the data.
+
+## Catalyst calendar
+
+* **Hand-sourced events** in `data/terminal/inputs/events.yaml`, each with a source URL and marked
+  **confirmed** (published by the institution or fixed in law) or **estimated** (from a rule or a
+  past pattern). These cover France (S&P review 27 Nov 2026, the Article 47 budget deadline, the
+  2027 presidential election), Brazil (Copom 2026-2027, the budget vote, the inauguration, the
+  2028 budget guidelines) and Mexico (Banxico 2026 confirmed and 2027 estimated, USMCA rounds,
+  consultation and the 1 Jul 2027 annual review, candidate registration, campaigns, the 6 Jun 2027
+  midterms).
+* **FOMC and ECB meetings** are scraped daily from federalreserve.gov and ecb.europa.eu.
+* **Recurring releases** are generated by rule: Focus every Monday, the Banxico survey on the first
+  business day of each month, and Brazil's bimonthly revenue and spending reports (by the 22nd).
+* **Past events**: Brazil and Mexico rate decisions and elections imported from EthanC100/em-macro.
+
+**Inauguration date.** Brazil's presidential inauguration is entered as **5 January 2027**, not 1
+January. Constitutional Amendment 111/2021 moved it, starting with the president elected in 2026.
+
+**Attention score.** For each event query, the share of all GDELT-monitored articles that match it
+over the last 30 days, divided by the median share across that country's event queries. 1.0 means
+the coverage this country's catalysts usually get. An event is **under-attended** when its
+importance is 3, its score is below 0.5 and it is 30 or more days away. Daily shares are kept in
+`attention.json`.
+
+## Editable tables
+
+| file | what |
+|---|---|
+| `data/terminal/inputs/events.yaml` | catalysts, with source and confirmed or estimated |
+| `data/terminal/inputs/fiscal_gap.yaml` | fiscal optimism gap: official target and independent estimates; survey medians fill in automatically |
+| `data/terminal/inputs/evidence.yaml` | evidence badge and reason for each series |
+| `data/terminal/inputs/france_ratings.yaml` | France ratings when the AFT table cannot be fetched |
+
+Values marked `verified: false` show a "to verify" chip until you check them against their source.
+
+## Running locally
+
+```
+pip install -e .[test]
+python -m terminal.run all          # fetch every source, build the calendar and the summary
+python -m terminal.run site         # copy data/terminal into site/data
+cd site && python -m http.server    # open http://localhost:8000
+pytest
+```
+
+Set `BANXICO_TOKEN`, `WEBSTAT_CLIENT_ID` and `FRED_API_KEY` in the environment to use those APIs.
+`python -m terminal.run fetch --only bcb_sgs,cftc` runs selected sources.
+
+## Data layout
+
+```
+data/terminal/series/<id>.json   metadata (source, source_id, source_url, unit, frequency, fetched_at,
+                                 updated_at) and the full history, one observation per line.
+                                 Histories are merged, never truncated.
+data/terminal/markets/           Polymarket and Kalshi snapshots
+data/terminal/status.json        every source: state, last attempt, last success, error, series written
+data/terminal/calendar.json      upcoming events and imported past events
+data/terminal/attention.json     GDELT share per query per day
+data/terminal/summary.json       what the site reads first
+terminal/                        the package: store, sources/, calendar, summary, run
+site/                            index.html, terminal.js, terminal.css (and lab/)
+```
+
+---
+
+# Lab: the forecast panel
 
 An aggregator of public forecasts on a fixed set of five geopolitical questions, logged daily,
 combined with a track-record-weighted and extremized aggregate, and scored against outcomes and
 against Polymarket.
 
-## The questions
+### The questions
 
 `data/tension_questions.yaml` is copied verbatim from
 [EthanC100/gold-events](https://github.com/EthanC100/gold-events) (`data/tension_questions.yaml`)
@@ -19,7 +176,7 @@ when they resolve, their outcomes. Keep it in sync with gold-events; do not edit
 | q4 | Sudan ceasefire agreed by 31 December 2026? | Sudan civil war ceasefire by December 31, 2026? |
 | q5 | US or Israeli strikes on Iranian territory resume by 31 March 2027? | Israel x Iran ceasefire continues through December 31? (inverted; no live market matches) |
 
-## Sources
+### Sources
 
 `data/source_map.yaml` maps each question to the non-Polymarket sources and records every wording
 mismatch; the snapshot copies those notes into the log.
@@ -36,10 +193,10 @@ mismatch; the snapshot copies those notes into the log.
 Every fetch failure is a NaN with the reason in the `notes` column, so one dead source never stops
 the snapshot.
 
-## Dashboard
+### Dashboard
 
 A static, mobile-friendly site built from this repo, gold-events, tension-index and em-macro:
-**https://ethanc100.github.io/forecast-panel/** (GitHub Pages, redeployed by the daily workflow).
+**https://ethanc100.github.io/forecast-panel/lab/** (GitHub Pages, redeployed by the daily workflow).
 
 Pages:
 
@@ -61,15 +218,15 @@ Pages:
   `results/risk_model/{fair_value,factors,similar_cases}.csv` (until then: "model not yet built").
 * **Indicators**: tension index (last 90 days) and the gold model's weekly expected move.
 
-### How to open it
+#### How to open it
 
-* On the web: https://ethanc100.github.io/forecast-panel/ (light/dark follows your device; the
+* On the web: https://ethanc100.github.io/forecast-panel/lab/ (light/dark follows your device; the
   header button overrides it).
-* Locally: `python build_site.py` writes `site/data.js`, then open `site/index.html` in a browser
+* Locally: `python build_site.py` writes `site/lab/data.js`, then open `site/lab/index.html` in a browser
   (no server needed). Set `GOLD_EVENTS_DIR`, `TENSION_INDEX_DIR`, `EM_MACRO_DIR` to read sibling
   checkouts instead of GitHub.
 
-### How your entries flow in
+#### How your entries flow in
 
 1. Each Monday gold-events appends a row to `data/forward_log.csv`. Fill in `my_prob_q1`..`my_prob_q5`
    (and `my_tension_score`) on that row and push; Claude's `claude_prob_*` columns sit beside them.
@@ -79,10 +236,10 @@ Pages:
 3. On Mondays the run also rebuilds the aggregate log and scorecard, which is what the dashboard's
    Scorecard page shows once questions resolve (outcomes come from `data/tension_questions.yaml`).
 
-The site has no backend and no dependencies: `site/index.html`, `site/app.js` (hash routing, SVG
+The site has no backend and no dependencies: `site/lab/index.html`, `site/lab/app.js` (hash routing, SVG
 charts with crosshair tooltips and data tables) and `site/style.css`.
 
-## Files
+### Files
 
 ```
 data/tension_questions.yaml   the questions (copied from gold-events; single source of ids and outcomes)
@@ -101,7 +258,7 @@ snapshot.py / score.py / validate.py / build_site.py   entry points
 .github/workflows/panel.yml   daily snapshot, Monday scoring, site build, commit, GitHub Pages deploy
 ```
 
-## Running
+### Running
 
 ```
 pip install -e .[test]
@@ -111,7 +268,7 @@ python validate.py                                     # reports/validation.md (
 pytest
 ```
 
-## Schedule
+### Schedule
 
 `.github/workflows/panel.yml` runs daily at 06:17 UTC: it checks out gold-events (public; the
 `GOLD_EVENTS_TOKEN` secret is only needed if it goes private), snapshots every source, on Mondays (or
@@ -122,7 +279,7 @@ The human columns are entered weekly in gold-events and carried forward until up
 the Monday snapshot**, so every forecaster is compared on the same day; a week whose Monday run
 failed uses its first available day and the scorecard says so.
 
-## Aggregation
+### Aggregation
 
 Track-record-weighted mean with the GJP extremizing transform (`reports/method.md`):
 
@@ -132,7 +289,7 @@ Track-record-weighted mean with the GJP extremizing transform (`reports/method.m
 * the weighted mean `p` is extremized to `p^a / (p^a + (1-p)^a)`, i.e. its log-odds are multiplied
   by `a = 1.5`; both the plain and the extremized aggregate are logged and scored.
 
-### Validation on history (`reports/validation.md`)
+#### Validation on history (`reports/validation.md`)
 
 Before applying the rule live it was checked on resolved binary geopolitical questions with their
 community forecast histories, read at 25%, 50%, 75% of each question's life and at close, with `a`
@@ -154,14 +311,14 @@ under-confident (forecasts of 0.2-0.3 resolve Yes 11% of the time, 0.7-0.8 resol
 GJO crowd is already slightly over-confident at the extremes and extremizing it hurts. That is why
 the live `a` is the low end of the GJP range and the plain aggregate is always reported alongside.
 
-## Scorecard
+### Scorecard
 
 `reports/scorecard.md` compares every source and both aggregates on resolved questions by Brier,
 with a head-to-head against Polymarket on the same (week, question) pairs for sources that cover
 only some questions. No question has resolved yet, so it currently shows coverage, the equal
 weights in force and the latest aggregate.
 
-## Known gaps
+### Known gaps
 
 * Metaculus: no token in this environment, so the column is empty and the fetcher and the API
   validation path are untested. The source map has `search` strings but no `post_id`s; match the

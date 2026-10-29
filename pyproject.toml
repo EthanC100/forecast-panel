@@ -18,7 +18,7 @@ dependencies = [
 test = ["pytest>=7"]
 
 [tool.setuptools]
-packages = ["forecast_panel"]
+packages = ["forecast_panel", "terminal", "terminal.sources"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

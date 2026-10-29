@@ -1,0 +1,27 @@
+{
+ "id": "pm.6317343",
+ "name": "Will Trump meet with Flávio Bolsonaro in 2026?",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Polymarket CLOB",
+ "source_id": "market 6317343 / will-trump-meet-with-flavio-bolsonaro-in-2026",
+ "source_url": "https://polymarket.com/event/will-trump-meet-with-flavio-bolsonaro-in-2026/will-trump-meet-with-flavio-bolsonaro-in-2026",
+ "event": "Will Trump meet with Flávio Bolsonaro in 2026?",
+ "end_date": "2027-01-01",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-29T13:10:57Z",
+ "updated_at": "2026-10-29T13:10:57Z",
+ "n": 2,
+ "first": "2026-10-28",
+ "last": "2026-10-29",
+ "history": [
+  ["2026-10-28",0.445],
+  ["2026-10-29",0.425]
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "queries": {
+  "\"European Central Bank\" \"interest rates\"": {
+   "country": "GLOBAL",
+   "history": [
+    [
+     "2026-10-29",
+     377.0,
+     1548836.0,
+     0.00024340859845716395
+    ]
+   ],
+   "last_success": "2026-10-29T13:31:12Z"
+  },
+  "\"Focus survey\" Brazil": {
+   "country": "BR",
+   "history": [
+    [
+     "2026-10-29",
+     5.0,
+     1548836.0,
+     3.2282307487687527e-06
+    ]
+   ],
+   "last_success": "2026-10-29T13:32:29Z"
+  },
+  "Banxico survey analysts": {
+   "country": "MX",
+   "history": [
+    [
+     "2026-10-29",
+     8.0,
+     1548836.0,
+     5.165169198030005e-06
+    ]
+   ],
+   "last_success": "2026-10-29T13:34:22Z"
+  },
+  "(Copom OR \"Selic rate\")": {
+   "country": "BR",
+   "history": [
+    [
+     "2026-10-29",
+     71.0,
+     1548836.0,
+     4.584087663251629e-05
+    ]
+   ],
+   "last_success": "2026-10-29T13:36:13Z"
+  },
+  "Banxico \"interest rate\"": {
+   "country": "MX",
+   "history": [
+    [
+     "2026-10-29",
+     41.0,
+     1548836.0,
+     2.647149213990377e-05
+    ]
+   ],
+   "last_success": "2026-10-29T13:38:04Z"
+  }
+ },
+ "updated_at": "2026-10-29T13:38:04Z",
+ "definition": "score = 30-day GDELT share of articles matching the event query / median share of the same country's event queries; under-attended = importance 3, score < 0.5, 30+ days away"
+}

@@ -44,7 +44,7 @@ from forecast_panel.sources import _get
 
 log = logging.getLogger(__name__)
 
-SITE_DIR = ROOT / "site"
+SITE_DIR = ROOT / "site" / "lab"   # the original dashboard, kept under the terminal's "Lab" link
 CONFIG_PATH = SITE_DIR / "config.yaml"
 EVENTS_PATH = SITE_DIR / "events.yaml"
 OUT_PATH = SITE_DIR / "data.js"

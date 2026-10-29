@@ -1,0 +1,41 @@
+# Evidence badge for every number on the terminal. Edit to change a badge; the site reads it
+# through summary.json. Matching: exact series id first, then the longest matching prefix.
+#
+#   tested_leads     tested in one of the research repos and found to lead its target
+#   tested_no_lead   tested, and no lead was found (or the effect did not hold out of sample)
+#   untested         not tested as a signal yet
+#   context          shown for background; not meant as a signal
+#
+# Evidence references: em-macro README §6 (hold-out 2022-2026) and §7 (pre-election repricing);
+# tension-index README (validation against GPR).
+
+default: {badge: untested, reason: "Not tested as a signal in em-macro, gold-events or tension-index."}
+
+series:
+  br.usdbrl.ptax: {badge: untested, reason: "Primary Brazil instrument. em-macro tested how it reacts to election and Copom surprises, not whether its moves lead anything."}
+  mx.usdmxn.fix: {badge: untested, reason: "Primary Mexico instrument. Same as USD/BRL: reaction to events tested in em-macro, no lead test."}
+  br.di: {badge: untested, reason: "DI futures curve; not tested as a signal."}
+  br.td: {badge: untested, reason: "Tesouro Direto long-bond proxy; not tested as a signal."}
+  fr.spread: {badge: untested, reason: "OAT-Bund spread; not tested as a signal."}
+  fr.oat10y: {badge: untested, reason: "France 10-year yield; not tested as a signal."}
+  de.bund10y: {badge: context, reason: "Germany 10-year: the benchmark for the France spread."}
+  us.ust10y: {badge: context, reason: "Global rates backdrop."}
+  us.usd.broad: {badge: context, reason: "Global dollar backdrop."}
+  mx.mbono10y.auction: {badge: context, reason: "Mexico's bond yield is context only; the peso is the primary instrument."}
+  mx.10y.oecd_m: {badge: context, reason: "Mexico's bond yield is context only; the peso is the primary instrument."}
+  br.selic.target: {badge: context, reason: "Policy rate level."}
+  mx.policy.target: {badge: context, reason: "Policy rate level."}
+  mx.tiie28: {badge: context, reason: "Interbank rate level."}
+  br.ipca: {badge: context, reason: "Realised inflation."}
+  br.focus.selic: {badge: tested_no_lead, reason: "em-macro used Focus Selic expectations to measure Copom surprises; the surprise regressions added almost nothing out of sample (pooled FX correlation 0.18)."}
+  br.focus: {badge: untested, reason: "Focus survey levels and dispersion are not tested as signals."}
+  mx.survey: {badge: untested, reason: "Banxico survey levels and dispersion are not tested as signals."}
+  br.cot: {badge: untested, reason: "CFTC positioning not tested as a signal."}
+  mx.cot: {badge: untested, reason: "CFTC positioning not tested as a signal."}
+  pm.: {badge: tested_no_lead, reason: "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."}
+  ks.: {badge: tested_no_lead, reason: "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."}
+  attention: {badge: untested, reason: "GDELT attention score is new; not tested."}
+  countdown: {badge: context, reason: "Days until a scheduled event."}
+  fiscal_gap: {badge: untested, reason: "The optimism gap is not yet tested as a signal (a later phase scores it)."}
+  ratings: {badge: context, reason: "Agency ratings are context."}
+  tension_index: {badge: tested_leads, reason: "tension-index validation: leads the published daily GPR by one day (daily correlation 0.77)."}

@@ -1,0 +1,42 @@
+{
+ "id": "pm.5419367",
+ "name": "Jair Bolsonaro released from custody by March 31, 2027?",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Polymarket CLOB",
+ "source_id": "market 5419367 / jair-bolsonaro-released-from-custody-by-march-31-2027-1791185062998",
+ "source_url": "https://polymarket.com/event/jair-bolsonaro-released-from-custody-by-march-31-2027-1791185062998/jair-bolsonaro-released-from-custody-by-march-31-2027-1791185062998",
+ "event": "Jair Bolsonaro released from custody by March 31, 2027?",
+ "end_date": "2027-04-01",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-29T13:10:59Z",
+ "updated_at": "2026-10-29T13:10:59Z",
+ "n": 17,
+ "first": "2026-10-08",
+ "last": "2026-10-29",
+ "history": [
+  ["2026-10-08",0.38],
+  ["2026-10-09",0.56],
+  ["2026-10-10",0.58],
+  ["2026-10-11",0.57],
+  ["2026-10-12",0.63],
+  ["2026-10-13",0.69],
+  ["2026-10-14",0.74],
+  ["2026-10-15",0.745],
+  ["2026-10-16",0.765],
+  ["2026-10-17",0.755],
+  ["2026-10-19",0.69],
+  ["2026-10-20",0.61],
+  ["2026-10-21",0.69],
+  ["2026-10-24",0.615],
+  ["2026-10-27",0.17],
+  ["2026-10-28",0.3],
+  ["2026-10-29",0.19]
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "pm.5336164",
+ "name": "Will Luiz Inácio Lula da Silva win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Polymarket CLOB",
+ "source_id": "market 5336164 / will-luiz-inacio-lula-da-silva-win-brazil-gadi-eizenkot-become-israeli-pm-and-democrats-win-the-us-senate",
+ "source_url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo/will-luiz-inacio-lula-da-silva-win-brazil-gadi-eizenkot-become-israeli-pm-and-democrats-win-the-us-senate",
+ "event": "Fall Elections Combo: Brazil, Israel, US Senate",
+ "end_date": "2026-11-05",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-29T13:10:54Z",
+ "updated_at": "2026-10-29T13:10:54Z",
+ "n": 21,
+ "first": "2026-10-06",
+ "last": "2026-10-29",
+ "history": [
+  ["2026-10-06",0.07],
+  ["2026-10-07",0.045],
+  ["2026-10-08",0.045],
+  ["2026-10-09",0.045],
+  ["2026-10-10",0.045],
+  ["2026-10-11",0.045],
+  ["2026-10-12",0.055],
+  ["2026-10-13",0.055],
+  ["2026-10-14",0.0325],
+  ["2026-10-15",0.032],
+  ["2026-10-16",0.0765],
+  ["2026-10-17",0.078],
+  ["2026-10-18",0.082],
+  ["2026-10-19",0.086],
+  ["2026-10-20",0.083],
+  ["2026-10-21",0.096],
+  ["2026-10-23",0.081],
+  ["2026-10-24",0.08],
+  ["2026-10-27",0.439],
+  ["2026-10-28",0.3285],
+  ["2026-10-29",0.2505]
+ ]
+}

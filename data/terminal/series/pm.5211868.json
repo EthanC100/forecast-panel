@@ -1,0 +1,48 @@
+{
+ "id": "pm.5211868",
+ "name": "Flávio Bolsonaro charged or arrested by October 31?",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Polymarket CLOB",
+ "source_id": "market 5211868 / flavio-bolsonaro-charged-or-arrested-by-september-30-20260609144215531-20261001003357876",
+ "source_url": "https://polymarket.com/event/flavio-bolsonaro-charged-or-arrested-by-october-31-20261001003357876/flavio-bolsonaro-charged-or-arrested-by-september-30-20260609144215531-20261001003357876",
+ "event": "Flávio Bolsonaro charged or arrested by Brazilian authorities by October 31?",
+ "end_date": "2026-11-01",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-29T13:10:58Z",
+ "updated_at": "2026-10-29T13:10:58Z",
+ "n": 23,
+ "first": "2026-10-03",
+ "last": "2026-10-29",
+ "history": [
+  ["2026-10-03",0.07],
+  ["2026-10-04",0.045],
+  ["2026-10-05",0.038],
+  ["2026-10-06",0.065],
+  ["2026-10-07",0.027],
+  ["2026-10-08",0.044],
+  ["2026-10-09",0.0375],
+  ["2026-10-10",0.035],
+  ["2026-10-11",0.0305],
+  ["2026-10-12",0.021],
+  ["2026-10-13",0.0205],
+  ["2026-10-14",0.0195],
+  ["2026-10-15",0.014],
+  ["2026-10-16",0.014],
+  ["2026-10-17",0.0205],
+  ["2026-10-19",0.0205],
+  ["2026-10-20",0.0215],
+  ["2026-10-21",0.0205],
+  ["2026-10-24",0.05],
+  ["2026-10-25",0.043],
+  ["2026-10-27",0.1365],
+  ["2026-10-28",0.158],
+  ["2026-10-29",0.06]
+ ]
+}

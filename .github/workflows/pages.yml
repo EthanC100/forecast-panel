@@ -1,0 +1,47 @@
+name: Deploy site
+
+# Publishes site/ (the terminal at the root, the original panel under lab/) with the terminal's
+# data copied in from data/terminal/. Called by both data workflows after they commit; also runs
+# when the site code changes on main, or by hand.
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["site/**", ".github/workflows/pages.yml"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main            # the tip of main, including the data commit just pushed
+
+      - name: Copy terminal data into the site
+        run: |
+          rm -rf site/data
+          mkdir -p site/data
+          cp -r data/terminal/. site/data/
+          rm -rf site/data/inputs
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

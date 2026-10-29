@@ -1,0 +1,8 @@
+# France sovereign ratings, used when the AFT ratings table cannot be fetched (it answers 403 to
+# automated requests). Update after each rating action. Last reviewed 2026-10-29.
+as_of: 2026-10-29
+source: "https://www.aft.gouv.fr/en/frances-credit-ratings"
+ratings:
+  - {agency: "S&P Global", rating: "A+", outlook: "stable", last_action: "2026-05-29 (affirmed); downgraded from AA- on 2025-10-17", next_review: "2026-11-27", verified: false}
+  - {agency: "Fitch", rating: "A+", outlook: "stable", last_action: "2026-08-28 (affirmed)", next_review: null, verified: false}
+  - {agency: "Moody's", rating: "Aa3", outlook: "negative (check the 23 Oct 2026 review)", last_action: "2026-10-23 review reported as unchanged; outlook reported inconsistently", next_review: null, verified: false}

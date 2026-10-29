@@ -1,0 +1,27 @@
+{
+ "id": "pm.6317326",
+ "name": "Flávio Bolsonaro arrested before 2027?",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Polymarket CLOB",
+ "source_id": "market 6317326 / flavio-bolsonaro-arrested-before-2027",
+ "source_url": "https://polymarket.com/event/flavio-bolsonaro-arrested-before-2027/flavio-bolsonaro-arrested-before-2027",
+ "event": "Flávio Bolsonaro arrested before 2027?",
+ "end_date": "2027-01-01",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-29T13:10:58Z",
+ "updated_at": "2026-10-29T13:10:58Z",
+ "n": 2,
+ "first": "2026-10-28",
+ "last": "2026-10-29",
+ "history": [
+  ["2026-10-28",0.085],
+  ["2026-10-29",0.065]
+ ]
+}

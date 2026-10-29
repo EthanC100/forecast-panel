@@ -1,0 +1,39 @@
+# Fiscal "optimism gap": the official target against independent estimates. Edit freely.
+# Convention: every value is a BALANCE in % of GDP, so a deficit is negative.
+# gap = official - median(independent); a positive gap means the official number is more optimistic.
+# `auto:` pulls the latest survey median for that reference year from a stored series;
+# `verified: true` once you have checked the number against its source.
+
+countries:
+  FR:
+    - metric: "General government balance"
+      year: 2026
+      official: {value: -5.0, label: "Loi de finances 2026 (adopted 2 Feb 2026)", source: "https://www.senat.fr/lessentiel/pjlf2026.pdf", verified: false}
+      independent:
+        - {name: "OFCE forecast", value: null, source: "https://ofce.sciences-po.fr/prev/prev2603/france/fipu.html", note: "fill in"}
+        - {name: "European Commission forecast", value: null, source: "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en", note: "fill in"}
+        - {name: "Haut Conseil des finances publiques", value: null, source: "https://www.hcfp.fr/", note: "fill in"}
+  BR:
+    - metric: "Primary balance (official: central government; Focus: consolidated public sector)"
+      year: 2026
+      official: {value: 0.25, label: "LDO 2026 target, tolerance band ±0.25 pp", source: "https://www12.senado.leg.br/orcamento/documentos/estudos/tipos-de-estudos/notas-tecnicas-e-informativos/informativo_pldo-2026.pdf", verified: false}
+      independent:
+        - {name: "Focus survey median", auto: br.focus.primary, note: "Focus measures the consolidated public sector, a broader perimeter than the target"}
+        - {name: "IFI (Senate Independent Fiscal Institution)", value: null, source: "https://www12.senado.leg.br/ifi", note: "fill in"}
+    - metric: "Primary balance (official: central government; Focus: consolidated public sector)"
+      year: 2027
+      official: {value: 0.5, label: "PLDO 2027 target (bill's own projection: +0.05%)", source: "https://www2.camara.leg.br/orcamento-da-uniao/estudos/2026/informativo_pldo2027.pdf", verified: false}
+      independent:
+        - {name: "Focus survey median", auto: br.focus.primary}
+        - {name: "PLDO 2027 own projection", value: 0.05, source: "https://www2.camara.leg.br/orcamento-da-uniao/estudos/2026/informativo_pldo2027.pdf", verified: false}
+  MX:
+    - metric: "Public sector borrowing requirements (RFSP, broadest deficit)"
+      year: 2026
+      official: {value: -4.1, label: "Paquete Económico 2026 (Sep 2025)", source: "https://imco.org.mx/analisis-del-paquete-economico-2026/", verified: false}
+      independent:
+        - {name: "Banca Mifel estimate", value: -4.5, source: "https://elceo.com/economia/consolidacion-fiscal-se-aleja-analistas-preven-deficit-de-hasta-4-5-del-pib-en-2026/", verified: false}
+    - metric: "Public sector economic balance"
+      year: 2026
+      official: {value: null, label: "Paquete Económico 2026 (fill in)", source: "https://www.ppef.hacienda.gob.mx/", verified: false}
+      independent:
+        - {name: "Banxico survey median", auto: mx.survey.balance}
