@@ -89,3 +89,29 @@ def test_rating_notches_and_middle():
     assert crowd.notch("Baa3") == crowd.notch("BBB-") == 9
     rows = [{"notch": crowd.notch(r)} for r in ("BBB", "Baa3", "BBB-")]
     assert crowd.SCALE[crowd.middle(rows)] == "BBB-"
+
+
+def test_teach_waterfall_and_what_if_scaling(monkeypatch):
+    from terminal import emmacro, teach
+    frames = {
+        "results/risk_model/factors.csv": pd.DataFrame([
+            {"country": "FRA", "date": "2026-09-01", "asset": "spread_bp", "factor": "baseline (country average 2005-2019)", "contribution": 40.0},
+            {"country": "FRA", "date": "2026-09-01", "asset": "spread_bp", "factor": "average rating (notches)", "contribution": 30.0},
+            {"country": "FRA", "date": "2026-09-01", "asset": "spread_bp", "factor": "US 10y yield, %", "contribution": -7.0}]),
+        "results/risk_model/fair_value.csv": pd.DataFrame([{"country": "FRA", "date": "2026-09-01", "asset": "spread_bp", "actual": 96.7, "fair_value": 63.0}]),
+        "results/risk_model/what_if.csv": pd.DataFrame([
+            {"country": c, "date": "2026-09-01", "asset": "spread_bp", "scenario": "lose_majority", "description": "x", "estimate": -30.0, "lo90": -60, "hi90": 0, "se": 18.0}
+            for c in ("FRA", "MEX")]),
+        "data/processed/risk_model_input.csv": pd.DataFrame([{"month": "2026-10", "c": "FR", "seat_share": 28.0, "deficit": 5.0},
+                                                             {"month": "2026-10", "c": "MX", "seat_share": 65.0, "deficit": 4.0}]),
+    }
+    monkeypatch.setattr(emmacro, "frame", lambda p: frames[p])
+    w = teach.waterfall("FR")
+    assert w["steps"][0]["value"] == 40.0 and sum(s["value"] for s in w["steps"]) == pytest.approx(63.0)
+    assert w["fair_value"] == 63.0 and w["actual"] == 96.7 and "post-hoc" in w["model"]
+    wi = teach.what_if()["countries"]
+    fr = next(i for i in wi["FR"] if i["key"] == "seat_share")
+    mx = next(i for i in wi["MX"] if i["key"] == "seat_share")
+    # a minority government's scenario is -10 pp; a majority one falls to 45% (65 -> 45 = -20 pp)
+    assert fr["effects"]["spread_bp"]["per_unit"] == pytest.approx(3.0)
+    assert mx["effects"]["spread_bp"]["per_unit"] == pytest.approx(1.5)

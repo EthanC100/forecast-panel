@@ -15,8 +15,8 @@ Mobile-first, light and dark mode, bottom navigation:
 
 | tab | what it shows |
 |---|---|
-| **Today** | The next three catalysts with countdowns. Instrument tiles for USD/BRL, USD/MXN, Brazil DI Jan-27/29/31, the Brazil 10-year proxy, the France OAT-Bund spread, US 10-year and Mexico 10-year (context), each with level, 1-week and 1-month change, and a z-score of the level against the past year. |
-| **Calendar** | Next 2 weeks, 3 months and 12 months. Each row: date, country, type, importance 1-3, confirmed or estimated, source, and a market-attention score with an under-attended flag. |
+| **Today** | The next three catalysts with countdowns, the month's moves on a map and a correlation grid. Instrument tiles for USD/BRL, USD/MXN, Brazil DI Jan-27/29/31, the Brazil 10-year proxy, the France OAT-Bund spread, US 10-year and Mexico 10-year (context), each with level, 1-week and 1-month change, and a z-score of the level against the past year. |
+| **Calendar** | A 12-month timeline per country, then the list for the next 2 weeks, 3 months or 12 months. Each row: date, country, type, importance 1-3, confirmed or estimated, source, and a market-attention score with an under-attended flag. |
 | **Record** | Phase 2: the paper book (Portfolio), scored calls (Judgements) and the Journal. See below. |
 | **Scenarios** | Phase 3: six scenario pages linked to calendar events. See below. |
 | **Crowd** | Phase 3: six crowd-error gauges and a ranked list of the most likely shared errors. See below. |
@@ -232,6 +232,89 @@ at p < 0.05 and the same sign in the hold-out at p < 0.10. Results:
 
 New stored series for these tests: `br.focus.selic_meeting` (Focus expectation for every Copom
 meeting since 2004) and `za.cot.zar` (CFTC ZAR futures).
+
+## Design, interactivity and teaching
+
+### Install it on a phone
+
+The site is an installable app called **Terminal** (`site/manifest.webmanifest`, full-screen display, its
+own icon).
+
+* **iPhone:** open the site in Safari, then Share > Add to Home Screen.
+* **Android:** open the site in Chrome, then the menu > Install app.
+
+A service worker (`site/sw.js`) caches the app files. It also keeps the last copy of every data file it
+has loaded. Offline, the app opens with that data and shows an "Offline" banner.
+
+### The rule every visual follows
+
+Each visual answers a specific question, and its title is that question. It shows its source and as-of
+time (with the freshness dot and evidence badge), and it never replaces the number: the figure is
+always printed next to the picture. Visuals that could not meet this rule were left out or replaced
+with text (see "Not drawn" below).
+
+### Visual system
+
+* A type scale of 12/13/15/17/20/24/30 px and a spacing scale of 4/8/12/16/24/32 px.
+* One accent colour (blue). Otherwise colour only carries meaning: green and red for direction (a
+  wider spread or a weaker currency counts as adverse), amber for warnings.
+* Tabular figures in tables and on axes.
+* Skeleton placeholders while blocks load.
+* Light and dark modes each have their own tokens. `node scripts/contrast.js` checks every text token
+  against its surface, and all pass 4.5:1 in both modes. The timeline's three type colours were checked
+  with the colour-vision validator. Light-mode aqua (2.7:1) relies on the event list below the timeline
+  as its table view.
+* The layout is tested at 390 px wide in both modes with no horizontal scrolling. The two wide visuals,
+  the calendar timeline and the correlation grid, scroll inside their own cards.
+
+### What is where
+
+| visual (question it answers) | where | built from |
+|---|---|---|
+| Interactive price charts: tap or drag for values; 1M/3M/1Y/5Y; compare (a second panel below, never a second axis); calendar events as ▲ markers you tap to open (nearby ones group together); numbered notes on the five largest moves in view, each matched to a calendar event between the two observations, with its source | every chart on the country pages | stored series, calendar |
+| "What would $100,000 lent in BRL/MXN have made over the last 3 months?" (animated: price change, carry, cost, total) | How this works, under USD/BRL and USD/MXN, and on Size a trade | real spot, policy rates, the book's cost |
+| "What does a long-France, short-Germany position gain or lose when the spread moves?" | How this works, under the OAT-Bund chart | OAT, Bund, the book's 8-year duration |
+| "What moves this market most?" (effect of a one-sd change in each factor, plus each factor's direction over 12 months) | country pages | em-macro risk-model coefficients |
+| "How does em-macro's model arrive at the fair spread?" (waterfall from the baseline through each factor's contribution, next to the actual; labelled post-hoc) | country pages | em-macro `factors.csv`, `fair_value.csv` |
+| "What would a change in deficit, rating, seat share or populism do?" (sliders, estimate with a 90% band) | country pages | em-macro `what_if.csv`, linear in each slider |
+| "How has Brazil/Mexico moved around past elections and rate decisions?" (average path at days 1, 5 and 20, with the range across events shaded) | Brazil and Mexico pages | em-macro event study |
+| "How does em-macro's systematic strategy choose this month's positions?" (carry, trend and value z-scores, ranking into thirds, positions, formula) | Record > Portfolio | em-macro `positions.csv` |
+| "When are the next 12 months' catalysts, and which are under-attended?" (timeline per country, dot size = importance, colour = type, amber ring = under-attended; tap to open) | Calendar | calendar |
+| Scenario tree with line widths set by your probabilities; sliders per branch with live P(YES), expected move, gap to market and reward-to-risk; "Make a call with these probabilities" | each scenario page | scenario data |
+| Crowd gauges against their history (range strips), each with its badge and what an extreme reading means; rating ladders for the thresholds | Crowd | crowd and lab data |
+| "How big should this trade be?" (risk % of equity → notional; P&L at stop and target after carry and costs; opens the pre-filled form) | `#trade/<INSTRUMENT>`; every "Size a trade" link | the book's own P&L rules |
+| Equity curve with drawdown shading; exposure by country and instrument; my book vs the systematic strategy (both 100 at my start); Brier score over time vs the market; calibration | Record | the book and judgements |
+| "Which instruments have moved together over the last 3 months?" (correlation grid of daily changes) | Today | stored daily series |
+| "Where did markets move most in the last month?" (France, Brazil and Mexico outlines shaded by how unusual the 1-month move is; tap to open) | Today | stored series; outlines from Natural Earth (`site/geo.json`) |
+| Glossary: tap an underlined term for a two-sentence definition; all terms under **Terms** | everywhere | `site/glossary.js` |
+
+The teaching numbers come from em-macro's published results, gathered by `terminal/teach.py` into
+`data/terminal/teach.json` on every summary run. No new data source was added. The map outlines are
+static geometry, not data.
+
+### Not drawn, and why
+
+* **Event studies for rating actions and budgets, and for France:** em-macro has no event-study
+  results for them, and the card says so.
+* **My book vs systematic:** the chart is replaced by the two numbers until both have results after
+  the book's start. The book has one daily mark, and em-macro's first month after 29 Oct 2026 is not
+  out yet.
+* **Brier over time, calibration, exposure and drawdown shading:** these appear once there is
+  something to draw (2 resolved questions, 30 resolved questions, an open position, a second daily
+  mark). Until then each shows its number.
+* **Official optimism gap (Crowd d):** there is no history, so no range strip; the numbers are shown.
+* **Correlation grid:** leaves out the OAT-Bund spread (monthly until Webstat is configured) and the
+  Mexico 10-year (auction yields only).
+
+### Performance
+
+The first page loads `index.html`, `terminal.css`, `terminal.js` and `data/summary.json`, about 35 KB
+gzipped. Everything else loads on demand:
+
+* `charts.js`, `teach.js`, `record.js`, `scenarios.js` and `glossary.js` load when a page needs them.
+* The calendar data loads only on pages that need it.
+* Every chart and card builds only when it scrolls into view.
+* `summary.json` lists the stored series, so the site never requests a file that does not exist.
 
 ## Daily flow
 

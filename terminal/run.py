@@ -105,10 +105,11 @@ def main(argv=None) -> int:
         log.info("judgements: %d questions, %d resolved", js["summary"]["n_questions"], js["summary"]["n_resolved"])
     if a.cmd in ("summary", "all"):
         # after book and judge, so scenario pages see the latest calls
-        from terminal import crowd, scenarios, summary
+        from terminal import crowd, scenarios, summary, teach
         summary.build()
         scenarios.build()
         crowd.build()
+        teach.build()
     if a.cmd == "site":
         copy_site()
     return 0

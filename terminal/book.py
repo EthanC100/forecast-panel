@@ -465,6 +465,9 @@ def build(today: str | None = None) -> dict:
                         "date": last[0] if last else None, "close_utc": icfg.get("close_utc"),
                         "low_frequency": bool(icfg.get("low_frequency")), "note": icfg.get("note"),
                         "degraded": degraded.for_series(inst.series_id, deg_rules),
+                        # what the site's trade-sizing calculator needs to reproduce pnl() and cost()
+                        "scale": inst.scale, "favourable": inst.favourable, "rate_usd": icfg.get("rate_usd"), "rate_local": icfg.get("rate_local"),
+                        "maturity": icfg.get("maturity"), "unit": (inst.series or {}).get("unit"),
                         "duration": icfg.get("duration"), "cost": icfg.get("cost_round_trip_pct", icfg.get("cost_round_trip_bp")),
                         "cost_unit": "% of notional" if icfg["kind"] == "fx" else "bp of yield"}
     state = {

@@ -4,24 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>Macro Terminal</title>
+<title>Terminal</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Terminal">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="description" content="Macro research terminal for France, Brazil and Mexico: sourced market data, a catalyst calendar, scenario pages and crowd-error gauges.">
 <link rel="stylesheet" href="terminal.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M7 21l6-7 4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="#today">Macro Terminal</a>
+  <a class="brand" href="#today">Terminal</a>
   <nav class="top-links" aria-label="Countries and tools">
     <a href="#country/FR" data-r="country/FR">FR</a>
     <a href="#country/BR" data-r="country/BR">BR</a>
     <a href="#country/MX" data-r="country/MX">MX</a>
+    <a href="#glossary" data-r="glossary" title="Plain-English definitions">Terms</a>
     <a href="#status" data-r="status" title="Source status">Status</a>
     <a href="lab/" title="The original forecast panel">Lab</a>
     <button id="theme" class="icon" type="button" aria-label="Colour scheme">◐</button>
   </nav>
 </header>
 
+<div id="offline" class="offline" role="status">Offline: showing the data loaded last time.</div>
 <main id="app" class="page" tabindex="-1"></main>
 
 <nav class="bottom" aria-label="Main">
@@ -33,7 +43,5 @@
 </nav>
 
 <script src="terminal.js"></script>
-<script src="record.js"></script>
-<script src="scenarios.js"></script>
 </body>
 </html>

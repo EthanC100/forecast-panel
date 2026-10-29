@@ -319,6 +319,8 @@ def build() -> dict:
     countries["FR"]["ratings"] = ratings_block()
     out = {"generated_at": store.now_iso(), "tiles": tiles(status), "next_catalysts": nxt,
            "countries": countries, "status": status,
+           # every stored series id, so the site never asks for a file that does not exist
+           "series_index": sorted(p.stem for p in store.SERIES_DIR.glob("*.json")),
            "degraded": [{k: r[k] for k in ("id", "features", "effect", "upgrade", "secret", "primary", "primary_state",
                                            "fallback_name", "fallback_state")} for r in DEGRADED],
            "evidence_legend": {"tested_leads": "Tested-leads", "tested_no_lead": "Tested-no-lead",

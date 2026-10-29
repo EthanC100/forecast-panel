@@ -1,0 +1,1946 @@
+{
+ "generated_at": "2026-10-29T16:28:16Z",
+ "em_macro": "https://raw.githubusercontent.com/EthanC100/em-macro/main/",
+ "countries": {
+  "FR": {
+   "drivers": [
+    {
+     "kind": "spread",
+     "target": "spread vs Bund",
+     "unit": "bp of spread",
+     "model": "post-hoc model: chosen after the 2020+ test; not a clean out-of-sample result",
+     "as_of": "2026-09-01",
+     "compare_to": "2025-09-01",
+     "rows": [
+      {
+       "term": "cbi",
+       "label": "central bank independence (CBIE)",
+       "plain": "Central bank independence",
+       "effect_per_sd": -132.46,
+       "t": -2.42,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 0.0,
+       "change_12m": 0.0
+      },
+      {
+       "term": "rating",
+       "label": "average rating (notches)",
+       "plain": "Credit rating",
+       "effect_per_sd": -111.35,
+       "t": -7.74,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 106.87,
+       "change_12m": 12.32
+      },
+      {
+       "term": "jucon",
+       "label": "judicial constraints (V-Dem)",
+       "plain": "Courts' checks on government",
+       "effect_per_sd": -70.41,
+       "t": -3.98,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": -0.16,
+       "change_12m": 0.0
+      },
+      {
+       "term": "high_court_indep",
+       "label": "high-court independence (V-Dem)",
+       "plain": "High-court independence",
+       "effect_per_sd": 57.46,
+       "t": 3.32,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 0.0,
+       "change_12m": 0.0
+      },
+      {
+       "term": "debt",
+       "label": "gross debt, % GDP",
+       "plain": "Government debt",
+       "effect_per_sd": -46.35,
+       "t": -3.02,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": -49.46,
+       "change_12m": -4.74
+      },
+      {
+       "term": "infl_gap",
+       "label": "inflation minus target, pp",
+       "plain": "Inflation above target",
+       "effect_per_sd": 41.1,
+       "t": 5.24,
+       "significant": true,
+       "lag_months": 1,
+       "contribution_now": 32.87,
+       "change_12m": 44.49
+      },
+      {
+       "term": "wgi",
+       "label": "governance (WGI mean)",
+       "plain": "Quality of governance",
+       "effect_per_sd": 39.58,
+       "t": 2.6,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": -34.22,
+       "change_12m": -0.36
+      },
+      {
+       "term": "foreign_share",
+       "label": "debt held abroad, %",
+       "plain": "Debt owned by foreigners",
+       "effect_per_sd": -30.98,
+       "t": -3.18,
+       "significant": true,
+       "lag_months": 6,
+       "contribution_now": -5.57,
+       "change_12m": 0.0
+      },
+      {
+       "term": "ecb_rate",
+       "label": "ECB deposit rate, %",
+       "plain": "ECB interest rate",
+       "effect_per_sd": -29.71,
+       "t": -4.53,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -49.0,
+       "change_12m": -10.0
+      },
+      {
+       "term": "debt_x_seat",
+       "label": "debt x government seat share",
+       "plain": "Debt combined with a weak government",
+       "effect_per_sd": -29.66,
+       "t": -5.13,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 129.19,
+       "change_12m": 37.88
+      }
+     ],
+     "n_factors": 24,
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/fit_v2_posthoc/coefficients_spread_eu.csv"
+    }
+   ],
+   "waterfall": {
+    "as_of": "2026-09-01",
+    "unit": "bp",
+    "target": "10-year spread vs Bund",
+    "steps": [
+     {
+      "label": "Country baseline (2005-19 average)",
+      "value": 40.71,
+      "kind": "base"
+     },
+     {
+      "label": "Debt combined with a weak government",
+      "model_label": "debt x government seat share",
+      "value": 129.19,
+      "kind": "factor"
+     },
+     {
+      "label": "Credit rating",
+      "model_label": "average rating (notches)",
+      "value": 106.87,
+      "kind": "factor"
+     },
+     {
+      "label": "Government's share of seats",
+      "model_label": "government seat share, %",
+      "value": -63.79,
+      "kind": "factor"
+     },
+     {
+      "label": "US 10-year yield",
+      "model_label": "US 10y yield, %",
+      "value": -53.19,
+      "kind": "factor"
+     },
+     {
+      "label": "Government debt",
+      "model_label": "gross debt, % GDP",
+      "value": -49.46,
+      "kind": "factor"
+     },
+     {
+      "label": "ECB interest rate",
+      "model_label": "ECB deposit rate, %",
+      "value": -49.0,
+      "kind": "factor"
+     },
+     {
+      "label": "18 other factors",
+      "value": 1.86,
+      "kind": "factor"
+     }
+    ],
+    "fair_value": 63.19,
+    "actual": 96.7,
+    "model": "post-hoc model: chosen after the 2020+ test; not a clean out-of-sample result",
+    "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/factors.csv"
+   }
+  },
+  "BR": {
+   "drivers": [
+    {
+     "kind": "spread",
+     "target": "spread vs US Treasuries",
+     "unit": "bp of spread",
+     "model": "post-hoc model: chosen after the 2020+ test; not a clean out-of-sample result",
+     "as_of": "2026-10-01",
+     "compare_to": "2025-10-01",
+     "rows": [
+      {
+       "term": "infl_gap",
+       "label": "inflation minus target, pp",
+       "plain": "Inflation above target",
+       "effect_per_sd": 56.12,
+       "t": 5.24,
+       "significant": true,
+       "lag_months": 1,
+       "contribution_now": 10.42,
+       "change_12m": -12.83
+      },
+      {
+       "term": "real_rate",
+       "label": "real policy rate, %",
+       "plain": "Real interest rate",
+       "effect_per_sd": 44.97,
+       "t": 4.09,
+       "significant": true,
+       "lag_months": 1,
+       "contribution_now": 56.13,
+       "change_12m": -10.44
+      },
+      {
+       "term": "debt_x_seat",
+       "label": "debt x government seat share",
+       "plain": "Debt combined with a weak government",
+       "effect_per_sd": 42.54,
+       "t": 3.41,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -24.61,
+       "change_12m": -9.28
+      },
+      {
+       "term": "high_court_indep",
+       "label": "high-court independence (V-Dem)",
+       "plain": "High-court independence",
+       "effect_per_sd": 26.47,
+       "t": 3.14,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 15.46,
+       "change_12m": 0.0
+      },
+      {
+       "term": "log_vix",
+       "label": "VIX (log)",
+       "plain": "Global risk appetite (VIX)",
+       "effect_per_sd": 25.1,
+       "t": 3.86,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -1.39,
+       "change_12m": -5.39
+      },
+      {
+       "term": "rating",
+       "label": "average rating (notches)",
+       "plain": "Credit rating",
+       "effect_per_sd": -24.66,
+       "t": -3.46,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 7.94,
+       "change_12m": 0.0
+      },
+      {
+       "term": "reserves_months",
+       "label": "reserves, months of imports",
+       "plain": "FX reserves",
+       "effect_per_sd": -23.57,
+       "t": -2.24,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 22.14,
+       "change_12m": -4.14
+      },
+      {
+       "term": "seat_share",
+       "label": "government seat share, %",
+       "plain": "Government's share of seats",
+       "effect_per_sd": -20.93,
+       "t": -1.98,
+       "significant": false,
+       "lag_months": 0,
+       "contribution_now": 12.35,
+       "change_12m": 0.0
+      },
+      {
+       "term": "ecb_rate",
+       "label": "ECB deposit rate, %",
+       "plain": "ECB interest rate",
+       "effect_per_sd": -18.65,
+       "t": -1.46,
+       "significant": false,
+       "lag_months": 0,
+       "contribution_now": -32.84,
+       "change_12m": -8.37
+      },
+      {
+       "term": "n_gov5y",
+       "label": "governments in prior 5 years",
+       "plain": "Government turnover",
+       "effect_per_sd": -17.86,
+       "t": -2.85,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 28.91,
+       "change_12m": 29.62
+      }
+     ],
+     "n_factors": 24,
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/fit_v2_posthoc/coefficients_spread_em.csv"
+    },
+    {
+     "kind": "currency",
+     "target": "currency vs USD",
+     "unit": "% of the real exchange rate (+ = weaker)",
+     "model": "v1 currency equation, fitted 2005-2019",
+     "as_of": "2026-09-01",
+     "compare_to": "2025-09-01",
+     "rows": [
+      {
+       "term": "jucon",
+       "label": "judicial constraints (V-Dem)",
+       "plain": "Courts' checks on government",
+       "effect_per_sd": -8.14,
+       "t": -9.28,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": -2.34,
+       "change_12m": 0.0
+      },
+      {
+       "term": "commod_iron_ore:BR",
+       "label": "commodity iron_ore:BR",
+       "plain": "Commodity prices: iron ore",
+       "effect_per_sd": -6.78,
+       "t": -7.14,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -20.2,
+       "change_12m": -9.32
+      },
+      {
+       "term": "debt",
+       "label": "gross debt, % GDP",
+       "plain": "Government debt",
+       "effect_per_sd": 6.29,
+       "t": 10.98,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 8.47,
+       "change_12m": 2.06
+      },
+      {
+       "term": "foreign_share",
+       "label": "debt held abroad, %",
+       "plain": "Debt owned by foreigners",
+       "effect_per_sd": 4.99,
+       "t": 5.95,
+       "significant": true,
+       "lag_months": 6,
+       "contribution_now": -0.24,
+       "change_12m": 0.15
+      },
+      {
+       "term": "infl_gap",
+       "label": "inflation minus target, pp",
+       "plain": "Inflation above target",
+       "effect_per_sd": 3.38,
+       "t": 5.83,
+       "significant": true,
+       "lag_months": 1,
+       "contribution_now": 0.18,
+       "change_12m": -1.23
+      },
+      {
+       "term": "rating",
+       "label": "average rating (notches)",
+       "plain": "Credit rating",
+       "effect_per_sd": -2.63,
+       "t": -3.21,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 0.62,
+       "change_12m": 0.0
+      },
+      {
+       "term": "high_court_indep",
+       "label": "high-court independence (V-Dem)",
+       "plain": "High-court independence",
+       "effect_per_sd": 2.61,
+       "t": 3.42,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 1.28,
+       "change_12m": 0.0
+      },
+      {
+       "term": "commod_soy:BR",
+       "label": "commodity soy:BR",
+       "plain": "Commodity prices: soy",
+       "effect_per_sd": -2.55,
+       "t": -2.86,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -20.2,
+       "change_12m": -9.32
+      },
+      {
+       "term": "ecb_rate",
+       "label": "ECB deposit rate, %",
+       "plain": "ECB interest rate",
+       "effect_per_sd": -2.44,
+       "t": -3.96,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -4.03,
+       "change_12m": -0.82
+      },
+      {
+       "term": "lr_ches",
+       "label": "governing parties' economic position (CHES)",
+       "plain": "Government left/right (CHES)",
+       "effect_per_sd": -2.37,
+       "t": -2.46,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 0.0,
+       "change_12m": 0.0
+      }
+     ],
+     "n_factors": 30,
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/fit/coefficients_fx.csv"
+    }
+   ],
+   "waterfall": {
+    "as_of": "2026-10-01",
+    "unit": "bp",
+    "target": "10-year spread vs US Treasuries",
+    "steps": [
+     {
+      "label": "Country baseline (2005-19 average)",
+      "value": 933.58,
+      "kind": "base"
+     },
+     {
+      "label": "Real interest rate",
+      "model_label": "real policy rate, %",
+      "value": 56.13,
+      "kind": "factor"
+     },
+     {
+      "label": "US 10-year yield",
+      "model_label": "US 10y yield, %",
+      "value": -36.32,
+      "kind": "factor"
+     },
+     {
+      "label": "ECB interest rate",
+      "model_label": "ECB deposit rate, %",
+      "value": -32.84,
+      "kind": "factor"
+     },
+     {
+      "label": "Government turnover",
+      "model_label": "governments in prior 5 years",
+      "value": 28.91,
+      "kind": "factor"
+     },
+     {
+      "label": "Debt combined with a weak government",
+      "model_label": "debt x government seat share",
+      "value": -24.61,
+      "kind": "factor"
+     },
+     {
+      "label": "FX reserves",
+      "model_label": "reserves, months of imports",
+      "value": 22.14,
+      "kind": "factor"
+     },
+     {
+      "label": "18 other factors",
+      "value": 75.73,
+      "kind": "factor"
+     }
+    ],
+    "fair_value": 1022.71,
+    "actual": 815.3,
+    "model": "post-hoc model: chosen after the 2020+ test; not a clean out-of-sample result",
+    "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/factors.csv"
+   }
+  },
+  "MX": {
+   "drivers": [
+    {
+     "kind": "spread",
+     "target": "spread vs US Treasuries",
+     "unit": "bp of spread",
+     "model": "post-hoc model: chosen after the 2020+ test; not a clean out-of-sample result",
+     "as_of": "2026-10-01",
+     "compare_to": "2025-10-01",
+     "rows": [
+      {
+       "term": "infl_gap",
+       "label": "inflation minus target, pp",
+       "plain": "Inflation above target",
+       "effect_per_sd": 56.12,
+       "t": 5.24,
+       "significant": true,
+       "lag_months": 1,
+       "contribution_now": -14.26,
+       "change_12m": -6.58
+      },
+      {
+       "term": "real_rate",
+       "label": "real policy rate, %",
+       "plain": "Real interest rate",
+       "effect_per_sd": 44.97,
+       "t": 4.09,
+       "significant": true,
+       "lag_months": 1,
+       "contribution_now": 21.58,
+       "change_12m": -11.09
+      },
+      {
+       "term": "debt_x_seat",
+       "label": "debt x government seat share",
+       "plain": "Debt combined with a weak government",
+       "effect_per_sd": 42.54,
+       "t": 3.41,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 52.21,
+       "change_12m": 8.11
+      },
+      {
+       "term": "high_court_indep",
+       "label": "high-court independence (V-Dem)",
+       "plain": "High-court independence",
+       "effect_per_sd": 26.47,
+       "t": 3.14,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": -109.33,
+       "change_12m": -82.38
+      },
+      {
+       "term": "log_vix",
+       "label": "VIX (log)",
+       "plain": "Global risk appetite (VIX)",
+       "effect_per_sd": 25.1,
+       "t": 3.86,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -1.39,
+       "change_12m": -5.39
+      },
+      {
+       "term": "rating",
+       "label": "average rating (notches)",
+       "plain": "Credit rating",
+       "effect_per_sd": -24.66,
+       "t": -3.46,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 15.67,
+       "change_12m": 3.38
+      },
+      {
+       "term": "reserves_months",
+       "label": "reserves, months of imports",
+       "plain": "FX reserves",
+       "effect_per_sd": -23.57,
+       "t": -2.24,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 1.79,
+       "change_12m": -1.68
+      },
+      {
+       "term": "seat_share",
+       "label": "government seat share, %",
+       "plain": "Government's share of seats",
+       "effect_per_sd": -20.93,
+       "t": -1.98,
+       "significant": false,
+       "lag_months": 0,
+       "contribution_now": -25.5,
+       "change_12m": 0.0
+      },
+      {
+       "term": "ecb_rate",
+       "label": "ECB deposit rate, %",
+       "plain": "ECB interest rate",
+       "effect_per_sd": -18.65,
+       "t": -1.46,
+       "significant": false,
+       "lag_months": 0,
+       "contribution_now": -32.84,
+       "change_12m": -8.37
+      },
+      {
+       "term": "n_gov5y",
+       "label": "governments in prior 5 years",
+       "plain": "Government turnover",
+       "effect_per_sd": -17.86,
+       "t": -2.85,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -1.98,
+       "change_12m": 0.0
+      }
+     ],
+     "n_factors": 24,
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/fit_v2_posthoc/coefficients_spread_em.csv"
+    },
+    {
+     "kind": "currency",
+     "target": "currency vs USD",
+     "unit": "% of the real exchange rate (+ = weaker)",
+     "model": "v1 currency equation, fitted 2005-2019",
+     "as_of": "2026-09-01",
+     "compare_to": "2025-09-01",
+     "rows": [
+      {
+       "term": "jucon",
+       "label": "judicial constraints (V-Dem)",
+       "plain": "Courts' checks on government",
+       "effect_per_sd": -8.14,
+       "t": -9.28,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 26.59,
+       "change_12m": 7.66
+      },
+      {
+       "term": "debt",
+       "label": "gross debt, % GDP",
+       "plain": "Government debt",
+       "effect_per_sd": 6.29,
+       "t": 10.98,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": 5.92,
+       "change_12m": 0.87
+      },
+      {
+       "term": "foreign_share",
+       "label": "debt held abroad, %",
+       "plain": "Debt owned by foreigners",
+       "effect_per_sd": 4.99,
+       "t": 5.95,
+       "significant": true,
+       "lag_months": 6,
+       "contribution_now": -4.89,
+       "change_12m": -0.85
+      },
+      {
+       "term": "commod_oil:MX",
+       "label": "commodity oil:MX",
+       "plain": "Commodity prices: oil",
+       "effect_per_sd": -3.7,
+       "t": -4.02,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -3.82,
+       "change_12m": -4.8
+      },
+      {
+       "term": "infl_gap",
+       "label": "inflation minus target, pp",
+       "plain": "Inflation above target",
+       "effect_per_sd": 3.38,
+       "t": 5.83,
+       "significant": true,
+       "lag_months": 1,
+       "contribution_now": -1.16,
+       "change_12m": -0.42
+      },
+      {
+       "term": "rating",
+       "label": "average rating (notches)",
+       "plain": "Credit rating",
+       "effect_per_sd": -2.63,
+       "t": -3.21,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 1.23,
+       "change_12m": 0.27
+      },
+      {
+       "term": "high_court_indep",
+       "label": "high-court independence (V-Dem)",
+       "plain": "High-court independence",
+       "effect_per_sd": 2.61,
+       "t": 3.42,
+       "significant": true,
+       "lag_months": 12,
+       "contribution_now": -9.05,
+       "change_12m": -6.82
+      },
+      {
+       "term": "ecb_rate",
+       "label": "ECB deposit rate, %",
+       "plain": "ECB interest rate",
+       "effect_per_sd": -2.44,
+       "t": -3.96,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": -4.03,
+       "change_12m": -0.82
+      },
+      {
+       "term": "lr_ches",
+       "label": "governing parties' economic position (CHES)",
+       "plain": "Government left/right (CHES)",
+       "effect_per_sd": -2.37,
+       "t": -2.46,
+       "significant": true,
+       "lag_months": 0,
+       "contribution_now": 0.0,
+       "change_12m": 0.0
+      },
+      {
+       "term": "rate_diff",
+       "label": "policy rate minus fed funds, pp",
+       "plain": "Interest-rate gap to the US",
+       "effect_per_sd": -1.95,
+       "t": -1.75,
+       "significant": false,
+       "lag_months": 0,
+       "contribution_now": 0.82,
+       "change_12m": 0.36
+      }
+     ],
+     "n_factors": 30,
+     "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/fit/coefficients_fx.csv"
+    }
+   ],
+   "waterfall": {
+    "as_of": "2026-10-01",
+    "unit": "bp",
+    "target": "10-year spread vs US Treasuries",
+    "steps": [
+     {
+      "label": "Country baseline (2005-19 average)",
+      "value": 421.35,
+      "kind": "base"
+     },
+     {
+      "label": "High-court independence",
+      "model_label": "high-court independence (V-Dem)",
+      "value": -109.33,
+      "kind": "factor"
+     },
+     {
+      "label": "Debt combined with a weak government",
+      "model_label": "debt x government seat share",
+      "value": 52.21,
+      "kind": "factor"
+     },
+     {
+      "label": "US 10-year yield",
+      "model_label": "US 10y yield, %",
+      "value": -36.32,
+      "kind": "factor"
+     },
+     {
+      "label": "ECB interest rate",
+      "model_label": "ECB deposit rate, %",
+      "value": -32.84,
+      "kind": "factor"
+     },
+     {
+      "label": "Government's share of seats",
+      "model_label": "government seat share, %",
+      "value": -25.5,
+      "kind": "factor"
+     },
+     {
+      "label": "Government left/right (V-Party)",
+      "model_label": "governing parties' economic position (V-Party, + = right)",
+      "value": 21.99,
+      "kind": "factor"
+     },
+     {
+      "label": "18 other factors",
+      "value": 15.01,
+      "kind": "factor"
+     }
+    ],
+    "fair_value": 306.57,
+    "actual": 417.61,
+    "model": "post-hoc model: chosen after the 2020+ test; not a clean out-of-sample result",
+    "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/factors.csv"
+   }
+  }
+ },
+ "systematic": {
+  "as_of": "2026-09",
+  "effective_from": "2026-10",
+  "rows": [
+   {
+    "book": "bond",
+    "instrument": "GB-DE",
+    "description": "United Kingdom 10y bond spread over the Bund (long United Kingdom, short Bund)",
+    "side": "long",
+    "size_pct": 75.25,
+    "carry_z": 0.506,
+    "trend_z": 1.172,
+    "value_z": -0.028,
+    "score": 0.55
+   },
+   {
+    "book": "bond",
+    "instrument": "PL-DE",
+    "description": "Poland 10y bond spread over the Bund (long Poland, short Bund)",
+    "side": "long",
+    "size_pct": 50.03,
+    "carry_z": 1.257,
+    "trend_z": 0.504,
+    "value_z": -0.112,
+    "score": 0.55
+   },
+   {
+    "book": "bond",
+    "instrument": "ZA10Y",
+    "description": "South Africa 10y local-currency bond (excess over local policy rate)",
+    "side": "long",
+    "size_pct": 35.96,
+    "carry_z": 0.604,
+    "trend_z": 0.961,
+    "value_z": -0.809,
+    "score": 0.252
+   },
+   {
+    "book": "bond",
+    "instrument": "MX10Y",
+    "description": "Mexico 10y local-currency bond (excess over local policy rate)",
+    "side": "long",
+    "size_pct": 32.77,
+    "carry_z": 1.383,
+    "trend_z": -0.396,
+    "value_z": -0.179,
+    "score": 0.269
+   },
+   {
+    "book": "bond",
+    "instrument": "TR10Y",
+    "description": "Turkey 10y local-currency bond (excess over local policy rate)",
+    "side": "short",
+    "size_pct": -15.5,
+    "carry_z": -2.481,
+    "trend_z": -1.611,
+    "value_z": 2.821,
+    "score": -0.424
+   },
+   {
+    "book": "bond",
+    "instrument": "BR10Y",
+    "description": "Brazil 10y local-currency bond (excess over local policy rate)",
+    "side": "short",
+    "size_pct": -26.99,
+    "carry_z": -0.523,
+    "trend_z": 0.59,
+    "value_z": -0.627,
+    "score": -0.187
+   },
+   {
+    "book": "bond",
+    "instrument": "CL10Y",
+    "description": "Chile 10y local-currency bond (excess over local policy rate)",
+    "side": "short",
+    "size_pct": -41.24,
+    "carry_z": 0.309,
+    "trend_z": -0.665,
+    "value_z": -0.377,
+    "score": -0.244
+   },
+   {
+    "book": "bond",
+    "instrument": "DE10Y",
+    "description": "German 10y Bund (excess over the ECB rate)",
+    "side": "short",
+    "size_pct": -41.28,
+    "carry_z": -0.005,
+    "trend_z": -1.239,
+    "value_z": null,
+    "score": -0.622
+   },
+   {
+    "book": "fx",
+    "instrument": "TRY",
+    "description": "TRY vs USD (Turkey)",
+    "side": "long",
+    "size_pct": 46.17,
+    "carry_z": 2.658,
+    "trend_z": 1.133,
+    "value_z": -1.183,
+    "score": 0.869
+   },
+   {
+    "book": "fx",
+    "instrument": "IDR",
+    "description": "IDR vs USD (Indonesia)",
+    "side": "long",
+    "size_pct": 34.73,
+    "carry_z": -0.38,
+    "trend_z": -0.266,
+    "value_z": 1.725,
+    "score": 0.36
+   },
+   {
+    "book": "fx",
+    "instrument": "BRL",
+    "description": "BRL vs USD (Brazil)",
+    "side": "long",
+    "size_pct": 22.58,
+    "carry_z": 0.411,
+    "trend_z": 0.775,
+    "value_z": 0.148,
+    "score": 0.445
+   },
+   {
+    "book": "fx",
+    "instrument": "PLN",
+    "description": "PLN vs USD (Poland)",
+    "side": "short",
+    "size_pct": -23.77,
+    "carry_z": -0.574,
+    "trend_z": -0.939,
+    "value_z": -0.119,
+    "score": -0.544
+   },
+   {
+    "book": "fx",
+    "instrument": "GBP",
+    "description": "GBP vs USD (United Kingdom)",
+    "side": "short",
+    "size_pct": -31.58,
+    "carry_z": -0.574,
+    "trend_z": -0.335,
+    "value_z": 0.15,
+    "score": -0.253
+   },
+   {
+    "book": "fx",
+    "instrument": "EUR",
+    "description": "EUR vs USD (euro area)",
+    "side": "short",
+    "size_pct": -32.74,
+    "carry_z": -0.708,
+    "trend_z": -0.684,
+    "value_z": 0.292,
+    "score": -0.367
+   }
+  ],
+  "universe": {
+   "fx": 10,
+   "bond": 13
+  },
+  "formula": [
+   "carry = what the position pays: policy-rate gap to the US for currencies; yield minus funding rate for bonds",
+   "trend = average z-score of the past 12-month and 3-month returns",
+   "value = cheapness: real exchange rate vs its 5-year average (currencies); spread minus the risk model's fair value (bonds)",
+   "score = (z(carry) + z(trend) + z(value)) / 3, z-scored across each book every month",
+   "rank each book: long the top third, short the bottom third, nothing in the middle third",
+   "size = 1 / trailing 36-month volatility; each book scaled to 10% volatility; books mixed 50/50"
+  ],
+  "note": "em-macro publishes only the positions it takes (top and bottom thirds); the middle third is not listed.",
+  "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/systematic/positions.csv"
+ },
+ "event_study": {
+  "groups": {
+   "BR": [
+    {
+     "group": "Elections",
+     "event_type": "election",
+     "subtypes": [
+      "general",
+      "presidential",
+      "presidential_r2",
+      "legislative"
+     ],
+     "asset": "USD/BRL",
+     "unit": "%",
+     "n": 10,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -1.123,
+       "median": -0.338,
+       "lo": -4.174,
+       "hi": 0.564
+      },
+      {
+       "day": 5,
+       "mean": -1.785,
+       "median": -0.587,
+       "lo": -5.094,
+       "hi": 0.384
+      },
+      {
+       "day": 20,
+       "mean": 0.419,
+       "median": 0.833,
+       "lo": -2.199,
+       "hi": 3.436
+      }
+     ],
+     "first": "2006-10-01",
+     "last": "2026-10-04"
+    },
+    {
+     "group": "Elections",
+     "event_type": "election",
+     "subtypes": [
+      "general",
+      "presidential",
+      "presidential_r2",
+      "legislative"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 11,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -33.296,
+       "median": -24.541,
+       "lo": -81.463,
+       "hi": -0.436
+      },
+      {
+       "day": 5,
+       "mean": -41.79,
+       "median": -26.789,
+       "lo": -102.507,
+       "hi": -6.213
+      },
+      {
+       "day": 20,
+       "mean": 12.857,
+       "median": -5.257,
+       "lo": -42.069,
+       "hi": 86.117
+      }
+     ],
+     "first": "2006-10-01",
+     "last": "2026-10-04"
+    },
+    {
+     "group": "Rate hikes",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hike"
+     ],
+     "asset": "USD/BRL",
+     "unit": "%",
+     "n": 51,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -0.168,
+       "median": -0.295,
+       "lo": -1.499,
+       "hi": 1.482
+      },
+      {
+       "day": 5,
+       "mean": -0.173,
+       "median": 0.022,
+       "lo": -2.7,
+       "hi": 2.386
+      },
+      {
+       "day": 20,
+       "mean": 0.478,
+       "median": -0.673,
+       "lo": -4.858,
+       "hi": 6.436
+      }
+     ],
+     "first": "2005-01-19",
+     "last": "2025-06-18"
+    },
+    {
+     "group": "Rate hikes",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hike"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 51,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -5.812,
+       "median": -5.742,
+       "lo": -22.131,
+       "hi": 9.287
+      },
+      {
+       "day": 5,
+       "mean": 5.317,
+       "median": 1.487,
+       "lo": -32.115,
+       "hi": 39.806
+      },
+      {
+       "day": 20,
+       "mean": 17.55,
+       "median": 12.705,
+       "lo": -45.057,
+       "hi": 85.569
+      }
+     ],
+     "first": "2005-01-19",
+     "last": "2025-06-18"
+    },
+    {
+     "group": "Rate cuts",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "cut"
+     ],
+     "asset": "USD/BRL",
+     "unit": "%",
+     "n": 66,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": 0.262,
+       "median": 0.064,
+       "lo": -0.869,
+       "hi": 1.986
+      },
+      {
+       "day": 5,
+       "mean": 0.367,
+       "median": 0.32,
+       "lo": -1.736,
+       "hi": 2.382
+      },
+      {
+       "day": 20,
+       "mean": 0.196,
+       "median": 0.316,
+       "lo": -4.157,
+       "hi": 4.645
+      }
+     ],
+     "first": "2005-09-14",
+     "last": "2026-09-16"
+    },
+    {
+     "group": "Rate cuts",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "cut"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 66,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -0.147,
+       "median": -3.535,
+       "lo": -26.752,
+       "hi": 28.27
+      },
+      {
+       "day": 5,
+       "mean": 6.498,
+       "median": 3.08,
+       "lo": -25.417,
+       "hi": 36.485
+      },
+      {
+       "day": 20,
+       "mean": -7.962,
+       "median": 1.444,
+       "lo": -71.334,
+       "hi": 49.65
+      }
+     ],
+     "first": "2005-09-14",
+     "last": "2026-09-16"
+    },
+    {
+     "group": "Rate holds",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hold"
+     ],
+     "asset": "USD/BRL",
+     "unit": "%",
+     "n": 60,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -0.042,
+       "median": -0.031,
+       "lo": -1.308,
+       "hi": 1.412
+      },
+      {
+       "day": 5,
+       "mean": 0.174,
+       "median": 0.049,
+       "lo": -1.857,
+       "hi": 2.534
+      },
+      {
+       "day": 20,
+       "mean": -0.159,
+       "median": -0.128,
+       "lo": -4.753,
+       "hi": 4.94
+      }
+     ],
+     "first": "2005-06-15",
+     "last": "2026-01-28"
+    },
+    {
+     "group": "Rate holds",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hold"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 60,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -0.376,
+       "median": -0.871,
+       "lo": -22.096,
+       "hi": 21.232
+      },
+      {
+       "day": 5,
+       "mean": 3.192,
+       "median": 4.368,
+       "lo": -41.317,
+       "hi": 46.479
+      },
+      {
+       "day": 20,
+       "mean": -0.984,
+       "median": -9.398,
+       "lo": -72.137,
+       "hi": 102.223
+      }
+     ],
+     "first": "2005-06-15",
+     "last": "2026-01-28"
+    }
+   ],
+   "MX": [
+    {
+     "group": "Elections",
+     "event_type": "election",
+     "subtypes": [
+      "general",
+      "presidential",
+      "presidential_r2",
+      "legislative"
+     ],
+     "asset": "USD/MXN",
+     "unit": "%",
+     "n": 7,
+     "range": "min-max",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": 0.541,
+       "median": -0.297,
+       "lo": -1.169,
+       "hi": 3.532
+      },
+      {
+       "day": 5,
+       "mean": 0.595,
+       "median": -0.605,
+       "lo": -2.453,
+       "hi": 7.211
+      },
+      {
+       "day": 20,
+       "mean": -0.92,
+       "median": -1.634,
+       "lo": -5.122,
+       "hi": 6.407
+      }
+     ],
+     "first": "2006-07-02",
+     "last": "2024-06-02"
+    },
+    {
+     "group": "Elections",
+     "event_type": "election",
+     "subtypes": [
+      "general",
+      "presidential",
+      "presidential_r2",
+      "legislative"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 7,
+     "range": "min-max",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -6.195,
+       "median": -7.389,
+       "lo": -35.152,
+       "hi": 22.715
+      },
+      {
+       "day": 5,
+       "mean": -4.571,
+       "median": -2.817,
+       "lo": -59.285,
+       "hi": 46.467
+      },
+      {
+       "day": 20,
+       "mean": -4.48,
+       "median": 5.931,
+       "lo": -62.471,
+       "hi": 44.098
+      }
+     ],
+     "first": "2006-07-02",
+     "last": "2024-06-02"
+    },
+    {
+     "group": "Rate hikes",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hike"
+     ],
+     "asset": "USD/MXN",
+     "unit": "%",
+     "n": 37,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -0.48,
+       "median": -0.505,
+       "lo": -1.757,
+       "hi": 0.65
+      },
+      {
+       "day": 5,
+       "mean": -0.455,
+       "median": -0.552,
+       "lo": -2.392,
+       "hi": 1.542
+      },
+      {
+       "day": 20,
+       "mean": -0.778,
+       "median": -0.921,
+       "lo": -3.919,
+       "hi": 2.13
+      }
+     ],
+     "first": "2005-01-28",
+     "last": "2023-03-30"
+    },
+    {
+     "group": "Rate hikes",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hike"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 37,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": 2.909,
+       "median": 2.673,
+       "lo": -8.939,
+       "hi": 16.285
+      },
+      {
+       "day": 5,
+       "mean": 7.772,
+       "median": 3.739,
+       "lo": -12.421,
+       "hi": 34.667
+      },
+      {
+       "day": 20,
+       "mean": 8.615,
+       "median": 7.572,
+       "lo": -13.829,
+       "hi": 44.21
+      }
+     ],
+     "first": "2005-01-28",
+     "last": "2023-03-30"
+    },
+    {
+     "group": "Rate cuts",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "cut"
+     ],
+     "asset": "USD/MXN",
+     "unit": "%",
+     "n": 46,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": 0.039,
+       "median": -0.196,
+       "lo": -1.389,
+       "hi": 1.422
+      },
+      {
+       "day": 5,
+       "mean": -0.12,
+       "median": -0.081,
+       "lo": -1.887,
+       "hi": 1.801
+      },
+      {
+       "day": 20,
+       "mean": -0.306,
+       "median": -0.958,
+       "lo": -4.679,
+       "hi": 3.019
+      }
+     ],
+     "first": "2005-09-23",
+     "last": "2026-05-07"
+    },
+    {
+     "group": "Rate cuts",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "cut"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 46,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -0.167,
+       "median": 0.849,
+       "lo": -15.926,
+       "hi": 12.741
+      },
+      {
+       "day": 5,
+       "mean": -2.381,
+       "median": 1.293,
+       "lo": -30.149,
+       "hi": 18.415
+      },
+      {
+       "day": 20,
+       "mean": 2.514,
+       "median": 4.662,
+       "lo": -29.745,
+       "hi": 37.557
+      }
+     ],
+     "first": "2005-09-23",
+     "last": "2026-05-07"
+    },
+    {
+     "group": "Rate holds",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hold"
+     ],
+     "asset": "USD/MXN",
+     "unit": "%",
+     "n": 113,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": 0.024,
+       "median": -0.009,
+       "lo": -0.959,
+       "hi": 0.917
+      },
+      {
+       "day": 5,
+       "mean": -0.006,
+       "median": -0.149,
+       "lo": -1.25,
+       "hi": 1.276
+      },
+      {
+       "day": 20,
+       "mean": 0.242,
+       "median": 0.11,
+       "lo": -2.383,
+       "hi": 3.719
+      }
+     ],
+     "first": "2005-04-22",
+     "last": "2026-09-24"
+    },
+    {
+     "group": "Rate holds",
+     "event_type": "rate_decision",
+     "subtypes": [
+      "hold"
+     ],
+     "asset": "10-year yield",
+     "unit": "bp",
+     "n": 113,
+     "range": "10th-90th percentile",
+     "path": [
+      {
+       "day": 0,
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      },
+      {
+       "day": 1,
+       "mean": -0.0,
+       "median": 0.106,
+       "lo": -12.199,
+       "hi": 11.676
+      },
+      {
+       "day": 5,
+       "mean": 0.003,
+       "median": -1.019,
+       "lo": -18.324,
+       "hi": 15.528
+      },
+      {
+       "day": 20,
+       "mean": -2.191,
+       "median": -2.128,
+       "lo": -32.4,
+       "hi": 31.332
+      }
+     ],
+     "first": "2005-04-22",
+     "last": "2026-09-24"
+    }
+   ]
+  },
+  "measure": "abnormal move (net of the dollar, US 10-year and VIX) from the day before the event",
+  "missing": "em-macro has no event-study results for rating actions or budgets, and none for France, so those are not shown.",
+  "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/test/event_moves.csv"
+ },
+ "what_if": {
+  "countries": {
+   "FR": [
+    {
+     "key": "deficit",
+     "scenario": "deficit_plus1",
+     "label": "Budget deficit, change in % of GDP",
+     "min": -2,
+     "max": 3,
+     "step": 0.25,
+     "now": 5.06,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 9.34,
+       "se_per_unit": 1.88,
+       "as_of": "2026-09-01",
+       "description": "fiscal deficit +1 point of GDP (enters with the 12-month publication lag)"
+      }
+     },
+     "unit_note": null
+    },
+    {
+     "key": "rating",
+     "scenario": "downgrade_1",
+     "label": "Credit rating, notches of downgrade (average of S&P, Moody's, Fitch)",
+     "min": -2,
+     "max": 3,
+     "step": 1,
+     "now": null,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 36.95,
+       "se_per_unit": 4.78,
+       "as_of": "2026-09-01",
+       "description": "one-notch rating downgrade (average of the three agencies)"
+      }
+     },
+     "unit_note": null
+    },
+    {
+     "key": "seat_share",
+     "scenario": "lose_majority",
+     "label": "Government seat share, change in percentage points",
+     "min": -20,
+     "max": 10,
+     "step": 1,
+     "now": 28.2,
+     "effects": {
+      "spread_bp": {
+       "per_unit": -1.908,
+       "se_per_unit": 0.613,
+       "as_of": "2026-09-01",
+       "description": "government loses its majority (seat share to 45%; already-minority governments: -10pp)"
+      }
+     },
+     "unit_note": "em-macro's scenario is -10.0 pp"
+    },
+    {
+     "key": "populism",
+     "scenario": "populism_plus1sd",
+     "label": "Governing parties' populism, change in standard deviations",
+     "min": -2,
+     "max": 2,
+     "step": 0.25,
+     "now": null,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 12.44,
+       "se_per_unit": 13.12,
+       "as_of": "2026-09-01",
+       "description": "governing parties' populism (V-Party) up one standard deviation"
+      }
+     },
+     "unit_note": null
+    }
+   ],
+   "BR": [
+    {
+     "key": "deficit",
+     "scenario": "deficit_plus1",
+     "label": "Budget deficit, change in % of GDP",
+     "min": -2,
+     "max": 3,
+     "step": 0.25,
+     "now": 7.43,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 5.01,
+       "se_per_unit": 2.63,
+       "as_of": "2026-10-01",
+       "description": "fiscal deficit +1 point of GDP (enters with the 12-month publication lag)"
+      },
+      "fx_pct": {
+       "per_unit": -0.51,
+       "se_per_unit": 0.26,
+       "as_of": "2026-09-01",
+       "description": "fiscal deficit +1 point of GDP (enters with the 12-month publication lag)"
+      }
+     },
+     "unit_note": null
+    },
+    {
+     "key": "rating",
+     "scenario": "downgrade_1",
+     "label": "Credit rating, notches of downgrade (average of S&P, Moody's, Fitch)",
+     "min": -2,
+     "max": 3,
+     "step": 1,
+     "now": null,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 10.14,
+       "se_per_unit": 2.93,
+       "as_of": "2026-10-01",
+       "description": "one-notch rating downgrade (average of the three agencies)"
+      },
+      "fx_pct": {
+       "per_unit": 0.8,
+       "se_per_unit": 0.25,
+       "as_of": "2026-09-01",
+       "description": "one-notch rating downgrade (average of the three agencies)"
+      }
+     },
+     "unit_note": null
+    },
+    {
+     "key": "seat_share",
+     "scenario": "lose_majority",
+     "label": "Government seat share, change in percentage points",
+     "min": -20,
+     "max": 10,
+     "step": 1,
+     "now": 47.6,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 3.046,
+       "se_per_unit": 1.712,
+       "as_of": "2026-10-01",
+       "description": "government loses its majority (seat share to 45%; already-minority governments: -10pp)"
+      },
+      "fx_pct": {
+       "per_unit": -0.28,
+       "se_per_unit": 0.057,
+       "as_of": "2026-09-01",
+       "description": "government loses its majority (seat share to 45%; already-minority governments: -10pp)"
+      }
+     },
+     "unit_note": "em-macro's scenario is -10.0 pp"
+    },
+    {
+     "key": "populism",
+     "scenario": "populism_plus1sd",
+     "label": "Governing parties' populism, change in standard deviations",
+     "min": -2,
+     "max": 2,
+     "step": 0.25,
+     "now": null,
+     "effects": {
+      "spread_bp": {
+       "per_unit": -0.2,
+       "se_per_unit": 2.44,
+       "as_of": "2026-10-01",
+       "description": "governing parties' populism (V-Party) up one standard deviation"
+      },
+      "fx_pct": {
+       "per_unit": 1.49,
+       "se_per_unit": 0.78,
+       "as_of": "2026-09-01",
+       "description": "governing parties' populism (V-Party) up one standard deviation"
+      }
+     },
+     "unit_note": null
+    }
+   ],
+   "MX": [
+    {
+     "key": "deficit",
+     "scenario": "deficit_plus1",
+     "label": "Budget deficit, change in % of GDP",
+     "min": -2,
+     "max": 3,
+     "step": 0.25,
+     "now": 4.86,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 5.01,
+       "se_per_unit": 2.63,
+       "as_of": "2026-10-01",
+       "description": "fiscal deficit +1 point of GDP (enters with the 12-month publication lag)"
+      },
+      "fx_pct": {
+       "per_unit": -0.51,
+       "se_per_unit": 0.26,
+       "as_of": "2026-09-01",
+       "description": "fiscal deficit +1 point of GDP (enters with the 12-month publication lag)"
+      }
+     },
+     "unit_note": null
+    },
+    {
+     "key": "rating",
+     "scenario": "downgrade_1",
+     "label": "Credit rating, notches of downgrade (average of S&P, Moody's, Fitch)",
+     "min": -2,
+     "max": 3,
+     "step": 1,
+     "now": null,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 10.14,
+       "se_per_unit": 2.93,
+       "as_of": "2026-10-01",
+       "description": "one-notch rating downgrade (average of the three agencies)"
+      },
+      "fx_pct": {
+       "per_unit": 0.8,
+       "se_per_unit": 0.25,
+       "as_of": "2026-09-01",
+       "description": "one-notch rating downgrade (average of the three agencies)"
+      }
+     },
+     "unit_note": null
+    },
+    {
+     "key": "seat_share",
+     "scenario": "lose_majority",
+     "label": "Government seat share, change in percentage points",
+     "min": -20,
+     "max": 10,
+     "step": 1,
+     "now": 62.6,
+     "effects": {
+      "spread_bp": {
+       "per_unit": 1.6909,
+       "se_per_unit": 1.3585,
+       "as_of": "2026-10-01",
+       "description": "government loses its majority (seat share to 45%; already-minority governments: -10pp)"
+      },
+      "fx_pct": {
+       "per_unit": -0.2352,
+       "se_per_unit": 0.0358,
+       "as_of": "2026-09-01",
+       "description": "government loses its majority (seat share to 45%; already-minority governments: -10pp)"
+      }
+     },
+     "unit_note": "em-macro's scenario is -17.6 pp"
+    },
+    {
+     "key": "populism",
+     "scenario": "populism_plus1sd",
+     "label": "Governing parties' populism, change in standard deviations",
+     "min": -2,
+     "max": 2,
+     "step": 0.25,
+     "now": null,
+     "effects": {
+      "spread_bp": {
+       "per_unit": -0.2,
+       "se_per_unit": 2.44,
+       "as_of": "2026-10-01",
+       "description": "governing parties' populism (V-Party) up one standard deviation"
+      },
+      "fx_pct": {
+       "per_unit": 1.49,
+       "se_per_unit": 0.78,
+       "as_of": "2026-09-01",
+       "description": "governing parties' populism (V-Party) up one standard deviation"
+      }
+     },
+     "unit_note": null
+    }
+   ]
+  },
+  "band": "90% band = ±1.645 × the combined standard error (factors treated as independent)",
+  "caveat": "Linear extrapolation of em-macro's what-if estimates, holding everything else fixed. Bands cover parameter uncertainty only. The Brazil and Mexico seat-share effect reflects 2005-2019 co-movement, not a causal estimate.",
+  "currency_note": "Currency effects are % changes in the real exchange rate, + = weaker local currency (v1 currency equation).",
+  "source_url": "https://github.com/EthanC100/em-macro/blob/main/results/risk_model/what_if.csv"
+ }
+}

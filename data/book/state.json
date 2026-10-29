@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T16:04:42Z",
+ "generated_at": "2026-10-29T16:20:43Z",
  "as_of": "2026-10-29",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
@@ -27,6 +27,12 @@
    "low_frequency": false,
    "note": null,
    "degraded": null,
+   "scale": null,
+   "favourable": 1,
+   "rate_usd": "us.fedfunds",
+   "rate_local": "br.selic.target",
+   "maturity": null,
+   "unit": "BRL per USD",
    "duration": null,
    "cost": 0.075,
    "cost_unit": "% of notional"
@@ -47,6 +53,12 @@
     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
    },
+   "scale": null,
+   "favourable": 1,
+   "rate_usd": "us.fedfunds",
+   "rate_local": "mx.policy.target",
+   "maturity": null,
+   "unit": "MXN per USD",
    "duration": null,
    "cost": 0.075,
    "cost_unit": "% of notional"
@@ -67,6 +79,12 @@
     "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
     "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
    },
+   "scale": 10000.0,
+   "favourable": -1,
+   "rate_usd": null,
+   "rate_local": null,
+   "maturity": null,
+   "unit": "bp",
    "duration": 8,
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -83,6 +101,12 @@
    "low_frequency": false,
    "note": "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged.",
    "degraded": null,
+   "scale": 100.0,
+   "favourable": -1,
+   "rate_usd": null,
+   "rate_local": null,
+   "maturity": null,
+   "unit": "% p.a.",
    "duration": 5.5,
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -103,6 +127,12 @@
     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
     "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
    },
+   "scale": 100.0,
+   "favourable": -1,
+   "rate_usd": null,
+   "rate_local": null,
+   "maturity": "2027-01-04",
+   "unit": "% p.a. (252)",
    "duration": "zero_coupon",
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -123,6 +153,12 @@
     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
     "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
    },
+   "scale": 100.0,
+   "favourable": -1,
+   "rate_usd": null,
+   "rate_local": null,
+   "maturity": "2029-01-02",
+   "unit": "% p.a. (252)",
    "duration": "zero_coupon",
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -143,6 +179,12 @@
     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
     "upgrade": "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
    },
+   "scale": 100.0,
+   "favourable": -1,
+   "rate_usd": null,
+   "rate_local": null,
+   "maturity": "2031-01-02",
+   "unit": "% p.a. (252)",
    "duration": "zero_coupon",
    "cost": 2,
    "cost_unit": "bp of yield"
@@ -163,6 +205,12 @@
     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
    },
+   "scale": 100.0,
+   "favourable": -1,
+   "rate_usd": null,
+   "rate_local": null,
+   "maturity": null,
+   "unit": "% p.a.",
    "duration": 5.5,
    "cost": 3,
    "cost_unit": "bp of yield"
@@ -183,6 +231,12 @@
     "effect": "Same FRED series, read from the public fredgraph.csv download. Values are identical; there is no vintage/revision metadata and the endpoint is rate-limited more tightly.",
     "upgrade": "add the FRED_API_KEY secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
    },
+   "scale": 100.0,
+   "favourable": -1,
+   "rate_usd": null,
+   "rate_local": null,
+   "maturity": null,
+   "unit": "%",
    "duration": 8,
    "cost": 1,
    "cost_unit": "bp of yield"
