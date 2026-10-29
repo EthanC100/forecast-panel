@@ -324,11 +324,11 @@ def load_forward_log() -> tuple[pd.DataFrame | None, str]:
     for c in cands:
         try:
             if c.startswith("http"):
-                headers = {}
+                # gold-events is public: try without credentials first, so a stale token cannot break it.
+                resp = requests.get(c, timeout=HTTP_TIMEOUT)
                 tok = os.environ.get("GOLD_EVENTS_TOKEN") or os.environ.get("GITHUB_TOKEN")
-                if tok and "githubusercontent" in c:
-                    headers["Authorization"] = f"token {tok}"
-                resp = requests.get(c, headers=headers, timeout=HTTP_TIMEOUT)
+                if resp.status_code in (401, 403, 404) and tok and "githubusercontent" in c:
+                    resp = requests.get(c, headers={"Authorization": f"token {tok}"}, timeout=HTTP_TIMEOUT)
                 resp.raise_for_status()
                 from io import StringIO
                 df = pd.read_csv(StringIO(resp.text))

@@ -3,7 +3,9 @@
     python -m terminal.run fetch [--only key1,key2]   fetch sources, write series + status
     python -m terminal.run calendar [--no-attention]  rebuild the catalyst calendar (+ GDELT attention)
     python -m terminal.run summary                    rebuild data/terminal/summary.json for the site
-    python -m terminal.run all                        all three
+    python -m terminal.run book                       fills, exits, marks -> data/book/state.json
+    python -m terminal.run judge                      scores and journal -> data/book/judgements.json, journal.json
+    python -m terminal.run all                        fetch, calendar, summary, book, judge
     python -m terminal.run site                       copy data/terminal into site/data for local viewing
 
 A source that fails, or whose secret is missing, is recorded as an error on the status page and
@@ -64,15 +66,19 @@ def fetch(only: set[str] | None = None) -> dict:
 
 
 def copy_site(dest=store.ROOT / "site" / "data") -> None:
+    """What pages.yml does at deploy: terminal data at site/data, book data at site/data/book."""
     if dest.exists():
         shutil.rmtree(dest)
     shutil.copytree(store.DATA, dest, ignore=shutil.ignore_patterns("inputs"))
+    book = store.ROOT / "data" / "book"
+    if book.exists():
+        shutil.copytree(book, dest / "book")
 
 
 def main(argv=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "all", "site"])
+    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site"])
     ap.add_argument("--only", default="", help="comma-separated source keys for fetch")
     ap.add_argument("--no-attention", action="store_true", help="calendar: skip the GDELT attention refresh")
     a = ap.parse_args(argv)
@@ -87,6 +93,15 @@ def main(argv=None) -> int:
     if a.cmd in ("summary", "all"):
         from terminal import summary
         summary.build()
+    if a.cmd in ("book", "all"):
+        from terminal import book
+        st = book.build()
+        log.info("book: equity %.2f, %d open, %d pending; wrote %s", st["equity"]["current"], st["stats"]["n_open"],
+                 st["stats"]["n_pending"], st["written_this_run"] or "nothing")
+    if a.cmd in ("judge", "all"):
+        from terminal import judgement
+        js = judgement.build()
+        log.info("judgements: %d questions, %d resolved", js["summary"]["n_questions"], js["summary"]["n_resolved"])
     if a.cmd == "site":
         copy_site()
     return 0

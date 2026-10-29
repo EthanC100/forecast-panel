@@ -337,6 +337,27 @@ def rating_reviews(notes: list[str]) -> list[dict]:
     return out
 
 
+BANK = {"BR": "Copom", "MX": "Banxico"}
+
+
+def add_base_rates(events: list[dict], past: list[dict], n: int = 24) -> None:
+    """Base rate for rate decisions from em-macro's history: how often the last n scheduled decisions
+    changed the rate. Pre-fills the Full call form."""
+    for c, bank in BANK.items():
+        hist = [e for e in past if e["country"] == c and e["type"] == "rates" and str(e.get("scheduled", "Y")).upper().startswith("Y")]
+        hist = sorted(hist, key=lambda e: e["date"])[-n:]
+        if len(hist) < 8:
+            continue
+        changed = [e for e in hist if e.get("change_bp") not in (None, "", "0", "0.0") and float(e["change_bp"] or 0) != 0]
+        cuts = sum(float(e["change_bp"]) < 0 for e in changed)
+        last = hist[-1]
+        text = (f"{bank} changed the rate at {len(changed)} of its last {len(hist)} scheduled decisions "
+                f"({cuts} cuts, {len(changed) - cuts} hikes) since {hist[0]['date']}; last: {last['title']} on {last['date']} (em-macro)")
+        for e in events:
+            if e["country"] == c and e["type"] == "rates":
+                e["base_rate"] = {"text": text, "changed": len(changed), "of": len(hist)}
+
+
 def build(attention: bool = True) -> dict:
     notes: list[str] = []
     cfg = yaml.safe_load(EVENTS_YAML.read_text())
@@ -354,6 +375,7 @@ def build(attention: bool = True) -> dict:
     att = refresh_attention(future, notes, do_fetch=attention)
     score_events(future, att)
     past = em_macro_events(notes)
+    add_base_rates(future, past)
     cal = {"generated_at": store.now_iso(), "horizon": horizon.isoformat(), "events": future,
            "past_events": sorted(past, key=lambda e: e["date"]), "notes": cfg.get("notes", []) + notes,
            "attention_definition": att.get("definition"),

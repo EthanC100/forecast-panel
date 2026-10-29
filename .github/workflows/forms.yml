@@ -1,0 +1,82 @@
+name: Terminal forms
+
+# Trade and judgement Issue Forms (open trade, close trade, quick update, full call, resolve).
+# Parses the form as submitted, validates it, writes one write-once record under data/trades/ or
+# data/judgements/, rebuilds the book and journal, comments a summary, closes the issue and
+# redeploys the site. Only the repository owner's issues are processed (terminal/forms.py checks).
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: data-writer          # shared with the data workflows so pushes never collide
+  cancel-in-progress: false
+
+jobs:
+  handle:
+    if: startsWith(github.event.issue.title, '[') || contains(github.event.issue.labels.*.name, 'terminal-form')
+    runs-on: ubuntu-latest
+    outputs:
+      handled: ${{ steps.form.outputs.handled }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e .
+
+      # The issue body is read from the event file by Python, never interpolated into the shell.
+      - name: Parse and record the form
+        id: form
+        run: |
+          python -m terminal.forms "$GITHUB_EVENT_PATH" --comment "$RUNNER_TEMP/comment.md" --result "$RUNNER_TEMP/result.json"
+          python -c "import json,os; r=json.load(open(os.environ['RUNNER_TEMP']+'/result.json')); print('handled=' + ('true' if r.get('handled') else 'false')); print('close=' + r.get('close', ''))" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild book, judgements and summary
+        if: steps.form.outputs.handled == 'true'
+        run: |
+          python -m terminal.run book
+          python -m terminal.run judge
+          python -m terminal.run summary
+
+      - name: Commit
+        if: steps.form.outputs.handled == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/trades data/judgements data/book data/terminal/summary.json
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "Form #${{ github.event.issue.number }}: record and rebuild"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Comment and close the issue
+        if: steps.form.outputs.handled == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          REASON: ${{ steps.form.outputs.close }}
+        run: |
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+          if [ "$REASON" = "not_planned" ]; then
+            gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY" --reason "not planned"
+          else
+            gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed
+          fi
+
+  deploy:
+    needs: handle
+    if: needs.handle.outputs.handled == 'true'
+    uses: ./.github/workflows/pages.yml

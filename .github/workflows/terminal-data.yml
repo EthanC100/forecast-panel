@@ -63,6 +63,11 @@ jobs:
         if: steps.pick.outputs.full == 'yes'
         run: python -m terminal.run calendar
 
+      - name: Paper book (fills, exits, marks) and judgements
+        run: |
+          python -m terminal.run book
+          python -m terminal.run judge
+
       - name: Summary for the site
         run: python -m terminal.run summary
 
@@ -70,7 +75,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/terminal
+          git add data/terminal data/trades data/judgements data/book
           if git diff --cached --quiet; then
             echo "nothing to commit"
           else

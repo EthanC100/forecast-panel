@@ -22,9 +22,9 @@ TILES = [
     # key, label, candidate series (first that exists wins), change unit, country, decimals
     ("usdbrl", "USD/BRL", ["br.usdbrl.ptax"], "pct", "BR", 4),
     ("usdmxn", "USD/MXN", ["mx.usdmxn.fix"], "pct", "MX", 4),
-    ("di27", "Brazil DI Jan-27", ["br.di.f27"], "bp", "BR", 2),
-    ("di29", "Brazil DI Jan-29", ["br.di.f29"], "bp", "BR", 2),
-    ("di31", "Brazil DI Jan-31", ["br.di.f31"], "bp", "BR", 2),
+    ("di27", "Brazil DI Jan-27", ["br.di.f27", "br.di.f27.proxy"], "bp", "BR", 2),
+    ("di29", "Brazil DI Jan-29", ["br.di.f29", "br.di.f29.proxy"], "bp", "BR", 2),
+    ("di31", "Brazil DI Jan-31", ["br.di.f31", "br.di.f31.proxy"], "bp", "BR", 2),
     ("br10y", "Brazil 10-year proxy", ["br.td.pre_longest"], "bp", "BR", 2),
     ("oatbund", "France OAT-Bund spread", ["fr.spread.oat_bund", "fr.spread.oat_bund.ecb_m"], "diff", "FR", 1),
     ("us10y", "US 10-year", ["us.ust10y"], "bp", "US", 2),
@@ -36,7 +36,8 @@ SOURCE_OF_SERIES = {"br.di": "b3_di", "fr.spread.oat_bund": "webstat", "mx.": "b
 COUNTRIES = {
     "FR": {"name": "France", "charts": [["fr.spread.oat_bund", "fr.spread.oat_bund.ecb_m"], ["fr.oat10y", "fr.oat10y.ecb_m"],
                                          ["de.bund10y"]], "survey": [], "cot": None},
-    "BR": {"name": "Brazil", "charts": [["br.usdbrl.ptax"], ["br.di.f27"], ["br.di.f29"], ["br.di.f31"], ["br.td.pre_longest"],
+    "BR": {"name": "Brazil", "charts": [["br.usdbrl.ptax"], ["br.di.f27", "br.di.f27.proxy"], ["br.di.f29", "br.di.f29.proxy"],
+                                        ["br.di.f31", "br.di.f31.proxy"], ["br.td.pre_longest"],
                                         ["br.td.ipca_longest"], ["br.selic.target"]],
            "survey": [("br.focus.ipca", "IPCA inflation"), ("br.focus.selic", "Selic, year end"), ("br.focus.brl", "USD/BRL, year end"),
                       ("br.focus.gdp", "GDP growth"), ("br.focus.primary", "Primary balance, % GDP")], "cot": "br.cot.brl"},
@@ -133,7 +134,11 @@ def tiles(status: dict) -> list[dict]:
         t.update(stats(s, unit))
         t["unit"] = s.get("unit")
         note = None
-        if fallback:
+        if s.get("proxy"):
+            t["label"] = label + " (proxy)"
+            t["proxy"] = True
+            note = s.get("proxy_note")
+        elif fallback:
             note = f"fallback: {s['name']} ({s.get('frequency')}); the preferred daily series is not available"
         if s["id"] == "br.td.pre_longest":
             note = f"bond used: {s['history'][-1][3]} maturing {s['history'][-1][2]}"
@@ -275,8 +280,8 @@ def chart_list(groups: list[list[str]]) -> list[dict]:
     for ids in groups:
         s, fallback = first_series(ids)
         if s:
-            out.append({"series": s["id"], "name": s["name"], "unit": s.get("unit"), "fallback": fallback,
-                        "meta": meta_of(s)})
+            out.append({"series": s["id"], "name": s["name"], "unit": s.get("unit"), "fallback": fallback and not s.get("proxy"),
+                        "proxy": bool(s.get("proxy")), "proxy_note": s.get("proxy_note"), "meta": meta_of(s)})
         else:
             out.append({"series": ids[0], "missing": True, "name": MISSING_NAMES.get(ids[0], ids[0]), "meta": {"evidence": evidence(ids[0])}})
     return out

@@ -17,7 +17,8 @@ Mobile-first, light and dark mode, bottom navigation:
 |---|---|
 | **Today** | The next three catalysts with countdowns. Instrument tiles for USD/BRL, USD/MXN, Brazil DI Jan-27/29/31, the Brazil 10-year proxy, the France OAT-Bund spread, US 10-year and Mexico 10-year (context), each with level, 1-week and 1-month change, and a z-score of the level against the past year. |
 | **Calendar** | Next 2 weeks, 3 months and 12 months. Each row: date, country, type, importance 1-3, confirmed or estimated, source, and a market-attention score with an under-attended flag. |
-| **Scenarios, Crowd, Record** | Placeholders for phases 2-5, listing the data already stored for them. |
+| **Record** | Phase 2: the paper book (Portfolio), scored calls (Judgements) and the Journal. See below. |
+| **Scenarios, Crowd** | Placeholders for later phases, listing the data already stored for them. |
 
 Also: a page per country (header links **FR / BR / MX**) and a **Status** page.
 
@@ -40,6 +41,82 @@ official target against independent estimates, from an editable table), **expect
 positioning** (survey median, its dispersion as a percentile of 10 years of readings at the same
 horizon, and CFTC net positioning as a percentile of 3 years), France's credit ratings, and the
 most traded prediction markets.
+
+## Phase 2: paper book, judgements and scoring
+
+### From a phone
+
+**Open a trade.** On a country page or a calendar event, tap **Open trade**, or tap **Open trade** on
+Record > Portfolio. GitHub opens the form with the instrument, the linked catalyst and the horizon
+filled in. Choose long or short and the size, either as a notional or as "risk amount to stop". Then
+enter the stop, the target, a one-line thesis and what would make you close early, and tap **Submit
+new issue**. You never type an entry price. The trade fills at the **first close published after you
+submit**. A workflow checks the form, records it, comments a summary and closes the issue within a
+minute or two. The comment includes a warning if the loss to your stop would exceed 2% of equity.
+
+**Close a trade.** On Record > Portfolio, tap **Close** next to the position. The trade ID is filled
+in. Write the two-line post-mortem: what happened against the thesis, and what you would do
+differently. The exit is the first close after you submit. Stops and targets close trades on their
+own, at the first close that reaches them. Positions past their horizon date are flagged.
+
+**Review.** Record > **Portfolio** shows open positions with P&L split into price, carry and costs,
+the equity curve, worst drawdown, risk at stake to your stops, hit rate, and average win and loss.
+It also shows em-macro's systematic strategy (its latest positions and paper P&L) and buy-and-hold of
+every instrument. Record > **Judgements** shows your calls and their scores. Record > **Journal**
+lists every trade, fill, post-mortem, exit, call, update and resolution in date order.
+
+**Make a call.** Tap **Make a call** on a calendar event or a prediction market (country page), or
+**Full call** on Record > Judgements. Base rates are pre-filled where the terminal has them: for
+Copom and Banxico decisions, how often the last 24 meetings changed the rate. Scenario probabilities
+must total 100. Prediction-market prices on country pages stay hidden until you tap **reveal**. The
+market-implied probability, and Claude's probability for forecast-panel questions, are recorded when
+you submit and shown only in the comment and on the site afterwards. Use **Quick update** to move
+your probability in 5% steps, and **Resolve** for questions that cannot resolve automatically.
+
+### Rules
+
+* **Nothing is edited after submission.** Each form becomes one write-once file under
+  `data/trades/` or `data/judgements/`, and the code refuses to overwrite one. Editing an issue
+  after submitting changes nothing. An invalid form is recorded as rejected, with its errors, and
+  closed as "not planned"; submit a new one. Only the repository owner's issues are processed.
+* Trade records: `T00012-open.json`, `-fill.json`, `-closereq.json` (with the post-mortem) and
+  `-exit.json`. Judgement records: `J00015-call.json`, `U00021-update.json`, `R00030-resolve.json`.
+  Derived files, rebuilt each run: `data/book/state.json`, `judgements.json` and `journal.json`.
+* The daily data run fills pending trades once their next close exists, marks open positions, applies
+  stops and targets, and flags passed horizons.
+
+### Assumptions (`data/book/config.yaml`, editable)
+
+* Starting capital is US$100,000, from 2026-10-29.
+* **FX** (USD/BRL, USD/MXN): long means long USD. P&L is N × (S_t − S_0) / S_t in USD. **Carry**
+  accrues daily, actual/360, at the policy-rate differential: Selic or the Banxico target against
+  US fed funds. A long USD/BRL position pays the Selic.
+* **Bonds, DI and the spread**: P&L is −direction × notional × duration × change in yield. Long
+  means long the bond, which gains when the yield falls. For OAT-Bund, long means long OAT against
+  Bund, which gains when the spread narrows. Bond and spread positions earn no carry or roll-down.
+* **Duration** is 8 years for every 10-year position: US, France-Germany, Brazil and Mexico. Brazil's
+  and Mexico's high-coupon bonds are nearer 5-6 years, so edit it if you prefer. DI proxies are
+  zero-coupon: duration is years to maturity / (1 + yield), fixed at entry.
+* **Costs** are a full round trip charged at entry, so open P&L is liquidation value. FX costs
+  0.075% (range 0.05-0.10%). Bonds cost 2 bp, the US 10-year 1 bp and the Mexico 10-year 3 bp.
+* **Fills**: each instrument has the time its daily value is published (`close_utc`). Entry and exit
+  are the first close whose date plus that time is after the submission. Mexico 10-year is low
+  frequency (auction yields about monthly), so its fills and stops can lag by weeks. While Webstat is
+  not configured, the France spread falls back to the ECB monthly series.
+* **DI Jan-27/29/31 are proxies** until B3 is reachable. They use Tesouro's zero-coupon Tesouro
+  Prefixado (LTN) bonds maturing on the same January dates, labelled "proxy". These are retail quotes:
+  the mid of the morning buy and sell rates, not the end-of-day DI settlement. LTN usually yields a
+  few bp to about 20 bp above DI, and the maturity is 1 January rather than the first business day.
+  Changes track DI closely; levels do not.
+
+### Scoring
+
+Each resolved question is scored on its last forecast before resolution. The **Brier** score is
+(p − outcome)², where lower is better. The **log score** is ln of the probability given to what
+happened, clipped at 1%, where higher is better. Both are compared with the market-implied
+probability recorded at the same submission. The **calibration chart** appears after 30 resolved
+questions. Questions linked to q1-q5, a Polymarket market (`pm:<id>`) or a Kalshi market
+(`ks:<ticker>`) resolve automatically; the rest use the Resolve form.
 
 ## Daily flow
 
@@ -93,6 +170,9 @@ those sources show red on the Status page and the keyless fallbacks carry the da
 
 ## Catalyst calendar
 
+* **Fiscal figures** in `data/terminal/inputs/fiscal_gap.yaml` are each checked against the official
+  document (budget law, LDO/PLDO, Paquete Económico, PLF). A "verified" chip and a note on what was
+  checked appear only where the document itself confirmed the number; otherwise the note says why not.
 * **Hand-sourced events** in `data/terminal/inputs/events.yaml`, each with a source URL and marked
   **confirmed** (published by the institution or fixed in law) or **estimated** (from a rule or a
   past pattern). These cover France (S&P review 27 Nov 2026, the Article 47 budget deadline, the
@@ -153,7 +233,13 @@ data/terminal/status.json        every source: state, last attempt, last success
 data/terminal/calendar.json      upcoming events and imported past events
 data/terminal/attention.json     GDELT share per query per day
 data/terminal/summary.json       what the site reads first
-terminal/                        the package: store, sources/, calendar, summary, run
+data/book/config.yaml            paper book: capital, instruments, costs, durations, close times
+data/book/state.json             positions, marks, equity curve, stats, benchmarks, systematic (rebuilt)
+data/book/judgements.json        calls, updates, resolutions and scores (rebuilt)
+data/book/journal.json           every record in date order (rebuilt)
+data/trades/, data/judgements/   write-once form records
+.github/ISSUE_TEMPLATE/          the five forms; .github/workflows/forms.yml processes them
+terminal/                        the package: store, sources/, calendar, summary, book, forms, judgement, run
 site/                            index.html, terminal.js, terminal.css (and lab/)
 ```
 

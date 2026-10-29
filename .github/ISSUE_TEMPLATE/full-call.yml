@@ -1,0 +1,177 @@
+name: Full call
+description: Make a scored forecast on a question.
+title: '[Full call] '
+labels:
+- terminal-form
+- full-call
+body:
+- type: markdown
+  attributes:
+    value: Scored by Brier and log score when the question resolves, against the market-implied probability recorded at submission. The market and AI probabilities are shown only after you submit. Scenario probabilities must total 100.
+- type: input
+  id: question
+  attributes:
+    label: Question
+  validations:
+    required: true
+- type: input
+  id: question_id
+  attributes:
+    label: Question ID (optional)
+    description: 'q1..q5, pm:<Polymarket market id>, ks:<Kalshi ticker> or a calendar event id: enables market lookup and automatic resolution.'
+- type: input
+  id: resolution_date
+  attributes:
+    label: Resolution date
+    placeholder: YYYY-MM-DD
+  validations:
+    required: true
+- type: input
+  id: base_rate
+  attributes:
+    label: Base rate
+    description: Pre-filled where the terminal has one; otherwise state your reference class.
+  validations:
+    required: true
+- type: input
+  id: factor1
+  attributes:
+    label: Factor 1
+  validations:
+    required: true
+- type: dropdown
+  id: factor1_direction
+  attributes:
+    label: 'Factor 1: direction'
+    options:
+    - Raises the probability
+    - Lowers the probability
+  validations:
+    required: true
+- type: dropdown
+  id: factor1_size
+  attributes:
+    label: 'Factor 1: size'
+    options:
+    - Small
+    - Medium
+    - Large
+  validations:
+    required: true
+- type: input
+  id: factor2
+  attributes:
+    label: Factor 2
+  validations:
+    required: false
+- type: dropdown
+  id: factor2_direction
+  attributes:
+    label: 'Factor 2: direction'
+    options:
+    - Raises the probability
+    - Lowers the probability
+  validations:
+    required: false
+- type: dropdown
+  id: factor2_size
+  attributes:
+    label: 'Factor 2: size'
+    options:
+    - Small
+    - Medium
+    - Large
+  validations:
+    required: false
+- type: input
+  id: factor3
+  attributes:
+    label: Factor 3
+  validations:
+    required: false
+- type: dropdown
+  id: factor3_direction
+  attributes:
+    label: 'Factor 3: direction'
+    options:
+    - Raises the probability
+    - Lowers the probability
+  validations:
+    required: false
+- type: dropdown
+  id: factor3_size
+  attributes:
+    label: 'Factor 3: size'
+    options:
+    - Small
+    - Medium
+    - Large
+  validations:
+    required: false
+- type: textarea
+  id: scenarios
+  attributes:
+    label: Scenarios and probabilities (must total 100)
+    placeholder: 'Cut 25bp: 60
+
+      Hold: 35
+
+      Cut 50bp: 5'
+  validations:
+    required: true
+- type: dropdown
+  id: probability
+  attributes:
+    label: My probability that the question resolves YES
+    options:
+    - 0%
+    - 5%
+    - 10%
+    - 15%
+    - 20%
+    - 25%
+    - 30%
+    - 35%
+    - 40%
+    - 45%
+    - 50%
+    - 55%
+    - 60%
+    - 65%
+    - 70%
+    - 75%
+    - 80%
+    - 85%
+    - 90%
+    - 95%
+    - 100%
+  validations:
+    required: true
+- type: input
+  id: linked_trade
+  attributes:
+    label: Linked trade (optional)
+    placeholder: T00012
+- type: textarea
+  id: change_mind
+  attributes:
+    label: What would change my mind, with dates
+    placeholder: Focus survey on 2026-11-09 shows ...
+  validations:
+    required: true
+- type: input
+  id: premortem
+  attributes:
+    label: 'Pre-mortem (one line): if this call is wrong, why?'
+  validations:
+    required: true
+- type: dropdown
+  id: confidence
+  attributes:
+    label: Confidence in my information
+    options:
+    - Low
+    - Medium
+    - High
+  validations:
+    required: true

@@ -123,6 +123,12 @@
     return S.series[id];
   }
 
+  const INSTRUMENTS = { BR: ["USDBRL", "BR10Y", "DI27", "DI29", "DI31"], MX: ["USDMXN", "MX10Y"], FR: ["OATBUND"], GLOBAL: ["US10Y"], US: ["US10Y"] };
+  const TERM = window.TERM = { el, fmt, signed, meta, badge, lineChart, getJSON, freshness: (a) => freshness(a) };
+  const formBtn = (...a) => (TERM.formBtn ? TERM.formBtn(...a) : null);
+  const blindKey = "terminal.revealed";
+  let revealed = {}; try { revealed = JSON.parse(store.get(blindKey, "{}")) || {}; } catch (e) { revealed = {}; }
+
   // ---------------- shared pieces ----------------
   const ctryChip = (c) => el("span", { class: "chip ctry", title: COUNTRY[c] || c }, c === "GLOBAL" ? "GL" : c);
   const statusChip = (s) => el("span", { class: "chip " + (s === "confirmed" ? "conf" : "est"), title: s === "confirmed" ? "Date published by the institution or fixed in law" : "Date from a rule or past pattern; check it" }, s);
@@ -169,7 +175,10 @@
         el("div", { class: "row2" }, ctryChip(e.country), el("span", {}, e.type), imp(e.importance), statusChip(e.status),
           e.source ? el("a", { href: e.source, target: "_blank", rel: "noopener" }, "source") : null),
         e.note ? el("details", {}, el("summary", {}, "note"), el("div", { class: "small muted" }, e.note)) : null,
-        meta({ source: "calendar", as_of: calGenerated, evidence: S.summary && S.summary.evidence_defaults.countdown, source_url: e.source }, { noId: true })),
+        meta({ source: "calendar", as_of: calGenerated, evidence: S.summary && S.summary.evidence_defaults.countdown, source_url: e.source }, { noId: true }),
+        e.importance >= 2 ? el("div", { class: "row", style: "margin-top:6px" },
+          formBtn("Open trade", "open-trade", { instrument: (INSTRUMENTS[e.country] || ["US10Y"])[0], link: e.id, horizon: e.date, title: "[Open trade] " + e.title }, "small"),
+          formBtn("Make a call", "full-call", { question: e.title + ": ", question_id: e.id, resolution_date: e.date, base_rate: e.base_rate ? e.base_rate.text : "", title: "[Full call] " + e.title }, "small")) : null),
       attCell);
   }
 
@@ -224,7 +233,9 @@
       return card;
     }
     const body = el("div", { class: "empty" }, "Loading…");
-    card.append(el("h2", {}, item.name, item.fallback ? el("span", { class: "chip est", style: "margin-left:6px" }, "fallback") : null), body, meta(item.meta));
+    card.append(el("h2", {}, item.name, item.fallback ? el("span", { class: "chip est", style: "margin-left:6px" }, "fallback") : null,
+      item.proxy ? el("span", { class: "chip est", style: "margin-left:6px", title: item.proxy_note || "" }, "proxy") : null), body,
+      item.proxy_note ? el("details", {}, el("summary", {}, "how the proxy differs from DI1"), el("div", { class: "small muted" }, item.proxy_note)) : null, meta(item.meta));
     loadSeries(item.series).then((s) => {
       const last = s.history[s.history.length - 1][0];
       const from = new Date(Date.parse(last) - (S.range === "5y" ? 5 * 365.25 : 365) * 864e5).toISOString().slice(0, 10);
@@ -244,11 +255,12 @@
       const t = el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "estimate"), el("th", { class: "r" }, "% of GDP"), el("th", {}, "source"))));
       const tb = el("tbody");
       const o = r.official || {};
-      tb.appendChild(el("tr", {}, el("td", {}, el("b", {}, "Official: "), o.label || ""), el("td", { class: "r" }, cellVal(o.value, 2)),
-        el("td", {}, o.source ? el("a", { href: o.source, target: "_blank", rel: "noopener" }, "link") : "–", " ", o.verified ? null : el("span", { class: "chip est" }, "to verify"))));
+      tb.appendChild(el("tr", {}, el("td", {}, el("b", {}, "Official: "), o.label || "", o.check ? el("details", {}, el("summary", {}, o.verified ? "how it was checked" : "why it is not confirmed"), el("div", { class: "small muted" }, o.check)) : null),
+        el("td", { class: "r" }, cellVal(o.value, 2)),
+        el("td", {}, o.source ? el("a", { href: o.source, target: "_blank", rel: "noopener" }, "source") : "–", " ", o.verified ? el("span", { class: "chip conf" }, "verified") : el("span", { class: "chip est" }, "to verify"))));
       (r.independent || []).forEach((i) => tb.appendChild(el("tr", {}, el("td", {}, i.name, i.note ? el("div", { class: "tiny" }, i.note) : null),
         el("td", { class: "r" }, cellVal(i.value, 2), i.as_of ? el("div", { class: "tiny" }, el("span", { class: "dot " + freshness(i.as_of).cls }), " " + i.as_of) : null),
-        el("td", {}, i.source ? el("a", { href: i.source, target: "_blank", rel: "noopener" }, i.source_label || "link") : "–", " ", i.verified ? null : el("span", { class: "chip est" }, "to verify")))));
+        el("td", {}, i.source ? el("a", { href: i.source, target: "_blank", rel: "noopener" }, i.source_label || "source") : "–", " ", i.value == null ? null : i.verified ? (i.auto ? null : el("span", { class: "chip conf" }, "verified")) : el("span", { class: "chip est" }, "to verify")))));
       t.appendChild(tb);
       wrap.append(el("h3", {}, r.metric + ", " + r.year),
         el("div", { class: "small" }, "Optimism gap (official − median independent): ", el("b", { class: "num" }, r.gap == null ? "–" : signed(r.gap, 2) + " pp"), " ", badge(ev)),
@@ -290,7 +302,8 @@
       f.append(el("div", { class: "sec" }, el("h2", {}, "Next catalysts"), el("a", { class: "small", href: "#calendar" }, "calendar →")), l);
     }
     const g = el("div", { class: "grid wide" }); c.charts.forEach((it) => g.appendChild(chartCard(it)));
-    f.append(el("div", { class: "sec" }, el("h2", {}, "Markets")), g);
+    f.append(el("div", { class: "sec" }, el("h2", {}, "Markets"), el("div", { class: "row" }, el("span", { class: "tiny" }, "Open trade:"),
+      ...(INSTRUMENTS[code] || []).map((i) => formBtn(i, "open-trade", { instrument: i, title: "[Open trade] " + i }, "small")))), g);
     f.append(el("div", { class: "sec" }, el("h2", {}, "Fiscal optimism gap")), el("article", { class: "card" }, fiscalTable(c.fiscal_gap || [], S.summary.evidence_defaults.fiscal_gap)));
     const ex = el("div", { class: "grid wide" });
     (c.surveys || []).forEach((b) => ex.appendChild(surveyCard(b)));
@@ -306,11 +319,20 @@
       f.append(el("div", { class: "sec" }, el("h2", {}, "Credit ratings")), el("article", { class: "card" }, el("div", { class: "scroll" }, t), meta(r.meta)));
     }
     if (c.markets && c.markets.length) {
-      const t = el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "market"), el("th", { class: "r" }, "P(yes)"), el("th", { class: "r" }, "volume"), el("th", {}, "venue"))));
+      const t = el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "market"), el("th", { class: "r" }, "P(yes)"), el("th", { class: "r" }, "volume"), el("th", {}, ""))));
       const tb = el("tbody");
-      c.markets.forEach((m) => tb.appendChild(el("tr", {}, el("td", {}, el("a", { href: m.url, target: "_blank", rel: "noopener" }, m.question)), el("td", { class: "r num" }, fmt(100 * m.prob, 0) + "%"), el("td", { class: "r num" }, m.volume == null ? "–" : "$" + fmt(m.volume / 1000, 0) + "k"), el("td", {}, m.venue))));
+      c.markets.forEach((m) => {
+        const key = m.meta.source_id, qid = m.venue === "Polymarket" ? "pm:" + String(key).replace("market ", "") : "ks:" + key;
+        const show = !!revealed[qid];
+        const cell = el("td", { class: "r num" }, show ? fmt(100 * m.prob, 0) + "%" : el("button", { type: "button", class: "btn small", title: "Hidden so it does not anchor a call; recorded with any call you submit",
+          onclick: () => { revealed[qid] = 1; store.set(blindKey, JSON.stringify(revealed)); route(); } }, "reveal"));
+        tb.appendChild(el("tr", {}, el("td", {}, el("a", { href: m.url, target: "_blank", rel: "noopener" }, m.question), el("div", { class: "tiny" }, m.venue + (m.end_date ? " · ends " + m.end_date : ""))), cell,
+          el("td", { class: "r num" }, m.volume == null ? "–" : "$" + fmt(m.volume / 1000, 0) + "k"),
+          el("td", {}, formBtn("Make a call", "full-call", { question: m.question, question_id: qid, resolution_date: m.end_date || "", title: "[Full call] " + m.question }, "small"))));
+      });
       t.appendChild(tb);
-      f.append(el("div", { class: "sec" }, el("h2", {}, "Prediction markets"), el("a", { class: "small", href: "#crowd" }, "crowd →")), el("article", { class: "card" }, el("div", { class: "scroll" }, t), meta(c.markets[0].meta, { noId: true })));
+      f.append(el("div", { class: "sec" }, el("h2", {}, "Prediction markets"), el("span", { class: "tiny" }, "Prices hidden until you reveal them; a call records the price at submission.")),
+        el("article", { class: "card" }, el("div", { class: "scroll" }, t), meta(c.markets[0].meta, { noId: true })));
     }
     return f;
   }
@@ -363,7 +385,7 @@
     else if (page === "status") node = pageStatus();
     else if (page === "scenarios") node = placeholder("Scenarios", "Phase 3", ["Scenario pages per country: what each catalyst outcome implies for the instruments on the Today page, with probabilities taken from the calendar and the crowd.", "Built on the stored series and the catalyst calendar (" + S.calendar.events.length + " upcoming events)."]);
     else if (page === "crowd") node = pageCrowd();
-    else if (page === "record") node = placeholder("Record", "Phases 2 and 3: paper book, judgement forms and scoring", ["A paper trading book on the instruments above, marked to the stored daily closes.", "Judgement forms before each catalyst, scored afterwards; the forecast-panel scorecard lives in the Lab until then."]);
+    else if (page === "record") node = TERM.pageRecord ? TERM.pageRecord(arg) : el("div", { class: "empty" }, "Loading…");
     else node = pageToday();
     app.appendChild(node);
   }

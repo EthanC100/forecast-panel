@@ -36,6 +36,8 @@ jobs:
           mkdir -p site/data
           cp -r data/terminal/. site/data/
           rm -rf site/data/inputs
+          mkdir -p site/data/book
+          cp -r data/book/. site/data/book/
 
       - uses: actions/configure-pages@v5
 

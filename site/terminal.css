@@ -142,3 +142,14 @@ details summary { cursor: pointer; color: var(--text-2); font-size: .82rem; }
   .top-links a { padding: 4px 5px; font-size: .8rem; }
   .icon { width: 30px; height: 28px; margin-left: 2px; }
 }
+/* phase 2 */
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { display: inline-block; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 9px; padding: 6px 12px; font-weight: 650; font-size: .85rem; cursor: pointer; text-decoration: none; }
+.btn:hover { text-decoration: none; border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.small { padding: 3px 9px; font-size: .78rem; }
+.hero { display: flex; flex-wrap: wrap; gap: 14px 22px; }
+.hero .h { min-width: 140px; flex: 1 1 140px; }
+.hero .h .v { font-size: 1.35rem; font-weight: 750; }
+.hero .h .k { font-size: .78rem; color: var(--text-2); }
+.hidden-p { color: var(--text-3); font-style: italic; }

@@ -22,6 +22,7 @@ FRED = [
     ("us.ust10y", "DGS10", "US 10-year Treasury yield", "US", "%", "daily"),
     ("us.usd.broad", "DTWEXBGS", "US dollar index (broad, goods and services)", "US", "index Jan-2006=100", "daily"),
     ("mx.10y.oecd_m", "IRLTLT01MXM156N", "Mexico 10-year government yield (monthly, context)", "MX", "%", "monthly"),
+    ("us.fedfunds", "DFF", "US effective federal funds rate (USD leg of FX carry)", "US", "% p.a.", "daily"),
 ]
 FRED_API = "https://api.stlouisfed.org/fred/series/observations"
 FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv"

@@ -1,0 +1,32 @@
+name: Resolve question
+description: Record the outcome of a call that cannot resolve automatically.
+title: '[Resolve] '
+labels:
+- terminal-form
+- resolve-question
+body:
+- type: markdown
+  attributes:
+    value: Questions linked to q1..q5, Polymarket or Kalshi resolve automatically. Use this for the rest. Recorded once; it cannot be changed later.
+- type: input
+  id: target
+  attributes:
+    label: Call or question ID
+    placeholder: J00015
+  validations:
+    required: true
+- type: dropdown
+  id: outcome
+  attributes:
+    label: Outcome
+    options:
+    - 'Yes'
+    - 'No'
+  validations:
+    required: true
+- type: input
+  id: source
+  attributes:
+    label: Source (link)
+  validations:
+    required: true

@@ -1,0 +1,99 @@
+# Paper trading book: instruments, costs and assumptions. Edit freely; the daily run and the
+# trade forms read this file. Times are when each daily value becomes known (UTC): a trade's entry
+# (or exit) is the first close whose date + close_utc is after the form was submitted.
+repo: EthanC100/forecast-panel
+starting_capital_usd: 100000
+start_date: 2026-10-29
+risk_warning_pct_of_equity: 2.0      # warn when the loss to the stop exceeds this share of current equity
+
+assumptions:
+  - "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t."
+  - "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it. Policy rates stand in for deposit rates."
+  - "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows)."
+  - "Duration: about 8 years for every 10-year position (US, France-Germany spread, Brazil and Mexico 10-year). Brazil's and Mexico's high-coupon 10-year bonds are nearer 5-6 years; edit `duration` to change it. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry."
+  - "No carry or roll-down on bond and spread positions."
+  - "Costs are a full round trip charged at entry, so open P&L is liquidation value: FX a percentage of notional, bonds a yield amount times duration times notional."
+  - "Sizing by risk: notional = risk amount / loss per unit of notional between the entry close and the stop (costs excluded)."
+
+instruments:
+  USDBRL:
+    name: USD/BRL
+    country: BR
+    kind: fx
+    series: [br.usdbrl.ptax]
+    close_utc: "16:30"            # PTAX is published ~13:10 BRT
+    rate_usd: us.fedfunds
+    rate_local: br.selic.target
+    cost_round_trip_pct: 0.075    # 0.05-0.10% per FX round trip
+  USDMXN:
+    name: USD/MXN
+    country: MX
+    kind: fx
+    series: [mx.usdmxn.fix]
+    close_utc: "18:30"            # FIX is set ~12:00 CDMX
+    rate_usd: us.fedfunds
+    rate_local: mx.policy.target
+    cost_round_trip_pct: 0.075
+  OATBUND:
+    name: France OAT-Bund 10-year spread
+    country: FR
+    kind: spread_bp
+    series: [fr.spread.oat_bund, fr.spread.oat_bund.ecb_m]
+    close_utc: "17:30"
+    duration: 8
+    cost_round_trip_bp: 2
+    note: "Long = long OAT, short Bund: gains when the spread narrows. Falls back to the ECB monthly spread (low frequency) until Webstat is configured."
+  BR10Y:
+    name: Brazil 10-year proxy (longest Tesouro Prefixado)
+    country: BR
+    kind: yield
+    series: [br.td.pre_longest]
+    close_utc: "13:00"            # Tesouro Direto morning rates
+    duration: 8
+    cost_round_trip_bp: 2
+    note: "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged."
+  DI27:
+    name: DI Jan-27 (proxy until B3 is reachable)
+    country: BR
+    kind: yield
+    series: [br.di.f27, br.di.f27.proxy]
+    close_utc: "13:00"
+    duration: zero_coupon
+    maturity: "2027-01-04"
+    cost_round_trip_bp: 2
+  DI29:
+    name: DI Jan-29 (proxy until B3 is reachable)
+    country: BR
+    kind: yield
+    series: [br.di.f29, br.di.f29.proxy]
+    close_utc: "13:00"
+    duration: zero_coupon
+    maturity: "2029-01-02"
+    cost_round_trip_bp: 2
+  DI31:
+    name: DI Jan-31 (proxy until B3 is reachable)
+    country: BR
+    kind: yield
+    series: [br.di.f31, br.di.f31.proxy]
+    close_utc: "13:00"
+    duration: zero_coupon
+    maturity: "2031-01-02"
+    cost_round_trip_bp: 2
+  MX10Y:
+    name: Mexico 10-year (auction yield; low frequency)
+    country: MX
+    kind: yield
+    series: [mx.mbono10y.auction, mx.10y.oecd_m]
+    close_utc: "18:00"
+    duration: 8
+    cost_round_trip_bp: 3
+    low_frequency: true
+    note: "Only marked when a 10-year auction (about monthly) or the OECD monthly figure prints: fills, stops and marks can lag by weeks."
+  US10Y:
+    name: US 10-year Treasury
+    country: US
+    kind: yield
+    series: [us.ust10y]
+    close_utc: "21:00"
+    duration: 8
+    cost_round_trip_bp: 1

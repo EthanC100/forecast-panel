@@ -1,0 +1,82 @@
+name: Open trade
+description: Open a paper trade. Entry is the next end-of-day close after you submit.
+title: '[Open trade] '
+labels:
+- terminal-form
+- open-trade
+body:
+- type: markdown
+  attributes:
+    value: '**Entry is the first close published after you submit; you never choose the price.** Instruments: `USDBRL`, `USDMXN`, `OATBUND`, `BR10Y`, `DI27`, `DI29`, `DI31`, `MX10Y` (low frequency), `US10Y`.
+
+
+      Long FX = long USD. Long a bond/DI = gains when the yield falls. Long `OATBUND` = long OAT vs Bund, gains when the spread narrows. Levels are in the instrument''s units: FX rate, yield in %, spread in bp. A warning is added if the loss to your stop exceeds 2% of equity.'
+- type: input
+  id: instrument
+  attributes:
+    label: Instrument
+    placeholder: USDBRL
+  validations:
+    required: true
+- type: dropdown
+  id: direction
+  attributes:
+    label: Direction
+    options:
+    - long
+    - short
+  validations:
+    required: true
+- type: dropdown
+  id: size_type
+  attributes:
+    label: Size is
+    options:
+    - Notional (USD)
+    - Risk amount to stop (USD)
+  validations:
+    required: true
+- type: input
+  id: size
+  attributes:
+    label: Size (USD)
+    placeholder: '50000'
+  validations:
+    required: true
+- type: input
+  id: stop
+  attributes:
+    label: Stop level
+    description: Closes automatically at the first close at or beyond this level.
+  validations:
+    required: true
+- type: input
+  id: target
+  attributes:
+    label: Target level
+    description: Optional. Closes automatically at the first close at or beyond it.
+- type: input
+  id: horizon
+  attributes:
+    label: Horizon date
+    placeholder: YYYY-MM-DD
+    description: Flagged once this date passes.
+  validations:
+    required: true
+- type: input
+  id: link
+  attributes:
+    label: Linked catalyst or question ID
+    description: A calendar event id, a call id (J00012) or a question id (q1, pm:123, ks:TICKER).
+- type: input
+  id: thesis
+  attributes:
+    label: Thesis (one line)
+  validations:
+    required: true
+- type: textarea
+  id: close_early
+  attributes:
+    label: What would make me close early
+  validations:
+    required: true

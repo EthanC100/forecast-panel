@@ -1,0 +1,1788 @@
+{
+ "generated_at": "2026-10-29T14:49:04Z",
+ "as_of": "2026-10-29",
+ "repo": "EthanC100/forecast-panel",
+ "starting_capital_usd": 100000.0,
+ "start_date": "2026-10-29",
+ "assumptions": [
+  "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t.",
+  "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it. Policy rates stand in for deposit rates.",
+  "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows).",
+  "Duration: about 8 years for every 10-year position (US, France-Germany spread, Brazil and Mexico 10-year). Brazil's and Mexico's high-coupon 10-year bonds are nearer 5-6 years; edit `duration` to change it. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry.",
+  "No carry or roll-down on bond and spread positions.",
+  "Costs are a full round trip charged at entry, so open P&L is liquidation value: FX a percentage of notional, bonds a yield amount times duration times notional.",
+  "Sizing by risk: notional = risk amount / loss per unit of notional between the entry close and the stop (costs excluded)."
+ ],
+ "risk_warning_pct_of_equity": 2.0,
+ "instruments": {
+  "USDBRL": {
+   "name": "USD/BRL",
+   "kind": "fx",
+   "country": "BR",
+   "series": "br.usdbrl.ptax",
+   "proxy": false,
+   "value": 5.342,
+   "date": "2026-10-28",
+   "close_utc": "16:30",
+   "low_frequency": false,
+   "note": null,
+   "duration": null,
+   "cost": 0.075,
+   "cost_unit": "% of notional"
+  },
+  "USDMXN": {
+   "name": "USD/MXN",
+   "kind": "fx",
+   "country": "MX",
+   "series": "mx.usdmxn.fix",
+   "proxy": false,
+   "value": 18.6673,
+   "date": "2026-10-28",
+   "close_utc": "18:30",
+   "low_frequency": false,
+   "note": null,
+   "duration": null,
+   "cost": 0.075,
+   "cost_unit": "% of notional"
+  },
+  "OATBUND": {
+   "name": "France OAT-Bund 10-year spread",
+   "kind": "spread_bp",
+   "country": "FR",
+   "series": "fr.spread.oat_bund.ecb_m",
+   "proxy": false,
+   "value": 96.7,
+   "date": "2026-09-01",
+   "close_utc": "17:30",
+   "low_frequency": false,
+   "note": "Long = long OAT, short Bund: gains when the spread narrows. Falls back to the ECB monthly spread (low frequency) until Webstat is configured.",
+   "duration": 8,
+   "cost": 2,
+   "cost_unit": "bp of yield"
+  },
+  "BR10Y": {
+   "name": "Brazil 10-year proxy (longest Tesouro Prefixado)",
+   "kind": "yield",
+   "country": "BR",
+   "series": "br.td.pre_longest",
+   "proxy": false,
+   "value": 14.93,
+   "date": "2026-10-28",
+   "close_utc": "13:00",
+   "low_frequency": false,
+   "note": "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged.",
+   "duration": 8,
+   "cost": 2,
+   "cost_unit": "bp of yield"
+  },
+  "DI27": {
+   "name": "DI Jan-27 (proxy until B3 is reachable)",
+   "kind": "yield",
+   "country": "BR",
+   "series": "br.di.f27.proxy",
+   "proxy": true,
+   "value": 13.54,
+   "date": "2026-10-28",
+   "close_utc": "13:00",
+   "low_frequency": false,
+   "note": null,
+   "duration": "zero_coupon",
+   "cost": 2,
+   "cost_unit": "bp of yield"
+  },
+  "DI29": {
+   "name": "DI Jan-29 (proxy until B3 is reachable)",
+   "kind": "yield",
+   "country": "BR",
+   "series": "br.di.f29.proxy",
+   "proxy": true,
+   "value": 14.94,
+   "date": "2026-10-28",
+   "close_utc": "13:00",
+   "low_frequency": false,
+   "note": null,
+   "duration": "zero_coupon",
+   "cost": 2,
+   "cost_unit": "bp of yield"
+  },
+  "DI31": {
+   "name": "DI Jan-31 (proxy until B3 is reachable)",
+   "kind": "yield",
+   "country": "BR",
+   "series": "br.di.f31.proxy",
+   "proxy": true,
+   "value": 15.1,
+   "date": "2026-10-28",
+   "close_utc": "13:00",
+   "low_frequency": false,
+   "note": null,
+   "duration": "zero_coupon",
+   "cost": 2,
+   "cost_unit": "bp of yield"
+  },
+  "MX10Y": {
+   "name": "Mexico 10-year (auction yield; low frequency)",
+   "kind": "yield",
+   "country": "MX",
+   "series": "mx.mbono10y.auction",
+   "proxy": false,
+   "value": 9.25,
+   "date": "2026-10-22",
+   "close_utc": "18:00",
+   "low_frequency": true,
+   "note": "Only marked when a 10-year auction (about monthly) or the OECD monthly figure prints: fills, stops and marks can lag by weeks.",
+   "duration": 8,
+   "cost": 3,
+   "cost_unit": "bp of yield"
+  },
+  "US10Y": {
+   "name": "US 10-year Treasury",
+   "kind": "yield",
+   "country": "US",
+   "series": "us.ust10y",
+   "proxy": false,
+   "value": 4.99,
+   "date": "2026-10-27",
+   "close_utc": "21:00",
+   "low_frequency": false,
+   "note": null,
+   "duration": 8,
+   "cost": 1,
+   "cost_unit": "bp of yield"
+  }
+ },
+ "equity": {
+  "current": 100000.0,
+  "pnl_usd": 0.0,
+  "return_pct": 0.0,
+  "curve": [
+   [
+    "2026-10-29",
+    100000.0
+   ]
+  ],
+  "worst_drawdown": {
+   "pct": 0.0,
+   "from": null,
+   "to": null
+  }
+ },
+ "risk_at_stake_usd": 0,
+ "risk_at_stake_pct": 0.0,
+ "stats": {
+  "n_closed": 0,
+  "n_open": 0,
+  "n_pending": 0,
+  "hit_rate_pct": null,
+  "avg_win_usd": null,
+  "avg_loss_usd": null,
+  "realised_pnl_usd": 0
+ },
+ "trades": [],
+ "written_this_run": [],
+ "benchmarks": [
+  {
+   "code": "USDBRL",
+   "name": "USD/BRL",
+   "series": "br.usdbrl.ptax",
+   "proxy": false,
+   "description": "long USD",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-29",
+    "to": "2026-10-28",
+    "pnl_usd": -10968.46,
+    "return_pct": -10.97
+   }
+  },
+  {
+   "code": "USDMXN",
+   "name": "USD/MXN",
+   "series": "mx.usdmxn.fix",
+   "proxy": false,
+   "description": "long USD",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-29",
+    "to": "2026-10-28",
+    "pnl_usd": -1724.27,
+    "return_pct": -1.72
+   }
+  },
+  {
+   "code": "OATBUND",
+   "name": "France OAT-Bund 10-year spread",
+   "series": "fr.spread.oat_bund.ecb_m",
+   "proxy": false,
+   "description": "long OAT vs Bund",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-11-01",
+    "to": "2026-09-01",
+    "pnl_usd": -1472.0,
+    "return_pct": -1.47
+   }
+  },
+  {
+   "code": "BR10Y",
+   "name": "Brazil 10-year proxy (longest Tesouro Prefixado)",
+   "series": "br.td.pre_longest",
+   "proxy": false,
+   "description": "long the bond",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-29",
+    "to": "2026-10-28",
+    "pnl_usd": -9280.0,
+    "return_pct": -9.28
+   }
+  },
+  {
+   "code": "DI27",
+   "name": "DI Jan-27 (proxy until B3 is reachable)",
+   "series": "br.di.f27.proxy",
+   "proxy": true,
+   "description": "long the bond",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-29",
+    "to": "2026-10-28",
+    "pnl_usd": 259.85,
+    "return_pct": 0.26
+   }
+  },
+  {
+   "code": "DI29",
+   "name": "DI Jan-29 (proxy until B3 is reachable)",
+   "series": "br.di.f29.proxy",
+   "proxy": true,
+   "description": "long the bond",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-29",
+    "to": "2026-10-28",
+    "pnl_usd": -4914.35,
+    "return_pct": -4.91
+   }
+  },
+  {
+   "code": "DI31",
+   "name": "DI Jan-31 (proxy until B3 is reachable)",
+   "series": "br.di.f31.proxy",
+   "proxy": true,
+   "description": "long the bond",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-29",
+    "to": "2026-10-28",
+    "pnl_usd": -7298.4,
+    "return_pct": -7.3
+   }
+  },
+  {
+   "code": "MX10Y",
+   "name": "Mexico 10-year (auction yield; low frequency)",
+   "series": "mx.mbono10y.auction",
+   "proxy": false,
+   "description": "long the bond",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-11-27",
+    "to": "2026-10-22",
+    "pnl_usd": -2320.0,
+    "return_pct": -2.32
+   }
+  },
+  {
+   "code": "US10Y",
+   "name": "US 10-year Treasury",
+   "series": "us.ust10y",
+   "proxy": false,
+   "description": "long the bond",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-29",
+    "to": "2026-10-27",
+    "pnl_usd": -7280.0,
+    "return_pct": -7.28
+   }
+  }
+ ],
+ "systematic": {
+  "available": true,
+  "source": "https://raw.githubusercontent.com/EthanC100/em-macro/main/results/systematic/",
+  "as_of": "2026-09",
+  "effective_from": "2026-10",
+  "positions": [
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "GB-DE",
+    "description": "United Kingdom 10y bond spread over the Bund (long United Kingdom, short Bund)",
+    "side": "long",
+    "size_pct_of_capital": "75.250",
+    "risk_share_pct": "6.300",
+    "instrument_vol_pct": "2.540",
+    "carry_z": "0.506",
+    "trend_z": "1.172",
+    "value_z": "-0.028",
+    "cost_pct_per_trade": "0.200",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "PL-DE",
+    "description": "Poland 10y bond spread over the Bund (long Poland, short Bund)",
+    "side": "long",
+    "size_pct_of_capital": "50.030",
+    "risk_share_pct": "7.000",
+    "instrument_vol_pct": "4.250",
+    "carry_z": "1.257",
+    "trend_z": "0.504",
+    "value_z": "-0.112",
+    "cost_pct_per_trade": "0.200",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "ZA10Y",
+    "description": "South Africa 10y local-currency bond (excess over local policy rate)",
+    "side": "long",
+    "size_pct_of_capital": "35.960",
+    "risk_share_pct": "8.200",
+    "instrument_vol_pct": "6.870",
+    "carry_z": "0.604",
+    "trend_z": "0.961",
+    "value_z": "-0.809",
+    "cost_pct_per_trade": "0.100",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "MX10Y",
+    "description": "Mexico 10y local-currency bond (excess over local policy rate)",
+    "side": "long",
+    "size_pct_of_capital": "32.770",
+    "risk_share_pct": "6.200",
+    "instrument_vol_pct": "5.680",
+    "carry_z": "1.383",
+    "trend_z": "-0.396",
+    "value_z": "-0.179",
+    "cost_pct_per_trade": "0.100",
+    "relevant": true
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "TR10Y",
+    "description": "Turkey 10y local-currency bond (excess over local policy rate)",
+    "side": "short",
+    "size_pct_of_capital": "-15.500",
+    "risk_share_pct": "8.200",
+    "instrument_vol_pct": "15.930",
+    "carry_z": "-2.481",
+    "trend_z": "-1.611",
+    "value_z": "2.821",
+    "cost_pct_per_trade": "0.300",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "BR10Y",
+    "description": "Brazil 10y local-currency bond (excess over local policy rate)",
+    "side": "short",
+    "size_pct_of_capital": "-26.990",
+    "risk_share_pct": "6.300",
+    "instrument_vol_pct": "7.070",
+    "carry_z": "-0.523",
+    "trend_z": "0.590",
+    "value_z": "-0.627",
+    "cost_pct_per_trade": "0.100",
+    "relevant": true
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "CL10Y",
+    "description": "Chile 10y local-currency bond (excess over local policy rate)",
+    "side": "short",
+    "size_pct_of_capital": "-41.240",
+    "risk_share_pct": "8.200",
+    "instrument_vol_pct": "5.990",
+    "carry_z": "0.309",
+    "trend_z": "-0.665",
+    "value_z": "-0.377",
+    "cost_pct_per_trade": "0.300",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "bond",
+    "instrument": "DE10Y",
+    "description": "German 10y Bund (excess over the ECB rate)",
+    "side": "short",
+    "size_pct_of_capital": "-41.280",
+    "risk_share_pct": "6.600",
+    "instrument_vol_pct": "4.850",
+    "carry_z": "-0.005",
+    "trend_z": "-1.239",
+    "value_z": "",
+    "cost_pct_per_trade": "0.100",
+    "relevant": true
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "fx",
+    "instrument": "TRY",
+    "description": "TRY vs USD (Turkey)",
+    "side": "long",
+    "size_pct_of_capital": "46.170",
+    "risk_share_pct": "6.300",
+    "instrument_vol_pct": "4.130",
+    "carry_z": "2.658",
+    "trend_z": "1.133",
+    "value_z": "-1.183",
+    "cost_pct_per_trade": "0.300",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "fx",
+    "instrument": "IDR",
+    "description": "IDR vs USD (Indonesia)",
+    "side": "long",
+    "size_pct_of_capital": "34.730",
+    "risk_share_pct": "7.600",
+    "instrument_vol_pct": "6.610",
+    "carry_z": "-0.380",
+    "trend_z": "-0.266",
+    "value_z": "1.725",
+    "cost_pct_per_trade": "0.300",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "fx",
+    "instrument": "BRL",
+    "description": "BRL vs USD (Brazil)",
+    "side": "long",
+    "size_pct_of_capital": "22.580",
+    "risk_share_pct": "7.700",
+    "instrument_vol_pct": "10.300",
+    "carry_z": "0.411",
+    "trend_z": "0.775",
+    "value_z": "0.148",
+    "cost_pct_per_trade": "0.100",
+    "relevant": true
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "fx",
+    "instrument": "PLN",
+    "description": "PLN vs USD (Poland)",
+    "side": "short",
+    "size_pct_of_capital": "-23.770",
+    "risk_share_pct": "6.800",
+    "instrument_vol_pct": "8.620",
+    "carry_z": "-0.574",
+    "trend_z": "-0.939",
+    "value_z": "-0.119",
+    "cost_pct_per_trade": "0.100",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "fx",
+    "instrument": "GBP",
+    "description": "GBP vs USD (United Kingdom)",
+    "side": "short",
+    "size_pct_of_capital": "-31.580",
+    "risk_share_pct": "7.200",
+    "instrument_vol_pct": "6.850",
+    "carry_z": "-0.574",
+    "trend_z": "-0.335",
+    "value_z": "0.150",
+    "cost_pct_per_trade": "0.100",
+    "relevant": false
+   },
+   {
+    "as_of": "2026-09",
+    "effective_from": "2026-10",
+    "book": "fx",
+    "instrument": "EUR",
+    "description": "EUR vs USD (euro area)",
+    "side": "short",
+    "size_pct_of_capital": "-32.740",
+    "risk_share_pct": "7.500",
+    "instrument_vol_pct": "6.960",
+    "carry_z": "-0.708",
+    "trend_z": "-0.684",
+    "value_z": "0.292",
+    "cost_pct_per_trade": "0.100",
+    "relevant": false
+   }
+  ],
+  "since_start": [],
+  "full_history": [
+   [
+    "2006-02",
+    1.010772,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-03",
+    0.995253,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-04",
+    0.982576,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-05",
+    0.934068,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-06",
+    0.934769,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-07",
+    0.932761,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-08",
+    0.935319,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-09",
+    0.938593,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-10",
+    0.931425,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-11",
+    0.897475,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2006-12",
+    0.898038,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-01",
+    0.904157,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-02",
+    0.889476,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-03",
+    0.885983,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-04",
+    0.881206,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-05",
+    0.905478,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-06",
+    0.914221,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-07",
+    0.9121,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-08",
+    0.903938,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-09",
+    0.910608,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-10",
+    0.918741,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-11",
+    0.924435,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2007-12",
+    0.936509,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-01",
+    0.92442,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-02",
+    0.921483,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-03",
+    0.936034,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-04",
+    0.946744,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-05",
+    0.942547,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-06",
+    0.94868,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-07",
+    0.950879,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-08",
+    0.979859,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-09",
+    0.95897,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-10",
+    0.908444,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-11",
+    0.931685,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2008-12",
+    1.006373,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-01",
+    1.082151,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-02",
+    1.074947,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-03",
+    1.084871,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-04",
+    1.112373,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-05",
+    1.085219,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-06",
+    1.068174,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-07",
+    1.078103,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-08",
+    1.021548,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-09",
+    1.028114,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-10",
+    1.006972,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-11",
+    1.011952,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2009-12",
+    1.046427,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-01",
+    1.01913,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-02",
+    1.030516,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-03",
+    1.055778,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-04",
+    1.09191,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-05",
+    1.135833,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-06",
+    1.229474,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-07",
+    1.158384,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-08",
+    1.168263,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-09",
+    1.172869,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-10",
+    1.148587,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-11",
+    1.206272,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2010-12",
+    1.177065,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-01",
+    1.107105,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-02",
+    1.111524,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-03",
+    1.125783,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-04",
+    1.123104,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-05",
+    1.136085,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-06",
+    1.170275,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-07",
+    1.220603,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-08",
+    1.225914,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-09",
+    1.194052,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-10",
+    1.248676,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-11",
+    1.227196,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2011-12",
+    1.168362,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-01",
+    1.258679,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-02",
+    1.322803,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-03",
+    1.314902,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-04",
+    1.252921,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-05",
+    1.228508,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-06",
+    1.160207,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-07",
+    1.148161,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-08",
+    1.147264,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-09",
+    1.19812,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-10",
+    1.207151,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-11",
+    1.203271,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2012-12",
+    1.225911,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-01",
+    1.271499,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-02",
+    1.307136,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-03",
+    1.286414,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-04",
+    1.290712,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-05",
+    1.301618,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-06",
+    1.286775,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-07",
+    1.297896,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-08",
+    1.305467,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-09",
+    1.326818,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-10",
+    1.338031,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-11",
+    1.442123,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2013-12",
+    1.334359,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-01",
+    1.33832,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-02",
+    1.36807,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-03",
+    1.439272,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-04",
+    1.434412,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-05",
+    1.492673,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-06",
+    1.484327,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-07",
+    1.490721,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-08",
+    1.492816,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-09",
+    1.495679,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-10",
+    1.526985,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-11",
+    1.557704,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2014-12",
+    1.541292,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-01",
+    1.625814,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-02",
+    1.569451,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-03",
+    1.545221,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-04",
+    1.564285,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-05",
+    1.496658,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-06",
+    1.471833,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-07",
+    1.469452,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-08",
+    1.448295,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-09",
+    1.511284,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-10",
+    1.524453,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-11",
+    1.501835,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2015-12",
+    1.440097,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-01",
+    1.430809,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-02",
+    1.455486,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-03",
+    1.472249,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-04",
+    1.53656,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-05",
+    1.508964,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-06",
+    1.622341,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-07",
+    1.618964,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-08",
+    1.622079,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-09",
+    1.631065,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-10",
+    1.685768,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-11",
+    1.614178,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2016-12",
+    1.656952,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-01",
+    1.64958,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-02",
+    1.690663,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-03",
+    1.780169,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-04",
+    1.718118,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-05",
+    1.755386,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-06",
+    1.731798,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-07",
+    1.728752,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-08",
+    1.708267,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-09",
+    1.691497,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-10",
+    1.660617,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-11",
+    1.646962,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2017-12",
+    1.652837,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-01",
+    1.684271,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-02",
+    1.702821,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-03",
+    1.700396,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-04",
+    1.683724,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-05",
+    1.630153,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-06",
+    1.595127,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-07",
+    1.599181,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-08",
+    1.534175,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-09",
+    1.547926,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-10",
+    1.673871,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-11",
+    1.700917,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2018-12",
+    1.710328,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-01",
+    1.755486,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-02",
+    1.742364,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-03",
+    1.692786,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-04",
+    1.681539,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-05",
+    1.662901,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-06",
+    1.615341,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-07",
+    1.644032,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-08",
+    1.577364,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-09",
+    1.594641,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-10",
+    1.60757,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-11",
+    1.664853,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2019-12",
+    1.626991,
+    "design 2005-2019 (in-sample)"
+   ],
+   [
+    "2020-01",
+    1.624936,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-02",
+    1.58939,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-03",
+    1.492054,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-04",
+    1.480063,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-05",
+    1.490574,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-06",
+    1.434229,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-07",
+    1.36157,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-08",
+    1.328705,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-09",
+    1.3489,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-10",
+    1.369202,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-11",
+    1.398815,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2020-12",
+    1.40079,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-01",
+    1.38373,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-02",
+    1.362031,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-03",
+    1.335024,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-04",
+    1.359425,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-05",
+    1.395633,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-06",
+    1.436539,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-07",
+    1.419715,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-08",
+    1.409625,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-09",
+    1.38519,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-10",
+    1.356556,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-11",
+    1.324658,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2021-12",
+    1.339246,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-01",
+    1.358057,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-02",
+    1.446947,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-03",
+    1.448104,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-04",
+    1.550584,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-05",
+    1.536756,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-06",
+    1.595598,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-07",
+    1.56783,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-08",
+    1.632857,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-09",
+    1.697026,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-10",
+    1.63406,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-11",
+    1.654539,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2022-12",
+    1.616105,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-01",
+    1.698486,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-02",
+    1.739058,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-03",
+    1.787215,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-04",
+    1.727817,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-05",
+    1.772247,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-06",
+    1.883449,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-07",
+    1.904988,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-08",
+    1.94991,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-09",
+    2.078101,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-10",
+    2.122052,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-11",
+    2.053343,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2023-12",
+    1.978805,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-01",
+    2.013083,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-02",
+    1.979352,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-03",
+    1.986015,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-04",
+    2.020285,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-05",
+    2.050147,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-06",
+    2.119042,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-07",
+    2.152737,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-08",
+    2.226954,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-09",
+    2.295022,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-10",
+    2.24827,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-11",
+    2.254051,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2024-12",
+    2.252057,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-01",
+    2.267541,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-02",
+    2.279724,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-03",
+    2.233576,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-04",
+    2.15249,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-05",
+    2.12722,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-06",
+    2.148566,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-07",
+    2.201171,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-08",
+    2.191392,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-09",
+    2.240005,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-10",
+    2.281849,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-11",
+    2.281079,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2025-12",
+    2.229734,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-01",
+    2.264431,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-02",
+    2.312827,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-03",
+    2.281664,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-04",
+    2.261637,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-05",
+    2.212108,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-06",
+    2.344029,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-07",
+    2.381561,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-08",
+    2.353803,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-09",
+    2.404727,
+    "test 2020+ (backtest, evaluated once)"
+   ]
+  ],
+  "latest_sample": "test 2020+ (backtest, evaluated once)",
+  "note": "Monthly paper P&L of em-macro's frozen systematic strategy (carry, trend, value across 10 currencies and 13 bond positions), scaled to the book's starting capital from the book's first month. Its positions cover more countries than this book."
+ }
+}

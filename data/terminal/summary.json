@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T14:19:23Z",
+ "generated_at": "2026-10-29T14:49:06Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -69,65 +69,107 @@
   },
   {
    "key": "di27",
-   "label": "Brazil DI Jan-27",
+   "label": "Brazil DI Jan-27 (proxy)",
    "country": "BR",
    "unit_change": "bp",
    "decimals": 2,
    "series_candidates": [
-    "br.di.f27"
+    "br.di.f27",
+    "br.di.f27.proxy"
    ],
-   "missing": true,
-   "reason": "RuntimeError",
-   "source_key": "b3_di",
+   "level": 13.54,
+   "as_of": "2026-10-28",
+   "chg_1w": 12.0,
+   "chg_1m": -9.0,
+   "chg_1w_from": "2026-10-21",
+   "chg_1m_from": "2026-09-28",
+   "z_1y": -0.69,
+   "n_1y": 248,
+   "unit": "% p.a. (252)",
+   "proxy": true,
    "meta": {
-    "source": "B3 DI x pré reference rates",
+    "source": "Tesouro Direto (Tesouro Transparente)",
+    "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2027-01-01, mid of Taxa Compra/Venda Manha",
+    "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+    "as_of": "2026-10-28",
+    "fetched_at": "2026-10-29T14:36:53Z",
+    "frequency": "daily",
+    "series": "br.di.f27.proxy",
     "evidence": {
      "badge": "untested",
      "reason": "DI futures curve; not tested as a signal."
     },
-    "as_of": null
+    "note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not."
    }
   },
   {
    "key": "di29",
-   "label": "Brazil DI Jan-29",
+   "label": "Brazil DI Jan-29 (proxy)",
    "country": "BR",
    "unit_change": "bp",
    "decimals": 2,
    "series_candidates": [
-    "br.di.f29"
+    "br.di.f29",
+    "br.di.f29.proxy"
    ],
-   "missing": true,
-   "reason": "RuntimeError",
-   "source_key": "b3_di",
+   "level": 14.94,
+   "as_of": "2026-10-28",
+   "chg_1w": 227.0,
+   "chg_1m": 95.0,
+   "chg_1w_from": "2026-10-21",
+   "chg_1m_from": "2026-09-28",
+   "z_1y": 2.06,
+   "n_1y": 248,
+   "unit": "% p.a. (252)",
+   "proxy": true,
    "meta": {
-    "source": "B3 DI x pré reference rates",
+    "source": "Tesouro Direto (Tesouro Transparente)",
+    "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2029-01-01, mid of Taxa Compra/Venda Manha",
+    "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+    "as_of": "2026-10-28",
+    "fetched_at": "2026-10-29T14:36:53Z",
+    "frequency": "daily",
+    "series": "br.di.f29.proxy",
     "evidence": {
      "badge": "untested",
      "reason": "DI futures curve; not tested as a signal."
     },
-    "as_of": null
+    "note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not."
    }
   },
   {
    "key": "di31",
-   "label": "Brazil DI Jan-31",
+   "label": "Brazil DI Jan-31 (proxy)",
    "country": "BR",
    "unit_change": "bp",
    "decimals": 2,
    "series_candidates": [
-    "br.di.f31"
+    "br.di.f31",
+    "br.di.f31.proxy"
    ],
-   "missing": true,
-   "reason": "RuntimeError",
-   "source_key": "b3_di",
+   "level": 15.1,
+   "as_of": "2026-10-28",
+   "chg_1w": 233.0,
+   "chg_1m": 95.0,
+   "chg_1w_from": "2026-10-21",
+   "chg_1m_from": "2026-09-28",
+   "z_1y": 2.14,
+   "n_1y": 248,
+   "unit": "% p.a. (252)",
+   "proxy": true,
    "meta": {
-    "source": "B3 DI x pré reference rates",
+    "source": "Tesouro Direto (Tesouro Transparente)",
+    "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2031-01-01, mid of Taxa Compra/Venda Manha",
+    "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+    "as_of": "2026-10-28",
+    "fetched_at": "2026-10-29T14:36:53Z",
+    "frequency": "daily",
+    "series": "br.di.f31.proxy",
     "evidence": {
      "badge": "untested",
      "reason": "DI futures curve; not tested as a signal."
     },
-    "as_of": null
+    "note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not."
    }
   },
   {
@@ -153,7 +195,7 @@
     "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
     "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
     "as_of": "2026-10-28",
-    "fetched_at": "2026-10-29T14:04:52Z",
+    "fetched_at": "2026-10-29T14:36:53Z",
     "frequency": "daily",
     "series": "br.td.pre_longest",
     "evidence": {
@@ -220,7 +262,7 @@
     "source_id": "FRED DGS10",
     "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
     "as_of": "2026-10-27",
-    "fetched_at": "2026-10-29T14:07:27Z",
+    "fetched_at": "2026-10-29T14:36:54Z",
     "frequency": "daily",
     "series": "us.ust10y",
     "evidence": {
@@ -294,7 +336,12 @@
    "origin": "manual",
    "id": "2026-11-04-br-copom-decision-3-4-nov",
    "attention": null,
-   "under_attended": false
+   "under_attended": false,
+   "base_rate": {
+    "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
+    "changed": 17,
+    "of": 24
+   }
   },
   {
    "date": "2026-11-05",
@@ -309,7 +356,12 @@
    "origin": "manual",
    "id": "2026-11-05-mx-banxico-monetary-policy-decision",
    "attention": null,
-   "under_attended": false
+   "under_attended": false,
+   "base_rate": {
+    "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
+    "changed": 15,
+    "of": 24
+   }
   }
  ],
  "countries": {
@@ -321,6 +373,8 @@
      "name": "France-Germany 10-year spread (ECB, monthly)",
      "unit": "bp",
      "fallback": true,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "ECB Data Portal (IRS, derived)",
       "source_id": "IRS.M.FR minus IRS.M.DE (L40.CI.0000.EUR.N.Z)",
@@ -340,6 +394,8 @@
      "name": "France 10-year yield (ECB, monthly average)",
      "unit": "%",
      "fallback": true,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "ECB Data Portal (IRS)",
       "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
@@ -359,6 +415,8 @@
      "name": "Germany 10-year Bund yield",
      "unit": "%",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "Deutsche Bundesbank",
       "source_id": "BBSIS.D.I.ZAR.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A",
@@ -376,13 +434,14 @@
    ],
    "fiscal_gap": [
     {
-     "metric": "General government balance",
+     "metric": "General government balance (solde effectif)",
      "year": 2026,
      "official": {
       "value": -5.0,
-      "label": "Loi de finances 2026 (adopted 2 Feb 2026)",
-      "source": "https://www.senat.fr/lessentiel/pjlf2026.pdf",
-      "verified": false
+      "label": "Loi de finances 2026 (loi n° 2026-103 du 19 février 2026), article liminaire",
+      "source": "https://questions.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17BTA0218.html",
+      "verified": false,
+      "check": "Not confirmed in the promulgated law: Légifrance refuses automated requests (HTTP 403). The article liminaire of the text adopted by the Assemblée at second reading (TA n° 218) gives solde effectif 2026 = -5.0% (structural -4.6%), and the government's final-stage amendment kept -5.0%. Confirm in the law: https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053508155"
      },
      "independent": [
       {
@@ -781,6 +840,8 @@
      "name": "USD/BRL PTAX (sell)",
      "unit": "BRL per USD",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "BCB SGS",
       "source_id": "SGS 1",
@@ -796,10 +857,20 @@
      }
     },
     {
-     "series": "br.di.f27",
-     "missing": true,
-     "name": "DI1 Jan-27",
+     "series": "br.di.f27.proxy",
+     "name": "DI Jan-27 proxy (Tesouro LTN 2027)",
+     "unit": "% p.a. (252)",
+     "fallback": false,
+     "proxy": true,
+     "proxy_note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not.",
      "meta": {
+      "source": "Tesouro Direto (Tesouro Transparente)",
+      "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2027-01-01, mid of Taxa Compra/Venda Manha",
+      "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+      "as_of": "2026-10-28",
+      "fetched_at": "2026-10-29T14:36:53Z",
+      "frequency": "daily",
+      "series": "br.di.f27.proxy",
       "evidence": {
        "badge": "untested",
        "reason": "DI futures curve; not tested as a signal."
@@ -807,10 +878,20 @@
      }
     },
     {
-     "series": "br.di.f29",
-     "missing": true,
-     "name": "DI1 Jan-29",
+     "series": "br.di.f29.proxy",
+     "name": "DI Jan-29 proxy (Tesouro LTN 2029)",
+     "unit": "% p.a. (252)",
+     "fallback": false,
+     "proxy": true,
+     "proxy_note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not.",
      "meta": {
+      "source": "Tesouro Direto (Tesouro Transparente)",
+      "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2029-01-01, mid of Taxa Compra/Venda Manha",
+      "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+      "as_of": "2026-10-28",
+      "fetched_at": "2026-10-29T14:36:53Z",
+      "frequency": "daily",
+      "series": "br.di.f29.proxy",
       "evidence": {
        "badge": "untested",
        "reason": "DI futures curve; not tested as a signal."
@@ -818,10 +899,20 @@
      }
     },
     {
-     "series": "br.di.f31",
-     "missing": true,
-     "name": "DI1 Jan-31",
+     "series": "br.di.f31.proxy",
+     "name": "DI Jan-31 proxy (Tesouro LTN 2031)",
+     "unit": "% p.a. (252)",
+     "fallback": false,
+     "proxy": true,
+     "proxy_note": "Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing 1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same 252-business-day compounding as DI1, so changes track DI closely; levels do not.",
      "meta": {
+      "source": "Tesouro Direto (Tesouro Transparente)",
+      "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2031-01-01, mid of Taxa Compra/Venda Manha",
+      "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+      "as_of": "2026-10-28",
+      "fetched_at": "2026-10-29T14:36:53Z",
+      "frequency": "daily",
+      "series": "br.di.f31.proxy",
       "evidence": {
        "badge": "untested",
        "reason": "DI futures curve; not tested as a signal."
@@ -833,12 +924,14 @@
      "name": "Brazil 10y proxy: longest fixed-rate Tesouro bond (Prefixado / NTN-F)",
      "unit": "% p.a.",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "Tesouro Direto (Tesouro Transparente)",
       "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
       "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
       "as_of": "2026-10-28",
-      "fetched_at": "2026-10-29T14:04:52Z",
+      "fetched_at": "2026-10-29T14:36:53Z",
       "frequency": "daily",
       "series": "br.td.pre_longest",
       "evidence": {
@@ -852,12 +945,14 @@
      "name": "Brazil real-rate proxy: longest IPCA+ Tesouro bond (NTN-B Principal / NTN-B)",
      "unit": "% p.a.",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "Tesouro Direto (Tesouro Transparente)",
       "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro IPCA+ / Tesouro IPCA+ com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
       "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
       "as_of": "2026-10-28",
-      "fetched_at": "2026-10-29T14:04:52Z",
+      "fetched_at": "2026-10-29T14:36:53Z",
       "frequency": "daily",
       "series": "br.td.ipca_longest",
       "evidence": {
@@ -871,6 +966,8 @@
      "name": "Selic target rate (Copom)",
      "unit": "% p.a.",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "BCB SGS",
       "source_id": "SGS 432",
@@ -892,9 +989,10 @@
      "year": 2026,
      "official": {
       "value": 0.25,
-      "label": "LDO 2026 target, tolerance band ±0.25 pp",
-      "source": "https://www12.senado.leg.br/orcamento/documentos/estudos/tipos-de-estudos/notas-tecnicas-e-informativos/informativo_pldo-2026.pdf",
-      "verified": false
+      "label": "LDO 2026 (Lei 15.321, de 31/12/2025), art. 2: target R$ 34.26 bn, tolerance R$ 0 to R$ 68.53 bn",
+      "source": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2026/loa/ldo-2025-x-pldo-2026-x-ldo-2026.pdf",
+      "verified": true,
+      "check": "Confirmed in the law text (Planning Ministry's LDO 2025 x PLDO 2026 x LDO 2026 comparison): art. 2 sets a central-government primary surplus target of R$ 34,264,603,518 with a tolerance band from R$ 0 to R$ 68,529,207,037. The law states reais; 0.25% of GDP (band ±0.25 pp) is the Anexo de Metas Fiscais' expression of the same target."
      },
      "independent": [
       {
@@ -921,9 +1019,10 @@
      "year": 2027,
      "official": {
       "value": 0.5,
-      "label": "PLDO 2027 target (bill's own projection: +0.05%)",
-      "source": "https://www2.camara.leg.br/orcamento-da-uniao/estudos/2026/informativo_pldo2027.pdf",
-      "verified": false
+      "label": "PLDO 2027 (bill, April 2026), art. 2: target R$ 73.22 bn; still a bill until Congress votes the LDO",
+      "source": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2027/pldo/comparativo-pldo-2026-x-ldo-2026-x-pldo-2027-tres-colunas.pdf",
+      "verified": true,
+      "check": "Confirmed in the bill text (Planning Ministry's three-column comparison): art. 2 sets R$ 73,216,092,959 for the central government, lower tolerance R$ 36,608,046,480 (0.25% of GDP). The bill's own projection is +0.05% of GDP (R$ 7.99 bn) including court-ordered payments that the target excludes, and +0.50% excluding them (Chamber budget consultancy note on the PLDO 2027, reproducing the Anexo de Metas). That projection is official, not independent, so it is no longer listed as an independent estimate."
      },
      "independent": [
       {
@@ -934,15 +1033,9 @@
        "as_of": "2026-10-23",
        "source_label": "BCB Focus (Olinda)",
        "verified": true
-      },
-      {
-       "name": "PLDO 2027 own projection",
-       "value": 0.05,
-       "source": "https://www2.camara.leg.br/orcamento-da-uniao/estudos/2026/informativo_pldo2027.pdf",
-       "verified": false
       }
      ],
-     "gap": 0.62
+     "gap": 0.8
     }
    ],
    "surveys": [
@@ -1410,7 +1503,12 @@
      "origin": "manual",
      "id": "2026-11-04-br-copom-decision-3-4-nov",
      "attention": null,
-     "under_attended": false
+     "under_attended": false,
+     "base_rate": {
+      "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
+      "changed": 17,
+      "of": 24
+     }
     },
     {
      "date": "2026-11-09",
@@ -1515,7 +1613,12 @@
      "origin": "manual",
      "id": "2026-12-09-br-copom-decision-8-9-dec",
      "attention": null,
-     "under_attended": false
+     "under_attended": false,
+     "base_rate": {
+      "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
+      "changed": 17,
+      "of": 24
+     }
     },
     {
      "date": "2026-12-14",
@@ -1572,6 +1675,8 @@
      "name": "USD/MXN FIX",
      "unit": "MXN per USD",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF43718",
@@ -1591,6 +1696,8 @@
      "name": "Banxico target rate",
      "unit": "% p.a.",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF61745",
@@ -1610,6 +1717,8 @@
      "name": "TIIE 28-day",
      "unit": "% p.a.",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF43783",
@@ -1629,6 +1738,8 @@
      "name": "10-year Mbono auction yield (context)",
      "unit": "% p.a.",
      "fallback": false,
+     "proxy": false,
+     "proxy_note": null,
      "meta": {
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF44071",
@@ -1646,45 +1757,62 @@
    ],
    "fiscal_gap": [
     {
-     "metric": "Public sector borrowing requirements (RFSP, broadest deficit)",
+     "metric": "Public sector borrowing requirements (RFSP, broadest balance)",
      "year": 2026,
      "official": {
       "value": -4.1,
-      "label": "Paquete Económico 2026 (Sep 2025)",
-      "source": "https://imco.org.mx/analisis-del-paquete-economico-2026/",
-      "verified": false
+      "label": "Criterios Generales de Política Económica 2026 (Paquete Económico, 8 Sep 2025)",
+      "source": "https://gaceta.diputados.gob.mx/PDF/66/2025/sep/20250908-C.pdf",
+      "verified": true,
+      "check": "Confirmed in the CGPE 2026 as published in the Gaceta Parlamentaria (8 Sep 2025, anexo C): 'Balance público amplio (RFSP) -4.1' for 2026. This is the proposal sent to Congress; the SHCP site copy could not be reached (TLS / HTTP 503)."
      },
      "independent": [
+      {
+       "name": "IMEF survey (implied range 4.5-4.8%, midpoint)",
+       "value": -4.65,
+       "source": "https://www.imef.org.mx/descargas/2026/febrero/reporte-perspectivas-economicas-imef-febrero-2026.pdf",
+       "verified": true,
+       "note": "IMEF report of 17 Feb 2026: its survey's 3.8% traditional deficit 'implies' RFSP of 4.5-4.8% of GDP"
+      },
       {
        "name": "Banca Mifel estimate",
        "value": -4.5,
        "source": "https://elceo.com/economia/consolidacion-fiscal-se-aleja-analistas-preven-deficit-de-hasta-4-5-del-pib-en-2026/",
-       "verified": false
+       "verified": false,
+       "note": "Only in a press report; Mifel's own note could not be found"
       }
      ],
-     "gap": 0.4
+     "gap": 0.48
     },
     {
-     "metric": "Public sector economic balance",
+     "metric": "Public balance (traditional / budget balance)",
      "year": 2026,
      "official": {
-      "value": null,
-      "label": "Paquete Económico 2026 (fill in)",
-      "source": "https://www.ppef.hacienda.gob.mx/",
-      "verified": false
+      "value": -3.6,
+      "label": "CGPE 2026: balance presupuestario / balance público tradicional",
+      "source": "https://gaceta.diputados.gob.mx/PDF/66/2025/sep/20250908-C.pdf",
+      "verified": true,
+      "check": "Confirmed in the CGPE 2026 (Gaceta Parlamentaria, 8 Sep 2025, anexo C): 'Balance presupuestario -3.6' and 'Balance público tradicional (déficit) 3.60' for 2026; primary balance +0.5."
      },
      "independent": [
       {
        "name": "Banxico survey median",
        "auto": "mx.survey.balance",
+       "note": "the survey's 'balance económico' is the traditional public balance",
        "value": -3.85,
        "source": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14945,SR14950,CF300,1",
        "as_of": "2026-09-01",
        "source_label": "Banxico SIE (public chart data)",
        "verified": true
+      },
+      {
+       "name": "IMEF survey median (12 Feb 2026)",
+       "value": -3.8,
+       "source": "https://www.imef.org.mx/descargas/2026/febrero/reporte-perspectivas-economicas-imef-febrero-2026.pdf",
+       "verified": true
       }
      ],
-     "gap": null
+     "gap": 0.23
     }
    ],
    "surveys": [
@@ -2114,7 +2242,12 @@
      "origin": "manual",
      "id": "2026-11-05-mx-banxico-monetary-policy-decision",
      "attention": null,
-     "under_attended": false
+     "under_attended": false,
+     "base_rate": {
+      "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
+      "changed": 15,
+      "of": 24
+     }
     },
     {
      "date": "2026-11-30",
@@ -2159,7 +2292,12 @@
      "origin": "manual",
      "id": "2026-12-17-mx-banxico-monetary-policy-decision",
      "attention": null,
-     "under_attended": false
+     "under_attended": false,
+     "base_rate": {
+      "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
+      "changed": 15,
+      "of": 24
+     }
     },
     {
      "date": "2027-01-01",
@@ -2234,7 +2372,12 @@
      "origin": "manual",
      "id": "2027-02-04-mx-banxico-decision-2027-calendar-not-yet-published",
      "attention": null,
-     "under_attended": false
+     "under_attended": false,
+     "base_rate": {
+      "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
+      "changed": 15,
+      "of": 24
+     }
     },
     {
      "date": "2027-03-01",
@@ -2264,7 +2407,12 @@
      "origin": "manual",
      "id": "2027-03-25-mx-banxico-decision-estimated",
      "attention": null,
-     "under_attended": false
+     "under_attended": false,
+     "base_rate": {
+      "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
+      "changed": 15,
+      "of": 24
+     }
     }
    ]
   }

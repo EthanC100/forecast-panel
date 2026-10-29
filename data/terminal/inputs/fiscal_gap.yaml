@@ -1,14 +1,20 @@
 # Fiscal "optimism gap": the official target against independent estimates. Edit freely.
 # Convention: every value is a BALANCE in % of GDP, so a deficit is negative.
 # gap = official - median(independent); a positive gap means the official number is more optimistic.
-# `auto:` pulls the latest survey median for that reference year from a stored series;
-# `verified: true` once you have checked the number against its source.
+# `auto:` pulls the latest survey median for that reference year from a stored series.
+# `verified: true` only where the number was checked in the source document itself; `check`
+# records what was checked, where, and any discrepancy. Verification pass: 2026-10-29.
 
 countries:
   FR:
-    - metric: "General government balance"
+    - metric: "General government balance (solde effectif)"
       year: 2026
-      official: {value: -5.0, label: "Loi de finances 2026 (adopted 2 Feb 2026)", source: "https://www.senat.fr/lessentiel/pjlf2026.pdf", verified: false}
+      official:
+        value: -5.0
+        label: "Loi de finances 2026 (loi n° 2026-103 du 19 février 2026), article liminaire"
+        source: "https://questions.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17BTA0218.html"
+        verified: false
+        check: "Not confirmed in the promulgated law: Légifrance refuses automated requests (HTTP 403). The article liminaire of the text adopted by the Assemblée at second reading (TA n° 218) gives solde effectif 2026 = -5.0% (structural -4.6%), and the government's final-stage amendment kept -5.0%. Confirm in the law: https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053508155"
       independent:
         - {name: "OFCE forecast", value: null, source: "https://ofce.sciences-po.fr/prev/prev2603/france/fipu.html", note: "fill in"}
         - {name: "European Commission forecast", value: null, source: "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en", note: "fill in"}
@@ -16,24 +22,45 @@ countries:
   BR:
     - metric: "Primary balance (official: central government; Focus: consolidated public sector)"
       year: 2026
-      official: {value: 0.25, label: "LDO 2026 target, tolerance band ±0.25 pp", source: "https://www12.senado.leg.br/orcamento/documentos/estudos/tipos-de-estudos/notas-tecnicas-e-informativos/informativo_pldo-2026.pdf", verified: false}
+      official:
+        value: 0.25
+        label: "LDO 2026 (Lei 15.321, de 31/12/2025), art. 2: target R$ 34.26 bn, tolerance R$ 0 to R$ 68.53 bn"
+        source: "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2026/loa/ldo-2025-x-pldo-2026-x-ldo-2026.pdf"
+        verified: true
+        check: "Confirmed in the law text (Planning Ministry's LDO 2025 x PLDO 2026 x LDO 2026 comparison): art. 2 sets a central-government primary surplus target of R$ 34,264,603,518 with a tolerance band from R$ 0 to R$ 68,529,207,037. The law states reais; 0.25% of GDP (band ±0.25 pp) is the Anexo de Metas Fiscais' expression of the same target."
       independent:
         - {name: "Focus survey median", auto: br.focus.primary, note: "Focus measures the consolidated public sector, a broader perimeter than the target"}
         - {name: "IFI (Senate Independent Fiscal Institution)", value: null, source: "https://www12.senado.leg.br/ifi", note: "fill in"}
     - metric: "Primary balance (official: central government; Focus: consolidated public sector)"
       year: 2027
-      official: {value: 0.5, label: "PLDO 2027 target (bill's own projection: +0.05%)", source: "https://www2.camara.leg.br/orcamento-da-uniao/estudos/2026/informativo_pldo2027.pdf", verified: false}
+      official:
+        value: 0.5
+        label: "PLDO 2027 (bill, April 2026), art. 2: target R$ 73.22 bn; still a bill until Congress votes the LDO"
+        source: "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2027/pldo/comparativo-pldo-2026-x-ldo-2026-x-pldo-2027-tres-colunas.pdf"
+        verified: true
+        check: "Confirmed in the bill text (Planning Ministry's three-column comparison): art. 2 sets R$ 73,216,092,959 for the central government, lower tolerance R$ 36,608,046,480 (0.25% of GDP). The bill's own projection is +0.05% of GDP (R$ 7.99 bn) including court-ordered payments that the target excludes, and +0.50% excluding them (Chamber budget consultancy note on the PLDO 2027, reproducing the Anexo de Metas). That projection is official, not independent, so it is no longer listed as an independent estimate."
       independent:
         - {name: "Focus survey median", auto: br.focus.primary}
-        - {name: "PLDO 2027 own projection", value: 0.05, source: "https://www2.camara.leg.br/orcamento-da-uniao/estudos/2026/informativo_pldo2027.pdf", verified: false}
   MX:
-    - metric: "Public sector borrowing requirements (RFSP, broadest deficit)"
+    - metric: "Public sector borrowing requirements (RFSP, broadest balance)"
       year: 2026
-      official: {value: -4.1, label: "Paquete Económico 2026 (Sep 2025)", source: "https://imco.org.mx/analisis-del-paquete-economico-2026/", verified: false}
+      official:
+        value: -4.1
+        label: "Criterios Generales de Política Económica 2026 (Paquete Económico, 8 Sep 2025)"
+        source: "https://gaceta.diputados.gob.mx/PDF/66/2025/sep/20250908-C.pdf"
+        verified: true
+        check: "Confirmed in the CGPE 2026 as published in the Gaceta Parlamentaria (8 Sep 2025, anexo C): 'Balance público amplio (RFSP) -4.1' for 2026. This is the proposal sent to Congress; the SHCP site copy could not be reached (TLS / HTTP 503)."
       independent:
-        - {name: "Banca Mifel estimate", value: -4.5, source: "https://elceo.com/economia/consolidacion-fiscal-se-aleja-analistas-preven-deficit-de-hasta-4-5-del-pib-en-2026/", verified: false}
-    - metric: "Public sector economic balance"
+        - {name: "IMEF survey (implied range 4.5-4.8%, midpoint)", value: -4.65, source: "https://www.imef.org.mx/descargas/2026/febrero/reporte-perspectivas-economicas-imef-febrero-2026.pdf", verified: true, note: "IMEF report of 17 Feb 2026: its survey's 3.8% traditional deficit 'implies' RFSP of 4.5-4.8% of GDP"}
+        - {name: "Banca Mifel estimate", value: -4.5, source: "https://elceo.com/economia/consolidacion-fiscal-se-aleja-analistas-preven-deficit-de-hasta-4-5-del-pib-en-2026/", verified: false, note: "Only in a press report; Mifel's own note could not be found"}
+    - metric: "Public balance (traditional / budget balance)"
       year: 2026
-      official: {value: null, label: "Paquete Económico 2026 (fill in)", source: "https://www.ppef.hacienda.gob.mx/", verified: false}
+      official:
+        value: -3.6
+        label: "CGPE 2026: balance presupuestario / balance público tradicional"
+        source: "https://gaceta.diputados.gob.mx/PDF/66/2025/sep/20250908-C.pdf"
+        verified: true
+        check: "Confirmed in the CGPE 2026 (Gaceta Parlamentaria, 8 Sep 2025, anexo C): 'Balance presupuestario -3.6' and 'Balance público tradicional (déficit) 3.60' for 2026; primary balance +0.5."
       independent:
-        - {name: "Banxico survey median", auto: mx.survey.balance}
+        - {name: "Banxico survey median", auto: mx.survey.balance, note: "the survey's 'balance económico' is the traditional public balance"}
+        - {name: "IMEF survey median (12 Feb 2026)", value: -3.8, source: "https://www.imef.org.mx/descargas/2026/febrero/reporte-perspectivas-economicas-imef-febrero-2026.pdf", verified: true}

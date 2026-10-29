@@ -134,6 +134,17 @@ TD_GROUPS = {
 }
 
 
+# DI proxies: zero-coupon Tesouro Prefixado (LTN) bonds maturing on the same January dates as
+# the DI1 contracts. Labelled "proxy" everywhere; see PROXY_NOTE for how they differ from DI1.
+DI_PROXIES = {"br.di.f27.proxy": ("Jan-27", "2027-01-01"), "br.di.f29.proxy": ("Jan-29", "2029-01-01"),
+              "br.di.f31.proxy": ("Jan-31", "2031-01-01")}
+PROXY_NOTE = ("Proxy, not DI1: Tesouro Direto retail quotes for the zero-coupon Tesouro Prefixado (LTN) maturing "
+              "1 January (DI1 matures on the first business day of January, 1-3 days later). Mid of the morning buy and "
+              "sell rates (~09:30 BRT), not the end-of-day DI settlement; LTN yields usually sit a few to ~20 bp above "
+              "DI for the same date (term and liquidity premium), and the retail buy/sell spread is ~12 bp. Same "
+              "252-business-day compounding as DI1, so changes track DI closely; levels do not.")
+
+
 def tesouro() -> list[str]:
     """Daily rate of the longest-maturity bond in each group, mid of the morning buy and sell
     rates (or whichever is quoted). The bond used each day is kept in the `bond`/`maturity` fields,
@@ -154,6 +165,16 @@ def tesouro() -> list[str]:
                            "source": "Tesouro Direto (Tesouro Transparente)", "source_id": "PrecoTaxaTesouroDireto.csv: "
                            + " / ".join(types) + ", longest maturity, mid of Taxa Compra/Venda Manha",
                            "source_url": TESOURO_URL, "fields": ["value", "maturity", "bond"]}, rows)
+        written.append(sid)
+    ltn = df[(df["Tipo Titulo"] == "Tesouro Prefixado") & df["rate"].notna()]
+    for sid, (label, mat) in DI_PROXIES.items():
+        g = ltn[ltn["mat"] == mat].sort_values("date")
+        rows = [[d, float(v)] for d, v in zip(g["date"], g["rate"])]
+        store.save_series({"id": sid, "name": f"DI {label} proxy (Tesouro LTN {mat[:4]})", "country": "BR", "unit": "% p.a. (252)",
+                           "frequency": "daily", "proxy": True, "proxy_note": PROXY_NOTE, "maturity": mat,
+                           "source": "Tesouro Direto (Tesouro Transparente)",
+                           "source_id": f"PrecoTaxaTesouroDireto.csv: Tesouro Prefixado {mat}, mid of Taxa Compra/Venda Manha",
+                           "source_url": TESOURO_URL}, rows)
         written.append(sid)
     return written
 

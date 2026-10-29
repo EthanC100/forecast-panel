@@ -1,0 +1,61 @@
+name: Quick update
+description: Update your probability on a call or question.
+title: '[Quick update] '
+labels:
+- terminal-form
+- quick-update
+body:
+- type: markdown
+  attributes:
+    value: The market-implied and AI probabilities are recorded when you submit and shown only afterwards.
+- type: input
+  id: target
+  attributes:
+    label: Call or question ID
+    placeholder: J00015 or q2 or pm:123456
+  validations:
+    required: true
+- type: dropdown
+  id: probability
+  attributes:
+    label: New probability
+    options:
+    - 0%
+    - 5%
+    - 10%
+    - 15%
+    - 20%
+    - 25%
+    - 30%
+    - 35%
+    - 40%
+    - 45%
+    - 50%
+    - 55%
+    - 60%
+    - 65%
+    - 70%
+    - 75%
+    - 80%
+    - 85%
+    - 90%
+    - 95%
+    - 100%
+  validations:
+    required: true
+- type: dropdown
+  id: direction
+  attributes:
+    label: Direction of the change
+    options:
+    - Up
+    - Down
+    - Unchanged
+  validations:
+    required: true
+- type: textarea
+  id: what_changed
+  attributes:
+    label: What changed
+  validations:
+    required: true

@@ -1,0 +1,27 @@
+name: Close trade
+description: Close an open paper trade at the next end-of-day close.
+title: '[Close trade] '
+labels:
+- terminal-form
+- close-trade
+body:
+- type: markdown
+  attributes:
+    value: '**Exit is the first close published after you submit.** The post-mortem must be exactly two lines.'
+- type: input
+  id: trade_id
+  attributes:
+    label: Trade ID
+    placeholder: T00012
+  validations:
+    required: true
+- type: textarea
+  id: postmortem
+  attributes:
+    label: Post-mortem (two lines)
+    description: 'Line 1: what happened against the thesis. Line 2: what I would do differently.'
+    placeholder: 'The rate cut was priced before the meeting, so the move never came.
+
+      Check pricing against the survey before entering.'
+  validations:
+    required: true
