@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T15:53:31Z",
+ "generated_at": "2026-10-29T16:04:48Z",
  "gauges": [
   {
    "id": "a",
@@ -1011,7 +1011,7 @@
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-29T15:31:36Z",
+      "fetched_at": "2026-10-29T15:56:26Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1043,7 +1043,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-29T14:04:30Z",
+      "fetched_at": "2026-10-29T15:56:24Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14146, SR14151 (median, sd for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14146,SR14151,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-29T14:07:17Z",
+      "fetched_at": "2026-10-29T15:57:43Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1184,7 +1184,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-10-20",
-      "fetched_at": "2026-10-29T15:31:38Z",
+      "fetched_at": "2026-10-29T15:57:54Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1214,7 +1214,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-10-20",
-      "fetched_at": "2026-10-29T15:31:46Z",
+      "fetched_at": "2026-10-29T15:57:55Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1406,12 +1406,12 @@
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
    "days": 29,
-   "score": 0.542,
+   "score": 0.483,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 14% vs base rate 0%",
-     "strength": 0.48333333333333334,
+     "detail": "market 11% vs base rate 0%",
+     "strength": 0.3666666666666667,
      "badge": "untested",
      "hidden_market": true
     },
@@ -1429,12 +1429,12 @@
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
    "days": 42,
-   "score": 0.025,
+   "score": 0.017,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 52% vs base rate 50%",
-     "strength": 0.050000000000000044,
+     "detail": "market 51% vs base rate 50%",
+     "strength": 0.03333333333333337,
      "badge": "untested",
      "hidden_market": true
     }
@@ -1452,7 +1452,7 @@
  ],
  "ranking_method": "Heuristic, not a tested model. For each scenario due within 6 months: each signal that applies scores 0-1 for strength and is weighted by its evidence (Tested-leads 1, Untested 0.5, Context 0.3, Tested-no-lead 0.25); the score is the sum. Market-vs-base-rate gap counts when both exist.",
  "lab": {
-  "generated_at": "2026-10-29T15:36:04Z",
+  "generated_at": "2026-10-29T15:54:17Z",
   "report": "reports/crowd_lab.md"
  }
 }

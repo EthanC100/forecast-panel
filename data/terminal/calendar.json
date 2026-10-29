@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T15:45:37Z",
+ "generated_at": "2026-10-29T16:04:42Z",
  "horizon": "2027-10-30",
  "events": [
   {
@@ -159,6 +159,21 @@
    "note": "EU-regulated sovereign calendar date (Friday, after market close).",
    "origin": "manual",
    "id": "2026-11-27-fr-s-p-global-sovereign-rating-review-france",
+   "attention": null,
+   "under_attended": false
+  },
+  {
+   "date": "2026-11-27",
+   "country": "FR",
+   "type": "ratings",
+   "title": "Standard & Poor's sovereign rating review: France",
+   "importance": 3,
+   "status": "confirmed",
+   "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
+   "query": "\"Standard\" France rating",
+   "note": "Next review date from the AFT ratings table (fetched 2026-10-29).",
+   "origin": "aft",
+   "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
    "attention": null,
    "under_attended": false
   },
@@ -8215,7 +8230,8 @@
  ],
  "notes": [
   "France: no censure motion is scheduled as of 2026-10-29. Motions are voted 48 hours after they are filed; add one here when it is tabled.",
-  "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml."
+  "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml.",
+  "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values."
  ],
  "attention_definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away",
  "sources": {
