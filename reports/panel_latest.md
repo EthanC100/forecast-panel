@@ -5,10 +5,10 @@ Probability of each question as worded, by source. Blank = no value (see notes).
 | id | question | polymarket | metaculus | swift_centre | gjopen | my_prob | claude_prob |
 |---|---|---:|---:|---:|---:|---:|---:|
 | q1 | US-Iran ceasefire still in effect on 31 December 2026? | 0.285 |  |  |  |  | 0.300 |
-| q2 | Official Russia-Ukraine ceasefire agreed by 31 December 2026? | 0.155 |  | 0.220 |  |  | 0.120 |
+| q2 | Official Russia-Ukraine ceasefire agreed by 31 December 2026? | 0.155 |  |  |  |  | 0.120 |
 | q3 | Official Russia-Ukraine ceasefire agreed by 30 June 2027? | 0.545 |  |  |  |  | 0.450 |
 | q4 | Sudan ceasefire agreed by 31 December 2026? | 0.095 |  |  |  |  | 0.080 |
-| q5 | US or Israeli strikes on Iranian territory resume by 31 March 2027? | 0.630 |  |  | 0.410 |  | 0.700 |
+| q5 | US or Israeli strikes on Iranian territory resume by 31 March 2027? | 0.625 |  |  | 0.410 |  | 0.700 |
 
 ## Notes
 
@@ -20,7 +20,7 @@ Probability of each question as worded, by source. Blank = no value (see notes).
 - **q1 / claude_prob** (2026-10-28): carried forward from the 2026-10-28 weekly entry
 - **q2 / polymarket** (2026-10-29): wording: Resolves Yes if a mutually agreed, general suspension of direct military engagement is officially announced by both countries (or confirmed by a consensus of credible reporting) by 31 Dec 2026, 11:59 PM ET, whether or not it has taken effect. Matches the wording. The sibling market "Russia x Ukraine ceasefire by December 31, 2026" instead requires the ceasefire to take effect and hold for 10 days, so it was not used.
 - **q2 / metaculus** (2026-10-29): post_id not yet matched: the Metaculus API refused anonymous search; set METACULUS_TOKEN or fill post_id by hand; METACULUS_TOKEN not set; the Metaculus API refuses anonymous calls (HTTP 403)
-- **q2 / swift_centre** (2026-01-27): published forecast, carried forward from 2026-01-27; Swift Centre forecast made in late January 2026 (restated 1 May 2026) for 'Russia and Ukraine agreeing to an indefinite ceasefire or peace agreement this year'; a one-off published number, not updated since, carried forward
+- **q2 / swift_centre** (2026-10-29): fetch failed: 403 Client Error: Forbidden for url: https://swiftcentre.substack.com/api/v1/posts/polymarket-vs-swift-centre-round
 - **q2 / gjopen** (2026-10-29): no GJ Open question on a Russia-Ukraine ceasefire as of 2026-10-28
 - **q2 / my_prob** (2026-10-29): my_prob_q2 blank in every forward_log.csv row up to 2026-10-29
 - **q2 / claude_prob** (2026-10-28): carried forward from the 2026-10-28 weekly entry
