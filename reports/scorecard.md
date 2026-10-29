@@ -1,4 +1,4 @@
-# Scorecard (regenerated 2026-10-28)
+# Scorecard (regenerated 2026-10-29)
 
 Brier score (mean squared error, lower is better; 0.25 is a flat 50%) of every source and of the
 track-record-weighted aggregate on the questions that have resolved. Each forecaster is scored on
@@ -41,13 +41,13 @@ that have a value on the day.
 | my_prob |  | 0.167 |
 | claude_prob |  | 0.167 |
 
-## Latest aggregate (2026-10-28)
+## Latest aggregate (2026-10-29)
 
 | id | question | plain | extremized | sources | weights used |
 |---|---|---:|---:|---:|---|
-| q1 | US-Iran ceasefire still in effect on 31 December 2026? | 0.2650 | 0.1780 | 1 | `{"polymarket": 1.0}` |
-| q2 | Official Russia-Ukraine ceasefire agreed by 31 December 2026? | 0.1925 | 0.1043 | 2 | `{"polymarket": 0.5, "swift_centre": 0.5}` |
-| q3 | Official Russia-Ukraine ceasefire agreed by 30 June 2027? | 0.5400 | 0.5598 | 1 | `{"polymarket": 1.0}` |
-| q4 | Sudan ceasefire agreed by 31 December 2026? | 0.1050 | 0.0386 | 1 | `{"polymarket": 1.0}` |
-| q5 | US or Israeli strikes on Iranian territory resume by 31 March 2027? | 0.5151 | 0.5226 | 2 | `{"gjopen": 0.5, "polymarket": 0.5}` |
+| q1 | US-Iran ceasefire still in effect on 31 December 2026? | 0.2925 | 0.2100 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
+| q2 | Official Russia-Ukraine ceasefire agreed by 31 December 2026? | 0.1650 | 0.0807 | 3 | `{"claude_prob": 0.3333, "polymarket": 0.3333, "swift_centre": 0.3333}` |
+| q3 | Official Russia-Ukraine ceasefire agreed by 30 June 2027? | 0.4975 | 0.4963 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
+| q4 | Sudan ceasefire agreed by 31 December 2026? | 0.0875 | 0.0288 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
+| q5 | US or Israeli strikes on Iranian territory resume by 31 March 2027? | 0.5798 | 0.6185 | 3 | `{"claude_prob": 0.3333, "gjopen": 0.3333, "polymarket": 0.3333}` |
 

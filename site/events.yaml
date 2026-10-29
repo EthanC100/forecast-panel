@@ -1,0 +1,40 @@
+# Upcoming events shown on the country pages. Hand-maintained: the official calendars
+# (BCB, Banxico, ECB, AFT) are not machine-readable from the build, so add dates here with
+# their source. `confirmed: false` shows a "to confirm" tag on the site.
+events:
+  - country: brazil
+    date: 2027-01-01
+    title: Presidential inauguration
+    kind: politics
+    source: https://www.gov.br/planalto
+    confirmed: true
+  - country: brazil
+    date: 2026-12-09
+    title: Copom meeting (Selic decision)
+    kind: rates
+    source: https://www.bcb.gov.br/en/monetarypolicy/copomcalendar
+    confirmed: false
+  - country: mexico
+    date: 2026-12-17
+    title: Banxico monetary policy decision
+    kind: rates
+    source: https://www.banxico.org.mx/monetary-policy/
+    confirmed: false
+  - country: mexico
+    date: 2027-06-06
+    title: Federal midterm elections (Chamber of Deputies)
+    kind: election
+    source: https://www.ine.mx/
+    confirmed: false
+  - country: france
+    date: 2026-12-17
+    title: ECB monetary policy meeting
+    kind: rates
+    source: https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html
+    confirmed: false
+  - country: france
+    date: 2027-04-11
+    title: Presidential election, first round (date set by decree, to confirm)
+    kind: election
+    source: https://www.interieur.gouv.fr/
+    confirmed: false

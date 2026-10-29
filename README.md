@@ -36,6 +36,52 @@ mismatch; the snapshot copies those notes into the log.
 Every fetch failure is a NaN with the reason in the `notes` column, so one dead source never stops
 the snapshot.
 
+## Dashboard
+
+A static, mobile-friendly site built from this repo, gold-events, tension-index and em-macro:
+**https://ethanc100.github.io/forecast-panel/** (GitHub Pages, redeployed by the daily workflow).
+
+Pages:
+
+* **This week**: one card per open question with the Polymarket probability over time (CLOB price
+  history), every panel source's latest number, Claude's number, your past entries, and context (the
+  tension index for conflict questions; poll average and odds for election questions, configured in
+  `site/config.yaml`).
+* **Blind mode** (toggle in the header, on by default): hides every other forecaster's number and the
+  market chart on a question until you press "I've answered this week". The mark is stored in your
+  browser (`localStorage`) for the current ISO week, so each Monday the cards are blind again.
+* **Scorecard**: points per resolved question = 100 × (market Brier − your Brier), scored on the same
+  Monday snapshots as `reports/scorecard.md`; running total over time; calibration chart; the same for
+  Claude and the panel aggregate.
+* **Countries** (Brazil, Mexico, France): 10-year yield, spread (over US Treasuries for Brazil and
+  Mexico from em-macro's daily panel; over Germany for France from the ECB's monthly long-term rates,
+  with the daily Bund yield from the Bundesbank), currency for Brazil and Mexico, upcoming events
+  (`site/events.yaml`, hand-maintained with sources), recent rate decisions, and the em-macro risk
+  model's fair value, factor breakdown and most similar past cases once em-macro publishes
+  `results/risk_model/{fair_value,factors,similar_cases}.csv` (until then: "model not yet built").
+* **Indicators**: tension index (last 90 days) and the gold model's weekly expected move.
+
+### How to open it
+
+* On the web: https://ethanc100.github.io/forecast-panel/ (light/dark follows your device; the
+  header button overrides it).
+* Locally: `python build_site.py` writes `site/data.js`, then open `site/index.html` in a browser
+  (no server needed). Set `GOLD_EVENTS_DIR`, `TENSION_INDEX_DIR`, `EM_MACRO_DIR` to read sibling
+  checkouts instead of GitHub.
+
+### How your entries flow in
+
+1. Each Monday gold-events appends a row to `data/forward_log.csv`. Fill in `my_prob_q1`..`my_prob_q5`
+   (and `my_tension_score`) on that row and push; Claude's `claude_prob_*` columns sit beside them.
+2. The daily workflow here (06:17 UTC) reads that file, carries the last non-blank value forward,
+   logs it in `data/panel_log.csv` as `my_prob` / `claude_prob`, rebuilds `site/data.js`, commits, and
+   deploys `site/` to GitHub Pages. A push to `main` also redeploys.
+3. On Mondays the run also rebuilds the aggregate log and scorecard, which is what the dashboard's
+   Scorecard page shows once questions resolve (outcomes come from `data/tension_questions.yaml`).
+
+The site has no backend and no dependencies: `site/index.html`, `site/app.js` (hash routing, SVG
+charts with crosshair tooltips and data tables) and `site/style.css`.
+
 ## Files
 
 ```
@@ -49,9 +95,10 @@ reports/panel_latest.md       the latest snapshot as a table, with all notes
 reports/scorecard.md          Brier of every source and the aggregates on resolved questions (Monday runs)
 reports/validation.md         does extremizing improve Brier on resolved historical questions?
 reports/method.md             the aggregation rule, with references to the Good Judgment Project findings
-forecast_panel/               the package: sources.py, panel.py, aggregate.py, scoring.py, validate.py
-snapshot.py / score.py / validate.py   entry points
-.github/workflows/panel.yml   daily snapshot, Monday scoring, commits the results
+site/                         the dashboard (index.html, app.js, style.css, config.yaml, events.yaml, data.js built daily)
+forecast_panel/               the package: sources.py, panel.py, aggregate.py, scoring.py, validate.py, site_build.py
+snapshot.py / score.py / validate.py / build_site.py   entry points
+.github/workflows/panel.yml   daily snapshot, Monday scoring, site build, commit, GitHub Pages deploy
 ```
 
 ## Running
@@ -66,11 +113,10 @@ pytest
 
 ## Schedule
 
-`.github/workflows/panel.yml` runs daily at 06:17 UTC: it checks out gold-events (secret
-`GOLD_EVENTS_TOKEN`, a fine-grained PAT with read access to that private repo; without it the human
-columns are NaN), snapshots every source, and on Mondays (or a manual dispatch) rebuilds the
-aggregate log and scorecard. It commits `data/*.csv` and `reports/*.md`. Add `METACULUS_TOKEN` as a
-secret to turn the Metaculus column on.
+`.github/workflows/panel.yml` runs daily at 06:17 UTC: it checks out gold-events (public; the
+`GOLD_EVENTS_TOKEN` secret is only needed if it goes private), snapshots every source, on Mondays (or
+a manual dispatch) rebuilds the aggregate log and scorecard, builds `site/data.js`, commits, and
+deploys the site to GitHub Pages. Add `METACULUS_TOKEN` as a secret to turn the Metaculus column on.
 
 The human columns are entered weekly in gold-events and carried forward until updated. **Scoring uses
 the Monday snapshot**, so every forecaster is compared on the same day; a week whose Monday run
@@ -122,4 +168,7 @@ weights in force and the latest aggregate.
   questions by hand once a token is available and record the wording differences in `note`.
 * Swift Centre and GJ Open cover one question each; the others are logged as NaN with the reason.
 * `claude_prob` is read from gold-events but that column does not exist there yet.
-* gold-events is private, so the workflow needs `GOLD_EVENTS_TOKEN` to read the human columns.
+* France has no free daily 10-year yield source reachable from the build (stooq and the AFT site are
+  blocked), so the France yield and the spread over Germany are the ECB's monthly series; the Bund is
+  daily. Upcoming events in `site/events.yaml` marked `confirmed: false` need checking against the
+  official calendars.

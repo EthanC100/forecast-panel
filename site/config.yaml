@@ -1,0 +1,51 @@
+# Dashboard configuration (site/). The questions themselves come from data/tension_questions.yaml.
+#
+# context: what each question card shows beside the forecasts.
+#   type: conflict  -> the tension index (tension-index repo), last 90 days
+#   type: election  -> poll average and betting odds, read from em-macro's
+#                      results/repricing/signals_daily.csv (columns named below)
+question_context:
+  q1: {type: conflict}
+  q2: {type: conflict}
+  q3: {type: conflict}
+  q4: {type: conflict}
+  q5: {type: conflict}
+  # example of an election question:
+  # q6: {type: election, odds: odds_BRA_20261004, polls: polls_h2h_BRA_20261004}
+
+# Where the other repositories' files are read from. A local checkout wins when the
+# environment variable is set (GOLD_EVENTS_DIR, TENSION_INDEX_DIR, EM_MACRO_DIR);
+# otherwise the file is fetched from GitHub.
+repos:
+  gold-events:   {owner: EthanC100, branch: main}
+  tension-index: {owner: EthanC100, branch: main}
+  em-macro:      {owner: EthanC100, branch: main}
+
+# em-macro risk-model outputs the country pages will show once they exist there.
+# Until every file is present the page says "model not yet built".
+em_macro_risk_model:
+  fair_value: results/risk_model/fair_value.csv        # country,date,asset,actual,fair_value,gap,gap_z
+  factors:    results/risk_model/factors.csv           # country,date,asset,factor,contribution
+  similar:    results/risk_model/similar_cases.csv     # country,date,asset,case_country,case_date,similarity,outcome_note
+
+countries:
+  brazil:
+    name: Brazil
+    iso3: BRA
+    em_macro_suffix: BR          # columns Y10_BR, FX_BR in em-macro's daily_panel.csv
+    currency: BRL per USD
+    spread_over: US Treasuries   # Y10_BR - US10Y
+  mexico:
+    name: Mexico
+    iso3: MEX
+    em_macro_suffix: MX
+    currency: MXN per USD
+    spread_over: US Treasuries
+  france:
+    name: France
+    iso3: FRA
+    em_macro_suffix: null        # not an em-macro country: yields come from the ECB and the Bundesbank
+    currency: null
+    spread_over: Germany         # France 10y (ECB, monthly) - Bund 10y (Bundesbank, daily)
+
+history_days: 730   # how much daily history the country charts carry

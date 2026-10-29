@@ -4,3 +4,8 @@ date,question_id,aggregate_plain,aggregate_extremized,n_sources,weights,extremiz
 2026-10-28,q3,0.5400,0.5598,1,"{""polymarket"": 1.0}",1.5000
 2026-10-28,q4,0.1050,0.0386,1,"{""polymarket"": 1.0}",1.5000
 2026-10-28,q5,0.5151,0.5226,2,"{""gjopen"": 0.5, ""polymarket"": 0.5}",1.5000
+2026-10-29,q1,0.2925,0.2100,2,"{""claude_prob"": 0.5, ""polymarket"": 0.5}",1.5000
+2026-10-29,q2,0.1650,0.0807,3,"{""claude_prob"": 0.3333, ""polymarket"": 0.3333, ""swift_centre"": 0.3333}",1.5000
+2026-10-29,q3,0.4975,0.4963,2,"{""claude_prob"": 0.5, ""polymarket"": 0.5}",1.5000
+2026-10-29,q4,0.0875,0.0288,2,"{""claude_prob"": 0.5, ""polymarket"": 0.5}",1.5000
+2026-10-29,q5,0.5798,0.6185,3,"{""claude_prob"": 0.3333, ""gjopen"": 0.3333, ""polymarket"": 0.3333}",1.5000

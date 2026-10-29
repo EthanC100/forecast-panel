@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Forecast panel</title>
+<meta name="description" content="Public forecasts on five geopolitical questions, scored against outcomes and Polymarket.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%232a78d6'/%3E%3Cpath d='M8 20l5-6 4 3 7-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#week">Forecast panel</a>
+  <div class="controls">
+    <label class="switch" title="Blind mode hides every other forecaster's number on a question until you mark it answered for the week">
+      <input type="checkbox" id="blind-toggle" checked>
+      <span class="track"></span><span class="label">Blind</span>
+    </label>
+    <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle colour scheme">◐</button>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Pages">
+  <a href="#week" data-route="week">This week</a>
+  <a href="#scorecard" data-route="scorecard">Scorecard</a>
+  <a href="#country/brazil" data-route="country">Countries</a>
+  <a href="#indicators" data-route="indicators">Indicators</a>
+</nav>
+
+<main id="app" class="page"></main>
+
+<footer class="foot">
+  <span id="generated"></span>
+  <a href="https://github.com/EthanC100/forecast-panel">EthanC100/forecast-panel</a>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,23 +1,31 @@
-name: Daily panel snapshot
+name: Daily panel snapshot and site
 
 on:
   schedule:
     - cron: "17 6 * * *"   # daily 06:17 UTC; the Monday run also rebuilds the scorecard
   workflow_dispatch:
+  push:
+    branches: [main]       # redeploy the site when its code changes (pushes by the bot do not retrigger)
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: panel
+  cancel-in-progress: false
 
 jobs:
   snapshot:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # The human columns (my_prob, claude_prob) live in gold-events/data/forward_log.csv. That repo is
-      # private, so a token with read access to it is needed (secret GOLD_EVENTS_TOKEN, a fine-grained
-      # PAT with Contents: read on EthanC100/gold-events). Without it the two columns are logged as NaN
-      # with the reason in the notes column.
+      # The human columns (my_prob, claude_prob) live in gold-events/data/forward_log.csv. The repo is
+      # public, so the default token is enough; GOLD_EVENTS_TOKEN (a fine-grained PAT) only matters if it
+      # is ever made private again. Without a checkout the columns are read from raw.githubusercontent.com.
       - name: Check out gold-events (human forecasts)
         id: gold
         continue-on-error: true
@@ -48,14 +56,43 @@ jobs:
             echo "not Monday: scorecard untouched"
           fi
 
+      - name: Build the dashboard data (site/data.js)
+        env:
+          GOLD_EVENTS_DIR: ${{ steps.gold.outcome == 'success' && format('{0}/gold-events', github.workspace) || '' }}
+        run: python build_site.py
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/panel_log.csv data/aggregate_log.csv reports/panel_latest.md reports/scorecard.md
+          git add data/panel_log.csv data/aggregate_log.csv reports/panel_latest.md reports/scorecard.md site/data.js
           if git diff --cached --quiet; then
             echo "nothing to commit"
           else
             git commit -m "Panel snapshot: $(date -u +%Y-%m-%d)"
             git push
           fi
+
+  pages:
+    needs: snapshot
+    if: always() && (needs.snapshot.result == 'success' || needs.snapshot.result == 'skipped')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main            # the tip of main, including the snapshot job's commit
+
+      - name: Enable and configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
