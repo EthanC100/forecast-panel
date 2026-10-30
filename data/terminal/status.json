@@ -304,7 +304,7 @@
    "country": "GLOBAL",
    "error": null,
    "fallback_for": "gold_yahoo",
-   "last_attempt": "2026-10-30T10:23:48Z",
+   "last_attempt": "2026-10-30T10:36:44Z",
    "name": "Stooq daily CSV (gold and silver spot, fallback)",
    "note": "not needed: gold_yahoo succeeded this run",
    "release": "daily",
@@ -316,8 +316,8 @@
    "country": "GLOBAL",
    "error": null,
    "fallback_for": null,
-   "last_attempt": "2026-10-30T10:23:48Z",
-   "last_success": "2026-10-30T10:23:48Z",
+   "last_attempt": "2026-10-30T10:36:44Z",
+   "last_success": "2026-10-30T10:36:44Z",
    "n_series": 2,
    "name": "Yahoo Finance chart data (gold and silver COMEX front-month futures, GC=F and SI=F)",
    "note": null,
@@ -568,5 +568,5 @@
    "state": "ok"
   }
  },
- "updated_at": "2026-10-30T10:34:51Z"
+ "updated_at": "2026-10-30T10:36:44Z"
 }

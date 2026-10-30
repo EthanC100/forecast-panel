@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-30T10:35:01Z",
+ "generated_at": "2026-10-30T10:36:52Z",
  "as_of": "2026-10-30",
  "prices": {
   "gold": {
-   "value": 3993.8999,
+   "value": 3994.3,
    "date": "2026-10-30",
    "series": "gl.gold",
    "source": "Yahoo Finance chart data (COMEX front-month futures)",
@@ -12,16 +12,16 @@
    "frequency": "daily",
    "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": -0.93,
-   "chg_1m_pct": -4.61,
-   "chg_1y_pct": -0.07,
-   "z_1y": -1.18,
-   "high_1y": 4745.1001,
-   "low_1y": 3993.8999,
-   "history_from": "2000-09-01"
+   "chg_1w_pct": -0.34,
+   "chg_1m_pct": -4.6,
+   "chg_1y_pct": -0.54,
+   "z_1y": -1.38,
+   "high_1y": 5318.3999,
+   "low_1y": 3960.5,
+   "history_from": "2000-08-30"
   },
   "silver": {
-   "value": 50.615,
+   "value": 50.63,
    "date": "2026-10-30",
    "series": "gl.silver",
    "source": "Yahoo Finance chart data (COMEX front-month futures)",
@@ -30,13 +30,13 @@
    "frequency": "daily",
    "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": -3.02,
-   "chg_1m_pct": -15.78,
-   "chg_1y_pct": 5.46,
-   "z_1y": -1.36,
-   "high_1y": 78.29,
-   "low_1y": 50.615,
-   "history_from": "2000-09-01"
+   "chg_1w_pct": -5.74,
+   "chg_1m_pct": -15.75,
+   "chg_1y_pct": 4.55,
+   "z_1y": -1.49,
+   "high_1y": 115.08,
+   "low_1y": 47.13,
+   "history_from": "2000-08-30"
   },
   "ratio": {
    "value": 78.9,
@@ -155,17 +155,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": -3.81,
-    "silver_pct_1m": -28.77,
-    "gold_pct_6m": 10.13,
-    "silver_pct_6m": -10.27,
-    "gold_pct_24m": 51.49,
-    "silver_pct_24m": 40.41,
+    "gold_pct_1m": 9.89,
+    "silver_pct_1m": -5.52,
+    "gold_pct_6m": 21.22,
+    "silver_pct_6m": 20.21,
+    "gold_pct_24m": 66.61,
+    "silver_pct_24m": 91.36,
     "real_yield_bp_6m": 9.0,
     "dollar_pct_6m": 12.82,
     "cb_tonnes_12m": -43.2
    },
-   "basis": "monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -180,12 +180,12 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": -11.38,
-    "silver_pct_1m": -27.96,
-    "gold_pct_6m": -6.49,
-    "silver_pct_6m": -17.07,
-    "gold_pct_24m": -23.65,
-    "silver_pct_24m": -43.73,
+    "gold_pct_1m": 8.43,
+    "silver_pct_1m": 7.89,
+    "gold_pct_6m": 2.12,
+    "silver_pct_6m": -13.23,
+    "gold_pct_24m": -23.36,
+    "silver_pct_24m": -48.74,
     "real_yield_bp_6m": -41.0,
     "dollar_pct_6m": 2.76,
     "cb_tonnes_12m": 453.1
@@ -205,17 +205,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": -9.74,
-    "silver_pct_1m": -16.93,
-    "gold_pct_6m": -14.25,
-    "silver_pct_6m": -18.11,
-    "gold_pct_24m": -19.42,
-    "silver_pct_24m": -33.86,
+    "gold_pct_1m": -6.26,
+    "silver_pct_1m": -11.07,
+    "gold_pct_6m": -8.7,
+    "silver_pct_6m": -10.66,
+    "gold_pct_24m": -12.59,
+    "silver_pct_24m": -24.12,
     "real_yield_bp_6m": 98.0,
     "dollar_pct_6m": 0.31,
     "cb_tonnes_12m": 180.0
    },
-   "basis": "monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -230,17 +230,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": 5.39,
-    "silver_pct_1m": -15.64,
-    "gold_pct_6m": 20.35,
-    "silver_pct_6m": 43.58,
-    "gold_pct_24m": 21.98,
-    "silver_pct_24m": 41.34,
+    "gold_pct_1m": 15.9,
+    "silver_pct_1m": 11.18,
+    "gold_pct_6m": 28.51,
+    "silver_pct_6m": 84.97,
+    "gold_pct_24m": 27.31,
+    "silver_pct_24m": 73.79,
     "real_yield_bp_6m": -102.0,
     "dollar_pct_6m": -3.61,
     "cb_tonnes_12m": 176.7
    },
-   "basis": "monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -255,17 +255,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": 4.36,
-    "silver_pct_1m": 4.26,
-    "gold_pct_6m": -9.43,
-    "silver_pct_6m": -19.57,
-    "gold_pct_24m": 16.27,
-    "silver_pct_24m": 4.26,
+    "gold_pct_1m": 2.34,
+    "silver_pct_1m": 2.26,
+    "gold_pct_6m": -11.43,
+    "silver_pct_6m": -22.5,
+    "gold_pct_24m": 12.01,
+    "silver_pct_24m": 0.31,
     "real_yield_bp_6m": 164.0,
     "dollar_pct_6m": 6.15,
     "cb_tonnes_12m": 354.6
    },
-   "basis": "monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -280,17 +280,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": 8.91,
-    "silver_pct_1m": 13.68,
-    "gold_pct_6m": 20.77,
-    "silver_pct_6m": 16.49,
-    "gold_pct_24m": 74.86,
-    "silver_pct_24m": 126.67,
+    "gold_pct_1m": 5.31,
+    "silver_pct_1m": 7.88,
+    "gold_pct_6m": 17.31,
+    "silver_pct_6m": 10.96,
+    "gold_pct_24m": 70.69,
+    "silver_pct_24m": 117.37,
     "real_yield_bp_6m": 41.0,
     "dollar_pct_6m": 3.45,
     "cb_tonnes_12m": 308.5
    },
-   "basis": "monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -305,17 +305,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": -1.56,
-    "silver_pct_1m": -4.94,
-    "gold_pct_6m": 23.78,
-    "silver_pct_6m": 7.19,
+    "gold_pct_1m": -3.56,
+    "silver_pct_1m": -4.14,
+    "gold_pct_6m": 24.64,
+    "silver_pct_6m": 1.95,
     "gold_pct_24m": null,
     "silver_pct_24m": null,
     "real_yield_bp_6m": 1.0,
     "dollar_pct_6m": -2.05,
     "cb_tonnes_12m": 269.2
    },
-   "basis": "daily and monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -334,10 +334,10 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": 1.28,
-    "silver_pct_1m": -2.83,
-    "gold_pct_6m": 17.09,
-    "silver_pct_6m": 13.77,
+    "gold_pct_1m": 6.49,
+    "silver_pct_1m": 11.02,
+    "gold_pct_6m": 26.58,
+    "silver_pct_6m": 27.1,
     "gold_pct_24m": null,
     "silver_pct_24m": null,
     "real_yield_bp_6m": -22.0,
