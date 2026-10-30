@@ -87,7 +87,7 @@ def _date(s: str | None) -> str | None:
 _last = 0.0
 
 
-def gdelt_articles(query: str, hours: int = 48, n: int = 25, tries: int = 4) -> list[dict]:
+def gdelt_articles(query: str, hours: int = 72, n: int = 25, tries: int = 4) -> list[dict]:
     """Most relevant recent articles for a query (ArtList). Same pacing as the calendar: one call
     every 6 seconds and a growing back-off on the rate-limit notice."""
     global _last
@@ -122,6 +122,8 @@ def from_gdelt(per_query: int = 8, budget_s: float = 360) -> tuple[list[dict], l
             continue
         try:
             arts = gdelt_articles(q)
+            if not arts:  # nothing in three days: widen to a week and drop the language filter once
+                arts = gdelt_articles(q.replace(" sourcelang:english", ""), hours=168)
             seen, kept = set(), 0
             for a in arts:
                 title = _clean(a.get("title"))

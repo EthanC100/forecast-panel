@@ -390,12 +390,12 @@ spending cap live in `data/terminal/inputs/brief.yaml`; country primers in `inpu
    judgement would take the month past it) only the facts step runs. The Today card shows the
    month's spend against the cap.
 
-**Expected cost** (prices from brief.yaml, batch rates): the facts step reads about 15,000 tokens
-and writes about 2,000, roughly $0.001 a day. A judgement run writes the shared prefix (about 19,000
-tokens) to the one-hour cache once, reads it five times and writes about 4,000 tokens per question:
-about $0.16, or $0.35 if no cache read lands. The schedule gives about 12 judgement days a month
-over the next quarter (13 importance-3 catalysts plus Mondays), so **about $2 a month, $4 at
-worst**, well under the cap.
+**Expected cost** (batch rates from brief.yaml, measured on the first run, 30 Oct 2026): the facts
+step read 26,501 tokens and wrote 2,067, $0.002. The judgement wrote the shared 34,005-token prefix
+to the one-hour cache once, read it five times, and wrote 900 to 2,300 tokens per question: $0.12
+for six questions. The schedule gives about 12 judgement days a month over the next quarter (13
+importance-3 catalysts plus Mondays), so **about $1.50 a month**; if no cache read ever landed it
+would be about $0.45 a run, **about $5.50 a month at worst**, still under the $8 cap.
 
 **Headline sources.** BCB press notes (Atom), USTR (RSS), the Assemblée nationale sitting reports
 (RSS), SHCP (gob.mx list), Banco de México, Tesouro Nacional and Agence France Trésor (list pages),

@@ -27,6 +27,10 @@ def test_snapshot_has_no_private_fields(tmp_brief):
     ids = [x["id"] for x in snap["items"]]
     assert len(ids) == len(set(ids))
     assert any(i.startswith("sc:") for i in ids) and any(i.startswith("ev:") for i in ids)
+    # every id a scenario page refers to (its event, its market rows) is itself an item
+    for sc in [x for x in snap["items"] if x["kind"] == "scenario"]:
+        refs = [m["id"] for m in sc["markets"]] + ([sc["event"]] if sc["event"] else [])
+        assert all(r in ids for r in refs), refs
 
 
 def test_number_matching():

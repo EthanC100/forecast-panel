@@ -139,13 +139,14 @@ def _changes(it: dict, v: float, pv: float, unit: str, suffix: str) -> None:
         it["change_pct" + suffix] = _r(ch / abs(pv) * 100, 2)
 
 
-def calendar_items(days: int) -> list[dict]:
+def calendar_items(days: int, also: set[str] | None = None) -> list[dict]:
+    """Events in the next ``days``, plus any further-out event whose id is in ``also`` (scenario catalysts)."""
     cal = _read(store.DATA / "calendar.json", {"events": []})
     today = dt.date.today()
     end = (today + dt.timedelta(days=days)).isoformat()
     out = []
     for e in cal.get("events", []):
-        if today.isoformat() <= e["date"] <= end:
+        if today.isoformat() <= e["date"] <= end or f"ev:{e['id']}" in (also or set()):
             out.append({"id": f"ev:{e['id']}", "kind": "event", "country": e.get("country"), "date": e["date"],
                         "days_to": (dt.date.fromisoformat(e["date"]) - today).days, "title": e.get("title"),
                         "type": e.get("type"), "importance": e.get("importance"), "status": e.get("status"),
@@ -178,7 +179,7 @@ def scenario_items() -> list[dict]:
         for m in (s.get("markets") or {}).get("rows", []):
             if m.get("prob") is None:
                 continue
-            rows.append({"venue": m.get("venue"), "market_id": m.get("id"), "question": m.get("question"),
+            rows.append({"id": ("pm:" if m.get("venue") == "Polymarket" else "ks:") + str(m.get("id")), "venue": m.get("venue"), "question": m.get("question"),
                          "yes_pct": _r(m["prob"] * 100, 1), "volume": _r(m.get("volume"), 0), "branches": m.get("branches"),
                          "related_only": m.get("related"), "note": m.get("note"), "url": m.get("url")})
         branches = [{"id": b["id"], "label": b["label"], "side": b.get("side"), "signposts": b.get("signposts", []),
@@ -279,7 +280,16 @@ def build_snapshot(fetch_headlines: bool = True) -> dict:
             degraded["br.di"] = d.get("effect")
     prev = _read(SNAPSHOT)
     items = [x for x in (series_item(s, degraded) for s in _series_ids(summary)) if x]
-    items += calendar_items(cfg["calendar_days"]) + scenario_items() + market_items(summary)
+    scen = scenario_items()
+    items += calendar_items(cfg["calendar_days"], {x["event"] for x in scen if x.get("event")}) + scen + market_items(summary)
+    # market rows on scenario pages are citable items too
+    have = {x["id"] for x in items}
+    for sc_item in [x for x in items if x["kind"] == "scenario"]:
+        for m in sc_item["markets"]:
+            if m["id"] not in have:
+                have.add(m["id"])
+                items.append({"id": m["id"], "kind": "market", "country": sc_item["country"], "venue": m["venue"], "question": m["question"],
+                              "yes_pct": m["yes_pct"], "volume": m.get("volume"), "scenario": sc_item["id"], "url": m.get("url")})
     cot, disp = crowd_items()
     items += cot + disp
     heads, head_status = [], []
@@ -435,7 +445,7 @@ EXTRACTION_SYSTEM = """You write the factual half of a daily research brief on F
 You get today's snapshot: one JSON object per line, each with an "id". Report what changed since the last brief (the snapshot says when that was). Changes include: data points with a new observation (compare value with prev_value, or with last_brief_value when present), new or moved calendar events in the next two weeks, market odds that moved, new positioning or survey readings, and new headlines from official press pages and news.
 
 Rules:
-- Use only the snapshot. Every fact cites the id or ids it comes from in source_ids.
+- Use only the snapshot. Every fact cites the id or ids it comes from in source_ids, copied exactly from an item's "id" field (never built from other fields).
 - Every number you write must be copied from the cited items (value, prev_value, change, change_pct, change_bp, yes_pct, change_pp_since_last_brief, percentile, and so on), rounded if you like. Do not compute new numbers. Dates are fine.
 - One fact per item or tight group of items, one sentence each, plain words, no adjectives about importance, no forecasts, no opinions.
 - A headline is a fact only about what was said or published, never about whether it is true.
@@ -455,7 +465,7 @@ JUDGEMENT_ROLE = """You are a sceptical EM sovereign strategist looking for wher
 
 You give probabilities on open questions about France, Brazil and Mexico. Method, every time:
 1. Start from the stated base rate on the question's scenario page (base_rate). If the page has no computed base rate, say so and name the starting point you use instead (the reference class you think fits, or the market price as a last resort).
-2. Move from there only for reasons in the snapshot or the facts list. Up to three factors, each citing the ids it rests on.
+2. Move from there only for reasons in the snapshot or the facts list. Up to three factors, each citing the ids it rests on, copied exactly from an item's "id" field (market rows on scenario pages have their own ids).
 3. Ask where the crowd (markets, surveys, positioning, consensus headlines) might be making the same mistake, and whether the evidence badges say a signal is worth anything. Untested or tested_no_lead signals deserve little weight.
 4. Probabilities in 5% steps. Branch probabilities sum to 100 and the YES branches sum to P(yes).
 5. Say what would change your view, how confident you are, and the single most likely way you are wrong.
