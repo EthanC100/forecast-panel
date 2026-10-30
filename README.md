@@ -155,7 +155,7 @@ Each page has:
   * Brazil and USMCA: **not computable**. em-macro has no fiscal-target revisions and no
     trade-agreement events, and the page says so.
 * **Branch tree** (3-4 branches). Each branch shows my probability (from the latest Full call with
-  question id `sc:<id>`), the AI's ("Phase 4") and the market's. It also shows the expected move
+  question id `sc:<id>`), the AI's (from the AI brief, shown only after my call) and the market's. It also shows the expected move
   per instrument with its basis: em-macro's what-if table (with 90% interval), its event study,
   an analog measured on Catalyst's own series (for example the Nov 2024 Brazil package:
   DI Jan-29 +112 bp and USD/BRL +4.4% in 3 days), or a judgement. Anything that is not a direct
@@ -355,6 +355,53 @@ gzipped. Everything else loads on demand:
 * Every chart and card builds only when it scrolls into view.
 * `summary.json` lists the stored series, so the site never requests a file that does not exist.
 
+## Phase 4: the AI brief
+
+A brief on Today (`#brief` for the archive, `#brief/<date>` for one day), built every evening by
+`.github/workflows/brief.yml` (`python -m terminal.run brief`). Models, prices, the schedule and the
+spending cap live in `data/terminal/inputs/brief.yaml`; country primers in `inputs/primers.yaml`.
+
+1. **Snapshot** (`data/terminal/brief/snapshot.json`). Every item has an id the model must cite:
+   latest data points with the previous observation and the one-week change (`s:`), calendar events
+   in the next 90 days (`ev:`), the open scenario pages with base rates, branches, signposts, moves
+   and market rows (`sc:`), prediction-market odds (`pm:`, `ks:`), CFTC positioning (`cot:`), survey
+   dispersion (`disp:`), 20 to 40 headlines from GDELT and official press pages (`h:`, each with its
+   URL), em-macro's findings (`em:`), the evidence badges (`badge:`) and the primers (`primer:`).
+   Your own calls and probabilities are stripped before anything reaches a model.
+2. **Facts** (daily, the cheapest current Claude model): what changed since the last brief, from the
+   snapshot only, every fact citing ids. JSON via structured outputs.
+3. **Judgement** (Mondays, and on days within 3 days of an importance-3 catalyst; a mid-tier
+   current Claude model): for every open scenario question, a probability in 5% steps starting from
+   the page's base rate, up to three factors with their ids, what would change the view, confidence,
+   and the single most likely way it is wrong. One request per question; all six share a cached
+   prefix (role: a sceptical EM sovereign strategist looking for where consensus shares an error,
+   the primers, em-macro's findings, the badges, the snapshot and the day's facts).
+4. **Validation.** Every number in the output must match a snapshot value within rounding, every
+   cited id must exist, branch probabilities must sum to 100 and the YES branches to P(yes). A fact
+   with no source moves to the judgement side. Anything else that fails is published exactly as
+   written under a red **Unverified** banner, with the failing lines marked, never quietly fixed.
+5. **Display.** Facts and judgement sit in visibly separate boxes (the judgement box is dashed and
+   labelled "the model's opinion, not fact"). On scenario pages the AI column and the AI judgement
+   card stay hidden until you have made a call on that question; there is no reveal button. The
+   AI's probability is also recorded at entry on new calls for `sc:` questions, like the market's.
+6. **Cost.** Batch API first (half price); if a batch has not ended after 40 minutes it is
+   cancelled and the rest goes through the standard API. Every call's tokens and dollars go into
+   `data/terminal/brief/spend.json` by month. At or above **$8** in a calendar month (or if a
+   judgement would take the month past it) only the facts step runs. The Today card shows the
+   month's spend against the cap.
+
+**Expected cost** (prices from brief.yaml, batch rates): the facts step reads about 15,000 tokens
+and writes about 2,000, roughly $0.001 a day. A judgement run writes the shared prefix (about 19,000
+tokens) to the one-hour cache once, reads it five times and writes about 4,000 tokens per question:
+about $0.16, or $0.35 if no cache read lands. The schedule gives about 12 judgement days a month
+over the next quarter (13 importance-3 catalysts plus Mondays), so **about $2 a month, $4 at
+worst**, well under the cap.
+
+**Headline sources.** BCB press notes (Atom), USTR (RSS), the Assemblée nationale sitting reports
+(RSS), SHCP (gob.mx list), Banco de México, Tesouro Nacional and Agence France Trésor (list pages),
+and GDELT for news. A source that refuses or fails is listed in the brief's snapshot section with
+its error and the brief goes ahead without it; nothing is fetched around a block.
+
 ## Daily flow
 
 ```
@@ -363,6 +410,7 @@ release days                                      terminal-data.yml: just that s
    Mon 12:20 UTC  BCB Focus survey                   Fri 20:40 UTC  CFTC Commitments of Traders
    1st-3rd 19:10 UTC  Banxico survey                 8th-12th 12:30 UTC  IPCA inflation
 daily 06:17 UTC                                   panel.yml: the Lab's forecast snapshot (unchanged)
+daily 23:41 UTC                                   brief.yml: snapshot, facts, judgement when due (Phase 4)
           │
           ▼
 python -m terminal.run fetch      -> data/terminal/series/<id>.json, data/terminal/status.json
@@ -381,14 +429,15 @@ it is skipped and marked red on the Status page with the error, and everything e
 working. Tiles whose source failed say so and link to Status. A fallback only runs when its
 primary did not succeed.
 
-**Degraded data.** Until the `BANXICO_TOKEN`, `FRED_API_KEY` and `WEBSTAT_CLIENT_ID` secrets are
-added, the keyless backups run instead (Banxico's public chart endpoint, FRED's graph CSV, the ECB's
-monthly French and German yields), and B3's DI curve is proxied by Tesouro LTN bonds. Every number
-built on a substitute carries an amber **degraded** chip, and the Status page lists what is
-degraded, why and how to fix it (`terminal/degraded.py`). Every feature lists its series best-first,
-so when a secret is added the next data run writes the better series and tiles, charts, the book,
-scenario calculators and crowd gauges switch to it with no edits. Add a secret under Settings >
-Secrets and variables > Actions > New repository secret.
+**Degraded data.** The Banxico and FRED APIs run on their keys (`BANXICO_TOKEN`, `FRED_API_KEY`);
+their keyless backups (Banxico's public chart endpoint, FRED's graph CSV) stay on standby and run
+only if the API fails. France stays on the ECB's monthly French and German yields until a
+`WEBSTAT_CLIENT_ID` is added, and B3's DI curve is proxied by Tesouro LTN bonds. Every number built
+on a substitute carries an amber **degraded** chip, and the Status page lists what is degraded, why
+and how to fix it (`terminal/degraded.py`). Every feature lists its series best-first, so when a
+secret is added the next data run writes the better series and tiles, charts, the book, scenario
+calculators and crowd gauges switch to it with no edits. Add a secret under Settings > Secrets and
+variables > Actions > New repository secret.
 
 ## Sources
 
@@ -471,6 +520,8 @@ pytest
 ```
 
 Set `BANXICO_TOKEN`, `WEBSTAT_CLIENT_ID` and `FRED_API_KEY` in the environment to use those APIs.
+`pip install -e .[ai]` and `ANTHROPIC_API_KEY` for `python -m terminal.run brief` (`--no-ai` builds
+the snapshot only, `--force-judgement` runs the judgement on any day, `--no-batch` skips the Batch API).
 `python -m terminal.run fetch --only bcb_sgs,cftc` runs selected sources. em-macro files are read
 from GitHub; set `EM_MACRO_DIR=../em-macro` to read a local checkout instead.
 
@@ -488,7 +539,10 @@ data/terminal/summary.json       what the site reads first
 data/terminal/scenarios.json     scenario pages (rebuilt from inputs/scenarios.yaml)
 data/terminal/crowd.json         crowd gauges and the ranked shared-error list
 data/terminal/lab/crowd_tests.json   lab-test results that set the crowd badges (report: reports/crowd_lab.md)
-data/terminal/inputs/            hand-edited: events, evidence, fiscal_gap, france_ratings, scenarios, polls
+data/terminal/brief/             AI brief: snapshot.json (and the previous one), briefs/<date>.json (archive),
+                                 latest.json, judgement_latest.json, index.json, spend.json (monthly spend)
+data/terminal/inputs/            hand-edited: events, evidence, fiscal_gap, france_ratings, scenarios, polls,
+                                 brief (models, prices, cap, schedule), primers
 data/book/config.yaml            paper book: capital, instruments, costs, durations, close times
 data/book/state.json             positions, marks, equity curve, stats, benchmarks, systematic (rebuilt)
 data/book/judgements.json        calls, updates, resolutions and scores (rebuilt)
@@ -496,8 +550,8 @@ data/book/journal.json           every record in date order (rebuilt)
 data/trades/, data/judgements/   write-once form records
 .github/ISSUE_TEMPLATE/          the five forms; .github/workflows/forms.yml processes them
 terminal/                        the package: store, sources/, calendar, summary, book, forms, judgement,
-                                 degraded, emmacro, scenarios, crowd, labtests, run
-site/                            index.html, terminal.js, record.js, scenarios.js, terminal.css (and lab/)
+                                 degraded, emmacro, scenarios, crowd, labtests, headlines, brief, run
+site/                            index.html, terminal.js, record.js, scenarios.js, brief.js, terminal.css (and lab/)
 ```
 
 ---

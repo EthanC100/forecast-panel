@@ -505,8 +505,10 @@ def build(live: bool = True) -> dict:
                     "yes_branches": sc["yes_branches"], "instruments": sc["instruments"],
                     "event": ev and {k: ev.get(k) for k in ("id", "date", "title", "status", "source", "importance")}, "days_to_event": days,
                     "base_rate": base_rate(sc.get("base_rate", {})), "branches": branches, "markets": mk, "mine": mine,
-                    "ai": {"available": False, "note": "AI probabilities arrive in Phase 4"},
+                    "ai": {"available": False, "note": "No AI judgement yet for this question."},
                     "calculator": calc, "asymmetry": asym, "indicators": indicators(sc)})
+    from terminal import brief
+    brief.apply_ai(out)
     res = {"generated_at": store.now_iso(), "asymmetry_rules": ASYM, "scenarios": out,
            "em_macro": emmacro.RAW, "notes": ["Moves marked assumption are judgements or rescalings, not em-macro estimates.",
                                              "Market probabilities are hidden until you reveal them, as elsewhere on the site."]}

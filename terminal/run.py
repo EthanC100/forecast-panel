@@ -78,9 +78,13 @@ def copy_site(dest=store.ROOT / "site" / "data") -> None:
 def main(argv=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab"])
+    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab", "brief", "snapshot"])
     ap.add_argument("--only", default="", help="comma-separated source keys for fetch")
     ap.add_argument("--no-attention", action="store_true", help="calendar: skip the GDELT attention refresh")
+    ap.add_argument("--force-judgement", action="store_true", help="brief: run the judgement even if it is not due")
+    ap.add_argument("--no-ai", action="store_true", help="brief: build the snapshot and archive entry without calling the API")
+    ap.add_argument("--no-headlines", action="store_true", help="brief/snapshot: reuse the last headlines instead of fetching")
+    ap.add_argument("--no-batch", action="store_true", help="brief: use the standard API instead of the Batch API")
     a = ap.parse_args(argv)
     only = {s.strip() for s in a.only.split(",") if s.strip()} or None
     if a.cmd in ("fetch", "all"):
@@ -110,6 +114,17 @@ def main(argv=None) -> int:
         scenarios.build()
         crowd.build()
         teach.build()
+    if a.cmd == "snapshot":
+        from terminal import brief
+        log.info("snapshot: %s", brief.build_snapshot(fetch_headlines=not a.no_headlines)["counts"])
+    if a.cmd == "brief":
+        from terminal import brief
+        b = brief.run(force_judgement=a.force_judgement, no_ai=a.no_ai, fetch_headlines=not a.no_headlines, use_batch=not a.no_batch)
+        log.info("brief %s: %s, verified=%s, %d facts, judgement %s; today $%.4f, month $%.4f of $%.2f", b["date"], b["status"],
+                 b.get("verified"), len(b.get("facts", [])), "ran" if b["judgement"].get("ran") else "not run (" + b["judgement"]["why"] + ")",
+                 b["cost"]["today_usd"], b["cost"]["month_usd"], b["cost"]["cap_usd"])
+        for p in b.get("problems", []):
+            log.warning("unverified: %s", p)
     if a.cmd == "site":
         copy_site()
     return 0

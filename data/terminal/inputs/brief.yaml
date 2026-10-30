@@ -1,0 +1,39 @@
+# AI brief (Phase 4): models, prices, schedule and the monthly spending cap.
+# Read by terminal/brief.py. Change a model here, not in code.
+
+models:
+  extraction: claude-haiku-5-5     # cheapest current model; daily list of what changed
+  judgement: claude-sonnet-5-5     # mid-tier current model; weekly and near importance-3 catalysts
+
+effort:
+  extraction: low
+  judgement: high
+
+max_tokens:
+  extraction: 8000
+  judgement: 8000
+
+# USD per million tokens, standard (non-batch) API, prompts up to 100,000 tokens.
+# Source: platform.claude.com/docs/en/about-claude/pricing (checked 2026-10-30).
+# Batch requests cost half of every line below.
+prices:
+  extraction: {input: 0.10, cache_write_5m: 0.125, cache_write_1h: 0.20, cache_read: 0.01, output: 0.50}
+  judgement: {input: 2.00, cache_write_5m: 2.50, cache_write_1h: 4.00, cache_read: 0.10, output: 10.00}
+batch_discount: 0.5
+
+monthly_cap_usd: 8.0        # above this in a calendar month: extraction only, no judgement
+
+judgement:
+  weekday: 0                # Monday (0 = Monday ... 6 = Sunday)
+  catalyst_importance: 3
+  catalyst_window_days: 3   # also run on days within this many days of an importance-3 event
+  cache_ttl: 1h             # the shared prefix is reused by one request per question in a batch
+
+batch:
+  poll_seconds: 30
+  timeout_minutes: 40       # after this the batch is cancelled and the standard API is used
+
+snapshot:
+  calendar_days: 90
+  headlines_min: 20
+  headlines_max: 40

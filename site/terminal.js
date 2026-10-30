@@ -1,6 +1,6 @@
 /* Terminal core: routing, Today, Calendar, country pages and Status. Everything heavier loads on
    demand: charts.js (every chart), teach.js (How-this-works cards, calculators, overview visuals),
-   record.js (Record and trade sizing), scenarios.js (Scenarios and Crowd), glossary.js. Data:
+   record.js (Record and trade sizing), scenarios.js (Scenarios and Crowd), brief.js (AI brief), glossary.js. Data:
    data/summary.json first; calendar, series and teaching data only when a page needs them. */
 (function () {
   "use strict";
@@ -201,6 +201,8 @@
           meta({ source: "source", source_url: e.source, as_of: s.generated_at, evidence: s.evidence_defaults.countdown }))));
     });
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Next catalysts"), el("a", { href: "#calendar", class: "small" }, "full calendar →")), cats));
+    f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Brief"), el("a", { href: "#brief", class: "small" }, "archive →")),
+      lazy("lines", () => need("brief").then(() => TERM.brief.card()))));
     const g = el("div", { class: "grid" }); s.tiles.forEach((t) => g.appendChild(tile(t)));
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Instruments"), el("span", { class: "tiny" }, "1w / 1m change; z-score = level vs the past year")), g));
     const ov = el("div", { class: "grid wide" });
@@ -408,6 +410,7 @@
     else if (page === "record") node = modPage("record", "pageRecord", arg);
     else if (page === "trade") node = modPage("record", "pageTrade", arg, new URLSearchParams(full.split("?")[1] || ""));
     else if (page === "glossary") node = modPage("glossary", "pageGlossary");
+    else if (page === "brief") node = modPage("brief", "pageBrief", arg);
     else node = pageToday();
     app.appendChild(node);
     if (TERM.glossarize) requestAnimationFrame(() => TERM.glossarize(app));

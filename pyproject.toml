@@ -16,6 +16,7 @@ dependencies = [
 
 [project.optional-dependencies]
 test = ["pytest>=7"]
+ai = ["anthropic>=2.3"]
 
 [tool.setuptools]
 packages = ["forecast_panel", "terminal", "terminal.sources"]

@@ -69,7 +69,11 @@ def market_probability(qid: str | None) -> dict | None:
 
 
 def ai_probability(qid: str | None) -> dict | None:
-    """Claude's probability from gold-events' forward log, for forecast-panel questions only."""
+    """Claude's probability: the AI brief's latest judgement for scenario questions (sc:<id>),
+    gold-events' forward log for forecast-panel questions (q1..q5)."""
+    if qid and qid.startswith("sc:"):
+        from terminal import brief
+        return brief.ai_probability(qid)
     if not qid or not qid.lower().startswith("q"):
         return None
     try:

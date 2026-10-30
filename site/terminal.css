@@ -400,3 +400,31 @@ body[data-section="glossary"], body[data-section="status"] { --sec: var(--accent
 .ev.under { border-color: var(--warn); box-shadow: inset 4px 0 0 var(--warn); }
 a { color: var(--accent); }
 details.how > summary { color: var(--sec-ink); }
+
+/* AI brief: facts (plain) and judgement (dashed, tinted) are always visibly separate */
+.card.brief .bhead, .judge-card .bhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 6px; }
+.card.brief h3 { margin: 0; font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: .06em; color: var(--text-2); }
+.card.brief .facts { padding: 4px 0 10px; }
+.factlist { margin: 0; padding-left: 0; list-style: none; }
+.factlist li { padding: 6px 0; border-top: 1px solid var(--border); font-size: var(--fs-sm); line-height: 1.45; overflow-wrap: anywhere; }
+.factlist li:first-child { border-top: 0; }
+.srcs { display: inline-flex; flex-wrap: wrap; gap: 4px; vertical-align: middle; }
+.src { font-size: .6875rem; padding: 0 6px; border-radius: 6px; border: 1px solid var(--border); color: var(--text-2); text-decoration: none; background: var(--surface-2); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+a.src:hover { border-color: var(--accent); color: var(--text); }
+.src.missing { border-style: dashed; color: var(--bad-ink); }
+.judge, .judge-card { border: 1.5px dashed var(--accent); border-radius: 12px; padding: 10px 12px; background: color-mix(in srgb, var(--accent) 7%, transparent); }
+.card.judge-card { background: color-mix(in srgb, var(--accent) 7%, var(--glass)); }
+.judge .q { padding: 8px 0; border-top: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent); }
+.judge .q:first-of-type { border-top: 0; }
+.qhead { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-weight: 650; }
+.pbig { font-size: 1.25rem; font-weight: 800; color: var(--text); }
+.hidden-q .qhead a { font-weight: 600; }
+.factors { margin: 6px 0; padding-left: 0; list-style: none; font-size: var(--fs-sm); }
+.factors li { padding: 2px 0; }
+.eff { display: inline-block; width: 1.1em; text-align: center; font-weight: 800; color: var(--accent); }
+.unverified { background: var(--bad-soft); color: var(--bad-ink); border: 1.5px solid var(--bad); border-radius: 10px; padding: 8px 12px; margin: 4px 0 10px; font-size: var(--fs-sm); }
+.unverified b { color: var(--bad-ink); }
+.unverified summary { cursor: pointer; font-size: var(--fs-xs); }
+.bad-line .x, .bad-line > .tiny { color: var(--bad-ink); }
+.chip.flag-red { background: var(--bad-soft); color: var(--bad-ink); border: 1px solid currentColor; }
+.bfoot { justify-content: space-between; margin-top: 10px; gap: 6px 12px; flex-wrap: wrap; }

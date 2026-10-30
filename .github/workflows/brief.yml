@@ -1,0 +1,61 @@
+name: AI brief
+
+# Phase 4. Daily after the data run: snapshot (data, calendar, scenarios, markets, positioning,
+# survey dispersion, headlines), extraction of what changed, and on Mondays or within 3 days of an
+# importance-3 catalyst a judgement on every open scenario question. Batch API first; spend is
+# counted in data/terminal/brief/spend.json and capped in data/terminal/inputs/brief.yaml.
+on:
+  schedule:
+    - cron: "41 23 * * *"     # every day, after the weekday data run (22:15 UTC)
+  workflow_dispatch:
+    inputs:
+      force_judgement:
+        description: "Run the judgement even if it is not due"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: data-writer          # shared with the data and forms workflows so pushes never collide
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e ".[ai]"
+
+      - name: Snapshot, extraction, judgement, validation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m terminal.run brief ${{ inputs.force_judgement && '--force-judgement' || '' }}
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/terminal/brief data/terminal/scenarios.json
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "AI brief: $(date -u +%Y-%m-%d)"
+            # generated files: if a code push regenerated them meanwhile, this run's fresher copy wins
+            git pull --rebase -X theirs origin main
+            git push origin HEAD:main
+          fi
+
+  deploy:
+    needs: brief
+    uses: ./.github/workflows/pages.yml

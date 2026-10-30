@@ -1,0 +1,55 @@
+# Country primers for the AI judgement prompt. Structural background only: no numbers, so every
+# figure the model cites has to come from the day's snapshot (the validator checks this).
+
+FR:
+  name: France
+  instruments: OAT-Bund 10-year spread (primary); OAT 10-year yield.
+  structure: >
+    Euro-area sovereign with no currency of its own; the ECB sets policy for the whole area and its
+    Transmission Protection Instrument is conditional on fiscal compliance. Ratings sit in the AA/A
+    band, and losing the last AA-category rating matters for some reserve managers.
+  politics: >
+    Minority government since the 2024 dissolution. Budgets pass either by vote or by Article 49.3,
+    which exposes the government to a censure motion. If no budget is adopted in time, Article 47
+    lets the government act by ordinance after the parliamentary deadline, and a special law can
+    roll over taxes and spending into the new year. The next presidential election is in spring 2027.
+  where_consensus_errs: >
+    Rating-agency timing (scheduled review dates are published, but agencies can affirm while
+    moving the outlook), the gap between official deficit targets and independent estimates, and
+    the speed at which a censure vote turns into a market move.
+
+BR:
+  name: Brazil
+  instruments: USD/BRL (primary); DI futures and long Tesouro bonds (context).
+  structure: >
+    Inflation-targeting central bank (Copom meets eight times a year). Fiscal policy runs under the
+    LC 200/2023 framework: a primary-balance target with a tolerance band and a cap on real spending
+    growth. The Focus survey gives weekly market expectations and their dispersion.
+  politics: >
+    A new government term starts in January 2027 after the October 2026 elections. Fiscal credibility
+    hinges on whether the framework is kept, loosened through exclusions, or rewritten.
+  where_consensus_errs: >
+    Official fiscal targets versus Focus estimates, and Copom surprises, which em-macro found move the
+    real within days when the Focus dispersion is high.
+
+MX:
+  name: Mexico
+  instruments: USD/MXN (primary); Mbono yields (context).
+  structure: >
+    Inflation-targeting central bank (Banxico). Investment-grade sovereign whose index eligibility
+    depends on the middle of the three agency ratings; Pemex's support is a recurring fiscal burden.
+  politics: >
+    Morena and its allies govern; the June 2027 midterms decide whether they keep the two-thirds
+    majority needed to amend the constitution alone. Trade policy is tied to the USMCA joint review
+    due in July 2027.
+  where_consensus_errs: >
+    Congressional supermajorities that a two-candidate poll margin cannot capture (the 2024 case in
+    em-macro), and US trade decisions that arrive outside the scheduled calendar.
+
+US:
+  name: United States
+  instruments: US 10-year Treasury yield and the broad dollar (global backdrop only).
+  structure: >
+    The global rates and dollar backdrop for all three countries. USTR leads the USMCA review.
+  where_consensus_errs: >
+    Tariff and trade announcements that are not on any calendar.

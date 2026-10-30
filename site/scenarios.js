@@ -24,6 +24,8 @@
   load().then(() => { if (/^#(calendar|country)/.test(location.hash || "")) T.route(); });
 
   const shown = (s) => T.isRevealed("sc:" + s.id) || !!s.mine;
+  // the AI's probabilities appear only after you have made your own call (no reveal button: they must not anchor it)
+  const aiShown = (s) => !!(s.mine && s.ai && s.ai.available);
   const revealBtn = (s) => el("button", { type: "button", class: "btn small", title: "Hidden so it does not anchor your call; shown automatically once you have made one",
     onclick: () => T.reveal("sc:" + s.id) }, "reveal");
   const unitOf = (m) => m.unit === "%" ? "%" : " bp";
@@ -143,7 +145,8 @@
       el("div", { class: "lbl" }, el("b", {}, b.label), el("span", { class: "chip " + cls }, lab + (s.yes_branches.includes(b.id) ? " · YES" : " · NO"))),
       el("div", { class: "probs" },
         el("div", {}, el("div", { class: "k" }, "mine"), el("div", { class: "v num" }, pct(b.p_mine))),
-        el("div", { title: "AI probabilities arrive in Phase 4" }, el("div", { class: "k" }, "AI"), el("div", { class: "v num muted" }, "Phase 4")),
+        aiShown(s) ? el("div", { title: "AI brief judgement of " + s.ai.date }, el("div", { class: "k" }, "AI"), el("div", { class: "v num" }, pct(b.p_ai)))
+          : el("div", { title: s.ai && s.ai.available ? "Shown once you have made a call on this question" : (s.ai && s.ai.note) || "No AI judgement yet" }, el("div", { class: "k" }, "AI"), el("div", { class: "v num muted" }, s.ai && s.ai.available ? "after call" : "–")),
         el("div", {}, el("div", { class: "k" }, "market"), el("div", { class: "v num" }, open ? pct(b.p_market) : "hidden"))),
       el("div", { class: "k small", style: "margin-top:8px" }, "Expected move"),
       el("ul", { class: "moves" }, ...b.moves.map((m) => el("li", {},
@@ -292,9 +295,10 @@
       el("div", { class: "row", style: "margin-top:10px" }, callButton(s),
         s.mine ? el("span", { class: "small" }, "My latest: ", el("b", {}, pct(s.mine.prob)), " (" + s.mine.record + ", " + s.mine.submitted_at.slice(0, 10) + ")",
           T.formBtn("Quick update", "quick-update", { target: s.mine.branches_from || s.question_id, title: "[Quick update] " + s.question_id }, "small")) : el("span", { class: "tiny" }, "Question id " + s.question_id + " is pre-filled; branch names are pre-filled in the scenarios box.")))));
-    f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Scenario tree"), el("span", { class: "tiny" }, "mine = from my latest Full call · AI from Phase 4 · market " + (open ? "shown" : "hidden until revealed")))));
+    f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Scenario tree"), el("span", { class: "tiny" }, "mine = from my latest Full call · AI = AI brief judgement, " + (aiShown(s) ? "shown" : "shown after your call") + " · market " + (open ? "shown" : "hidden until revealed")))));
     f.append(...nn(treeCard(s)));
     const g = el("div", { class: "grid", style: "margin-top:12px" }); s.branches.forEach((b) => g.appendChild(branchCard(s, b, open))); f.append(...nn(g));
+    if (s.ai && s.ai.available) f.append(...nn(T.lazy("lines", () => T.need("brief").then(() => T.brief.scenarioCard(s, aiShown(s))))));
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Market read"))));
     const g2 = el("div", { class: "grid wide" }); calculatorCard(s).forEach((x) => g2.appendChild(x)); f.append(...nn(g2));
     const g3 = el("div", { class: "grid wide", style: "margin-top:12px" }); g3.append(...nn(baseRateBox(s), marketsCard(s))); f.append(...nn(g3));
