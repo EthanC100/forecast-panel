@@ -1132,7 +1132,17 @@ weights in force and the latest aggregate.
   questions by hand once a token is available and record the wording differences in `note`.
 * Swift Centre and GJ Open cover one question each; the others are logged as NaN with the reason.
 * `claude_prob` is read from gold-events but that column does not exist there yet.
-* France has no free daily 10-year yield source reachable from the build (stooq and the AFT site are
-  blocked), so the France yield and the spread over Germany are the ECB's monthly series; the Bund is
-  daily. Upcoming events in `site/events.yaml` marked `confirmed: false` need checking against the
+* France has no free daily 10-year yield source reachable from the build, so the France yield and the
+  spread over Germany are the ECB's monthly series; the Bund is daily. These were checked on 30 Oct
+  2026, Banque de France Webstat excluded:
+  - the ECB's public market-data set (FM) has no country bond yields;
+  - Eurostat's daily convergence yields (`irt_lt_mcby_d`) are no longer published;
+  - the Bundesbank's yields by ISIN (BBSSY) cover German securities only;
+  - FRED has only the OECD monthly figure;
+  - AFT and CNBC return 403, and Stooq serves a bot check.
+
+  A paper trade on OATBUND therefore fills at the next month's average: a request on 30 October fills
+  at the November average, once the ECB publishes it after November ends. Horizons says so on the
+  pending trade and before you save. The tradeable daily equivalent is the Eurex Euro-OAT (FOAT)
+  minus Euro-Bund (FGBL) futures spread, but no free machine-readable feed for it worked here. Upcoming events in `site/events.yaml` marked `confirmed: false` need checking against the
   official calendars.

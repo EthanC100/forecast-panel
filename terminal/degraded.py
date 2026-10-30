@@ -29,7 +29,12 @@ RULES = [
      "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a "
                "target inside the month is invisible, and the latest value is up to five weeks old. New book trades "
                "switch to the daily series automatically once Webstat succeeds; open trades keep the series they "
-               "were filled on."},
+               "were filled on. A trade requested on a monthly series fills at the next month's average, dated the 1st, "
+               "once the ECB publishes it after that month ends. No free daily French 10-year source works from "
+               "GitHub Actions (checked 30 Oct 2026): the ECB's public market-data set has no country bond yields, "
+               "Eurostat's daily series (irt_lt_mcby_d) is no longer published, the Bundesbank's yields by ISIN "
+               "cover German securities only, FRED has only the OECD monthly figure, and AFT, CNBC and Stooq "
+               "refuse automated requests."},
     {"id": "b3", "primary": "b3_di", "fallback": "tesouro", "secret": None,
      "series": ["br.di.f27.proxy", "br.di.f29.proxy", "br.di.f31.proxy"],
      "features": "Brazil DI Jan-27/29/31 (Today tiles, Brazil page, DI trades in the book)",

@@ -476,6 +476,7 @@ def build(today: str | None = None) -> dict:
                         "proxy": bool(inst.series and inst.series.get("proxy")), "value": last[1] if last else None,
                         "date": last[0] if last else None, "close_utc": icfg.get("close_utc"),
                         "low_frequency": bool(icfg.get("low_frequency")), "note": icfg.get("note"),
+                        "frequency": (inst.series or {}).get("frequency"),
                         "degraded": degraded.for_series(inst.series_id, deg_rules),
                         # what the site's trade-sizing calculator needs to reproduce pnl() and cost()
                         "scale": inst.scale, "favourable": inst.favourable, "rate_usd": icfg.get("rate_usd"), "rate_local": icfg.get("rate_local"),

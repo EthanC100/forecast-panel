@@ -227,9 +227,23 @@
       pc ? el("div", { class: "chip warn", style: "margin-top:10px" }, "Closing at the next end-of-day close")
         : el("div", { class: "btns" }, el("button", { type: "button", class: "btn danger", onclick: () => closeFlow(t) }, "Close")));
   }
+  /** Monthly instruments fill at the next month's average (dated the 1st), published after that month ends. */
+  const isMonthly = (code) => INST[code] && (INST[code].frequency === "monthly" || INST[code].low_frequency);
+  function monthlyFill(code, requestedIso) {
+    const req = new Date(requestedIso || Date.now());
+    const [hh, mm] = ((INST[code] && INST[code].close_utc) || "21:00").split(":").map(Number);
+    let y = req.getUTCFullYear(), m = req.getUTCMonth();
+    if (Date.UTC(y, m, 1, hh, mm) <= req.getTime()) { m += 1; if (m > 11) { m = 0; y += 1; } }
+    const month = new Date(Date.UTC(y, m, 1)).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
+    const after = new Date(Date.UTC(y, m + 1, 0)).toLocaleDateString("en-GB", { day: "numeric", month: "long", timeZone: "UTC" });
+    return { month, text: "Fills at the " + month + " monthly average, once the source publishes it after " + after + ". There is no daily close for this instrument." };
+  }
   function pendingCard(t) {
+    const mf = isMonthly(t.instrument) ? monthlyFill(t.instrument, t.requested_at) : null;
     return el("div", { class: "card" },
-      el("div", { class: "row spread" }, el("div", {}, el("h3", {}, nameOf(t.instrument)), el("div", { class: "tiny" }, dirLabel(t.instrument, t.direction), " · requested ", dShort(t.requested_at))), el("span", { class: "chip" }, "Opens at the next close")),
+      el("div", { class: "row spread" }, el("div", {}, el("h3", {}, nameOf(t.instrument)), el("div", { class: "tiny" }, dirLabel(t.instrument, t.direction), " · requested ", dShort(t.requested_at))),
+        el("span", { class: "chip" }, mf ? "Opens at the " + mf.month + " average" : "Opens at the next close")),
+      mf ? el("div", { class: "small muted", style: "margin-top:8px" }, mf.text, INST[t.instrument].date ? " Latest published: " + new Date(INST[t.instrument].date + "T12:00:00Z").toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" }) + " (" + fmt(INST[t.instrument].value, dec(t.instrument)) + unitOf(t.instrument) + ")." : "") : null,
       el("div", { class: "kv" }, kv("Risk", fmt(t.risk_pct, 2) + "% of account"), kv("Stop", fmt(t.stop_level, dec(t.instrument)) + unitOf(t.instrument)), kv("Horizon", dLong(t.horizon))),
       el("div", { class: "btns" }, el("button", { type: "button", class: "btn small", onclick: async () => {
         const { error } = await sb.from("trades").delete().eq("id", t.id);
@@ -437,6 +451,7 @@
     if (trades && level && !window.Decision.stopSideOk(r.kind, r.direction, level[1], d.stop_level))
       errors.push("The stop " + fmt(d.stop_level, dec(d.instrument)) + " is on the wrong side of the latest level " + fmt(level[1], dec(d.instrument)) + " for a " + d.action.toLowerCase() + ". " + dirLabel(d.instrument, r.direction) + ".");
     const openOnInst = S.trades.filter((t) => t.status === "open" && t.instrument === d.instrument);
+    if (trades && isMonthly(d.instrument)) warnings.push(nameOf(d.instrument) + " is a monthly series here. " + monthlyFill(d.instrument).text);
     if (d.action === "Close" && !openOnInst.length) warnings.push("There is no open trade on " + nameOf(d.instrument) + " to close; the decision is saved on its own.");
     const sd = level ? distance(d.instrument, level[1], d.stop_level) : null;
     const row = (k, v) => el("div", { class: "item" }, el("div", { class: "tiny" }, k), el("div", { class: "small text" }, v || "–"));
@@ -448,7 +463,7 @@
         row("Probability my view is right", d.probability != null ? fmt(100 * d.probability, 0) + "%" : "–"), row("Horizon", dLong(d.horizon)),
         row("Stop / exit if wrong", (d.stop_text || "–") + (trades && level ? " · latest " + fmt(level[1], dec(d.instrument)) + " (" + dShort(level[0]) + ")" + (sd ? ", stop " + signed(sd.v, sd.d, sd.suf) + " away" : "") : "")),
         row("Entry trigger", d.entry_trigger), row("Thesis", d.thesis), row("Key factors", d.key_factors), row("What would change my mind", d.change_mind), row("How this differs from market consensus", d.vs_consensus))),
-      trades ? el("p", { class: "small" }, "Saving opens a paper trade at the next end-of-day close. The size is set at the fill so the loss to your stop is " + fmt(d.risk_pct, 2) + "% of the account.") : null,
+      trades ? el("p", { class: "small" }, "Saving opens a paper trade at the next " + (isMonthly(d.instrument) ? "published monthly average." : "end-of-day close.") + " The size is set at the fill so the loss to your stop is " + fmt(d.risk_pct, 2) + "% of the account.") : null,
       d.action === "Close" && openOnInst.length ? el("p", { class: "small" }, "Saving also closes your open " + nameOf(d.instrument) + " trade at the next end-of-day close.") : null,
       warnings.length ? el("div", { class: "warnings" }, el("ul", {}, ...warnings.map((x) => el("li", {}, x)))) : null,
       errors.length ? el("div", { class: "errors" }, el("ul", {}, ...errors.map((x) => el("li", {}, x)))) : null,
