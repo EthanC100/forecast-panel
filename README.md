@@ -6,9 +6,9 @@ Two apps share one data pipeline:
   design and pages are frozen at the git tag `catalyst-v1`; the only later shared change it shows
   is the comprehensive AI brief. The original forecast panel lives on under the **Lab** link
   (https://ethanc100.github.io/forecast-panel/lab/).
-- **Horizons**, at **https://ethanc100.github.io/forecast-panel/horizons/**, is a second installable
-  app. It reads the same data files, with no pipeline of its own, and explains everything as it
-  goes (see [Horizons](#horizons) below).
+- **Horizons**, at **https://ethanc100.github.io/forecast-panel/horizons/**, is the final app: a paper
+  portfolio and record app in the style of Yahoo Finance, with private data in Supabase. Analysis
+  happens in Claude chats, so the app carries no AI text (see [Horizons](#horizons) below).
 
 All five phases are built: **1** the data spine and the catalyst calendar, **2** the paper book,
 judgement forms and scoring, **3** scenario pages and the crowd module, **4** the daily AI brief,
@@ -91,80 +91,160 @@ Record > **Track record**:
 
 ## Horizons
 
-**https://ethanc100.github.io/forecast-panel/horizons/** (`site/horizons/`). An installable web app
-with its own manifest, icon and service worker; on the home screen it is called "Horizons". The
-icon is a rising half-sun of five overlapping translucent circles (warm red, bright yellow, coral
-pink, bright blue, fresh green) above a horizon line, on a soft white rounded square. It reads the
-same files as Catalyst under `data/`; nothing is computed twice.
+**https://ethanc100.github.io/forecast-panel/horizons/** (`site/horizons/`). The final Horizons is a
+portfolio and record app; analysis happens in Claude chats, so the app carries no AI text. Catalyst at
+the root is kept as an archive.
 
-Horizons is not a simplified Catalyst. It shows the same depth and explains it, and it gives a view:
-what is happening, why it matters, what followed similar situations before, and what Horizons would
-do.
+### The app
 
-- **Explain mode** (menu ☰): **Full** (the default) puts "what this shows / how to read it / what to
-  look for right now" under every chart and table. It also explains each technical term inline the
-  first time it appears on a page. **Light** keeps only "what to look for right now". **Off** shows
-  clean data. Every dotted term can be tapped for its definition in any mode; the glossary is in
-  `site/horizons/hz-terms.js`.
-- **Help:**
-  - A welcome walkthrough on first open covers bonds, currencies and gold, how each makes or loses
-    money, catalysts, the scores, and a worked call and paper trade. It is shown once, then lives in
-    the menu.
-  - Short lessons use live data: carry, spreads, duration, why currencies fall in crises, elections,
-    fiscal policy, how to read each chart, crowd signals and the economic schools. Each ends with one
-    question.
-- **Home:**
-  - the full brief per region, facts and judgement apart;
-  - cards for Brazil, Mexico, France and Gold, each with status, Horizons' view and the next event;
-  - the nearest major catalyst without a call from you;
-  - open paper trades with P&L, and reminders.
-- **Country pages** (Brazil, Mexico, France) are a full policy playbook:
-  - the story now (from the brief);
-  - the government's approach on an interventionist-to-orthodox scale, with sources;
-  - what happened last time: past episodes at home and in the region, with inflation, growth, the
-    currency and 10-year yields 6 and 24 months later, from stored data or cited sources. These
-    show what followed, not proof of cause;
-  - what each school would say: Keynesian, Monetarist, Austrian, Supply-side and MMT, citing
-    published writing only;
-  - everything Catalyst shows for the country, explained;
-  - Horizons' view.
-- **Gold:**
-  - gold and silver prices;
-  - the drivers with current readings: real yields, the dollar, geopolitical risk and central-bank
-    buying;
-  - the frozen gold-events model's weekly expected move;
-  - past episodes, including the 2024 US election and the 2025 rally;
-  - upcoming US political and Fed events, including the 3 Nov 2026 midterms;
-  - Horizons' view, and "Make a gold call".
+An installable web app (home-screen name "Horizons"). It is Apple-style: light, a white background,
+the system font and clean cards. Each tab has a fixed colour: Portfolio pink, Markets blue, Algorithm
+purple, Strategy orange. Green and red mark only gains and losses, always with + or −. The icon is a
+flat yellow-to-orange half sun with short rays over one blue horizon line. You sign in by email magic
+link, and the device stays signed in. In the installed app on an iPhone, which can't receive the link,
+type the 6-digit code from the same email (setup step 4).
 
-  Gold (XAUUSD) and silver (XAGUSD) are in the shared paper book.
+- **Portfolio:**
+  - Account value on a US$100,000 starting balance, the equity curve with drawdown shading, maximum
+    and current drawdown, and risk to stops.
+  - Each open paper trade shows entry, current level, P&L split into price, carry and cost, the
+    distance to the stop and target, and a small chart with the entry, stop and target marked.
+  - **Close** asks for an optional note; the trade exits at the next end-of-day close.
+  - Pending trades show "opens at the next close" and can be cancelled.
+  - Closed-trade history shows the P&L and R.
+- **Markets:** the watchlist (USD/BRL, USD/MXN, EUR/USD, the France–Germany 10-year spread, the Brazil
+  10-year proxy, the US 10-year, gold, silver). Each shows its level, the 1-day change and the change
+  over 1M/3M/1Y/5Y, with a chart you can touch to read any day.
+- **Algorithm:**
+  - em-macro's systematic positions for this month, with carry, trend and value scores as bars.
+  - Its paper P&L against holding the carry basket.
+  - **Copy into my portfolio** for any position the book can price: risk %, a suggested stop and a
+    horizon, all editable.
+- **Strategy:** one card per market (Brazil, Mexico, France, Gold). Each shows the latest decision
+  record, with the thesis, key factors, what would change my mind and how it differs from consensus,
+  plus the trade it opened, its score once the horizon passes, past decisions and notes.
+- **Paste decision** (top right) accepts this block, checks it, shows a confirmation screen and saves:
 
-  Daily prices come from Stooq, with LBMA as the fallback. On 30 Oct 2026 both refused GitHub
-  Actions: Stooq served a bot-check page and LBMA returned 403. Until one answers, prices, the book
-  and the episodes use the World Bank's monthly averages (Pink Sheet, from 1960), marked degraded
-  on the page and on Status. The Bundesbank's API has only a discontinued DEM series. The other
-  sources are:
-  - FRED DFII10 for the real yield;
-  - Caldara and Iacoviello's daily GPR index;
-  - IMF IRFCL for central-bank buying;
-  - federalreserve.gov for FOMC dates;
-  - gold-events' `forward_log.csv` for the model.
-- **Calendar, Scenarios, Crowd, Record:** the same content as Catalyst, explained, with the same
-  forms and scoring. Horizons' view is scored like any forecaster.
-- **Ask Claude** (bottom bar, and on every page) copies a clear text package of the page to the
-  clipboard: key data with dates, the brief section, Horizons' view, your calls and a suggested
-  opening question. It then opens the Claude app (`claude://`), or claude.ai if the app doesn't
-  open, so you can paste and ask with your own subscription. It makes no API calls.
-- **Design:**
-  - Separate pops of saturated colour, never a spectrum or stripes. Each country and section has
-    its own colour: Brazil yellow, Mexico coral, France blue, Gold orange, Calendar violet,
-    Scenarios cyan, Record plum.
-  - Soft translucent cards with overlapping colour shapes, animated progress rings, large type,
-    light and dark mode.
-  - Green and red are used only for your gains and losses, always with + or −. Market moves are
-    shown with a sign in neutral ink.
-- **Storage:** browser keys `horizons.*` and service-worker caches `horizons-*`. Catalyst keeps
-  `terminal.*` and `prism-*`, and each app clears only its own caches.
+  ```
+  DECISION RECORD
+  Date: 2026-10-30
+  Country: Brazil                      (Brazil, Mexico, France or Gold)
+  Instrument: USD/BRL                  (USD/BRL, USD/MXN, EUR/USD, France–Germany spread,
+                                        Brazil 10y, Mexico 10y, US 10y, gold, silver)
+  Action: Sell                         (Buy, Sell, Hold, Close or No trade)
+  Size (% of account at risk, max 2%): 1
+  Probability my view is right: 60%
+  Horizon (date): 2026-12-31
+  Entry trigger: …
+  Stop / exit if wrong: 5.62 …        (must start with a price or yield level for Buy/Sell)
+  Thesis: …
+  Key factors: …
+  What would change my mind: …
+  How this differs from market consensus: …
+  ```
+
+  - Labels may be bold or bulleted, and values may run over several lines.
+  - A size above 2% is rejected with a message, and so is a stop on the wrong side of the latest
+    level.
+  - Buy or Sell opens a paper trade at the next end-of-day close, sized so the loss to the stop is
+    that % of the account. Close requests the close of your open trade on that instrument.
+  - The parser is `site/horizons/decision.js`, tested in `tests/test_horizons_site.py`.
+
+### Supabase setup (once)
+
+1. **Secrets** (GitHub → the repository → Settings → Secrets and variables → Actions):
+   - `SUPABASE_URL` = the Project URL (Supabase → Project Settings → Data API, e.g.
+     `https://abcd1234.supabase.co`);
+   - `SUPABASE_ANON_KEY` = the **publishable** key (`sb_publishable_…`, Project Settings → API Keys);
+   - `SUPABASE_SERVICE_ROLE_KEY` = the **secret** key (`sb_secret_…`).
+
+   The deploy writes the first two into `site/horizons/config.js`, which is never committed. Every
+   workflow that redeploys passes them on (`secrets: inherit`).
+2. **Tables:** Supabase → **SQL Editor** → **New query**. Paste the whole of
+   [`supabase/schema.sql`](supabase/schema.sql) and press **Run**. You should see "Success. No rows
+   returned". It is safe to run again later.
+3. **Sign-in links:** Supabase → **Authentication** → **URL Configuration**:
+   - **Site URL** = `https://ethanc100.github.io/forecast-panel/horizons/`
+   - **Redirect URLs** → Add URL → `https://ethanc100.github.io/forecast-panel/horizons/`
+4. **Code in the email** (for the installed iPhone app): Authentication → **Emails** → **Magic
+   Link**. Add a line such as `Or enter this code: {{ .Token }}` to the template, then Save.
+5. Open the app, enter your email, and open the link (or type the code).
+6. **Make yourself the owner:** SQL Editor → New query → Run (with your email):
+
+   ```sql
+   insert into public.app_owner (user_id)
+   select id from auth.users where email = 'you@example.com'
+   on conflict do nothing;
+   ```
+
+   Then reload the app.
+7. **Close sign-ups:** Authentication → **Sign In / Providers** → turn off **Allow new users to sign
+   up** → Save. Your existing account keeps working.
+
+Until step 6, a signed-in account sees "Almost there" and can read or write nothing. That is
+row-level security working as intended.
+
+### Backend: Supabase, the daily book, reminders and data
+
+**Storage: Supabase.** The tables `decisions`, `trades`, `trade_closes` and `notes`, plus a one-row
+`app_owner` table, are defined with row-level security in [`supabase/schema.sql`](supabase/schema.sql).
+Only the signed-in owner can read and write their rows.
+- The app uses the project URL and the publishable key (`SUPABASE_URL`, `SUPABASE_ANON_KEY`).
+- Workflows use the secret key (`SUPABASE_SERVICE_ROLE_KEY`). It bypasses row-level security, and
+  `terminal/supa.py` sends it only in the `apikey` header.
+- The app may only add decisions, trade requests (unfilled), close requests and notes. Fills, marks,
+  exits and scores come from the workflow.
+
+**Daily paper book** (`terminal/hzbook.py`, `.github/workflows/horizons-book.yml`; it runs after every
+"Terminal data" run, with weekdays 23:20 UTC as a fallback; `python -m terminal.run hzbook`):
+- **Fill.** A pending trade fills at the first end-of-day close strictly after it was requested.
+  Each instrument has its own close time in `data/book/config.yaml`.
+- **Size.** By risk: risk = the trade's % of the account × equity. Equity is US$100,000 plus the
+  realised and unrealised P&L of every trade. Notional = risk ÷ the loss per US$1 between the fill
+  and the stop. A stop on the wrong side of the fill, an unknown instrument or one with no prices
+  rejects the trade, with the reason.
+- **Mark.** Open trades are marked at every close since entry: `marks` holds
+  [date, value, price, carry, cost, total]. The round-trip cost is charged at entry, as in
+  Catalyst's book.
+- **Close.** A close at or through the stop or the target closes the trade at that close. So does a
+  close request, at the first close after it was made. Closed trades are frozen.
+- **Score.** Buy and Sell decisions with a probability and a horizon are scored once a close on or
+  after the horizon exists. Outcome 1 if the decided direction gained on price from the
+  decision-date close; Brier = (probability − outcome)².
+
+The job writes only to Supabase; nothing about the book is committed to this repository.
+
+**Reminders** (`terminal/reminders.py`, `.github/workflows/reminders.yml`, daily 11:37 UTC) read Horizons'
+Supabase tables. They fire for:
+- open trades past their horizon;
+- open trades that moved more than 2 standard deviations since entry;
+- a market whose latest decision is 14 or more days old;
+- YYYY-MM-DD dates in a decision's "what would change my mind", from the day before to six days
+  after;
+- importance-3 catalysts within 3 days with no decision for that market in 14 days.
+
+They are still delivered as GitHub issues assigned to the owner, so they reach the phone. The text
+is minimal (no P&L, no sizes) and links to the app.
+
+**Gold and silver daily** come from Yahoo's chart data for the COMEX front-month futures GC=F and
+SI=F, the source gold-events uses (`gold_yahoo`). They are requested with the project's own user
+agent, and a refusal is recorded on Status. Front-month futures settle close to spot but roll each
+contract month. Stooq and LBMA spot are fallbacks, and the World Bank's monthly averages come last,
+marked degraded.
+
+**Algorithm data** (`terminal/algorithm.py` → `data/terminal/algorithm.json`, built in the summary
+step) comes from em-macro's frozen systematic strategy (`results/systematic/positions.csv` and
+`paper_pnl.csv`):
+- this month's positions with carry, trend and value z-scores;
+- monthly paper P&L against em-macro's carry basket;
+- for positions this paper book can price (BRL, MXN, Brazil and Mexico 10-year, France-Bund,
+  US 10-year): the book code, the direction in the book's convention, the latest level and a
+  suggested stop two monthly standard deviations away.
+
+**Stopped.** Horizons' weekly AI views (`brief.yaml` `horizons_views: false`: the region judgement
+neither asks for nor validates views, and `record.json` has no horizons block) and the policy
+playbook (no `playbook.json` build, and the `history` source is unregistered). The comprehensive
+brief keeps running for Catalyst, and `gold.json` is still built because the brief reads it.
 
 ## The site
 
@@ -559,7 +639,8 @@ spending cap live in `data/terminal/inputs/brief.yaml`; country primers in `inpu
    judgement would take the month past it) only the facts step runs: no judgement, no Horizons'
    views.
 
-**Horizons' view** (`terminal/horizons.py`, `data/terminal/horizons/views.json`). In the weekly
+**Horizons' view: stopped** (`horizons_views: false` in brief.yaml; it was the following until the
+final Horizons app). **Horizons' view** (`terminal/horizons.py`, `data/terminal/horizons/views.json`). In the weekly
 judgement, per region: lean long, lean short or no view on the 10-year bond and the currency
 (Brazil: 10-year Tesouro yield, USD/BRL; Mexico: 10-year M bono, USD/MXN; France: the OAT-Bund
 spread, EUR/USD) and on gold, over 4 to 13 weeks, with p = the probability the leaned way wins

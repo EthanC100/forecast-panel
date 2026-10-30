@@ -75,3 +75,4 @@ jobs:
   deploy:
     needs: snapshot
     uses: ./.github/workflows/pages.yml
+    secrets: inherit

@@ -97,3 +97,4 @@ jobs:
   deploy:
     needs: fetch
     uses: ./.github/workflows/pages.yml
+    secrets: inherit

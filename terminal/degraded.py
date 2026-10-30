@@ -35,13 +35,13 @@ RULES = [
      "features": "Brazil DI Jan-27/29/31 (Today tiles, Brazil page, DI trades in the book)",
      "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields "
                "(sovereign zero-coupon, close to but not the same as the DI swap curve)."},
-    {"id": "gold", "primary": "gold_stooq", "also_ok": ["gold_lbma"], "fallback": "worldbank_pink", "secret": None,
+    {"id": "gold", "primary": "gold_yahoo", "also_ok": ["gold_stooq", "gold_lbma"], "fallback": "worldbank_pink", "secret": None,
      "series": ["gl.gold.wb_m", "gl.silver.wb_m"],
      "features": "Gold and silver prices (Gold page, XAUUSD and XAGUSD in the book)",
      "effect": "Monthly average prices from the World Bank instead of daily spot: a daily move, a stop or a target inside "
                "the month is invisible, and the latest value is up to five weeks old.",
-     "upgrade": "none to add: Stooq and LBMA refuse automated requests from some networks; the book and the Gold page switch "
-                "back to daily prices by themselves on the first run either answers"},
+     "upgrade": "none to add: Yahoo, Stooq and LBMA refuse automated requests from some networks; the book and the prices "
+                "switch back to daily data by themselves on the first run any of them answers"},
 ]
 
 

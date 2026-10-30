@@ -99,9 +99,9 @@ def fake_calls(snap_holder, region_p=60):
                              "watch": [{"event_id": e, "what_to_watch": "the vote split"} for e in ev],
                              "risks": [{"text": "A fiscal surprise.", "source_ids": []}],
                              "consensus": {"view": "Surveys expect no change.", "source_ids": []}, "might_be_wrong": "Inflation is stickier.",
-                             "views": [{"asset": a, "lean": "long", "p": region_p, "confidence": "low", "horizon_weeks": 8,
+                             **({} if not B.views_on() else {"views": [{"asset": a, "lean": "long", "p": region_p, "confidence": "low", "horizon_weeks": 8,
                                         "reasons": [{"text": "carry is high", "source_ids": []}], "resembles": {"episode_id": "", "why": ""},
-                                        "main_risk": "a global sell-off", "would_change": "a budget miss", "source_ids": []} for a in assets]}, None)
+                                        "main_risk": "a global sell-off", "would_change": "a budget miss", "source_ids": []} for a in assets]})}, None)
             else:
                 sc = next(x for x in snap["items"] if x["id"] == "sc:" + cid[2:])
                 n = len(sc["branches"])
@@ -123,7 +123,32 @@ def tmp_views(tmp_path, monkeypatch):
     return H
 
 
-def test_end_to_end_mocked(tmp_brief, tmp_views, monkeypatch):
+@pytest.fixture
+def views_on(monkeypatch):
+    """Horizons' views are stopped by default (brief.yaml horizons_views: false); these tests switch them on."""
+    real = B.conf
+    monkeypatch.setattr(B, "conf", lambda: {**real(), "horizons_views": True})
+
+
+def test_views_stopped_by_default(tmp_brief, tmp_views, monkeypatch):
+    monkeypatch.setattr(B.store, "secret", lambda n: "test-key" if n == "ANTHROPIC_API_KEY" else None)
+    seen = []
+    real_fake = fake_calls(None)
+
+    def spy(reqs, cfg, sp, use_batch=True):
+        seen.extend(params for cid, role, params in reqs if cid.startswith("r-"))
+        return real_fake(reqs, cfg, sp, use_batch)
+    monkeypatch.setattr(B, "call_all", spy)
+    assert B.conf().get("horizons_views") is False and not B.views_on()
+    b = B.run(fetch_headlines=False, force_judgement=True)
+    assert b["status"] == "ok" and b["verified"] is True, b["problems"]
+    assert all(b["report"]["regions"][r]["judgement"]["verified"] for r in B.REGIONS)
+    assert not tmp_views.PATH.exists()
+    assert seen and all("views" not in p["output_config"]["format"]["schema"]["properties"] for p in seen)
+    assert "Horizons' view" not in B.judgement_system(json.loads(B.SNAPSHOT.read_text()))
+
+
+def test_end_to_end_mocked(tmp_brief, tmp_views, views_on, monkeypatch):
     monkeypatch.setattr(B.store, "secret", lambda n: "test-key" if n == "ANTHROPIC_API_KEY" else None)
     monkeypatch.setattr(B, "call_all", fake_calls(None))
     b = B.run(fetch_headlines=False, force_judgement=True)
@@ -154,7 +179,7 @@ def test_end_to_end_mocked(tmp_brief, tmp_views, monkeypatch):
     assert b2["report"]["regions"]["MX"]["judgement"]["verified"]       # region notes carried too
 
 
-def test_cap_forces_extraction_only(tmp_brief, tmp_views, monkeypatch):
+def test_cap_forces_extraction_only(tmp_brief, tmp_views, views_on, monkeypatch):
     monkeypatch.setattr(B.store, "secret", lambda n: "test-key" if n == "ANTHROPIC_API_KEY" else None)
     monkeypatch.setattr(B, "call_all", fake_calls(None))
     cap = B.conf()["monthly_cap_usd"]

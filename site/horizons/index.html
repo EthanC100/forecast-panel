@@ -4,9 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Horizons</title>
-<meta name="description" content="Horizons: Brazil, Mexico, France and gold, explained. Bonds, currencies, catalysts, scenarios and your track record, with plain-English explanations and a weekly view.">
-<meta name="theme-color" content="#FDFBF7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14151F" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Horizons: paper portfolio, markets, the systematic algorithm and decision records for Brazil, Mexico, France and gold.">
+<meta name="theme-color" content="#FFFFFF">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Horizons">
@@ -16,29 +15,30 @@
 <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="stylesheet" href="hz.css">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div class="sky" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
 <header class="top">
-  <a class="brand" href="#home" aria-label="Horizons home"><img src="icons/icon-96.png" alt="" width="34" height="34"><span>Horizons</span></a>
-  <nav class="places" aria-label="Countries and gold">
-    <a href="#country/BR" class="pl c-BR">Brazil</a><a href="#country/MX" class="pl c-MX">Mexico</a><a href="#country/FR" class="pl c-FR">France</a><a href="#gold" class="pl c-GOLD">Gold</a>
-  </nav>
-  <button id="menu" class="iconbtn" type="button" aria-label="Menu: help and settings" aria-haspopup="true">☰</button>
+  <h1 id="title">Horizons</h1>
+  <div class="actions">
+    <button type="button" id="paste" class="pill" hidden>Paste decision</button>
+    <button type="button" id="account" class="iconbtn" aria-label="Account" hidden>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
 </header>
-<div id="offline" class="offline" role="status">Offline: showing the last data this phone saw.</div>
 <main id="app" tabindex="-1"></main>
-<nav class="bar" aria-label="Main">
-  <a href="#home" data-p="home"><span class="ico i-home" aria-hidden="true"></span>Home</a>
-  <a href="#calendar" data-p="calendar"><span class="ico i-cal" aria-hidden="true"></span>Calendar</a>
-  <a href="#scenarios" data-p="scenarios"><span class="ico i-scen" aria-hidden="true"></span>Scenarios</a>
-  <a href="#record" data-p="record"><span class="ico i-rec" aria-hidden="true"></span>Record</a>
-  <button type="button" id="ask" class="ask"><span class="ico i-ask" aria-hidden="true"></span>Ask Claude</button>
+<nav class="tabs" id="tabs" aria-label="Sections" hidden>
+  <a href="#portfolio" data-t="portfolio" class="t-portfolio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v12H3zM8 7V5h8v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Portfolio</a>
+  <a href="#markets" data-t="markets" class="t-markets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-6 4 4 8-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Markets</a>
+  <a href="#algorithm" data-t="algorithm" class="t-algorithm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M12 20V5M19 20v-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Algorithm</a>
+  <a href="#strategy" data-t="strategy" class="t-strategy"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>Strategy</a>
 </nav>
-<div id="sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden></div>
+<div id="sheet" class="sheet" role="dialog" aria-modal="true" hidden></div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
-<noscript><p style="padding:24px">Horizons needs JavaScript.</p></noscript>
-<script src="hz.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="decision.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

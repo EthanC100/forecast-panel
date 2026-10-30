@@ -1,8 +1,9 @@
 name: Reminders and monthly review
 
 # Daily: open GitHub issues assigned to the repository owner (they reach the phone as notifications)
-# for stale judgements, signpost dates, trades past their horizon or moved more than 2 sd, and
-# importance-3 catalysts within 3 days with no call; close reminders whose condition has cleared.
+# from Horizons' Supabase tables: trades past their horizon or moved more than 2 sd, markets whose
+# latest decision is 14+ days old, signpost dates, and importance-3 catalysts within 3 days with no
+# decision; close reminders whose condition has cleared.
 # On the 1st: draft the previous month's review in data/book/reviews/ (never overwritten).
 on:
   schedule:
@@ -40,9 +41,11 @@ jobs:
       - name: Install
         run: pip install -e .
 
-      - name: Reminders
+      - name: Reminders (conditions read from Horizons' Supabase tables)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python -m terminal.run reminders
 
       - name: Monthly review draft (the 1st, or on request)
@@ -73,3 +76,4 @@ jobs:
   deploy:
     needs: remind
     uses: ./.github/workflows/pages.yml
+    secrets: inherit

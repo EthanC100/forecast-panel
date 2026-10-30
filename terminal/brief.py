@@ -1,5 +1,5 @@
 """AI brief: a daily snapshot, a cost-efficient extraction of the facts per region, a weekly
-judgement with Horizons' views, and a validator that refuses to trust either without checking.
+judgement (Horizons' views only when brief.yaml horizons_views is true; stopped by default), and a validator that refuses to trust either without checking.
 
     snapshot    data/terminal/brief/snapshot.json   every item has an id the model must cite:
                 s:<series>      latest data point, previous observation, one-week change
@@ -17,7 +17,7 @@ judgement with Horizons' views, and a validator that refuses to trust either wit
                 development since the last brief and what changed against a week ago, plus the
                 three facts that matter most; the next 30 days of events come from the calendar
     judgement   weekly, stronger model: per region why it matters, what to watch, risks, consensus
-                and where it might be wrong, and Horizons' view (terminal/horizons.py); one request
+                and where it might be wrong (plus Horizons' view, terminal/horizons.py, when horizons_views is true); one request
                 per open scenario question. Within 3 days of an importance-3 catalyst it re-runs for
                 that catalyst's region only. Never sees your calls.
     validation  every number must match a snapshot value within rounding and every id must exist.
@@ -332,8 +332,11 @@ def gold_items() -> list[dict]:
 
 
 def episode_items() -> list[dict]:
-    """Past episodes (playbook and gold pages), as background for 'which past episode does this resemble'."""
+    """Past episodes (playbook and gold pages), as background for 'which past episode does this resemble'.
+    Only used by Horizons' views, so none when the views are stopped."""
     out, seen = [], set()
+    if not views_on():
+        return out
     pb = _read(store.DATA / "playbook.json", {}) or {}
     eps = [e for c in (pb.get("countries") or {}).values() for e in c.get("episodes", [])] + list(pb.get("regional") or [])
     eps += list((_read(store.DATA / "gold.json", {}) or {}).get("episodes") or [])
@@ -570,6 +573,8 @@ def validate_region(j: dict, region: str, upcoming: list[dict], index: dict[str,
     own = {float(v["p"]) for v in j.get("views") or [] if isinstance(v.get("p"), (int, float))}
     for t in texts:
         probs += check_text(t, all_values | own)
+    if "views" not in j:          # Horizons' views are stopped: nothing to check
+        return probs
     want = set(horizons.ASSETS[region])
     got = [v.get("asset") for v in j.get("views") or []]
     if sorted(got) != sorted(want):
@@ -609,7 +614,7 @@ EXTRACTION_SCHEMA = {
                    "regions": {"type": "object", "additionalProperties": False, "required": list(REGIONS),
                                "properties": {r: _REGION_FACTS for r in REGIONS}}}}
 
-JUDGEMENT_ROLE = """You are a sceptical sovereign-debt, currency and gold strategist looking for where consensus shares an error. You write the judgement half of a research brief on Brazil, Mexico, France and gold. Facts were written separately and validated; you interpret them.
+JUDGEMENT_ROLE_TEMPLATE = """You are a sceptical sovereign-debt, currency and gold strategist looking for where consensus shares an error. You write the judgement half of a research brief on Brazil, Mexico, France and gold. Facts were written separately and validated; you interpret them.
 
 Each request asks for one of two things:
 (A) A probability on an open scenario question. Method, every time:
@@ -618,9 +623,24 @@ Each request asks for one of two things:
 3. Ask where the crowd (markets, surveys, positioning, consensus headlines) might be making the same mistake, and whether the evidence badges say a signal is worth anything. Untested or tested_no_lead signals deserve little weight.
 4. Probabilities in 5% steps. Branch probabilities sum to 100 and the YES branches sum to P(yes).
 5. Say what would change your view, how confident you are, and the single most likely way you are wrong.
-(B) A region note and Horizons' view for one region: why the developments matter for its bonds and currency (or for gold), what to watch at each event in the next 30 days, key risks, the current consensus (surveys, forecasts, market pricing) and where it might be wrong, then a 1-3 month lean on each listed instrument: long, short or none, with p = the probability, in 5% steps and at least 50, that the instrument moves the leaned way by the end of your horizon (4 to 13 weeks). Say "none" when the evidence does not point either way; a lean you would not bet on is not a lean. Name the past episode (ep: items, give the id without "ep:") it most resembles and why, or leave it empty if none fits; the main risk; and what would change the view. This is a research opinion published as "Horizons' view, not financial advice".
+{ROLE_B}
 
 Every number you write in text must be a value from the snapshot or the facts list (or your own probabilities). Do not write adjustment sizes such as "+10pp" or invent targets. Dates are fine. Cite ids exactly as written. Prefer plain words to jargon; the reader is learning."""
+
+ROLE_B_VIEWS = '(B) A region note and Horizons\' view for one region: why the developments matter for its bonds and currency (or for gold), what to watch at each event in the next 30 days, key risks, the current consensus (surveys, forecasts, market pricing) and where it might be wrong, then a 1-3 month lean on each listed instrument: long, short or none, with p = the probability, in 5% steps and at least 50, that the instrument moves the leaned way by the end of your horizon (4 to 13 weeks). Say "none" when the evidence does not point either way; a lean you would not bet on is not a lean. Name the past episode (ep: items, give the id without "ep:") it most resembles and why, or leave it empty if none fits; the main risk; and what would change the view. This is a research opinion published as "Horizons\' view, not financial advice".'
+ROLE_B_NOTE = '(B) A region note for one region: why the developments matter for its bonds and currency (or for gold), what to watch at each event in the next 30 days, key risks, and the current consensus (surveys, forecasts, market pricing) and where it might be wrong.'
+
+
+def views_on(cfg: dict | None = None) -> bool:
+    """Horizons' weekly AI views (lean long/short per instrument). Stopped: brief.yaml horizons_views is false."""
+    return bool((cfg or conf()).get("horizons_views", False))
+
+
+def judgement_role(views: bool | None = None) -> str:
+    return JUDGEMENT_ROLE_TEMPLATE.replace("{ROLE_B}", ROLE_B_VIEWS if (views_on() if views is None else views) else ROLE_B_NOTE)
+
+
+JUDGEMENT_ROLE = JUDGEMENT_ROLE_TEMPLATE.replace("{ROLE_B}", ROLE_B_NOTE)
 
 JUDGEMENT_SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -671,6 +691,8 @@ REGION_SCHEMA = {
                       "properties": {"view": {"type": "string"}, "source_ids": _IDS}},
         "might_be_wrong": {"type": "string"},
         "views": {"type": "array", "items": _VIEW}}}
+REGION_SCHEMA_NOTE = {**REGION_SCHEMA, "required": [k for k in REGION_SCHEMA["required"] if k != "views"],
+                      "properties": {k: v for k, v in REGION_SCHEMA["properties"].items() if k != "views"}}
 
 
 def _compact(items: list[dict], drop=("url", "frequency")) -> str:
@@ -689,7 +711,7 @@ def extraction_params(cfg: dict, snap: dict) -> dict:
 
 def judgement_system(snap: dict) -> str:
     ctx = [x for x in snap["items"] if x["kind"] in BACKGROUND]
-    return JUDGEMENT_ROLE + "\n\nBackground (cite by id):\n" + _compact(ctx, drop=())
+    return judgement_role() + "\n\nBackground (cite by id):\n" + _compact(ctx, drop=())
 
 
 def _shared_text(snap: dict, facts: list[dict]) -> str:
@@ -716,17 +738,19 @@ def judgement_params(cfg: dict, snap: dict, facts: list[dict], sc_item: dict) ->
     return _judgement_request(cfg, snap, facts, q, JUDGEMENT_SCHEMA)
 
 
-def region_params(cfg: dict, snap: dict, facts: list[dict], region: str, upcoming: list[dict], inst: dict) -> dict:
-    lines = [f"Task (B). Region {region}: {REGIONS[region]}.", "", "Instruments for Horizons' view (one view each):"]
-    for asset, x in inst.items():
-        lvl = f"{x['level']} on {x['level_date']} ({x['series']})" if x.get("level") is not None else "no data yet"
-        lines.append(f"- {asset}: {x['name']}. {x['meaning']} Latest level: {lvl}.")
+def region_params(cfg: dict, snap: dict, facts: list[dict], region: str, upcoming: list[dict], inst: dict | None) -> dict:
+    lines = [f"Task (B). Region {region}: {REGIONS[region]}."]
+    if inst is not None:
+        lines += ["", "Instruments for Horizons' view (one view each):"]
+        for asset, x in inst.items():
+            lvl = f"{x['level']} on {x['level_date']} ({x['series']})" if x.get("level") is not None else "no data yet"
+            lines.append(f"- {asset}: {x['name']}. {x['meaning']} Latest level: {lvl}.")
     lines += ["", f"Events in the next {UPCOMING_DAYS} days (give what to watch for each, by event_id):"]
     lines += [f"- {e['event_id']}: {e['date']} {e['title']}" for e in upcoming] or ["- (none)"]
     lines += ["", "why_it_matters: 2 to 6 points, each saying whether it is for bonds, currency or gold. risks: 2 to 5. "
                   "consensus.view: what surveys, official forecasts and market prices currently expect, citing them. "
                   "might_be_wrong: where that consensus could share an error."]
-    return _judgement_request(cfg, snap, facts, "\n".join(lines), REGION_SCHEMA)
+    return _judgement_request(cfg, snap, facts, "\n".join(lines), REGION_SCHEMA if inst is not None else REGION_SCHEMA_NOTE)
 
 
 # --------------------------------------------------------------------------
@@ -1010,7 +1034,7 @@ def run(force_judgement: bool = False, no_ai: bool = False, fetch_headlines: boo
     regions_j = dict(prev.get("regions") or {})
     if due and (run_sc or run_regions):
         good_facts = [{**f, "region": r} for r, x in regions.items() for part in ("developments", "week_change") for f in x[part] if f["ok"]]
-        inst = horizons.instruments(snap["date"])
+        inst = horizons.instruments(snap["date"]) if views_on(cfg) else {r: None for r in REGIONS}
         reqs = [(f"j-{x['id'][3:]}", "judgement", judgement_params(cfg, snap, good_facts, x)) for x in run_sc]
         reqs += [(f"r-{r}", "judgement", region_params(cfg, snap, good_facts, r, upcoming[r], inst[r])) for r in run_regions]
         res = call_all(reqs, cfg, sp, use_batch)
@@ -1058,7 +1082,7 @@ def run(force_judgement: bool = False, no_ai: bool = False, fetch_headlines: boo
                      {"regions": run_regions, "questions": [x["id"] for x in run_sc]}, "questions": qs}
         _write(JUDGEMENT, {"date": snap["date"], "generated_at": store.now_iso(), "why": why, "verified": all(q["ok"] for q in qs)
                            and all(x.get("verified") is not False for x in regions_j.values()), "questions": qs, "regions": regions_j})
-        if views:
+        if views and views_on(cfg):
             horizons.record(snap["date"], views, all(v["ok"] for d in views.values() for v in d.values()))
     elif prev:
         judgement.update({"carried": True, "date": prev.get("date"), "verified": prev.get("verified"), "questions": prev.get("questions", [])})
@@ -1070,7 +1094,7 @@ def run(force_judgement: bool = False, no_ai: bool = False, fetch_headlines: boo
         rj = regions_j.get(r) or {}
         cited |= {e["event_id"] for e in upcoming[r]} | set((rj.get("consensus") or {}).get("source_ids") or [])
         cited |= {i for k in ("why_it_matters", "risks") for x in rj.get(k) or [] for i in x.get("source_ids", [])}
-    for v in [v for d in (horizons.load().get("views") or {}).values() for v in d.values()]:
+    for v in [v for d in ((horizons.load().get("views") or {}) if views_on(cfg) else {}).values() for v in d.values()]:
         cited |= set(v.get("source_ids") or []) | {i for x in v.get("reasons") or [] for i in x.get("source_ids", [])}
     brief.update({"status": "ok" if not err else "failed", "mode": mode, "verified": not problems, "problems": problems,
                   "top": top, "facts": facts, "moved_to_judgement": moved, "judgement": judgement, "report": report,

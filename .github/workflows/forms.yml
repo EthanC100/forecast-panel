@@ -83,3 +83,4 @@ jobs:
     needs: handle
     if: needs.handle.outputs.handled == 'true'
     uses: ./.github/workflows/pages.yml
+    secrets: inherit

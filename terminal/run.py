@@ -31,6 +31,7 @@ def fetch(only: set[str] | None = None) -> dict:
     status = store.load_status()
     srcs = status.setdefault("sources", {})
     ok_now: set[str] = set()
+    covered: set[str] = set()
     ran = 0
     for key, name, country, func, secret, fallback_for, release in SOURCES:
         if only and key not in only and not (fallback_for and fallback_for in only):
@@ -38,9 +39,11 @@ def fetch(only: set[str] | None = None) -> dict:
         st = srcs.setdefault(key, {})
         st.update({"name": name, "country": country, "secret": secret, "fallback_for": fallback_for, "release": release,
                    "secret_present": bool(store.secret(secret)) if secret else None})
-        if fallback_for and fallback_for in ok_now:
+        if fallback_for and fallback_for in ok_now | covered:
             st.update({"state": "standby", "last_attempt": store.now_iso(), "error": None,
-                       "note": f"not needed: {fallback_for} succeeded this run"})
+                       "note": f"not needed: {fallback_for} succeeded this run" if fallback_for in ok_now
+                       else f"not needed: {fallback_for} was covered by its own primary this run"})
+            covered.add(key)   # a fallback of this fallback is not needed either
             continue
         ran += 1
         st["last_attempt"] = store.now_iso()
@@ -79,7 +82,7 @@ def main(argv=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab", "brief", "snapshot", "assessments", "consensus",
-                                        "record", "reminders", "review"])
+                                        "record", "reminders", "review", "hzbook", "algorithm"])
     ap.add_argument("--only", default="", help="comma-separated source keys for fetch")
     ap.add_argument("--no-attention", action="store_true", help="calendar: skip the GDELT attention refresh")
     ap.add_argument("--force-judgement", action="store_true", help="brief: run the judgement even if it is not due")
@@ -115,6 +118,12 @@ def main(argv=None) -> int:
     if a.cmd == "record":
         from terminal import record
         record.build()
+    if a.cmd == "hzbook":
+        from terminal import hzbook
+        hzbook.run()
+    if a.cmd == "algorithm":
+        from terminal import algorithm
+        algorithm.build()
     if a.cmd == "reminders":
         from terminal import reminders
         r = reminders.sync(dry_run=True if a.dry_run else None)
@@ -145,10 +154,10 @@ def main(argv=None) -> int:
         except Exception as exc:  # noqa: BLE001
             log.warning("gold page not rebuilt: %s", exc)
         try:
-            from terminal import playbook
-            playbook.build()
+            from terminal import algorithm
+            algorithm.build()
         except Exception as exc:  # noqa: BLE001
-            log.warning("policy playbook not rebuilt: %s", exc)
+            log.warning("algorithm page data not rebuilt: %s", exc)
     if a.cmd == "snapshot":
         from terminal import brief
         log.info("snapshot: %s", brief.build_snapshot(fetch_headlines=not a.no_headlines)["counts"])

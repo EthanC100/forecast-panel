@@ -1,6 +1,6 @@
 """Gold page data: data/terminal/gold.json, rebuilt in the summary step.
 
-    prices     gold and silver spot (daily from Stooq or LBMA; the World Bank's monthly average when no
+    prices     gold and silver (daily: Yahoo COMEX front-month futures, else Stooq or LBMA spot; the World Bank's monthly average when no
                daily price is stored), with 1-week, 1-month and 1-year changes and a 1-year z-score
     drivers    real interest rates (US 10-year TIPS), the dollar (broad index), war and political tension
                (Geopolitical Risk index) and central-bank buying (IMF reporters), each with a plain reading
@@ -83,7 +83,7 @@ def price_block(daily: str, monthly: str) -> dict | None:
     degraded = None
     if not obs:
         obs, s = _obs(monthly)
-        degraded = "No daily price is stored (Stooq and LBMA unreachable), so this is the World Bank's monthly average."
+        degraded = "No daily price is stored (Yahoo, Stooq and LBMA unreachable), so this is the World Bank's monthly average."
     if not obs:
         return None
     d, v = obs[-1]

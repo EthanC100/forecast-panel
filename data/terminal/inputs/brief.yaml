@@ -27,6 +27,10 @@ batch_discount: 0.5
 
 monthly_cap_usd: 15.0       # above this in a calendar month: extraction only (no judgement, no Horizons' views)
 
+# Horizons' weekly AI views (a lean on each bond, currency and gold) are stopped: the final Horizons app
+# keeps analysis in Claude chats. Set to true to bring them back.
+horizons_views: false
+
 # Roles whose standard-API requests may be re-run by the API on a fallback model if the model
 # declines (server-side fallback; not available in batches, so a declined batch request is retried
 # on the standard API).

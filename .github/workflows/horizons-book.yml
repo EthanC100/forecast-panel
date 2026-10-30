@@ -1,0 +1,42 @@
+name: Horizons paper book
+
+# Daily, after the data run: fill pending Horizons trades at the next end-of-day close, mark open
+# trades to market (price, carry, cost), close them on a stop, a target or a close request, and score
+# decisions whose horizon has passed. Reads prices from the repository's data files and reads and
+# writes Horizons' Supabase tables with the secret key. It commits nothing to the repository.
+on:
+  workflow_run:
+    workflows: ["Terminal data"]
+    types: [completed]
+  schedule:
+    - cron: "20 23 * * 1-5"     # weekdays, a fallback in case the data run's trigger is missed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: horizons-book
+  cancel-in-progress: false
+
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main               # the latest prices, including the data commit just pushed
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Fill, mark, close and score
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python -m terminal.run hzbook

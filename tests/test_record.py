@@ -91,20 +91,7 @@ def test_trades_in_r(root, monkeypatch):
     assert t["by_thesis"][0]["group"] == "carry" and t["open"]["n"] == 1
 
 
-def test_reminders_catalyst_and_stale(root, monkeypatch):
-    _write(store.DATA / "calendar.json", {"events": [
-        {"id": "e1", "date": "2026-11-04", "country": "BR", "title": "Copom decision", "importance": 3, "status": "confirmed"},
-        {"id": "e2", "date": "2026-11-04", "country": "MX", "title": "Minor release", "importance": 2, "status": "confirmed"},
-        {"id": "e3", "date": "2026-11-20", "country": "FR", "title": "Too far", "importance": 3, "status": "confirmed"}]})
-    _write(root / "data" / "book" / "judgements.json", {"questions": [
-        {"key": "J00001", "question": "Q?", "resolution_date": "2027-01-01", "forecasts": [{"prob": 0.4, "submitted_at": "2026-10-10T00:00:00Z"}]}]})
-    keys = {r["key"] for r in reminders.active("2026-11-02")}
-    assert keys == {"catalyst:e1", "stale:J00001:2026-10-10"}
-    monkeypatch.setattr(judgement, "load_judgements", lambda: [{"id": "J00002", "type": "call", "question_id": "e1", "question": "Copom",
-                                                                 "change_mind": "the 2026-11-03 IPCA print"}])
-    keys = {r["key"] for r in reminders.active("2026-11-02")}
-    assert "catalyst:e1" not in keys and "signpost:J00002:2026-11-03" in keys
-
+# reminders now read Horizons' Supabase tables: see tests/test_horizons_backend.py
 
 def test_review_written_once(root, monkeypatch):
     monkeypatch.setattr(review, "DIR", root / "data" / "book" / "reviews")

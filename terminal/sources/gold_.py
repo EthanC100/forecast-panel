@@ -1,5 +1,6 @@
-"""Gold and its drivers: gold and silver spot (Stooq daily CSV; LBMA's published benchmark prices as
-the fallback), the daily Geopolitical Risk index (Caldara and Iacoviello), and official-sector net
+"""Gold and its drivers: gold and silver daily closes (Yahoo's COMEX front-month futures GC=F and SI=F,
+the source gold-events uses; Stooq daily spot CSV and LBMA's published benchmark prices as fallbacks;
+the World Bank's monthly averages last), the daily Geopolitical Risk index (Caldara and Iacoviello), and official-sector net
 gold purchases (IMF International Reserves and Foreign Currency Liquidity, as in gold-events).
 
 US 10-year real yields (FRED DFII10) come with the other FRED series in global_.py.
@@ -20,9 +21,10 @@ MAX_HOLDINGS_T = 9000.0   # no reporter holds more than the US (8,133 t); larger
 MAX_MONTHLY_T = 500.0     # no central bank trades this much in a month; larger = unit break
 
 METALS = {
-    "gl.gold": {"stooq": "xauusd", "lbma": "gold_pm", "name": "Gold spot", "unit": "USD per troy ounce"},
-    "gl.silver": {"stooq": "xagusd", "lbma": "silver", "name": "Silver spot", "unit": "USD per troy ounce"},
+    "gl.gold": {"stooq": "xauusd", "lbma": "gold_pm", "yahoo": "GC=F", "name": "Gold spot", "unit": "USD per troy ounce"},
+    "gl.silver": {"stooq": "xagusd", "lbma": "silver", "yahoo": "SI=F", "name": "Silver spot", "unit": "USD per troy ounce"},
 }
+YAHOO = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}"
 STOOQ = "https://stooq.com/q/d/l/"
 LBMA = "https://prices.lbma.org.uk/json/{file}.json"
 GPR_URL = "https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls"
@@ -65,10 +67,47 @@ def parse_lbma(obj) -> list[list]:
     return rows
 
 
-def _meta(sid: str, source: str, source_id: str, url: str) -> dict:
+def parse_yahoo(obj) -> list[list]:
+    """Yahoo chart JSON (chart.result[0].timestamp + indicators.quote[0].close) -> [[date, close]].
+    Dates are the exchange's trading dates (timestamps shifted by the exchange's gmtoffset)."""
+    try:
+        res = obj["chart"]["result"][0]
+    except (KeyError, IndexError, TypeError):
+        err = (obj or {}).get("chart", {}).get("error") if isinstance(obj, dict) else None
+        raise RuntimeError(f"Yahoo returned no chart result: {err!r}")
+    off = int((res.get("meta") or {}).get("gmtoffset") or 0)
+    ts = res.get("timestamp") or []
+    closes = ((res.get("indicators") or {}).get("quote") or [{}])[0].get("close") or []
+    rows = {}
+    for t, c in zip(ts, closes):
+        if c is None:
+            continue
+        d = dt.datetime.fromtimestamp(int(t) + off, dt.timezone.utc).date().isoformat()
+        rows[d] = round(float(c), 4)
+    if not rows:
+        raise RuntimeError("Yahoo chart had no closes")
+    return [[d, v] for d, v in sorted(rows.items())]
+
+
+def _meta(sid: str, source: str, source_id: str, url: str, name: str | None = None) -> dict:
     m = METALS[sid]
-    return {"id": sid, "name": m["name"], "country": "GLOBAL", "unit": m["unit"], "frequency": "daily", "source": source,
+    return {"id": sid, "name": name or m["name"], "country": "GLOBAL", "unit": m["unit"], "frequency": "daily", "source": source,
             "source_id": source_id, "source_url": url}
+
+
+def yahoo() -> list[str]:
+    """COMEX front-month futures closes (GC=F, SI=F) from Yahoo's public chart endpoint, the source
+    gold-events uses. Requested with the library's default user agent; a refusal is recorded as a failure."""
+    out = []
+    for sid, m in METALS.items():
+        url = YAHOO.format(sym=m["yahoo"])
+        r = get(url, params={"range": "max", "interval": "1d"}, timeout=60)
+        name = ("Gold" if sid == "gl.gold" else "Silver") + " (COMEX front-month futures, " + m["yahoo"] + ")"
+        meta = _meta(sid, "Yahoo Finance chart data (COMEX front-month futures)", f"Yahoo {m['yahoo']}", url, name)
+        meta["note"] = "Front-month futures settle close to spot but roll each contract month; not the LBMA spot benchmark."
+        store.save_series(meta, parse_yahoo(r.json()))
+        out.append(sid)
+    return out
 
 
 def stooq() -> list[str]:

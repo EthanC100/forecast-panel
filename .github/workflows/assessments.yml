@@ -60,3 +60,4 @@ jobs:
   deploy:
     needs: assess
     uses: ./.github/workflows/pages.yml
+    secrets: inherit

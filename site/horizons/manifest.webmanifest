@@ -1,17 +1,16 @@
 {
  "name": "Horizons",
  "short_name": "Horizons",
- "description": "Brazil, Mexico, France and gold, explained: bonds, currencies, catalysts, scenarios and your record, with a weekly view.",
+ "description": "Paper portfolio, markets, the systematic algorithm and decision records.",
  "id": "./",
- "start_url": "./#home",
+ "start_url": "./#portfolio",
  "scope": "./",
  "display": "standalone",
  "orientation": "portrait",
- "background_color": "#FDFBF7",
- "theme_color": "#FDFBF7",
+ "background_color": "#FFFFFF",
+ "theme_color": "#FFFFFF",
  "categories": [
-  "finance",
-  "education"
+  "finance"
  ],
  "icons": [
   {

@@ -39,6 +39,15 @@ jobs:
           mkdir -p site/data/book
           cp -r data/book/. site/data/book/
 
+      # Horizons' Supabase settings: the project URL and the publishable key are public by design
+      # (row-level security protects the data); they come from repository secrets so they live in one place.
+      - name: Horizons config
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          python -c "import json,os; u=os.environ.get('SUPABASE_URL','').strip().rstrip('/'); k=os.environ.get('SUPABASE_ANON_KEY','').strip(); open('site/horizons/config.js','w').write('window.HZ_CONFIG = ' + json.dumps({'supabaseUrl': u or None, 'supabaseKey': k or None}) + ';\\n'); print('Horizons config:', 'set' if u and k else 'MISSING (SUPABASE_URL / SUPABASE_ANON_KEY secrets)')"
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

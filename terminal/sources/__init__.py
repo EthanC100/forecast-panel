@@ -1,7 +1,8 @@
 """Source registry. Each entry: key, display name, function, the secret it needs (if any), and
 the source it stands in for (a fallback runs only when that source did not succeed this run)."""
 
-from terminal.sources import brazil, france, global_, gold_, history, mexico
+from terminal.sources import brazil, france, global_, gold_, mexico
+# terminal/sources/history.py (the policy playbook's long histories) is no longer registered: the playbook was stopped.
 
 SOURCES = [
     # key, name, country, function, secret, fallback_for, release note
@@ -19,14 +20,13 @@ SOURCES = [
      "IMF April/October, OECD June/December, Commission spring/autumn"),
     ("fred_api", "FRED API (US rates, real yield, dollar, EUR/USD, VIX, Brent, iron ore, soy, Fed/ECB rates)", "US", global_.fred_api, "FRED_API_KEY", None, "daily"),
     ("fred_public", "FRED public graph CSV (fallback)", "US", global_.fred_public, None, "fred_api", "daily"),
-    ("gold_stooq", "Stooq daily CSV (gold and silver spot)", "GLOBAL", gold_.stooq, None, None, "daily"),
+    ("gold_yahoo", "Yahoo Finance chart data (gold and silver COMEX front-month futures, GC=F and SI=F)", "GLOBAL", gold_.yahoo, None, None, "daily"),
+    ("gold_stooq", "Stooq daily CSV (gold and silver spot, fallback)", "GLOBAL", gold_.stooq, None, "gold_yahoo", "daily"),
     ("gold_lbma", "LBMA gold and silver benchmark prices (fallback)", "GLOBAL", gold_.lbma, None, "gold_stooq", "daily, after the London price auctions"),
     ("worldbank_pink", "World Bank Pink Sheet (gold and silver, monthly since 1960)", "GLOBAL", gold_.worldbank, None, None, "early each month"),
     ("fomc", "Federal Reserve FOMC meeting calendar", "US", gold_.fomc, None, None, "published a year or more ahead"),
     ("gpr", "Geopolitical Risk index (Caldara and Iacoviello, daily)", "GLOBAL", gold_.gpr, None, None, "updated weekly"),
     ("imf_gold", "IMF IRFCL official gold holdings (central-bank buying)", "GLOBAL", gold_.imf_cbgold, None, None, "monthly, about 2 months' lag"),
-    ("history", "Long history for the policy playbook (FRED: OECD/IMF/Eurostat; IMF WEO annual)", "GLOBAL", history.fetch, None, None,
-     "monthly and quarterly; IMF WEO April and October"),
     ("cftc", "CFTC Commitments of Traders (BRL, MXN, ZAR)", "GLOBAL", global_.cftc, None, None, "Fridays 15:30 ET"),
     ("polymarket", "Polymarket (tags france, brazil, mexico)", "GLOBAL", global_.polymarket, None, None, "continuous"),
     ("kalshi", "Kalshi (titles matching FR/BR/MX)", "GLOBAL", global_.kalshi, None, None, "continuous"),

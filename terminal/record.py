@@ -288,8 +288,12 @@ def trades_record() -> dict:
 
 
 def build() -> dict:
-    from terminal import horizons
+    from terminal import brief, horizons
     rec = {"generated_at": store.now_iso(), "questions": questions_record(), "trades": trades_record()}
+    if not brief.views_on():          # Horizons' AI views are stopped: no horizons block
+        OUT.parent.mkdir(parents=True, exist_ok=True)
+        OUT.write_text(json.dumps(rec, ensure_ascii=False, indent=1, default=str) + "\n")
+        return rec
     try:
         st = horizons.load()
         if st.get("history"):

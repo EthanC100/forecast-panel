@@ -1,18 +1,21 @@
-"""Reminders as GitHub issues assigned to the repository owner, so they arrive as phone notifications.
+"""Horizons reminders as GitHub issues assigned to the repository owner, so they arrive as phone
+notifications. The conditions are read from Horizons' Supabase tables (supabase/schema.sql).
 
 Daily (.github/workflows/reminders.yml):
-    stale       a judgement (call or question) with no update for 14 days and still unresolved
-    signpost    a date I wrote in a call's "what would change my mind", or a dated signpost on a
-                scenario page, from the day before until six days after
     horizon     an open paper trade past its horizon date
     move        an open trade whose instrument has moved more than 2 standard deviations since entry
                 (sd of daily changes over the year before entry, scaled by the square root of the
                 number of closes since entry)
-    catalyst    an importance-3 catalyst within 3 days with no call from me on it
+    stale       a market whose latest decision is 14 or more days old
+    signpost    a YYYY-MM-DD date in a decision's "what would change my mind", from the day before
+                until six days after
+    catalyst    an importance-3 catalyst within 3 days with no decision for that market in 14 days
 
-Each issue carries a hidden key (<!-- catalyst-reminder:KEY -->), so a reminder is opened once; an
-open reminder whose condition has cleared is closed with a comment. Without GITHUB_TOKEN it is a dry
-run. The open reminders are written to data/book/reminders.json for the site.
+Issue text is minimal (no P&L, no sizes) because the repository may be public. Each issue carries a
+hidden key (<!-- catalyst-reminder:KEY -->), so a reminder is opened once; an open reminder whose
+condition has cleared is closed with a comment. Without GITHUB_TOKEN it is a dry run; without the
+Supabase settings nothing is checked and existing reminders are left as they are. The open reminders
+are written to data/book/reminders.json.
 """
 
 from __future__ import annotations
@@ -23,7 +26,6 @@ import logging
 import math
 import os
 import re
-from urllib.parse import urlencode
 
 import requests
 
@@ -50,10 +52,6 @@ def _repo() -> str:
     return os.environ.get("GITHUB_REPOSITORY") or "EthanC100/forecast-panel"
 
 
-def form_url(template: str, **params) -> str:
-    return f"https://github.com/{_repo()}/issues/new?" + urlencode({"template": f"{template}.yml", **params})
-
-
 def _z_move(inst_code: str, cfg: dict, fill: dict) -> tuple[float, float, int] | None:
     from terminal.book import Instrument
     inst = Instrument(inst_code, cfg["instruments"][inst_code], fill.get("series_used"))
@@ -75,101 +73,80 @@ def _z_move(inst_code: str, cfg: dict, fill: dict) -> tuple[float, float, int] |
     return move / (sd * math.sqrt(len(after))), move, len(after)
 
 
-def active(today: str | None = None) -> list[dict]:
-    from terminal.judgement import load_judgements
+MARKETS = {"BR": "Brazil", "MX": "Mexico", "FR": "France", "GOLD": "Gold"}
+APP = SITE + "horizons/"
+
+
+def active(today: str | None = None, client=None) -> list[dict] | None:
+    """Reminders due today, read from Horizons' Supabase tables. None when Supabase is not configured
+    (so sync() leaves existing reminder issues alone). Issue text stays minimal: no P&L, no sizes."""
+    from terminal.book import load_config
+    from terminal.supa import Client
+    client = client or Client()
+    if not client.configured():
+        log.warning("reminders: Supabase is not configured; no reminders computed")
+        return None
     today = today or store.today()
     td = dt.date.fromisoformat(today)
     out = []
-    recs = [r for r in load_judgements() if not r.get("rejected")]
-    state = _read(store.ROOT / "data" / "book" / "judgements.json", {"questions": []})
-    calls = [r for r in recs if r["type"] == "call"]
-    # stale judgements
-    for q in state.get("questions", []):
-        if q.get("resolution") or not q.get("forecasts"):
+    trades = client.select("trades", status="eq.open")
+    decisions = client.select("decisions", order="decision_date.desc")
+    cfg = load_config()
+    # open trades: past the horizon, or a move of more than 2 sd since entry
+    for t in trades:
+        icfg = cfg["instruments"].get(t["instrument"]) or {}
+        name = icfg.get("name", t["instrument"])
+        if t.get("horizon") and str(t["horizon"]) < today:
+            out.append({"key": f"horizon:{t['id']}", "kind": "horizon", "title": f"Horizons: {name} trade is past its horizon ({t['horizon']})",
+                        "body": f"Your {t['direction']} {name} paper trade passed its horizon date. Close it, or note why it stays open.\n\n[Portfolio]({APP}#portfolio)"})
+        if not icfg or not t.get("entry_date"):
             continue
-        if q.get("resolution_date") and q["resolution_date"] < today:
-            continue
-        last = q["forecasts"][-1]["submitted_at"][:10]
-        if (td - dt.date.fromisoformat(last)).days >= STALE_DAYS:
-            out.append({"key": f"stale:{q['key']}:{last}", "kind": "stale",
-                        "title": f"Update {q['key']}? No change since {last}: {q['question'][:70]}",
-                        "body": f"Your last forecast on **{q['question']}** was {round(100 * q['forecasts'][-1]['prob'])}% on {last}, "
-                                f"{(td - dt.date.fromisoformat(last)).days} days ago. Resolves {q.get('resolution_date') or 'unset'}.\n\n"
-                                f"- [Quick update]({form_url('quick-update', target=q['key'], title='[Quick update] ' + q['key'])}) "
-                                f"(even 'no change' keeps the record honest)\n- [Record]({SITE}#record/judgements)"})
-    # signposts: dates in "what would change my mind", and dated scenario signposts
-    resolved = {q["key"] for q in state.get("questions", []) if q.get("resolution")}
-    for c in calls:
-        if c["id"] in resolved:
-            continue
-        for d in sorted(set(re.findall(r"\d{4}-\d{2}-\d{2}", c.get("change_mind") or ""))):
+        try:
+            z = _z_move(t["instrument"], cfg, {"series_used": t.get("series_used"), "entry_date": str(t["entry_date"]),
+                                              "entry_value": float(t["entry_value"])})
+        except Exception as exc:  # noqa: BLE001
+            log.warning("move check %s: %s", t["id"], exc)
+            z = None
+        if z and abs(z[0]) > 2:
+            way = "up" if z[0] > 0 else "down"
+            out.append({"key": f"move:{t['id']}:{way}", "kind": "move", "title": f"Horizons: {name} moved {z[0]:+.1f} sd since your trade opened",
+                        "body": f"{name} has moved {way} by more than two standard deviations of its usual move since your entry on {t['entry_date']}. "
+                                f"Check the thesis and the stop.\n\n[Portfolio]({APP}#portfolio)"})
+    # decisions: the latest per market older than 14 days, and dated signposts in "what would change my mind"
+    latest = {}
+    for x in decisions:
+        latest.setdefault(x["country"], x)
+    for c, x in latest.items():
+        age = (td - dt.date.fromisoformat(str(x["decision_date"])[:10])).days
+        if age >= STALE_DAYS:
+            out.append({"key": f"stale:{c}:{x['id']}", "kind": "stale", "title": f"Horizons: review your {MARKETS.get(c, c)} decision (last {x['decision_date']})",
+                        "body": f"Your latest {MARKETS.get(c, c)} decision is {age} days old. Review it and paste a new decision record if your view changed."
+                                f"\n\n[Strategy]({APP}#strategy)"})
+    for x in decisions:
+        for d in sorted(set(re.findall(r"\d{4}-\d{2}-\d{2}", x.get("change_mind") or ""))):
             try:
                 gap = (dt.date.fromisoformat(d) - td).days
             except ValueError:
                 continue
             if -6 <= gap <= 1:
-                out.append({"key": f"signpost:{c['id']}:{d}", "kind": "signpost",
-                            "title": f"Signpost {d} for {c['id']}: {c['question'][:70]}",
-                            "body": f"You wrote that this could change your mind:\n\n> {c['change_mind']}\n\n"
-                                    f"The date {d} is {'tomorrow' if gap == 1 else 'today' if gap == 0 else f'{-gap} days ago'}. "
-                                    f"[Quick update]({form_url('quick-update', target=c['id'], title='[Quick update] ' + c['id'])})"})
-    scen = _read(store.DATA / "scenarios.json", {"scenarios": []})
-    for s in scen.get("scenarios", []):
-        for b in s.get("branches", []):
-            for sp in b.get("signposts", []):
-                for d in re.findall(r"\d{4}-\d{2}-\d{2}", sp):
-                    try:
-                        gap = (dt.date.fromisoformat(d) - td).days
-                    except ValueError:
-                        continue
-                    if -6 <= gap <= 1:
-                        out.append({"key": f"signpost:sc:{s['id']}:{d}", "kind": "signpost", "title": f"Signpost {d}: {s['title']}",
-                                    "body": f"Scenario signpost ({b['label']}): {sp}\n\n[Scenario page]({SITE}#scenarios/{s['id']})"})
-    # trades
-    book = _read(store.ROOT / "data" / "book" / "state.json", {"trades": []})
-    from terminal.book import load_config
-    cfg = load_config()
-    for v in book.get("trades", []):
-        if v.get("status") != "open":
-            continue
-        tid, op = v["trade_id"], v["open"]
-        if op.get("horizon") and op["horizon"] < today:
-            out.append({"key": f"horizon:{tid}", "kind": "horizon", "title": f"{tid} is past its horizon ({op['horizon']}): {op['direction']} {op['instrument']}",
-                        "body": f"Thesis: {op.get('thesis')}\n\nClose it or write down why it stays open.\n\n"
-                                f"- [Close trade]({form_url('close-trade', trade_id=tid, title='[Close trade] ' + tid)})\n- [Portfolio]({SITE}#record/portfolio)"})
-        try:
-            z = _z_move(op["instrument"], cfg, v["fill"])
-        except Exception as exc:  # noqa: BLE001
-            log.warning("move check %s: %s", tid, exc)
-            z = None
-        if z and abs(z[0]) > 2:
-            way = "up" if z[0] > 0 else "down"
-            unit = "%" if cfg["instruments"][op["instrument"]]["kind"] in ("fx", "price") else ""
-            out.append({"key": f"move:{tid}:{way}", "kind": "move",
-                        "title": f"{op['instrument']} moved {z[0]:+.1f} sd since {tid} opened",
-                        "body": f"{op['instrument']} has moved {z[1]:+.3g}{unit} in {z[2]} closes since entry on {v['fill']['entry_date']} "
-                                f"({z[0]:+.1f} standard deviations of its usual move over that time). Your P&L: "
-                                f"${(v.get('pnl') or {}).get('total', 0):,.0f}.\n\nThesis: {op.get('thesis')}\nClose early if: {op.get('close_early')}\n\n"
-                                f"[Close trade]({form_url('close-trade', trade_id=tid, title='[Close trade] ' + tid)})"})
-    # importance-3 catalysts within 3 days with no call
-    cal = _read(store.DATA / "calendar.json", {"events": []})
-    called = {c.get("question_id") for c in calls}
-    sc_by_event = {s["event"]["id"]: s["id"] for s in scen.get("scenarios", []) if s.get("event")}
-    for e in cal.get("events", []):
+                when = "tomorrow" if gap == 1 else "today" if gap == 0 else f"{-gap} days ago"
+                out.append({"key": f"signpost:{x['id']}:{d}", "kind": "signpost",
+                            "title": f"Horizons: signpost {d} in your {MARKETS.get(x['country'], x['country'])} decision",
+                            "body": f"A date you wrote under 'What would change my mind' is {when}. Check whether it changed your view.\n\n[Strategy]({APP}#strategy)"})
+    # importance-3 catalysts within 3 days with no decision for that market in the last 14 days
+    recent = {x["country"] for x in decisions if (td - dt.date.fromisoformat(str(x["decision_date"])[:10])).days <= STALE_DAYS}
+    cal = _read(store.DATA / "calendar.json", {"events": []}) or {}
+    gold = _read(store.DATA / "gold.json", {}) or {}
+    events = [e for e in cal.get("events", []) if e.get("country") in MARKETS]
+    events += [{**e, "id": "gold-" + e["date"] + "-" + re.sub(r"[^a-z0-9]+", "-", e["title"].lower()).strip("-"), "country": "GOLD"}
+               for e in gold.get("upcoming", []) if (e.get("importance") or 0) >= 3]
+    for e in events:
         gap = (dt.date.fromisoformat(e["date"]) - td).days
-        if e.get("importance", 0) < 3 or not 0 <= gap <= 3:
+        if (e.get("importance") or 0) < 3 or not 0 <= gap <= 3 or e["country"] in recent:
             continue
-        ids = {e["id"], "ev:" + e["id"]} | ({"sc:" + sc_by_event[e["id"]]} if e["id"] in sc_by_event else set())
-        if ids & called:
-            continue
-        params = {"question": e["title"] + ": ", "question_id": e["id"], "resolution_date": e["date"], "title": "[Full call] " + e["title"]}
-        if e.get("base_rate"):
-            params["base_rate"] = e["base_rate"].get("text", "")
         out.append({"key": f"catalyst:{e['id']}", "kind": "catalyst",
-                    "title": f"{e['title']} in {gap} day{'s' if gap != 1 else ''} ({e['date']}): no call yet",
-                    "body": f"{e['country']} · importance {e['importance']} · {e.get('status')}. {e.get('note') or ''}\n\n"
-                            f"- [Make a call]({form_url('full-call', **params)})\n- [Calendar]({SITE}#calendar/2w?ev={e['id']})"
-                            + (f"\n- [Scenario page]({SITE}#scenarios/{sc_by_event[e['id']]})" if e["id"] in sc_by_event else "")})
+                    "title": f"Horizons: {e['title']} in {gap} day{'s' if gap != 1 else ''} ({e['date']}), no {MARKETS[e['country']]} decision yet",
+                    "body": f"A major catalyst is close and you have no {MARKETS[e['country']]} decision in the last {STALE_DAYS} days.\n\n[Strategy]({APP}#strategy)"})
     return out
 
 
@@ -200,8 +177,13 @@ class GitHub:
         return out
 
 
-def sync(today: str | None = None, dry_run: bool | None = None) -> dict:
-    want = {r["key"]: r for r in active(today)}
+def sync(today: str | None = None, dry_run: bool | None = None, client=None) -> dict:
+    found = active(today, client)
+    if found is None:
+        result = {"generated_at": store.now_iso(), "dry_run": True, "open": [], "note": "Supabase is not configured; reminders were not checked"}
+        OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
+        return result
+    want = {r["key"]: r for r in found}
     token = os.environ.get("GITHUB_TOKEN")
     dry_run = dry_run if dry_run is not None else not token
     owner = _repo().split("/")[0]
@@ -212,7 +194,7 @@ def sync(today: str | None = None, dry_run: bool | None = None) -> dict:
         OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
         return result
     gh = GitHub(token, _repo())
-    gh.req("POST", "/labels", json={"name": LABEL, "color": "f2a33a", "description": "Catalyst reminder"})
+    gh.req("POST", "/labels", json={"name": LABEL, "color": "f2a33a", "description": "Horizons reminder"})
     issues = gh.reminder_issues()
     seen = {}
     for i in issues:
@@ -223,7 +205,7 @@ def sync(today: str | None = None, dry_run: bool | None = None) -> dict:
         if key in seen:
             existing.append(key)
             continue
-        body = r["body"] + f"\n\n<sub>Opened by Catalyst's daily reminder job. Closes itself when the condition clears.</sub>\n<!-- catalyst-reminder:{key} -->"
+        body = r["body"] + f"\n\n<sub>Opened by Horizons' daily reminder job. Closes itself when the condition clears.</sub>\n<!-- catalyst-reminder:{key} -->"
         i = gh.req("POST", "/issues", json={"title": r["title"], "body": body, "labels": [LABEL], "assignees": [owner]}).json()
         seen[key] = i
         created.append(key)
