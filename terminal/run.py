@@ -119,14 +119,21 @@ def main(argv=None) -> int:
         from terminal import record
         record.build()
     if a.cmd == "hzbook":
-        from terminal import hzbook
-        hzbook.run()
+        from terminal import hzbook, supa
+        try:
+            hzbook.run()
+        except supa.TablesMissing as exc:
+            log.warning("hzbook: %s; nothing done", exc)
     if a.cmd == "algorithm":
         from terminal import algorithm
         algorithm.build()
     if a.cmd == "reminders":
-        from terminal import reminders
-        r = reminders.sync(dry_run=True if a.dry_run else None)
+        from terminal import reminders, supa
+        try:
+            r = reminders.sync(dry_run=True if a.dry_run else None)
+        except supa.TablesMissing as exc:
+            log.warning("reminders: %s; nothing done", exc)
+            return
         log.info("reminders: %d open%s; created %s; closed %s", len(r["open"]), " (dry run)" if r["dry_run"] else "",
                  r.get("created", []), r.get("closed", []))
         for x in r["open"]:

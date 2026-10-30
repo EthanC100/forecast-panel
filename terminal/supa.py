@@ -18,6 +18,10 @@ log = logging.getLogger(__name__)
 UA = "forecast-panel-horizons/1.0 (+https://github.com/EthanC100/forecast-panel)"
 
 
+class TablesMissing(RuntimeError):
+    """The project is reachable but supabase/schema.sql has not been run yet."""
+
+
 class NotConfigured(RuntimeError):
     pass
 
@@ -44,6 +48,8 @@ class Client:
         r = self.http.request(method, f"{self.url}/rest/v1/{table}", params=params or {}, json=json,
                               headers=self.headers({"Prefer": prefer} if prefer else None), timeout=60)
         if r.status_code >= 400:
+            if r.status_code == 404 and "PGRST205" in r.text:
+                raise TablesMissing(f"Supabase table {table} does not exist yet: run supabase/schema.sql in the SQL editor")
             raise RuntimeError(f"Supabase {method} {table}: HTTP {r.status_code}: {r.text[:300]}")
         return r.json() if r.text else None
 
