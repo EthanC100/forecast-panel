@@ -21,6 +21,14 @@ series:
   de.bund10y: {badge: context, reason: "Germany 10-year: the benchmark for the France spread."}
   us.ust10y: {badge: context, reason: "Global rates backdrop."}
   us.usd.broad: {badge: context, reason: "Global dollar backdrop."}
+  eu.eurusd: {badge: untested, reason: "Tracked instrument (France page, book). Its co-movement with drivers is measured on the External drivers card; no lead test."}
+  us.ust2y: {badge: context, reason: "External driver: US front-end rates."}
+  us.vix: {badge: context, reason: "External driver: equity volatility (risk appetite)."}
+  us.fed.upper: {badge: context, reason: "Policy rate level."}
+  eu.ecb.dfr: {badge: context, reason: "Policy rate level."}
+  gl.: {badge: context, reason: "External driver: commodity price."}
+  it.spread: {badge: context, reason: "External driver for the France spread."}
+  es.spread: {badge: context, reason: "External driver for the France spread."}
   mx.mbono10y.auction: {badge: context, reason: "Mexico's bond yield is context only; the peso is the primary instrument."}
   mx.10y.oecd_m: {badge: context, reason: "Mexico's bond yield is context only; the peso is the primary instrument."}
   br.selic.target: {badge: context, reason: "Policy rate level."}

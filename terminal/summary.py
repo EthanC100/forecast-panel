@@ -22,6 +22,7 @@ TILES = [
     # key, label, candidate series (first that exists wins), change unit, country, decimals
     ("usdbrl", "USD/BRL", ["br.usdbrl.ptax"], "pct", "BR", 4),
     ("usdmxn", "USD/MXN", ["mx.usdmxn.fix"], "pct", "MX", 4),
+    ("eurusd", "EUR/USD", ["eu.eurusd"], "pct", "FR", 4),
     ("di27", "Brazil DI Jan-27", ["br.di.f27", "br.di.f27.proxy"], "bp", "BR", 2),
     ("di29", "Brazil DI Jan-29", ["br.di.f29", "br.di.f29.proxy"], "bp", "BR", 2),
     ("di31", "Brazil DI Jan-31", ["br.di.f31", "br.di.f31.proxy"], "bp", "BR", 2),
@@ -35,7 +36,7 @@ SOURCE_OF_SERIES = {"br.di": "b3_di", "fr.spread.oat_bund": "webstat", "mx.": "b
 
 COUNTRIES = {
     "FR": {"name": "France", "charts": [["fr.spread.oat_bund", "fr.spread.oat_bund.ecb_m"], ["fr.oat10y", "fr.oat10y.ecb_m"],
-                                         ["de.bund10y"]], "survey": [], "cot": None},
+                                         ["de.bund10y"], ["eu.eurusd"]], "survey": [], "cot": None},
     "BR": {"name": "Brazil", "charts": [["br.usdbrl.ptax"], ["br.di.f27", "br.di.f27.proxy"], ["br.di.f29", "br.di.f29.proxy"],
                                         ["br.di.f31", "br.di.f31.proxy"], ["br.td.pre_longest"],
                                         ["br.td.ipca_longest"], ["br.selic.target"]],

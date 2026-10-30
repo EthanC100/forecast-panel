@@ -81,6 +81,7 @@ class Instrument:
         self.close_time = dt.time(hh, mm, tzinfo=dt.timezone.utc)
         self.scale = {"yield": 100.0, "spread_bp": 10000.0}.get(self.kind)
         self.favourable = 1 if self.kind == "fx" else -1   # +1: long gains when the value rises
+        self.inverse = cfg.get("quote") == "usd_per_local"  # EUR/USD: dollars per unit of the other currency
 
     def close_dt(self, date: str) -> dt.datetime:
         return dt.datetime.combine(dt.date.fromisoformat(date), self.close_time)
@@ -121,7 +122,7 @@ class Instrument:
     def unit_loss_to(self, entry: float, level: float, duration: float | None) -> float:
         """Loss per 1 USD of notional if the value moves from entry to `level` (absolute)."""
         if self.kind == "fx":
-            return abs(level - entry) / level
+            return abs(level - entry) / (entry if self.inverse else level)
         return duration * abs(level - entry) / self.scale
 
     def cost(self, notional: float, duration: float | None) -> float:
@@ -159,7 +160,7 @@ def carry(inst: Instrument, direction: int, notional: float, start: str, end: st
     while d < stop:
         ru, rl = _rate_on(usd, d.isoformat()), _rate_on(loc, d.isoformat())
         if ru is not None and rl is not None:
-            total += (ru - rl) / 100.0 / 360.0
+            total += ((rl - ru) if inst.inverse else (ru - rl)) / 100.0 / 360.0
         d += dt.timedelta(days=1)
     return direction * notional * total
 
@@ -167,7 +168,7 @@ def carry(inst: Instrument, direction: int, notional: float, start: str, end: st
 def pnl(inst: Instrument, fill: dict, value: float, date: str, rates_cache: dict) -> dict:
     d, n, v0, dur = fill["direction_sign"], fill["notional_usd"], fill["entry_value"], fill.get("duration")
     if inst.kind == "fx":
-        price = d * n * (value - v0) / value
+        price = d * n * (value - v0) / (v0 if inst.inverse else value)
     else:
         price = -d * n * dur * (value - v0) / inst.scale
     c = carry(inst, d, n, fill["entry_date"], date, rates_cache)
@@ -388,7 +389,7 @@ def buy_and_hold(cfg: dict, today: str, rates_cache: dict) -> list[dict]:
     for code, icfg in cfg["instruments"].items():
         inst = Instrument(code, icfg)
         row = {"code": code, "name": icfg["name"], "series": inst.series_id, "proxy": bool(inst.series and inst.series.get("proxy")),
-               "description": "long USD" if inst.kind == "fx" else ("long OAT vs Bund" if inst.kind == "spread_bp" else "long the bond")}
+               "description": ("long EUR" if inst.inverse else "long USD") if inst.kind == "fx" else ("long OAT vs Bund" if inst.kind == "spread_bp" else "long the bond")}
         last = inst.latest()
         for label, start in (("since_start", str(cfg["start_date"])), ("last_12m", one_year)):
             c = next(((d, v) for d, v in inst.obs if d >= start), None)

@@ -7,8 +7,8 @@ start_date: 2026-10-29
 risk_warning_pct_of_equity: 2.0      # warn when the loss to the stop exceeds this share of current equity
 
 assumptions:
-  - "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t."
-  - "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it. Policy rates stand in for deposit rates."
+  - "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t. EUR/USD is quoted in dollars per euro, so long = long EUR and P&L = N x (S_t - S_0) / S_0."
+  - "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it; long EUR/USD earns the ECB deposit rate and pays fed funds. Policy rates stand in for deposit rates."
   - "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows)."
   - "Duration: 8 years for the US 10-year and the France-Germany spread, 5.5 years for Brazil's and Mexico's 10-year positions. Brazil's NTN-F and Mexico's Mbonos pay coupons near 10-13% (and yield 9-15%), so their modified duration is about 5-6 years, not the 8 of a low-coupon US or euro bond; using 8 would overstate their P&L by about 45%. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry."
   - "No carry or roll-down on bond and spread positions."
@@ -34,6 +34,17 @@ instruments:
     rate_usd: us.fedfunds
     rate_local: mx.policy.target
     cost_round_trip_pct: 0.075
+  EURUSD:
+    name: EUR/USD
+    country: FR
+    kind: fx
+    quote: usd_per_local          # quoted in US dollars per euro: long = long EUR, gains when EUR/USD rises
+    series: [eu.eurusd]
+    close_utc: "17:00"            # FRED/H.10 noon New York buying rate
+    rate_usd: us.fedfunds
+    rate_local: eu.ecb.dfr
+    cost_round_trip_pct: 0.02
+    note: "FRED publishes the noon New York rate weekly (H.10), so the latest value can be up to a week old."
   OATBUND:
     name: France OAT-Bund 10-year spread
     country: FR

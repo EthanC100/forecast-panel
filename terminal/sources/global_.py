@@ -23,6 +23,15 @@ FRED = [
     ("us.usd.broad", "DTWEXBGS", "US dollar index (broad, goods and services)", "US", "index Jan-2006=100", "daily"),
     ("mx.10y.oecd_m", "IRLTLT01MXM156N", "Mexico 10-year government yield (monthly, context)", "MX", "%", "monthly"),
     ("us.fedfunds", "DFF", "US effective federal funds rate (USD leg of FX carry)", "US", "% p.a.", "daily"),
+    # external drivers
+    ("us.ust2y", "DGS2", "US 2-year Treasury yield", "US", "%", "daily"),
+    ("us.vix", "VIXCLS", "VIX (CBOE volatility index)", "US", "index", "daily"),
+    ("us.fed.upper", "DFEDTARU", "Fed funds target range, upper limit", "US", "% p.a.", "daily"),
+    ("eu.eurusd", "DEXUSEU", "EUR/USD (US dollars per euro, noon New York)", "GLOBAL", "USD per EUR", "daily"),
+    ("eu.ecb.dfr", "ECBDFR", "ECB deposit facility rate", "GLOBAL", "% p.a.", "daily"),
+    ("gl.brent", "DCOILBRENTEU", "Brent crude oil (Europe spot)", "GLOBAL", "USD per barrel", "daily"),
+    ("gl.ironore", "PIORECRUSDM", "Iron ore (China import, IMF primary commodity prices)", "GLOBAL", "USD per tonne", "monthly"),
+    ("gl.soy", "PSOYBUSDM", "Soybeans (IMF primary commodity prices)", "GLOBAL", "USD per tonne", "monthly"),
 ]
 FRED_API = "https://api.stlouisfed.org/fred/series/observations"
 FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv"
