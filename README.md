@@ -138,6 +138,17 @@ do.
   - Horizons' view, and "Make a gold call".
 
   Gold (XAUUSD) and silver (XAGUSD) are in the shared paper book.
+
+  Daily prices come from Stooq, with LBMA as the fallback. On 30 Oct 2026 both refused GitHub
+  Actions: Stooq served a bot-check page and LBMA returned 403. Until one answers, prices, the book
+  and the episodes use the World Bank's monthly averages (Pink Sheet, from 1960), marked degraded
+  on the page and on Status. The Bundesbank's API has only a discontinued DEM series. The other
+  sources are:
+  - FRED DFII10 for the real yield;
+  - Caldara and Iacoviello's daily GPR index;
+  - IMF IRFCL for central-bank buying;
+  - federalreserve.gov for FOMC dates;
+  - gold-events' `forward_log.csv` for the model.
 - **Calendar, Scenarios, Crowd, Record:** the same content as Catalyst, explained, with the same
   forms and scoring. Horizons' view is scored like any forecaster.
 - **Ask Claude** (bottom bar, and on every page) copies a clear text package of the page to the
