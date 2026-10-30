@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T02:39:35Z",
+ "generated_at": "2026-10-30T02:41:46Z",
  "asymmetry_rules": {
   "gap_pp": 15,
   "reward_risk": 2.0,
@@ -1819,14 +1819,10 @@
     ],
     "proxy": false,
     "frequency": "daily",
-    "source": "Banxico SIE (public chart data)",
-    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
+    "source": "Banxico SIE API",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos (Bmx-Token header)",
     "levels_are_defaults": true,
-    "degraded": {
-     "id": "banxico",
-     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
-     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
-    },
+    "degraded": null,
     "default_basis": "today's level plus the expected move of the good and bad branches",
     "good_level": 18.764,
     "bad_level": 20.1713
@@ -2044,14 +2040,10 @@
     ],
     "proxy": false,
     "frequency": "daily",
-    "source": "Banxico SIE (public chart data)",
-    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
+    "source": "Banxico SIE API",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos (Bmx-Token header)",
     "levels_are_defaults": true,
-    "degraded": {
-     "id": "banxico",
-     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
-     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
-    },
+    "degraded": null,
     "default_basis": "today's level plus the expected move of the good and bad branches",
     "good_level": 18.4385,
     "bad_level": 21.4
