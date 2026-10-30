@@ -115,10 +115,12 @@ def _cell(cc: str, field: str, base: dt.date, at: dt.date, today: dt.date, loade
         if s is None:
             reasons.append(f"{sid} not stored yet")
             continue
-        if at > today or (freq != "a" and at > s.last) or (freq == "a" and at.year > s.last.year):
+        cmp = dt.date(at.year, 3 * ((at.month - 1) // 3) + 1, 1) if freq == "q" else at   # quarterly levels are dated at quarter starts
+        if at > today or (freq != "a" and cmp > s.last) or (freq == "a" and at.year > s.last.year):
             reasons.append(f"after the latest data ({s.last.isoformat()})")
             continue
-        start_d = dt.date(base.year - 1, 12, 31) if freq == "a" else base
+        # annual data: the last full calendar year before the episode
+        start_d = dt.date(base.year if base.month == 12 else base.year - 1, 12, 31) if freq == "a" else base
         v0, v1 = _value(s, freq, start_d, field), _value(s, freq, at, field)
         if v1 is None or (field in ("fx", "y10") and v0 is None):
             reasons.append(f"{sid} starts {s.first.isoformat()}" if min(start_d, at) < s.first else f"{sid} has a gap")
@@ -126,7 +128,7 @@ def _cell(cc: str, field: str, base: dt.date, at: dt.date, today: dt.date, loade
         unit = {"a": "annual", "q": "quarterly", "m": "monthly"}[freq]
         return {"start": v0, "end": v1, "freq": unit}, {"series": sid, "freq": unit, "source": s.meta.get("source"),
                                                          "source_id": s.meta.get("source_id"), "url": s.meta.get("source_url")}
-    return {}, {"reason": reasons[0] if all("after the latest" in r for r in reasons) else
+    return {}, {"reason": reasons[-1] if all("after the latest" in r for r in reasons) else
                 (NO_FREE_DATA if not any("not stored" in r for r in reasons) else reasons[0]), "tried": reasons}
 
 

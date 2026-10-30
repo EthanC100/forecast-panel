@@ -28,7 +28,7 @@
   const reveal = (k) => { const r = revealed(); r[k] = 1; HZ.store.set("revealed", JSON.stringify(r)); HZ.route(); };
   /** A horizontal range with shaded zones, past readings as small dots and current marks. */
   const strip = (o) => {
-    const W = 600, H = 58, L = 14, R = 14, x = (v) => L + (Math.max(o.min, Math.min(o.max, v)) - o.min) / (o.max - o.min) * (W - L - R);
+    const W = 360, H = 52, L = 12, R = 12, x = (v) => L + (Math.max(o.min, Math.min(o.max, v)) - o.min) / (o.max - o.min) * (W - L - R);
     const g = svg("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.aria || "range" });
     g.appendChild(svg("rect", { x: L, y: 22, width: W - L - R, height: 8, rx: 4, fill: "var(--bg-2)", stroke: "var(--line)" }));
     (o.zones || []).forEach(([a, b]) => g.appendChild(svg("rect", { x: x(a), y: 22, width: Math.max(2, x(b) - x(a)), height: 8, rx: 4, fill: "var(--c,var(--coral))", opacity: ".45" })));
@@ -52,19 +52,19 @@
   function timeline(evs, days) {
     const ctrs = ["BR", "MX", "FR", "GLOBAL"].filter((c) => evs.some((e) => e.country === c));
     if (!ctrs.length) return null;
-    const W = 640, RH = 34, T = 22, L = 74, H = T + ctrs.length * RH + 6, t0 = Date.parse(HZ.today()), span = days * 864e5;
+    const W = 360, RH = 30, T = 22, L = 58, H = T + ctrs.length * RH + 6, t0 = Date.parse(HZ.today()), span = days * 864e5;
     const x = (d) => L + (Date.parse(d) - t0) / span * (W - L - 12);
     const g = svg("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Timeline of events by country" });
     const ticks = days <= 14 ? [0, 7, 14] : days <= 92 ? [0, 30, 61, 92] : [0, 91, 182, 274, 366];
     ticks.forEach((d) => { const iso = new Date(t0 + d * 864e5).toISOString().slice(0, 10);
       g.appendChild(svg("line", { class: "ax", x1: x(iso), x2: x(iso), y1: T - 4, y2: H - 4 }));
-      g.appendChild(svg("text", { class: "lbl", x: x(iso), y: 12, "text-anchor": "middle" }, d === 0 ? "today" : HZ.dateShort(iso))); });
+      g.appendChild(svg("text", { class: "lbl", x: x(iso), y: 12, "text-anchor": d === 0 ? "start" : "middle" }, d === 0 ? "today" : HZ.dateShort(iso))); });
     ctrs.forEach((c, i) => {
       const y = T + i * RH + RH / 2;
-      g.appendChild(svg("text", { class: "lbl", x: 4, y: y + 4, style: "font-size:12px;font-weight:800;fill:var(--ink-2)" }, HZ.NAMES[c]));
-      g.appendChild(svg("line", { x1: L, x2: W - 12, y1: y, y2: y, stroke: "var(--line)", "stroke-width": 6, "stroke-linecap": "round" }));
+      g.appendChild(svg("text", { class: "lbl", x: 4, y: y + 4, style: "font-size:11px;font-weight:800;fill:var(--ink-2)" }, HZ.NAMES[c]));
+      g.appendChild(svg("line", { x1: L, x2: W - 12, y1: y, y2: y, stroke: "var(--line)", "stroke-width": 4, "stroke-linecap": "round" }));
       evs.filter((e) => e.country === c).forEach((e) => {
-        const dot = svg("circle", { class: "c-" + c, cx: x(e.date), cy: y, r: 3 + 2.5 * e.importance, fill: "var(--c)", "fill-opacity": e.importance === 3 ? ".9" : ".55", stroke: e.importance === 3 ? "var(--ink)" : "none", "stroke-width": 1.5 });
+        const dot = svg("circle", { class: "c-" + c, cx: x(e.date), cy: y, r: 2 + 1.6 * e.importance, fill: "var(--c)", "fill-opacity": e.importance === 3 ? ".9" : ".55", stroke: e.importance === 3 ? "var(--ink)" : "none", "stroke-width": 1.5 });
         dot.appendChild(svg("title", {}, e.date + " · " + e.title + " · importance " + e.importance)); g.appendChild(dot);
       });
     });
