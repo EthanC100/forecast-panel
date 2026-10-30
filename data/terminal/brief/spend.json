@@ -2,11 +2,12 @@
  "currency": "USD",
  "months": {
   "2026-10": {
-   "usd": 0.252956,
-   "calls": 14,
+   "usd": 0.256978,
+   "calls": 18,
    "by_role": {
     "extraction": 0.003751,
-    "judgement": 0.249205
+    "judgement": 0.249205,
+    "assessments": 0.004022
    }
   }
  },
@@ -164,6 +165,50 @@
    "cache_read": 37535,
    "output": 1803,
    "usd": 0.011138
+  },
+  {
+   "at": "2026-10-30T04:34:38Z",
+   "role": "assessments",
+   "mode": "batch",
+   "input": 5912,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 0,
+   "output": 622,
+   "usd": 0.000451
+  },
+  {
+   "at": "2026-10-30T04:34:38Z",
+   "role": "assessments",
+   "mode": "batch",
+   "input": 59979,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 0,
+   "output": 262,
+   "usd": 0.003064
+  },
+  {
+   "at": "2026-10-30T04:34:38Z",
+   "role": "assessments",
+   "mode": "batch",
+   "input": 1950,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 0,
+   "output": 522,
+   "usd": 0.000228
+  },
+  {
+   "at": "2026-10-30T04:34:38Z",
+   "role": "assessments",
+   "mode": "batch",
+   "input": 4346,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 0,
+   "output": 245,
+   "usd": 0.000279
   }
  ],
  "cap_usd": 8.0

@@ -1,0 +1,108 @@
+{
+ "generated_at": "2026-10-30T04:34:38Z",
+ "items": [
+  {
+   "id": "ifi",
+   "country": "BR",
+   "name": "IFI (Instituição Fiscal Independente, Federal Senate)",
+   "note": "Report pages on www12.senado.leg.br sit behind a browser security check; the PDFs in the Senate digital library (www2.senado.leg.br) are open.",
+   "fetched_at": "2026-10-30T04:30:52Z",
+   "title": "Relatório de Acompanhamento Fiscal – Out/2026",
+   "url": "https://www12.senado.leg.br/ifi/publicacoes-1/relatorio/2026/outubro/relatorio-de-acompanhamento-fiscal-out-2026",
+   "listed_date": "2026-10",
+   "text_chars": 149521,
+   "truncated": true,
+   "text_hash": "a024ed8949c468971c8ba511dfe5a1e9d0d051dd",
+   "status": "ok",
+   "summary": "The IFI expects a primary deficit of 0.5% of GDP in 2026 and a potential deficit of 1.0% of GDP in 2027, arguing that new spending commitments and lost revenue (about R$ 40 billion unbudgeted) call for a fiscal adjustment of roughly 3 percentage points of GDP. It also warns that the primary-result target misses large off-budget credit and fund operations, and that a higher neutral interest rate would raise the required primary surplus.",
+   "key_number": {
+    "value": "1.0",
+    "what": "Potential primary deficit for 2027 as a percentage of GDP, which the IFI says could arise given new commitments and its differences from the PLOA 2027 figures"
+   },
+   "date": "2026-10-29",
+   "stance": "more cautious than the government",
+   "verified": true,
+   "problems": []
+  },
+  {
+   "id": "hcfp",
+   "country": "FR",
+   "name": "HCFP (Haut Conseil des finances publiques)",
+   "note": null,
+   "fetched_at": "2026-10-30T04:30:59Z",
+   "title": "Avis n°2026 – 5 Lois de finances 2027",
+   "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
+   "listed_date": null,
+   "text_chars": 13314,
+   "truncated": false,
+   "text_hash": "d3c9ee1734e0716930c2ccb07a28ba2562cba79d",
+   "status": "ok",
+   "summary": "The High Council of Public Finances judges the government's 2026 deficit forecast of 5.4% of GDP plausible, but considers the 2027 growth forecast of 1.0% optimistic and says risks to growth are mainly downward. It warns that the expected 2027 deficit reduction is too slow, that the debt-to-GDP ratio keeps rising toward about 122%, and that the 2029 target of a deficit below 3% of GDP is very unlikely to be met.",
+   "key_number": {
+    "value": "122 %",
+    "what": "Expected public debt-to-GDP ratio, which the High Council says is approaching this level as debt keeps rising"
+   },
+   "date": "2026-10-01",
+   "stance": "more cautious than the government",
+   "verified": true,
+   "problems": []
+  },
+  {
+   "id": "ccomptes",
+   "country": "FR",
+   "name": "Cour des comptes",
+   "note": "Annual report on the situation and outlook of the public finances (published 25 June 2026).",
+   "fetched_at": "2026-10-30T04:31:00Z",
+   "status": "unavailable",
+   "error": "no publication found",
+   "verified": null
+  },
+  {
+   "id": "mexico-evalua",
+   "country": "MX",
+   "name": "México Evalúa",
+   "note": null,
+   "fetched_at": "2026-10-30T04:31:02Z",
+   "title": "El reto del Paquete Económico 2027: recuperar el margen para invertir en desarrollo",
+   "url": "https://mexicoevalua.org/el-reto-del-paquete-economico-2027-recuperar-el-margen-para-invertir-en-desarrollo/",
+   "listed_date": "2026-10-27",
+   "text_chars": 8597,
+   "truncated": false,
+   "text_hash": "5e815ad5f0c37f9ea28106cce2d3575befa5bebd",
+   "status": "ok",
+   "summary": "México Evalúa finds that the 2027 Economic Package would lower the broad public deficit (RFSP) to 3.9% of GDP, a real improvement, but still above the 2.5% the IMF recommends, and that this effort is not enough to stabilize debt. The think tank warns that meeting the targets depends on record tax collection, a sharp cut in support for Pemex, and tight spending, with any shortfall likely falling on investment, health and education.",
+   "key_number": {
+    "value": "3.9",
+    "what": "Projected broad public deficit (RFSP) as a share of GDP in 2027 if the Economic Package is approved, 1.9 points below 2024"
+   },
+   "date": "2026-10-27",
+   "stance": "more cautious than the government",
+   "verified": true,
+   "problems": []
+  },
+  {
+   "id": "imef",
+   "country": "MX",
+   "name": "IMEF (Instituto Mexicano de Ejecutivos de Finanzas)",
+   "note": null,
+   "fetched_at": "2026-10-30T04:31:03Z",
+   "title": "Información estratégica para líderes financieros: nuevo reporte IMEF",
+   "url": "https://www.imef.org.mx/2026/02/19/informacion-clave-para-lideres-financieros/",
+   "listed_date": "2026-02-19",
+   "text_chars": 3016,
+   "truncated": false,
+   "text_hash": "ce84d281a2b7b286bcb3699482606f20552b7913",
+   "status": "ok",
+   "summary": "The IMEF says Mexico's public finances are under pressure, with a broad public-sector deficit of 4.8% at the end of 2025, well above the 3.9% the government initially planned. It warns that high debt, continued support for Pemex and new labour costs bring Mexico closer to losing its investment-grade rating, and it expects weak growth of 1.3% in 2026.",
+   "key_number": {
+    "value": "4.8",
+    "what": "The broad public-sector fiscal deficit (RFSP) at the close of 2025, well above the 3.9% initially planned by the government."
+   },
+   "date": "2026-02",
+   "stance": "more cautious than the government",
+   "verified": true,
+   "problems": []
+  }
+ ],
+ "rule": "Every number in a summary must appear in the cited document; failures are marked unverified, not corrected."
+}
