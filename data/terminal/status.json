@@ -31,9 +31,9 @@
   },
   "banxico_api": {
    "country": "MX",
-   "error": null,
+   "error": "HTTPError: 413 Client Error: Request Entity Too Large for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14659,SR14664,SR14662,SR14663,SR14666,SR14671,SR14669,SR14670,SR14673,SR14678,SR14676,SR14677,SR14680,SR14685,SR14683,SR14684,SR14687,SR14692,SR14690,SR14691,SR14694,SR14699,SR14697,SR14698,SR14701,SR14706,SR14704,SR14705,SR14708,SR14713,SR14711,SR14712/datos",
    "fallback_for": null,
-   "last_attempt": "2026-10-30T04:17:37Z",
+   "last_attempt": "2026-10-30T04:35:19Z",
    "last_success": "2026-10-30T04:17:37Z",
    "n_series": 9,
    "name": "Banxico SIE API",
@@ -52,17 +52,17 @@
     "mx.survey.balance",
     "mx.survey.policy_rate"
    ],
-   "state": "ok"
+   "state": "error"
   },
   "banxico_public": {
    "country": "MX",
    "error": null,
    "fallback_for": "banxico_api",
-   "last_attempt": "2026-10-30T04:17:42Z",
-   "last_success": "2026-10-30T02:39:25Z",
-   "n_series": 8,
+   "last_attempt": "2026-10-30T04:35:46Z",
+   "last_success": "2026-10-30T04:35:46Z",
+   "n_series": 9,
    "name": "Banxico SIE public chart data (fallback)",
-   "note": "not needed: banxico_api succeeded this run",
+   "note": null,
    "release": "as above",
    "secret": null,
    "secret_present": null,
@@ -74,9 +74,10 @@
     "mx.survey.inflation",
     "mx.survey.gdp",
     "mx.survey.usdmxn",
-    "mx.survey.balance"
+    "mx.survey.balance",
+    "mx.survey.policy_rate"
    ],
-   "state": "standby"
+   "state": "ok"
   },
   "bcb_focus": {
    "country": "BR",
@@ -420,5 +421,5 @@
    "state": "missing_secret"
   }
  },
- "updated_at": "2026-10-30T04:29:51Z"
+ "updated_at": "2026-10-30T04:36:03Z"
 }

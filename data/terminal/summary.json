@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T04:29:53Z",
+ "generated_at": "2026-10-30T04:36:05Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -53,16 +53,21 @@
    "n_1y": 251,
    "unit": "MXN per USD",
    "meta": {
-    "source": "Banxico SIE API",
+    "source": "Banxico SIE (public chart data)",
     "source_id": "SIE SF43718",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos (Bmx-Token header)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
     "as_of": "2026-10-29",
-    "fetched_at": "2026-10-30T04:17:38Z",
+    "fetched_at": "2026-10-30T04:35:46Z",
     "frequency": "daily",
     "series": "mx.usdmxn.fix",
     "evidence": {
      "badge": "untested",
      "reason": "Primary Mexico instrument. Same as USD/BRL: reaction to events tested in em-macro, no lead test."
+    },
+    "degraded": {
+     "id": "banxico",
+     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "note": null
    }
@@ -345,16 +350,21 @@
    "n_1y": 11,
    "unit": "% p.a.",
    "meta": {
-    "source": "Banxico SIE API",
+    "source": "Banxico SIE (public chart data)",
     "source_id": "SIE SF44071",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF44071/datos (Bmx-Token header)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
     "as_of": "2026-10-22",
-    "fetched_at": "2026-10-30T04:17:40Z",
+    "fetched_at": "2026-10-30T04:35:47Z",
     "frequency": "per auction",
     "series": "mx.mbono10y.auction",
     "evidence": {
      "badge": "context",
      "reason": "Mexico's bond yield is context only; the peso is the primary instrument."
+    },
+    "degraded": {
+     "id": "banxico",
+     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+     "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "note": null
    }
@@ -1874,16 +1884,21 @@
      "proxy": false,
      "proxy_note": null,
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF43718",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
       "as_of": "2026-10-29",
-      "fetched_at": "2026-10-30T04:17:38Z",
+      "fetched_at": "2026-10-30T04:35:46Z",
       "frequency": "daily",
       "series": "mx.usdmxn.fix",
       "evidence": {
        "badge": "untested",
        "reason": "Primary Mexico instrument. Same as USD/BRL: reaction to events tested in em-macro, no lead test."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -1895,16 +1910,21 @@
      "proxy": false,
      "proxy_note": null,
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF61745",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF61745/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF61745,CF300,1",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-10-30T04:17:39Z",
+      "fetched_at": "2026-10-30T04:35:47Z",
       "frequency": "daily",
       "series": "mx.policy.target",
       "evidence": {
        "badge": "context",
        "reason": "Policy rate level."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -1916,16 +1936,21 @@
      "proxy": false,
      "proxy_note": null,
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF43783",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43783/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43783,CF300,1",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-10-30T04:17:39Z",
+      "fetched_at": "2026-10-30T04:35:47Z",
       "frequency": "daily",
       "series": "mx.tiie28",
       "evidence": {
        "badge": "context",
        "reason": "Interbank rate level."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     },
@@ -1937,16 +1962,21 @@
      "proxy": false,
      "proxy_note": null,
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF44071",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF44071/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
       "as_of": "2026-10-22",
-      "fetched_at": "2026-10-30T04:17:40Z",
+      "fetched_at": "2026-10-30T04:35:47Z",
       "frequency": "per auction",
       "series": "mx.mbono10y.auction",
       "evidence": {
        "badge": "context",
        "reason": "Mexico's bond yield is context only; the peso is the primary instrument."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     }
@@ -1996,9 +2026,9 @@
        "auto": "mx.survey.balance",
        "note": "the survey's 'balance económico' is the traditional public balance",
        "value": -3.85,
-       "source": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949/datos (Bmx-Token header)",
+       "source": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
        "as_of": "2026-09-01",
-       "source_label": "Banxico SIE API",
+       "source_label": "Banxico SIE (public chart data)",
        "verified": true
       },
       {
@@ -2016,16 +2046,21 @@
      "label": "Headline inflation, year end",
      "series": "mx.survey.inflation",
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:17:40Z",
+      "fetched_at": "2026-10-30T04:35:50Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "%",
@@ -2054,16 +2089,21 @@
      "label": "GDP growth",
      "series": "mx.survey.gdp",
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:17:40Z",
+      "fetched_at": "2026-10-30T04:35:52Z",
       "frequency": "monthly",
       "series": "mx.survey.gdp",
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "%",
@@ -2092,16 +2132,21 @@
      "label": "USD/MXN, year end",
      "series": "mx.survey.usdmxn",
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14770, SR14775, SR14773, SR14774, SR14777, SR14782, SR14780, SR14781 (median, sd, min, max for years t and t+1)",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14770,SR14775,SR14773,SR14774,SR14777,SR14782,SR14780,SR14781/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14770,SR14775,SR14773,SR14774,SR14777,SR14782,SR14780,SR14781,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:17:41Z",
+      "fetched_at": "2026-10-30T04:35:54Z",
       "frequency": "monthly",
       "series": "mx.survey.usdmxn",
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "MXN per USD",
@@ -2130,16 +2175,21 @@
      "label": "Public balance, % GDP",
      "series": "mx.survey.balance",
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:17:41Z",
+      "fetched_at": "2026-10-30T04:35:56Z",
       "frequency": "monthly",
       "series": "mx.survey.balance",
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      },
      "unit": "% of GDP",
@@ -2697,9 +2747,9 @@
    },
    "banxico_api": {
     "country": "MX",
-    "error": null,
+    "error": "HTTPError: 413 Client Error: Request Entity Too Large for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14659,SR14664,SR14662,SR14663,SR14666,SR14671,SR14669,SR14670,SR14673,SR14678,SR14676,SR14677,SR14680,SR14685,SR14683,SR14684,SR14687,SR14692,SR14690,SR14691,SR14694,SR14699,SR14697,SR14698,SR14701,SR14706,SR14704,SR14705,SR14708,SR14713,SR14711,SR14712/datos",
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:17:37Z",
+    "last_attempt": "2026-10-30T04:35:19Z",
     "last_success": "2026-10-30T04:17:37Z",
     "n_series": 9,
     "name": "Banxico SIE API",
@@ -2718,17 +2768,17 @@
      "mx.survey.balance",
      "mx.survey.policy_rate"
     ],
-    "state": "ok"
+    "state": "error"
    },
    "banxico_public": {
     "country": "MX",
     "error": null,
     "fallback_for": "banxico_api",
-    "last_attempt": "2026-10-30T04:17:42Z",
-    "last_success": "2026-10-30T02:39:25Z",
-    "n_series": 8,
+    "last_attempt": "2026-10-30T04:35:46Z",
+    "last_success": "2026-10-30T04:35:46Z",
+    "n_series": 9,
     "name": "Banxico SIE public chart data (fallback)",
-    "note": "not needed: banxico_api succeeded this run",
+    "note": null,
     "release": "as above",
     "secret": null,
     "secret_present": null,
@@ -2740,9 +2790,10 @@
      "mx.survey.inflation",
      "mx.survey.gdp",
      "mx.survey.usdmxn",
-     "mx.survey.balance"
+     "mx.survey.balance",
+     "mx.survey.policy_rate"
     ],
-    "state": "standby"
+    "state": "ok"
    },
    "bcb_focus": {
     "country": "BR",
@@ -3086,7 +3137,7 @@
     "state": "missing_secret"
    }
   },
-  "updated_at": "2026-10-30T04:29:51Z"
+  "updated_at": "2026-10-30T04:36:03Z"
  },
  "series_index": [
   "br.cot.brl",
@@ -3236,6 +3287,17 @@
   "za.cot.zar"
  ],
  "degraded": [
+  {
+   "id": "banxico",
+   "features": "USD/MXN FIX, Banxico target rate, TIIE 28d, Mbono 10y auction yield, Banxico survey (country page, USDMXN and MX10Y in the book, Crowd survey dispersion)",
+   "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+   "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself",
+   "secret": "BANXICO_TOKEN",
+   "primary": "banxico_api",
+   "primary_state": "error",
+   "fallback_name": "Banxico SIE public chart data (fallback)",
+   "fallback_state": "ok"
+  },
   {
    "id": "webstat",
    "features": "France OAT-Bund spread and OAT 10y (Today tile, France page, OATBUND in the book, scenario calculators)",

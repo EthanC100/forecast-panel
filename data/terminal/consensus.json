@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T04:34:38Z",
+ "generated_at": "2026-10-30T04:36:07Z",
  "year": 2026,
  "forecasts": {
   "FR": [],
@@ -226,9 +226,18 @@
     "dispersion": 0.18,
     "dispersion_kind": "sd across respondents",
     "source": "Banxico survey",
-    "source_id": "SIE SR14139, SR14144, SR14146, SR14151 (median, sd for years t and t+1)",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14146,SR14151/datos (Bmx-Token header)",
-    "titles": null,
+    "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
+    "titles": {
+     "SR14139": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mediana",
+     "SR14144": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Desviación estándar",
+     "SR14142": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mínimo",
+     "SR14143": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Máximo",
+     "SR14146": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mediana",
+     "SR14151": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14149": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mínimo",
+     "SR14150": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Máximo"
+    },
     "mine": null
    },
    {
@@ -251,9 +260,86 @@
     "dispersion": 0.17,
     "dispersion_kind": "sd across respondents",
     "source": "Banxico survey",
-    "source_id": "SIE SR14139, SR14144, SR14146, SR14151 (median, sd for years t and t+1)",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14146,SR14151/datos (Bmx-Token header)",
-    "titles": null,
+    "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
+    "titles": {
+     "SR14139": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mediana",
+     "SR14144": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Desviación estándar",
+     "SR14142": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mínimo",
+     "SR14143": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Máximo",
+     "SR14146": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mediana",
+     "SR14151": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14149": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mínimo",
+     "SR14150": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.policy_rate.2026",
+    "country": "MX",
+    "var": "policy_rate",
+    "label": "Policy (interbank) rate, Q4 close",
+    "year": 2026,
+    "unit": "% p.a.",
+    "median": 6.5,
+    "mean": null,
+    "sd": 0.04,
+    "min": 6.5,
+    "max": 6.75,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 6.5,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": 0.0,
+    "dispersion": 0.04,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14659, SR14666, SR14673, SR14680, SR14687, SR14694, SR14701, SR14708 (+ sd, min, max): close of quarter t+k, k chosen so the quarter is Q4",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14659,SR14666,SR14673,SR14680,SR14687,SR14694,SR14701,SR14708,CF300,1",
+    "titles": {
+     "SR14673": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mediana",
+     "SR14678": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Desviación estándar",
+     "SR14676": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mínimo",
+     "SR14677": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Máximo",
+     "SR14701": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mediana",
+     "SR14706": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Desviación estándar",
+     "SR14704": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mínimo",
+     "SR14705": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.policy_rate.2027",
+    "country": "MX",
+    "var": "policy_rate",
+    "label": "Policy (interbank) rate, Q4 close",
+    "year": 2027,
+    "unit": "% p.a.",
+    "median": 6.5,
+    "mean": null,
+    "sd": 0.26,
+    "min": 5.75,
+    "max": 7.25,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 6.5,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": 0.0,
+    "dispersion": 0.26,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14659, SR14666, SR14673, SR14680, SR14687, SR14694, SR14701, SR14708 (+ sd, min, max): close of quarter t+k, k chosen so the quarter is Q4",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14659,SR14666,SR14673,SR14680,SR14687,SR14694,SR14701,SR14708,CF300,1",
+    "titles": {
+     "SR14673": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mediana",
+     "SR14678": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Desviación estándar",
+     "SR14676": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mínimo",
+     "SR14677": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Máximo",
+     "SR14701": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mediana",
+     "SR14706": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Desviación estándar",
+     "SR14704": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mínimo",
+     "SR14705": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Máximo"
+    },
     "mine": null
    },
    {
@@ -276,9 +362,18 @@
     "dispersion": 0.21,
     "dispersion_kind": "sd across respondents",
     "source": "Banxico survey",
-    "source_id": "SIE SR14448, SR14453, SR14455, SR14460 (median, sd for years t and t+1)",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14448,SR14453,SR14455,SR14460/datos (Bmx-Token header)",
-    "titles": null,
+    "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459,CF300,1",
+    "titles": {
+     "SR14448": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mediana",
+     "SR14453": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Desviación estándar",
+     "SR14451": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mínimo",
+     "SR14452": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Máximo",
+     "SR14455": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mediana",
+     "SR14460": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Desviación estándar",
+     "SR14458": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mínimo",
+     "SR14459": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Máximo"
+    },
     "mine": null
    },
    {
@@ -301,9 +396,18 @@
     "dispersion": 0.25,
     "dispersion_kind": "sd across respondents",
     "source": "Banxico survey",
-    "source_id": "SIE SR14448, SR14453, SR14455, SR14460 (median, sd for years t and t+1)",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14448,SR14453,SR14455,SR14460/datos (Bmx-Token header)",
-    "titles": null,
+    "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459,CF300,1",
+    "titles": {
+     "SR14448": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mediana",
+     "SR14453": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Desviación estándar",
+     "SR14451": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mínimo",
+     "SR14452": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Máximo",
+     "SR14455": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mediana",
+     "SR14460": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Desviación estándar",
+     "SR14458": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mínimo",
+     "SR14459": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Máximo"
+    },
     "mine": null
    },
    {
@@ -326,9 +430,18 @@
     "dispersion": 0.25,
     "dispersion_kind": "sd across respondents",
     "source": "Banxico survey",
-    "source_id": "SIE SR14938, SR14943, SR14945, SR14950 (median, sd for years t and t+1)",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14938,SR14943,SR14945,SR14950/datos (Bmx-Token header)",
-    "titles": null,
+    "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
+    "titles": {
+     "SR14938": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mediana",
+     "SR14943": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Desviación estándar",
+     "SR14941": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mínimo",
+     "SR14942": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Máximo",
+     "SR14945": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mediana",
+     "SR14950": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14948": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mínimo",
+     "SR14949": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Máximo"
+    },
     "mine": null
    },
    {
@@ -351,9 +464,18 @@
     "dispersion": 0.31,
     "dispersion_kind": "sd across respondents",
     "source": "Banxico survey",
-    "source_id": "SIE SR14938, SR14943, SR14945, SR14950 (median, sd for years t and t+1)",
-    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14938,SR14943,SR14945,SR14950/datos (Bmx-Token header)",
-    "titles": null,
+    "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
+    "titles": {
+     "SR14938": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mediana",
+     "SR14943": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Desviación estándar",
+     "SR14941": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mínimo",
+     "SR14942": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Máximo",
+     "SR14945": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mediana",
+     "SR14950": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14948": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mínimo",
+     "SR14949": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Máximo"
+    },
     "mine": null
    }
   ]

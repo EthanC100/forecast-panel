@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T04:29:56Z",
+ "generated_at": "2026-10-30T04:36:09Z",
  "gauges": [
   {
    "id": "a",
@@ -1072,16 +1072,21 @@
       "report": "reports/crowd_lab.md"
      },
      "meta": {
-      "source": "Banxico SIE API",
+      "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150/datos (Bmx-Token header)",
+      "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:17:40Z",
+      "fetched_at": "2026-10-30T04:35:50Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
        "badge": "untested",
        "reason": "Banxico survey levels and dispersion are not tested as signals."
+      },
+      "degraded": {
+       "id": "banxico",
+       "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
+       "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
     }

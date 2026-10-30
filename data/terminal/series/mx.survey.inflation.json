@@ -4,9 +4,9 @@
  "country": "MX",
  "unit": "%",
  "frequency": "monthly",
- "source": "Banxico SIE API",
+ "source": "Banxico SIE (public chart data)",
  "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
- "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150/datos (Bmx-Token header)",
+ "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
  "fields": [
   "median",
   "sd",
@@ -17,7 +17,7 @@
   "date",
   "ref"
  ],
- "fetched_at": "2026-10-30T04:17:40Z",
+ "fetched_at": "2026-10-30T04:35:50Z",
  "updated_at": "2026-10-30T04:17:40Z",
  "n": 655,
  "first": "1999-01-01",

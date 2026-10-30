@@ -4,16 +4,16 @@
  "country": "MX",
  "unit": "MXN per USD",
  "frequency": "daily",
- "source": "Banxico SIE API",
+ "source": "Banxico SIE (public chart data)",
  "source_id": "SIE SF43718",
- "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos (Bmx-Token header)",
+ "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
  "key": [
   "date"
  ],
  "fields": [
   "value"
  ],
- "fetched_at": "2026-10-30T04:17:38Z",
+ "fetched_at": "2026-10-30T04:35:46Z",
  "updated_at": "2026-10-30T02:39:25Z",
  "n": 8789,
  "first": "1991-11-12",
