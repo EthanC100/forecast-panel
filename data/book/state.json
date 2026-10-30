@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T05:02:50Z",
+ "generated_at": "2026-10-30T08:23:39Z",
  "as_of": "2026-10-30",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
@@ -10,6 +10,7 @@
   "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows).",
   "Duration: 8 years for the US 10-year and the France-Germany spread, 5.5 years for Brazil's and Mexico's 10-year positions. Brazil's NTN-F and Mexico's Mbonos pay coupons near 10-13% (and yield 9-15%), so their modified duration is about 5-6 years, not the 8 of a low-coupon US or euro bond; using 8 would overstate their P&L by about 45%. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry.",
   "No carry or roll-down on bond and spread positions.",
+  "Gold and silver (XAUUSD, XAGUSD): spot in US dollars per troy ounce; long = long the metal. P&L = direction x notional x (P_t - P_0) / P_0. Metals pay no interest, so a long pays the US funding rate (Fed funds target, upper limit) on the notional, actual/360, and a short earns it.",
   "Costs are a full round trip charged at entry, so open P&L is liquidation value: FX a percentage of notional, bonds a yield amount times duration times notional.",
   "Sizing by risk: notional = risk amount / loss per unit of notional between the entry close and the stop (costs excluded)."
  ],
@@ -258,6 +259,58 @@
    "duration": 8,
    "cost": 1,
    "cost_unit": "bp of yield"
+  },
+  "XAUUSD": {
+   "name": "Gold (XAU/USD)",
+   "kind": "price",
+   "country": "GLOBAL",
+   "series": "gl.gold.wb_m",
+   "proxy": false,
+   "value": 4319.0,
+   "date": "2026-09-30",
+   "close_utc": "21:00",
+   "low_frequency": false,
+   "note": "Spot gold in US dollars per ounce. Falls back to the World Bank's monthly average (low frequency) when no daily price is available.",
+   "degraded": {
+    "id": "gold",
+    "effect": "Monthly average prices from the World Bank instead of daily spot: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old.",
+    "upgrade": "none to add: Stooq and LBMA refuse automated requests from some networks; the book and the Gold page switch back to daily prices by themselves on the first run either answers"
+   },
+   "scale": null,
+   "favourable": 1,
+   "rate_usd": "us.fed.upper",
+   "rate_local": null,
+   "maturity": null,
+   "unit": "USD per troy ounce",
+   "duration": null,
+   "cost": 0.1,
+   "cost_unit": "% of notional"
+  },
+  "XAGUSD": {
+   "name": "Silver (XAG/USD)",
+   "kind": "price",
+   "country": "GLOBAL",
+   "series": "gl.silver.wb_m",
+   "proxy": false,
+   "value": 64.6,
+   "date": "2026-09-30",
+   "close_utc": "21:00",
+   "low_frequency": false,
+   "note": "Spot silver in US dollars per ounce. Falls back to the World Bank's monthly average when no daily price is available.",
+   "degraded": {
+    "id": "gold",
+    "effect": "Monthly average prices from the World Bank instead of daily spot: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old.",
+    "upgrade": "none to add: Stooq and LBMA refuse automated requests from some networks; the book and the Gold page switch back to daily prices by themselves on the first run either answers"
+   },
+   "scale": null,
+   "favourable": 1,
+   "rate_usd": "us.fed.upper",
+   "rate_local": null,
+   "maturity": null,
+   "unit": "USD per troy ounce",
+   "duration": null,
+   "cost": 0.2,
+   "cost_unit": "% of notional"
   }
  },
  "equity": {
@@ -432,6 +485,34 @@
     "to": "2026-10-28",
     "pnl_usd": -7520.0,
     "return_pct": -7.52
+   }
+  },
+  {
+   "code": "XAUUSD",
+   "name": "Gold (XAU/USD)",
+   "series": "gl.gold.wb_m",
+   "proxy": false,
+   "description": "long gold",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-31",
+    "to": "2026-09-30",
+    "pnl_usd": 2915.07,
+    "return_pct": 2.92
+   }
+  },
+  {
+   "code": "XAGUSD",
+   "name": "Silver (XAG/USD)",
+   "series": "gl.silver.wb_m",
+   "proxy": false,
+   "description": "long silver",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-31",
+    "to": "2026-09-30",
+    "pnl_usd": 27252.56,
+    "return_pct": 27.25
    }
   }
  ],

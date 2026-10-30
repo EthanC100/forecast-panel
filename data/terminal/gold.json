@@ -1,0 +1,391 @@
+{
+ "generated_at": "2026-10-30T08:23:47Z",
+ "as_of": "2026-10-30",
+ "prices": {
+  "gold": {
+   "value": 4319.0,
+   "date": "2026-09-30",
+   "series": "gl.gold.wb_m",
+   "source": "World Bank Commodity Price Data (Pink Sheet)",
+   "source_id": "CMO monthly: Gold",
+   "url": "https://www.worldbank.org/en/research/commodity-markets",
+   "frequency": "monthly",
+   "degraded": "No daily price is stored (Stooq and LBMA unreachable), so this is the World Bank's monthly average.",
+   "unit": "USD per troy ounce",
+   "chg_1w_pct": null,
+   "chg_1m_pct": -2.09,
+   "chg_1y_pct": 17.75,
+   "z_1y": -0.4,
+   "high_1y": 5020.0,
+   "low_1y": 4058.0,
+   "history_from": "1960-01-31"
+  },
+  "silver": {
+   "value": 64.6,
+   "date": "2026-09-30",
+   "series": "gl.silver.wb_m",
+   "source": "World Bank Commodity Price Data (Pink Sheet)",
+   "source_id": "CMO monthly: Silver",
+   "url": "https://www.worldbank.org/en/research/commodity-markets",
+   "frequency": "monthly",
+   "degraded": "No daily price is stored (Stooq and LBMA unreachable), so this is the World Bank's monthly average.",
+   "unit": "USD per troy ounce",
+   "chg_1w_pct": null,
+   "chg_1m_pct": -1.22,
+   "chg_1y_pct": 50.93,
+   "z_1y": -0.31,
+   "high_1y": 92.1,
+   "low_1y": 49.4,
+   "history_from": "1960-01-31"
+  },
+  "ratio": null
+ },
+ "drivers": [
+  {
+   "id": "real_yield",
+   "name": "Real interest rates (US 10-year TIPS yield)",
+   "value": 2.67,
+   "date": "2026-10-28",
+   "unit": "%",
+   "chg_1m": -23,
+   "chg_unit": "bp",
+   "series": "us.tips10",
+   "source": "FRED API",
+   "source_id": "FRED DFII10",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DFII10",
+   "frequency": "daily",
+   "reading": "The 10-year real yield is 2.67%, down 23bp over the past month. Gold pays no interest, so a higher real yield raises the cost of holding it: rising real yields are a headwind for gold and falling ones a tailwind. gold-events finds the link is not stable: gold's sensitivity to real yields was near zero before 2013, strong in 2014-2021 and weaker now.",
+   "finding_url": "https://github.com/EthanC100/gold-events#findings"
+  },
+  {
+   "id": "dollar",
+   "name": "The US dollar (broad trade-weighted index)",
+   "value": 121.3202,
+   "date": "2026-10-23",
+   "unit": "index Jan-2006=100",
+   "chg_1m": 1.0,
+   "chg_unit": "%",
+   "series": "us.usd.broad",
+   "source": "FRED API",
+   "source_id": "FRED DTWEXBGS",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXBGS",
+   "frequency": "daily",
+   "reading": "The dollar index is up 1.0% over the past month. Gold is priced in dollars, so a weaker dollar makes it cheaper for buyers paying in other currencies and tends to lift its dollar price; a stronger dollar does the reverse."
+  },
+  {
+   "id": "gpr",
+   "name": "War and political tension (Geopolitical Risk index)",
+   "value": 181.4,
+   "date": "2026-10-26",
+   "unit": "7-day average; 100 = the 1985-2019 average",
+   "chg_1m": 18.1,
+   "chg_unit": "points",
+   "percentile_10y": 88,
+   "series": "gl.gpr",
+   "source": "Caldara and Iacoviello, Geopolitical Risk Index",
+   "source_id": "GPRD",
+   "url": "https://www.matteoiacoviello.com/gpr.htm",
+   "frequency": "daily",
+   "reading": "The index averaged 181 over the past week (100 is the 1985-2019 average), higher than 88% of days in the past ten years. Gold often gains when tension spikes because investors buy it as a store of value outside the financial system. gold-events finds the index helps explain gold's weekly moves alongside real yields and the dollar, and that its effect has grown since 2020.",
+   "finding_url": "https://github.com/EthanC100/gold-events#findings"
+  },
+  {
+   "id": "cb_buying",
+   "name": "Central-bank gold buying (IMF reporters)",
+   "value": 20.34,
+   "date": "2026-09-30",
+   "unit": "tonnes in the month",
+   "last_12m_tonnes": 272.4,
+   "prior_12m_tonnes": 294.6,
+   "chg_1m": null,
+   "chg_unit": null,
+   "series": "gl.cbgold",
+   "source": "IMF International Reserves and Foreign Currency Liquidity (IRFCL)",
+   "source_id": "IRFCLDT1_IRFCL56V_FTO",
+   "url": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,IRFCL/.IRFCLDT1_IRFCL56V_FTO..M?startPeriod=1999-01",
+   "frequency": "monthly",
+   "reading": "Central banks reporting to the IMF added 272 tonnes in the 12 months to 2026-09, against 295 tonnes in the 12 months before. Official buying is demand that does not depend on interest rates; gold-events finds last month's buying does not help predict next week's move, so read it as background, not a timing signal. The latest months are incomplete until every reporter files, so they understate buying.",
+   "finding_url": "https://github.com/EthanC100/gold-events#findings"
+  }
+ ],
+ "model": {
+  "available": true,
+  "log_date": "2026-10-28",
+  "version": "v2-rolling",
+  "data_as_of": "2026-10-27",
+  "pred_gold_5d_pct": 0.27,
+  "pred_silver_5d_pct": -0.71,
+  "source_url": "https://github.com/EthanC100/gold-events/blob/main/data/forward_log.csv",
+  "scorecard_url": "https://github.com/EthanC100/gold-events/blob/main/reports/forward_scorecard.md",
+  "n_scored": 0,
+  "direction_hits": 0,
+  "note": "Expected move over the next 5 trading days from the frozen gold-events model (v2-rolling): its regression on last week's changes in real yields, the dollar, VIX and the Geopolitical Risk index. The model predicts log returns; shown here as percentage changes. Out of sample it has been scored on 0 weeks so far.",
+  "recent": [
+   {
+    "log_date": "2026-10-28",
+    "version": "v2-rolling",
+    "data_as_of": "2026-10-27",
+    "pred_gold_5d_pct": 0.27,
+    "pred_silver_5d_pct": -0.71,
+    "realised_gold_5d_pct": null,
+    "realised_silver_5d_pct": null,
+    "gpr_level": 165.3,
+    "note": "prediction uses last week's control changes as the coming week's input"
+   }
+  ]
+ },
+ "episodes": [
+  {
+   "id": "gfc-2008",
+   "name": "2008: Lehman Brothers fails and the financial crisis",
+   "start": "2008-09-15",
+   "summary": "Lehman Brothers filed for bankruptcy and the financial crisis spread; the Fed cut rates to near zero in December 2008 and began buying assets.",
+   "cites": [
+    {
+     "label": "Federal Reserve History: The Great Recession",
+     "url": "https://www.federalreservehistory.org/essays/great-recession-of-200709"
+    },
+    {
+     "label": "FOMC statement, 16 December 2008 (target range 0 to 1/4 percent)",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081216b.htm"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": -3.81,
+    "silver_pct_1m": -28.77,
+    "gold_pct_6m": 10.13,
+    "silver_pct_6m": -10.27,
+    "gold_pct_24m": 51.49,
+    "silver_pct_24m": 40.41,
+    "real_yield_bp_6m": 9.0,
+    "dollar_pct_6m": 12.82,
+    "cb_tonnes_12m": -43.2
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  },
+  {
+   "id": "peak-2011",
+   "name": "2011: rates pinned near zero, gold's post-crisis peak",
+   "start": "2011-08-09",
+   "summary": "The FOMC said it expected to keep rates exceptionally low at least through mid-2013. Gold rose into a peak a few weeks later, then fell over the following years.",
+   "cites": [
+    {
+     "label": "FOMC statement, 9 August 2011",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20110809a.htm"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": 12.65,
+    "silver_pct_1m": 0.79,
+    "gold_pct_6m": 10.93,
+    "silver_pct_6m": -10.03,
+    "gold_pct_24m": -14.05,
+    "silver_pct_24m": -42.22,
+    "real_yield_bp_6m": -41.0,
+    "dollar_pct_6m": 2.76,
+    "cb_tonnes_12m": 453.1
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  },
+  {
+   "id": "taper-2013",
+   "name": "2013: the taper tantrum",
+   "start": "2013-05-22",
+   "summary": "Chairman Bernanke told Congress the Fed could slow its bond purchases; real yields rose sharply over the summer.",
+   "cites": [
+    {
+     "label": "Testimony by Chairman Bernanke, 22 May 2013",
+     "url": "https://www.federalreserve.gov/newsevents/testimony/bernanke20130522a.htm"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": -9.74,
+    "silver_pct_1m": -16.93,
+    "gold_pct_6m": -14.25,
+    "silver_pct_6m": -18.11,
+    "gold_pct_24m": -19.42,
+    "silver_pct_24m": -33.86,
+    "real_yield_bp_6m": 98.0,
+    "dollar_pct_6m": 0.31,
+    "cb_tonnes_12m": 180.0
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  },
+  {
+   "id": "covid-2020",
+   "name": "2020: Covid shock and emergency rate cuts",
+   "start": "2020-03-15",
+   "summary": "The Fed cut its target range to 0 to 1/4 percent in an emergency Sunday move and restarted large-scale bond buying.",
+   "cites": [
+    {
+     "label": "FOMC statement, 15 March 2020",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": 5.39,
+    "silver_pct_1m": -15.64,
+    "gold_pct_6m": 20.35,
+    "silver_pct_6m": 43.58,
+    "gold_pct_24m": 21.98,
+    "silver_pct_24m": 41.34,
+    "real_yield_bp_6m": -102.0,
+    "dollar_pct_6m": -3.61,
+    "cb_tonnes_12m": 176.7
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  },
+  {
+   "id": "hikes-2022",
+   "name": "2022: the Fed starts its fastest hiking cycle in decades",
+   "start": "2022-03-16",
+   "summary": "The FOMC raised rates for the first time since 2018 and went on raising through 2023; real yields went from negative to strongly positive.",
+   "cites": [
+    {
+     "label": "FOMC statement, 16 March 2022",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": 4.36,
+    "silver_pct_1m": 4.26,
+    "gold_pct_6m": -9.43,
+    "silver_pct_6m": -19.57,
+    "gold_pct_24m": 16.27,
+    "silver_pct_24m": 4.26,
+    "real_yield_bp_6m": 164.0,
+    "dollar_pct_6m": 6.15,
+    "cb_tonnes_12m": 354.6
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  },
+  {
+   "id": "cuts-2024",
+   "name": "2024: the Fed's first cut of the cycle",
+   "start": "2024-09-18",
+   "summary": "The FOMC cut its target range by half a percentage point, its first cut since 2020.",
+   "cites": [
+    {
+     "label": "FOMC statement, 18 September 2024",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": 8.91,
+    "silver_pct_1m": 13.68,
+    "gold_pct_6m": 20.77,
+    "silver_pct_6m": 16.49,
+    "gold_pct_24m": 74.86,
+    "silver_pct_24m": 126.67,
+    "real_yield_bp_6m": 41.0,
+    "dollar_pct_6m": 3.45,
+    "cb_tonnes_12m": 308.5
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  },
+  {
+   "id": "us-election-2024",
+   "name": "2024: the US presidential election",
+   "start": "2024-11-05",
+   "summary": "The 2024 US presidential and congressional elections were held on 5 November 2024.",
+   "cites": [
+    {
+     "label": "FEC: election results and voting information",
+     "url": "https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": -1.56,
+    "silver_pct_1m": -4.94,
+    "gold_pct_6m": 23.01,
+    "silver_pct_6m": 1.23,
+    "gold_pct_24m": null,
+    "silver_pct_24m": null,
+    "real_yield_bp_6m": 1.0,
+    "dollar_pct_6m": -2.05,
+    "cb_tonnes_12m": 269.2
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  },
+  {
+   "id": "rally-2025",
+   "name": "2025: the record rally",
+   "start": "2025-01-02",
+   "summary": "The World Gold Council reports that gold demand hit record levels in 2025, topping 5,000 tonnes including OTC, in a year with 53 all-time highs in the gold price. US reciprocal tariffs were announced in April 2025.",
+   "cites": [
+    {
+     "label": "World Gold Council: Gold Demand Trends, Q4 and full year 2025",
+     "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-full-year-2025"
+    },
+    {
+     "label": "The White House: reciprocal tariff order, April 2025",
+     "url": "https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/"
+    }
+   ],
+   "moves": {
+    "gold_pct_1m": 9.33,
+    "silver_pct_1m": 4.55,
+    "gold_pct_6m": 26.13,
+    "silver_pct_6m": 22.4,
+    "gold_pct_24m": null,
+    "silver_pct_24m": null,
+    "real_yield_bp_6m": -22.0,
+    "dollar_pct_6m": -7.77,
+    "cb_tonnes_12m": 259.0
+   },
+   "basis": "monthly averages",
+   "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
+  }
+ ],
+ "upcoming": [
+  {
+   "date": "2026-11-03",
+   "title": "US midterm elections",
+   "kind": "election",
+   "importance": 3,
+   "summary": "All 435 House seats and a third of the Senate are elected; the result decides which party controls each chamber of Congress.",
+   "what_to_watch": "Which party controls the House and the Senate, and how real yields and the dollar react in the days after. gold-events' study of every midterm since 2002 gives the average gold move afterwards (below).",
+   "source_url": "https://www.usa.gov/midterm-elections",
+   "study": {
+    "n": 6,
+    "raw_1d": -0.83,
+    "net_1d": -0.75,
+    "raw_5d": 1.1,
+    "net_5d": 0.87,
+    "raw_20d": 2.26,
+    "net_20d": 1.79,
+    "unit": "% (log returns)",
+    "url": "https://github.com/EthanC100/gold-events/blob/main/reports/midterms.md",
+    "note": "Average gold move after every US midterm since 2002 (1994 and 1998 lack data); net = after removing the part explained by the dollar and real yields over the same days. gold-events' verdict: one or two years drive the averages, so there is no reliable midterm effect."
+   }
+  },
+  {
+   "date": "2026-12-09",
+   "first_day": "2026-12-08",
+   "title": "FOMC rate decision and projections",
+   "kind": "fed",
+   "importance": 3,
+   "what_to_watch": "The rate decision and the statement. A cut, or a signal that cuts are coming, tends to lower real yields and weaken the dollar, which supports gold; a hawkish surprise does the opposite. This meeting also publishes the Fed's economic projections, including the 'dot plot' of expected rates.",
+   "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "date": "2027-01-27",
+   "first_day": "2027-01-26",
+   "title": "FOMC rate decision",
+   "kind": "fed",
+   "importance": 2,
+   "what_to_watch": "The rate decision and the statement. A cut, or a signal that cuts are coming, tends to lower real yields and weaken the dollar, which supports gold; a hawkish surprise does the opposite.",
+   "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  }
+ ],
+ "not_included": [
+  "US CPI and jobs-report dates: the BLS release calendar refuses automated requests (HTTP 403)."
+ ]
+}

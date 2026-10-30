@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T04:29:51Z",
+ "generated_at": "2026-10-30T08:23:38Z",
  "horizon": "2027-10-31",
  "events": [
   {
@@ -8833,7 +8833,7 @@
  "notes": [
   "France: no censure motion is scheduled as of 2026-10-29. Motions are voted 48 hours after they are filed; add one here when it is tabled.",
   "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml.",
-  "GDELT attention refresh stopped at its 9-minute budget; remaining queries keep their last values."
+  "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values."
  ],
  "attention_definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away",
  "sources": {

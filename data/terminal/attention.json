@@ -166,9 +166,9 @@
   "Mexico 2027 budget Chamber of Deputies": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "error": "RuntimeError: GDELT 200: Your search contained a keyword that was too short.\n"
   }
  },
- "updated_at": "2026-10-30T04:29:50Z",
+ "updated_at": "2026-10-30T08:23:38Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }

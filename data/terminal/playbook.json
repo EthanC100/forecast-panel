@@ -1,0 +1,2799 @@
+{
+ "generated_at": "2026-10-30T08:23:48Z",
+ "disclaimer": "These show what followed, not proof of cause.",
+ "definitions": {
+  "inflation": "12-month CPI inflation in the horizon month, % (annual average when only annual data exist)",
+  "inflation_chg_pp": "change in inflation since the month before the episode, percentage points",
+  "growth": "real GDP growth over four quarters in the quarter containing the horizon date, % (calendar year when only annual data exist)",
+  "fx_pct": "change in the currency's value against the US dollar since the month before the episode, %; positive = stronger",
+  "y10": "10-year government yield in the horizon month, %",
+  "y10_bp": "change in the 10-year yield since the month before the episode, basis points",
+  "position": "0 = interventionist / Keynesian, 100 = orthodox / monetarist",
+  "against": "Horizons' reading of which school the episode is hardest to square with; an interpretation, not a finding"
+ },
+ "schools": [
+  "Keynesian",
+  "Monetarist",
+  "Austrian",
+  "Supply-side",
+  "MMT"
+ ],
+ "countries": {
+  "BR": {
+   "approach": {
+    "summary": "A centre-left government running mixed policy: a rules-based fiscal framework (looser than the 2016 spending cap it replaced) and an independent, inflation-targeting central bank, alongside a large role for directed credit and redistributive spending and tax measures.",
+    "policies": [
+     {
+      "name": "Fiscal framework (spending corridor and primary target)",
+      "position": 55,
+      "why": "Rules-based: real federal spending growth is held between 0.6% and 2.5% a year and tied to revenue and to an annual primary-balance target with a 0.25-point tolerance band. Looser than the zero-real-growth cap of 2016 that it replaced, and the Senate's fiscal institution doubts the 2027 target can be met without freezing spending.",
+      "sources": [
+       {
+        "key": "imf_br_2025",
+        "label": "IMF, Brazil: 2025 Article IV Consultation, staff report (IMF Country Report, 17 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/16/brazil-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568678",
+        "date": "2025-07-17"
+       },
+       {
+        "key": "ifi_raf116",
+        "label": "IFI (Brazilian Senate), Relatório de Acompanhamento Fiscal nº 116",
+        "url": "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf",
+        "date": "2026-09"
+       }
+      ]
+     },
+     {
+      "name": "Monetary policy (Banco Central do Brasil, inflation targeting)",
+      "position": 85,
+      "why": "Orthodox: the central bank answered inflation expectations rising above the target band with a tightening cycle from September 2024, 450 basis points of hikes to 15% by June 2025; the Selic target has since been cut (see the stored series for today's level).",
+      "sources": [
+       {
+        "key": "imf_br_2025",
+        "label": "IMF, Brazil: 2025 Article IV Consultation, staff report (IMF Country Report, 17 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/16/brazil-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568678",
+        "date": "2025-07-17"
+       },
+       {
+        "key": "bcb_selic",
+        "label": "Banco Central do Brasil, SGS series 432 (Selic target), stored as br.selic.target",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json",
+        "date": "daily"
+       }
+      ]
+     },
+     {
+      "name": "Directed (earmarked) credit through state banks and BNDES",
+      "position": 25,
+      "why": "Interventionist: credit at regulated or subsidised rates is a large share of lending (42.2% in January 2025 by the IMF's count, below its 2016-17 peak of half), and the IMF estimates that policy-rate changes pass through to it at only about a fifth of the rate seen in market lending.",
+      "sources": [
+       {
+        "key": "imf_br_2025",
+        "label": "IMF, Brazil: 2025 Article IV Consultation, staff report (IMF Country Report, 17 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/16/brazil-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568678",
+        "date": "2025-07-17"
+       }
+      ]
+     },
+     {
+      "name": "Minimum wage, benefits and income-tax changes",
+      "position": 35,
+      "why": "Redistributive: benefits and pensions are linked to the minimum wage (its real growth is now capped at 2.5% a year), and an income-tax reform adds a minimum tax of up to 10% for individuals earning over R$50,000 a month.",
+      "sources": [
+       {
+        "key": "imf_br_2025",
+        "label": "IMF, Brazil: 2025 Article IV Consultation, staff report (IMF Country Report, 17 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/16/brazil-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568678",
+        "date": "2025-07-17"
+       }
+      ]
+     },
+     {
+      "name": "Consumption-tax reform (dual VAT, CBS and IBS)",
+      "position": 70,
+      "why": "Efficiency-oriented and broadly supported by orthodox economists: Complementary Law 214/2025 replaces several cascading consumption taxes with a dual VAT, phased in from 2027.",
+      "sources": [
+       {
+        "key": "imf_br_2025",
+        "label": "IMF, Brazil: 2025 Article IV Consultation, staff report (IMF Country Report, 17 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/16/brazil-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568678",
+        "date": "2025-07-17"
+       }
+      ]
+     }
+    ]
+   },
+   "episodes": [
+    {
+     "id": "br-collor-1990",
+     "country": "BR",
+     "name": "Collor Plan",
+     "start": "1990-03-16",
+     "end": "1991-05-31",
+     "kind": "heterodox",
+     "summary": "A shock plan on the new president's first full day: 80% of private financial assets were frozen for 18 months, wages and prices were temporarily frozen, the cruzeiro replaced the cruzado novo, and the exchange rate was floated. Inflation was not durably beaten: a second Collor plan followed, then the Marcílio plan from May 1991.\n",
+     "against": [
+      {
+       "school": "Monetarist",
+       "why": "A drastic squeeze on liquid money did not end inflation for long. Brazilian economists read this as inertial inflation driven by indexation, which a money squeeze alone does not break.\n"
+      }
+     ],
+     "currency": "real",
+     "cites": [
+      {
+       "key": "w_collor",
+       "label": "Wikipedia, Plano Collor",
+       "url": "https://en.wikipedia.org/wiki/Plano_Collor",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "baer2014",
+       "label": "Werner Baer, The Brazilian Economy: Growth and Development (7th edition) (2014)",
+       "author": "Werner Baer",
+       "title": "The Brazilian Economy: Growth and Development (7th edition)",
+       "year": 2014
+      },
+      {
+       "key": "bresser_nakano1987",
+       "label": "Luiz Carlos Bresser-Pereira and Yoshiaki Nakano, The Theory of Inertial Inflation: The Foundation of Economic Reform in Brazil and Argentina (1987)",
+       "author": "Luiz Carlos Bresser-Pereira and Yoshiaki Nakano",
+       "title": "The Theory of Inertial Inflation: The Foundation of Economic Reform in Brazil and Argentina",
+       "year": 1987
+      }
+     ],
+     "start_values": {
+      "inflation": 3701.3,
+      "growth": 3.2
+     },
+     "outcomes": {
+      "m6": {
+       "date": "1990-09",
+       "inflation": 3304.7,
+       "inflation_chg_pp": -396.6,
+       "growth": -4.2,
+       "fx_pct": -68.7,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      },
+      "m24": {
+       "date": "1992-03",
+       "inflation": 567.2,
+       "inflation_chg_pp": -3134.1,
+       "growth": -0.5,
+       "fx_pct": -98.7,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       },
+       "m24": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.br.gdp_a",
+        "freq": "annual",
+        "source": "IMF World Economic Outlook (DataMapper)",
+        "source_id": "WEO NGDP_RPCH BRA",
+        "url": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/BRA"
+       },
+       "m24": {
+        "series": "hist.br.gdp_a",
+        "freq": "annual",
+        "source": "IMF World Economic Outlook (DataMapper)",
+        "source_id": "WEO NGDP_RPCH BRA",
+        "url": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/BRA"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       },
+       "m24": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "reason": "no free data",
+        "tried": [
+         "br.td.pre_longest starts 2004-12-31"
+        ]
+       },
+       "m24": {
+        "reason": "no free data",
+        "tried": [
+         "br.td.pre_longest starts 2004-12-31"
+        ]
+       }
+      }
+     }
+    },
+    {
+     "id": "br-real-plan-1994",
+     "country": "BR",
+     "name": "Real Plan",
+     "start": "1994-07-01",
+     "kind": "orthodox",
+     "summary": "A plan that treated inflation as both a fiscal problem and an inertial one: a non-monetary unit of account (the URV, worth about one US dollar) let prices realign before the real replaced it on 1 July 1994. The real was kept close to the dollar and depreciated gradually until the maxi-devaluation of the January 1999 crisis. Hyperinflation ended.\n",
+     "against": [
+      {
+       "school": "MMT",
+       "why": "Ending years of high inflation took fiscal correction and a nominal anchor, the reverse of the view that a currency issuer's deficits matter only once real resources run out.\n"
+      }
+     ],
+     "currency": "real",
+     "cites": [
+      {
+       "key": "w_real_plan",
+       "label": "Wikipedia, Plano Real",
+       "url": "https://en.wikipedia.org/wiki/Plano_Real",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "w_real",
+       "label": "Wikipedia, Brazilian real",
+       "url": "https://en.wikipedia.org/wiki/Brazilian_real",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "baer2014",
+       "label": "Werner Baer, The Brazilian Economy: Growth and Development (7th edition) (2014)",
+       "author": "Werner Baer",
+       "title": "The Brazilian Economy: Growth and Development (7th edition)",
+       "year": 2014
+      },
+      {
+       "key": "arida_lara1985",
+       "label": "Persio Arida and André Lara-Resende, Inertial Inflation and Monetary Reform in Brazil (in J. Williamson, ed., Inflation and Indexation: Argentina, Brazil and Israel) (1985)",
+       "author": "Persio Arida and André Lara-Resende",
+       "title": "Inertial Inflation and Monetary Reform in Brazil (in J. Williamson, ed., Inflation and Indexation: Argentina, Brazil and Israel)",
+       "year": 1985
+      }
+     ],
+     "start_values": {
+      "inflation": 4922.6,
+      "growth": 4.7
+     },
+     "outcomes": {
+      "m6": {
+       "date": "1995-01",
+       "inflation": 631.5,
+       "inflation_chg_pp": -4291.1,
+       "growth": 4.4,
+       "fx_pct": -1.3,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      },
+      "m24": {
+       "date": "1996-07",
+       "inflation": 14.8,
+       "inflation_chg_pp": -4907.8,
+       "growth": 2.2,
+       "fx_pct": -17.0,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       },
+       "m24": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.br.gdp_a",
+        "freq": "annual",
+        "source": "IMF World Economic Outlook (DataMapper)",
+        "source_id": "WEO NGDP_RPCH BRA",
+        "url": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/BRA"
+       },
+       "m24": {
+        "series": "hist.br.gdp_a",
+        "freq": "annual",
+        "source": "IMF World Economic Outlook (DataMapper)",
+        "source_id": "WEO NGDP_RPCH BRA",
+        "url": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/BRA"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       },
+       "m24": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "reason": "no free data",
+        "tried": [
+         "br.td.pre_longest starts 2004-12-31"
+        ]
+       },
+       "m24": {
+        "reason": "no free data",
+        "tried": [
+         "br.td.pre_longest starts 2004-12-31"
+        ]
+       }
+      }
+     }
+    },
+    {
+     "id": "br-lula-orthodox-2003",
+     "country": "BR",
+     "name": "Lula's first-term orthodoxy",
+     "start": "2003-01-01",
+     "end": "2006-12-31",
+     "kind": "orthodox",
+     "summary": "A left-wing government kept its predecessor's macroeconomic framework of inflation targeting, a floating exchange rate and primary-surplus targets, with high real interest rates early on, during a commodity boom.\n",
+     "against": [
+      {
+       "school": "Keynesian",
+       "why": "Tight fiscal and monetary policy in a confidence crisis was followed by recovery rather than a deeper slump (with a commodity boom helping, so the test is not clean).\n"
+      }
+     ],
+     "currency": "real",
+     "cites": [
+      {
+       "key": "giambiagi2011",
+       "label": "Fabio Giambiagi, André Villela, Lavinia Barros de Castro and Jennifer Hermann (orgs), Economia Brasileira Contemporânea: 1945–2010 (2nd edition) (2011)",
+       "author": "Fabio Giambiagi, André Villela, Lavinia Barros de Castro and Jennifer Hermann (orgs)",
+       "title": "Economia Brasileira Contemporânea: 1945–2010 (2nd edition)",
+       "year": 2011
+      },
+      {
+       "key": "baer2014",
+       "label": "Werner Baer, The Brazilian Economy: Growth and Development (7th edition) (2014)",
+       "author": "Werner Baer",
+       "title": "The Brazilian Economy: Growth and Development (7th edition)",
+       "year": 2014
+      }
+     ],
+     "start_values": {
+      "inflation": 12.5,
+      "growth": 5.2
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2003-07",
+       "inflation": 15.4,
+       "inflation_chg_pp": 2.9,
+       "growth": 0.7,
+       "fx_pct": 26.9,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      },
+      "m24": {
+       "date": "2005-01",
+       "inflation": 7.4,
+       "inflation_chg_pp": -5.1,
+       "growth": 5.8,
+       "fx_pct": 35.3,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       },
+       "m24": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       },
+       "m24": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       },
+       "m24": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "reason": "no free data",
+        "tried": [
+         "br.td.pre_longest starts 2004-12-31"
+        ]
+       },
+       "m24": {
+        "reason": "no free data",
+        "tried": [
+         "br.td.pre_longest starts 2004-12-31"
+        ]
+       }
+      }
+     }
+    },
+    {
+     "id": "br-new-economic-matrix-2011",
+     "country": "BR",
+     "name": "New Economic Matrix",
+     "start": "2011-09-01",
+     "end": "2014-12-31",
+     "kind": "heterodox",
+     "summary": "Developmentalist measures under President Rousseff: the Selic was cut from 12.5% to 7.25% between August 2011 and April 2013, the real was allowed to weaken, industry got tax breaks, BNDES credit expanded and electricity tariffs were cut. The 2014–17 crisis followed.\n",
+     "against": [
+      {
+       "school": "Keynesian",
+       "why": "Demand stimulus through cheaper credit and tax breaks was followed by the deepest recession on record rather than sustained growth.\n"
+      },
+      {
+       "school": "MMT",
+       "why": "Pushing rates down and directing credit while the economy was near capacity was followed by higher inflation and a fiscal deterioration (see what followed).\n"
+      }
+     ],
+     "currency": "real",
+     "cites": [
+      {
+       "key": "w_nem",
+       "label": "Wikipédia (pt), Nova matriz econômica",
+       "url": "https://pt.wikipedia.org/wiki/Nova_matriz_econ%C3%B4mica",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "w_br_crisis",
+       "label": "Wikipedia, 2014–2017 Brazilian economic crisis",
+       "url": "https://en.wikipedia.org/wiki/2014%E2%80%932017_Brazilian_economic_crisis",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "barbosa2017",
+       "label": "Fernando de Holanda Barbosa Filho, A crise econômica de 2014/2017 (Estudos Avançados 31(89)) (2017)",
+       "author": "Fernando de Holanda Barbosa Filho",
+       "title": "A crise econômica de 2014/2017 (Estudos Avançados 31(89))",
+       "year": 2017
+      }
+     ],
+     "start_values": {
+      "inflation": 7.2,
+      "growth": 3.6,
+      "y10": 11.58
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2012-03",
+       "inflation": 5.2,
+       "inflation_chg_pp": -2.0,
+       "growth": 0.3,
+       "fx_pct": -11.1,
+       "y10": 11.15,
+       "y10_bp": -43
+      },
+      "m24": {
+       "date": "2013-09",
+       "inflation": 5.9,
+       "inflation_chg_pp": -1.4,
+       "growth": 2.4,
+       "fx_pct": -29.7,
+       "y10": 11.7,
+       "y10_bp": 12
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       },
+       "m24": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       },
+       "m24": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       },
+       "m24": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "br.td.pre_longest",
+        "freq": "monthly",
+        "source": "Tesouro Direto (Tesouro Transparente)",
+        "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
+        "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv"
+       },
+       "m24": {
+        "series": "br.td.pre_longest",
+        "freq": "monthly",
+        "source": "Tesouro Direto (Tesouro Transparente)",
+        "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
+        "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv"
+       }
+      }
+     }
+    },
+    {
+     "id": "br-adjustment-2015",
+     "country": "BR",
+     "name": "2015–16 recession and adjustment",
+     "start": "2015-01-01",
+     "end": "2016-12-31",
+     "kind": "crisis",
+     "summary": "A new finance minister, Joaquim Levy, attempted a fiscal adjustment while the central bank kept raising the Selic. GDP fell by 3.5% in 2015 and 3.3% in 2016, alongside a political crisis that ended in President Rousseff's impeachment.\n",
+     "against": [
+      {
+       "school": "Austrian",
+       "why": "Cutting spending and raising rates in a slump coincided with a deeper contraction, not a quick cleansing recovery.\n"
+      }
+     ],
+     "currency": "real",
+     "cites": [
+      {
+       "key": "w_br_crisis",
+       "label": "Wikipedia, 2014–2017 Brazilian economic crisis",
+       "url": "https://en.wikipedia.org/wiki/2014%E2%80%932017_Brazilian_economic_crisis",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "barbosa2017",
+       "label": "Fernando de Holanda Barbosa Filho, A crise econômica de 2014/2017 (Estudos Avançados 31(89)) (2017)",
+       "author": "Fernando de Holanda Barbosa Filho",
+       "title": "A crise econômica de 2014/2017 (Estudos Avançados 31(89))",
+       "year": 2017
+      },
+      {
+       "key": "bcb_selic",
+       "label": "Banco Central do Brasil, SGS series 432 (Selic target), stored as br.selic.target",
+       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json",
+       "date": "daily"
+      }
+     ],
+     "start_values": {
+      "inflation": 6.4,
+      "growth": -0.2,
+      "y10": 12.37
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2015-07",
+       "inflation": 9.6,
+       "inflation_chg_pp": 3.2,
+       "growth": -4.2,
+       "fx_pct": -18.1,
+       "y10": 13.02,
+       "y10_bp": 65
+      },
+      "m24": {
+       "date": "2017-01",
+       "inflation": 5.3,
+       "inflation_chg_pp": -1.1,
+       "growth": 0.7,
+       "fx_pct": -17.4,
+       "y10": 10.86,
+       "y10_bp": -151
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       },
+       "m24": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       },
+       "m24": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       },
+       "m24": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "br.td.pre_longest",
+        "freq": "monthly",
+        "source": "Tesouro Direto (Tesouro Transparente)",
+        "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
+        "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv"
+       },
+       "m24": {
+        "series": "br.td.pre_longest",
+        "freq": "monthly",
+        "source": "Tesouro Direto (Tesouro Transparente)",
+        "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
+        "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv"
+       }
+      }
+     }
+    },
+    {
+     "id": "br-spending-cap-2016",
+     "country": "BR",
+     "name": "Spending cap (Constitutional Amendment 95)",
+     "start": "2016-12-15",
+     "kind": "consolidation",
+     "summary": "A constitutional amendment capped federal spending in real terms for 20 years, and a labour reform followed in 2017. A small recovery followed the 2015–16 recession. The cap was replaced by a spending corridor in 2023.\n",
+     "against": [
+      {
+       "school": "Supply-side",
+       "why": "Spending restraint and labour reform were followed by a slow recovery rather than the confidence-led boom such reforms promise.\n"
+      }
+     ],
+     "currency": "real",
+     "cites": [
+      {
+       "key": "w_br_crisis",
+       "label": "Wikipedia, 2014–2017 Brazilian economic crisis",
+       "url": "https://en.wikipedia.org/wiki/2014%E2%80%932017_Brazilian_economic_crisis",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "imf_br_2025",
+       "label": "IMF, Brazil: 2025 Article IV Consultation, staff report (IMF Country Report, 17 July 2025)",
+       "url": "https://www.imf.org/en/publications/cr/issues/2025/07/16/brazil-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568678",
+       "date": "2025-07-17"
+      },
+      {
+       "key": "baer2014",
+       "label": "Werner Baer, The Brazilian Economy: Growth and Development (7th edition) (2014)",
+       "author": "Werner Baer",
+       "title": "The Brazilian Economy: Growth and Development (7th edition)",
+       "year": 2014
+      }
+     ],
+     "start_values": {
+      "inflation": 7.0,
+      "growth": -1.8,
+      "y10": 11.94
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2017-06",
+       "inflation": 3.0,
+       "inflation_chg_pp": -4.0,
+       "growth": 1.2,
+       "fx_pct": 1.4,
+       "y10": 10.61,
+       "y10_bp": -133
+      },
+      "m24": {
+       "date": "2018-12",
+       "inflation": 3.8,
+       "inflation_chg_pp": -3.2,
+       "growth": 1.2,
+       "fx_pct": -14.0,
+       "y10": 9.26,
+       "y10_bp": -268
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       },
+       "m24": {
+        "series": "br.ipca.yoy",
+        "freq": "monthly",
+        "source": "BCB SGS",
+        "source_id": "SGS 13522",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados?formato=json"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       },
+       "m24": {
+        "series": "hist.br.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCBRQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCBRQ"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       },
+       "m24": {
+        "series": "hist.br.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02BRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02BRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "br.td.pre_longest",
+        "freq": "monthly",
+        "source": "Tesouro Direto (Tesouro Transparente)",
+        "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
+        "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv"
+       },
+       "m24": {
+        "series": "br.td.pre_longest",
+        "freq": "monthly",
+        "source": "Tesouro Direto (Tesouro Transparente)",
+        "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
+        "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv"
+       }
+      }
+     }
+    }
+   ],
+   "schools": [
+    {
+     "school": "Keynesian",
+     "applies_to": "The fiscal framework and the 15% Selic peak",
+     "view": "With real interest rates among the highest in the world, monetary policy is doing too much of the work; fiscal tightening on top of it risks an unnecessary slowdown. Public investment should be protected, and debt sustainability judged by the gap between interest rates and growth, not by the headline deficit.",
+     "label": "Keynesian perspective",
+     "cites": [
+      {
+       "key": "keynes1936",
+       "label": "John Maynard Keynes, The General Theory of Employment, Interest and Money (1936)",
+       "author": "John Maynard Keynes",
+       "title": "The General Theory of Employment, Interest and Money",
+       "year": 1936
+      },
+      {
+       "key": "blanchard2019",
+       "label": "Olivier Blanchard, Public Debt and Low Interest Rates (American Economic Review 109(4)) (2019)",
+       "author": "Olivier Blanchard",
+       "title": "Public Debt and Low Interest Rates (American Economic Review 109(4))",
+       "year": 2019
+      },
+      {
+       "key": "krugman2012",
+       "label": "Paul Krugman, End This Depression Now! (2012)",
+       "author": "Paul Krugman",
+       "title": "End This Depression Now!",
+       "year": 2012
+      }
+     ]
+    },
+    {
+     "school": "Monetarist",
+     "applies_to": "Monetary policy and directed credit",
+     "view": "Inflation is a monetary phenomenon: a credible, rule-like central bank is the anchor, and the tightening cycle was the right response to rising expectations. Directed credit weakens the transmission of monetary policy, so the same disinflation needs a higher policy rate.",
+     "label": "Monetarist perspective",
+     "cites": [
+      {
+       "key": "friedman1968",
+       "label": "Milton Friedman, The Role of Monetary Policy (American Economic Review 58(1)) (1968)",
+       "author": "Milton Friedman",
+       "title": "The Role of Monetary Policy (American Economic Review 58(1))",
+       "year": 1968
+      },
+      {
+       "key": "friedman_schwartz1963",
+       "label": "Milton Friedman and Anna J. Schwartz, A Monetary History of the United States, 1867–1960 (1963)",
+       "author": "Milton Friedman and Anna J. Schwartz",
+       "title": "A Monetary History of the United States, 1867–1960",
+       "year": 1963
+      },
+      {
+       "key": "friedman1970",
+       "label": "Milton Friedman, The Counter-Revolution in Monetary Theory (IEA Occasional Paper 33) (1970)",
+       "author": "Milton Friedman",
+       "title": "The Counter-Revolution in Monetary Theory (IEA Occasional Paper 33)",
+       "year": 1970
+      }
+     ]
+    },
+    {
+     "school": "Austrian",
+     "applies_to": "Directed credit and fiscal rules",
+     "view": "Subsidised credit and an interest rate set by committee distort the price of time and steer saving into projects that only look profitable at artificial rates. The earmarked-credit system and repeated fiscal-rule changes are sources of malinvestment and of the boom-bust cycle.",
+     "label": "Austrian perspective",
+     "cites": [
+      {
+       "key": "hayek1931",
+       "label": "Friedrich A. Hayek, Prices and Production (1931)",
+       "author": "Friedrich A. Hayek",
+       "title": "Prices and Production",
+       "year": 1931
+      },
+      {
+       "key": "mises1912",
+       "label": "Ludwig von Mises, The Theory of Money and Credit (1912)",
+       "author": "Ludwig von Mises",
+       "title": "The Theory of Money and Credit",
+       "year": 1912
+      },
+      {
+       "key": "mises1949",
+       "label": "Ludwig von Mises, Human Action (1949)",
+       "author": "Ludwig von Mises",
+       "title": "Human Action",
+       "year": 1949
+      }
+     ]
+    },
+    {
+     "school": "Supply-side",
+     "applies_to": "Tax reform and the cost of capital",
+     "view": "Growth comes from incentives to work, save and invest. The VAT reform is the right direction; raising taxes on high earners and keeping a complex system of exemptions works against it.",
+     "label": "Supply-side perspective",
+     "cites": [
+      {
+       "key": "laffer2004",
+       "label": "Arthur B. Laffer, The Laffer Curve: Past, Present, and Future (Heritage Foundation Backgrounder 1765) (2004)",
+       "author": "Arthur B. Laffer",
+       "title": "The Laffer Curve: Past, Present, and Future (Heritage Foundation Backgrounder 1765)",
+       "year": 2004
+      },
+      {
+       "key": "wanniski1978",
+       "label": "Jude Wanniski, The Way the World Works (1978)",
+       "author": "Jude Wanniski",
+       "title": "The Way the World Works",
+       "year": 1978
+      },
+      {
+       "key": "mundell2000",
+       "label": "Robert A. Mundell, A Reconsideration of the Twentieth Century (American Economic Review 90(3), Nobel lecture) (2000)",
+       "author": "Robert A. Mundell",
+       "title": "A Reconsideration of the Twentieth Century (American Economic Review 90(3), Nobel lecture)",
+       "year": 2000
+      }
+     ]
+    },
+    {
+     "school": "MMT",
+     "applies_to": "The primary target",
+     "view": "A government that borrows in its own currency cannot be forced to default; the limit on spending is inflation and real resources, not a numerical primary target. Brazil's high interest bill is itself a policy choice that transfers income to bondholders.",
+     "label": "MMT perspective",
+     "cites": [
+      {
+       "key": "wray2015",
+       "label": "L. Randall Wray, Modern Money Theory: A Primer on Macroeconomics for Sovereign Monetary Systems (2nd edition) (2015)",
+       "author": "L. Randall Wray",
+       "title": "Modern Money Theory: A Primer on Macroeconomics for Sovereign Monetary Systems (2nd edition)",
+       "year": 2015
+      },
+      {
+       "key": "kelton2020",
+       "label": "Stephanie Kelton, The Deficit Myth (2020)",
+       "author": "Stephanie Kelton",
+       "title": "The Deficit Myth",
+       "year": 2020
+      },
+      {
+       "key": "mww2019",
+       "label": "William Mitchell, L. Randall Wray and Martin Watts, Macroeconomics (2019)",
+       "author": "William Mitchell, L. Randall Wray and Martin Watts",
+       "title": "Macroeconomics",
+       "year": 2019
+      }
+     ]
+    }
+   ]
+  },
+  "MX": {
+   "approach": {
+    "summary": "A left-of-centre government pairing fiscal consolidation and an independent, inflation-targeting central bank with a strongly state-led energy policy and large real minimum-wage increases.",
+    "policies": [
+     {
+      "name": "Fiscal consolidation after the 2024 deficit",
+      "position": 60,
+      "why": "Consolidating: after using an escape clause to run a 5.7% of GDP deficit in 2024 (from 4.3% in 2023), the government targeted 3.9% for 2025 and plans public-sector borrowing of 4.1% of GDP in 2026 and 3.5% in 2027, largely by compressing capital spending and stronger tax administration.",
+      "sources": [
+       {
+        "key": "imf_mx_2025",
+        "label": "IMF, Mexico: 2025 Article IV Consultation, staff report (IMF Country Report, 27 October 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/10/27/mexico-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-571378",
+        "date": "2025-10-27"
+       },
+       {
+        "key": "imco_2027",
+        "label": "IMCO, Paquete Económico 2027",
+        "url": "https://imco.org.mx/wp-content/uploads/2026/09/IMCO_Paquete-economico-2027.pdf",
+        "date": "2026-09"
+       }
+      ]
+     },
+     {
+      "name": "Monetary policy (Banxico, inflation targeting)",
+      "position": 75,
+      "why": "Orthodox framework, now easing: Banxico has cut its policy rate by 375 basis points since early 2024 as inflation fell; the IMF asks it to publish rate-path scenarios to clarify how it reacts.",
+      "sources": [
+       {
+        "key": "imf_mx_2025",
+        "label": "IMF, Mexico: 2025 Article IV Consultation, staff report (IMF Country Report, 27 October 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/10/27/mexico-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-571378",
+        "date": "2025-10-27"
+       },
+       {
+        "key": "banxico_target",
+        "label": "Banxico, target for the overnight interbank rate (SIE SF61745), stored as mx.policy.target",
+        "url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF61745,CF300,1",
+        "date": "daily"
+       }
+      ]
+     },
+     {
+      "name": "Energy policy and support for Pemex and CFE",
+      "position": 15,
+      "why": "Interventionist: the 2025 energy laws give the state firms priority; almost 6% of GDP is earmarked for investment in Pemex, and the Treasury supports its debt.",
+      "sources": [
+       {
+        "key": "imf_mx_2025",
+        "label": "IMF, Mexico: 2025 Article IV Consultation, staff report (IMF Country Report, 27 October 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/10/27/mexico-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-571378",
+        "date": "2025-10-27"
+       },
+       {
+        "key": "enerdata_pemex",
+        "label": "Enerdata, on the Pemex Strategic Plan 2025-2035",
+        "url": "https://www.enerdata.net/publications/daily-energy-news/mexico-targets-pemexs-self-sufficiency-2027-new-strategic-plan.html",
+        "date": "2025-08"
+       }
+      ]
+     },
+     {
+      "name": "Minimum wage policy",
+      "position": 20,
+      "why": "Interventionist: the minimum wage has risen 125% in real terms since 2018, a 2024 constitutional reform bars rises below inflation, and the plan is close to 12% a year in nominal terms to 2030. The IMF finds no material harm to employment so far.",
+      "sources": [
+       {
+        "key": "imf_mx_2025",
+        "label": "IMF, Mexico: 2025 Article IV Consultation, staff report (IMF Country Report, 27 October 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/10/27/mexico-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-571378",
+        "date": "2025-10-27"
+       }
+      ]
+     }
+    ]
+   },
+   "episodes": [
+    {
+     "id": "mx-tequila-1994",
+     "country": "MX",
+     "name": "Tequila crisis",
+     "start": "1994-12-20",
+     "end": "1995-12-31",
+     "kind": "crisis",
+     "summary": "After a rebellion in Chiapas and the assassination of a presidential candidate in 1994, reserves ran low and the government had issued dollar-linked short-term bills (tesobonos). On 20 December 1994 the new government devalued; two days later the peso floated and kept falling. A US-led rescue followed; 1995 brought recession and high inflation, then recovery under a floating peso.\n",
+     "against": [
+      {
+       "school": "Supply-side",
+       "why": "Years of liberalisation, privatisation and trade opening (NAFTA in 1994) did not prevent a balance-of-payments crisis.\n"
+      },
+      {
+       "school": "Austrian",
+       "why": "A large official rescue was followed by recovery rather than a prolonged liquidation.\n"
+      }
+     ],
+     "currency": "peso",
+     "cites": [
+      {
+       "key": "w_tequila",
+       "label": "Wikipedia, Mexican peso crisis",
+       "url": "https://en.wikipedia.org/wiki/Mexican_peso_crisis",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "calvo_mendoza1996",
+       "label": "Guillermo A. Calvo and Enrique G. Mendoza, Mexico's balance-of-payments crisis: a chronicle of a death foretold (Journal of International Economics 41) (1996)",
+       "author": "Guillermo A. Calvo and Enrique G. Mendoza",
+       "title": "Mexico's balance-of-payments crisis: a chronicle of a death foretold (Journal of International Economics 41)",
+       "year": 1996
+      },
+      {
+       "key": "stv1996",
+       "label": "Jeffrey Sachs, Aaron Tornell and Andrés Velasco, The Mexican peso crisis: Sudden death or death foretold? (Journal of International Economics 41) (1996)",
+       "author": "Jeffrey Sachs, Aaron Tornell and Andrés Velasco",
+       "title": "The Mexican peso crisis: Sudden death or death foretold? (Journal of International Economics 41)",
+       "year": 1996
+      },
+      {
+       "key": "lustig1998",
+       "label": "Nora Lustig, Mexico: The Remaking of an Economy (2nd edition) (1998)",
+       "author": "Nora Lustig",
+       "title": "Mexico: The Remaking of an Economy (2nd edition)",
+       "year": 1998
+      }
+     ],
+     "start_values": {
+      "inflation": 6.9,
+      "growth": 5.0
+     },
+     "outcomes": {
+      "m6": {
+       "date": "1995-06",
+       "inflation": 37.7,
+       "inflation_chg_pp": 30.8,
+       "growth": -8.9,
+       "fx_pct": -44.6,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      },
+      "m24": {
+       "date": "1996-12",
+       "inflation": 27.7,
+       "inflation_chg_pp": 20.8,
+       "growth": 8.3,
+       "fx_pct": -56.3,
+       "y10": null,
+       "y10_bp": null,
+       "null_reasons": {
+        "y10_bp": "no free data"
+       }
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "hist.mx.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01MXM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01MXM659N"
+       },
+       "m24": {
+        "series": "hist.mx.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01MXM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01MXM659N"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.mx.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCMXQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCMXQ"
+       },
+       "m24": {
+        "series": "hist.mx.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCMXQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCMXQ"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.mx.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02MXM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02MXM618N"
+       },
+       "m24": {
+        "series": "hist.mx.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02MXM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02MXM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "reason": "no free data",
+        "tried": [
+         "mx.10y.oecd_m starts 2001-07-01"
+        ]
+       },
+       "m24": {
+        "reason": "no free data",
+        "tried": [
+         "mx.10y.oecd_m starts 2001-07-01"
+        ]
+       }
+      }
+     }
+    },
+    {
+     "id": "mx-deficit-2024",
+     "country": "MX",
+     "name": "2024 election-year deficit",
+     "start": "2024-01-01",
+     "end": "2024-12-31",
+     "kind": "fiscal expansion",
+     "summary": "Using an escape clause in its fiscal rule, the government ran a deficit of 5.7% of GDP in 2024, up from 4.3% in 2023. The peso weakened in 2024.\n",
+     "currency": "peso",
+     "cites": [
+      {
+       "key": "imf_mx_2025",
+       "label": "IMF, Mexico: 2025 Article IV Consultation, staff report (IMF Country Report, 27 October 2025)",
+       "url": "https://www.imf.org/en/publications/cr/issues/2025/10/27/mexico-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-571378",
+       "date": "2025-10-27"
+      }
+     ],
+     "start_values": {
+      "inflation": 4.7,
+      "growth": 2.1,
+      "y10": 9.39
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2024-07",
+       "inflation": 5.6,
+       "inflation_chg_pp": 0.9,
+       "growth": 1.4,
+       "fx_pct": -5.1,
+       "y10": 9.95,
+       "y10_bp": 56
+      },
+      "m24": {
+       "date": "2026-01",
+       "inflation": null,
+       "inflation_chg_pp": null,
+       "null_reasons": {
+        "inflation": "after the latest data (2025-12-31)"
+       },
+       "growth": 0.5,
+       "fx_pct": -2.8,
+       "y10": 9.21,
+       "y10_bp": -18
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "hist.mx.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01MXM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01MXM659N"
+       },
+       "m24": {
+        "reason": "after the latest data (2025-12-31)",
+        "tried": [
+         "after the latest data (2024-07-01)",
+         "after the latest data (2025-12-31)"
+        ]
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.mx.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCMXQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCMXQ"
+       },
+       "m24": {
+        "series": "hist.mx.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCMXQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCMXQ"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.mx.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02MXM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02MXM618N"
+       },
+       "m24": {
+        "series": "hist.mx.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02MXM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02MXM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "mx.10y.oecd_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED IRLTLT01MXM156N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=IRLTLT01MXM156N"
+       },
+       "m24": {
+        "series": "mx.10y.oecd_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED IRLTLT01MXM156N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=IRLTLT01MXM156N"
+       }
+      }
+     }
+    },
+    {
+     "id": "mx-consolidation-2025",
+     "country": "MX",
+     "name": "2025 consolidation",
+     "start": "2025-01-01",
+     "kind": "consolidation",
+     "summary": "The new administration targeted a 3.9% of GDP deficit for 2025 by compressing capital spending and strengthening revenue administration. The IMF lists fiscal consolidation among the headwinds behind soft growth in 2025, alongside restrictive monetary policy and US tariffs.\n",
+     "against": [
+      {
+       "school": "Austrian",
+       "why": "Spending cuts coincided with weaker growth, not a private-sector revival (US tariffs muddy the test).\n"
+      }
+     ],
+     "currency": "peso",
+     "cites": [
+      {
+       "key": "imf_mx_2025",
+       "label": "IMF, Mexico: 2025 Article IV Consultation, staff report (IMF Country Report, 27 October 2025)",
+       "url": "https://www.imf.org/en/publications/cr/issues/2025/10/27/mexico-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-571378",
+       "date": "2025-10-27"
+      }
+     ],
+     "start_values": {
+      "inflation": 4.7,
+      "growth": 0.4,
+      "y10": 10.43
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2025-07",
+       "inflation": 3.8,
+       "inflation_chg_pp": -0.9,
+       "growth": -0.2,
+       "fx_pct": 8.3,
+       "y10": 9.47,
+       "y10_bp": -96
+      },
+      "m24": {
+       "date": "2027-01",
+       "inflation": null,
+       "inflation_chg_pp": null,
+       "null_reasons": {
+        "inflation": "after the latest data (2025-12-31)",
+        "growth": "after the latest data (2025-12-31)",
+        "fx_pct": "after the latest data (2026-09-01)",
+        "y10_bp": "after the latest data (2026-09-01)"
+       },
+       "growth": null,
+       "fx_pct": null,
+       "y10": null,
+       "y10_bp": null
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "hist.mx.cpi_a",
+        "freq": "annual",
+        "source": "IMF World Economic Outlook (DataMapper)",
+        "source_id": "WEO PCPIPCH MEX",
+        "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/MEX"
+       },
+       "m24": {
+        "reason": "after the latest data (2025-12-31)",
+        "tried": [
+         "after the latest data (2024-07-01)",
+         "after the latest data (2025-12-31)"
+        ]
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.mx.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED NGDPRSAXDCMXQ",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCMXQ"
+       },
+       "m24": {
+        "reason": "after the latest data (2025-12-31)",
+        "tried": [
+         "after the latest data (2026-04-01)",
+         "after the latest data (2025-12-31)"
+        ]
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.mx.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02MXM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02MXM618N"
+       },
+       "m24": {
+        "reason": "after the latest data (2026-09-01)",
+        "tried": [
+         "after the latest data (2026-09-01)"
+        ]
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "mx.10y.oecd_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED IRLTLT01MXM156N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=IRLTLT01MXM156N"
+       },
+       "m24": {
+        "reason": "after the latest data (2026-09-01)",
+        "tried": [
+         "after the latest data (2026-09-01)"
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "schools": [
+    {
+     "school": "Keynesian",
+     "applies_to": "Consolidation in a slowdown",
+     "view": "Cutting public investment while growth is soft and US tariffs hit exports adds to the slowdown; the consolidation should be slower and spare investment, which raises future capacity.",
+     "label": "Keynesian perspective",
+     "cites": [
+      {
+       "key": "keynes1936",
+       "label": "John Maynard Keynes, The General Theory of Employment, Interest and Money (1936)",
+       "author": "John Maynard Keynes",
+       "title": "The General Theory of Employment, Interest and Money",
+       "year": 1936
+      },
+      {
+       "key": "blanchard_leigh2013",
+       "label": "Olivier Blanchard and Daniel Leigh, Growth Forecast Errors and Fiscal Multipliers (American Economic Review 103(3)) (2013)",
+       "author": "Olivier Blanchard and Daniel Leigh",
+       "title": "Growth Forecast Errors and Fiscal Multipliers (American Economic Review 103(3))",
+       "year": 2013
+      },
+      {
+       "key": "krugman2012",
+       "label": "Paul Krugman, End This Depression Now! (2012)",
+       "author": "Paul Krugman",
+       "title": "End This Depression Now!",
+       "year": 2012
+      }
+     ]
+    },
+    {
+     "school": "Monetarist",
+     "applies_to": "Banxico's easing",
+     "view": "Banxico's independence and inflation target are the core of Mexico's stability since the 1990s; easing is justified only as inflation falls, and cutting faster than underlying inflation allows would risk the credibility built over two decades.",
+     "label": "Monetarist perspective",
+     "cites": [
+      {
+       "key": "friedman1968",
+       "label": "Milton Friedman, The Role of Monetary Policy (American Economic Review 58(1)) (1968)",
+       "author": "Milton Friedman",
+       "title": "The Role of Monetary Policy (American Economic Review 58(1))",
+       "year": 1968
+      },
+      {
+       "key": "friedman1970",
+       "label": "Milton Friedman, The Counter-Revolution in Monetary Theory (IEA Occasional Paper 33) (1970)",
+       "author": "Milton Friedman",
+       "title": "The Counter-Revolution in Monetary Theory (IEA Occasional Paper 33)",
+       "year": 1970
+      }
+     ]
+    },
+    {
+     "school": "Austrian",
+     "applies_to": "Energy policy and Pemex",
+     "view": "Steering capital into a loss-making state oil company and guaranteeing its debts is a textbook misallocation that markets would not fund; it crowds out private investment and adds hidden public debt.",
+     "label": "Austrian perspective",
+     "cites": [
+      {
+       "key": "hayek1944",
+       "label": "Friedrich A. Hayek, The Road to Serfdom (1944)",
+       "author": "Friedrich A. Hayek",
+       "title": "The Road to Serfdom",
+       "year": 1944
+      },
+      {
+       "key": "mises1949",
+       "label": "Ludwig von Mises, Human Action (1949)",
+       "author": "Ludwig von Mises",
+       "title": "Human Action",
+       "year": 1949
+      }
+     ]
+    },
+    {
+     "school": "Supply-side",
+     "applies_to": "Energy and investment climate",
+     "view": "Priority for state firms and uncertainty about courts deter private investment just when nearshoring could lift growth; opening energy and keeping taxes predictable would raise supply.",
+     "label": "Supply-side perspective",
+     "cites": [
+      {
+       "key": "laffer2004",
+       "label": "Arthur B. Laffer, The Laffer Curve: Past, Present, and Future (Heritage Foundation Backgrounder 1765) (2004)",
+       "author": "Arthur B. Laffer",
+       "title": "The Laffer Curve: Past, Present, and Future (Heritage Foundation Backgrounder 1765)",
+       "year": 2004
+      },
+      {
+       "key": "mundell2000",
+       "label": "Robert A. Mundell, A Reconsideration of the Twentieth Century (American Economic Review 90(3), Nobel lecture) (2000)",
+       "author": "Robert A. Mundell",
+       "title": "A Reconsideration of the Twentieth Century (American Economic Review 90(3), Nobel lecture)",
+       "year": 2000
+      }
+     ]
+    },
+    {
+     "school": "MMT",
+     "applies_to": "Minimum wage and consolidation",
+     "view": "A government issuing its own floating currency can fund full employment; the binding limit is inflation, which has fallen. Rising minimum wages support demand and need not cause inflation when there is slack.",
+     "label": "MMT perspective",
+     "cites": [
+      {
+       "key": "wray2015",
+       "label": "L. Randall Wray, Modern Money Theory: A Primer on Macroeconomics for Sovereign Monetary Systems (2nd edition) (2015)",
+       "author": "L. Randall Wray",
+       "title": "Modern Money Theory: A Primer on Macroeconomics for Sovereign Monetary Systems (2nd edition)",
+       "year": 2015
+      },
+      {
+       "key": "kelton2020",
+       "label": "Stephanie Kelton, The Deficit Myth (2020)",
+       "author": "Stephanie Kelton",
+       "title": "The Deficit Myth",
+       "year": 2020
+      }
+     ]
+    }
+   ]
+  },
+  "FR": {
+   "approach": {
+    "summary": "A minority government trying to consolidate one of the euro area's largest deficits under an EU excessive-deficit procedure, in a high-tax, high-spending state, with monetary policy set by the ECB for the whole euro area and the 2023 pension reform suspended.",
+    "policies": [
+     {
+      "name": "2027 budget consolidation and the EU excessive-deficit procedure",
+      "position": 60,
+      "why": "Consolidating: the 2027 bills plan about 54 billion euros of consolidation, 43 billion of it new measures, after a 5.8% of GDP deficit in 2024; France has been under the excessive-deficit procedure since January 2025 and aims for a deficit below 3% by 2029.",
+      "sources": [
+       {
+        "key": "hcfp_2026_5",
+        "label": "HCFP (High Council of Public Finance), Avis n° 2026-5 on the 2027 budget bills",
+        "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
+        "date": "2026-10-01"
+       },
+       {
+        "key": "imf_fr_2025",
+        "label": "IMF, France: 2025 Article IV Consultation, staff report (IMF Country Report, 14 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/11/france-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568520",
+        "date": "2025-07-14"
+       }
+      ]
+     },
+     {
+      "name": "Size of the state (tax and spending levels)",
+      "position": 30,
+      "why": "On the interventionist side by level: the IMF stresses France's high tax-to-GDP ratio and pension spending of 14.7% of GDP in 2022, and asks for savings from better-targeted spending.",
+      "sources": [
+       {
+        "key": "imf_fr_2025",
+        "label": "IMF, France: 2025 Article IV Consultation, staff report (IMF Country Report, 14 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/11/france-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568520",
+        "date": "2025-07-14"
+       }
+      ]
+     },
+     {
+      "name": "Pension reform suspension",
+      "position": 30,
+      "why": "A step back from the 2023 reform (legal age rising to 64 by 2030): the 2026 social-security law suspends it until 1 January 2028, while the 2027 bill freezes most basic pensions for a year.",
+      "sources": [
+       {
+        "key": "cms_lfss2026",
+        "label": "CMS Francis Lefebvre, on the 2026 social-security financing bill (pension reform suspension)",
+        "url": "https://cms.law/fr/fra/legal-updates/plfss-pour-2026-une-lettre-rectificative-pour-suspendre-la-reforme-des-retraites",
+        "date": "2025-10"
+       },
+       {
+        "key": "imf_fr_2025",
+        "label": "IMF, France: 2025 Article IV Consultation, staff report (IMF Country Report, 14 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/11/france-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568520",
+        "date": "2025-07-14"
+       },
+       {
+        "key": "hcfp_2026_5",
+        "label": "HCFP (High Council of Public Finance), Avis n° 2026-5 on the 2027 budget bills",
+        "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
+        "date": "2026-10-01"
+       }
+      ]
+     },
+     {
+      "name": "Monetary policy (set by the ECB)",
+      "position": 75,
+      "why": "Orthodox and out of national hands: the ECB targets euro-area inflation; France cannot devalue or set its own rate, so bond spreads over Germany carry the market's view of French policy.",
+      "sources": [
+       {
+        "key": "ecb_dfr",
+        "label": "ECB deposit facility rate (FRED ECBDFR), stored as eu.ecb.dfr",
+        "url": "https://fred.stlouisfed.org/series/ECBDFR",
+        "date": "daily"
+       },
+       {
+        "key": "imf_fr_2025",
+        "label": "IMF, France: 2025 Article IV Consultation, staff report (IMF Country Report, 14 July 2025)",
+        "url": "https://www.imf.org/en/publications/cr/issues/2025/07/11/france-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568520",
+        "date": "2025-07-14"
+       }
+      ]
+     }
+    ]
+   },
+   "episodes": [
+    {
+     "id": "fr-rigueur-1983",
+     "country": "FR",
+     "name": "Tournant de la rigueur",
+     "start": "1983-03-25",
+     "kind": "consolidation",
+     "summary": "After the 1981–82 Keynesian relaunch and repeated franc devaluations inside the European Monetary System, a third devaluation on 22 March 1983 was followed by austerity measures announced on 25 March: France chose rigour and the EMS.\n",
+     "against": [
+      {
+       "school": "Keynesian",
+       "why": "A demand stimulus in one open economy ran into pressure on the currency instead of lasting growth.\n"
+      }
+     ],
+     "currency": "franc, then euro",
+     "cites": [
+      {
+       "key": "w_rigueur",
+       "label": "Wikipédia (fr), Tournant de la rigueur",
+       "url": "https://fr.wikipedia.org/wiki/Tournant_de_la_rigueur",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "vp_rigueur",
+       "label": "Vie-publique.fr, Qu'est-ce que le tournant de la rigueur de 1983 ?",
+       "url": "https://www.vie-publique.fr/fiches/274054-quest-ce-que-le-tournant-de-la-rigueur-de-1983",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "sachs_wyplosz1986",
+       "label": "Jeffrey Sachs and Charles Wyplosz, The Economic Consequences of President Mitterrand (Economic Policy 1(2)) (1986)",
+       "author": "Jeffrey Sachs and Charles Wyplosz",
+       "title": "The Economic Consequences of President Mitterrand (Economic Policy 1(2))",
+       "year": 1986
+      }
+     ],
+     "start_values": {
+      "inflation": 9.2,
+      "growth": 1.6,
+      "y10": 14.9
+     },
+     "outcomes": {
+      "m6": {
+       "date": "1983-09",
+       "inflation": 10.1,
+       "inflation_chg_pp": 0.9,
+       "growth": 1.2,
+       "fx_pct": -14.6,
+       "y10": 14.03,
+       "y10_bp": -87
+      },
+      "m24": {
+       "date": "1985-03",
+       "inflation": 6.4,
+       "inflation_chg_pp": -2.8,
+       "growth": 1.3,
+       "fx_pct": -31.9,
+       "y10": 12.27,
+       "y10_bp": -263
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "hist.fr.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01FRM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01FRM659N"
+       },
+       "m24": {
+        "series": "hist.fr.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01FRM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01FRM659N"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       },
+       "m24": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       },
+       "m24": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "hist.fr.y10_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED IRLTLT01FRM156N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=IRLTLT01FRM156N"
+       },
+       "m24": {
+        "series": "hist.fr.y10_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED IRLTLT01FRM156N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=IRLTLT01FRM156N"
+       }
+      }
+     }
+    },
+    {
+     "id": "fr-juppe-1995",
+     "country": "FR",
+     "name": "Juppé plan",
+     "start": "1995-11-15",
+     "kind": "consolidation",
+     "summary": "A plan announced on 15 November 1995 to cut the social-security deficit, in the run-up to the euro. Strikes lasting more than three weeks forced the government to drop the pension part; the health and social-security measures went ahead by ordinance.\n",
+     "currency": "franc, then euro",
+     "cites": [
+      {
+       "key": "w_juppe",
+       "label": "Wikipédia (fr), Plan Juppé",
+       "url": "https://fr.wikipedia.org/wiki/Plan_Jupp%C3%A9",
+       "date": "accessed 2026-10-30"
+      }
+     ],
+     "start_values": {
+      "inflation": 1.9,
+      "growth": 1.2,
+      "y10": 7.49
+     },
+     "outcomes": {
+      "m6": {
+       "date": "1996-05",
+       "inflation": 2.4,
+       "inflation_chg_pp": 0.5,
+       "growth": 1.0,
+       "fx_pct": -4.9,
+       "y10": 6.47,
+       "y10_bp": -102
+      },
+      "m24": {
+       "date": "1997-11",
+       "inflation": 1.3,
+       "inflation_chg_pp": -0.6,
+       "growth": 3.5,
+       "fx_pct": -15.0,
+       "y10": 5.57,
+       "y10_bp": -192
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "hist.fr.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01FRM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01FRM659N"
+       },
+       "m24": {
+        "series": "hist.fr.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01FRM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01FRM659N"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       },
+       "m24": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       },
+       "m24": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "fr.oat10y.ecb_m",
+        "freq": "monthly",
+        "source": "ECB Data Portal (IRS)",
+        "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
+        "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z"
+       },
+       "m24": {
+        "series": "fr.oat10y.ecb_m",
+        "freq": "monthly",
+        "source": "ECB Data Portal (IRS)",
+        "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
+        "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z"
+       }
+      }
+     }
+    },
+    {
+     "id": "fr-consolidation-2011",
+     "country": "FR",
+     "name": "Euro-crisis consolidation",
+     "start": "2011-01-01",
+     "end": "2013-12-31",
+     "kind": "consolidation",
+     "summary": "France tightened its budget during the euro-area debt crisis, as most member states did. IMF economists later found that growth forecasts in Europe in that period underestimated the drag from consolidation.\n",
+     "against": [
+      {
+       "school": "Austrian",
+       "why": "Austerity in a weak economy was followed by stagnation rather than a confidence-led recovery (see what followed).\n"
+      }
+     ],
+     "currency": "franc, then euro",
+     "cites": [
+      {
+       "key": "w_euro_crisis",
+       "label": "Wikipedia, European debt crisis",
+       "url": "https://en.wikipedia.org/wiki/European_debt_crisis",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "blanchard_leigh2013",
+       "label": "Olivier Blanchard and Daniel Leigh, Growth Forecast Errors and Fiscal Multipliers (American Economic Review 103(3)) (2013)",
+       "author": "Olivier Blanchard and Daniel Leigh",
+       "title": "Growth Forecast Errors and Fiscal Multipliers (American Economic Review 103(3))",
+       "year": 2013
+      }
+     ],
+     "start_values": {
+      "inflation": 1.8,
+      "growth": 2.0,
+      "y10": 3.34
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2011-07",
+       "inflation": 1.9,
+       "inflation_chg_pp": 0.2,
+       "growth": 2.2,
+       "fx_pct": 8.1,
+       "y10": 3.4,
+       "y10_bp": 6
+      },
+      "m24": {
+       "date": "2013-01",
+       "inflation": 1.2,
+       "inflation_chg_pp": -0.6,
+       "growth": 0.1,
+       "fx_pct": 0.6,
+       "y10": 2.17,
+       "y10_bp": -117
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "hist.fr.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01FRM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01FRM659N"
+       },
+       "m24": {
+        "series": "hist.fr.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01FRM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01FRM659N"
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       },
+       "m24": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       },
+       "m24": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "fr.oat10y.ecb_m",
+        "freq": "monthly",
+        "source": "ECB Data Portal (IRS)",
+        "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
+        "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z"
+       },
+       "m24": {
+        "series": "fr.oat10y.ecb_m",
+        "freq": "monthly",
+        "source": "ECB Data Portal (IRS)",
+        "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
+        "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z"
+       }
+      }
+     }
+    },
+    {
+     "id": "fr-dissolution-2024",
+     "country": "FR",
+     "name": "Dissolution and the budget crisis",
+     "start": "2024-06-09",
+     "kind": "political",
+     "summary": "The snap election of June–July 2024 produced a hung parliament; the government lost a no-confidence vote on 4 December 2024. The 2024 deficit reached 5.8% of GDP, and the 10-year OAT-Bund spread peaked at 88 basis points that December.\n",
+     "currency": "franc, then euro",
+     "cites": [
+      {
+       "key": "w_fr_2024",
+       "label": "Wikipedia, 2024 French legislative election",
+       "url": "https://en.wikipedia.org/wiki/2024_French_legislative_election",
+       "date": "accessed 2026-10-30"
+      },
+      {
+       "key": "imf_fr_2025",
+       "label": "IMF, France: 2025 Article IV Consultation, staff report (IMF Country Report, 14 July 2025)",
+       "url": "https://www.imf.org/en/publications/cr/issues/2025/07/11/france-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-568520",
+       "date": "2025-07-14"
+      }
+     ],
+     "start_values": {
+      "inflation": 2.3,
+      "growth": 1.3,
+      "y10": 3.03
+     },
+     "outcomes": {
+      "m6": {
+       "date": "2024-12",
+       "inflation": 1.3,
+       "inflation_chg_pp": -1.0,
+       "growth": 0.9,
+       "fx_pct": -3.2,
+       "y10": 3.01,
+       "y10_bp": -2
+      },
+      "m24": {
+       "date": "2026-06",
+       "inflation": null,
+       "inflation_chg_pp": null,
+       "null_reasons": {
+        "inflation": "after the latest data (2025-12-31)"
+       },
+       "growth": 0.5,
+       "fx_pct": 6.5,
+       "y10": 3.68,
+       "y10_bp": 65
+      }
+     },
+     "outcome_sources": {
+      "inflation": {
+       "m6": {
+        "series": "hist.fr.cpi_yoy",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CPALTT01FRM659N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01FRM659N"
+       },
+       "m24": {
+        "reason": "after the latest data (2025-12-31)",
+        "tried": [
+         "after the latest data (2025-03-01)",
+         "after the latest data (2025-12-31)"
+        ]
+       }
+      },
+      "growth": {
+       "m6": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       },
+       "m24": {
+        "series": "hist.fr.gdp_q",
+        "freq": "quarterly",
+        "source": "FRED API",
+        "source_id": "FRED CLVMNACSCAB1GQFR",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CLVMNACSCAB1GQFR"
+       }
+      },
+      "fx": {
+       "m6": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       },
+       "m24": {
+        "series": "hist.fr.fx_m",
+        "freq": "monthly",
+        "source": "FRED API",
+        "source_id": "FRED CCUSMA02FRM618N",
+        "url": "https://api.stlouisfed.org/fred/series/observations?series_id=CCUSMA02FRM618N"
+       }
+      },
+      "y10": {
+       "m6": {
+        "series": "fr.oat10y.ecb_m",
+        "freq": "monthly",
+        "source": "ECB Data Portal (IRS)",
+        "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
+        "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z"
+       },
+       "m24": {
+        "series": "fr.oat10y.ecb_m",
+        "freq": "monthly",
+        "source": "ECB Data Portal (IRS)",
+        "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
+        "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z"
+       }
+      }
+     }
+    }
+   ],
+   "schools": [
+    {
+     "school": "Keynesian",
+     "applies_to": "The 2027 consolidation",
+     "view": "Consolidating by about 54 billion euros while growth is weak risks the mistake of 2011–13, when multipliers were larger than forecast. A slower, credible path would cost less output and might lower debt faster.",
+     "label": "Keynesian perspective",
+     "cites": [
+      {
+       "key": "keynes1936",
+       "label": "John Maynard Keynes, The General Theory of Employment, Interest and Money (1936)",
+       "author": "John Maynard Keynes",
+       "title": "The General Theory of Employment, Interest and Money",
+       "year": 1936
+      },
+      {
+       "key": "blanchard_leigh2013",
+       "label": "Olivier Blanchard and Daniel Leigh, Growth Forecast Errors and Fiscal Multipliers (American Economic Review 103(3)) (2013)",
+       "author": "Olivier Blanchard and Daniel Leigh",
+       "title": "Growth Forecast Errors and Fiscal Multipliers (American Economic Review 103(3))",
+       "year": 2013
+      },
+      {
+       "key": "blanchard2019",
+       "label": "Olivier Blanchard, Public Debt and Low Interest Rates (American Economic Review 109(4)) (2019)",
+       "author": "Olivier Blanchard",
+       "title": "Public Debt and Low Interest Rates (American Economic Review 109(4))",
+       "year": 2019
+      }
+     ]
+    },
+    {
+     "school": "Monetarist",
+     "applies_to": "Fiscal policy under the ECB",
+     "view": "With monetary policy set for the euro area, France's job is fiscal discipline so that the ECB is never pressed to monetise its debt; persistent deficits threaten the single currency's rule-based anchor.",
+     "label": "Monetarist perspective",
+     "cites": [
+      {
+       "key": "friedman1968",
+       "label": "Milton Friedman, The Role of Monetary Policy (American Economic Review 58(1)) (1968)",
+       "author": "Milton Friedman",
+       "title": "The Role of Monetary Policy (American Economic Review 58(1))",
+       "year": 1968
+      },
+      {
+       "key": "sargent1982",
+       "label": "Thomas J. Sargent, The Ends of Four Big Inflations (in R. Hall, ed., Inflation: Causes and Effects, NBER) (1982)",
+       "author": "Thomas J. Sargent",
+       "title": "The Ends of Four Big Inflations (in R. Hall, ed., Inflation: Causes and Effects, NBER)",
+       "year": 1982
+      }
+     ]
+    },
+    {
+     "school": "Austrian",
+     "applies_to": "The size of the state",
+     "view": "A very large, heavily taxed state is itself the problem; debt should be cut by shrinking the state, not by raising taxes, and cheap ECB money postponed the adjustment.",
+     "label": "Austrian perspective",
+     "cites": [
+      {
+       "key": "hayek1944",
+       "label": "Friedrich A. Hayek, The Road to Serfdom (1944)",
+       "author": "Friedrich A. Hayek",
+       "title": "The Road to Serfdom",
+       "year": 1944
+      },
+      {
+       "key": "mises1949",
+       "label": "Ludwig von Mises, Human Action (1949)",
+       "author": "Ludwig von Mises",
+       "title": "Human Action",
+       "year": 1949
+      },
+      {
+       "key": "hayek1976",
+       "label": "Friedrich A. Hayek, Denationalisation of Money (1976)",
+       "author": "Friedrich A. Hayek",
+       "title": "Denationalisation of Money",
+       "year": 1976
+      }
+     ]
+    },
+    {
+     "school": "Supply-side",
+     "applies_to": "Pension suspension and taxes",
+     "view": "Suspending the pension reform and raising taxes lowers labour supply and investment. Lower, simpler taxes and later retirement would raise growth and, with it, revenue.",
+     "label": "Supply-side perspective",
+     "cites": [
+      {
+       "key": "laffer2004",
+       "label": "Arthur B. Laffer, The Laffer Curve: Past, Present, and Future (Heritage Foundation Backgrounder 1765) (2004)",
+       "author": "Arthur B. Laffer",
+       "title": "The Laffer Curve: Past, Present, and Future (Heritage Foundation Backgrounder 1765)",
+       "year": 2004
+      },
+      {
+       "key": "wanniski1978",
+       "label": "Jude Wanniski, The Way the World Works (1978)",
+       "author": "Jude Wanniski",
+       "title": "The Way the World Works",
+       "year": 1978
+      }
+     ]
+    },
+    {
+     "school": "MMT",
+     "applies_to": "The euro constraint",
+     "view": "France gave up its own currency, so unlike a currency issuer it can face market pressure and default risk; the remedy is euro-area fiscal capacity or ECB backing, not austerity that deepens the slowdown.",
+     "label": "MMT perspective",
+     "cites": [
+      {
+       "key": "mitchell2015",
+       "label": "William Mitchell, Eurozone Dystopia: Groupthink and Denial on a Grand Scale (2015)",
+       "author": "William Mitchell",
+       "title": "Eurozone Dystopia: Groupthink and Denial on a Grand Scale",
+       "year": 2015
+      },
+      {
+       "key": "kelton2020",
+       "label": "Stephanie Kelton, The Deficit Myth (2020)",
+       "author": "Stephanie Kelton",
+       "title": "The Deficit Myth",
+       "year": 2020
+      },
+      {
+       "key": "mww2019",
+       "label": "William Mitchell, L. Randall Wray and Martin Watts, Macroeconomics (2019)",
+       "author": "William Mitchell, L. Randall Wray and Martin Watts",
+       "title": "Macroeconomics",
+       "year": 2019
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "regional": [
+  {
+   "id": "ar-convertibility-1991",
+   "country": "AR",
+   "name": "Convertibility (currency board)",
+   "start": "1991-04-01",
+   "end": "2001-12-31",
+   "kind": "orthodox",
+   "summary": "The peso was pegged one-to-one to the US dollar with full convertibility, to end hyperinflation, along with mass privatisation and deregulation. It worked at first; the regime ended in the 2001–02 collapse, with default and frozen bank deposits (the corralito).\n",
+   "against": [
+    {
+     "school": "MMT",
+     "why": "Giving up discretionary money creation altogether was followed by the end of hyperinflation.\n"
+    }
+   ],
+   "currency": "peso",
+   "cites": [
+    {
+     "key": "w_convertibility",
+     "label": "Wikipedia, Convertibility plan",
+     "url": "https://en.wikipedia.org/wiki/Convertibility_plan",
+     "date": "accessed 2026-10-30"
+    },
+    {
+     "key": "w_ar_depression",
+     "label": "Wikipedia, 1998–2002 Argentine great depression",
+     "url": "https://en.wikipedia.org/wiki/1998%E2%80%932002_Argentine_great_depression",
+     "date": "accessed 2026-10-30"
+    },
+    {
+     "key": "mussa2002",
+     "label": "Michael Mussa, Argentina and the Fund: From Triumph to Tragedy (2002)",
+     "author": "Michael Mussa",
+     "title": "Argentina and the Fund: From Triumph to Tragedy",
+     "year": 2002
+    }
+   ],
+   "start_values": {
+    "growth": -1.3
+   },
+   "outcomes": {
+    "m6": {
+     "date": "1991-10",
+     "inflation": null,
+     "inflation_chg_pp": null,
+     "null_reasons": {
+      "inflation": "no free data",
+      "y10_bp": "no free data"
+     },
+     "growth": 10.5,
+     "fx_pct": -4.5,
+     "y10": null,
+     "y10_bp": null
+    },
+    "m24": {
+     "date": "1993-04",
+     "inflation": null,
+     "inflation_chg_pp": null,
+     "null_reasons": {
+      "inflation": "no free data",
+      "y10_bp": "no free data"
+     },
+     "growth": 6.3,
+     "fx_pct": -5.2,
+     "y10": null,
+     "y10_bp": null
+    }
+   },
+   "outcome_sources": {
+    "inflation": {
+     "m6": {
+      "reason": "no free data",
+      "tried": [
+       "hist.ar.cpi_a starts 1998-12-31"
+      ]
+     },
+     "m24": {
+      "reason": "no free data",
+      "tried": [
+       "hist.ar.cpi_a starts 1998-12-31"
+      ]
+     }
+    },
+    "growth": {
+     "m6": {
+      "series": "hist.ar.gdp_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO NGDP_RPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/ARG"
+     },
+     "m24": {
+      "series": "hist.ar.gdp_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO NGDP_RPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/ARG"
+     }
+    },
+    "fx": {
+     "m6": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     },
+     "m24": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     }
+    },
+    "y10": {
+     "m6": {
+      "reason": "no free data"
+     },
+     "m24": {
+      "reason": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ar-cepo-2011",
+   "country": "AR",
+   "name": "Exchange controls (cepo)",
+   "start": "2011-10-31",
+   "end": "2015-12-16",
+   "kind": "heterodox",
+   "summary": "Restrictions on buying US dollars from 2011, with a parallel (\"blue\") dollar trading well above the official rate, until the controls were lifted at the start of Mauricio Macri's presidency in 2015.\n",
+   "against": [
+    {
+     "school": "Keynesian",
+     "why": "Sustaining demand behind exchange controls was followed by stagnation rather than recovery (see what followed).\n"
+    }
+   ],
+   "currency": "peso",
+   "cites": [
+    {
+     "key": "w_cepo",
+     "label": "Wikipedia, Cepo cambiario",
+     "url": "https://en.wikipedia.org/wiki/Cepo_cambiario",
+     "date": "accessed 2026-10-30"
+    },
+    {
+     "key": "w_ar_history",
+     "label": "Wikipedia, Economic history of Argentina",
+     "url": "https://en.wikipedia.org/wiki/Economic_history_of_Argentina",
+     "date": "accessed 2026-10-30"
+    },
+    {
+     "key": "dornbusch_edwards1991",
+     "label": "Rudiger Dornbusch and Sebastian Edwards (eds), The Macroeconomics of Populism in Latin America (1991)",
+     "author": "Rudiger Dornbusch and Sebastian Edwards (eds)",
+     "title": "The Macroeconomics of Populism in Latin America",
+     "year": 1991
+    }
+   ],
+   "start_values": {
+    "inflation": 10.5,
+    "growth": 5.6
+   },
+   "outcomes": {
+    "m6": {
+     "date": "2012-04",
+     "inflation": 10.0,
+     "inflation_chg_pp": -0.5,
+     "growth": -3.6,
+     "fx_pct": -4.4,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "2013-10",
+     "inflation": 10.6,
+     "inflation_chg_pp": 0.1,
+     "growth": 0.2,
+     "fx_pct": -28.2,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   },
+   "outcome_sources": {
+    "inflation": {
+     "m6": {
+      "series": "hist.ar.cpi_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO PCPIPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/ARG"
+     },
+     "m24": {
+      "series": "hist.ar.cpi_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO PCPIPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/ARG"
+     }
+    },
+    "growth": {
+     "m6": {
+      "series": "hist.ar.gdp_q",
+      "freq": "quarterly",
+      "source": "FRED API",
+      "source_id": "FRED NGDPRSAXDCARQ",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCARQ"
+     },
+     "m24": {
+      "series": "hist.ar.gdp_q",
+      "freq": "quarterly",
+      "source": "FRED API",
+      "source_id": "FRED NGDPRSAXDCARQ",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCARQ"
+     }
+    },
+    "fx": {
+     "m6": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     },
+     "m24": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     }
+    },
+    "y10": {
+     "m6": {
+      "reason": "no free data"
+     },
+     "m24": {
+      "reason": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ar-heterodox-2019",
+   "country": "AR",
+   "name": "Fernández government",
+   "start": "2019-12-10",
+   "end": "2023-12-10",
+   "kind": "heterodox",
+   "summary": "Exchange controls, reintroduced in late 2019, were tightened; the IMF programme was replaced by a new Extended Fund Facility in 2022. Inflation rose to 100% (the highest since 1991) and reached 211.4% for 2023 by INDEC's count.\n",
+   "against": [
+    {
+     "school": "MMT",
+     "why": "Spending by a currency issuer with large dollar debts and little credibility was followed by spiralling inflation, the constraint MMT itself places on countries without full monetary sovereignty.\n"
+    }
+   ],
+   "currency": "peso",
+   "cites": [
+    {
+     "key": "w_fernandez",
+     "label": "Wikipedia, Alberto Fernández",
+     "url": "https://en.wikipedia.org/wiki/Alberto_Fern%C3%A1ndez",
+     "date": "accessed 2026-10-30"
+    },
+    {
+     "key": "w_cepo",
+     "label": "Wikipedia, Cepo cambiario",
+     "url": "https://en.wikipedia.org/wiki/Cepo_cambiario",
+     "date": "accessed 2026-10-30"
+    },
+    {
+     "key": "imf_ar_2022",
+     "label": "IMF press release 22/89: Argentina, Extended Fund Facility approved, 2022 Article IV concluded",
+     "url": "https://www.imf.org/en/News/Articles/2022/03/25/pr2289-argentina-imf-exec-board-approves-extended-arrangement-concludes-2022-article-iv-consultation",
+     "date": "2022-03-25"
+    },
+    {
+     "key": "w_milei",
+     "label": "Wikipedia, Presidency of Javier Milei",
+     "url": "https://en.wikipedia.org/wiki/Presidency_of_Javier_Milei",
+     "date": "accessed 2026-10-30"
+    }
+   ],
+   "start_values": {
+    "inflation": 34.3,
+    "growth": -0.6
+   },
+   "outcomes": {
+    "m6": {
+     "date": "2020-06",
+     "inflation": 42.0,
+     "inflation_chg_pp": 7.7,
+     "growth": -19.5,
+     "fx_pct": -14.1,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "2021-12",
+     "inflation": 48.4,
+     "inflation_chg_pp": 14.1,
+     "growth": 8.3,
+     "fx_pct": -41.4,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   },
+   "outcome_sources": {
+    "inflation": {
+     "m6": {
+      "series": "hist.ar.cpi_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO PCPIPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/ARG"
+     },
+     "m24": {
+      "series": "hist.ar.cpi_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO PCPIPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/ARG"
+     }
+    },
+    "growth": {
+     "m6": {
+      "series": "hist.ar.gdp_q",
+      "freq": "quarterly",
+      "source": "FRED API",
+      "source_id": "FRED NGDPRSAXDCARQ",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCARQ"
+     },
+     "m24": {
+      "series": "hist.ar.gdp_q",
+      "freq": "quarterly",
+      "source": "FRED API",
+      "source_id": "FRED NGDPRSAXDCARQ",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCARQ"
+     }
+    },
+    "fx": {
+     "m6": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     },
+     "m24": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     }
+    },
+    "y10": {
+     "m6": {
+      "reason": "no free data"
+     },
+     "m24": {
+      "reason": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ar-milei-2023",
+   "country": "AR",
+   "name": "Milei shock therapy",
+   "start": "2023-12-13",
+   "kind": "shock therapy",
+   "summary": "A 104% devaluation of the official peso, then a 2% monthly crawl, and spending cuts that delivered the first budget surplus since 2011. Monthly inflation fell from 25.5% in December 2023 to 8.8% in April 2024; activity cooled.\n",
+   "against": [
+    {
+     "school": "Keynesian",
+     "why": "A sharp fiscal contraction was followed by rapid disinflation; see what followed for growth.\n"
+    }
+   ],
+   "currency": "peso",
+   "cites": [
+    {
+     "key": "w_milei",
+     "label": "Wikipedia, Presidency of Javier Milei",
+     "url": "https://en.wikipedia.org/wiki/Presidency_of_Javier_Milei",
+     "date": "accessed 2026-10-30"
+    },
+    {
+     "key": "imf_ar_2024",
+     "label": "IMF press release 24/217: eighth review of Argentina's Extended Fund Facility",
+     "url": "https://www.imf.org/en/News/Articles/2024/06/13/pr24217-imf-completes-eighth-review-of-the-extended-arrangement-under-the-eff-for-argentina",
+     "date": "2024-06-13"
+    }
+   ],
+   "start_values": {
+    "inflation": 72.4,
+    "growth": -1.9
+   },
+   "outcomes": {
+    "m6": {
+     "date": "2024-06",
+     "inflation": 219.9,
+     "inflation_chg_pp": 147.5,
+     "growth": -2.6,
+     "fx_pct": -60.9,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "2025-12",
+     "inflation": 41.9,
+     "inflation_chg_pp": -30.5,
+     "growth": 2.4,
+     "fx_pct": -75.6,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   },
+   "outcome_sources": {
+    "inflation": {
+     "m6": {
+      "series": "hist.ar.cpi_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO PCPIPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/ARG"
+     },
+     "m24": {
+      "series": "hist.ar.cpi_a",
+      "freq": "annual",
+      "source": "IMF World Economic Outlook (DataMapper)",
+      "source_id": "WEO PCPIPCH ARG",
+      "url": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/ARG"
+     }
+    },
+    "growth": {
+     "m6": {
+      "series": "hist.ar.gdp_q",
+      "freq": "quarterly",
+      "source": "FRED API",
+      "source_id": "FRED NGDPRSAXDCARQ",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCARQ"
+     },
+     "m24": {
+      "series": "hist.ar.gdp_q",
+      "freq": "quarterly",
+      "source": "FRED API",
+      "source_id": "FRED NGDPRSAXDCARQ",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NGDPRSAXDCARQ"
+     }
+    },
+    "fx": {
+     "m6": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     },
+     "m24": {
+      "series": "hist.ar.fx_m",
+      "freq": "monthly",
+      "source": "FRED API",
+      "source_id": "FRED ARGCCUSMA02STM",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=ARGCCUSMA02STM"
+     }
+    },
+    "y10": {
+     "m6": {
+      "reason": "no free data"
+     },
+     "m24": {
+      "reason": "no free data"
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T05:02:51Z",
+ "generated_at": "2026-10-30T08:23:40Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -24,7 +24,7 @@
     "source_id": "SGS 1",
     "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json",
     "as_of": "2026-10-29",
-    "fetched_at": "2026-10-30T04:16:52Z",
+    "fetched_at": "2026-10-30T08:17:44Z",
     "frequency": "daily",
     "series": "br.usdbrl.ptax",
     "evidence": {
@@ -57,7 +57,7 @@
     "source_id": "SIE SF43718",
     "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
     "as_of": "2026-10-29",
-    "fetched_at": "2026-10-30T04:35:46Z",
+    "fetched_at": "2026-10-30T08:18:45Z",
     "frequency": "daily",
     "series": "mx.usdmxn.fix",
     "evidence": {
@@ -95,7 +95,7 @@
     "source_id": "FRED DEXUSEU",
     "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=DEXUSEU",
     "as_of": "2026-10-23",
-    "fetched_at": "2026-10-30T05:02:48Z",
+    "fetched_at": "2026-10-30T08:19:19Z",
     "frequency": "daily",
     "series": "eu.eurusd",
     "evidence": {
@@ -130,7 +130,7 @@
     "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2027-01-01, mid of Taxa Compra/Venda Manha",
     "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
     "as_of": "2026-10-28",
-    "fetched_at": "2026-10-30T04:17:32Z",
+    "fetched_at": "2026-10-30T08:18:11Z",
     "frequency": "daily",
     "series": "br.di.f27.proxy",
     "evidence": {
@@ -170,7 +170,7 @@
     "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2029-01-01, mid of Taxa Compra/Venda Manha",
     "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
     "as_of": "2026-10-28",
-    "fetched_at": "2026-10-30T04:17:32Z",
+    "fetched_at": "2026-10-30T08:18:11Z",
     "frequency": "daily",
     "series": "br.di.f29.proxy",
     "evidence": {
@@ -210,7 +210,7 @@
     "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2031-01-01, mid of Taxa Compra/Venda Manha",
     "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
     "as_of": "2026-10-28",
-    "fetched_at": "2026-10-30T04:17:32Z",
+    "fetched_at": "2026-10-30T08:18:11Z",
     "frequency": "daily",
     "series": "br.di.f31.proxy",
     "evidence": {
@@ -248,7 +248,7 @@
     "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
     "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
     "as_of": "2026-10-28",
-    "fetched_at": "2026-10-30T04:17:32Z",
+    "fetched_at": "2026-10-30T08:18:11Z",
     "frequency": "daily",
     "series": "br.td.pre_longest",
     "evidence": {
@@ -282,7 +282,7 @@
     "source_id": "IRS.M.FR minus IRS.M.DE (L40.CI.0000.EUR.N.Z)",
     "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
     "as_of": "2026-09-01",
-    "fetched_at": "2026-10-30T04:17:44Z",
+    "fetched_at": "2026-10-30T08:19:07Z",
     "frequency": "monthly",
     "series": "fr.spread.oat_bund.ecb_m",
     "evidence": {
@@ -320,7 +320,7 @@
     "source_id": "FRED DGS10",
     "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=DGS10",
     "as_of": "2026-10-28",
-    "fetched_at": "2026-10-30T05:02:45Z",
+    "fetched_at": "2026-10-30T08:19:16Z",
     "frequency": "daily",
     "series": "us.ust10y",
     "evidence": {
@@ -354,7 +354,7 @@
     "source_id": "SIE SF44071",
     "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
     "as_of": "2026-10-22",
-    "fetched_at": "2026-10-30T04:35:47Z",
+    "fetched_at": "2026-10-30T08:18:46Z",
     "frequency": "per auction",
     "series": "mx.mbono10y.auction",
     "evidence": {
@@ -457,7 +457,7 @@
       "source_id": "IRS.M.FR minus IRS.M.DE (L40.CI.0000.EUR.N.Z)",
       "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:17:44Z",
+      "fetched_at": "2026-10-30T08:19:07Z",
       "frequency": "monthly",
       "series": "fr.spread.oat_bund.ecb_m",
       "evidence": {
@@ -483,7 +483,7 @@
       "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
       "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:17:44Z",
+      "fetched_at": "2026-10-30T08:19:07Z",
       "frequency": "monthly",
       "series": "fr.oat10y.ecb_m",
       "evidence": {
@@ -509,7 +509,7 @@
       "source_id": "BBSIS.D.I.ZAR.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A",
       "source_url": "https://api.statistiken.bundesbank.de/rest/download/BBSIS/D.I.ZAR.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A",
       "as_of": "2026-10-29",
-      "fetched_at": "2026-10-30T04:17:45Z",
+      "fetched_at": "2026-10-30T08:19:09Z",
       "frequency": "daily",
       "series": "de.bund10y",
       "evidence": {
@@ -530,7 +530,7 @@
       "source_id": "FRED DEXUSEU",
       "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=DEXUSEU",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-30T05:02:48Z",
+      "fetched_at": "2026-10-30T08:19:19Z",
       "frequency": "daily",
       "series": "eu.eurusd",
       "evidence": {
@@ -587,7 +587,7 @@
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 679035",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -604,7 +604,7 @@
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 679033",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -621,7 +621,7 @@
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 679049",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -632,13 +632,13 @@
      "venue": "Polymarket",
      "question": "Will Xavier Bertrand win the 2027 French presidential election?",
      "prob": 0.0005,
-     "volume": 6378717.730839001,
+     "volume": 6378717.730839,
      "end_date": "2027-04-19",
      "url": "https://polymarket.com/event/next-french-presidential-election",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 679023",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -655,7 +655,7 @@
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 679036",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -672,7 +672,7 @@
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 679041",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -682,14 +682,14 @@
     {
      "venue": "Kalshi",
      "question": "Next French presidential election winner?: Marine Le Pen",
-     "prob": 0.45,
-     "volume": 319571.32,
+     "prob": 0.44,
+     "volume": 320483.71,
      "end_date": "2028-05-30",
      "url": "https://kalshi.com/markets/kxfrenchpres",
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXFRENCHPRES-27-MLEP",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -700,13 +700,13 @@
      "venue": "Kalshi",
      "question": "Next French presidential election winner?: Jordan Bardella",
      "prob": 0.014,
-     "volume": 133253.44,
+     "volume": 134893.83,
      "end_date": "2028-05-30",
      "url": "https://kalshi.com/markets/kxfrenchpres",
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXFRENCHPRES-27-JBAR",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -723,7 +723,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXFRENCHPRES-27-DLIS",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -740,7 +740,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXFRENCHPRES-27-FHOL",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -751,13 +751,13 @@
      "venue": "Kalshi",
      "question": "Will France declare a state of emergency?: Before Nov 1, 2026",
      "prob": 0.03,
-     "volume": 86820.95,
+     "volume": 86831.75,
      "end_date": "2026-11-01",
      "url": "https://kalshi.com/markets/kxfranceemergency",
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXFRANCEEMERGENCY-27-26NOV01",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -774,7 +774,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXFRENCHPRES-27-JMEL",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -867,7 +867,7 @@
      "source_id": "AFT credit ratings table",
      "source_url": "https://www.aft.gouv.fr/en/frances-credit-ratings",
      "as_of": "2026-10-30",
-     "fetched_at": "2026-10-30T04:17:47Z",
+     "fetched_at": "2026-10-30T08:19:10Z",
      "frequency": "on change",
      "series": "fr.ratings.aft",
      "evidence": {
@@ -968,7 +968,7 @@
       "source_id": "SGS 1",
       "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json",
       "as_of": "2026-10-29",
-      "fetched_at": "2026-10-30T04:16:52Z",
+      "fetched_at": "2026-10-30T08:17:44Z",
       "frequency": "daily",
       "series": "br.usdbrl.ptax",
       "evidence": {
@@ -989,7 +989,7 @@
       "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2027-01-01, mid of Taxa Compra/Venda Manha",
       "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
       "as_of": "2026-10-28",
-      "fetched_at": "2026-10-30T04:17:32Z",
+      "fetched_at": "2026-10-30T08:18:11Z",
       "frequency": "daily",
       "series": "br.di.f27.proxy",
       "evidence": {
@@ -1015,7 +1015,7 @@
       "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2029-01-01, mid of Taxa Compra/Venda Manha",
       "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
       "as_of": "2026-10-28",
-      "fetched_at": "2026-10-30T04:17:32Z",
+      "fetched_at": "2026-10-30T08:18:11Z",
       "frequency": "daily",
       "series": "br.di.f29.proxy",
       "evidence": {
@@ -1041,7 +1041,7 @@
       "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado 2031-01-01, mid of Taxa Compra/Venda Manha",
       "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
       "as_of": "2026-10-28",
-      "fetched_at": "2026-10-30T04:17:32Z",
+      "fetched_at": "2026-10-30T08:18:11Z",
       "frequency": "daily",
       "series": "br.di.f31.proxy",
       "evidence": {
@@ -1067,7 +1067,7 @@
       "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro Prefixado / Tesouro Prefixado com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
       "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
       "as_of": "2026-10-28",
-      "fetched_at": "2026-10-30T04:17:32Z",
+      "fetched_at": "2026-10-30T08:18:11Z",
       "frequency": "daily",
       "series": "br.td.pre_longest",
       "evidence": {
@@ -1088,7 +1088,7 @@
       "source_id": "PrecoTaxaTesouroDireto.csv: Tesouro IPCA+ / Tesouro IPCA+ com Juros Semestrais, longest maturity, mid of Taxa Compra/Venda Manha",
       "source_url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
       "as_of": "2026-10-28",
-      "fetched_at": "2026-10-30T04:17:32Z",
+      "fetched_at": "2026-10-30T08:18:11Z",
       "frequency": "daily",
       "series": "br.td.ipca_longest",
       "evidence": {
@@ -1109,7 +1109,7 @@
       "source_id": "SGS 432",
       "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-10-30T04:16:51Z",
+      "fetched_at": "2026-10-30T08:17:43Z",
       "frequency": "daily",
       "series": "br.selic.target",
       "evidence": {
@@ -1183,7 +1183,7 @@
       "source_id": "ExpectativasMercadoAnuais/IPCA/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-30T04:16:54Z",
+      "fetched_at": "2026-10-30T08:17:46Z",
       "frequency": "daily (business days)",
       "series": "br.focus.ipca",
       "evidence": {
@@ -1221,7 +1221,7 @@
       "source_id": "ExpectativasMercadoAnuais/Selic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-30T04:16:55Z",
+      "fetched_at": "2026-10-30T08:17:47Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic",
       "evidence": {
@@ -1259,7 +1259,7 @@
       "source_id": "ExpectativasMercadoAnuais/Câmbio/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-30T04:16:55Z",
+      "fetched_at": "2026-10-30T08:17:48Z",
       "frequency": "daily (business days)",
       "series": "br.focus.brl",
       "evidence": {
@@ -1297,7 +1297,7 @@
       "source_id": "ExpectativasMercadoAnuais/PIB Total/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-30T04:16:56Z",
+      "fetched_at": "2026-10-30T08:17:48Z",
       "frequency": "daily (business days)",
       "series": "br.focus.gdp",
       "evidence": {
@@ -1335,7 +1335,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-30T04:16:57Z",
+      "fetched_at": "2026-10-30T08:17:49Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1373,7 +1373,7 @@
      "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-10-20",
-     "fetched_at": "2026-10-30T04:18:04Z",
+     "fetched_at": "2026-10-30T08:19:32Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "br.cot.brl",
      "evidence": {
@@ -1408,14 +1408,14 @@
     {
      "venue": "Polymarket",
      "question": "Alexandre de Moraes out as Brazil Supreme Court Justice?",
-     "prob": 0.066,
+     "prob": 0.063,
      "volume": 260436.55592300004,
      "end_date": "2027-01-01",
      "url": "https://polymarket.com/event/alexandre-de-moraes-out-as-brazil-supreme-court-justice",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 1544795",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -1425,14 +1425,14 @@
     {
      "venue": "Polymarket",
      "question": "Any Brazil STF Justice removed by impeachment before 2027?",
-     "prob": 0.0265,
-     "volume": 102807.20437000002,
+     "prob": 0.0235,
+     "volume": 102807.20436999999,
      "end_date": "2027-01-01",
      "url": "https://polymarket.com/event/any-brazil-stf-justice-removed-by-impeachment-before-2027",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 1125087",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -1442,14 +1442,14 @@
     {
      "venue": "Polymarket",
      "question": "Will Luiz Inácio Lula da Silva win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?",
-     "prob": 0.145,
-     "volume": 63941.035952,
+     "prob": 0.36,
+     "volume": 64110.018488,
      "end_date": "2026-11-05",
      "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 5336164",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -1460,13 +1460,13 @@
      "venue": "Polymarket",
      "question": "Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the November meeting?",
      "prob": 0.205,
-     "volume": 45598.07100499999,
+     "volume": 45598.071005,
      "end_date": "2026-11-04",
      "url": "https://polymarket.com/event/bank-of-brazil-decision-in-november-1785878499354",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 3347919",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -1476,14 +1476,14 @@
     {
      "venue": "Polymarket",
      "question": "Brazil presidential election annulled by December 31?",
-     "prob": 0.0225,
-     "volume": 44617.501999,
+     "prob": 0.028,
+     "volume": 45063.29353799999,
      "end_date": "2027-01-01",
      "url": "https://polymarket.com/event/brazil-presidential-election-annulled-by-december-31-20261026114556736",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 6257149",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -1493,14 +1493,14 @@
     {
      "venue": "Polymarket",
      "question": "Will Brazil’s Annual Inflation in 2026 be between 4.50% and 4.99%?",
-     "prob": 0.0585,
+     "prob": 0.0555,
      "volume": 37523.23845299999,
      "end_date": "2027-01-13",
      "url": "https://polymarket.com/event/brazil-annual-inflation-2026",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 1243900",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -1517,7 +1517,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXBRAZILINF-26DEC-4.00",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -1534,7 +1534,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXBRRATECUT-27JAN01-T7",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -1544,14 +1544,14 @@
     {
      "venue": "Kalshi",
      "question": "Central Bank of Brazil rate decision in November: Hike more than 25bps",
-     "prob": 0.03,
-     "volume": 61721.04,
+     "prob": 0.02,
+     "volume": 61737.04,
      "end_date": "2026-11-04",
      "url": "https://kalshi.com/markets/kxcbdecisionbrazil",
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXCBDECISIONBRAZIL-26NOV04-H25P",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -1568,7 +1568,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXBRRATECUT-27JAN01-E6",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -1585,7 +1585,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXBRRATECUT-27JAN01-E5",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -1602,7 +1602,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXBRRATECUT-27JAN01-E4",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -1888,7 +1888,7 @@
       "source_id": "SIE SF43718",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
       "as_of": "2026-10-29",
-      "fetched_at": "2026-10-30T04:35:46Z",
+      "fetched_at": "2026-10-30T08:18:45Z",
       "frequency": "daily",
       "series": "mx.usdmxn.fix",
       "evidence": {
@@ -1914,7 +1914,7 @@
       "source_id": "SIE SF61745",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF61745,CF300,1",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-10-30T04:35:47Z",
+      "fetched_at": "2026-10-30T08:18:45Z",
       "frequency": "daily",
       "series": "mx.policy.target",
       "evidence": {
@@ -1940,7 +1940,7 @@
       "source_id": "SIE SF43783",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43783,CF300,1",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-10-30T04:35:47Z",
+      "fetched_at": "2026-10-30T08:18:46Z",
       "frequency": "daily",
       "series": "mx.tiie28",
       "evidence": {
@@ -1966,7 +1966,7 @@
       "source_id": "SIE SF44071",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
       "as_of": "2026-10-22",
-      "fetched_at": "2026-10-30T04:35:47Z",
+      "fetched_at": "2026-10-30T08:18:46Z",
       "frequency": "per auction",
       "series": "mx.mbono10y.auction",
       "evidence": {
@@ -2050,7 +2050,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:35:50Z",
+      "fetched_at": "2026-10-30T08:18:49Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -2093,7 +2093,7 @@
       "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:35:52Z",
+      "fetched_at": "2026-10-30T08:18:52Z",
       "frequency": "monthly",
       "series": "mx.survey.gdp",
       "evidence": {
@@ -2136,7 +2136,7 @@
       "source_id": "SIE SR14770, SR14775, SR14773, SR14774, SR14777, SR14782, SR14780, SR14781 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14770,SR14775,SR14773,SR14774,SR14777,SR14782,SR14780,SR14781,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:35:54Z",
+      "fetched_at": "2026-10-30T08:18:54Z",
       "frequency": "monthly",
       "series": "mx.survey.usdmxn",
       "evidence": {
@@ -2179,7 +2179,7 @@
       "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T04:35:56Z",
+      "fetched_at": "2026-10-30T08:18:56Z",
       "frequency": "monthly",
       "series": "mx.survey.balance",
       "evidence": {
@@ -2222,7 +2222,7 @@
      "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-10-20",
-     "fetched_at": "2026-10-30T04:18:07Z",
+     "fetched_at": "2026-10-30T08:19:33Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "mx.cot.mxn",
      "evidence": {
@@ -2264,7 +2264,7 @@
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 3388093",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -2274,14 +2274,14 @@
     {
      "venue": "Polymarket",
      "question": "Will Ricardo Ruiz Velasco be arrested in 2026?",
-     "prob": 0.133,
+     "prob": 0.1375,
      "volume": 63656.29130599999,
      "end_date": "2027-01-01",
      "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 1419324",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -2298,7 +2298,7 @@
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 1419327",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -2308,14 +2308,14 @@
     {
      "venue": "Polymarket",
      "question": "Will the National Regeneration Movement (Morena) win the most seats in the 2027 Mexico legislative election?",
-     "prob": 0.8875,
-     "volume": 58267.82440899999,
+     "prob": 0.865,
+     "volume": 58311.834409,
      "end_date": "2027-06-07",
      "url": "https://polymarket.com/event/mexico-legislative-election-winner",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 2271403",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -2325,14 +2325,14 @@
     {
      "venue": "Polymarket",
      "question": "Bank of Mexico decreases interest rates by 25 bps after November 2026 meeting?",
-     "prob": 0.1215,
-     "volume": 47183.837465000004,
+     "prob": 0.1205,
+     "volume": 47183.837465,
      "end_date": "2026-11-05",
      "url": "https://polymarket.com/event/bank-of-mexico-decision-in-november",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 3388092",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -2343,13 +2343,13 @@
      "venue": "Polymarket",
      "question": "Claudia Sheinbaum out as President of Mexico by December 31?",
      "prob": 0.03,
-     "volume": 41170.17075999999,
+     "volume": 41174.300760000006,
      "end_date": "2027-01-01",
      "url": "https://polymarket.com/event/claudia-sheinbaum-out-as-president-of-mexico-by-june-30",
      "meta": {
       "source": "Polymarket Gamma API",
       "source_id": "market 1430556",
-      "as_of": "2026-10-30T04:18:08Z",
+      "as_of": "2026-10-30T08:19:34Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "em-macro §7 (exploratory): election odds versus FX and 10y yields; no lead or lag conclusion was supported."
@@ -2366,7 +2366,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXDEMBORDERHOUSESWEEP-26NOV03",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -2383,7 +2383,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXUE-MEX26OCT-2.9",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -2400,7 +2400,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXCBDECISIONMEXICO-26NOV05-C25",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -2417,7 +2417,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXCBDECISIONMEXICO-26NOV05-HOLD",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -2434,7 +2434,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXUE-MEX26OCT-3.3",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -2451,7 +2451,7 @@
      "meta": {
       "source": "Kalshi trade API",
       "source_id": "KXCBDECISIONMEXICO-26NOV05-C50P",
-      "as_of": "2026-10-30T04:18:28Z",
+      "as_of": "2026-10-30T08:19:55Z",
       "evidence": {
        "badge": "tested_no_lead",
        "reason": "As Polymarket: election-odds lead tests in em-macro §7 found no supported lead."
@@ -2720,8 +2720,8 @@
     "country": "FR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:17:45Z",
-    "last_success": "2026-10-30T04:17:45Z",
+    "last_attempt": "2026-10-30T08:19:09Z",
+    "last_success": "2026-10-30T08:19:09Z",
     "n_series": 1,
     "name": "AFT France credit ratings table",
     "note": null,
@@ -2737,7 +2737,7 @@
     "country": "BR",
     "error": "RuntimeError: B3 unreachable (TxRef1.asp: 404 Client Error: Not Found for url: https://www2.bmf.com.br/pages/portal/bmfbovespa/boletim1/TxRef1.asp?Data=23%2F10%2F2026&Data1=20261023&slcTaxa=PRE)",
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:17:32Z",
+    "last_attempt": "2026-10-30T08:18:11Z",
     "name": "B3 DI x pré reference rates",
     "note": null,
     "release": "daily after B3 close",
@@ -2749,7 +2749,7 @@
     "country": "MX",
     "error": "HTTPError: 413 Client Error: Request Entity Too Large for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14659,SR14664,SR14662,SR14663,SR14666,SR14671,SR14669,SR14670,SR14673,SR14678,SR14676,SR14677,SR14680,SR14685,SR14683,SR14684,SR14687,SR14692,SR14690,SR14691,SR14694,SR14699,SR14697,SR14698,SR14701,SR14706,SR14704,SR14705,SR14708,SR14713,SR14711,SR14712/datos",
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:35:19Z",
+    "last_attempt": "2026-10-30T08:18:17Z",
     "last_success": "2026-10-30T04:17:37Z",
     "n_series": 9,
     "name": "Banxico SIE API",
@@ -2774,8 +2774,8 @@
     "country": "MX",
     "error": null,
     "fallback_for": "banxico_api",
-    "last_attempt": "2026-10-30T04:35:46Z",
-    "last_success": "2026-10-30T04:35:46Z",
+    "last_attempt": "2026-10-30T08:18:44Z",
+    "last_success": "2026-10-30T08:18:44Z",
     "n_series": 9,
     "name": "Banxico SIE public chart data (fallback)",
     "note": null,
@@ -2799,8 +2799,8 @@
     "country": "BR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:16:53Z",
-    "last_success": "2026-10-30T04:16:53Z",
+    "last_attempt": "2026-10-30T08:17:45Z",
+    "last_success": "2026-10-30T08:17:45Z",
     "n_series": 8,
     "name": "BCB Focus survey (Olinda)",
     "note": null,
@@ -2823,8 +2823,8 @@
     "country": "BR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:16:50Z",
-    "last_success": "2026-10-30T04:16:50Z",
+    "last_attempt": "2026-10-30T08:17:43Z",
+    "last_success": "2026-10-30T08:17:43Z",
     "n_series": 4,
     "name": "BCB SGS (Selic, PTAX, IPCA)",
     "note": null,
@@ -2843,8 +2843,8 @@
     "country": "DE",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:17:44Z",
-    "last_success": "2026-10-30T04:17:44Z",
+    "last_attempt": "2026-10-30T08:19:07Z",
+    "last_success": "2026-10-30T08:19:07Z",
     "n_series": 1,
     "name": "Bundesbank daily Bund 10y",
     "note": null,
@@ -2858,9 +2858,9 @@
    },
    "calendar": {
     "country": "GLOBAL",
-    "error": "GDELT attention refresh stopped at its 9-minute budget; remaining queries keep their last values.",
+    "error": "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values.",
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:29:51Z",
+    "last_attempt": "2026-10-30T08:23:38Z",
     "last_success": "2026-10-30T04:29:51Z",
     "n_series": 118,
     "name": "Catalyst calendar (events.yaml, Fed, ECB, em-macro, GDELT)",
@@ -2870,14 +2870,14 @@
      "calendar.json",
      "attention.json"
     ],
-    "state": "partial"
+    "state": "error"
    },
    "cftc": {
     "country": "GLOBAL",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:18:03Z",
-    "last_success": "2026-10-30T04:18:03Z",
+    "last_attempt": "2026-10-30T08:19:31Z",
+    "last_success": "2026-10-30T08:19:31Z",
     "n_series": 3,
     "name": "CFTC Commitments of Traders (BRL, MXN, ZAR)",
     "note": null,
@@ -2895,8 +2895,8 @@
     "country": "FR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:17:42Z",
-    "last_success": "2026-10-30T04:17:42Z",
+    "last_attempt": "2026-10-30T08:19:06Z",
+    "last_success": "2026-10-30T08:19:06Z",
     "n_series": 5,
     "name": "ECB monthly long-term rates (FR, DE, IT, ES)",
     "note": null,
@@ -2912,12 +2912,29 @@
     ],
     "state": "ok"
    },
+   "fomc": {
+    "country": "US",
+    "error": null,
+    "fallback_for": null,
+    "last_attempt": "2026-10-30T08:19:23Z",
+    "last_success": "2026-10-30T08:19:23Z",
+    "n_series": 1,
+    "name": "Federal Reserve FOMC meeting calendar",
+    "note": null,
+    "release": "published a year or more ahead",
+    "secret": null,
+    "secret_present": null,
+    "series": [
+     "us.fomc.meetings"
+    ],
+    "state": "ok"
+   },
    "fr_forecasts": {
     "country": "FR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:40:07Z",
-    "last_success": "2026-10-30T04:40:07Z",
+    "last_attempt": "2026-10-30T08:19:10Z",
+    "last_success": "2026-10-30T08:19:10Z",
     "n_series": 10,
     "name": "IMF, OECD and European Commission forecasts for France",
     "note": null,
@@ -2942,10 +2959,10 @@
     "country": "US",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T05:02:45Z",
-    "last_success": "2026-10-30T05:02:45Z",
-    "n_series": 12,
-    "name": "FRED API (US rates, dollar, EUR/USD, VIX, Brent, iron ore, soy, Fed/ECB rates)",
+    "last_attempt": "2026-10-30T08:19:15Z",
+    "last_success": "2026-10-30T08:19:15Z",
+    "n_series": 13,
+    "name": "FRED API (US rates, real yield, dollar, EUR/USD, VIX, Brent, iron ore, soy, Fed/ECB rates)",
     "note": null,
     "release": "daily",
     "secret": "FRED_API_KEY",
@@ -2955,6 +2972,7 @@
      "us.usd.broad",
      "mx.10y.oecd_m",
      "us.fedfunds",
+     "us.tips10",
      "us.ust2y",
      "us.vix",
      "us.fed.upper",
@@ -2970,7 +2988,7 @@
     "country": "US",
     "error": null,
     "fallback_for": "fred_api",
-    "last_attempt": "2026-10-30T05:02:49Z",
+    "last_attempt": "2026-10-30T08:19:21Z",
     "last_success": "2026-10-29T15:57:52Z",
     "n_series": 4,
     "name": "FRED public graph CSV (fallback)",
@@ -2986,12 +3004,105 @@
     ],
     "state": "standby"
    },
+   "gold_lbma": {
+    "country": "GLOBAL",
+    "error": "HTTPError: 403 Client Error: Forbidden for url: https://prices.lbma.org.uk/json/gold_pm.json",
+    "fallback_for": "gold_stooq",
+    "last_attempt": "2026-10-30T08:19:22Z",
+    "name": "LBMA gold and silver benchmark prices (fallback)",
+    "note": null,
+    "release": "daily, after the London price auctions",
+    "secret": null,
+    "secret_present": null,
+    "state": "error"
+   },
+   "gold_stooq": {
+    "country": "GLOBAL",
+    "error": "RuntimeError: Stooq did not return CSV: '<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"no'",
+    "fallback_for": null,
+    "last_attempt": "2026-10-30T08:19:21Z",
+    "name": "Stooq daily CSV (gold and silver spot)",
+    "note": null,
+    "release": "daily",
+    "secret": null,
+    "secret_present": null,
+    "state": "error"
+   },
+   "gpr": {
+    "country": "GLOBAL",
+    "error": null,
+    "fallback_for": null,
+    "last_attempt": "2026-10-30T08:19:23Z",
+    "last_success": "2026-10-30T08:19:23Z",
+    "n_series": 1,
+    "name": "Geopolitical Risk index (Caldara and Iacoviello, daily)",
+    "note": null,
+    "release": "updated weekly",
+    "secret": null,
+    "secret_present": null,
+    "series": [
+     "gl.gpr"
+    ],
+    "state": "ok"
+   },
+   "history": {
+    "country": "GLOBAL",
+    "error": null,
+    "fallback_for": null,
+    "last_attempt": "2026-10-30T08:19:24Z",
+    "last_success": "2026-10-30T08:19:24Z",
+    "n_series": 19,
+    "name": "Long history for the policy playbook (FRED: OECD/IMF/Eurostat; IMF WEO annual)",
+    "note": null,
+    "release": "monthly and quarterly; IMF WEO April and October",
+    "secret": null,
+    "secret_present": null,
+    "series": [
+     "hist.mx.cpi_yoy",
+     "hist.fr.cpi_yoy",
+     "hist.br.gdp_q",
+     "hist.mx.gdp_q",
+     "hist.fr.gdp_q",
+     "hist.ar.gdp_q",
+     "hist.br.fx_m",
+     "hist.mx.fx_m",
+     "hist.fr.fx_m",
+     "hist.ar.fx_m",
+     "hist.fr.y10_m",
+     "hist.br.cpi_a",
+     "hist.br.gdp_a",
+     "hist.mx.cpi_a",
+     "hist.mx.gdp_a",
+     "hist.fr.cpi_a",
+     "hist.fr.gdp_a",
+     "hist.ar.cpi_a",
+     "hist.ar.gdp_a"
+    ],
+    "state": "ok"
+   },
+   "imf_gold": {
+    "country": "GLOBAL",
+    "error": null,
+    "fallback_for": null,
+    "last_attempt": "2026-10-30T08:19:24Z",
+    "last_success": "2026-10-30T08:19:24Z",
+    "n_series": 1,
+    "name": "IMF IRFCL official gold holdings (central-bank buying)",
+    "note": null,
+    "release": "monthly, about 2 months' lag",
+    "secret": null,
+    "secret_present": null,
+    "series": [
+     "gl.cbgold"
+    ],
+    "state": "ok"
+   },
    "kalshi": {
     "country": "GLOBAL",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:18:28Z",
-    "last_success": "2026-10-30T04:18:28Z",
+    "last_attempt": "2026-10-30T08:19:55Z",
+    "last_success": "2026-10-30T08:19:55Z",
     "n_series": 40,
     "name": "Kalshi (titles matching FR/BR/MX)",
     "note": null,
@@ -3046,8 +3157,8 @@
     "country": "GLOBAL",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:18:08Z",
-    "last_success": "2026-10-30T04:18:08Z",
+    "last_attempt": "2026-10-30T08:19:34Z",
+    "last_success": "2026-10-30T08:19:34Z",
     "n_series": 45,
     "name": "Polymarket (tags france, brazil, mexico)",
     "note": null,
@@ -3107,8 +3218,8 @@
     "country": "BR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:17:09Z",
-    "last_success": "2026-10-30T04:17:09Z",
+    "last_attempt": "2026-10-30T08:17:53Z",
+    "last_success": "2026-10-30T08:17:53Z",
     "n_series": 5,
     "name": "Tesouro Direto daily CSV",
     "note": null,
@@ -3128,16 +3239,34 @@
     "country": "FR",
     "error": "secret WEBSTAT_CLIENT_ID is not set",
     "fallback_for": null,
-    "last_attempt": "2026-10-30T04:17:42Z",
+    "last_attempt": "2026-10-30T08:19:06Z",
     "name": "Banque de France Webstat (OAT, Bund)",
     "note": "skipped; add the secret under Settings > Secrets and variables > Actions",
     "release": "daily, next morning",
     "secret": "WEBSTAT_CLIENT_ID",
     "secret_present": false,
     "state": "missing_secret"
+   },
+   "worldbank_pink": {
+    "country": "GLOBAL",
+    "error": null,
+    "fallback_for": null,
+    "last_attempt": "2026-10-30T08:19:22Z",
+    "last_success": "2026-10-30T08:19:22Z",
+    "n_series": 2,
+    "name": "World Bank Pink Sheet (gold and silver, monthly since 1960)",
+    "note": null,
+    "release": "early each month",
+    "secret": null,
+    "secret_present": null,
+    "series": [
+     "gl.gold.wb_m",
+     "gl.silver.wb_m"
+    ],
+    "state": "ok"
    }
   },
-  "updated_at": "2026-10-30T05:02:49Z"
+  "updated_at": "2026-10-30T08:23:38Z"
  },
  "series_index": [
   "br.cot.brl",
@@ -3177,8 +3306,31 @@
   "fr.ratings.aft",
   "fr.spread.oat_bund.ecb_m",
   "gl.brent",
+  "gl.cbgold",
+  "gl.gold.wb_m",
+  "gl.gpr",
   "gl.ironore",
+  "gl.silver.wb_m",
   "gl.soy",
+  "hist.ar.cpi_a",
+  "hist.ar.fx_m",
+  "hist.ar.gdp_a",
+  "hist.ar.gdp_q",
+  "hist.br.cpi_a",
+  "hist.br.fx_m",
+  "hist.br.gdp_a",
+  "hist.br.gdp_q",
+  "hist.fr.cpi_a",
+  "hist.fr.cpi_yoy",
+  "hist.fr.fx_m",
+  "hist.fr.gdp_a",
+  "hist.fr.gdp_q",
+  "hist.fr.y10_m",
+  "hist.mx.cpi_a",
+  "hist.mx.cpi_yoy",
+  "hist.mx.fx_m",
+  "hist.mx.gdp_a",
+  "hist.mx.gdp_q",
   "it.spread.btp_bund.ecb_m",
   "ks.KXBRAZILINF-26DEC-4.00",
   "ks.KXBRAZILU-Q42026-5.8",
@@ -3280,6 +3432,8 @@
   "pm.679049",
   "us.fed.upper",
   "us.fedfunds",
+  "us.fomc.meetings",
+  "us.tips10",
   "us.usd.broad",
   "us.ust10y",
   "us.ust2y",
@@ -3318,6 +3472,17 @@
    "primary": "b3_di",
    "primary_state": "error",
    "fallback_name": "Tesouro Direto daily CSV",
+   "fallback_state": "ok"
+  },
+  {
+   "id": "gold",
+   "features": "Gold and silver prices (Gold page, XAUUSD and XAGUSD in the book)",
+   "effect": "Monthly average prices from the World Bank instead of daily spot: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old.",
+   "upgrade": "none to add: Stooq and LBMA refuse automated requests from some networks; the book and the Gold page switch back to daily prices by themselves on the first run either answers",
+   "secret": null,
+   "primary": "gold_stooq",
+   "primary_state": "error",
+   "fallback_name": "World Bank Pink Sheet (gold and silver, monthly since 1960)",
    "fallback_state": "ok"
   }
  ],
