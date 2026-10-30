@@ -284,7 +284,7 @@
     f.append(...nn(el("div", { class: "small" }, el("a", { href: "#scenarios" }, "← all scenarios"))));
     f.append(...nn(el("div", { class: "sec" }, el("h1", {}, s.title), T.ctryChip(s.country))));
     const ev = s.event;
-    f.append(...nn(el("article", { class: "card" },
+    f.append(...nn(el("article", { class: "card feature" },
       el("div", { class: "big" }, s.question),
       el("div", { class: "small", style: "margin-top:6px" }, el("b", {}, "Resolves "), s.resolution_date + ". ", s.resolution),
       ev ? el("div", { class: "small", style: "margin-top:6px" }, el("b", {}, "Catalyst: "), el("a", { href: "#calendar" }, ev.title), " · " + ev.date + " (" + ev.status + ") · ",
