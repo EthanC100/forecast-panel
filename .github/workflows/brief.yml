@@ -29,6 +29,8 @@ jobs:
     timeout-minutes: 100
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main               # the latest main when the job starts, not when it was queued
 
       - uses: actions/setup-python@v5
         with:
