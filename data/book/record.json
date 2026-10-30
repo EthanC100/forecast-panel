@@ -1,0 +1,463 @@
+{
+ "generated_at": "2026-10-30T05:02:16Z",
+ "questions": {
+  "n_resolved": 0,
+  "n_ai_only": 0,
+  "noisy": true,
+  "min_group": 10,
+  "min_overall": 100,
+  "side_by_side": {
+   "me": {
+    "n": 0,
+    "brier": null,
+    "log": null
+   },
+   "ai": {
+    "n": 0,
+    "brier": null,
+    "log": null
+   },
+   "market": {
+    "n": 0,
+    "brier": null,
+    "log": null
+   },
+   "no_change": {
+    "n": 0,
+    "brier": null,
+    "log": null
+   },
+   "ai_all": {
+    "n": 0,
+    "brier": null,
+    "log": null
+   }
+  },
+  "shared": {
+   "n": 0,
+   "scores": {
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "no_change": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   }
+  },
+  "skill": {
+   "me": {
+    "n": 0
+   },
+   "ai": {
+    "n": 0
+   },
+   "market": {
+    "n": 0
+   }
+  },
+  "by_type": [
+   {
+    "group": "election",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "budget",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "rating",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "central bank",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "trade",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "other",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   }
+  ],
+  "by_confidence": [
+   {
+    "group": "high",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "medium",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "low",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "unstated",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   }
+  ],
+  "by_lead": [
+   {
+    "group": "90+ days",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "30-90 days",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   },
+   {
+    "group": "under 30 days",
+    "n": 0,
+    "insufficient": true,
+    "me": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "ai": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    },
+    "market": {
+     "n": 0,
+     "brier": null,
+     "log": null
+    }
+   }
+  ],
+  "blend": {
+   "n_shared": 0,
+   "min": 20,
+   "ready": false
+  },
+  "items": [],
+  "ai_only": [],
+  "definitions": {
+   "me": "my last forecast before resolution",
+   "ai": "the AI's blind probability recorded with that forecast",
+   "market": "the market-implied probability recorded at the same moment",
+   "no_change": "my first forecast on the question, never updated",
+   "log": "ln(probability given to the outcome), clipped at 1%; higher is better",
+   "brier": "(probability - outcome)^2; lower is better"
+  }
+ },
+ "trades": {
+  "start_date": "2026-10-29",
+  "as_of": "2026-10-30",
+  "closed": {
+   "n": 0,
+   "total_r": null,
+   "total_usd": null,
+   "price_r": null,
+   "price_usd": null,
+   "carry_r": null,
+   "carry_usd": null,
+   "cost_r": null,
+   "cost_usd": null,
+   "per_trade_r": null
+  },
+  "open": {
+   "n": 0,
+   "total_r": null,
+   "total_usd": null,
+   "price_r": null,
+   "price_usd": null,
+   "carry_r": null,
+   "carry_usd": null,
+   "cost_r": null,
+   "cost_usd": null,
+   "per_trade_r": null
+  },
+  "versus": {
+   "book": {
+    "return_pct": 0.0,
+    "pnl_usd": 0.0,
+    "n_trades": 0,
+    "total_r": null
+   },
+   "systematic": {
+    "note": "no month since the start date yet"
+   },
+   "buy_and_hold": {
+    "equal_weight_return_pct": null,
+    "n_instruments": 0,
+    "rows": [
+     {
+      "code": "USDBRL",
+      "name": "USD/BRL",
+      "description": "long USD"
+     },
+     {
+      "code": "USDMXN",
+      "name": "USD/MXN",
+      "description": "long USD"
+     },
+     {
+      "code": "EURUSD",
+      "name": "EUR/USD",
+      "description": "long EUR"
+     },
+     {
+      "code": "OATBUND",
+      "name": "France OAT-Bund 10-year spread",
+      "description": "long OAT vs Bund"
+     },
+     {
+      "code": "BR10Y",
+      "name": "Brazil 10-year proxy (longest Tesouro Prefixado)",
+      "description": "long the bond"
+     },
+     {
+      "code": "DI27",
+      "name": "DI Jan-27 (proxy until B3 is reachable)",
+      "description": "long the bond"
+     },
+     {
+      "code": "DI29",
+      "name": "DI Jan-29 (proxy until B3 is reachable)",
+      "description": "long the bond"
+     },
+     {
+      "code": "DI31",
+      "name": "DI Jan-31 (proxy until B3 is reachable)",
+      "description": "long the bond"
+     },
+     {
+      "code": "MX10Y",
+      "name": "Mexico 10-year (auction yield; low frequency)",
+      "description": "long the bond"
+     },
+     {
+      "code": "US10Y",
+      "name": "US 10-year Treasury",
+      "description": "long the bond"
+     }
+    ]
+   },
+   "note": "Same period: from the book's start date. The systematic strategy is monthly and runs at its own risk level; buy-and-hold is $100,000 long each instrument with no costs. Compare direction more than size."
+  },
+  "by_instrument": [],
+  "by_thesis": [],
+  "overall": {
+   "n": 0,
+   "insufficient": true,
+   "hit_rate_pct": null,
+   "avg_win_usd": null,
+   "avg_loss_usd": null,
+   "avg_r": null,
+   "total_r": null
+  },
+  "rows": [],
+  "min_group": 10
+ }
+}
