@@ -1,8 +1,333 @@
 {
- "generated_at": "2026-10-30T04:36:07Z",
+ "generated_at": "2026-10-30T04:40:19Z",
  "year": 2026,
  "forecasts": {
-  "FR": [],
+  "FR": [
+   {
+    "id": "fc:FR.inflation.2026",
+    "country": "FR",
+    "var": "inflation",
+    "label": "Inflation (HICP; IMF: CPI)",
+    "year": 2026,
+    "unit": "%",
+    "median": 2.38,
+    "sd": 0.191,
+    "min": 2.06,
+    "max": 2.4,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.191,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 2.4,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 2.06,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 2.38,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.inflation.2027",
+    "country": "FR",
+    "var": "inflation",
+    "label": "Inflation (HICP; IMF: CPI)",
+    "year": 2027,
+    "unit": "%",
+    "median": 1.85,
+    "sd": 0.205,
+    "min": 1.84,
+    "max": 2.2,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.205,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 2.2,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 1.84,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 1.85,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.rate.2026",
+    "country": "FR",
+    "var": "rate",
+    "label": "Short-term rate (3-month, euro area; OECD only)",
+    "year": 2026,
+    "unit": "%",
+    "median": 2.24,
+    "sd": null,
+    "min": 2.24,
+    "max": 2.24,
+    "respondents": 1,
+    "as_of": "2026-06-01",
+    "median_3m_ago": 2.24,
+    "change_3m": 0.003,
+    "change_3m_note": null,
+    "dispersion": null,
+    "dispersion_kind": null,
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "OECD",
+      "value": 2.24,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.rate.2027",
+    "country": "FR",
+    "var": "rate",
+    "label": "Short-term rate (3-month, euro area; OECD only)",
+    "year": 2027,
+    "unit": "%",
+    "median": 2.24,
+    "sd": null,
+    "min": 2.24,
+    "max": 2.24,
+    "respondents": 1,
+    "as_of": "2026-06-01",
+    "median_3m_ago": 2.24,
+    "change_3m": 0.003,
+    "change_3m_note": null,
+    "dispersion": null,
+    "dispersion_kind": null,
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "OECD",
+      "value": 2.24,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.gdp.2026",
+    "country": "FR",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2026,
+    "unit": "%",
+    "median": 0.65,
+    "sd": 0.198,
+    "min": 0.4,
+    "max": 0.79,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.198,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 0.4,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 0.65,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 0.79,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.gdp.2027",
+    "country": "FR",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2027,
+    "unit": "%",
+    "median": 0.81,
+    "sd": 0.223,
+    "min": 0.7,
+    "max": 1.13,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.223,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 0.7,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 0.81,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 1.13,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.balance.2026",
+    "country": "FR",
+    "var": "balance",
+    "label": "General government balance, % of GDP",
+    "year": 2026,
+    "unit": "%",
+    "median": -5.11,
+    "sd": 0.224,
+    "min": -5.4,
+    "max": -4.96,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.224,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": -5.4,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": -4.96,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": -5.11,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.balance.2027",
+    "country": "FR",
+    "var": "balance",
+    "label": "General government balance, % of GDP",
+    "year": 2027,
+    "unit": "%",
+    "median": -5.2,
+    "sd": 0.556,
+    "min": -5.69,
+    "max": -4.58,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.556,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": -5.2,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": -4.58,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": -5.69,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   }
+  ],
   "BR": [
    {
     "id": "fc:BR.inflation.2026",
@@ -203,6 +528,56 @@
     "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
     "titles": null,
     "mine": null
+   },
+   {
+    "id": "fc:BR.nominal.2026",
+    "country": "BR",
+    "var": "nominal",
+    "label": "Overall (nominal) balance, % of GDP",
+    "year": 2026,
+    "unit": "% of GDP",
+    "median": -8.93,
+    "mean": -8.9,
+    "sd": 0.525,
+    "min": -10.0,
+    "max": -6.96,
+    "respondents": 53,
+    "as_of": "2026-10-23",
+    "median_3m_ago": -8.7,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.23,
+    "dispersion": 0.525,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Resultado nominal/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.nominal.2027",
+    "country": "BR",
+    "var": "nominal",
+    "label": "Overall (nominal) balance, % of GDP",
+    "year": 2027,
+    "unit": "% of GDP",
+    "median": -8.5,
+    "mean": -8.48,
+    "sd": 0.815,
+    "min": -11.7,
+    "max": -6.7,
+    "respondents": 52,
+    "as_of": "2026-10-23",
+    "median_3m_ago": -8.2,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.3,
+    "dispersion": 0.815,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Resultado nominal/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
    }
   ],
   "MX": [
@@ -216,8 +591,8 @@
     "median": 3.87,
     "mean": null,
     "sd": 0.18,
-    "min": null,
-    "max": null,
+    "min": 3.26,
+    "max": 4.25,
     "respondents": null,
     "as_of": "2026-09-01",
     "median_3m_ago": 4.2,
@@ -250,8 +625,8 @@
     "median": 3.82,
     "mean": null,
     "sd": 0.17,
-    "min": null,
-    "max": null,
+    "min": 3.5,
+    "max": 4.41,
     "respondents": null,
     "as_of": "2026-09-01",
     "median_3m_ago": 3.84,
@@ -352,8 +727,8 @@
     "median": 1.4,
     "mean": null,
     "sd": 0.21,
-    "min": null,
-    "max": null,
+    "min": 0.84,
+    "max": 1.9,
     "respondents": null,
     "as_of": "2026-09-01",
     "median_3m_ago": 1.1,
@@ -386,8 +761,8 @@
     "median": 1.8,
     "mean": null,
     "sd": 0.25,
-    "min": null,
-    "max": null,
+    "min": 1.0,
+    "max": 2.2,
     "respondents": null,
     "as_of": "2026-09-01",
     "median_3m_ago": 1.8,
@@ -420,8 +795,8 @@
     "median": -3.85,
     "mean": null,
     "sd": 0.25,
-    "min": null,
-    "max": null,
+    "min": -4.2,
+    "max": -2.92,
     "respondents": null,
     "as_of": "2026-09-01",
     "median_3m_ago": -3.8,
@@ -454,8 +829,8 @@
     "median": -3.7,
     "mean": null,
     "sd": 0.31,
-    "min": null,
-    "max": null,
+    "min": -4.1,
+    "max": -2.72,
     "respondents": null,
     "as_of": "2026-09-01",
     "median_3m_ago": -3.7,
@@ -529,7 +904,14 @@
     },
     "consensus": {
      "ref": "fc:FR.balance.2027",
-     "note": "Consensus = median of the IMF, OECD and Commission forecasts."
+     "note": "Consensus = median of the IMF, OECD and Commission forecasts.",
+     "label": "General government balance, % of GDP",
+     "year": 2027,
+     "median": -5.2,
+     "dispersion": 0.556,
+     "unit": "%",
+     "source": "IMF, OECD and European Commission",
+     "as_of": "2026-10-01"
     },
     "view": {
      "question": "Will France's 2027 budget law be promulgated by 31 December 2026?",
@@ -763,7 +1145,10 @@
     "next": {
      "event": "2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate",
      "label": "Senate deadline to set the CBS reference rate",
-     "missing_event": true
+     "date": "2026-12-15",
+     "title": "Senate deadline to set the CBS reference rate",
+     "status": "confirmed",
+     "importance": 2
     },
     "consensus": null,
     "view": {
@@ -816,7 +1201,10 @@
     "next": {
      "event": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
      "label": "Chamber deadline for the 2027 spending budget",
-     "missing_event": true
+     "date": "2026-11-15",
+     "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+     "status": "confirmed",
+     "importance": 2
     },
     "consensus": {
      "ref": "fc:MX.balance.2027",
@@ -929,7 +1317,10 @@
     "next": {
      "event": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
      "label": "Chamber deadline for the 2027 spending budget",
-     "missing_event": true
+     "date": "2026-11-15",
+     "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+     "status": "confirmed",
+     "importance": 2
     },
     "consensus": null,
     "view": {
