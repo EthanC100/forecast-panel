@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T10:36:46Z",
+ "generated_at": "2026-10-30T22:30:55Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -282,7 +282,7 @@
     "source_id": "IRS.M.FR minus IRS.M.DE (L40.CI.0000.EUR.N.Z)",
     "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
     "as_of": "2026-09-01",
-    "fetched_at": "2026-10-30T10:23:34Z",
+    "fetched_at": "2026-10-30T22:30:53Z",
     "frequency": "monthly",
     "series": "fr.spread.oat_bund.ecb_m",
     "evidence": {
@@ -291,7 +291,7 @@
     },
     "degraded": {
      "id": "webstat",
-     "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+     "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on. A trade requested on a monthly series fills at the next month's average, dated the 1st, once the ECB publishes it after that month ends. No free daily French 10-year source works from GitHub Actions (checked 30 Oct 2026): the ECB's public market-data set has no country bond yields, Eurostat's daily series (irt_lt_mcby_d) is no longer published, the Bundesbank's yields by ISIN cover German securities only, FRED has only the OECD monthly figure, and AFT, CNBC and Stooq refuse automated requests.",
      "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "note": "fallback: France-Germany 10-year spread (ECB, monthly) (monthly); the preferred daily series is not available"
@@ -457,7 +457,7 @@
       "source_id": "IRS.M.FR minus IRS.M.DE (L40.CI.0000.EUR.N.Z)",
       "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T10:23:34Z",
+      "fetched_at": "2026-10-30T22:30:53Z",
       "frequency": "monthly",
       "series": "fr.spread.oat_bund.ecb_m",
       "evidence": {
@@ -466,7 +466,7 @@
       },
       "degraded": {
        "id": "webstat",
-       "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+       "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on. A trade requested on a monthly series fills at the next month's average, dated the 1st, once the ECB publishes it after that month ends. No free daily French 10-year source works from GitHub Actions (checked 30 Oct 2026): the ECB's public market-data set has no country bond yields, Eurostat's daily series (irt_lt_mcby_d) is no longer published, the Bundesbank's yields by ISIN cover German securities only, FRED has only the OECD monthly figure, and AFT, CNBC and Stooq refuse automated requests.",
        "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
@@ -483,7 +483,7 @@
       "source_id": "IRS.M.FR.L.L40.CI.0000.EUR.N.Z",
       "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T10:23:34Z",
+      "fetched_at": "2026-10-30T22:30:53Z",
       "frequency": "monthly",
       "series": "fr.oat10y.ecb_m",
       "evidence": {
@@ -492,7 +492,7 @@
       },
       "degraded": {
        "id": "webstat",
-       "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+       "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on. A trade requested on a monthly series fills at the next month's average, dated the 1st, once the ECB publishes it after that month ends. No free daily French 10-year source works from GitHub Actions (checked 30 Oct 2026): the ECB's public market-data set has no country bond yields, Eurostat's daily series (irt_lt_mcby_d) is no longer published, the Bundesbank's yields by ISIN cover German securities only, FRED has only the OECD monthly figure, and AFT, CNBC and Stooq refuse automated requests.",
        "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
       }
      }
@@ -2909,8 +2909,8 @@
     "country": "FR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-30T10:23:32Z",
-    "last_success": "2026-10-30T10:23:32Z",
+    "last_attempt": "2026-10-30T22:30:50Z",
+    "last_success": "2026-10-30T22:30:50Z",
     "n_series": 5,
     "name": "ECB monthly long-term rates (FR, DE, IT, ES)",
     "note": null,
@@ -3298,7 +3298,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-10-30T10:36:44Z"
+  "updated_at": "2026-10-30T22:30:53Z"
  },
  "series_index": [
   "br.cot.brl",
@@ -3489,7 +3489,7 @@
   {
    "id": "webstat",
    "features": "France OAT-Bund spread and OAT 10y (Today tile, France page, OATBUND in the book, scenario calculators)",
-   "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+   "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on. A trade requested on a monthly series fills at the next month's average, dated the 1st, once the ECB publishes it after that month ends. No free daily French 10-year source works from GitHub Actions (checked 30 Oct 2026): the ECB's public market-data set has no country bond yields, Eurostat's daily series (irt_lt_mcby_d) is no longer published, the Bundesbank's yields by ISIN cover German securities only, FRED has only the OECD monthly figure, and AFT, CNBC and Stooq refuse automated requests.",
    "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself",
    "secret": "WEBSTAT_CLIENT_ID",
    "primary": "webstat",

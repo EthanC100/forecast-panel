@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T10:36:45Z",
+ "generated_at": "2026-10-30T22:30:53Z",
  "as_of": "2026-10-30",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
@@ -27,6 +27,7 @@
    "close_utc": "16:30",
    "low_frequency": false,
    "note": null,
+   "frequency": "daily",
    "degraded": null,
    "scale": null,
    "favourable": 1,
@@ -49,6 +50,7 @@
    "close_utc": "18:30",
    "low_frequency": false,
    "note": null,
+   "frequency": "daily",
    "degraded": {
     "id": "banxico",
     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
@@ -75,6 +77,7 @@
    "close_utc": "17:00",
    "low_frequency": false,
    "note": "FRED publishes the noon New York rate weekly (H.10), so the latest value can be up to a week old.",
+   "frequency": "daily",
    "degraded": null,
    "scale": null,
    "favourable": 1,
@@ -97,9 +100,10 @@
    "close_utc": "17:30",
    "low_frequency": false,
    "note": "Long = long OAT, short Bund: gains when the spread narrows. Falls back to the ECB monthly spread (low frequency) until Webstat is configured.",
+   "frequency": "monthly",
    "degraded": {
     "id": "webstat",
-    "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on.",
+    "effect": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on. A trade requested on a monthly series fills at the next month's average, dated the 1st, once the ECB publishes it after that month ends. No free daily French 10-year source works from GitHub Actions (checked 30 Oct 2026): the ECB's public market-data set has no country bond yields, Eurostat's daily series (irt_lt_mcby_d) is no longer published, the Bundesbank's yields by ISIN cover German securities only, FRED has only the OECD monthly figure, and AFT, CNBC and Stooq refuse automated requests.",
     "upgrade": "add the WEBSTAT_CLIENT_ID secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
    },
    "scale": 10000.0,
@@ -123,6 +127,7 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged.",
+   "frequency": "daily",
    "degraded": null,
    "scale": 100.0,
    "favourable": -1,
@@ -145,6 +150,7 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
+   "frequency": "daily",
    "degraded": {
     "id": "b3",
     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
@@ -171,6 +177,7 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
+   "frequency": "daily",
    "degraded": {
     "id": "b3",
     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
@@ -197,6 +204,7 @@
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
+   "frequency": "daily",
    "degraded": {
     "id": "b3",
     "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
@@ -223,6 +231,7 @@
    "close_utc": "18:00",
    "low_frequency": true,
    "note": "Only marked when a 10-year auction (about monthly) or the OECD monthly figure prints: fills, stops and marks can lag by weeks.",
+   "frequency": "per auction",
    "degraded": {
     "id": "banxico",
     "effect": "Same Banxico series IDs, read from the public chart endpoint that backs banxico.org.mx graphs. It is unofficial and undocumented, so it can change without notice, and it serves the latest values only as of the page cache (can lag the API by hours).",
@@ -249,6 +258,7 @@
    "close_utc": "21:00",
    "low_frequency": false,
    "note": null,
+   "frequency": "daily",
    "degraded": null,
    "scale": 100.0,
    "favourable": -1,
@@ -271,6 +281,7 @@
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot gold in US dollars per ounce. Falls back to the World Bank's monthly average (low frequency) when no daily price is available.",
+   "frequency": "daily",
    "degraded": null,
    "scale": null,
    "favourable": 1,
@@ -293,6 +304,7 @@
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot silver in US dollars per ounce. Falls back to the World Bank's monthly average when no daily price is available.",
+   "frequency": "daily",
    "degraded": null,
    "scale": null,
    "favourable": 1,
