@@ -1,22 +1,7 @@
 {
- "generated_at": "2026-10-29T16:04:42Z",
- "horizon": "2027-10-30",
+ "generated_at": "2026-10-30T01:57:34Z",
+ "horizon": "2027-10-31",
  "events": [
-  {
-   "date": "2026-10-29",
-   "country": "GLOBAL",
-   "type": "rates",
-   "title": "ECB monetary policy decision",
-   "importance": 3,
-   "status": "confirmed",
-   "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
-   "query": "\"European Central Bank\" \"interest rates\"",
-   "note": "Day 2 of the meeting, press conference follows.",
-   "origin": "ecb:scraped",
-   "id": "2026-10-29-global-ecb-monetary-policy-decision",
-   "attention": null,
-   "under_attended": false
-  },
   {
    "date": "2026-11-02",
    "country": "BR",
@@ -144,21 +129,6 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-11-23-br-focus-survey-bcb",
-   "attention": null,
-   "under_attended": false
-  },
-  {
-   "date": "2026-11-27",
-   "country": "FR",
-   "type": "ratings",
-   "title": "S&P Global sovereign rating review: France",
-   "importance": 3,
-   "status": "confirmed",
-   "source": "https://disclosure.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101599026",
-   "query": "\"S&P\" France rating",
-   "note": "EU-regulated sovereign calendar date (Friday, after market close).",
-   "origin": "manual",
-   "id": "2026-11-27-fr-s-p-global-sovereign-rating-review-france",
    "attention": null,
    "under_attended": false
   },
@@ -8230,8 +8200,7 @@
  ],
  "notes": [
   "France: no censure motion is scheduled as of 2026-10-29. Motions are voted 48 hours after they are filed; add one here when it is tabled.",
-  "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml.",
-  "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values."
+  "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml."
  ],
  "attention_definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away",
  "sources": {

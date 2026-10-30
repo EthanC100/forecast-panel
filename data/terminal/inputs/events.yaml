@@ -14,11 +14,6 @@
 
 events:
   # ---------------- France ----------------
-  - {date: 2026-11-27, country: FR, type: ratings, importance: 3, status: confirmed,
-     title: "S&P Global sovereign rating review: France",
-     source: "https://disclosure.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101599026",
-     note: "EU-regulated sovereign calendar date (Friday, after market close).",
-     query: '"S&P" France rating'}
   - {date: 2026-12-10, country: FR, type: fiscal, importance: 3, status: confirmed,
      title: "Budget (PLF 2027): Article 47 70-day deadline",
      source: "https://www.senat.fr/dossier-legislatif/pjlf2027.html",

@@ -1,7 +1,7 @@
 {
-  "name": "Prism",
-  "short_name": "Prism",
-  "description": "Prism: macro research for France, Brazil and Mexico: sourced market data, catalysts, scenarios and crowd-error gauges.",
+  "name": "Catalyst",
+  "short_name": "Catalyst",
+  "description": "Catalyst: macro research for France, Brazil and Mexico: sourced market data, catalysts, scenarios and crowd-error gauges.",
   "id": "./",
   "start_url": "./#today",
   "scope": "./",

@@ -29,7 +29,7 @@ scenarios:
   - id: fr-sp-2026-11
     title: "S&P review of France, 27 Nov 2026"
     country: FR
-    event: {country: FR, title: "S&P Global sovereign rating review"}
+    event: {country: FR, title: "Standard & Poor's sovereign rating review"}
     question: "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?"
     resolution: "YES if S&P publishes a downgrade of France (to A or lower) dated on or before 27 Nov 2026. NO if France is still A+ after S&P's 27 Nov publication. An outlook change alone is NO. Sources: S&P research update; AFT ratings table."
     resolution_date: 2026-11-27

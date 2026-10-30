@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T16:28:13Z",
+ "generated_at": "2026-10-30T01:57:41Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -344,21 +344,6 @@
  ],
  "next_catalysts": [
   {
-   "date": "2026-10-29",
-   "country": "GLOBAL",
-   "type": "rates",
-   "title": "ECB monetary policy decision",
-   "importance": 3,
-   "status": "confirmed",
-   "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
-   "query": "\"European Central Bank\" \"interest rates\"",
-   "note": "Day 2 of the meeting, press conference follows.",
-   "origin": "ecb:scraped",
-   "id": "2026-10-29-global-ecb-monetary-policy-decision",
-   "attention": null,
-   "under_attended": false
-  },
-  {
    "date": "2026-11-04",
    "country": "BR",
    "type": "rates",
@@ -397,6 +382,21 @@
     "changed": 15,
     "of": 24
    }
+  },
+  {
+   "date": "2026-11-20",
+   "country": "BR",
+   "type": "fiscal",
+   "title": "Bimonthly revenue and spending report (RARDP)",
+   "importance": 2,
+   "status": "estimated",
+   "source": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/relatorios-de-avaliacao",
+   "query": "Brazil \"primary deficit\"",
+   "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
+   "origin": "rule:rardp",
+   "id": "2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
+   "attention": null,
+   "under_attended": false
   }
  ],
  "countries": {
@@ -720,21 +720,6 @@
     }
    ],
    "events": [
-    {
-     "date": "2026-11-27",
-     "country": "FR",
-     "type": "ratings",
-     "title": "S&P Global sovereign rating review: France",
-     "importance": 3,
-     "status": "confirmed",
-     "source": "https://disclosure.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101599026",
-     "query": "\"S&P\" France rating",
-     "note": "EU-regulated sovereign calendar date (Friday, after market close).",
-     "origin": "manual",
-     "id": "2026-11-27-fr-s-p-global-sovereign-rating-review-france",
-     "attention": null,
-     "under_attended": false
-    },
     {
      "date": "2026-11-27",
      "country": "FR",
@@ -2673,11 +2658,11 @@
    },
    "calendar": {
     "country": "GLOBAL",
-    "error": "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values.",
+    "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-10-29T16:04:42Z",
-    "last_success": "2026-10-29T15:45:37Z",
-    "n_series": 118,
+    "last_attempt": "2026-10-30T01:57:34Z",
+    "last_success": "2026-10-30T01:57:34Z",
+    "n_series": 116,
     "name": "Catalyst calendar (events.yaml, Fed, ECB, em-macro, GDELT)",
     "release": "daily",
     "secret": null,
@@ -2685,7 +2670,7 @@
      "calendar.json",
      "attention.json"
     ],
-    "state": "error"
+    "state": "ok"
    },
    "cftc": {
     "country": "GLOBAL",
@@ -2908,7 +2893,7 @@
     "state": "missing_secret"
    }
   },
-  "updated_at": "2026-10-29T16:04:42Z"
+  "updated_at": "2026-10-30T01:57:34Z"
  },
  "series_index": [
   "br.cot.brl",

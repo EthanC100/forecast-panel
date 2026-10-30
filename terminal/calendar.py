@@ -337,6 +337,29 @@ def rating_reviews(notes: list[str]) -> list[dict]:
     return out
 
 
+AGENCIES = [("s&p", "S&P"), ("standard & poor", "S&P"), ("standard and poor", "S&P"), ("moody", "Moody's"), ("fitch", "Fitch"),
+            ("dbrs", "DBRS"), ("morningstar", "DBRS"), ("kbra", "KBRA"), ("kroll", "KBRA"), ("scope", "Scope")]
+
+
+def rating_key(e: dict) -> tuple | None:
+    """(country, agency, date) for a rating-review event, with agency names normalised, else None."""
+    if e.get("type") != "ratings":
+        return None
+    t = e["title"].lower()
+    agency = next((name for k, name in AGENCIES if k in t), None)
+    return (e["country"], agency, e["date"]) if agency else None
+
+
+def dedupe_ratings(events: list[dict]) -> list[dict]:
+    """One event per (country, agency, date): the AFT-sourced one wins over a hand-entered duplicate."""
+    best: dict[tuple, dict] = {}
+    for e in events:
+        k = rating_key(e)
+        if k and (k not in best or (e.get("origin") == "aft" and best[k].get("origin") != "aft")):
+            best[k] = e
+    return [e for e in events if (k := rating_key(e)) is None or best[k] is e]
+
+
 BANK = {"BR": "Copom", "MX": "Banxico"}
 
 
@@ -366,6 +389,7 @@ def build(attention: bool = True) -> dict:
     manual = [ev(e["date"], e["country"], e["type"], e["title"], e["importance"], e["status"], e.get("source", ""),
                  e.get("query", ""), e.get("note", "")) for e in cfg.get("events", [])]
     events = manual + official_meetings(notes) + rating_reviews(notes) + recurring(today, horizon)
+    events = dedupe_ratings(events)
     seen, future = set(), []
     for e in sorted(events, key=lambda e: (e["date"], e["country"], -e["importance"])):
         if e["id"] in seen or not (today.isoformat() <= e["date"] <= horizon.isoformat()):

@@ -151,3 +151,13 @@ def test_degraded_then_upgrades_when_primary_appears(tmp_store):
     assert s["id"] == "fr.spread.oat_bund" and not fallback and rules == []
     assert degraded.for_series("mx.survey.inflation", degraded.active({"sources": {}}))["id"] == "banxico"
     assert degraded.for_series("mx.cot.mxn", degraded.active({"sources": {}})) is None
+
+
+def test_rating_reviews_dedupe_by_country_agency_date():
+    manual = {"date": "2026-11-27", "country": "FR", "type": "ratings", "title": "S&P Global sovereign rating review: France", "origin": "manual"}
+    aft = {"date": "2026-11-27", "country": "FR", "type": "ratings", "title": "Standard & Poor's sovereign rating review: France", "origin": "aft"}
+    other = {"date": "2026-12-11", "country": "FR", "type": "ratings", "title": "KBRA sovereign rating review: France", "origin": "aft"}
+    copom = {"date": "2026-11-04", "country": "BR", "type": "rates", "title": "Copom decision"}
+    out = calendar.dedupe_ratings([manual, copom, aft, other])
+    assert aft in out and manual not in out and other in out and copom in out
+    assert calendar.rating_key(manual) == calendar.rating_key(aft) == ("FR", "S&P", "2026-11-27")

@@ -1,4 +1,4 @@
-// Contrast of Prism's colour tokens, light and dark (node scripts/contrast.js).
+// Contrast of Catalyst's colour tokens, light and dark (node scripts/contrast.js).
 // Text pairs need 4.5:1, including text on translucent cards composited over the page's colour blobs.
 // Graphical marks (icons, chart lines, chip dots) need 3:1 unless they carry a text label next to them.
 const fs = require("fs");

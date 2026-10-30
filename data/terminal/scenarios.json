@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T16:28:14Z",
+ "generated_at": "2026-10-30T01:57:42Z",
  "asymmetry_rules": {
   "gap_pp": 15,
   "reward_risk": 2.0,
@@ -22,14 +22,14 @@
     "OATBUND"
    ],
    "event": {
-    "id": "2026-11-27-fr-s-p-global-sovereign-rating-review-france",
+    "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
     "date": "2026-11-27",
-    "title": "S&P Global sovereign rating review: France",
+    "title": "Standard & Poor's sovereign rating review: France",
     "status": "confirmed",
-    "source": "https://disclosure.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101599026",
+    "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
     "importance": 3
    },
-   "days_to_event": 29,
+   "days_to_event": 28,
    "base_rate": {
     "kind": "rating_review",
     "reference_class": "S&P actions on the six EU sovereigns em-macro tracks (France, Germany, Italy, Spain, UK, Poland) since 2014, when the EU began requiring a published calendar of scheduled sovereign reviews, where the outlook going in was stable.",
@@ -309,7 +309,7 @@
     "yes_is_good": false,
     "market_yes": 0.11,
     "market_source": "prediction market",
-    "days": 29,
+    "days": 28,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -328,7 +328,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 29,
+      "value": 28,
       "ok": true
      }
     },
@@ -359,7 +359,7 @@
     "source": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
     "importance": 3
    },
-   "days_to_event": 42,
+   "days_to_event": 41,
    "base_rate": {
     "kind": "budget_cycles",
     "reference_class": "Every French budget cycle in em-macro's calendar (budget laws for 2006-2026): was the budget law promulgated by 31 December, and did it need Article 49.3 or a special law? The subset since June 2022, when the government lost its majority, is shown separately.",
@@ -753,7 +753,7 @@
     "yes_is_good": true,
     "market_yes": 0.51,
     "market_source": "prediction market",
-    "days": 42,
+    "days": 41,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -772,7 +772,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 42,
+      "value": 41,
       "ok": true
      }
     },
@@ -802,7 +802,7 @@
     "source": "https://www.interieur.gouv.fr/Elections",
     "importance": 3
    },
-   "days_to_event": 178,
+   "days_to_event": 177,
    "base_rate": {
     "kind": "election_polls",
     "reference_class": "Final pre-vote polls in presidential run-offs: France 2012-2022, and all run-offs in em-macro's 13 countries. These are final polls; six months out the error is larger.",
@@ -1156,7 +1156,7 @@
     "yes_is_good": false,
     "market_yes": 0.458,
     "market_source": "prediction market",
-    "days": 178,
+    "days": 177,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -1175,7 +1175,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 178,
+      "value": 177,
       "ok": true
      }
     },
@@ -1208,7 +1208,7 @@
     "source": "https://www12.senado.leg.br/radio/1/noticia/2026/01/05/posse-presidencial-em-2027-sera-em-5-de-janeiro-e-governadores-tomam-posse-no-dia-6",
     "importance": 3
    },
-   "days_to_event": 68,
+   "days_to_event": 67,
    "base_rate": {
     "kind": "none",
     "reference_class": null,
@@ -1487,7 +1487,7 @@
     "yes_is_good": true,
     "market_yes": null,
     "market_source": null,
-    "days": 68,
+    "days": 67,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -1506,7 +1506,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 68,
+      "value": 67,
       "ok": true
      }
     },
@@ -1558,7 +1558,7 @@
     "source": "https://www.ine.mx/",
     "importance": 3
    },
-   "days_to_event": 220,
+   "days_to_event": 219,
    "base_rate": {
     "kind": "election_polls",
     "reference_class": "Mexico's midterm legislative elections in em-macro (2009, 2015, 2021): final-poll leader vs result. In 2021 the governing coalition kept its majority but lost two-thirds.",
@@ -1835,7 +1835,7 @@
     "yes_is_good": false,
     "market_yes": null,
     "market_source": null,
-    "days": 220,
+    "days": 219,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -1854,7 +1854,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 220,
+      "value": 219,
       "ok": false
      }
     },
@@ -1884,7 +1884,7 @@
     "source": "https://ustr.gov/sites/default/files/files/agreements/FTA/USMCA/Text/34-Final-Provisions.pdf",
     "importance": 3
    },
-   "days_to_event": 245,
+   "days_to_event": 244,
    "base_rate": {
     "kind": "none",
     "reference_class": null,
@@ -2060,7 +2060,7 @@
     "yes_is_good": true,
     "market_yes": null,
     "market_source": null,
-    "days": 245,
+    "days": 244,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -2079,7 +2079,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 245,
+      "value": 244,
       "ok": false
      }
     },

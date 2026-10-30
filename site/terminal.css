@@ -1,4 +1,4 @@
-/* Prism visual system.
+/* Catalyst visual system.
    Type scale 12/13/15/17/20/24/30, spacing 4/8/12/16/24/32. A bright palette: one brand colour (indigo),
    a signature colour per country (France blue, Brazil yellow, Mexico pink) and per section (Today
    orange, Calendar violet, Scenarios sky, Crowd purple, Record indigo). Green and red are reserved for
@@ -323,7 +323,7 @@ select { max-width: 100%; min-width: 0; text-overflow: ellipsis; }
 .vizhead .row { min-width: 0; max-width: 100%; }
 .vizhead select { max-width: min(220px, 100%); }
 
-/* ================= Prism: colour layer ================= */
+/* ================= Catalyst: colour layer ================= */
 body { background: var(--bg); }
 body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(60vmax 40vmax at 0% 0%, var(--soft-FR), transparent 70%),

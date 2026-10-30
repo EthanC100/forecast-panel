@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T16:28:16Z",
+ "generated_at": "2026-10-30T01:57:45Z",
  "gauges": [
   {
    "id": "a",
@@ -1383,7 +1383,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 68,
+   "days": 67,
    "score": 0.7,
    "signals": [
     {
@@ -1405,7 +1405,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 29,
+   "days": 28,
    "score": 0.483,
    "signals": [
     {
@@ -1428,7 +1428,7 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 42,
+   "days": 41,
    "score": 0.017,
    "signals": [
     {
@@ -1445,7 +1445,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 178,
+   "days": 177,
    "score": 0,
    "signals": []
   }
