@@ -1,4 +1,4 @@
-/* Record: paper book (Portfolio), judgements and journal. Loaded after terminal.js; uses its helpers via window.TERM. */
+/* Record: paper book (Portfolio), judgements, track record, monthly reviews and journal. Loaded after terminal.js; uses its helpers via window.TERM. */
 (function () {
   "use strict";
   const T = window.TERM;
@@ -311,16 +311,127 @@
     return f;
   }
 
+
+  // ---------------- track record (Phase 5) ----------------
+  const withN = (v, n, d) => el("span", { class: "num" }, v == null ? "–" : fmt(v, d == null ? 3 : d), el("span", { class: "tiny" }, " n=" + (n || 0)));
+  const NAMES = { me: "Me", ai: "AI (blind)", market: "Market at entry", no_change: "No-change (my first forecast, never updated)", ai_all: "AI on every question it judged" };
+  function noisyChip(q) { return q.noisy ? el("span", { class: "chip warn", title: "Fewer than " + q.min_overall + " resolved questions: differences are mostly luck." }, "noisy: " + q.n_resolved + " of " + q.min_overall + " resolved") : null; }
+  function groupTable(rows, label) {
+    return tableOf([label, { t: "n", r: 1 }, { t: "Brier me", r: 1 }, { t: "market", r: 1 }, { t: "AI", r: 1 }],
+      rows.map((g) => el("tr", {}, el("td", {}, g.group), el("td", { class: "r num" }, String(g.n)),
+        ...(g.insufficient ? [el("td", { class: "r tiny", colspan: "3" }, "insufficient data (under 10)")] :
+          ["me", "market", "ai"].map((w) => el("td", { class: "r" }, withN(g[w].brier, g[w].n)))))));
+  }
+  function trackRecord() {
+    const f = el("div"), body = el("div", {}, T.skel("lines"), T.skel("block")); f.appendChild(body);
+    getJSON("data/book/record.json").then((rec) => {
+      const q = rec.questions, tr = rec.trades, out = el("div");
+      // side by side
+      const side = q.side_by_side;
+      out.append(...nn(el("article", { class: "card feature" }, el("div", { class: "lbl" }, el("h2", { style: "margin:0" }, "Who forecasts better?"), noisyChip(q)),
+        tableOf(["forecaster", { t: "Brier (lower better)", r: 1 }, { t: "log score (higher better)", r: 1 }],
+          ["me", "ai", "market", "no_change", "ai_all"].map((w) => el("tr", { class: w === "me" ? "me-row" : "" }, el("td", {}, NAMES[w]),
+            el("td", { class: "r" }, withN(side[w].brier, side[w].n)), el("td", { class: "r" }, withN(side[w].log, side[w].n))))),
+        q.shared.n ? el("div", { class: "small" }, "On the " + q.shared.n + " questions where all three exist: me " + fmt(q.shared.scores.me.brier, 3) + ", AI " + fmt(q.shared.scores.ai.brier, 3) + ", market " + fmt(q.shared.scores.market.brier, 3) + ".") : null,
+        el("div", { class: "tiny" }, "Every probability is scored the same way, on my last forecast before resolution: the AI's blind probability and the market's were recorded at that same moment. " + q.definitions.no_change + " shows whether updating helps. Trades: the systematic algorithm is compared below."),
+        q.n_resolved ? null : el("p", { class: "small muted" }, "Nothing has resolved yet. Scores appear as questions resolve (Resolve form, or automatically for markets)."))));
+      // skill
+      const sk = q.skill;
+      out.append(...nn(el("article", { class: "card" }, el("h2", {}, "Skill: telling outcomes apart vs getting the odds right"),
+        tableOf(["", { t: "discrimination ↑", r: 1 }, { t: "calibration error ↓", r: 1 }, { t: "AUC", r: 1 }, { t: "n", r: 1 }],
+          ["me", "ai", "market"].map((w) => el("tr", {}, el("td", {}, NAMES[w]), el("td", { class: "r num" }, sk[w].n ? fmt(sk[w].discrimination, 3) : "–"),
+            el("td", { class: "r num" }, sk[w].n ? fmt(sk[w].calibration_error, 3) : "–"), el("td", { class: "r num" }, sk[w].auc == null ? "–" : fmt(sk[w].auc, 2)), el("td", { class: "r num" }, String(sk[w].n || 0))))),
+        el("div", { class: "tiny" }, "Brier = calibration error − discrimination + uncertainty (ten probability bins). Discrimination: how far apart your forecasts are for things that happened and things that did not. Calibration error: how far your 70% calls are from happening 70% of the time. AUC 0.5 = no better than a coin."))));
+      out.append(...nn(el("article", { class: "card" }, el("h2", {}, "Where am I good?"),
+        el("h3", {}, "By catalyst type"), groupTable(q.by_type, "type"), el("h3", {}, "By my stated confidence"), groupTable(q.by_confidence, "confidence"),
+        el("h3", {}, "By lead time (last forecast to resolution)"), groupTable(q.by_lead, "lead time"),
+        el("div", { class: "tiny" }, "Groups with fewer than " + q.min_group + " resolved questions show \"insufficient data\"."))));
+      const bl = q.blend;
+      out.append(...nn(el("article", { class: "card" }, el("h2", {}, "Would a 50/50 blend of me and the AI do better?"),
+        bl.ready ? el("div", {}, tableOf(["", { t: "Brier", r: 1 }], ["me", "ai", "blend"].map((w) => el("tr", {}, el("td", {}, w === "blend" ? "50/50 blend" : NAMES[w]), el("td", { class: "r" }, withN(bl[w].brier, bl[w].n))))),
+          el("p", { class: "small" }, el("b", {}, "Verdict: "), bl.verdict + "."))
+          : el("p", { class: "small" }, "Shown once " + bl.min + " questions that both of us forecast have resolved (" + bl.n_shared + " so far)."))));
+      // trades
+      const c = tr.closed, o = tr.open;
+      const rRow = (lab, x) => el("tr", {}, el("td", {}, lab), el("td", { class: "r" }, withN(x.total_r, x.n, 2)), el("td", { class: "r num" }, x.per_trade_r == null ? "–" : signed(x.per_trade_r, 2)),
+        el("td", { class: "r num small" }, ["price", "carry", "cost"].map((k) => (x[k + "_r"] == null ? "–" : signed(x[k + "_r"], 2))).join(" / ")),
+        el("td", { class: "r num" }, money(x.total_usd)));
+      out.append(...nn(el("article", { class: "card" }, el("h2", {}, "Trades: P&L per unit of risk, after costs"),
+        tableOf(["", { t: "total R", r: 1 }, { t: "per trade", r: 1 }, { t: "price / carry / cost (R)", r: 1 }, { t: "$", r: 1 }], [rRow("closed", c), rRow("open (unrealised)", o)]),
+        el("div", { class: "tiny" }, "R = P&L ÷ the risk to the stop at entry (costs included). +1R means you made what you had at risk."))));
+      const vs = tr.versus;
+      out.append(...nn(el("article", { class: "card" }, el("h2", {}, "My book vs the systematic algorithm vs buy-and-hold, since " + tr.start_date),
+        tableOf(["", { t: "return", r: 1 }, "detail"], [
+          el("tr", {}, el("td", {}, "My book"), el("td", { class: "r num" }, vs.book.return_pct == null ? "–" : signed(vs.book.return_pct, 2) + "%"), el("td", { class: "small" }, vs.book.n_trades + " trades · " + (vs.book.total_r == null ? "–" : signed(vs.book.total_r, 2) + "R"))),
+          el("tr", {}, el("td", {}, "Systematic (em-macro)"), el("td", { class: "r num" }, vs.systematic.return_pct == null ? "–" : signed(vs.systematic.return_pct, 2) + "%"), el("td", { class: "small" }, vs.systematic.return_pct == null ? vs.systematic.note : vs.systematic.n_months + " months to " + vs.systematic.to)),
+          el("tr", {}, el("td", {}, "Buy-and-hold (equal weight)"), el("td", { class: "r num" }, vs.buy_and_hold.equal_weight_return_pct == null ? "–" : signed(vs.buy_and_hold.equal_weight_return_pct, 2) + "%"), el("td", { class: "small" }, vs.buy_and_hold.n_instruments + " instruments"))]),
+        el("details", {}, el("summary", {}, "buy-and-hold by instrument"), tableOf(["instrument", { t: "return", r: 1 }, "from"], vs.buy_and_hold.rows.map((r) => el("tr", {}, el("td", {}, r.code + " (" + r.description + ")"), el("td", { class: "r num" }, r.return_pct == null ? "–" : signed(r.return_pct, 2) + "%"), el("td", { class: "tiny" }, r.from || "–"))))),
+        el("div", { class: "tiny" }, vs.note))));
+      const hitT = (rows, label) => rows.length ? tableOf([label, { t: "n", r: 1 }, { t: "hit rate", r: 1 }, { t: "avg win", r: 1 }, { t: "avg loss", r: 1 }, { t: "avg R", r: 1 }],
+        rows.map((g) => el("tr", {}, el("td", {}, g.group), el("td", { class: "r num" }, String(g.n)), ...(g.insufficient ? [el("td", { class: "r tiny", colspan: "4" }, "insufficient data (under 10)")] :
+          [el("td", { class: "r num" }, g.hit_rate_pct + "%"), el("td", { class: "r num" }, money(g.avg_win_usd)), el("td", { class: "r num" }, money(g.avg_loss_usd)), el("td", { class: "r num" }, signed(g.avg_r, 2))]))))
+        : el("p", { class: "small muted" }, "No closed trades yet.");
+      out.append(...nn(el("article", { class: "card" }, el("h2", {}, "Hit rate and average win/loss"),
+        el("div", { class: "small" }, "All closed trades: ", withN(tr.overall.hit_rate_pct, tr.overall.n, 1), tr.overall.hit_rate_pct == null ? "" : "% hit rate"),
+        el("h3", {}, "By instrument"), hitT(tr.by_instrument, "instrument"), el("h3", {}, "By thesis type"), hitT(tr.by_thesis, "thesis type"))));
+      out.append(...nn(el("p", { class: "tiny" }, "Rebuilt " + rec.generated_at.replace("T", " ").slice(0, 16) + " UTC after every data run and form.")));
+      body.replaceWith(out);
+    }).catch((e) => body.replaceWith(el("div", { class: "err" }, "Track record not built yet (" + e.message + ").")));
+    return f;
+  }
+
+  // ---------------- monthly reviews ----------------
+  function md(text) {
+    const box = el("div", { class: "md" }), lines = text.split("\n");
+    const inline = (s) => { const span = el("span"); span.innerHTML = s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/(^|\W)_(.+?)_(?=\W|$)/g, "$1<i>$2</i>").replace(/\[(.+?)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>'); return span; };
+    let list = null, table = null;
+    lines.forEach((ln) => {
+      if (/^\|/.test(ln)) { if (/^\|[-| ]+\|$/.test(ln)) return; const cells = ln.split("|").slice(1, -1).map((c) => c.trim()); if (!table) { table = el("table"); box.appendChild(el("div", { class: "scroll" }, table)); table.appendChild(el("tr", {}, ...cells.map((c) => el("th", {}, inline(c))))); } else table.appendChild(el("tr", {}, ...cells.map((c) => el("td", {}, inline(c))))); return; }
+      table = null;
+      const h = ln.match(/^(#{1,3}) (.*)/), li = ln.match(/^\s*(?:- |\d+\. )(.*)/);
+      if (li) { if (!list) { list = el(/^\s*\d/.test(ln) ? "ol" : "ul"); box.appendChild(list); } list.appendChild(el("li", {}, inline(li[1]))); return; }
+      list = null;
+      if (h) box.appendChild(el("h" + (h[1].length + 1), {}, inline(h[2])));
+      else if (ln.trim()) box.appendChild(el("p", { class: "small" }, inline(ln)));
+    });
+    return box;
+  }
+  function reviews(month) {
+    const f = el("div"), body = el("div", {}, T.skel("lines")); f.appendChild(body);
+    const repo = (R.book && R.book.repo) || "EthanC100/forecast-panel";
+    getJSON("data/book/reviews/index.json").then((ix) => {
+      const list = ix.reviews || [];
+      if (!list.length) throw new Error("none yet");
+      const cur = list.find((r) => r.month === month) || list[0];
+      return fetch("data/book/reviews/" + cur.month + ".md", { cache: "no-cache" }).then((r) => r.text()).then((text) => {
+        const sel = el("div", { class: "filters" }, ...list.map((r) => el("button", { type: "button", class: r.month === cur.month ? "on" : "", onclick: () => { location.hash = "#record/reviews/" + r.month; } }, r.month)));
+        body.replaceWith(el("div", {}, sel, el("article", { class: "card" }, el("div", { class: "row", style: "justify-content:flex-end" },
+          el("a", { class: "btn small", href: "https://github.com/" + repo + "/edit/main/" + cur.file, target: "_blank", rel: "noopener" }, "Edit on GitHub")), md(text))));
+      });
+    }).catch(() => body.replaceWith(el("article", { class: "card" }, el("p", { class: "small" }, "The first draft review is written on the 1st of next month (data/book/reviews/). It is generated once and never overwritten, so edit it on GitHub from your phone."))));
+    return f;
+  }
+  T.remindersCard = function () {
+    return getJSON("data/book/reminders.json").then((r) => {
+      const open = r.open || [];
+      if (!open.length) return null;
+      return el("article", { class: "card" }, el("h2", {}, "Reminders (" + open.length + ")"),
+        el("ul", { class: "small" }, ...open.slice(0, 8).map((x) => el("li", {}, x.url ? el("a", { href: x.url, target: "_blank", rel: "noopener" }, x.title) : x.title))),
+        el("div", { class: "tiny" }, "GitHub issues assigned to you; each closes itself when its condition clears."));
+    }).catch(() => null);
+  };
+
   T.pageRecord = function (sub) {
-    if (["portfolio", "judgements", "journal"].includes(sub)) R.tab = sub;
+    const [tab, extra] = (sub || "").split("/");
+    if (["portfolio", "judgements", "journal", "track", "reviews"].includes(tab)) R.tab = tab;
     const f = el("div");
     const tabs = el("div", { class: "tabs" });
-    [["portfolio", "Portfolio"], ["judgements", "Judgements"], ["journal", "Journal"]].forEach(([k, l]) => tabs.appendChild(el("button", { type: "button", class: R.tab === k ? "on" : "", onclick: () => { location.hash = "#record/" + k; } }, l)));
+    [["portfolio", "Portfolio"], ["judgements", "Judgements"], ["track", "Track record"], ["reviews", "Reviews"], ["journal", "Journal"]].forEach(([k, l]) => tabs.appendChild(el("button", { type: "button", class: R.tab === k ? "on" : "", onclick: () => { location.hash = "#record/" + k; } }, l)));
     f.append(...nn(el("div", { class: "sec" }, el("h1", {}, "Record"), tabs)));
     const body = el("div", {}, T.skel("lines"), T.skel("block")); f.appendChild(body);
     load().then(() => {
       if (R.err) { body.replaceWith(el("div", { class: "err" }, "Book data not found: " + R.err)); return; }
-      body.replaceWith(R.tab === "judgements" ? judgements() : R.tab === "journal" ? journal() : portfolio());
+      body.replaceWith(R.tab === "judgements" ? judgements() : R.tab === "journal" ? journal() : R.tab === "track" ? trackRecord() : R.tab === "reviews" ? reviews(extra) : portfolio());
     });
     return f;
   };

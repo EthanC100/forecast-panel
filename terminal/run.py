@@ -78,13 +78,16 @@ def copy_site(dest=store.ROOT / "site" / "data") -> None:
 def main(argv=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab", "brief", "snapshot", "assessments", "consensus"])
+    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab", "brief", "snapshot", "assessments", "consensus",
+                                        "record", "reminders", "review"])
     ap.add_argument("--only", default="", help="comma-separated source keys for fetch")
     ap.add_argument("--no-attention", action="store_true", help="calendar: skip the GDELT attention refresh")
     ap.add_argument("--force-judgement", action="store_true", help="brief: run the judgement even if it is not due")
     ap.add_argument("--no-ai", action="store_true", help="brief: build the snapshot and archive entry without calling the API")
     ap.add_argument("--no-headlines", action="store_true", help="brief/snapshot: reuse the last headlines instead of fetching")
     ap.add_argument("--no-batch", action="store_true", help="brief: use the standard API instead of the Batch API")
+    ap.add_argument("--month", default=None, help="review: the month to draft (YYYY-MM; default the previous month)")
+    ap.add_argument("--dry-run", action="store_true", help="reminders: list what would be opened or closed")
     a = ap.parse_args(argv)
     only = {s.strip() for s in a.only.split(",") if s.strip()} or None
     if a.cmd in ("fetch", "all"):
@@ -104,9 +107,25 @@ def main(argv=None) -> int:
         log.info("book: equity %.2f, %d open, %d pending; wrote %s", st["equity"]["current"], st["stats"]["n_open"],
                  st["stats"]["n_pending"], st["written_this_run"] or "nothing")
     if a.cmd in ("judge", "all"):
-        from terminal import judgement
+        from terminal import judgement, record
         js = judgement.build()
         log.info("judgements: %d questions, %d resolved", js["summary"]["n_questions"], js["summary"]["n_resolved"])
+        rec = record.build()
+        log.info("track record: %d resolved questions, %d closed trades", rec["questions"]["n_resolved"], rec["trades"]["closed"]["n"])
+    if a.cmd == "record":
+        from terminal import record
+        record.build()
+    if a.cmd == "reminders":
+        from terminal import reminders
+        r = reminders.sync(dry_run=True if a.dry_run else None)
+        log.info("reminders: %d open%s; created %s; closed %s", len(r["open"]), " (dry run)" if r["dry_run"] else "",
+                 r.get("created", []), r.get("closed", []))
+        for x in r["open"]:
+            log.info("  %s: %s", x["key"], x["title"])
+    if a.cmd == "review":
+        from terminal import review
+        p = review.generate(a.month)
+        log.info("monthly review: %s", p or "already exists (not overwritten)")
     if a.cmd in ("summary", "all"):
         # after book and judge, so scenario pages see the latest calls
         from terminal import consensus, crowd, scenarios, summary, teach

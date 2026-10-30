@@ -158,8 +158,8 @@ p { margin: var(--sp-2) 0; }
 .cat .t { font-weight: 700; } .cat .d { font-size: var(--fs-sm); color: var(--text-2); }
 
 /* controls */
-.tabs { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface); max-width: 100%; }
-.tabs button { border: 0; background: transparent; color: var(--text-2); font-weight: 700; padding: 7px 12px; cursor: pointer; font-size: var(--fs-sm); min-height: 34px; }
+.tabs { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow-x: auto; scrollbar-width: none; background: var(--surface); max-width: 100%; }
+.tabs button { border: 0; background: transparent; color: var(--text-2); font-weight: 700; padding: 7px 12px; cursor: pointer; flex: 0 0 auto; white-space: nowrap; font-size: var(--fs-sm); min-height: 34px; }
 .tabs button.on { background: var(--accent); color: var(--on-accent); }
 .tabs.mini button { padding: 4px 9px; min-height: 30px; font-size: var(--fs-xs); }
 .filters { display: flex; gap: 6px; flex-wrap: wrap; margin: var(--sp-3) 0; }
@@ -466,3 +466,12 @@ details.policy[open] > summary::before { content: "▾ "; }
 .stk-pos { display: flex; justify-content: flex-start; }
 .stk span { display: block; height: 100%; min-width: 1px; }
 .stk span.loc, .legend i.loc { background-image: repeating-linear-gradient(45deg, transparent 0 3px, rgba(255,255,255,.45) 3px 5px) !important; }
+
+/* Track record and monthly reviews */
+tr.me-row td { font-weight: 700; background: var(--surface-2); }
+.md { line-height: 1.55; overflow-wrap: anywhere; }
+.md h1 { font-size: 1.25rem; margin: 0 0 .5rem; }
+.md h2 { font-size: 1rem; margin: 1.25rem 0 .4rem; }
+.md ul, .md ol { padding-left: 1.2rem; margin: .3rem 0; }
+.md table { display: block; overflow-x: auto; max-width: 100%; border-collapse: collapse; font-size: .8125rem; }
+.md th, .md td { padding: 3px 6px; border-bottom: 1px solid var(--border); text-align: left; }

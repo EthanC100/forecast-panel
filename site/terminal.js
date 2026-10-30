@@ -202,6 +202,7 @@
           meta({ source: "source", source_url: e.source, as_of: s.generated_at, evidence: s.evidence_defaults.countdown }))));
     });
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Next catalysts"), el("a", { href: "#calendar", class: "small" }, "full calendar →")), cats));
+    f.append(...nn(lazy("lines", () => need("record").then(() => TERM.remindersCard()))));
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Brief"), el("a", { href: "#brief", class: "small" }, "archive →")),
       lazy("lines", () => need("brief").then(() => TERM.brief.card()))));
     const g = el("div", { class: "grid" }); s.tiles.forEach((t) => g.appendChild(tile(t)));

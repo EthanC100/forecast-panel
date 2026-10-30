@@ -74,6 +74,21 @@ body:
     label: Thesis (one line)
   validations:
     required: true
+- type: dropdown
+  id: thesis_type
+  attributes:
+    label: Thesis type
+    description: Used to split the hit rate and average win/loss in the track record.
+    options:
+    - Catalyst (an event or decision)
+    - Carry
+    - Valuation (mean reversion)
+    - Momentum (trend)
+    - Relative value
+    - Hedge
+    - Other
+  validations:
+    required: false
 - type: textarea
   id: close_early
   attributes:

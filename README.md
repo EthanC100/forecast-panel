@@ -4,10 +4,84 @@
 **https://ethanc100.github.io/forecast-panel/**. The original forecast panel lives on under the
 **Lab** link (https://ethanc100.github.io/forecast-panel/lab/).
 
-Phases done: **1** the data spine and the catalyst calendar, **2** the paper book, judgement forms
-and scoring, **3** scenario pages and the crowd module. Still to come: **4** an AI brief (and AI
-probabilities on the scenario pages), **5** (to be specified). Every price series keeps its full
-daily history, its upstream source and source ID, and fetch timestamps.
+All five phases are built: **1** the data spine and the catalyst calendar, **2** the paper book,
+judgement forms and scoring, **3** scenario pages and the crowd module, **4** the daily AI brief,
+**5** the track record, reminders and monthly reviews. Every price series keeps its full daily
+history, its upstream source and source ID, and fetch timestamps.
+
+## How to use Catalyst
+
+One page, written for a phone. Install the site to your home screen first (Safari or Chrome: Share,
+then **Add to Home Screen**). Turn on GitHub notifications for this repository in the GitHub app: the
+forms and the reminders both arrive there.
+
+### The weekly routine (15 minutes)
+
+1. **Today.** Read the brief (three lines at the top, refreshed every evening around 23:45 UTC), the
+   **Reminders** card and the next three catalysts.
+2. **Clear the reminders.** Each one is a GitHub issue assigned to you, with buttons inside. Tap the
+   form link it gives you (Quick update, Make a call or Close trade). It closes itself once the
+   condition clears: you don't close it by hand.
+3. **Calendar, 2 weeks.** Any importance-3 event without a call? Make one now. A reminder comes 3
+   days before if you haven't.
+4. **Record > Portfolio.** For each open trade, ask: is the thesis still right? Is it past its horizon?
+   Close it, or write a quick update saying why it stays.
+5. **Record > Track record.** Read it once a week, not every day. Below 100 resolved questions every
+   figure is labelled **noisy**: read the direction, not the decimals.
+6. **On the 1st of each month**, open Record > **Reviews**, tap **Edit on GitHub** and write three
+   lessons under "My lessons". The draft is written once and never overwritten.
+
+### Make a call
+
+1. Tap **Make a call** on a calendar event, a scenario page or a prediction market, or **My view**
+   in the Economists and policy module. GitHub opens the Full call form, mostly filled in.
+2. Start from the base rate. Add up to three factors, each marked as raising or lowering the
+   probability, and by how much.
+3. Write the scenarios (they must total 100), then your **probability**.
+4. **What would change my mind:** include a date (YYYY-MM-DD). You get a reminder on that date.
+5. **Pre-mortem:** one line on how this call could be wrong. Then your **confidence** (low, medium,
+   high).
+6. Tap **Submit new issue**. Within a couple of minutes a comment shows the market and AI
+   probabilities as they stood when you submitted. They stay hidden until then.
+
+To revise later, use **Quick update** (5% steps). A call with no update for 14 days triggers a
+reminder. Questions that can't resolve on their own get **Resolve** on Record > Judgements.
+
+### Open a trade
+
+1. Tap **Open trade** on a country page, a calendar event or Record > Portfolio.
+2. Choose long or short, and size it by notional or by **risk to stop** (simplest: risk a fixed
+   amount, such as $1,000).
+3. Enter the stop, the target, a horizon date, a one-line thesis and a **thesis type** (catalyst,
+   carry, valuation, momentum, relative value or hedge). The thesis type drives the hit-rate table.
+4. Submit. You never type a price: the fill is the first close after you submit. The comment warns
+   you if the loss to your stop exceeds 2% of equity.
+
+### Close a trade
+
+1. Tap **Close** next to the position on Record > Portfolio (or in its reminder).
+2. Write the two-line post-mortem: what happened against the thesis, and what you'd do differently.
+3. Submit. The exit is the next close. Stops and targets close trades on their own. You get a
+   reminder when a trade passes its horizon or its instrument moves more than 2 standard deviations.
+
+### Read the record
+
+Record > **Track record**:
+
+- **Who forecasts better?** Brier score (lower is better) and log score (higher is better) for you,
+  the AI, the market at your entry, and **no-change** (your first forecast, never updated). Every
+  figure shows **n**, the number of resolved questions behind it. If no-change beats you, your
+  updates are hurting.
+- **Skill.** **Calibration error** (lower is better) tells you whether your 70%s happen 70% of the
+  time. **Discrimination** (higher is better) tells you whether your forecasts separate what happened
+  from what didn't. Calibration you can fix by shading; discrimination is the real skill.
+- **Where am I good?** Results by catalyst type, by your stated confidence and by lead time. A group
+  with fewer than 10 items reads "insufficient data".
+- **Blend.** From 20 shared resolved questions: would a 50/50 average of you and the AI have beaten
+  both? If it would, average with the AI before submitting.
+- **Trades.** Results in **R**, where 1R is the loss you set to your stop. Total R is split into
+  price, carry and cost. It is compared with the systematic strategy and buy-and-hold over the same
+  period, with hit rate and average win and loss by instrument and by thesis type.
 
 ## The site
 
@@ -17,7 +91,7 @@ Mobile-first, light and dark mode, bottom navigation:
 |---|---|
 | **Today** | The next three catalysts with countdowns, the month's moves on a map and a correlation grid. Instrument tiles for USD/BRL, USD/MXN, Brazil DI Jan-27/29/31, the Brazil 10-year proxy, the France OAT-Bund spread, US 10-year and Mexico 10-year (context), each with level, 1-week and 1-month change, and a z-score of the level against the past year. |
 | **Calendar** | A 12-month timeline per country, then the list for the next 2 weeks, 3 months or 12 months. Each row: date, country, type, importance 1-3, confirmed or estimated, source, and a market-attention score with an under-attended flag. |
-| **Record** | Phase 2: the paper book (Portfolio), scored calls (Judgements) and the Journal. See below. |
+| **Record** | The paper book (Portfolio), scored calls (Judgements), the Track record, monthly Reviews and the Journal. See below. |
 | **Scenarios** | Phase 3: six scenario pages linked to calendar events. See below. |
 | **Crowd** | Phase 3: six crowd-error gauges and a ranked list of the most likely shared errors. See below. |
 
@@ -482,6 +556,65 @@ Drivers per instrument:
 
 **Open paper trades:** each shows its biggest external exposure: the driver whose one-standard-deviation move has typically come with the largest P&L change, in dollars. DI positions use the Brazil 10-year proxy's betas.
 
+## Phase 5: track record, reminders and monthly reviews
+
+`terminal/record.py` writes `data/book/record.json` after every judgement and book rebuild (the
+`judge` step of the data and forms workflows). The site shows it at Record > **Track record**.
+
+**Questions.** Each resolved question is scored the same way for everyone, with the Brier score and
+the log score clipped at 1%:
+
+| column | probability used |
+|---|---|
+| me | my last forecast before resolution |
+| AI | the AI's blind probability recorded with that forecast. If none was recorded, its latest judgement in the brief archive on or before that date. The AI never sees my calls. |
+| market | the market-implied probability recorded at the same moment |
+| no-change | my first forecast on the question, held unchanged |
+| AI, every question | the AI also on resolved scenario questions I never called |
+
+- Every statistic shows its count. Groups under 10 items read "insufficient data", and everything is
+  labelled **noisy** below 100 resolved questions.
+- **Skill.** The Murphy decomposition of the Brier score over ten probability bins: calibration
+  (reliability), discrimination (resolution) and uncertainty, plus the ROC AUC.
+- **Groups.**
+  - Catalyst type: election, budget, rating, central bank, trade or other. It comes from the
+    calendar event type when the question is linked to one, otherwise from keywords.
+  - Stated confidence.
+  - Lead time: 90+, 30-90 and under 30 days between the final forecast and the resolution date.
+- **Blend.** A 50/50 average of me and the AI, shown once 20 shared questions have resolved.
+
+**Trades.**
+- R = P&L after costs ÷ the risk to the stop at entry, split into price, carry and cost, for closed
+  and open trades.
+- The book's return compared with em-macro's systematic strategy and equal-weight buy-and-hold, from
+  the book's start date.
+- Hit rate, average win and loss, and average R, by instrument and by thesis type. The thesis type
+  is a new optional dropdown on the Open trade form; earlier trades read "unspecified".
+
+**Reminders** (`terminal/reminders.py`, `.github/workflows/reminders.yml`, daily 11:37 UTC). Each
+reminder is a GitHub issue labelled `reminder`, assigned to the repository owner, with form links
+inside:
+
+| kind | when |
+|---|---|
+| stale | an unresolved call not updated in 14 days |
+| signpost | a YYYY-MM-DD date in a call's "what would change my mind", or a dated scenario signpost: from the day before to six days after |
+| horizon | an open trade past its horizon date |
+| move | an open trade whose instrument moved more than 2 sd since entry (sd of daily changes over the prior year × √closes since entry) |
+| catalyst | an importance-3 catalyst within 3 days with no call from me |
+
+Each issue carries a hidden key, so it is opened only once. It closes with a comment when its
+condition clears. The open list is written to `data/book/reminders.json` and appears on Today.
+`python -m terminal.run reminders --dry-run` lists them without touching GitHub.
+
+**Monthly review** (`terminal/review.py`). On the 1st, the reminders workflow writes
+`data/book/reviews/YYYY-MM.md` for the previous month. It covers calls made, questions resolved,
+scores against the market and the AI, the best and worst calls, trades opened and closed with P&L in
+dollars and R, and the post-mortems and pre-mortems as raw material for lessons. The file is created
+once and never overwritten, so edit it on GitHub. Record > **Reviews** renders it, with an **Edit on
+GitHub** link. To write a month by hand, run the workflow with `review_month`, or run
+`python -m terminal.run review --month 2026-10`.
+
 ## Daily flow
 
 ```
@@ -492,6 +625,7 @@ release days                                      terminal-data.yml: just that s
 daily 06:17 UTC                                   panel.yml: the Lab's forecast snapshot (unchanged)
 daily 23:41 UTC                                   brief.yml: snapshot, facts, judgement when due (Phase 4)
 2nd of each month 04:23 UTC                       assessments.yml: independent fiscal assessments
+daily 11:37 UTC                                   reminders.yml: reminder issues; on the 1st, the monthly review draft
           │
           ▼
 python -m terminal.run fetch      -> data/terminal/series/<id>.json, data/terminal/status.json

@@ -28,6 +28,8 @@ from terminal.judgement import JUDGE_DIR, ai_probability, load_judgements, marke
 TEMPLATES = store.ROOT / ".github" / "ISSUE_TEMPLATE"
 FORMS = {"open-trade": "[Open trade]", "close-trade": "[Close trade]", "quick-update": "[Quick update]",
          "full-call": "[Full call]", "resolve-question": "[Resolve]"}
+THESIS_TYPE = {"catalyst": "catalyst", "carry": "carry", "valuation": "valuation", "momentum": "momentum",
+               "relative value": "relative value", "hedge": "hedge", "other": "other"}
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
 
 
@@ -140,7 +142,8 @@ def open_trade(issue: dict, f: dict) -> tuple[Path, dict, list[str], bool]:
         errs.append("say what would make you close early")
     rec = {**_base(issue, "open", tid), "trade_id": tid, "instrument": code, "direction": direction, "size_type": size_type,
            "size": size, "stop": stop, "target": target, "horizon": horizon, "link": (f["link"] or "").strip() or None,
-           "thesis": thesis, "close_early": (f["close_early"] or "").strip(), "warnings": []}
+           "thesis": thesis, "close_early": (f["close_early"] or "").strip(), "warnings": [],
+           "thesis_type": THESIS_TYPE.get(((f.get("thesis_type") or "").split(" (")[0]).strip().lower(), "unspecified")}
     if not errs:
         inst = Instrument(code, cfg["instruments"][code])
         last = inst.latest(before=_ts(issue["created_at"]))
