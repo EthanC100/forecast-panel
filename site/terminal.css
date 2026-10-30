@@ -1,49 +1,86 @@
-/* Terminal visual system.
-   Type scale 12/13/15/17/20/24/30, spacing 4/8/12/16/24/32. One accent (blue). Colour carries meaning
-   only: green/red = direction, amber = warning; everything else is ink on surface. Contrast of every
-   text token is checked against its surface in both modes (scripts in the README). */
+/* Prism visual system.
+   Type scale 12/13/15/17/20/24/30, spacing 4/8/12/16/24/32. A bright palette: one brand colour (indigo),
+   a signature colour per country (France blue, Brazil yellow, Mexico pink) and per section (Today
+   orange, Calendar violet, Scenarios sky, Crowd purple, Record indigo). Green and red are reserved for
+   gains, losses and a market's direction; amber is for warnings. Every text token is checked at 4.5:1
+   against its surface in both modes (scripts/contrast.js). */
 :root {
   color-scheme: light;
   --fs-xs: .75rem; --fs-sm: .8125rem; --fs-base: .9375rem; --fs-md: 1.0625rem; --fs-lg: 1.25rem; --fs-xl: 1.5rem; --fs-2xl: 1.875rem;
   --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px;
-  --r: 14px; --r-sm: 9px;
-  --bg: #f4f4f2; --surface: #fcfcfb; --surface-2: #efeeea; --border: #dedcd5; --grid: #e6e4de; --axis: #c3c2b7;
-  --text: #0b0b0b; --text-2: #52514e; --text-3: #6b6964;
-  --accent: #2a6fc9; --accent-2: #cde2fb; --on-accent: #ffffff;
-  --good: #0ca30c; --bad: #d03b3b; --warn: #c98500;
-  --good-ink: #006300; --bad-ink: #b02a2a; --warn-ink: #7d5200;
-  --good-soft: #dff2df; --bad-soft: #f8e0e0; --warn-soft: #fbefd2;
-  --cat-1: #2a78d6; --cat-2: #eb6834; --cat-3: #1baf7a; --cat-0: #898781;
-  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 14px rgba(0,0,0,.04);
-  --skel-a: #ecebe7; --skel-b: #f6f5f2;
+  --r: 18px; --r-sm: 11px;
+  --bg: #f6f7fb; --surface: #ffffff; --surface-2: #f0f1f7; --border: #e3e4ee; --grid: #ecedf3; --axis: #c6c8d6;
+  --glass: rgba(255, 255, 255, 0.76); --glass-border: rgba(80, 70, 160, 0.12);
+  --text: #111018; --text-2: #4b4a57; --text-3: #63616e;
+  --accent: #5046e5; --accent-2: #e4e2fd; --on-accent: #ffffff;
+  /* green and red mean gains and losses (and a market's direction), nothing else */
+  --good: #0ca30c; --bad: #d03b3b; --good-ink: #006300; --bad-ink: #b02a2a; --good-soft: #dff2df; --bad-soft: #f8e0e0;
+  --warn: #c98500; --warn-ink: #7d5200; --warn-soft: #fbefd2;
+  --fav: #2f80ed; --adv: #e07b00; --mix: #9a98a6;
+  /* countries: fill, text-safe ink, soft tint, chart line */
+  --c-FR: #3b6ef6; --ink-FR: #2148c4; --soft-FR: #e6edff; --line-FR: #3b6ef6;
+  --c-BR: #ffc21f; --ink-BR: #7a5300; --soft-BR: #fff3c7; --line-BR: #a87700;
+  --c-MX: #e3289f; --ink-MX: #a8136b; --soft-MX: #ffe3f1; --line-MX: #c21aa0;
+  --c-GLOBAL: #8a8a99; --ink-GLOBAL: #4b4a57; --soft-GLOBAL: #ececf2; --line-GLOBAL: #5046e5;
+  /* sections */
+  --s-today: #e8650a; --i-today: #b34700; --f-today: #ffeedd;
+  --s-calendar: #7c4dff; --i-calendar: #5b2fd6; --f-calendar: #ece5ff;
+  --s-scenarios: #0891d1; --i-scenarios: #04699a; --f-scenarios: #dff3fc;
+  --s-crowd: #d6187a; --i-crowd: #a3105c; --f-crowd: #fde3ef;
+  --s-record: #4f5bd5; --i-record: #3540b5; --f-record: #e5e7fb;
+  --t-mon: #7c4dff; --t-fis: #e8650a; --t-pol: #0891d1;
+  --cat-1: #5046e5; --cat-2: #0891d1; --cat-0: #8a8a99;
+  --shadow: 0 1px 2px rgba(40, 30, 90, .05), 0 8px 24px rgba(40, 30, 90, .06);
+  --skel-a: #ecedf4; --skel-b: #f7f7fb;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0f0f0e; --surface: #1a1a19; --surface-2: #252523; --border: #34342f; --grid: #2a2a27; --axis: #4a4a45;
-    --text: #f0efec; --text-2: #c3c2b7; --text-3: #9c9b92;
-    --accent: #5598e7; --accent-2: #1c3a5e; --on-accent: #0b0b0b;
-    --good: #0ca30c; --bad: #e66767; --warn: #fab219;
-    --good-ink: #4cc94c; --bad-ink: #f08a8a; --warn-ink: #fab219;
-    --good-soft: #15301a; --bad-soft: #3a1c1c; --warn-soft: #3a2e10;
-    --cat-1: #3987e5; --cat-2: #d95926; --cat-3: #199e70; --cat-0: #898781;
-    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
-    --skel-a: #232321; --skel-b: #2c2c29;
+    --bg: #0e0e14; --surface: #1a1a24; --surface-2: #262634; --border: #33334a; --grid: #262636; --axis: #4a4a60;
+    --glass: rgba(30, 30, 44, 0.74); --glass-border: rgba(180, 170, 255, 0.12);
+    --text: #f2f1f7; --text-2: #c6c4d4; --text-3: #a09eb0;
+    --accent: #9b94ff; --accent-2: #2e2a63; --on-accent: #0e0e14;
+    --good: #0ca30c; --bad: #e66767; --good-ink: #4cc94c; --bad-ink: #f08a8a; --good-soft: #15301a; --bad-soft: #3a1c1c;
+    --warn: #fab219; --warn-ink: #fab219; --warn-soft: #3a2e10;
+    --fav: #6aa8ff; --adv: #ffad42; --mix: #8f8da0;
+    --c-FR: #5b8bff; --ink-FR: #9db8ff; --soft-FR: #1c2650; --line-FR: #4f7df5;
+    --c-BR: #ffc94a; --ink-BR: #ffd66b; --soft-BR: #33290b; --line-BR: #b58a1c;
+    --c-MX: #e06ad2; --ink-MX: #f2a6e6; --soft-MX: #3d1636; --line-MX: #d65cc5;
+    --c-GLOBAL: #8f8da0; --ink-GLOBAL: #c6c4d4; --soft-GLOBAL: #262634; --line-GLOBAL: #9b94ff;
+    --s-today: #e2701f; --i-today: #ffad75; --f-today: #3a220f;
+    --s-calendar: #8b6cf6; --i-calendar: #c1adff; --f-calendar: #271d4a;
+    --s-scenarios: #1a9bd0; --i-scenarios: #7fd3f7; --f-scenarios: #0d2c3b;
+    --s-crowd: #d6408f; --i-crowd: #f59ac6; --f-crowd: #3a1428;
+    --s-record: #5d6ee6; --i-record: #b3b9fa; --f-record: #1f2350;
+    --t-mon: #8b6cf6; --t-fis: #e2701f; --t-pol: #1a9bd0;
+    --cat-1: #7d74ff; --cat-2: #1a9bd0; --cat-0: #8f8da0;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+    --skel-a: #1f1f2b; --skel-b: #2a2a38;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0f0f0e; --surface: #1a1a19; --surface-2: #252523; --border: #34342f; --grid: #2a2a27; --axis: #4a4a45;
-  --text: #f0efec; --text-2: #c3c2b7; --text-3: #9c9b92;
-  --accent: #5598e7; --accent-2: #1c3a5e; --on-accent: #0b0b0b;
-  --good: #0ca30c; --bad: #e66767; --warn: #fab219;
-  --good-ink: #4cc94c; --bad-ink: #f08a8a; --warn-ink: #fab219;
-  --good-soft: #15301a; --bad-soft: #3a1c1c; --warn-soft: #3a2e10;
-  --cat-1: #3987e5; --cat-2: #d95926; --cat-3: #199e70; --cat-0: #898781;
-  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
-  --skel-a: #232321; --skel-b: #2c2c29;
+  --bg: #0e0e14; --surface: #1a1a24; --surface-2: #262634; --border: #33334a; --grid: #262636; --axis: #4a4a60;
+  --glass: rgba(30, 30, 44, 0.74); --glass-border: rgba(180, 170, 255, 0.12);
+  --text: #f2f1f7; --text-2: #c6c4d4; --text-3: #a09eb0;
+  --accent: #9b94ff; --accent-2: #2e2a63; --on-accent: #0e0e14;
+  --good: #0ca30c; --bad: #e66767; --good-ink: #4cc94c; --bad-ink: #f08a8a; --good-soft: #15301a; --bad-soft: #3a1c1c;
+  --warn: #fab219; --warn-ink: #fab219; --warn-soft: #3a2e10;
+  --fav: #6aa8ff; --adv: #ffad42; --mix: #8f8da0;
+  --c-FR: #5b8bff; --ink-FR: #9db8ff; --soft-FR: #1c2650; --line-FR: #4f7df5;
+  --c-BR: #ffc94a; --ink-BR: #ffd66b; --soft-BR: #33290b; --line-BR: #b58a1c;
+  --c-MX: #e06ad2; --ink-MX: #f2a6e6; --soft-MX: #3d1636; --line-MX: #d65cc5;
+  --c-GLOBAL: #8f8da0; --ink-GLOBAL: #c6c4d4; --soft-GLOBAL: #262634; --line-GLOBAL: #9b94ff;
+  --s-today: #e2701f; --i-today: #ffad75; --f-today: #3a220f;
+  --s-calendar: #8b6cf6; --i-calendar: #c1adff; --f-calendar: #271d4a;
+  --s-scenarios: #1a9bd0; --i-scenarios: #7fd3f7; --f-scenarios: #0d2c3b;
+  --s-crowd: #d6408f; --i-crowd: #f59ac6; --f-crowd: #3a1428;
+  --s-record: #5d6ee6; --i-record: #b3b9fa; --f-record: #1f2350;
+  --t-mon: #8b6cf6; --t-fis: #e2701f; --t-pol: #1a9bd0;
+  --cat-1: #7d74ff; --cat-2: #1a9bd0; --cat-0: #8f8da0;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+  --skel-a: #1f1f2b; --skel-b: #2a2a38;
 }
-
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--text);
@@ -285,3 +322,81 @@ table.sys td { vertical-align: middle; }
 select { max-width: 100%; min-width: 0; text-overflow: ellipsis; }
 .vizhead .row { min-width: 0; max-width: 100%; }
 .vizhead select { max-width: min(220px, 100%); }
+
+/* ================= Prism: colour layer ================= */
+body { background: var(--bg); }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(60vmax 40vmax at 0% 0%, var(--soft-FR), transparent 70%),
+              radial-gradient(50vmax 40vmax at 100% 10%, var(--soft-MX), transparent 70%),
+              radial-gradient(60vmax 45vmax at 60% 100%, var(--soft-BR), transparent 70%), var(--bg); }
+.top, .bottom { background: var(--glass); backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%); border-color: var(--glass-border); }
+.brand { display: inline-flex; align-items: center; gap: 8px; letter-spacing: .02em; }
+.brand img { border-radius: 6px; box-shadow: 0 1px 3px rgba(40, 30, 90, .18); }
+.card, .ev, .evpop, .gpop, .tabs { background: var(--glass); border-color: var(--glass-border); backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); }
+.card { border-radius: var(--r); }
+.ev { border-radius: 14px; }
+
+/* section colour: set on <body data-section> by the router; country pages use the country */
+body { --sec: var(--s-today); --sec-ink: var(--i-today); --sec-soft: var(--f-today); }
+body[data-section="calendar"] { --sec: var(--s-calendar); --sec-ink: var(--i-calendar); --sec-soft: var(--f-calendar); }
+body[data-section="scenarios"] { --sec: var(--s-scenarios); --sec-ink: var(--i-scenarios); --sec-soft: var(--f-scenarios); }
+body[data-section="crowd"] { --sec: var(--s-crowd); --sec-ink: var(--i-crowd); --sec-soft: var(--f-crowd); }
+body[data-section="record"], body[data-section="trade"] { --sec: var(--s-record); --sec-ink: var(--i-record); --sec-soft: var(--f-record); }
+body[data-section="FR"] { --sec: var(--c-FR); --sec-ink: var(--ink-FR); --sec-soft: var(--soft-FR); }
+body[data-section="BR"] { --sec: var(--c-BR); --sec-ink: var(--ink-BR); --sec-soft: var(--soft-BR); }
+body[data-section="MX"] { --sec: var(--c-MX); --sec-ink: var(--ink-MX); --sec-soft: var(--soft-MX); }
+body[data-section="glossary"], body[data-section="status"] { --sec: var(--accent); --sec-ink: var(--accent); --sec-soft: var(--accent-2); }
+
+/* page headers: soft multicolour gradient led by the section colour */
+.sec:has(> h1) { padding: 16px 18px; border-radius: 22px; margin: var(--sp-2) 0 var(--sp-4);
+  background: linear-gradient(120deg, var(--sec-soft) 0%, var(--sec-soft) 38%, var(--soft-MX) 72%, var(--soft-BR) 100%);
+  border: 1px solid var(--glass-border); box-shadow: var(--shadow); }
+.sec:has(> h1) h1 { display: inline-flex; align-items: center; gap: 10px; }
+.sec:has(> h1) h1::before { content: ""; width: 12px; height: 12px; border-radius: 4px; background: var(--sec); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sec) 25%, transparent); }
+
+/* featured cards: the same gradient, lighter */
+.card.feature { background: linear-gradient(135deg, var(--soft-FR) 0%, var(--soft-MX) 55%, var(--soft-BR) 100%); border-color: var(--glass-border); }
+.card.feature .cd { background: var(--glass); }
+
+/* bottom navigation: each section's icon in its colour */
+.bottom a[data-r="today"] .i { color: var(--s-today); } .bottom a[data-r="calendar"] .i { color: var(--s-calendar); }
+.bottom a[data-r="scenarios"] .i { color: var(--s-scenarios); } .bottom a[data-r="crowd"] .i { color: var(--s-crowd); }
+.bottom a[data-r="record"] .i { color: var(--s-record); }
+.bottom a.on { background: var(--sec-soft); color: var(--sec-ink); }
+.bottom a .i { font-size: 1.15rem; }
+.top-links a[data-r^="country/"]::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; }
+.top-links a[data-r="country/FR"]::before { background: var(--c-FR); } .top-links a[data-r="country/BR"]::before { background: var(--c-BR); }
+.top-links a[data-r="country/MX"]::before { background: var(--c-MX); }
+.tabs button.on { background: var(--sec-ink); color: var(--bg); }
+.filters button.on { background: var(--sec-ink); border-color: var(--sec-ink); color: var(--bg); }
+
+/* countries */
+.chip.ctry { background: var(--soft-GLOBAL); color: var(--ink-GLOBAL); display: inline-flex; align-items: center; gap: 4px; }
+.chip.ctry::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--c-GLOBAL); }
+.chip.ctry.c-FR { background: var(--soft-FR); color: var(--ink-FR); } .chip.ctry.c-FR::before { background: var(--c-FR); }
+.chip.ctry.c-BR { background: var(--soft-BR); color: var(--ink-BR); } .chip.ctry.c-BR::before { background: var(--c-BR); box-shadow: 0 0 0 1px var(--ink-BR); }
+.chip.ctry.c-MX { background: var(--soft-MX); color: var(--ink-MX); } .chip.ctry.c-MX::before { background: var(--c-MX); }
+.sccard { border-left: 5px solid var(--border); } .sccard.c-FR { border-left-color: var(--c-FR); } .sccard.c-BR { border-left-color: var(--c-BR); } .sccard.c-MX { border-left-color: var(--c-MX); }
+
+/* states that are not gains or losses: no green or red */
+.dot { border: 1.5px solid var(--text-2); background: transparent; }
+.dot.fresh { background: var(--text-2); }
+.dot.aging { background: linear-gradient(90deg, var(--text-2) 50%, transparent 50%); }
+.dot.stale { border: 2px solid var(--warn); background: transparent; }
+.dot.none { border: 1.5px dashed var(--text-3); }
+.badge.tested_leads { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+.badge.tested_leads::before { content: "✓"; }
+.badge.tested_no_lead { color: var(--text-2); border-color: var(--text-3); background: transparent; }
+.badge.tested_no_lead::before { content: "✕"; }
+.badge.context { border-style: dotted; }
+.chip.conf { border: 1px solid var(--text-2); color: var(--text); background: transparent; }
+.chip.conf::before { content: "✓ "; }
+.chip.flag { background: var(--warn-soft); color: var(--warn-ink); border: 1px solid currentColor; }
+.chip.flag::before { content: "⚑ "; }
+.chip.fav { background: color-mix(in srgb, var(--fav) 16%, transparent); color: var(--text); border: 1px solid var(--fav); }
+.chip.adv { background: color-mix(in srgb, var(--adv) 18%, transparent); color: var(--text); border: 1px solid var(--adv); }
+.checks li.ok { color: var(--text); font-weight: 650; }
+.branch.good { border-top-color: var(--fav); } .branch.bad { border-top-color: var(--adv); } .branch.mixed { border-top-color: var(--mix); }
+.ev.under { border-color: var(--warn); box-shadow: inset 4px 0 0 var(--warn); }
+a { color: var(--accent); }
+details.how > summary { color: var(--sec-ink); }

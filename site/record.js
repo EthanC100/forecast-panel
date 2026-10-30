@@ -32,7 +32,7 @@
     f.append(...nn(el("div", { class: "row" }, T.tradeLink("USDBRL", null, "Size and open a trade", "primary"), T.formBtn("Close trade", "close-trade", {}),
       el("span", { class: "tiny" }, "Trades are submitted as GitHub forms; entry and exit are the next close after you submit."))));
     const e = b.equity, s = b.stats, dd = e.worst_drawdown;
-    f.append(...nn(el("article", { class: "card", style: "margin-top:10px" }, el("div", { class: "hero" },
+    f.append(...nn(el("article", { class: "card feature", style: "margin-top:10px" }, el("div", { class: "hero" },
       stat("equity", money(e.current), m), stat("P&L since " + b.start_date, money(e.pnl_usd) + " (" + signed(e.return_pct, 2) + "%)", m, e.pnl_usd > 0 ? "up" : e.pnl_usd < 0 ? "down" : ""),
       stat("worst drawdown", fmt(dd.pct, 2) + "%", Object.assign({}, m, { as_of: dd.to || b.as_of })),
       stat("risk at stake (to stops)", money(b.risk_at_stake_usd) + (b.risk_at_stake_pct != null ? " · " + fmt(b.risk_at_stake_pct, 2) + "%" : ""), m),
@@ -284,7 +284,7 @@
         el("td", { class: "small" }, fc.what_changed || "")));
       f.append(...nn(el("article", { class: "card", style: "margin-bottom:8px" }, el("div", { class: "row", style: "justify-content:space-between" },
         el("div", {}, el("b", {}, q.question), el("div", { class: "tiny" }, q.key + (q.question_id ? " · " + q.question_id : "") + " · resolves " + (q.resolution_date || "–"))),
-        q.resolution ? el("span", { class: "chip " + (q.resolution.outcome ? "conf" : "flag") }, "resolved " + (q.resolution.outcome ? "YES" : "NO")) : T.formBtn("Quick update", "quick-update", { target: q.key, title: "[Quick update] " + q.key }, "small")),
+        q.resolution ? el("span", { class: "chip" }, "resolved " + (q.resolution.outcome ? "YES" : "NO")) : T.formBtn("Quick update", "quick-update", { target: q.key, title: "[Quick update] " + q.key }, "small")),
         tableOf(["record", { t: "mine", r: 1 }, { t: "market at entry", r: 1 }, { t: "AI", r: 1 }, { t: "Brier mine / mkt", r: 1 }, "what changed"], rows),
         q.call ? el("details", {}, el("summary", {}, "call details"), el("div", { class: "small" },
           el("div", {}, "Base rate: " + (q.call.base_rate || "–")), el("div", {}, "Factors: " + q.call.factors.map((x) => x.factor + " (" + x.direction + ", " + x.size + ")").join("; ")),

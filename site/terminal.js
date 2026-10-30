@@ -130,7 +130,7 @@
   TERM.tradeLink = tradeLink;
 
   // ---------------- shared pieces ----------------
-  const ctryChip = (c) => el("span", { class: "chip ctry", title: COUNTRY[c] || c }, c === "GLOBAL" ? "GL" : c);
+  const ctryChip = (c) => el("span", { class: "chip ctry c-" + c, title: COUNTRY[c] || c }, c === "GLOBAL" ? "GL" : c);
   const statusChip = (s) => el("span", { class: "chip " + (s === "confirmed" ? "conf" : "est"), title: s === "confirmed" ? "Date published by the institution or fixed in law" : "Date from a rule or past pattern; check it" }, s);
   const imp = (n) => el("span", { class: "imp", title: "importance " + n + " of 3", "aria-label": "importance " + n + " of 3" }, "●".repeat(n), el("i", {}, "●".repeat(3 - n)));
   const unitSuffix = (u) => (u === "pct" ? "%" : " bp");
@@ -194,7 +194,7 @@
     const cats = el("div", { class: "grid" });
     (s.next_catalysts || []).forEach((e) => {
       const c = countdown(e.date);
-      cats.appendChild(el("article", { class: "card cat" },
+      cats.appendChild(el("article", { class: "card cat feature" },
         el("div", { class: "cd", title: "countdown to " + e.date }, el("div", { class: "n" }, c.n), el("div", { class: "u" }, c.u)),
         el("div", { style: "min-width:0" }, el("div", { class: "t" }, e.title),
           el("div", { class: "d" }, ctryChip(e.country), " ", e.date + " (" + weekday(e.date) + ") ", imp(e.importance), " ", statusChip(e.status)),
@@ -379,7 +379,7 @@
         s.n_series ? el("div", { class: "tiny" }, s.n_series + " series written") : null))));
     t.appendChild(tb);
     f.append(...nn(el("article", { class: "card" }, el("div", { class: "scroll" }, t)),
-      el("p", { class: "small muted" }, "Green: succeeded on the last run. Red: failed or a secret is missing; it is skipped and everything else keeps working. Grey: a fallback that was not needed. Amber: partial.")));
+      el("p", { class: "small muted" }, "Filled dot: succeeded on the last run. Amber ring: failed or a secret is missing; it is skipped and everything else keeps working. Dashed: a fallback that was not needed. Half-filled: partial.")));
     return f;
   }
 
@@ -395,6 +395,8 @@
     const full = (location.hash || "#today").slice(1), h = full.split("?")[0], [page, arg] = h.split("/");
     if (page === "calendar" && ["2w", "3m", "12m"].includes(arg)) S.calTab = arg;
     document.querySelectorAll("[data-r]").forEach((a) => a.classList.toggle("on", a.dataset.r === page || a.dataset.r === h));
+    // the page's colour: its section, or the country on a country page
+    document.body.dataset.section = page === "country" ? (arg || "BR").toUpperCase() : ["calendar", "scenarios", "crowd", "record", "trade", "glossary", "status"].includes(page) ? page : "today";
     app.textContent = "";
     if (!S.summary) { app.appendChild(el("div", {}, skel("lines"), el("div", { class: "grid" }, skel("block"), skel("block"), skel("block")))); return; }
     let node;

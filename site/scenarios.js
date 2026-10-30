@@ -9,7 +9,7 @@
   const D = { sc: null, crowd: null, err: null, loading: null };
   const REPO = "https://github.com/EthanC100/forecast-panel/blob/main/";
   const pct = (p, d = 0) => p == null ? "–" : fmt(100 * p, d) + "%";
-  const SIDE = { good: ["good", "conf"], bad: ["bad", "flag"], mixed: ["mixed", "est"] };
+  const SIDE = { good: ["▲ favourable", "fav"], bad: ["▼ adverse", "adv"], mixed: ["◆ mixed", "est"] };
   const DESCRIPTIVE = { badge: "context", reason: "Base rates and scenario trees are descriptive, not tested signals." };
 
   function load() {
@@ -92,7 +92,7 @@
     const g = el("div", { class: "grid" });
     D.sc.scenarios.slice().sort((a, b) => (a.event ? a.event.date : "9") < (b.event ? b.event.date : "9") ? -1 : 1).forEach((s) => {
       const st = calcState(s), ev = evaluate(s, st), open = shown(s);
-      g.appendChild(el("article", { class: "card sccard" },
+      g.appendChild(el("article", { class: "card sccard c-" + s.country },
         el("div", { class: "lbl" }, el("a", { href: "#scenarios/" + s.id }, el("b", {}, s.title)), T.ctryChip(s.country)),
         el("div", { class: "small", style: "margin:6px 0" }, s.question),
         el("div", { class: "row small" },
@@ -207,7 +207,7 @@
 
   // ---------------- scenario tree diagram + probability sliders ----------------
   function wrapText(t, n) { const out = []; let line = ""; t.split(" ").forEach((w) => { if ((line + " " + w).trim().length > n && line) { out.push(line); line = w; } else line = (line + " " + w).trim(); }); if (line) out.push(line); return out; }
-  const SIDECOL = { good: "var(--good)", bad: "var(--bad)", mixed: "var(--warn)" };
+  const SIDECOL = { good: "var(--fav)", bad: "var(--adv)", mixed: "var(--mix)" };
   function treeSvg(s, p) {
     const ns = T.charts.ns, n = s.branches.length, RH = 60, W = 360, H = n * RH + 4, rx = 104, bx = 168, cy = H / 2;
     const svg = ns("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "scenario tree with probabilities", style: "max-width:600px" });
@@ -221,7 +221,7 @@
       svg.appendChild(ns("rect", { x: bx, y: y - 25, width: 4, height: 50, rx: 2, fill: SIDECOL[b.side] || "var(--text-3)" }));
       wrapText(b.label, 24).slice(0, 2).forEach((l, k) => svg.appendChild(ns("text", { x: bx + 10, y: y - 7 + k * 14, class: "lbl-t" }, l)));
       svg.appendChild(ns("text", { x: W - 8, y: y + 4, "text-anchor": "end", "font-size": 15, "font-weight": 800, fill: "var(--text)" }, p[i] + "%"));
-      svg.appendChild(ns("text", { x: bx + 10, y: y + 20, class: "lbl-t", "font-size": 10 }, (s.yes_branches.includes(b.id) ? "YES · " : "NO · ") + b.side));
+      svg.appendChild(ns("text", { x: bx + 10, y: y + 20, class: "lbl-t", "font-size": 10 }, (s.yes_branches.includes(b.id) ? "YES · " : "NO · ") + ({ good: "favourable", bad: "adverse", mixed: "mixed" }[b.side] || b.side)));
     });
     return svg;
   }
@@ -348,7 +348,7 @@
     const ig = /AA-category/.test(it.threshold) ? 3.5 : 9.5, lo = Math.max(0, Math.min(...ns.map((r) => r.notch)) - 2), hi = Math.min(15, Math.max(...ns.map((r) => r.notch), ig) + 2);
     const tk = []; for (let i = lo; i <= hi; i += 2) tk.push(i);
     return T.charts.rangeStrip({ min: lo, max: hi, ticks: tk, fmt: (v) => SCALE[Math.round(v)] || "", zones: [[ig, hi]], aria: "rating ladder",
-      marks: ns.map((r, i) => ({ v: r.notch + (i - 1) * 0.12, label: r.agency.replace("Moody's", "M").replace("Fitch", "F").replace("S&P", "S") + (/neg/.test(r.outlook || "") ? "↓" : ""), color: /neg/.test(r.outlook || "") ? "var(--bad)" : "var(--accent)", dy: i * 12 })) });
+      marks: ns.map((r, i) => ({ v: r.notch + (i - 1) * 0.12, label: r.agency.replace("Moody's", "M").replace("Fitch", "F").replace("S&P", "S") + (/neg/.test(r.outlook || "") ? "↓" : ""), color: /neg/.test(r.outlook || "") ? "var(--warn)" : "var(--accent)", dy: i * 12 })) });
   }
   function crowdPage() {
     const C = D.crowd, f = el("div"), G = {};
@@ -361,7 +361,7 @@
     const rl = el("ol", { class: "ranked" });
     (C.shared_errors || []).forEach((it) => {
       const s = scs[it.scenario], open = s ? shown(s) : false;
-      rl.appendChild(el("li", { class: "card" },
+      rl.appendChild(el("li", { class: "card" + (rl.children.length ? "" : " feature") },
         el("div", { class: "lbl" }, el("a", { href: "#scenarios/" + it.scenario }, el("b", {}, it.title)), el("span", { class: "num small" }, "score " + fmt(it.score, 2))),
         el("div", { class: "tiny" }, (it.date || "") + " · in " + it.days + " days"),
         it.signals.length ? el("ul", { class: "small" }, ...it.signals.map((x) => el("li", {}, el("b", {}, x.signal + ": "),

@@ -1,6 +1,6 @@
-# forecast-panel: macro research terminal
+# Prism: macro research for France, Brazil and Mexico
 
-A macro research terminal for **France, Brazil and Mexico**, published at
+**Prism** is a macro research app for **France, Brazil and Mexico**, published at
 **https://ethanc100.github.io/forecast-panel/**. The original forecast panel lives on under the
 **Lab** link (https://ethanc100.github.io/forecast-panel/lab/).
 
@@ -24,7 +24,7 @@ Mobile-first, light and dark mode, bottom navigation:
 Also: a page per country (header links **FR / BR / MX**) and a **Status** page.
 
 Every number carries its **source** (linked, with the source ID), an **as-of** time, a
-**freshness dot** (green under 1 day old, amber under 1 week, red older) and an **evidence badge**:
+**freshness dot** (filled under 1 day old, half-filled under 1 week, an amber ring when older) and an **evidence badge**:
 
 | badge | meaning |
 |---|---|
@@ -69,7 +69,7 @@ every instrument. Record > **Judgements** shows your calls and their scores. Rec
 lists every trade, fill, post-mortem, exit, call, update and resolution in date order.
 
 **Make a call.** Tap **Make a call** on a calendar event or a prediction market (country page), or
-**Full call** on Record > Judgements. Base rates are pre-filled where the terminal has them: for
+**Full call** on Record > Judgements. Base rates are pre-filled where Prism has them: for
 Copom and Banxico decisions, how often the last 24 meetings changed the rate. Scenario probabilities
 must total 100. Prediction-market prices on country pages stay hidden until you tap **reveal**. The
 market-implied probability, and Claude's probability for forecast-panel questions, are recorded when
@@ -157,7 +157,7 @@ Each page has:
 * **Branch tree** (3-4 branches). Each branch shows my probability (from the latest Full call with
   question id `sc:<id>`), the AI's ("Phase 4") and the market's. It also shows the expected move
   per instrument with its basis: em-macro's what-if table (with 90% interval), its event study,
-  an analog measured on this terminal's own series (for example the Nov 2024 Brazil package:
+  an analog measured on Prism's own series (for example the Nov 2024 Brazil package:
   DI Jan-29 +112 bp and USD/BRL +4.4% in 3 days), or a judgement. Anything that is not a direct
   em-macro estimate carries an **assumption** chip. Each branch has its signposts. Brazil adds
   live signposts from Focus: the 2027 primary-balance median (−0.3% against the +0.5% target) and
@@ -237,7 +237,7 @@ meeting since 2004) and `za.cot.zar` (CFTC ZAR futures).
 
 ### Install it on a phone
 
-The site is an installable app called **Terminal** (`site/manifest.webmanifest`, full-screen display, its
+The site is an installable app called **Prism** (`site/manifest.webmanifest`, full-screen display, its
 own icon).
 
 * **iPhone:** open the site in Safari, then Share > Add to Home Screen.
@@ -255,17 +255,55 @@ with text (see "Not drawn" below).
 
 ### Visual system
 
-* A type scale of 12/13/15/17/20/24/30 px and a spacing scale of 4/8/12/16/24/32 px.
-* One accent colour (blue). Otherwise colour only carries meaning: green and red for direction (a
-  wider spread or a weaker currency counts as adverse), amber for warnings.
-* Tabular figures in tables and on axes.
-* Skeleton placeholders while blocks load.
-* Light and dark modes each have their own tokens. `node scripts/contrast.js` checks every text token
-  against its surface, and all pass 4.5:1 in both modes. The timeline's three type colours were checked
-  with the colour-vision validator. Light-mode aqua (2.7:1) relies on the event list below the timeline
-  as its table view.
-* The layout is tested at 390 px wide in both modes with no horizontal scrolling. The two wide visuals,
-  the calendar timeline and the correlation grid, scroll inside their own cards.
+* **Type and spacing.** Type sizes run 12/13/15/17/20/24/30 px and spacing 4/8/12/16/24/32 px.
+  Cards are rounded (18 px) and translucent (frosted glass) over soft colour blobs. Tables and axes
+  use tabular figures. Skeleton placeholders show while blocks load.
+* **Brand colour:** indigo, used for links, buttons and the brand mark.
+* **Country colours,** used on every chip, nav dot, chart line, map outline, timeline row and scenario
+  card. Brazil's charts use a darker gold line so the line stays readable.
+
+  | country | fill | chart line, light / dark |
+  |---|---|---|
+  | France | blue `#3b6ef6` | `#3b6ef6` / `#4f7df5` |
+  | Brazil | yellow `#ffc21f` | gold `#a87700` / `#b58a1c` |
+  | Mexico | pink `#e3289f` | `#c21aa0` / `#d65cc5` |
+
+* **Section colours,** on the bottom-navigation icons, the selected tab and the page header. A
+  country page takes its country's colour.
+
+  | section | colour |
+  |---|---|
+  | Today | orange `#e8650a` |
+  | Calendar | violet `#7c4dff` |
+  | Scenarios | sky `#0891d1` |
+  | Crowd | rose `#d6187a` |
+  | Record | indigo `#4f5bd5` |
+
+* **Gradients.** Page headers and featured cards (next catalysts, the scenario question, the top
+  shared error, the portfolio summary) have a soft multicolour gradient led by the section colour.
+* **Green and red mean gains, losses and a market's direction only** (a wider spread or a weaker
+  currency counts as adverse). Everything else uses other cues:
+  * freshness: a filled, half-filled or ringed dot;
+  * evidence badges: ✓ / ✕;
+  * confirmed dates: ✓;
+  * flags and warnings: amber ⚑;
+  * scenario branches: blue ▲ favourable, amber ▼ adverse, grey ◆ mixed.
+* **Contrast.** `node scripts/contrast.js` checks every text token at 4.5:1 in light and dark mode.
+  It includes text on the translucent cards composited over each background colour, text on the page
+  headers, country chips and selected tabs, and icons and chart lines at 3:1. Everything passes.
+* **Colour vision.** The country lines, section colours (in nav order), timeline event types and
+  chart series pass the colour-vision validator in both modes. Mexico's pink was moved toward rosa
+  mexicano so it stays distinct from loss red.
+
+  Two pairs stay below the validator's ideal, and both always come with text:
+  * Gain green and loss red: always with a +/− sign or ▲/▼.
+  * Today orange and loss red: they never share a chart.
+
+* **Phone layout.** Tested at 390 px wide in both modes with no horizontal scrolling. The calendar
+  timeline and the correlation grid scroll inside their own cards.
+* **Icon.** A glass prism splitting a white beam into five bands, drawn by `scripts/make_icon.py`.
+  It comes in every size the manifest and iOS use: 16-1024 px rounded, 40-180 px Apple touch icons,
+  maskable 192 and 512 px, and a 1024 px App Store square.
 
 ### What is where
 

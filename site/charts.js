@@ -186,7 +186,7 @@
           const cands = evs.filter((e) => !e.upcoming && e.date >= lo && e.date <= m.t).sort((a, b) => b.importance - a.importance || (a.date < b.date ? 1 : -1));
           m.ev = cands[0] || null; m.others = Math.max(0, cands.length - 1);
         });
-        const panels = [{ title: item.name + (s.unit ? " (" + s.unit + ")" : ""), lines: [{ label: item.name, points: pts, color: "var(--cat-1)" }], fmt: (v, full) => fmt(v, full ? dec : Math.min(dec, 2)) }];
+        const panels = [{ title: item.name + (s.unit ? " (" + s.unit + ")" : ""), lines: [{ label: item.name, points: pts, color: "var(--line-" + country + ", var(--cat-1))" }], fmt: (v, full) => fmt(v, full ? dec : Math.min(dec, 2)) }];
         const render2 = (cmpS) => {
           if (cmpS) {
             const cp = cmpS.history.filter((r) => typeof r[1] === "number" && r[0] >= from).map((r) => [r[0], r[1]]);
@@ -197,7 +197,7 @@
             sub: [e.type, "importance " + e.importance, e.status].join(" · "), href: e.upcoming ? "#calendar/12m?ev=" + encodeURIComponent(e.id) : null }));
           const chart = timeChart({ panels, x0: Date.parse(from), x1, markers, annos: top.map((m) => ({ t: m.t, v: m.v, n: m.n })), aria: item.name + " over " + st.range });
           view.append(...nn(chart,
-            el("div", { class: "legend" }, el("span", {}, el("i", { class: "ln", style: "background:var(--cat-1)" }), item.name), cmpS ? el("span", {}, el("i", { class: "ln", style: "background:var(--cat-2)" }), cmpS.name + " (panel below)") : null,
+            el("div", { class: "legend" }, el("span", {}, el("i", { class: "ln", style: "background:var(--line-" + country + ", var(--cat-1))" }), item.name), cmpS ? el("span", {}, el("i", { class: "ln", style: "background:var(--cat-2)" }), cmpS.name + " (panel below)") : null,
               markers.length ? el("span", {}, "▲ calendar event (tap; blue = upcoming)") : null, el("span", {}, "① largest moves")),
             el("ol", { class: "annos", "aria-label": "Largest moves in view" }, ...top.map((m) => el("li", {}, el("span", { class: "n" }, String(m.n)),
               el("span", {}, el("b", { class: "num" }, signed(m.c.v, m.c.d) + m.c.u), " on " + m.t + (s.frequency && /month/.test(s.frequency) ? " (monthly average)" : "") + ": ",

@@ -197,7 +197,7 @@
         const rows = S.rows.filter((r) => r.book === key).sort((a, b) => b.score - a.score);
         const longs = rows.filter((r) => r.side === "long"), shorts = rows.filter((r) => r.side === "short");
         const tr = (r) => el("tr", {}, el("td", {}, el("b", {}, r.instrument), el("div", { class: "tiny" }, r.description)), el("td", {}, z(r.carry_z)), el("td", {}, z(r.trend_z)), el("td", {}, z(r.value_z)),
-          el("td", { class: "r num" }, el("b", {}, signed(r.score, 2))), el("td", { class: "r" }, el("span", { class: "chip " + (r.side === "long" ? "conf" : "flag") }, r.side + " " + fmt(Math.abs(r.size_pct), 0) + "%")));
+          el("td", { class: "r num" }, el("b", {}, signed(r.score, 2))), el("td", { class: "r" }, el("span", { class: "chip" }, (r.side === "long" ? "▲ long " : "▼ short ") + fmt(Math.abs(r.size_pct), 0) + "%")));
         return el("div", {}, el("h3", {}, name + ": " + rows.length + " of " + total + " positions taken"),
           el("div", { class: "scroll" }, el("table", { class: "sys" }, el("thead", {}, el("tr", {}, el("th", {}, "instrument"), el("th", {}, "carry z"), el("th", {}, "trend z"), el("th", {}, "value z"), el("th", { class: "r" }, "score"), el("th", { class: "r" }, "position"))),
             el("tbody", {}, el("tr", {}, el("td", { colspan: 6, class: "tiny" }, "Top third → long")), ...longs.map(tr),
@@ -231,7 +231,7 @@
           const alpha = Math.min(1, Math.abs(zz) / 2);
           const g = geo.countries[code];
           const svg = C().ns("svg", { viewBox: "-2 -2 104 104", role: "img", "aria-label": CTRY[code] + " " + name + " " + signed(ch, 1) + unit },
-            C().ns("path", { d: g.path, fill: Math.abs(zz) < 0.25 ? "var(--surface-2)" : adverse ? "var(--bad)" : "var(--good)", "fill-opacity": Math.abs(zz) < 0.25 ? 1 : 0.18 + 0.62 * alpha, stroke: "var(--text-3)", "stroke-width": 0.6 }));
+            C().ns("path", { d: g.path, "stroke-linejoin": "round", fill: Math.abs(zz) < 0.25 ? "var(--surface-2)" : adverse ? "var(--bad)" : "var(--good)", "fill-opacity": Math.abs(zz) < 0.25 ? 1 : 0.18 + 0.62 * alpha, stroke: "var(--c-" + code + ")", "stroke-width": 1.6 }));
           return el("a", { class: "mapc", href: "#country/" + code, "aria-label": "Open " + CTRY[code] }, svg,
             el("div", { class: "small" }, el("b", {}, CTRY[code])),
             el("div", { class: "num " + (Math.abs(zz) < 0.25 ? "" : adverse ? "down" : "up") }, el("b", {}, signed(ch, unit === "%" ? 2 : 1) + (unit === "%" ? "%" : " bp")), " " + name),
@@ -282,8 +282,8 @@
   }
 
   // ---------------- Calendar timeline ----------------
-  const TYPE = { rates: ["Monetary policy", "var(--cat-1)"], fiscal: ["Fiscal and ratings", "var(--cat-2)"], ratings: ["Fiscal and ratings", "var(--cat-2)"],
-    election: ["Elections and politics", "var(--cat-3)"], politics: ["Elections and politics", "var(--cat-3)"] };
+  const TYPE = { rates: ["Monetary policy", "var(--t-mon)"], fiscal: ["Fiscal and ratings", "var(--t-fis)"], ratings: ["Fiscal and ratings", "var(--t-fis)"],
+    election: ["Elections and politics", "var(--t-pol)"], politics: ["Elections and politics", "var(--t-pol)"] };
   const typeOf = (t) => TYPE[t] || ["Other (trade, surveys)", "var(--cat-0)"];
   function timelineCard(cal) {
     return need().then(() => {
@@ -300,7 +300,7 @@
       }
       rows.forEach(([code, name], i) => {
         const cy = TOP + i * RH + RH / 2;
-        svg.append(...nn(ns("text", { x: 0, y: cy + 4, class: "lbl-t", "font-weight": 650 }, name), ns("line", { x1: L, x2: W - R, y1: cy, y2: cy, stroke: "var(--axis)" })));
+        svg.append(...nn(ns("text", { x: 0, y: cy + 4, class: "lbl-t", "font-weight": 700, fill: "var(--ink-" + code + ", var(--text-2))" }, name), ns("line", { x1: L, x2: W - R, y1: cy, y2: cy, stroke: "var(--axis)" })));
         const mine = evs.filter((e) => e.country === code).sort((a, b) => a.importance - b.importance);
         const used = {};
         mine.forEach((e) => {
