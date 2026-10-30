@@ -113,7 +113,7 @@
     HZ.ctx.add("Key data", st ? `${o.name}: ${fmt(st.last, d)} ${unit} on ${st.date}; 1 month ago ${st.m1 != null ? fmt(st.m1, d) : "–"}; 1-year z-score ${HZ.signed(st.z, 1)}` : null);
     return HZ.card({ title: o.title || o.name, cls: o.cls || "" },
       HZ.lineChart(rows, { unit, decimals: d, name: o.name, events: o.events }),
-      o.note ? el("p", { class: "tiny" }, o.note) : null,
+      o.note ? el("details", { class: "tiny" }, el("summary", {}, "About this series"), el("p", {}, o.note)) : null,
       HZ.explain({ what: o.what || `${s.name}, ${unit}, from ${s.source}${s.first ? " since " + s.first.slice(0, 4) : ""}.`, how: o.how, now: nowTxt }),
       HZ.source(s.source + (s.source_id ? " · " + s.source_id : ""), s.source_url, s.last));
   }));
@@ -145,7 +145,7 @@
         page.appendChild(history(code, pb, views));
         page.appendChild(schools(code, pb));
         page.appendChild(el("h2", { id: "sec-markets", style: "margin:26px 0 10px" }, "Everything on ", name));
-        page.appendChild(el("p", { class: "muted small" }, "Markets, economists, drivers, scenarios and crowd signals: the same data Catalyst shows, explained."));
+        page.appendChild(el("p", { class: "muted small noterm" }, "Markets, economists, drivers, scenarios and crowd signals: the same data as the Catalyst app, explained."));
         (C.charts || []).forEach((c) => page.appendChild(cx.seriesCard({ series: c.series, name: c.name, unit: c.unit, how: cx.howFor(c.series, c.unit, code),
           note: c.proxy_note ? "Proxy: " + c.proxy_note : null, what: `${c.name} (${c.unit}). ${c.proxy ? "This is a proxy: a close stand-in for the real market rate." : ""}` })));
         page.appendChild(HZ.lazy(() => fiscalGap(code, C)));
@@ -175,9 +175,9 @@
     const I = INSTR[code];
     const fx = cx.tileBy(summary, I.fxTile), bond = cx.tileBy(summary, I.bondTile);
     const tile = (t) => t ? el("div", { class: "card", style: "margin:0;padding:14px" },
-      el("div", { class: "label" }, t.label), el("div", { class: "num", style: "font-size:1.5rem;font-weight:800" }, fmt(t.level, t.decimals != null ? Math.min(t.decimals, 4) : 2)),
+      el("div", { class: "label noterm" }, t.label), el("div", { class: "num", style: "font-size:1.5rem;font-weight:800" }, fmt(t.level, t.decimals != null ? Math.min(t.decimals, 4) : 2)),
       el("div", { class: "small" }, "1 week ", HZ.chg(t.chg_1w, t.unit_change === "pct" ? 2 : 0, t.unit_change === "pct" ? "%" : "bp"), " · 1 month ", HZ.chg(t.chg_1m, t.unit_change === "pct" ? 2 : 0, t.unit_change === "pct" ? "%" : "bp")),
-      el("div", { class: "tiny" }, t.unit, " · ", t.as_of)) : null;
+      el("div", { class: "tiny noterm" }, t.unit, " · ", t.as_of)) : null;
     const v = views && views.views && views.views[code] || {};
     const today = HZ.today();
     const evs = (C.events || []).filter((e) => e.date >= today).sort((a, b) => (b.importance - a.importance) || a.date.localeCompare(b.date));
@@ -244,7 +244,7 @@
       A.summary ? el("p", {}, A.summary) : null,
       ...pols.map((p) => el("div", { style: "margin:14px 0 6px" },
         el("h3", { style: "margin-bottom:2px" }, p.name),
-        el("div", { class: "scale", role: "img", "aria-label": `${p.name}: ${p.position} on a 0 (interventionist, Keynesian) to 100 (orthodox, monetarist) scale` },
+        el("div", { class: "scale noterm", role: "img", "aria-label": `${p.name}: ${p.position} on a 0 (interventionist, Keynesian) to 100 (orthodox, monetarist) scale` },
           el("div", { class: "track" }), el("div", { class: "pin", style: `left:${Math.max(0, Math.min(100, +p.position || 0))}%` }),
           el("div", { class: "ends" }, el("span", {}, "Interventionist / Keynesian"), el("span", {}, "Orthodox / monetarist"))),
         p.why ? el("p", { class: "small" }, p.why) : null, cx.cites(p.sources))),
@@ -341,16 +341,22 @@
 
   function surveysCot(code, C) {
     const out = [];
-    (C.surveys || []).forEach((s) => {
-      const r = (s.rows || [])[0];
-      out.push(HZ.card({ title: "Forecasters: " + s.label },
-        el("div", { class: "scroll" }, el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "For"), el("th", { class: "r" }, "Median"), el("th", { class: "r" }, "Range"), el("th", { class: "r" }, "Disagreement"), el("th", { class: "r" }, "vs 10 years"))),
-          el("tbody", {}, ...(s.rows || []).map((x) => el("tr", {}, el("td", {}, x.ref), el("td", { class: "r num" }, fmt(x.median, 2), s.unit === "%" ? "%" : ""), el("td", { class: "r num" }, fmt(x.min, 2), "–", fmt(x.max, 2)),
-            el("td", { class: "r num" }, fmt(x.sd, 2)), el("td", { class: "r" }, x.sd_pct_10y != null ? HZ.ring(x.sd_pct_10y / 100, fmt(x.sd_pct_10y, 0), { size: 44, title: "percentile " + fmt(x.sd_pct_10y, 0) }) : "–")))))),
-        HZ.explain({ what: `The median of professional forecasts for ${s.label}, with the range and how much forecasters disagree.`, how: "The ring shows where today's disagreement sits against 10 years of readings at the same horizon (100 = the most disagreement ever). Low disagreement means a surprise would catch most people at once.",
-          now: r ? `For ${r.ref} the median is ${fmt(r.median, 2)} with disagreement at the ${fmt(r.sd_pct_10y, 0)}th percentile of the past 10 years${r.sd_pct_10y < 20 ? ": unusually tight, so the crowd is aligned" : r.sd_pct_10y > 80 ? ": unusually wide, so views are split" : ""}.` : null }),
-        s.meta ? HZ.source(s.meta.source, s.meta.source_url, s.meta.as_of) : null));
-    });
+    const SV = C.surveys || [];
+    if (SV.length) {
+      const nowBits = [];
+      SV.forEach((sv) => { const r = (sv.rows || [])[0]; if (r && r.sd_pct_10y != null) nowBits.push([sv.label, r, r.sd_pct_10y]); });
+      const tight = nowBits.filter((x) => x[2] < 20).map((x) => x[0]), wide = nowBits.filter((x) => x[2] > 80).map((x) => x[0]);
+      SV.forEach((sv) => (sv.rows || []).forEach((x) => HZ.ctx.add("Forecaster surveys", `${sv.label} ${x.ref}: median ${fmt(x.median, 2)} (range ${fmt(x.min, 2)}-${fmt(x.max, 2)}), disagreement percentile ${fmt(x.sd_pct_10y, 0)} of 10 years`)));
+      out.push(HZ.card({ title: "What forecasters expect, and how much they disagree" },
+        ...SV.map((sv) => el("div", { style: "margin:12px 0" }, el("h3", { style: "margin-bottom:4px" }, sv.label),
+          el("table", {}, el("thead", {}, el("tr", {}, el("th", {}, "For"), el("th", { class: "r" }, "Median and range"), el("th", { class: "r" }, "Disagreement"))),
+            el("tbody", {}, ...(sv.rows || []).map((x) => el("tr", {}, el("td", {}, x.ref), el("td", { class: "r" }, el("b", { class: "num" }, fmt(x.median, 2), sv.unit === "%" ? "%" : ""), el("div", { class: "tiny num" }, fmt(x.min, 2), " to ", fmt(x.max, 2))),
+              el("td", { class: "r" }, x.sd_pct_10y != null ? HZ.ring(x.sd_pct_10y / 100, fmt(x.sd_pct_10y, 0), { size: 46, title: "disagreement percentile " + fmt(x.sd_pct_10y, 0) + " of 10 years" }) : "–"))))),
+          sv.meta ? HZ.source(sv.meta.source, sv.meta.source_url, sv.meta.as_of) : null)),
+        HZ.explain({ what: "The median of professional forecasts for each measure, the range from lowest to highest, and how much forecasters disagree.",
+          how: "The ring shows where today's disagreement sits against 10 years of readings at the same horizon: 100 means more disagreement than ever, 0 less than ever. When everyone agrees, a surprise catches most people at once, so the market move can be bigger.",
+          now: (tight.length ? "Unusually tight (crowd aligned): " + tight.join(", ") + ". " : "") + (wide.length ? "Unusually wide (views split): " + wide.join(", ") + ". " : "") + (!tight.length && !wide.length ? "Disagreement is within its normal range on every measure." : "") })));
+    }
     if (C.cot && C.cot.rows) {
       const lev = C.cot.rows[0];
       out.push(HZ.card({ title: "Positioning: who is betting which way" },
@@ -388,7 +394,7 @@
     ok.forEach((x) => HZ.ctx.add("Independent fiscal assessments", `${x.name} (${x.date}): ${x.summary}`));
     return HZ.card({ title: "Independent fiscal watchdogs" },
       ...items.map((x) => el("div", { style: "margin:12px 0" }, el("h3", { style: "margin:0" }, x.name),
-        x.status === "ok" ? [el("p", { class: "small" }, x.summary), x.stance ? el("span", { class: "chip c" }, x.stance) : null, x.key_number ? el("span", { class: "chip" }, x.key_number.value, " ", x.key_number.what) : null,
+        x.status === "ok" ? [el("p", { class: "small" }, x.summary), x.stance ? el("span", { class: "chip c" }, x.stance) : null, x.key_number ? el("p", { class: "small" }, el("b", {}, "Key number: "), x.key_number.value, " ", x.key_number.what) : null,
           x.verified === false ? el("span", { class: "chip warn" }, "unverified") : null, HZ.source(x.title, x.url, x.date)]
           : el("p", { class: "tiny" }, "Unavailable: ", x.note || "no recent publication found."))),
       HZ.explain({ what: "Summaries of the latest reports by the country's independent budget watchdogs, checked number by number against the report.",
@@ -422,8 +428,8 @@
       const strongest = rows.slice().sort((a, b) => (b["3y"].r2 || 0) - (a["3y"].r2 || 0))[0];
       const att = (i.attribution || []).slice(-1)[0];
       const opts = rows.map((u) => [u.driver, D.drivers[u.driver]]);
-      const sel = el("select", { "aria-label": "Driver" }, ...opts.map(([d, dd]) => el("option", { value: d }, dd.label)));
-      const slider = el("input", { type: "range", min: -3, max: 3, step: 0.5, value: 1, "aria-label": "Driver move" });
+      const sel = el("select", { "aria-label": "Driver", style: "font:inherit;font-size:1rem;padding:8px;border-radius:12px;border:1.5px solid var(--line);background:var(--card-solid);color:var(--ink);max-width:100%" }, ...opts.map(([d, dd]) => el("option", { value: d }, dd.label)));
+      const slider = el("input", { type: "range", min: -3, max: 3, step: 0.5, value: 1, "aria-label": "Driver move", style: "flex:1;min-width:140px" });
       const out = el("p", { class: "small", "aria-live": "polite" });
       const upd = () => {
         const u = rows.find((r) => r.driver === sel.value); const dd = D.drivers[sel.value]; if (!u || !dd) return;

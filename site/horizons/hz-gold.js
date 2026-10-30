@@ -43,10 +43,10 @@
   function priceTile(p, name, d) {
     if (!p) return HZ.card({ title: name }, el("p", { class: "empty" }, "No price stored yet."));
     HZ.ctx.add("Key data", `${name}: $${fmt(p.value, d)} per ounce on ${p.date}; 1 week ${HZ.signed(p.chg_1w_pct, 1)}%, 1 month ${HZ.signed(p.chg_1m_pct, 1)}%, 1 year ${HZ.signed(p.chg_1y_pct, 1)}%`);
-    return el("article", { class: "card pop", style: "margin:0;padding:14px" }, el("div", { class: "label" }, name),
+    return el("article", { class: "card pop", style: "margin:0;padding:14px" }, el("div", { class: "label noterm" }, name),
       el("div", { class: "num", style: "font-size:1.6rem;font-weight:800" }, "$" + fmt(p.value, d)),
       el("div", { class: "small" }, "1 week ", HZ.chg(p.chg_1w_pct, 1, "%"), " · 1 month ", HZ.chg(p.chg_1m_pct, 1, "%"), " · 1 year ", HZ.chg(p.chg_1y_pct, 1, "%")),
-      el("div", { class: "tiny" }, "per ounce · ", p.date, p.degraded ? " · monthly average" : ""));
+      el("div", { class: "tiny noterm" }, "per ounce · ", p.date, p.degraded ? " · monthly average" : ""));
   }
   function prices(P) {
     const g = P.gold;

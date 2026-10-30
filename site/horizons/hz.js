@@ -202,7 +202,7 @@
       const lastT = Date.parse(all[all.length - 1][0]);
       const pts = cur ? all.filter((r) => Date.parse(r[0]) >= lastT - cur * 864e5) : all;
       const data = pts.length >= 2 ? pts : all.slice(-2);
-      const W = 640, H = 230, L = 46, R = 14, T = 14, B = 26;
+      const W = 360, H = 210, L = 42, R = 10, T = 12, B = 24;   // drawn near phone width so labels stay readable
       const xs = data.map((r) => Date.parse(r[0])), ys = data.map((r) => +r[1]);
       let lo = Math.min(...ys), hi = Math.max(...ys); if (o.band) { lo = Math.min(lo, o.band[0]); hi = Math.max(hi, o.band[1]); }
       const pad = (hi - lo) * .08 || Math.abs(hi) * .02 || 1; lo -= pad; hi += pad;
@@ -222,7 +222,7 @@
       (o.events || []).forEach((ev) => {
         const t = Date.parse(ev.date); if (t < xs[0] || t > xs[xs.length - 1]) return;
         g.appendChild(svg("line", { class: "ev", x1: x(t), x2: x(t), y1: T, y2: H - B }));
-        g.appendChild(svg("text", { class: "lbl", x: x(t) + 3, y: T + 10 }, ev.label.slice(0, 18)));
+        g.appendChild(svg("text", { class: "lbl", x: x(t) + 3, y: T + 10 }, ev.label.slice(0, 14)));
       });
       g.appendChild(svg("circle", { class: "last", cx: x(xs[xs.length - 1]), cy: y(ys[ys.length - 1]), r: 5 }));
       const hair = svg("line", { class: "hair", y1: T, y2: H - B, visibility: "hidden" }); g.appendChild(hair);
