@@ -78,7 +78,7 @@ def copy_site(dest=store.ROOT / "site" / "data") -> None:
 def main(argv=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab", "brief", "snapshot"])
+    ap.add_argument("cmd", choices=["fetch", "calendar", "summary", "book", "judge", "all", "site", "lab", "brief", "snapshot", "assessments", "consensus"])
     ap.add_argument("--only", default="", help="comma-separated source keys for fetch")
     ap.add_argument("--no-attention", action="store_true", help="calendar: skip the GDELT attention refresh")
     ap.add_argument("--force-judgement", action="store_true", help="brief: run the judgement even if it is not due")
@@ -109,11 +109,17 @@ def main(argv=None) -> int:
         log.info("judgements: %d questions, %d resolved", js["summary"]["n_questions"], js["summary"]["n_resolved"])
     if a.cmd in ("summary", "all"):
         # after book and judge, so scenario pages see the latest calls
-        from terminal import crowd, scenarios, summary, teach
+        from terminal import consensus, crowd, scenarios, summary, teach
         summary.build()
         scenarios.build()
+        consensus.build()
         crowd.build()
         teach.build()
+        try:
+            from terminal import drivers
+            drivers.build()
+        except Exception as exc:  # noqa: BLE001
+            log.warning("external drivers not rebuilt: %s", exc)
     if a.cmd == "snapshot":
         from terminal import brief
         log.info("snapshot: %s", brief.build_snapshot(fetch_headlines=not a.no_headlines)["counts"])
@@ -125,6 +131,15 @@ def main(argv=None) -> int:
                  b["cost"]["today_usd"], b["cost"]["month_usd"], b["cost"]["cap_usd"])
         for p in b.get("problems", []):
             log.warning("unverified: %s", p)
+    if a.cmd == "assessments":
+        from terminal import assessments, consensus
+        r = assessments.run(force=a.force_judgement, use_batch=not a.no_batch)
+        for it in r["items"]:
+            log.info("assessment %s: %s, verified=%s %s", it["id"], it.get("status"), it.get("verified"), it.get("error") or "")
+        consensus.build()
+    if a.cmd == "consensus":
+        from terminal import consensus
+        consensus.build()
     if a.cmd == "site":
         copy_site()
     return 0

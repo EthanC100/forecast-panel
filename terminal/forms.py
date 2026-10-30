@@ -306,6 +306,12 @@ def full_call(issue: dict, f: dict) -> tuple[Path, dict, list[str], bool]:
            "resolution_date": (f["resolution_date"] or "").strip(), "base_rate": (f["base_rate"] or "").strip(),
            "factors": factors, "scenarios": scenarios, "probability": p, "linked_trade": linked,
            "change_mind": change, "premortem": premortem, "confidence": (f["confidence"] or "").lower()}
+    point_raw = (f.get("point") or "").strip()
+    if point_raw:
+        point = num(point_raw)
+        if point is None:
+            errs.append(f"my forecast {point_raw!r} is not a number")
+        rec["point"] = point
     if not errs:
         rec["market_at_entry"] = market_probability(qid)
         rec["ai_at_entry"] = ai_probability(qid)

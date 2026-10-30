@@ -84,6 +84,7 @@ FOCUS = [
     ("br.focus.brl", "Câmbio", "Focus: USD/BRL at year end", "BRL per USD"),
     ("br.focus.gdp", "PIB Total", "Focus: real GDP growth", "%"),
     ("br.focus.primary", "Resultado primário", "Focus: primary balance", "% of GDP"),
+    ("br.focus.nominal", "Resultado nominal", "Focus: nominal (overall) balance", "% of GDP"),
     ("br.focus.net_debt", "Dívida líquida do setor público", "Focus: net public sector debt", "% of GDP"),
 ]
 FOCUS_FIELDS = ["median", "mean", "sd", "min", "max", "respondents"]

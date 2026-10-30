@@ -18,7 +18,7 @@ body:
   id: question_id
   attributes:
     label: Question ID (optional)
-    description: 'q1..q5, pm:<Polymarket market id>, ks:<Kalshi ticker> or a calendar event id: enables market lookup and automatic resolution.'
+    description: 'q1..q5, pm:<Polymarket market id>, ks:<Kalshi ticker>, sc:<scenario>, fc:<country>.<variable>.<year> (an economist forecast), pol:<policy> or a calendar event id: enables market lookup, consensus comparison and automatic resolution.'
 - type: input
   id: resolution_date
   attributes:
@@ -147,6 +147,11 @@ body:
     - 100%
   validations:
     required: true
+- type: input
+  id: point
+  attributes:
+    label: My forecast (a number; optional)
+    description: For economist-forecast (fc:...) and policy (pol:...) questions, the value you expect in the question's units, e.g. -0.4 for a primary balance of -0.4% of GDP. Compared with the economist consensus.
 - type: input
   id: linked_trade
   attributes:

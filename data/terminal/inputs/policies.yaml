@@ -1,0 +1,255 @@
+# Policy tracker: the main live policies per country. Hand-curated; every claim cites a free,
+# openly published source with its date. Effects are only quantified where a cited source does so.
+#
+#   claim        the government's own case (official documents, or a faithful summary of them)
+#   assessment   independent economists' view (fiscal councils, IMF/OECD, think tanks)
+#   effects      likely effect on the deficit, inflation and growth, each with its source
+#   next         the next decision; `event` links to a calendar event id when there is one
+#   consensus    links the policy to an economist-consensus row (forecast id) for the gap flag
+#   view         pre-fills the Full call behind the "my view" button
+
+policies:
+
+- id: br-fiscal-framework
+  country: BR
+  name: Fiscal framework (LC 200/2023) and the 2027 primary target
+  what: >
+    Since 2023 federal policy runs on an annual primary-balance target with a tolerance band of 0.25
+    point of GDP either side, plus a cap on real primary-spending growth. For 2027 the target is a
+    central-government surplus of 0.5% of GDP.
+  claim:
+    text: >
+      The 2027 budget bill puts the result counted for the target at a surplus of R$83.4 billion
+      (0.6% of GDP) after legal deductions, above the R$73.2 billion (0.5% of GDP) target, so the
+      government says the framework is being met.
+    source: {label: "Ministério do Planejamento, PLOA 2027 (as tabulated by IFI, RAF 116)", url: "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2027/ploa-2027", date: "2026-08-31"}
+  assessment:
+    by: IFI (Senate's Independent Fiscal Institution)
+    text: >
+      Formal compliance remains possible but rests on assumptions more optimistic than IFI's and a much
+      thinner safety margin. In IFI's scenario the result counted for the target is a surplus of only
+      R$0.9 billion, below even the lower tolerance bound, so about R$35.7 billion of discretionary
+      spending would have to be frozen.
+    source: {label: "IFI, Relatório de Acompanhamento Fiscal nº 116", url: "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf", date: "2026-09"}
+  effects:
+    deficit: {text: "IFI projects a 2027 central-government primary deficit of R$86.1 billion (0.6% of GDP) before deductions, against the bill's R$18.6 billion surplus.", source: IFI RAF 116}
+    inflation: {text: "Not quantified for the framework itself in the cited sources.", source: null}
+    growth: {text: "Not quantified for the framework itself in the cited sources.", source: null}
+  status: In force; the 2027 target is set in the budget guidelines bill (PLDO 2027).
+  next: {event: "2026-12-17-br-2027-budget-ploa-vote-in-congress", label: "2027 budget vote in Congress"}
+  consensus: {ref: "fc:BR.primary.2027", note: "Focus measures the consolidated public sector; the target is for the central government."}
+  view:
+    question: "Will Brazil's central government meet its 2027 primary target (at least the 0.25% of GDP lower bound) without changing the target?"
+    resolution_date: "2028-01-31"
+    point_label: "My 2027 primary balance, consolidated public sector, % of GDP"
+
+- id: br-ploa-2027
+  country: BR
+  name: 2027 budget bill (PLOA 2027)
+  what: >
+    The 2027 annual budget bill (PLN 24/2026), sent to Congress on 31 August 2026. Congress's joint
+    budget committee amends it and both chambers vote it in December.
+  claim:
+    text: >
+      An effective central-government primary surplus of R$18.6 billion (0.1% of GDP) in 2027, built on
+      2.5% GDP growth and 3.6% IPCA inflation.
+    source: {label: "PLOA 2027 parameters (IFI, RAF 116, table 1)", url: "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2027/ploa-2027", date: "2026-08-31"}
+  assessment:
+    by: IFI
+    text: >
+      Revenue could fall short if growth is below the 2.5% assumed, and assumed savings from benefit
+      reviews may not materialise. IFI expects pension spending of R$1,239.2 billion against the bill's
+      R$1,215.1 billion, part of a R$104.8 billion gap between the two projections of the effective result.
+    source: {label: "IFI, Relatório de Acompanhamento Fiscal nº 116", url: "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf", date: "2026-09"}
+  effects:
+    deficit: {text: "Bill: surplus of R$18.6 billion; IFI: deficit of R$86.1 billion (0.6% of GDP).", source: IFI RAF 116}
+    inflation: {text: "IPCA 2027: bill 3.6%, IFI 4.0%, Focus median 4.3% (at the time of RAF 116).", source: IFI RAF 116}
+    growth: {text: "GDP 2027: bill 2.5%, IFI 1.8%, Focus median 1.5% (at the time of RAF 116).", source: IFI RAF 116}
+  status: Before Congress (joint budget committee).
+  next: {event: "2026-12-17-br-2027-budget-ploa-vote-in-congress", label: "2027 budget vote in Congress"}
+  consensus: {ref: "fc:BR.gdp.2027", note: "The bill's revenue rests on its growth assumption."}
+  view:
+    question: "Will Brazil's 2027 real GDP growth (first IBGE estimate) be at least the 2.5% the budget bill assumes?"
+    resolution_date: "2028-03-15"
+    point_label: "My 2027 real GDP growth, %"
+
+- id: br-consumption-tax
+  country: BR
+  name: Consumption-tax reform (CBS and IBS)
+  what: >
+    Constitutional Amendment 132/2023 and Complementary Law 214/2025 replace federal and local
+    consumption taxes with a dual VAT. The federal CBS replaces PIS and Cofins from 1 January 2027;
+    the state and municipal IBS is phased in afterwards. The reference CBS rate is still to be set.
+  claim:
+    text: >
+      The government projects R$636 billion of CBS revenue in 2027 in the budget bill; the law includes
+      a mechanism to cut rates if the combined burden of the new taxes rises.
+    source: {label: "Fenacon, reporting the PLOA 2027 projection", url: "https://fenacon.org.br/reforma-tributaria/governo-preve-arrecadar-r-636-bilhoes-com-nova-cbs-em-2027/", date: "2026-09-01"}
+  assessment:
+    by: IFI
+    text: >
+      The 2027 bill adds a R$33.8 billion payment into the fund that compensates states for replacing
+      IPI with the selective tax. It sits outside the LC 200 spending cap but counts towards the primary
+      target, an example of how the transition's design adds fiscal pressure.
+    source: {label: "IFI, Relatório de Acompanhamento Fiscal nº 116", url: "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf", date: "2026-09"}
+  effects:
+    deficit: {text: "R$33.8 billion compensation-fund payment in 2027, counted in the primary result (IFI).", source: IFI RAF 116}
+    inflation: {text: "Not quantified in the cited sources.", source: null}
+    growth: {text: "Not quantified in the cited sources.", source: null}
+  status: CBS starts on 1 January 2027; the Senate must set the reference rate by 15 December 2026.
+  next: {event: "2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate", label: "Senate deadline to set the CBS reference rate"}
+  consensus: null
+  view:
+    question: "Will the Senate set the CBS reference rate by 15 December 2026?"
+    resolution_date: "2026-12-15"
+    point_label: null
+
+- id: mx-paquete-2027
+  country: MX
+  name: 2027 budget package (Paquete Económico 2027)
+  what: >
+    The 2027 economic package (general policy criteria, revenue law and spending budget) presented to
+    the Chamber of Deputies on 8 September 2026.
+  claim:
+    text: >
+      The broadest deficit measure (RFSP) falls from 4.1% of GDP in 2026 to 3.9% in 2027, with a
+      primary surplus and debt (SHRFSP) at 55% of GDP; growth of 1.5% to 2.5% and inflation of 3.0% in 2027.
+    source: {label: "SHCP, Criterios Generales de Política Económica 2027 (as summarised by IMCO)", url: "https://www.ppef.hacienda.gob.mx/", date: "2026-09-08"}
+  assessment:
+    by: IMCO
+    text: >
+      The package lowers the ambition of fiscal consolidation (3.9% against the 3.5% planned in April)
+      and cuts the growth outlook. Private analysts surveyed by Banxico expect 1.8% growth; if growth
+      undershoots, revenue would miss and push the deficit and debt up.
+    source: {label: "IMCO, Paquete Económico 2027", url: "https://imco.org.mx/wp-content/uploads/2026/09/IMCO_Paquete-economico-2027.pdf", date: "2026-09"}
+  effects:
+    deficit: {text: "RFSP 3.9% of GDP in 2027 (government), down from 4.1%.", source: IMCO}
+    inflation: {text: "Government 3.0% for 2027 against 3.8% expected by analysts in Banxico's survey (IMCO table).", source: IMCO}
+    growth: {text: "Government 1.5% to 2.5% against 1.8% in Banxico's survey and 1.9% from the IMF (IMCO).", source: IMCO}
+  status: Before Congress; the Chamber must approve the spending budget by 15 November 2026.
+  next: {event: "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027", label: "Chamber deadline for the 2027 spending budget"}
+  consensus: {ref: "fc:MX.balance.2027", note: "The survey asks for the public-sector economic balance, a narrower measure than the RFSP."}
+  view:
+    question: "Will Mexico's 2027 public-sector budget deficit come in at or below the planned level?"
+    resolution_date: "2028-02-28"
+    point_label: "My 2027 public-sector economic balance, % of GDP"
+
+- id: mx-judicial-reform
+  country: MX
+  name: Judicial reform and the second judicial election
+  what: >
+    The 2024 constitutional reform makes federal judges elected by popular vote; the first judicial
+    election was held in June 2025. In May 2026 Congress approved moving the second judicial election
+    from 2027 to June 2028.
+  claim:
+    text: >
+      The government proposed the postponement so the judicial vote would not coincide with the June 2027
+      federal and state elections, citing the operational risks flagged by the electoral institute.
+    source: {label: "El Imparcial", url: "https://www.elimparcial.com/mexico/2026/05/18/claudia-sheinbaum-pide-analizar-mover-la-eleccion-judicial-a-2028-estas-son-las-razones-detras-de-la-propuesta/", date: "2026-05-18"}
+  assessment:
+    by: IMF staff
+    text: >
+      The reform creates important uncertainties about the effectiveness of contract enforcement and the
+      predictability of the rule of law (2024 Article IV mission; not updated in the cited sources).
+    source: {label: "IMF, Mexico: 2024 Article IV mission concluding statement", url: "https://imf.org/en/News/Articles/2024/10/15/mcs-mexico-staff-concluding-statement-of-the-2024-aiv-mission", date: "2024-10-15"}
+  effects:
+    deficit: {text: "No direct fiscal effect quantified in the cited sources.", source: null}
+    inflation: {text: "Not quantified in the cited sources.", source: null}
+    growth: {text: "Downside risk to investment through rule-of-law uncertainty (IMF); not quantified.", source: IMF}
+  status: "Second judicial election moved to June 2028 (approved by both chambers in May 2026, then sent to state legislatures)."
+  next: {event: null, date: "2028-06-04", label: "Second judicial election", source: "https://www.razon.com.mx/mexico/2026/05/28/senado-aprueba-pasar-eleccion-judicial-al-2028-va-a-congresos-locales/"}
+  consensus: null
+  view:
+    question: "Will Mexico hold its second judicial election on 4 June 2028 as now scheduled?"
+    resolution_date: "2028-06-30"
+    point_label: null
+
+- id: mx-pemex
+  country: MX
+  name: Energy policy and support for Pemex
+  what: >
+    The 2025 energy laws give state firms Pemex and CFE priority. The Pemex Strategic Plan 2025-2035
+    (August 2025) and a Treasury capitalisation strategy aim to put Pemex's finances on a sustainable footing.
+  claim:
+    text: >
+      The plan aims to make Pemex financially self-sufficient from 2027, no longer needing Treasury support.
+    source: {label: "Enerdata, on the Pemex Strategic Plan", url: "https://www.enerdata.net/publications/daily-energy-news/mexico-targets-pemexs-self-sufficiency-2027-new-strategic-plan.html", date: "2025-08"}
+  assessment:
+    by: IMCO
+    text: >
+      The 2027 package still includes capital contributions to Pemex of 81.1 billion pesos (69.2% less
+      than before), so the plan's original goal was not met. With losses of 28 billion pesos in the first
+      half of 2026 and debt above US$77 billion, Pemex remains a risk to public finances.
+    source: {label: "IMCO, Paquete Económico 2027", url: "https://imco.org.mx/wp-content/uploads/2026/09/IMCO_Paquete-economico-2027.pdf", date: "2026-09"}
+  effects:
+    deficit: {text: "81.1 billion pesos of capital contributions in the 2027 budget (IMCO).", source: IMCO}
+    inflation: {text: "Not quantified in the cited sources.", source: null}
+    growth: {text: "Not quantified in the cited sources.", source: null}
+  status: In force; the 2027 contributions depend on the spending budget due by 15 November 2026.
+  next: {event: "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027", label: "Chamber deadline for the 2027 spending budget"}
+  consensus: null
+  view:
+    question: "Will the approved 2027 budget keep Pemex capital contributions at or below 81.1 billion pesos?"
+    resolution_date: "2026-11-30"
+    point_label: null
+
+- id: fr-budget-2027
+  country: FR
+  name: 2027 budget bills (PLF and PLFSS 2027)
+  what: >
+    The 2027 finance and social-security bills presented on 1 October 2026: about 54 billion euros of
+    consolidation, of which 43 billion of new measures (including a freeze of the civil-service pay
+    index and of basic pensions except the lowest).
+  claim:
+    text: >
+      The public deficit falls from 5.4% of GDP in 2026 to 5.0% in 2027, with growth of 1.0% in 2027
+      after 0.5% and inflation of 1.8%.
+    source: {label: "Government forecasts, as set out in the HCFP opinion", url: "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027", date: "2026-10-01"}
+  assessment:
+    by: HCFP (High Council of Public Finance)
+    text: >
+      The 1.0% growth assumption looks optimistic; most forecasters are one to three tenths lower and
+      downside risks dominate. The spending path is achievable only if every measure is adopted, which
+      depends on Parliament passing the bills.
+    source: {label: "HCFP, Avis n° 2026-5", url: "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027", date: "2026-10-01"}
+  effects:
+    deficit: {text: "Government target 5.0% of GDP in 2027 from 5.4%; HCFP: achievable only if all measures pass.", source: HCFP}
+    inflation: {text: "1.8% in 2027, described by HCFP as consensual but exposed to energy prices.", source: HCFP}
+    growth: {text: "Government 1.0%; Banque de France 0.9%, OFCE 0.7% (Euronews, 1 Oct 2026).", source: "https://fr.euronews.com/2026/10/01/budget-2027-le-gouvernement-propose-un-effort-de-54-milliards-deuros-pour-ramener-le-defic"}
+  status: Before Parliament.
+  next: {event: "2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline", label: "Article 47 70-day deadline"}
+  consensus: {ref: "fc:FR.balance.2027", note: "Consensus = median of the IMF, OECD and Commission forecasts."}
+  view:
+    question: "Will France's 2027 budget law be promulgated by 31 December 2026?"
+    resolution_date: "2026-12-31"
+    point_label: "My 2027 general government balance, % of GDP"
+
+- id: fr-pensions
+  country: FR
+  name: Pension reform suspension and the 2027 pension freeze
+  what: >
+    The 2026 social-security financing law suspended the 2023 pension reform until 1 January 2028,
+    freezing the legal age at 62 years and 9 months and the contribution period at 170 quarters.
+    The 2027 bill proposes freezing basic pensions in 2027 except the lowest.
+  claim:
+    text: >
+      The suspension is a pause, not a repeal: the 2023 rules resume after 1 January 2028, and the 2027
+      freeze is part of the bill's savings.
+    source: {label: "CMS Francis Lefebvre, on the LFSS 2026", url: "https://cms.law/fr/fra/legal-updates/plfss-pour-2026-une-lettre-rectificative-pour-suspendre-la-reforme-des-retraites", date: "2025-10"}
+  assessment:
+    by: HCFP
+    text: >
+      Even after the under-indexation, pension benefits are one of the biggest spending increases in
+      2027 (+9 billion euros on the social-security field alone), behind interest costs.
+    source: {label: "HCFP, Avis n° 2026-5", url: "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027", date: "2026-10-01"}
+  effects:
+    deficit: {text: "Pension spending +9 billion euros in 2027 after the freeze (HCFP).", source: HCFP}
+    inflation: {text: "Not quantified in the cited sources.", source: null}
+    growth: {text: "Not quantified in the cited sources.", source: null}
+  status: Suspension in force until 1 January 2028; the 2027 freeze is in the PLFSS 2027 before Parliament.
+  next: {event: "2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline", label: "Budget deadlines (Article 47)"}
+  consensus: null
+  view:
+    question: "Will the 2027 freeze of basic pensions (except the lowest) be in the adopted LFSS 2027?"
+    resolution_date: "2027-01-31"
+    point_label: null

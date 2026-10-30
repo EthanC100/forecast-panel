@@ -428,3 +428,41 @@ a.src:hover { border-color: var(--accent); color: var(--text); }
 .bad-line .x, .bad-line > .tiny { color: var(--bad-ink); }
 .chip.flag-red { background: var(--bad-soft); color: var(--bad-ink); border: 1px solid currentColor; }
 .bfoot { justify-content: space-between; margin-top: 10px; gap: 6px 12px; flex-wrap: wrap; }
+
+/* Economists and policy */
+.cons td { vertical-align: middle; }
+.rwrap { display: flex; align-items: center; gap: 6px; min-width: 150px; }
+.rbar { position: relative; flex: 1; height: 10px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--border); min-width: 70px; }
+.rbar-sd { position: absolute; top: 0; bottom: 0; background: color-mix(in srgb, var(--accent) 22%, transparent); border-radius: 6px; }
+.rbar-m { position: absolute; top: -3px; bottom: -3px; width: 3px; margin-left: -1.5px; background: var(--text); border-radius: 2px; }
+.rbar-me { position: absolute; top: -5px; width: 10px; height: 10px; margin-left: -5px; border: 2px solid var(--accent); background: var(--surface); transform: rotate(45deg); }
+tr.gap-row td { background: color-mix(in srgb, var(--warn) 9%, transparent); }
+.assess { padding: 8px 0; border-top: 1px solid var(--border); }
+.assess:first-of-type { border-top: 0; }
+.policies { display: grid; gap: 10px; }
+details.policy { padding: 10px 12px; }
+details.policy > summary { cursor: pointer; list-style: none; }
+details.policy > summary::-webkit-details-marker { display: none; }
+details.policy > summary .pname { font-weight: 700; }
+details.policy > summary::before { content: "▸ "; color: var(--text-3); }
+details.policy[open] > summary::before { content: "▾ "; }
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.claim { padding: 8px 10px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--border); }
+.claim.indep { border-style: dashed; border-color: var(--accent); background: color-mix(in srgb, var(--accent) 6%, transparent); }
+.claim .k { font-weight: 700; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .05em; color: var(--text-2); margin-bottom: 2px; }
+.eff-t th { text-align: left; font-weight: 600; color: var(--text-2); width: 90px; vertical-align: top; }
+/* External drivers */
+.instr { padding: 6px 0 12px; border-top: 1px solid var(--border); }
+.instr:first-of-type { border-top: 0; }
+.instr h3 { margin: 6px 0; }
+.note-box { padding: 8px 10px; border-radius: 10px; background: var(--warn-soft); color: var(--text); margin-bottom: 10px; }
+.wi-out { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-2); }
+.wi-out .lvl { font-size: 1.25rem; font-weight: 800; }
+.stk-row { display: grid; grid-template-columns: 92px 1fr; align-items: center; gap: 8px; margin: 4px 0; }
+.stk-row.big .stk { height: 18px; }
+.stk { display: grid; grid-template-columns: 1fr 1fr; height: 12px; position: relative; }
+.stk::after { content: ""; position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--axis); }
+.stk-neg { display: flex; justify-content: flex-end; }
+.stk-pos { display: flex; justify-content: flex-start; }
+.stk span { display: block; height: 100%; min-width: 1px; }
+.stk span.loc, .legend i.loc { background-image: repeating-linear-gradient(45deg, transparent 0 3px, rgba(255,255,255,.45) 3px 5px) !important; }

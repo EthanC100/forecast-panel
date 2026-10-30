@@ -1,0 +1,60 @@
+name: Fiscal assessments
+
+# Monthly: the latest publication from IFI, HCFP, the Cour des comptes, México Evalúa and IMEF,
+# summarised in two or three lines via the Claude API (Batch API; the brief's spend counter and
+# cap apply) and validated against the document. Feeds the "Economists and policy" module.
+on:
+  schedule:
+    - cron: "23 4 2 * *"      # the 2nd of each month
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-summarise even if a document has not changed"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: data-writer
+  cancel-in-progress: false
+
+jobs:
+  assess:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e ".[ai]"
+
+      - name: Find, read, summarise and validate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m terminal.run assessments ${{ inputs.force && '--force-judgement' || '' }}
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/terminal/assessments.json data/terminal/consensus.json data/terminal/brief/spend.json
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "Fiscal assessments: $(date -u +%Y-%m)"
+            # generated files: if a code push regenerated them meanwhile, this run's fresher copy wins
+            git pull --rebase -X theirs origin main
+            git push origin HEAD:main
+          fi
+
+  deploy:
+    needs: assess
+    uses: ./.github/workflows/pages.yml

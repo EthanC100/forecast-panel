@@ -1,0 +1,66 @@
+# Independent fiscal assessments, refreshed monthly by .github/workflows/assessments.yml
+# (python -m terminal.run assessments). For each body the job finds the latest publication,
+# reads its text (HTML or PDF), and asks the cheapest current Claude model for a two-to-three line
+# summary with one key number. Every number must appear in the document; failures are shown with
+# an "unverified" mark, never silently corrected. Free, openly published sources only.
+#
+#   discover.kind   links: anchors on a list page whose href matches `pattern`
+#                   rss: an RSS feed, items whose title matches `keywords`
+#                   wp: a WordPress REST search, posts whose title matches `keywords`
+#                   datagouv: a data.gouv.fr dataset's newest PDF resource
+#   pinned          the document to use if discovery fails (and the latest known one)
+
+bodies:
+- id: ifi
+  country: BR
+  name: IFI (Instituição Fiscal Independente, Federal Senate)
+  discover:
+    kind: links
+    url: "https://www12.senado.leg.br/ifi/relatorio-de-acompanhamento-fiscal"
+    pattern: '/ifi/publicacoes-1/relatorio/(\d{4})/([a-z]+)/relatorio-de-acompanhamento-fiscal[^"]*'
+  pinned:
+    title: "Relatório de Acompanhamento Fiscal nº 116 (September 2026): PLOA 2027 and the risk of missing the fiscal target"
+    url: "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf"
+    date: "2026-09"
+  note: "Report pages on www12.senado.leg.br sit behind a browser security check; the PDFs in the Senate digital library (www2.senado.leg.br) are open."
+
+- id: hcfp
+  country: FR
+  name: HCFP (Haut Conseil des finances publiques)
+  discover:
+    kind: links
+    url: "https://www.hcfp.fr/liste-avis"
+    pattern: '/liste-avis/avis-ndeg(\d{4})-(\d+)[^"]*'
+  pinned:
+    title: "Avis n° 2026-5 relatif aux projets de lois de finances et de financement de la sécurité sociale pour 2027"
+    url: "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027"
+    date: "2026-10-01"
+
+- id: ccomptes
+  country: FR
+  name: Cour des comptes
+  discover:
+    kind: datagouv
+    url: "https://www.data.gouv.fr/api/1/datasets/la-situation-et-les-perspectives-des-finances-publiques-1/"
+    fallback_url: "https://www.ccomptes.fr/fr/publications"
+    pattern: '/fr/publications/[^"]*(situation-et-les-perspectives-des-finances-publiques|budget-de-letat)[^"]*'
+  pinned: null
+  note: "Annual report on the situation and outlook of the public finances (published 25 June 2026)."
+
+- id: mexico-evalua
+  country: MX
+  name: México Evalúa
+  discover:
+    kind: rss
+    url: "https://www.mexicoevalua.org/feed/"
+    keywords: [presupuesto, paquete, fiscal, deuda, déficit, deficit, gasto, ingresos, hacienda, finanzas públicas, rfsp, pemex]
+  pinned: null
+
+- id: imef
+  country: MX
+  name: IMEF (Instituto Mexicano de Ejecutivos de Finanzas)
+  discover:
+    kind: wp
+    url: "https://www.imef.org.mx/wp-json/wp/v2/posts?per_page=20&_fields=date,link,title,content"
+    keywords: [perspectivas, encuesta, paquete, presupuesto, fiscal, finanzas, crecimiento, inflación, reporte]
+  pinned: null

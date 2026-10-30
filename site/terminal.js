@@ -1,6 +1,7 @@
 /* Terminal core: routing, Today, Calendar, country pages and Status. Everything heavier loads on
    demand: charts.js (every chart), teach.js (How-this-works cards, calculators, overview visuals),
-   record.js (Record and trade sizing), scenarios.js (Scenarios and Crowd), brief.js (AI brief), glossary.js. Data:
+   record.js (Record and trade sizing), scenarios.js (Scenarios and Crowd), brief.js (AI brief), econ.js (economists, policy
+   and external drivers), glossary.js. Data:
    data/summary.json first; calendar, series and teaching data only when a page needs them. */
 (function () {
   "use strict";
@@ -108,7 +109,7 @@
     return d;
   }
 
-  const INSTRUMENTS = { BR: ["USDBRL", "BR10Y", "DI27", "DI29", "DI31"], MX: ["USDMXN", "MX10Y"], FR: ["OATBUND"], GLOBAL: ["US10Y"], US: ["US10Y"] };
+  const INSTRUMENTS = { BR: ["USDBRL", "BR10Y", "DI27", "DI29", "DI31"], MX: ["USDMXN", "MX10Y"], FR: ["OATBUND", "EURUSD"], GLOBAL: ["US10Y"], US: ["US10Y"] };
   const TERM = window.TERM = { nn, el, fmt, signed, meta, badge, getJSON, json, need, lazy, skel, calendar, loadSeries, hasSeries, vizCard, how, S,
     freshness: (a) => freshness(a), todayISO };
   const formBtn = (...a) => (TERM.formBtn ? TERM.formBtn(...a) : null);
@@ -244,7 +245,7 @@
     return f;
   }
 
-  const CHART_INSTRUMENT = { "br.usdbrl.ptax": "USDBRL", "mx.usdmxn.fix": "USDMXN", "fr.spread.oat_bund": "OATBUND", "fr.spread.oat_bund.ecb_m": "OATBUND",
+  const CHART_INSTRUMENT = { "eu.eurusd": "EURUSD", "br.usdbrl.ptax": "USDBRL", "mx.usdmxn.fix": "USDMXN", "fr.spread.oat_bund": "OATBUND", "fr.spread.oat_bund.ecb_m": "OATBUND",
     "br.di.f27": "DI27", "br.di.f27.proxy": "DI27", "br.di.f29": "DI29", "br.di.f29.proxy": "DI29", "br.di.f31": "DI31", "br.di.f31.proxy": "DI31",
     "br.td.pre_longest": "BR10Y", "mx.mbono10y.auction": "MX10Y", "mx.10y.oecd_m": "MX10Y" };
   function chartCard(item, code, all) {
@@ -321,6 +322,11 @@
       lazy("block", () => need("teach").then(() => TERM.teach.whatIfCard(code)))));
     if (code !== "FR") mdl.append(...nn(lazy("block", () => need("teach").then(() => TERM.teach.eventStudyCard(code)))));
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "What drives it (em-macro risk model)")), mdl));
+    const econ = (fn) => lazy("block", () => need("econ").then(() => TERM.econ[fn](code)));
+    f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Economists and policy")),
+      el("div", { class: "grid wide" }, econ("consensusCard"), econ("assessmentsCard")), econ("policiesCard")));
+    f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "External drivers")),
+      el("div", { class: "grid wide" }, econ("sensitivityCard"), econ("whatIfCard")), econ("attributionCard")));
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Fiscal optimism gap")), el("article", { class: "card" }, fiscalTable(c.fiscal_gap || [], S.summary.evidence_defaults.fiscal_gap))));
     const ex = el("div", { class: "grid wide" });
     (c.surveys || []).forEach((b) => ex.appendChild(surveyCard(b)));

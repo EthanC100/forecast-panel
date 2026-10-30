@@ -1,7 +1,7 @@
 /* Service worker: the app files are cached on install; everything is fetched from the network first
    and the last good copy is kept, so Catalyst opens offline with what it last loaded. */
 const VERSION = "prism-v3";
-const SHELL = ["./", "index.html", "terminal.css", "terminal.js", "charts.js", "teach.js", "record.js", "scenarios.js", "brief.js", "glossary.js",
+const SHELL = ["./", "index.html", "terminal.css", "terminal.js", "charts.js", "teach.js", "record.js", "scenarios.js", "brief.js", "econ.js", "glossary.js",
   "manifest.webmanifest", "geo.json", "icons/icon-32.png", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 const DATA = "prism-data";
 

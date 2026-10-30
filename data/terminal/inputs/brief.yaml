@@ -4,14 +4,17 @@
 models:
   extraction: claude-haiku-5-5     # cheapest current model; daily list of what changed
   judgement: claude-sonnet-5-5     # mid-tier current model; weekly and near importance-3 catalysts
+  assessments: claude-haiku-5-5    # monthly summaries of independent fiscal assessments
 
 effort:
   extraction: low
   judgement: high
+  assessments: low
 
 max_tokens:
   extraction: 8000
   judgement: 8000
+  assessments: 4000
 
 # USD per million tokens, standard (non-batch) API, prompts up to 100,000 tokens.
 # Source: platform.claude.com/docs/en/about-claude/pricing (checked 2026-10-30).
@@ -19,6 +22,7 @@ max_tokens:
 prices:
   extraction: {input: 0.10, cache_write_5m: 0.125, cache_write_1h: 0.20, cache_read: 0.01, output: 0.50}
   judgement: {input: 2.00, cache_write_5m: 2.50, cache_write_1h: 4.00, cache_read: 0.10, output: 10.00}
+  assessments: {input: 0.10, cache_write_5m: 0.125, cache_write_1h: 0.20, cache_read: 0.01, output: 0.50}
 batch_discount: 0.5
 
 monthly_cap_usd: 8.0        # above this in a calendar month: extraction only, no judgement

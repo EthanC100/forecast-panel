@@ -374,6 +374,7 @@
     });
     f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "Most likely shared errors in the next 6 months")), rl,
       el("div", { class: "tiny" }, C.ranking_method)));
+    f.append(...nn(el("div", { class: "sec" }, el("h2", {}, "My view against the economist consensus")), T.lazy("lines", () => T.need("econ").then(() => T.econ.gapsCard()))));
     const g = el("div", { class: "grid wide", style: "margin-top:12px" });
     // (a)
     const a = G.a || {}, ar = a.readings || [];

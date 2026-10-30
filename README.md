@@ -402,6 +402,86 @@ would be about $0.45 a run, **about $5.50 a month at worst**, still under the $8
 and GDELT for news. A source that refuses or fails is listed in the brief's snapshot section with
 its error and the brief goes ahead without it; nothing is fetched around a block.
 
+## Economists and policy (country pages)
+
+**Consensus forecasts** (`terminal/consensus.py` → `data/terminal/consensus.json`, rebuilt daily). For
+inflation, the policy rate, GDP growth and the fiscal balance, this year and next: the median, the
+range (bar from min to max, shaded ±1 sd), the standard deviation, the number of respondents and how
+the median moved over the last three months.
+
+| country | source | notes |
+|---|---|---|
+| Brazil | BCB Focus (Olinda API, annual expectations) | primary and nominal balance both shown |
+| Mexico | Banxico survey of private-sector economists (SIE) | each answer is a block of seven SIE ids (mean, median, quartiles, min, max, sd); the policy rate is the interbank (fondeo) rate at the Q4 close. Each data run stores Banxico's own titles for these ids with the series, so the mapping can be checked |
+| France | IMF World Economic Outlook (DataMapper API), OECD Economic Outlook (SDMX), European Commission forecast (AMECO files) | the consensus is the median of the three, with range and sd across them; edition dates shown. The ECB rate is not forecast by these institutions; the OECD's 3-month euro-area rate stands in |
+
+**Independent fiscal assessments** (`terminal/assessments.py`, monthly via `assessments.yml`):
+- **Coverage:** IFI (Brazil), HCFP and the Cour des comptes (France), México Evalúa and IMEF (Mexico).
+- **Discovery:** for each body the job finds the latest publication (`inputs/assessments.yaml`) and reads it (HTML or PDF).
+- **Summary:** the cheapest current Claude model writes two or three lines, the key number and the date.
+- **Validation:** the brief's rules apply. Every number must appear in the document (decimal comma or point), and the year must match. A failing summary shows a red **unverified** mark with its problems.
+- **Spend:** counted in the brief's spend file, under the same $8 cap.
+- **Access limits:**
+  - IFI's report pages sit behind a browser security check, but its PDFs in the Senate's digital library are open.
+  - When a newer report is listed but can't be read, the card says so and links it.
+
+**Policy tracker** (`inputs/policies.yaml`, hand-curated, every claim with its source and date):
+
+| country | policies tracked |
+|---|---|
+| Brazil | the fiscal framework and the 2027 target, the 2027 budget bill, and the consumption-tax reform |
+| Mexico | the 2027 budget package, the judicial reform (second election moved to 2028), and Pemex support |
+| France | the 2027 budget bills, and the pension-reform suspension with the 2027 freeze |
+
+Each policy shows:
+- what it is
+- the government's case
+- the independent view
+- the likely effect on the deficit, inflation and growth (quantified only where a cited source does)
+- its status, and the next decision, linked to the calendar
+- a **My view** button that opens a pre-filled Full call (question id `pol:<id>`)
+
+**Consensus-gap flag.** Forecast rows have their own **My view** button (question id `fc:<country>.<variable>.<year>`), and the Full call has an optional **My forecast** number.
+- **With a number:** the flag goes up when it differs from the consensus median by more than the consensus standard deviation.
+- **Without a number:** the flag goes up when my probability of beating the median is 84% or more, or 16% or less.
+- **Where it shows:** flagged rows are marked on the country page and listed on the Crowd page ("My view against the economist consensus"), since that is where an edge would have to come from.
+
+## External drivers (country pages, Record)
+
+**Series added**, all free:
+- **From FRED:** EUR/USD (also a new paper-book instrument, `EURUSD`, quoted in dollars per euro: long = long euro), the US 2-year, the VIX, Brent, iron ore and soybeans, the Fed target (upper bound) and the ECB deposit rate.
+- **From the ECB:** Italy and Spain's 10-year spreads over Bunds.
+- **Already stored:** the dollar index (Fed broad index), the US 10-year and the Bund.
+- **Limits:** iron ore and soybeans are monthly IMF prices, because no free official daily series exists. The Italy and Spain spreads are ECB monthly averages.
+
+**Sensitivities** (`terminal/drivers.py` → `data/terminal/drivers.json`, rebuilt daily):
+- **What's estimated:** for USD/BRL, USD/MXN, EUR/USD, the OAT-Bund spread, the Brazil 10-year proxy and the US 10-year, betas to their drivers over 1 and 3 years.
+- **Frequency:** weekly changes, or monthly when a series is monthly.
+- **Standard errors:** robust (HC1).
+- **Stability:** a chart of the 1-year beta re-estimated each month for five years, ±2 standard errors.
+- **Plain-English labels**, for example "when the dollar (broad index) rises 1%, USD/MXN usually rises 1.56% (the peso weakens about 1.56%)".
+
+Drivers per instrument:
+
+| instrument | drivers |
+|---|---|
+| USD/MXN | dollar, US yields, oil, VIX |
+| USD/BRL and the Brazil 10-year | dollar, US yields, VIX; iron ore and soy in a separate monthly model |
+| EUR/USD | US 2-year, Bund, oil, VIX |
+| OAT-Bund spread | Bund, euro, Italy and Spain spreads, VIX |
+| US 10-year | US 2-year, dollar, oil, VIX |
+
+**What-if sliders:**
+- Moving a driver shows the effect on each instrument, from the 3-year multi-driver model, with a 90% band. The band covers the uncertainty in the betas plus the usual unexplained move.
+- The card says plainly that this describes typical co-movement, not a forecast.
+
+**Weekly attribution:**
+- Each instrument's move over the last eight weeks is split into beta × each driver's move and a local remainder, shown as a stacked bar (months for the France spread).
+- Each bar has a one-line reading, for example "Most of this week's Brazil 10-year proxy fall (-5bp) came from the US 10-year yield, not Brazil".
+- Drivers published with a lag (the Fed's broad dollar index, EUR/USD) can hold the last complete week back.
+
+**Open paper trades:** each shows its biggest external exposure: the driver whose one-standard-deviation move has typically come with the largest P&L change, in dollars. DI positions use the Brazil 10-year proxy's betas.
+
 ## Daily flow
 
 ```
@@ -411,6 +491,7 @@ release days                                      terminal-data.yml: just that s
    1st-3rd 19:10 UTC  Banxico survey                 8th-12th 12:30 UTC  IPCA inflation
 daily 06:17 UTC                                   panel.yml: the Lab's forecast snapshot (unchanged)
 daily 23:41 UTC                                   brief.yml: snapshot, facts, judgement when due (Phase 4)
+2nd of each month 04:23 UTC                       assessments.yml: independent fiscal assessments
           │
           ▼
 python -m terminal.run fetch      -> data/terminal/series/<id>.json, data/terminal/status.json
@@ -444,17 +525,18 @@ variables > Actions > New repository secret.
 | key | source | what | needs | tested from the build sandbox |
 |---|---|---|---|---|
 | `bcb_sgs` | BCB SGS | Selic target (432), PTAX USD/BRL (1), IPCA m/m (433) and 12m (13522) | | yes |
-| `bcb_focus` | BCB Olinda Focus | annual expectations for IPCA, Selic, BRL, GDP, primary balance and net debt: median, mean, sd, min, max, respondents, every reference year | | yes |
+| `bcb_focus` | BCB Olinda Focus | annual expectations for IPCA, Selic, BRL, GDP, primary and nominal balance and net debt: median, mean, sd, min, max, respondents, every reference year | | yes |
 | `tesouro` | Tesouro Direto daily CSV | longest fixed-rate bond (10-year proxy) and longest IPCA+ bond; the bond used each day is stored | | yes |
 | `b3_di` | B3 reference rates (DI x pré) | DI1 Jan-27, Jan-29, Jan-31, interpolated on B3's daily curve; backfills 40 days per run to 2024 | | **no**: B3 times out from the sandbox; first verified on Actions |
-| `banxico_api` | Banxico SIE API | FIX USD/MXN, target rate, TIIE 28d, 10-year auction yield, private-sector survey (inflation, GDP, year-end peso, public balance: median and sd) | `BANXICO_TOKEN` | written to the documented API, **untested** (no token here) |
+| `banxico_api` | Banxico SIE API | FIX USD/MXN, target rate, TIIE 28d, 10-year auction yield, private-sector survey (inflation, GDP, year-end peso, public balance, Q4 policy rate: median, sd, min, max) with Banxico's series titles | `BANXICO_TOKEN` | runs on its key on Actions (30 Oct 2026) |
 | `banxico_public` | Banxico SIE public chart data | same series, keyless; runs only when the API did not | | yes |
 | `webstat` | Banque de France Webstat | daily OAT and Bund 10-year, and the daily spread | `WEBSTAT_CLIENT_ID` | **untested**: Webstat is unreachable from the sandbox and the series keys need confirming |
-| `ecb_monthly` | ECB Data Portal | France and Germany monthly 10-year yields and spread (the fallback for the spread tile) | | yes |
+| `ecb_monthly` | ECB Data Portal | France, Germany, Italy and Spain monthly 10-year yields; France, Italy and Spain spreads over Bunds | | yes |
 | `bundesbank` | Bundesbank | daily Bund 10-year | | yes |
 | `aft_ratings` | Agence France Trésor | France credit ratings table | | **no**: AFT answers 403; the site shows `inputs/france_ratings.yaml` instead |
-| `fred_api` | FRED API | US 10-year (DGS10), broad dollar (DTWEXBGS), Mexico monthly 10-year | `FRED_API_KEY` | untested (no key here) |
+| `fred_api` | FRED API | US 10-year and 2-year, broad dollar, Mexico monthly 10-year, fed funds and target, EUR/USD, ECB deposit rate, VIX, Brent, iron ore and soybeans (monthly) | `FRED_API_KEY` | runs on its key on Actions (30 Oct 2026) |
 | `fred_public` | FRED graph CSV | same series, keyless fallback | | yes |
+| `fr_forecasts` | IMF DataMapper, OECD SDMX, European Commission AMECO files | France inflation, GDP growth, government balance (and the OECD short rate), with edition dates | | yes |
 | `cftc` | CFTC Commitments of Traders | BRL (102741) and MXN (095741) futures: leveraged funds, asset managers, dealers, non-commercial net, open interest | | yes |
 | `polymarket` | Polymarket | open markets tagged france, brazil, mexico (snapshot), plus full daily history for the top 15 per country | | yes |
 | `kalshi` | Kalshi | open politics, elections, economics, financials and world markets mentioning the three countries, plus daily history | | yes (history rate-limited from the sandbox) |
@@ -539,10 +621,13 @@ data/terminal/summary.json       what the site reads first
 data/terminal/scenarios.json     scenario pages (rebuilt from inputs/scenarios.yaml)
 data/terminal/crowd.json         crowd gauges and the ranked shared-error list
 data/terminal/lab/crowd_tests.json   lab-test results that set the crowd badges (report: reports/crowd_lab.md)
+data/terminal/consensus.json     consensus forecasts, policy tracker, assessments and consensus-gap flags
+data/terminal/assessments.json   monthly summaries of independent fiscal assessments
+data/terminal/drivers.json       external-driver betas, stability, models, attribution, trade exposures
 data/terminal/brief/             AI brief: snapshot.json (and the previous one), briefs/<date>.json (archive),
                                  latest.json, judgement_latest.json, index.json, spend.json (monthly spend)
 data/terminal/inputs/            hand-edited: events, evidence, fiscal_gap, france_ratings, scenarios, polls,
-                                 brief (models, prices, cap, schedule), primers
+                                 brief (models, prices, cap, schedule), primers, policies, assessments
 data/book/config.yaml            paper book: capital, instruments, costs, durations, close times
 data/book/state.json             positions, marks, equity curve, stats, benchmarks, systematic (rebuilt)
 data/book/judgements.json        calls, updates, resolutions and scores (rebuilt)
@@ -550,8 +635,9 @@ data/book/journal.json           every record in date order (rebuilt)
 data/trades/, data/judgements/   write-once form records
 .github/ISSUE_TEMPLATE/          the five forms; .github/workflows/forms.yml processes them
 terminal/                        the package: store, sources/, calendar, summary, book, forms, judgement,
-                                 degraded, emmacro, scenarios, crowd, labtests, headlines, brief, run
-site/                            index.html, terminal.js, record.js, scenarios.js, brief.js, terminal.css (and lab/)
+                                 degraded, emmacro, scenarios, crowd, labtests, headlines, brief, consensus,
+                                 assessments, drivers, run
+site/                            index.html, terminal.js, record.js, scenarios.js, brief.js, econ.js, terminal.css (and lab/)
 ```
 
 ---

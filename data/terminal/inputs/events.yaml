@@ -58,6 +58,11 @@ events:
      source: "https://www.congressonacional.leg.br/materias/pesquisa/-/materia/",
      note: "Joint session usually votes the budget in the week before the 22 Dec recess; date not yet scheduled.",
      query: 'Brazil budget Congress'}
+  - {date: 2026-12-15, country: BR, type: fiscal, importance: 2, status: confirmed,
+     title: "Senate deadline to set the CBS reference rate",
+     source: "https://netcpa.com.br/colunas/reforma-tributaria-tcu-tem-ate-30-de-outubro-para-enviar-ao-senado-calculos-da-aliquota-da-cbs/28404",
+     note: "Consumption-tax reform: the federal CBS starts on 1 Jan 2027; the TCU sends its rate calculations to the Senate by 30 Oct.",
+     query: 'Brazil CBS rate Senate'}
   - {date: 2027-01-05, country: BR, type: politics, importance: 3, status: confirmed,
      title: "Presidential inauguration (5 Jan, not 1 Jan)",
      source: "https://www12.senado.leg.br/radio/1/noticia/2026/01/05/posse-presidencial-em-2027-sera-em-5-de-janeiro-e-governadores-tomam-posse-no-dia-6",
@@ -70,6 +75,11 @@ events:
      query: 'Brazil "fiscal target"'}
 
   # ---------------- Mexico ----------------
+  - {date: 2026-11-15, country: MX, type: fiscal, importance: 2, status: confirmed,
+     title: "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+     source: "https://www.ppef.hacienda.gob.mx/",
+     note: "Constitution art. 74: the spending budget is approved by 15 November; the 2027 package was presented on 8 Sep 2026.",
+     query: 'Mexico 2027 budget Chamber of Deputies'}
   - {date: 2026-11-05, country: MX, type: rates, importance: 3, status: confirmed, title: "Banxico monetary policy decision",
      source: "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/",
      note: "Banxico 2026 calendar (as reproduced in BBVA Research, Agenda Económica 2026). The six 2026 decisions so far match em-macro.",
