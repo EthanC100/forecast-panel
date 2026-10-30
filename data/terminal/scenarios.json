@@ -206,7 +206,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.4
+     "p_ai": 0.35
     },
     {
      "id": "downgrade",
@@ -233,7 +233,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.05
+     "p_ai": 0.1
     }
    ],
    "markets": {
@@ -272,40 +272,43 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.05,
+    "p_yes": 0.1,
     "date": "2026-10-30",
     "confidence": "medium",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page gives 0 downgrades in 36 recorded S&P actions on a stable outlook (0%). I treat 0% as a floor, not a forecast: records are incomplete, and France is a fiscally stressed minority government in a thin sample. The market price (11% for a Moody's or S&P downgrade by 30 Nov) is a cross-check only.",
+    "base_rate_used": "Scenario page base rate: 0 downgrades in 36 recorded S&P actions on EU sovereigns with a stable outlook going in, since 2014 (0%, also 0% as a lower bound on an assumed 156 scheduled reviews). A rate of 0 in 36 does not mean impossible, so I start near the low end, at 5%, rather than at zero.",
     "factors": [
      {
-      "text": "Reference class: S&P has never downgraded one of the six tracked EU sovereigns from a stable outlook in the recorded history. Agencies usually move the outlook first, and the question counts an outlook change alone as NO.",
+      "text": "Agencies almost never cut from a stable outlook without first moving the outlook to negative; the reference class shows 0 of 36. Moody's affirmed Aa3 negative on 23 Oct, so S&P faces no pressure from a fresh peer downgrade. An outlook change is the more natural way for S&P to register concern, and that resolves NO.",
       "effect": "lowers",
       "source_ids": [
        "sc:fr-sp-2026-11"
       ]
      },
      {
-      "text": "Moody's already affirmed Aa3 negative on 23 Oct 2026, so no fresh peer cut is adding pressure. The 11% market price covers Moody's or S&P, and Moody's has already reviewed, so it is mostly S&P; that is above the 0% base rate and suggests some tail risk is priced.",
-      "effect": "lowers",
-      "source_ids": [
-       "sc:fr-sp-2026-11",
-       "pm:5458390"
-      ]
-     },
-     {
-      "text": "France's spread to Germany is widening (96.7 bp in September from 81.5 bp in August, monthly averages). The 2027 budget is in doubt (about half odds of passage by 31 Dec) and the government is a minority. This keeps a downgrade tail alive, mainly through an outlook cut or a censure shock before 27 Nov.",
+      "text": "Market stress is real. The OAT-Bund spread averaged 96.7 bp in September, up from 81.5 bp in August and above the 88 bp peak of the December 2024 budget crisis. The 10-year yield averaged 4.44%. This is monthly-average data that is up to five weeks old, so October could be better or worse.",
       "effect": "raises",
       "source_ids": [
        "s:fr.spread.oat_bund.ecb_m",
+       "s:fr.oat10y.ecb_m",
+       "ep:fr-dissolution-2024"
+      ]
+     },
+     {
+      "text": "The fiscal story keeps slipping. The HCFP calls the 1.0% 2027 growth assumption optimistic and the deficit cut too slow. The IMF/OECD/EC median puts the 2027 deficit at 5.2% against the government's 5.0%. Markets give only about even odds that a budget is enacted by 31 Dec. If the government fell before 27 Nov, an unscheduled or on-date cut would become much more plausible.",
+      "effect": "raises",
+      "source_ids": [
+       "fa:hcfp",
+       "pol:fr-budget-2027",
+       "fc:FR.balance.2027",
        "pm:1722538",
-       "primer:FR"
+       "ks:KXFRANCEBUDGET-27JAN01"
       ]
      }
     ],
-    "what_would_change_view": "A successful censure motion or a rejected first reading of PLF 2027 before 27 Nov would raise my view. So would a higher 2026 deficit estimate, or S&P moving the outlook to negative before the review. A calm budget passage with no censure would lower it.",
-    "most_likely_wrong": "The consensus and the base rate both treat S&P as slow and sequential. A political collapse in November could make S&P skip the outlook step and cut directly, as France's widening spread and its minority government suggest it could.",
+    "what_would_change_view": "The government falling on a censure motion before 27 Nov, or PLF 2027 being rejected at first reading, would push me toward 25-30%. So would the government raising its 2026 deficit estimate above 5.4%, or S&P commentary flagging that the current outlook understates the risk. A smooth first-reading revenue vote in November would push me toward 5%.",
+    "most_likely_wrong": "The page's branch labels suggest S&P's outlook is stable, but my figure rests on that reading. If the A+ outlook is in fact already negative, or S&P judges the political deadlock severe enough to skip the usual outlook step, a downgrade could be close to the market's 28.5%. Where I think the crowd errs: Polymarket's 28.5% treats a scheduled review as close to a coin flip and blends in the already-passed Moody's review, while the evidence badge says prediction-market prices are tested_no_lead.",
     "brief": "#brief/2026-10-30"
    },
    "calculator": {
@@ -608,7 +611,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.3
+     "p_ai": 0.4
     },
     {
      "id": "special_law",
@@ -634,7 +637,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.55
+     "p_ai": 0.35
     },
     {
      "id": "censure_fall",
@@ -672,7 +675,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.1
+     "p_ai": 0.2
     },
     {
      "id": "ordinance",
@@ -750,42 +753,44 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.35,
+    "p_yes": 0.45,
     "date": "2026-10-30",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The page gives 19 of 21 budgets promulgated by 31 December (90.5%) across 2006-2026. That class is a poor fit for a minority parliament. Since the government lost its majority in June 2022, only 2023 (49.3) was promulgated by year-end. The 2025 and 2026 budgets each needed a special law in December and were adopted later. I start from roughly one in four for the recent subset, not 90%, and weigh it against the markets at about half.",
+    "base_rate_used": "Scenario page base rate: 19 of 21 French budgets promulgated by 31 December (90.5%). That class is dominated by majority governments. Both misses came in the last two cycles: the Barnier government fell on 4 December 2024, and a special law replaced the budget in December 2025. So I start from the minority-government subset since 2022, which is much closer to a coin flip, rather than from 90.5%.",
     "factors": [
      {
-      "text": "The long-run base rate is high, and a 49.3 on the joint-committee text, as in December 2022, can still deliver promulgation by 31 December. Kalshi puts 49.3 use at 66%, and the Polymarket and Kalshi budget markets sit near half (51% and 49%).",
+      "text": "Since the 2024 dissolution the government has had no majority. The two most recent budget cycles both missed the 31 December deadline, one through a censure vote and one through a special law, so the long-run 90.5% overstates the odds today.",
+      "effect": "lowers",
+      "source_ids": [
+       "primer:FR",
+       "ep:fr-dissolution-2024",
+       "sc:fr-budget-2027"
+      ]
+     },
+     {
+      "text": "The bill is hard to vote for. It carries about 54 billion euros of consolidation, including freezes of civil-service pay and basic pensions, and the HCFP calls the 1.0% growth assumption optimistic. With the spring 2027 presidential race close and the RN priced near the lead, opposition parties have little reason to share the blame for austerity.",
+      "effect": "lowers",
+      "source_ids": [
+       "pol:fr-budget-2027",
+       "fa:hcfp",
+       "pol:fr-pensions",
+       "pm:679018"
+      ]
+     },
+     {
+      "text": "Some things help. The pension-reform suspension is already a concession in force. Kalshi gives 66.0% to the use of Article 49.3, a route that worked in earlier minority years. Article 47 also offers a legal fallback after the 10 Dec deadline, although it has never been used under the Fifth Republic.",
       "effect": "raises",
       "source_ids": [
-       "sc:fr-budget-2027",
+       "pol:fr-pensions",
        "ks:KXFRANCE493-27JAN01",
-       "pm:1722538",
-       "ks:KXFRANCEBUDGET-27JAN01"
-      ]
-     },
-     {
-      "text": "Under the minority government, the 2025 budget ended in a special law and the 2026 budget was adopted only in January and February 2026. The spring 2027 presidential election gives parties little reason to share the blame for a budget. The special-law path was widely expected in the previous two cycles.",
-      "effect": "lowers",
-      "source_ids": [
-       "sc:fr-budget-2027",
-       "primer:FR"
-      ]
-     },
-     {
-      "text": "Article 47 ordinance has never been used under the Fifth Republic, so it adds little to YES even though it counts. The day-70 deadline is 10 December, but a joint-committee failure in mid-December usually leads to a special law. Use of 49.3 also exposes the government to censure, which would mean NO.",
-      "effect": "lowers",
-      "source_ids": [
-       "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
-       "sc:fr-budget-2027"
+       "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline"
       ]
      }
     ],
-    "what_would_change_view": "I would move up if the Socialists or Les Républicains signal they will not vote a censure motion, or if a joint-committee agreement appears by mid-December. I would move down if the first-reading revenue part is rejected, if a censure motion gathers Socialist votes, or if the government openly prepares a special law.",
-    "most_likely_wrong": "The crowd at about half may be right: a non-censure deal with the Socialists, as in the 2026 budget but earlier, could produce a 49.3 adoption before Christmas. The three-year special-law pattern could also be a feature of those specific years, not a lasting regime.",
+    "what_would_change_view": "I would move up if PS or LR publicly commit not to back a censure motion on the budget, or if the joint committee reaches a deal in mid-December. I would move down if a censure motion gathers PS votes, if the Assembly rejects the revenue part at first reading, or if the government starts briefing about a special law as it did in 2024 and 2025.",
+    "most_likely_wrong": "The crowd and I may both be anchored on the last two failures. A government that has just seen two failed cycles may have negotiated non-censure quietly, through the pension suspension, and could pass the bill by 49.3 more easily than the near coin-flip pricing implies. The other way round, the 49.3 route could trigger a fall. Prediction-market signals carry little tested weight here.",
     "brief": "#brief/2026-10-30"
    },
    "calculator": {
@@ -969,7 +974,7 @@
      ],
      "p_mine": null,
      "p_market": 0.4548,
-     "p_ai": 0.4
+     "p_ai": 0.45
     },
     {
      "id": "centre_right",
@@ -1032,7 +1037,7 @@
      ],
      "p_mine": null,
      "p_market": 0.1622,
-     "p_ai": 0.2
+     "p_ai": 0.15
     }
    ],
    "markets": {
@@ -1189,43 +1194,49 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.4,
+    "p_yes": 0.45,
     "date": "2026-10-30",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page gives no computed probability for an RN win. It only says the final-poll leader won 4 of 4 run-offs, with an RMS poll error of 5.78 pp on final polls, and that error is larger six months out. So I start from the market price: Le Pen 43% and Bardella 2.1% on Polymarket, Le Pen 46% and Bardella 1.3% on Kalshi, which is roughly 45% combined.",
+    "base_rate_used": "The scenario page has no computed win base rate. It only says the final-poll leader won 4 of 4 run-offs, with a poll error of 5.78 pp, and warns that six months out the error is larger. There are no polls in the snapshot, so as a last resort I start from market prices: Le Pen 40.8 plus Bardella 3.5 on Polymarket, and Le Pen 44.0 plus Bardella 1.4 on Kalshi. That puts the RN at roughly 44 to 45 combined.",
     "factors": [
      {
-      "text": "The markets price RN at roughly 45% six months out, with a large poll error of 5.78 pp on final polls and more before that. Long-dated markets that split the opposition across many candidates can overstate the single frontrunner's chance. RN has also lost both recent run-offs.",
-      "effect": "lowers",
-      "source_ids": [
-       "sc:fr-pres-2027",
-       "pm:679018",
-       "pm:679019",
-       "ks:KXFRENCHPRES-27-MLEP"
-      ]
-     },
-     {
-      "text": "The crowd has just made a large shared error in Brazil. Lula won after odds gave Flávio Bolsonaro 80%, and outlets describe the result as bucking a regional shift to the right. That is a warning against taking a right-populist narrative at face value.",
-      "effect": "lowers",
-      "source_ids": [
-       "em:6",
-       "h:a96b076f"
-      ]
-     },
-     {
-      "text": "The market shows no sign that Le Pen's eligibility case is a risk, since she still trades at 43%. The base rate also says the final-poll leader won 4 of 4 run-offs, and RN is a strong first-round favourite. This holds the number near the market and stops me cutting further. The poll-versus-market gap gauge shows no lead, so I put little weight on any signal from it.",
+      "text": "The crowd is pricing the candidate rather than the party. Le Pen at 40.8 against Bardella at only 3.5 (Kalshi 44.0 against 1.4) makes no sense if her ineligibility case keeps her off the ballot. The combined RN price is what matters. If anything, the split hides the risk that the candidate is switched, since the RN brand does not disappear. I hold near the combined price rather than marking it down for the legal uncertainty.",
       "effect": "raises",
       "source_ids": [
        "pm:679018",
-       "sc:fr-pres-2027",
+       "pm:679019",
+       "ks:KXFRENCHPRES-27-MLEP",
+       "ks:KXFRENCHPRES-27-JBAR",
+       "sc:fr-pres-2027"
+      ]
+     },
+     {
+      "text": "The fiscal and political backdrop favours an anti-incumbent vote. The OAT-Bund spread rose to 96.7 bp in September from 81.5 bp. The HCFP calls the 2027 growth assumption optimistic and the deficit cut too slow. The budget outcome is a coin flip in the markets (51.5 and 49.0), and pensions are being frozen. All of this hands the RN campaign material.",
+      "effect": "raises",
+      "source_ids": [
+       "s:fr.spread.oat_bund.ecb_m",
+       "fa:hcfp",
+       "pol:fr-budget-2027",
+       "pol:fr-pensions",
+       "pm:1722538",
+       "ks:KXFRANCEBUDGET-27JAN01"
+      ]
+     },
+     {
+      "text": "The centre-right vote is split between Philippe at 16.5 and Lisnard at 16.2, with smaller names behind them, so its combined chance is close to the RN's. A run-off still lets that side consolidate against the RN. Prediction-market prices carry little weight here: they are tested_no_lead, the poll-versus-market gap is tested_no_lead, and the run-off is six months away. So I do not move far in either direction from the combined price.",
+      "effect": "lowers",
+      "source_ids": [
+       "pm:679021",
+       "pm:679022",
+       "badge:series",
        "badge:a"
       ]
      }
     ],
-    "what_would_change_view": "I would move up on a ruling confirming Le Pen can run, or on second-round polls showing RN ahead of the strongest centre-right candidate. I would move down if the centre-right consolidates behind one candidate, or if the eligibility case removes Le Pen and Bardella polls clearly worse. The rating and budget events this autumn would change my view only if a censure vote or downgrade visibly boosts RN.",
-    "most_likely_wrong": "I may be wrong to shade below the market. The anti-RN barrier may have weakened, so RN could win a run-off against a fragmented opposition. The market's 43% for Le Pen may then be about right or too low.",
+    "what_would_change_view": "Four things would move this number. First, a final court ruling on whether Le Pen can stand, and whether the RN then unites behind Bardella. Second, second-round polls against a single centre-right candidate. Third, Philippe or Lisnard withdrawing, or the March 2027 sponsorship totals showing one consolidated candidate, which would lower my RN number. Fourth, the government falling over the budget or a downgrade on 27 Nov feeding the anti-incumbent mood, which would raise it.",
+    "most_likely_wrong": "I may be too close to a crowd that is making a shared mistake. Markets could be underpricing the run-off 'front' against the RN, with centre and left voters combining in the second round. That would make 45 too high. The opposite is also possible: the court case could make Bardella the candidate, and he might poll better than Le Pen, making 45 too low.",
     "brief": "#brief/2026-10-30"
    },
    "calculator": {
@@ -1448,7 +1459,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.2
+     "p_ai": 0.15
     },
     {
      "id": "kept_exclusions",
@@ -1482,7 +1493,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.4
+     "p_ai": 0.5
     },
     {
      "id": "target_cut",
@@ -1545,7 +1556,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.4
+     "p_ai": 0.35
     }
    ],
    "markets": {
@@ -1557,42 +1568,45 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.6,
+    "p_yes": 0.65,
     "date": "2026-10-30",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page has no computed base rate; em-macro records no Brazilian fiscal-target revisions. I start from the page's context, that Brazil cut its own primary target in July 2015 and April 2024, and treat that as a loose reference class. Both cuts came with the April budget-guidelines cycle. That points to roughly even odds, so I start near 50%.",
+    "base_rate_used": "The scenario page has no computed base rate: em-macro records no Brazilian fiscal-target revisions. Instead I start from the two context cases on the page. Brazil cut the 2015 target in July 2015, mid-year. In April 2024 it cut the following year's target in the budget-guidelines bill. Neither cut came in the first quarter of the year being targeted. A rough prior that the target and rule survive a window ending 31 March is about two in three, which is my start.",
     "factors": [
      {
-      "text": "Timing favours YES. Past target cuts came with the April budget-guidelines bill, after the 31 March cutoff. The new term only starts on 5 Jan 2027, and the 2027 budget vote is in December. A formal bill to change the target or LC 200 before 31 March is therefore less likely than a de facto loosening through exclusions or one-offs, which still counts as YES.",
+      "text": "Timing favours YES. The window closes on 31 Mar 2027. The government's own 2027 budget bill claims compliance, with a counted surplus of R$83.4 billion (0.6% of GDP) against a target of R$73.2 billion. The natural place for any retreat is the next budget-guidelines bill in April, which changes the 2028 target, or a mid-year bimonthly report. A government that has just certified compliance rarely reverses within weeks. Meeting the target on paper through deductions and exclusions still resolves YES.",
       "effect": "raises",
       "source_ids": [
-       "sc:br-fiscal-2027",
-       "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan",
-       "ev:2026-12-17-br-2027-budget-ploa-vote-in-congress"
+       "pol:br-ploa-2027",
+       "pol:br-fiscal-framework",
+       "sc:br-fiscal-2027"
       ]
      },
      {
-      "text": "The market is already penalising loosening risk. The Brazil 10y proxy and the DI Jan-29 proxy are about 2 percentage points above a week ago, after Lula's run-off win. That gives the government a reason to avoid an early formal rewrite and to keep the framework on paper.",
-      "effect": "raises",
-      "source_ids": [
-       "s:br.td.pre_longest",
-       "s:br.di.f29.proxy",
-       "h:a96b076f"
-      ]
-     },
-     {
-      "text": "The Focus median for the 2027 primary balance is -0.3% of GDP against a +0.5% target, so the survey already expects a miss. The government has cut its own target before, in 2015 and 2024. Pressure to change the target or exclude spending is real. This survey series is untested, so I give it little weight.",
+      "text": "The target is not credible on independent numbers, so a quick rewrite is a live option for the new term starting 5 Jan. The Focus 2027 primary-balance median is -0.3% of GDP, below the lower tolerance bound. IFI's scenario gives only R$0.9 billion counted for the target. IFI sees a potential 2027 deficit of 1.0% of GDP and calls for an adjustment of about 3 points. The Focus dispersion gauge is untested, so I lean on IFI more than on the survey spread.",
       "effect": "lowers",
       "source_ids": [
        "disp:2",
-       "sc:br-fiscal-2027"
+       "fa:ifi",
+       "pol:br-fiscal-framework",
+       "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan"
+      ]
+     },
+     {
+      "text": "Markets repriced hard after Lula's run-off win. The 10y rose 255bp on day 1 and BRL fell 8.4% on PTAX. Over the past week the DI Jan-29 proxy is up 227bp and USD/BRL up 6.67%. This shows investors expect looser policy. However, the bond and FX series are untested as fiscal-revision predictors, and the hold-out found bond-yield surprise regressions did not hold up. I read the selloff as pricing eventual loosening over the term, not a formal bill by 31 March. It lowers my estimate only a little.",
+      "effect": "lowers",
+      "source_ids": [
+       "em:6",
+       "s:br.di.f29.proxy",
+       "s:br.usdbrl.ptax",
+       "badge:series"
       ]
      }
     ],
-    "what_would_change_view": "I would move toward NO on a PEC, PLP or PLN to change the target or LC 200 appearing early, on ministers publicly questioning the 0.5% target, or on the Focus 2027 primary-balance median falling further. I would move toward YES on the 2027 budget passing in December without new exclusions, on a finance minister who keeps the framework being named, and on the March bimonthly report freezing spending.",
-    "most_likely_wrong": "The government sends a bill, or a PEC counted as changing the spending limits, in January to March 2027 to loosen the framework while it holds a fresh mandate. Or the March bimonthly report itself proposes a change. The market repricing suggests investors may be reading this correctly.",
+    "what_would_change_view": "I would cut toward 40-45 if any of these appear: a finance minister named in late December or January who publicly questions the 0.5% target or LC 200; new exclusions in the 2027 budget (PLOA) vote in December paired with talk of a new rule; or the Focus 2027 primary-balance median falling further from -0.3%. I would raise toward 75 if the budget passes in December without a target change, a framework-keeping minister is named, and the DI curve retraces a meaningful part of the post-run-off move.",
+    "most_likely_wrong": "A re-elected Lula uses the political capital of a fresh term to send a bill rewriting LC 200/2023 in the first quarter, for example to exclude investment or set a new debt anchor. Markets' violent repricing may be correctly front-running exactly that. There is also a resolution risk: whether a bill filed by a legislator, rather than the government, counts as 'sent'.",
     "brief": "#brief/2026-10-30"
    },
    "calculator": {
@@ -1817,7 +1831,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.5
+     "p_ai": 0.35
     },
     {
      "id": "majority",
@@ -1867,7 +1881,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.45
+     "p_ai": 0.5
     },
     {
      "id": "lose_majority",
@@ -1904,7 +1918,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.05
+     "p_ai": 0.15
     }
    ],
    "markets": {
@@ -1941,41 +1955,44 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.5,
+    "p_yes": 0.35,
     "date": "2026-10-30",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The page has no computed base rate for the two-thirds threshold. Its reference class is only that the final-poll leader won Mexico's midterms 3 of 3 (2009, 2015, 2021), with a poll error of 4.12 pp. In 2021 the governing coalition kept its majority but lost two-thirds. I start near even odds for keeping two-thirds, because the coalition holds it now but midterms usually cost the governing side seats. There is no direct market on the two-thirds question.",
+    "base_rate_used": "The scenario page's base rate (final-poll leader won 3 of 3 Mexican midterms, RMS poll error 4.12 pp) is about who wins the most votes, not about two-thirds of seats, so there is no computed base rate for this question. My starting point is the page's own reference class read for seats: in the one midterm with a comparable dominant coalition, 2021, it kept its majority but lost two-thirds. Midterms tend to erode the governing side. I start near one in three for a supermajority, not at the most-seats market price.",
     "factors": [
      {
-      "text": "Markets give Morena about 89% to win the most seats. That says the coalition is the clear favourite, but the price is not a view on two-thirds. It leaves a modest chance of a large loss and says little about the 334-seat line.",
-      "effect": "raises",
+      "text": "The reference midterm went against a supermajority. In 2021 the governing coalition kept its majority but lost two-thirds. Two-thirds needs both a large vote share (the page's signpost is above 55%) and favourable rulings on the over-representation cap, so the bar is high even for a party that clearly wins.",
+      "effect": "lowers",
       "source_ids": [
-       "pm:2271403",
-       "ks:KXMEXICODEPUTIES-27-MORENA"
-      ]
-     },
-     {
-      "text": "The 2024 case showed that a poll margin between two candidates cannot capture the supermajority outcome. Seat allocation and the rules on coalition over-representation matter more than the headline vote. Consensus that treats the seat count as simply following the vote is likely wrong in both directions.",
-      "effect": "raises",
-      "source_ids": [
-       "em:6",
-       "primer:MX",
        "sc:mx-midterms-2027"
       ]
      },
      {
-      "text": "Midterms without a presidential race usually cost the governing side seats. In 2021 the coalition lost two-thirds. Reaching 334 of 500 needs strong vote share plus favourable over-representation, which is a high bar. The survey-dispersion gauge for Mexico is flagged as having no lead, so the poll signals deserve little weight.",
+      "text": "The run-up is fiscally tight. The 2027 package relies on record tax collection and tight spending, and México Evalúa warns shortfalls would fall on investment, health and education. IMEF expects growth of only 1.3% in 2026 and reports a 2025 deficit of 4.8% against 3.9% planned. That is a harder backdrop for keeping a two-thirds vote share than 2024's election-year deficit spending.",
       "effect": "lowers",
       "source_ids": [
-       "sc:mx-midterms-2027",
-       "disp:3"
+       "fa:mexico-evalua",
+       "fa:imef",
+       "pol:mx-paquete-2027",
+       "ep:mx-deficit-2024"
+      ]
+     },
+     {
+      "text": "Morena's dominance is not in doubt. Polymarket gives 86.5% and Kalshi 86.0% to Morena winning the most seats. The primer and em-macro's 2024 case show markets underestimated how a large win turns into a supermajority via the seat-allocation rules. Prediction-market signals are badged tested_no_lead, so this gets little weight, but it keeps me from going lower.",
+      "effect": "raises",
+      "source_ids": [
+       "pm:2271403",
+       "ks:KXMEXICODEPUTIES-27-MORENA",
+       "primer:MX",
+       "em:6",
+       "badge:series"
       ]
      }
     ],
-    "what_would_change_view": "Polls putting the coalition above 55% of the vote, or an INE ruling that keeps or widens coalition over-representation, would raise my view. Coalition polling below 45%, or an alliance of the opposition parties in key districts, would lower it. A direct market on the two-thirds threshold would also help, since none exists now.",
-    "most_likely_wrong": "I may be underweighting the coalition's overall dominance and high presidential approval, which would make two-thirds the default outcome. Equally, I may be underweighting the usual midterm erosion and the legal uncertainty over over-representation, which would make two-thirds the exception. The range is wide with 219 days to go.",
+    "what_would_change_view": "I would move up if early-2027 polls put the coalition above 55% of the vote, or if INE rules on over-representation in a way that repeats the 2024 allocation. I would also move up if the opposition fails to form PAN-PRI or MC alliances in key districts. I would move down if the coalition polls between 45% and 55% or below 45%, if a growth or revenue miss forces visible cuts before June, or if a US trade or security shock dents the government's standing.",
+    "most_likely_wrong": "The seat-allocation rules can turn a large plurality into two-thirds, as in 2024 when markets were caught out. If the coalition's vote share holds near its presidential-year level, 35% will prove too low. The 2021 precedent came from a weaker starting position, and there is no direct market or poll in the facts to anchor the two-thirds threshold.",
     "brief": "#brief/2026-10-30"
    },
    "calculator": {
@@ -2093,7 +2110,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.1
+     "p_ai": 0.15
     },
     {
      "id": "annual",
@@ -2139,7 +2156,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.2
+     "p_ai": 0.15
     },
     {
      "id": "withdrawal",
@@ -2201,40 +2218,44 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.1,
+    "p_yes": 0.15,
     "date": "2026-10-30",
-    "confidence": "medium",
+    "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page has no computed base rate: this is the agreement's first review cycle, and em-macro has no trade-agreement events. I start from the market price instead, the nearest available anchor: Polymarket gives 8% that USMCA is extended in 2026, and Kalshi gives 24% for a trilateral revised deal in 2026. Both are related but not identical markets.",
+    "base_rate_used": "The scenario page has no computed base rate: this is the agreement's first review cycle and em-macro has no trade-agreement events. My starting point is a judgement reference class, renewal of a contested trade deal while the dominant partner uses the review as leverage, where status-quo continuation is the norm. I cross-check against related-only market prices: Polymarket gave 8.5% to an extension in 2026 and Kalshi 24% to a trilateral revised deal in 2026. Neither resolves this question, and prediction-market prices carry a tested_no_lead badge.",
     "factors": [
      {
-      "text": "Markets price a 2026 extension at only 8%. The 2026 review window has largely passed without an extension, so annual reviews are now the default under art. 34.7. This leaves a modest chance that all three parties confirm in writing by 1 July 2027.",
+      "text": "The 2026 review appears to have passed without a 16-year extension. The calendar note says annual reviews follow when that happens, and the 'annual' branch is described as the status quo after the 2026 review. Before it, the market gave only 8.5% to an extension in 2026. A US administration that withheld extension once has little reason to give up the leverage of annual reviews within eight months, especially before Mexico's June 2027 midterms.",
       "effect": "lowers",
       "source_ids": [
+       "ev:2027-07-01-mx-usmca-annual-joint-review",
        "pm:2761052",
-       "ev:2027-07-01-mx-usmca-annual-joint-review"
+       "sc:usmca-2027"
       ]
      },
      {
-      "text": "A trilateral revised deal is priced at 24% on thin volume. That shows some chance of a negotiated outcome that includes a written extension. Official US-Mexico trade contacts continue, for example the Peñasquito remediation, so the process is not broken.",
+      "text": "Working-level cooperation continues. USTR announced a US-Mexico remediation at Minera Peñasquito and a resolved labour-mechanism case at Amphenol, and issued a détente statement with the EU. This shows disputes being settled inside the USMCA machinery rather than escalated, which keeps an eventual extension possible.",
+      "effect": "raises",
+      "source_ids": [
+       "h:e9cc9e5e",
+       "h:384c65f0",
+       "h:f2e450b8"
+      ]
+     },
+     {
+      "text": "Kalshi prices a trilateral revised deal in 2026 at 24%, so a negotiated package that could pair with a written extension is not remote. But this is a related-only market, prediction-market signals are tested_no_lead, and US trade decisions often arrive off-calendar in either direction. The net effect is wider uncertainty rather than a clear lift.",
       "effect": "raises",
       "source_ids": [
        "ks:KXUSMCAOUTCOMES-27-TRI",
-       "h:e9cc9e5e"
-      ]
-     },
-     {
-      "text": "US trade policy shows leverage-driven, unscheduled behaviour, such as the USTR statement on the EU détente. All three parties confirming in writing, including the US, needs the US to give up that leverage. Withdrawal or bilateral splits remain live tail risks.",
-      "effect": "lowers",
-      "source_ids": [
-       "h:f2e450b8",
-       "primer:US"
+       "badge:series",
+       "primer:US",
+       "primer:MX"
       ]
      }
     ],
-    "what_would_change_view": "A USTR report or statement recommending extension, US tariffs on Mexican goods cut below 10%, or a trilateral text announced would raise my view. A Federal Register withdrawal notice, or a US proposal for separate US-Mexico and US-Canada texts, would lower it sharply.",
-    "most_likely_wrong": "A broad deal could be struck before July 2027 with all three confirming extension in writing, as the thin Kalshi price hints. The crowd may also be too pessimistic, treating annual reviews as the stable equilibrium when the US may prefer a clean extension once concessions are secured.",
+    "what_would_change_view": "I would move up on any of three signals: a USTR consultation report recommending extension, US tariffs on Mexican goods cut below 10%, or a joint statement after the next bilateral round (placeholder 30 Nov) with an extension timetable. I would move down on talk of separate US-Mexico and US-Canada texts, or officials describing withdrawal as leverage. The 3 Nov US midterms matter only insofar as they change the administration's trade posture.",
+    "most_likely_wrong": "Crowds and I may share the same error: assuming the pattern of holding back the extension persists. A US administration that wants a 'win' could bundle a revised deal with a written 16-year extension well before 1 July 2027. The related Kalshi 24% for a trilateral revised deal hints that this tail is fatter than my 15%.",
     "brief": "#brief/2026-10-30"
    },
    "calculator": {

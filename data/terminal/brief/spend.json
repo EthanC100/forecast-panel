@@ -2,11 +2,11 @@
  "currency": "USD",
  "months": {
   "2026-10": {
-   "usd": 0.256978,
-   "calls": 18,
+   "usd": 1.194467,
+   "calls": 29,
    "by_role": {
-    "extraction": 0.003751,
-    "judgement": 0.249205,
+    "extraction": 0.008173,
+    "judgement": 1.182272,
     "assessments": 0.004022
    }
   }
@@ -209,7 +209,149 @@
    "cache_read": 0,
    "output": 245,
    "usd": 0.000279
+  },
+  {
+   "at": "2026-10-30T08:35:34Z",
+   "role": "extraction",
+   "mode": "batch",
+   "input": 41179,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 0,
+   "output": 9451,
+   "usd": 0.004422
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 278,
+   "cache_write_5m": 0,
+   "cache_write_1h": 59477,
+   "cache_read": 0,
+   "output": 2105,
+   "usd": 0.259514
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 251,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 59477,
+   "output": 2117,
+   "usd": 0.02762
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 595,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 60155,
+   "output": 9397,
+   "usd": 0.101176
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 271,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 60155,
+   "output": 4813,
+   "usd": 0.054688
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 346,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 59477,
+   "output": 2583,
+   "usd": 0.03247
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 501,
+   "cache_write_5m": 0,
+   "cache_write_1h": 60155,
+   "cache_read": 0,
+   "output": 6483,
+   "usd": 0.306452
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 288,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 59477,
+   "output": 2080,
+   "usd": 0.027324
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 281,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 59477,
+   "output": 1788,
+   "usd": 0.02439
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 216,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 59477,
+   "output": 2320,
+   "usd": 0.02958
+  },
+  {
+   "at": "2026-10-30T08:43:09Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 409,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 60155,
+   "output": 6302,
+   "usd": 0.069853
   }
  ],
- "cap_usd": 8.0
+ "cap_usd": 15.0,
+ "expected_month_usd": {
+  "total_usd": 10.04,
+  "cap_usd": 15.0,
+  "computed_on": "2026-10-30",
+  "breakdown": {
+   "extraction_daily_x30": 0.122,
+   "judgement_weekly_x4.3": 4.3,
+   "judgement_near_catalysts": 5.61,
+   "assessments_monthly": 0.004
+  },
+  "assumptions": {
+   "extraction_per_day_usd": 0.0041,
+   "judgement_per_week_usd": 1.001,
+   "catalyst_refresh_days_next_30": 9,
+   "requests_per_weekly_judgement": 10,
+   "prefix_tokens": 55567,
+   "batch_discount": 0.5,
+   "output_tokens_per_judgement_request": 5000,
+   "output_tokens_per_extraction": 8000
+  }
+ }
 }
