@@ -1,5 +1,5 @@
-/* AI brief: the card on Today, the archive (#brief and #brief/<date>) and the AI judgement card on
-   scenario pages. Facts and judgement are kept visibly apart, and the judgement on a question
+/* AI brief: the card on Today (three lines), the full brief per region (#brief/<date>), the archive
+   (#brief) and the AI judgement card on scenario pages. Facts and judgement are kept visibly apart, and the judgement on a question
    stays hidden until you have made your own call on it. */
 (function () {
   "use strict";
@@ -44,6 +44,57 @@
     return box;
   }
 
+  const REGION = { BR: "Brazil", MX: "Mexico", FR: "France", GOLD: "Gold" };
+  const KIND = { political: "politics", fiscal: "fiscal", central_bank: "central bank", market: "markets", data: "data" };
+  const chipFor = (r) => T.ctryChip(r === "GOLD" ? "GLOBAL" : r);
+
+  function factLi(f, sources, extra) {
+    return el("li", { class: f.ok === false ? "bad-line" : "" },
+      f.ok === false ? el("span", { class: "x", title: (f.problems || []).join("; ") }, "✕ ") : null,
+      extra || null, f.text, " ", srcChips(f.source_ids, sources),
+      f.ok === false ? el("div", { class: "tiny" }, (f.problems || []).join("; ")) : null);
+  }
+
+  function topBlock(b) {
+    const top = (b.top && b.top.length ? b.top : (b.facts || []).slice(0, 3));
+    const box = el("section", { class: "facts" },
+      el("div", { class: "bhead" }, el("h3", {}, "In three lines"), el("span", { class: "tiny" }, "facts only · every line cites the snapshot")));
+    if (b.status === "no_ai") { box.append(...nn(el("p", { class: "small muted" }, "No AI brief: " + (b.judgement && b.judgement.why || "not run") + "."))); return box; }
+    if (!top.length) { box.append(...nn(el("p", { class: "small muted" }, b.status === "failed" ? "Extraction failed; see the problems above." : "Nothing changed that the snapshot shows."))); return box; }
+    box.append(...nn(el("ul", { class: "factlist" }, ...top.map((f) => factLi(f, b.sources)))));
+    return box;
+  }
+
+  function regionBlock(r, x, sources) {
+    const j = x.judgement || null;
+    const facts = el("section", { class: "facts" },
+      el("div", { class: "bhead" }, el("h3", {}, "Facts"), el("span", { class: "tiny" }, "since the last brief · validated")));
+    const dev = x.developments || [], wk = x.week_change || [], up = x.upcoming || [];
+    facts.append(...nn(dev.length ? el("ul", { class: "factlist" }, ...dev.map((f) => factLi(f, sources, el("span", { class: "chip" }, KIND[f.kind] || f.kind)))) :
+      el("p", { class: "small muted" }, "No material change."),
+      wk.length ? el("div", { class: "small" }, el("b", {}, "Against a week ago")) : null,
+      wk.length ? el("ul", { class: "factlist" }, ...wk.map((f) => factLi(f, sources))) : null,
+      el("div", { class: "small" }, el("b", {}, "Next 30 days")),
+      up.length ? el("ul", { class: "factlist" }, ...up.map((e) => {
+        const w = j && (j.watch || []).find((v) => v.event_id === e.event_id);
+        return el("li", {}, el("b", { class: "num" }, e.date), " ", e.title, e.importance ? " " : null, e.importance ? T.imp(e.importance) : null,
+          w ? el("div", { class: "tiny" }, el("b", {}, "Watch: "), w.what_to_watch) : null);
+      })) : el("p", { class: "small muted" }, "No scheduled events.")));
+    const judge = el("section", { class: "judge" },
+      el("div", { class: "bhead" }, el("h3", {}, "Judgement"), el("span", { class: "tiny" }, "the model's opinion, not fact" + (j && j.date ? " · " + j.date : ""))));
+    if (!j || j.ok === false && !j.why_it_matters) judge.append(...nn(el("p", { class: "small muted" }, j && j.problems ? "✕ " + j.problems.join("; ") : "No judgement yet; it runs weekly.")));
+    else {
+      const list = (title, items, fn) => items && items.length ? [el("div", { class: "small" }, el("b", {}, title)), el("ul", { class: "factors" }, ...items.map(fn))] : [];
+      judge.append(...nn(
+        ...list("Why it matters", j.why_it_matters, (w) => el("li", {}, el("span", { class: "chip" }, w.for), " ", w.text, " ", srcChips(w.source_ids, sources))),
+        ...list("Key risks", j.risks, (w) => el("li", {}, w.text, " ", srcChips(w.source_ids, sources))),
+        j.consensus ? el("div", { class: "small" }, el("b", {}, "Consensus: "), j.consensus.view, " ", srcChips(j.consensus.source_ids, sources)) : null,
+        j.might_be_wrong ? el("div", { class: "small" }, el("b", {}, "Where it might be wrong: "), j.might_be_wrong) : null,
+        j.verified === false ? el("div", { class: "tiny bad-line" }, "✕ " + (j.problems || []).join("; ")) : null));
+    }
+    return el("section", { class: "region" }, el("div", { class: "sec", style: "margin:14px 0 6px" }, el("h2", { style: "margin:0" }, REGION[r] || r), chipFor(r)), facts, judge);
+  }
+
   function questionView(q, open, sources, compact) {
     const head = el("div", { class: "qhead" }, el("a", { href: "#scenarios/" + q.scenario_id }, q.title || q.question_id),
       open && q.p_yes != null ? el("span", { class: "pbig num" }, pctInt(q.p_yes)) : null,
@@ -78,22 +129,25 @@
   function costLine(b) {
     const c = b.cost || {};
     return el("div", { class: "tiny" }, "AI spend: $" + (c.today_usd || 0).toFixed(3) + " today, $" + (c.month_usd || 0).toFixed(2) + " in " + (c.month || "this month") +
-      " of a $" + Number(c.cap_usd || 8).toFixed(2) + " cap" + (b.mode === "extraction_only" ? " · extraction only (cap reached)" : ""));
+      " of a $" + Number(c.cap_usd || 15).toFixed(2) + " cap" + (c.expected_month_usd != null ? " · expected about $" + Number(c.expected_month_usd).toFixed(2) + " a month" : "") +
+      (b.mode === "extraction_only" ? " · extraction only (cap reached)" : ""));
   }
 
   function howBody() {
     return el("div", { class: "small" },
       el("p", {}, "Each evening a job writes a snapshot: the latest data points, the next 90 days of events, the scenario pages (without your own probabilities), prediction-market odds, CFTC positioning, survey dispersion and 20 to 40 headlines from GDELT and official press pages. Every item has an id."),
-      el("p", {}, el("b", {}, "Facts: "), "the cheapest current Claude model lists what changed since the last brief, citing ids. ",
-        el("b", {}, "Judgement: "), "a mid-tier Claude model, weekly and within 3 days of an importance-3 catalyst, gives a probability for each open scenario question in 5% steps, starting from the page's base rate. It never sees your calls."),
+      el("p", {}, el("b", {}, "Facts (daily): "), "a cost-efficient Claude model reports, for Brazil, Mexico, France and gold, every material political, fiscal, central-bank and market development since the last brief, what changed against a week ago, and the three facts that matter most, citing ids. The next 30 days of events come straight from the calendar. ",
+        el("b", {}, "Judgement (weekly): "), "a stronger Claude model writes, per region, why the developments matter for bonds and the currency (or gold), what to watch at each event, key risks, and the consensus against where it might be wrong; it also gives a probability for each open scenario question in 5% steps, starting from the page's base rate. Within 3 days of an importance-3 catalyst it re-runs for that catalyst's region only. It never sees your calls."),
       el("p", {}, el("b", {}, "Checks: "), "every number must match a snapshot value within rounding and every cited id must exist. Facts without a source move to the judgement side. Anything else that fails is published as written under a red Unverified banner, never quietly corrected."),
-      el("p", {}, el("b", {}, "Cost: "), "Batch API (half price) with prompt caching; spend is counted in data/terminal/brief/spend.json, and above $8 in a month only the facts step runs."));
+      el("p", {}, el("b", {}, "Cost: "), "Batch API (half price) with prompt caching; spend is counted in data/terminal/brief/spend.json with the expected monthly cost, and above the $15 monthly cap only the facts step runs."));
   }
 
   function briefArticle(b, sc, compact) {
     return el("article", { class: "card brief" + (b.verified === false ? " is-unverified" : "") },
       el("div", { class: "sec", style: "margin:0 0 8px" }, el("h2", { style: "margin:0" }, "AI brief"), el("span", { class: "tiny" }, b.date + " · built " + (b.generated_at || "").slice(11, 16) + " UTC")),
-      banner(b), factsBlock(b, compact ? 8 : 0), judgementBlock(b, sc, compact),
+      banner(b), ...(b.report ? [topBlock(b), ...(compact ? [] : Object.keys(REGION).filter((r) => b.report.regions && b.report.regions[r])
+        .map((r) => regionBlock(r, b.report.regions[r], b.sources)))] : [factsBlock(b, compact ? 8 : 0)]),
+      judgementBlock(b, sc, compact),
       el("div", { class: "row bfoot" }, costLine(b), el("span", { class: "small" }, compact ? el("a", { href: "#brief/" + b.date }, "full brief") : null, compact ? " · " : null, el("a", { href: "#brief" }, "archive →"))),
       T.how("the AI brief", howBody));
   }

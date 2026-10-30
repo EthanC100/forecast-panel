@@ -137,7 +137,7 @@ def test_degraded_then_upgrades_when_primary_appears(tmp_store):
     monthly = {"id": "fr.spread.oat_bund.ecb_m", "name": "spread (ECB monthly)", "frequency": "monthly"}
     store.save_series(monthly, [["2026-08-31", 80.0], ["2026-09-30", 82.0]])
     status = {"sources": {"webstat": {"state": "missing_secret"}, "ecb_monthly": {"state": "ok"},
-                          "banxico_api": {"state": "ok"}, "fred_api": {"state": "ok"}, "b3_di": {"state": "ok"}}}
+                          "banxico_api": {"state": "ok"}, "fred_api": {"state": "ok"}, "b3_di": {"state": "ok"}, "gold_stooq": {"state": "ok"}}}
     rules = degraded.active(status)
     assert [r["id"] for r in rules] == ["webstat"] and "WEBSTAT_CLIENT_ID" in rules[0]["upgrade"]
     s, fallback = summary.first_series(["fr.spread.oat_bund", "fr.spread.oat_bund.ecb_m"])

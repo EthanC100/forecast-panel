@@ -1,0 +1,66 @@
+# Gold episodes for the Gold page (terminal/gold.py). Moves after each start date are computed from
+# the stored series (daily gold and silver when they cover the date, otherwise the World Bank's monthly
+# averages; US 10-year real yield from 2003; broad dollar index from 2006). Summaries describe what
+# happened, not why gold moved: no numbers here, every number on the page comes from data or a cited page.
+# Every link was opened when this file was written.
+
+episodes:
+  - id: gfc-2008
+    name: "2008: Lehman Brothers fails and the financial crisis"
+    start: "2008-09-15"
+    summary: "Lehman Brothers filed for bankruptcy and the financial crisis spread; the Fed cut rates to near zero in December 2008 and began buying assets."
+    cites:
+      - {label: "Federal Reserve History: The Great Recession", url: "https://www.federalreservehistory.org/essays/great-recession-of-200709"}
+      - {label: "FOMC statement, 16 December 2008 (target range 0 to 1/4 percent)", url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081216b.htm"}
+  - id: peak-2011
+    name: "2011: rates pinned near zero, gold's post-crisis peak"
+    start: "2011-08-09"
+    summary: "The FOMC said it expected to keep rates exceptionally low at least through mid-2013. Gold rose into a peak a few weeks later, then fell over the following years."
+    cites:
+      - {label: "FOMC statement, 9 August 2011", url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20110809a.htm"}
+  - id: taper-2013
+    name: "2013: the taper tantrum"
+    start: "2013-05-22"
+    summary: "Chairman Bernanke told Congress the Fed could slow its bond purchases; real yields rose sharply over the summer."
+    cites:
+      - {label: "Testimony by Chairman Bernanke, 22 May 2013", url: "https://www.federalreserve.gov/newsevents/testimony/bernanke20130522a.htm"}
+  - id: covid-2020
+    name: "2020: Covid shock and emergency rate cuts"
+    start: "2020-03-15"
+    summary: "The Fed cut its target range to 0 to 1/4 percent in an emergency Sunday move and restarted large-scale bond buying."
+    cites:
+      - {label: "FOMC statement, 15 March 2020", url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm"}
+  - id: hikes-2022
+    name: "2022: the Fed starts its fastest hiking cycle in decades"
+    start: "2022-03-16"
+    summary: "The FOMC raised rates for the first time since 2018 and went on raising through 2023; real yields went from negative to strongly positive."
+    cites:
+      - {label: "FOMC statement, 16 March 2022", url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm"}
+  - id: cuts-2024
+    name: "2024: the Fed's first cut of the cycle"
+    start: "2024-09-18"
+    summary: "The FOMC cut its target range by half a percentage point, its first cut since 2020."
+    cites:
+      - {label: "FOMC statement, 18 September 2024", url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm"}
+  - id: us-election-2024
+    name: "2024: the US presidential election"
+    start: "2024-11-05"
+    summary: "The 2024 US presidential and congressional elections were held on 5 November 2024."
+    cites:
+      - {label: "FEC: election results and voting information", url: "https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/"}
+  - id: rally-2025
+    name: "2025: the record rally"
+    start: "2025-01-02"
+    summary: "The World Gold Council reports that gold demand hit record levels in 2025, topping 5,000 tonnes including OTC, in a year with 53 all-time highs in the gold price. US reciprocal tariffs were announced in April 2025."
+    cites:
+      - {label: "World Gold Council: Gold Demand Trends, Q4 and full year 2025", url: "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-full-year-2025"}
+      - {label: "The White House: reciprocal tariff order, April 2025", url: "https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/"}
+
+# Upcoming US political events (FOMC meetings come from the Fed's calendar, fetched daily).
+political:
+  - date: "2026-11-03"
+    title: "US midterm elections"
+    importance: 3
+    summary: "All 435 House seats and a third of the Senate are elected; the result decides which party controls each chamber of Congress."
+    what_to_watch: "Which party controls the House and the Senate, and how real yields and the dollar react in the days after. gold-events' study of every midterm since 2002 gives the average gold move afterwards (below)."
+    source_url: "https://www.usa.gov/midterm-elections"

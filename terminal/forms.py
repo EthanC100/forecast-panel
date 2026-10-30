@@ -116,7 +116,8 @@ def open_trade(issue: dict, f: dict) -> tuple[Path, dict, list[str], bool]:
     tid = f"T{issue['number']:05d}"
     errs, notes = [], []
     code = (f["instrument"] or "").upper().replace("/", "").replace("-", "").replace(" ", "")
-    code = {"OAT": "OATBUND", "OATBUNDSPREAD": "OATBUND"}.get(code, code)
+    code = {"OAT": "OATBUND", "OATBUNDSPREAD": "OATBUND", "GOLD": "XAUUSD", "XAU": "XAUUSD", "SILVER": "XAGUSD",
+            "XAG": "XAGUSD"}.get(code, code)
     if code not in cfg["instruments"]:
         errs.append(f"unknown instrument {f['instrument']!r}; use one of {', '.join(cfg['instruments'])}")
     direction = (f["direction"] or "").lower()

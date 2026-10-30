@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="sky"><rect x="0" y="0" width="1024" height="658"/></clipPath>
+    <radialGradient id="glow" cx="512" cy="650" r="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE7A0" stop-opacity=".5"/><stop offset="1" stop-color="#FFE7A0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="#FDFBF7"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+  <g transform="translate(102 102) scale(.8)">
+  <g clip-path="url(#sky)">
+    <circle cx="311" cy="607" r="128" fill="#2F7BFF" fill-opacity=".7"/>
+    <circle cx="419" cy="502" r="128" fill="#FF6B8B" fill-opacity=".7"/>
+    <circle cx="605" cy="502" r="128" fill="#FF3B30" fill-opacity=".7"/>
+    <circle cx="713" cy="607" r="128" fill="#16C47F" fill-opacity=".7"/>
+    <circle cx="512" cy="650" r="170" fill="#FFC21A" fill-opacity=".62"/>
+  </g>
+  <rect x="176" y="654" width="672" height="26" rx="13" fill="#2A2F45"/>
+  <rect x="318" y="726" width="388" height="16" rx="8" fill="#2A2F45" fill-opacity=".14"/>
+  </g>
+</svg>

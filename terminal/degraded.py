@@ -35,6 +35,13 @@ RULES = [
      "features": "Brazil DI Jan-27/29/31 (Today tiles, Brazil page, DI trades in the book)",
      "effect": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields "
                "(sovereign zero-coupon, close to but not the same as the DI swap curve)."},
+    {"id": "gold", "primary": "gold_stooq", "also_ok": ["gold_lbma"], "fallback": "worldbank_pink", "secret": None,
+     "series": ["gl.gold.wb_m", "gl.silver.wb_m"],
+     "features": "Gold and silver prices (Gold page, XAUUSD and XAGUSD in the book)",
+     "effect": "Monthly average prices from the World Bank instead of daily spot: a daily move, a stop or a target inside "
+               "the month is invisible, and the latest value is up to five weeks old.",
+     "upgrade": "none to add: Stooq and LBMA refuse automated requests from some networks; the book and the Gold page switch "
+                "back to daily prices by themselves on the first run either answers"},
 ]
 
 
@@ -44,11 +51,12 @@ def active(status: dict | None = None) -> list[dict]:
     out = []
     for r in RULES:
         p, f = srcs.get(r["primary"], {}), srcs.get(r["fallback"], {})
-        if p.get("state") == "ok":
+        if p.get("state") == "ok" or any(srcs.get(k, {}).get("state") == "ok" for k in r.get("also_ok", [])):
             continue
-        upgrade = (f"add the {r['secret']} secret under Settings > Secrets and variables > Actions; the next data run "
-                   "uses it and every feature switches over by itself") if r["secret"] else \
-                  "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers"
+        upgrade = r.get("upgrade") or (
+            f"add the {r['secret']} secret under Settings > Secrets and variables > Actions; the next data run "
+            "uses it and every feature switches over by itself" if r["secret"] else
+            "none available from GitHub Actions (B3 blocks it); switches back automatically if B3 answers")
         out.append({**r, "primary_state": p.get("state", "not run"), "fallback_state": f.get("state", "not run"),
                     "fallback_name": f.get("name"), "upgrade": upgrade})
     return out

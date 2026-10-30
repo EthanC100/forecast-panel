@@ -80,7 +80,8 @@ class Instrument:
         hh, mm = (int(x) for x in cfg.get("close_utc", "21:00").split(":"))
         self.close_time = dt.time(hh, mm, tzinfo=dt.timezone.utc)
         self.scale = {"yield": 100.0, "spread_bp": 10000.0}.get(self.kind)
-        self.favourable = 1 if self.kind == "fx" else -1   # +1: long gains when the value rises
+        self.favourable = 1 if self.kind in ("fx", "price") else -1   # +1: long gains when the value rises
+        self.pct = self.kind in ("fx", "price")             # sized and costed as a percentage of notional
         self.inverse = cfg.get("quote") == "usd_per_local"  # EUR/USD: dollars per unit of the other currency
 
     def close_dt(self, date: str) -> dt.datetime:
@@ -112,7 +113,7 @@ class Instrument:
 
     def duration(self, entry_date: str, entry_value: float) -> float | None:
         dur = self.cfg.get("duration")
-        if self.kind == "fx":
+        if self.pct:
             return None
         if dur == "zero_coupon":
             years = (dt.date.fromisoformat(self.cfg["maturity"]) - dt.date.fromisoformat(entry_date)).days / 365.25
@@ -123,10 +124,12 @@ class Instrument:
         """Loss per 1 USD of notional if the value moves from entry to `level` (absolute)."""
         if self.kind == "fx":
             return abs(level - entry) / (entry if self.inverse else level)
+        if self.kind == "price":
+            return abs(level - entry) / entry
         return duration * abs(level - entry) / self.scale
 
     def cost(self, notional: float, duration: float | None) -> float:
-        if self.kind == "fx":
+        if self.pct:
             return notional * self.cfg.get("cost_round_trip_pct", 0.075) / 100.0
         return notional * duration * self.cfg.get("cost_round_trip_bp", 2) / 10000.0
 
@@ -150,16 +153,20 @@ def _rate_on(obs, date: str):
 
 
 def carry(inst: Instrument, direction: int, notional: float, start: str, end: str, rates_cache: dict) -> float:
-    """FX carry, actual/360 on calendar days in (start, end], at the previous day's rate differential."""
-    if inst.kind != "fx" or end <= start:
+    """FX carry, actual/360 on calendar days in (start, end], at the previous day's rate differential.
+    Metals (kind "price") earn nothing, so a long pays the USD funding rate and a short earns it."""
+    if inst.kind not in ("fx", "price") or end <= start:
         return 0.0
     usd = rates_cache.setdefault(inst.cfg["rate_usd"], _rate_lookup(inst.cfg["rate_usd"]))
-    loc = rates_cache.setdefault(inst.cfg["rate_local"], _rate_lookup(inst.cfg["rate_local"]))
+    loc = [] if inst.kind == "price" else rates_cache.setdefault(inst.cfg["rate_local"], _rate_lookup(inst.cfg["rate_local"]))
     total, d = 0.0, dt.date.fromisoformat(start)
     stop = dt.date.fromisoformat(end)
     while d < stop:
-        ru, rl = _rate_on(usd, d.isoformat()), _rate_on(loc, d.isoformat())
-        if ru is not None and rl is not None:
+        ru, rl = _rate_on(usd, d.isoformat()), (0.0 if inst.kind == "price" else _rate_on(loc, d.isoformat()))
+        if inst.kind == "price":
+            if ru is not None:
+                total -= ru / 100.0 / 360.0
+        elif ru is not None and rl is not None:
             total += ((rl - ru) if inst.inverse else (ru - rl)) / 100.0 / 360.0
         d += dt.timedelta(days=1)
     return direction * notional * total
@@ -169,6 +176,8 @@ def pnl(inst: Instrument, fill: dict, value: float, date: str, rates_cache: dict
     d, n, v0, dur = fill["direction_sign"], fill["notional_usd"], fill["entry_value"], fill.get("duration")
     if inst.kind == "fx":
         price = d * n * (value - v0) / (v0 if inst.inverse else value)
+    elif inst.kind == "price":
+        price = d * n * (value - v0) / v0
     else:
         price = -d * n * dur * (value - v0) / inst.scale
     c = carry(inst, d, n, fill["entry_date"], date, rates_cache)
@@ -389,7 +398,9 @@ def buy_and_hold(cfg: dict, today: str, rates_cache: dict) -> list[dict]:
     for code, icfg in cfg["instruments"].items():
         inst = Instrument(code, icfg)
         row = {"code": code, "name": icfg["name"], "series": inst.series_id, "proxy": bool(inst.series and inst.series.get("proxy")),
-               "description": ("long EUR" if inst.inverse else "long USD") if inst.kind == "fx" else ("long OAT vs Bund" if inst.kind == "spread_bp" else "long the bond")}
+               "description": (("long EUR" if inst.inverse else "long USD") if inst.kind == "fx" else
+                               f"long {icfg['name'].split(' ')[0].lower()}" if inst.kind == "price" else
+                               ("long OAT vs Bund" if inst.kind == "spread_bp" else "long the bond"))}
         last = inst.latest()
         for label, start in (("since_start", str(cfg["start_date"])), ("last_12m", one_year)):
             c = next(((d, v) for d, v in inst.obs if d >= start), None)
@@ -470,7 +481,7 @@ def build(today: str | None = None) -> dict:
                         "scale": inst.scale, "favourable": inst.favourable, "rate_usd": icfg.get("rate_usd"), "rate_local": icfg.get("rate_local"),
                         "maturity": icfg.get("maturity"), "unit": (inst.series or {}).get("unit"),
                         "duration": icfg.get("duration"), "cost": icfg.get("cost_round_trip_pct", icfg.get("cost_round_trip_bp")),
-                        "cost_unit": "% of notional" if icfg["kind"] == "fx" else "bp of yield"}
+                        "cost_unit": "% of notional" if icfg["kind"] in ("fx", "price") else "bp of yield"}
     state = {
         "generated_at": store.now_iso(), "as_of": today, "repo": cfg.get("repo"),
         "starting_capital_usd": cap, "start_date": str(cfg["start_date"]), "assumptions": cfg.get("assumptions", []),

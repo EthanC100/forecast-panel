@@ -10,6 +10,8 @@ Question ids understood for market and AI lookups and automatic resolution:
                       Claude's probability from gold-events, outcome from tension_questions.yaml)
     pm:<market id>    a Polymarket market (price and, once closed, outcome from the Gamma API)
     ks:<ticker>       a Kalshi market (last price and, once settled, result)
+    hz:<R>.<asset>.<date>  a question on Horizons' view of that date: does a long position in the
+                      region's bond, currency or gold gain by the view's horizon end (from the series)
 """
 
 from __future__ import annotations
@@ -70,7 +72,11 @@ def market_probability(qid: str | None) -> dict | None:
 
 def ai_probability(qid: str | None) -> dict | None:
     """Claude's probability: the AI brief's latest judgement for scenario questions (sc:<id>),
-    gold-events' forward log for forecast-panel questions (q1..q5)."""
+    Horizons' view for hz: questions, gold-events' forward log for forecast-panel questions (q1..q5)."""
+    if qid and qid.startswith("hz:"):
+        from terminal import horizons
+        h = next((x for x in horizons.load().get("history", []) if x.get("question_id") == qid and x.get("p_long") is not None), None)
+        return {"prob": h["p_long"], "source": f"Horizons' view ({h['date']})", "as_of": h["date"]} if h else None
     if qid and qid.startswith("sc:"):
         from terminal import brief
         return brief.ai_probability(qid)
@@ -91,6 +97,9 @@ def auto_outcome(qid: str | None) -> dict | None:
     if not qid:
         return None
     try:
+        if qid.startswith("hz:"):
+            from terminal import horizons
+            return horizons.hz_outcome(qid)
         if qid.lower().startswith("q"):
             from forecast_panel.questions import load_questions
             for q in load_questions():
