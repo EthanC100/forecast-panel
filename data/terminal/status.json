@@ -226,8 +226,8 @@
    "country": "US",
    "error": null,
    "fallback_for": null,
-   "last_attempt": "2026-10-30T04:17:58Z",
-   "last_success": "2026-10-30T04:17:58Z",
+   "last_attempt": "2026-10-30T05:02:45Z",
+   "last_success": "2026-10-30T05:02:45Z",
    "n_series": 12,
    "name": "FRED API (US rates, dollar, EUR/USD, VIX, Brent, iron ore, soy, Fed/ECB rates)",
    "note": null,
@@ -254,7 +254,7 @@
    "country": "US",
    "error": null,
    "fallback_for": "fred_api",
-   "last_attempt": "2026-10-30T04:18:03Z",
+   "last_attempt": "2026-10-30T05:02:49Z",
    "last_success": "2026-10-29T15:57:52Z",
    "n_series": 4,
    "name": "FRED public graph CSV (fallback)",
@@ -421,5 +421,5 @@
    "state": "missing_secret"
   }
  },
- "updated_at": "2026-10-30T05:02:15Z"
+ "updated_at": "2026-10-30T05:02:49Z"
 }
