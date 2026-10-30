@@ -279,6 +279,8 @@ def build_snapshot(fetch_headlines: bool = True) -> dict:
         if d.get("id") == "b3":
             degraded["br.di"] = d.get("effect")
     prev = _read(SNAPSHOT)
+    if prev and prev.get("date") == store.today():  # a second run today compares with the last earlier day
+        prev = _read(PREV_SNAPSHOT)
     items = [x for x in (series_item(s, degraded) for s in _series_ids(summary)) if x]
     scen = scenario_items()
     items += calendar_items(cfg["calendar_days"], {x["event"] for x in scen if x.get("event")}) + scen + market_items(summary)
