@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-29T16:20:43Z",
- "as_of": "2026-10-29",
+ "generated_at": "2026-10-30T02:39:33Z",
+ "as_of": "2026-10-30",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
  "start_date": "2026-10-29",
@@ -43,8 +43,8 @@
    "country": "MX",
    "series": "mx.usdmxn.fix",
    "proxy": false,
-   "value": 18.6673,
-   "date": "2026-10-28",
+   "value": 18.8148,
+   "date": "2026-10-29",
    "close_utc": "18:30",
    "low_frequency": false,
    "note": null,
@@ -221,16 +221,12 @@
    "country": "US",
    "series": "us.ust10y",
    "proxy": false,
-   "value": 4.99,
-   "date": "2026-10-27",
+   "value": 5.05,
+   "date": "2026-10-28",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": null,
-   "degraded": {
-    "id": "fred",
-    "effect": "Same FRED series, read from the public fredgraph.csv download. Values are identical; there is no vintage/revision metadata and the endpoint is rate-limited more tightly.",
-    "upgrade": "add the FRED_API_KEY secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
-   },
+   "degraded": null,
    "scale": 100.0,
    "favourable": -1,
    "rate_usd": null,
@@ -249,6 +245,10 @@
   "curve": [
    [
     "2026-10-29",
+    100000.0
+   ],
+   [
+    "2026-10-30",
     100000.0
    ]
   ],
@@ -280,10 +280,10 @@
    "description": "long USD",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-29",
+    "from": "2025-10-30",
     "to": "2026-10-28",
-    "pnl_usd": -10968.46,
-    "return_pct": -10.97
+    "pnl_usd": -11750.66,
+    "return_pct": -11.75
    }
   },
   {
@@ -294,10 +294,10 @@
    "description": "long USD",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-29",
-    "to": "2026-10-28",
-    "pnl_usd": -1724.27,
-    "return_pct": -1.72
+    "from": "2025-10-30",
+    "to": "2026-10-29",
+    "pnl_usd": -1644.32,
+    "return_pct": -1.64
    }
   },
   {
@@ -322,10 +322,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-29",
+    "from": "2025-10-30",
     "to": "2026-10-28",
-    "pnl_usd": -6380.0,
-    "return_pct": -6.38
+    "pnl_usd": -5775.0,
+    "return_pct": -5.78
    }
   },
   {
@@ -336,10 +336,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-29",
+    "from": "2025-10-30",
     "to": "2026-10-28",
-    "pnl_usd": 259.85,
-    "return_pct": 0.26
+    "pnl_usd": 290.28,
+    "return_pct": 0.29
    }
   },
   {
@@ -350,10 +350,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-29",
+    "from": "2025-10-30",
     "to": "2026-10-28",
-    "pnl_usd": -4914.35,
-    "return_pct": -4.91
+    "pnl_usd": -4682.35,
+    "return_pct": -4.68
    }
   },
   {
@@ -364,10 +364,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-29",
+    "from": "2025-10-30",
     "to": "2026-10-28",
-    "pnl_usd": -7298.4,
-    "return_pct": -7.3
+    "pnl_usd": -6832.65,
+    "return_pct": -6.83
    }
   },
   {
@@ -392,10 +392,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-29",
-    "to": "2026-10-27",
-    "pnl_usd": -7280.0,
-    "return_pct": -7.28
+    "from": "2025-10-30",
+    "to": "2026-10-28",
+    "pnl_usd": -7520.0,
+    "return_pct": -7.52
    }
   }
  ],

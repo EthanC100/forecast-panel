@@ -4,20 +4,20 @@
  "country": "US",
  "unit": "%",
  "frequency": "daily",
- "source": "FRED (public graph CSV)",
+ "source": "FRED API",
  "source_id": "FRED DGS10",
- "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+ "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=DGS10",
  "key": [
   "date"
  ],
  "fields": [
   "value"
  ],
- "fetched_at": "2026-10-29T15:57:52Z",
- "updated_at": "2026-10-29T12:55:45Z",
- "n": 16190,
+ "fetched_at": "2026-10-30T02:39:31Z",
+ "updated_at": "2026-10-30T02:39:31Z",
+ "n": 16191,
  "first": "1962-01-02",
- "last": "2026-10-27",
+ "last": "2026-10-28",
  "history": [
   ["1962-01-02",4.06],
   ["1962-01-03",4.03],
@@ -16208,6 +16208,7 @@
   ["2026-10-22",4.96],
   ["2026-10-23",5.0],
   ["2026-10-26",5.0],
-  ["2026-10-27",4.99]
+  ["2026-10-27",4.99],
+  ["2026-10-28",5.05]
  ]
 }

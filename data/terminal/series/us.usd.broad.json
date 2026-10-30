@@ -4,16 +4,16 @@
  "country": "US",
  "unit": "index Jan-2006=100",
  "frequency": "daily",
- "source": "FRED (public graph CSV)",
+ "source": "FRED API",
  "source_id": "FRED DTWEXBGS",
- "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
+ "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXBGS",
  "key": [
   "date"
  ],
  "fields": [
   "value"
  ],
- "fetched_at": "2026-10-29T15:57:53Z",
+ "fetched_at": "2026-10-30T02:39:31Z",
  "updated_at": "2026-10-29T12:55:46Z",
  "n": 5217,
  "first": "2006-01-02",

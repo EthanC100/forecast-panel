@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T01:57:45Z",
+ "generated_at": "2026-10-30T02:39:37Z",
  "gauges": [
   {
    "id": "a",
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14146, SR14151 (median, sd for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14146,SR14151,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-29T15:57:43Z",
+      "fetched_at": "2026-10-30T02:39:28Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {

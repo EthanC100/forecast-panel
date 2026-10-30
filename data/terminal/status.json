@@ -30,22 +30,22 @@
   },
   "banxico_api": {
    "country": "MX",
-   "error": "secret BANXICO_TOKEN is not set",
+   "error": "KeyError: 'ids'",
    "fallback_for": null,
-   "last_attempt": "2026-10-29T15:57:39Z",
+   "last_attempt": "2026-10-30T02:39:24Z",
    "name": "Banxico SIE API",
    "note": "skipped; add the secret under Settings > Secrets and variables > Actions",
    "release": "FIX daily ~12:00 CDMX; survey 1st business day",
    "secret": "BANXICO_TOKEN",
-   "secret_present": false,
-   "state": "missing_secret"
+   "secret_present": true,
+   "state": "error"
   },
   "banxico_public": {
    "country": "MX",
    "error": null,
    "fallback_for": "banxico_api",
-   "last_attempt": "2026-10-29T15:57:39Z",
-   "last_success": "2026-10-29T15:57:39Z",
+   "last_attempt": "2026-10-30T02:39:25Z",
+   "last_success": "2026-10-30T02:39:25Z",
    "n_series": 8,
    "name": "Banxico SIE public chart data (fallback)",
    "note": null,
@@ -180,25 +180,33 @@
   },
   "fred_api": {
    "country": "US",
-   "error": "secret FRED_API_KEY is not set",
+   "error": null,
    "fallback_for": null,
-   "last_attempt": "2026-10-29T15:57:52Z",
+   "last_attempt": "2026-10-30T02:39:31Z",
+   "last_success": "2026-10-30T02:39:31Z",
+   "n_series": 4,
    "name": "FRED API (US 10y, dollar, Mexico 10y)",
-   "note": "skipped; add the secret under Settings > Secrets and variables > Actions",
+   "note": null,
    "release": "daily",
    "secret": "FRED_API_KEY",
-   "secret_present": false,
-   "state": "missing_secret"
+   "secret_present": true,
+   "series": [
+    "us.ust10y",
+    "us.usd.broad",
+    "mx.10y.oecd_m",
+    "us.fedfunds"
+   ],
+   "state": "ok"
   },
   "fred_public": {
    "country": "US",
    "error": null,
    "fallback_for": "fred_api",
-   "last_attempt": "2026-10-29T15:57:52Z",
+   "last_attempt": "2026-10-30T02:39:32Z",
    "last_success": "2026-10-29T15:57:52Z",
    "n_series": 4,
    "name": "FRED public graph CSV (fallback)",
-   "note": null,
+   "note": "not needed: fred_api succeeded this run",
    "release": "daily",
    "secret": null,
    "secret_present": null,
@@ -208,7 +216,7 @@
     "mx.10y.oecd_m",
     "us.fedfunds"
    ],
-   "state": "ok"
+   "state": "standby"
   },
   "kalshi": {
    "country": "GLOBAL",
@@ -361,5 +369,5 @@
    "state": "missing_secret"
   }
  },
- "updated_at": "2026-10-29T16:04:42Z"
+ "updated_at": "2026-10-30T02:39:32Z"
 }

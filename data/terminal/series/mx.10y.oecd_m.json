@@ -4,16 +4,16 @@
  "country": "MX",
  "unit": "%",
  "frequency": "monthly",
- "source": "FRED (public graph CSV)",
+ "source": "FRED API",
  "source_id": "FRED IRLTLT01MXM156N",
- "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IRLTLT01MXM156N",
+ "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=IRLTLT01MXM156N",
  "key": [
   "date"
  ],
  "fields": [
   "value"
  ],
- "fetched_at": "2026-10-29T15:57:53Z",
+ "fetched_at": "2026-10-30T02:39:32Z",
  "updated_at": "2026-10-29T12:55:46Z",
  "n": 237,
  "first": "2001-07-01",
