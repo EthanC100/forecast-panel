@@ -12,6 +12,7 @@ import csv
 import datetime as dt
 import io
 import re
+import time
 
 from terminal import store
 from terminal.http import get
@@ -24,6 +25,7 @@ METALS = {
     "gl.gold": {"stooq": "xauusd", "lbma": "gold_pm", "yahoo": "GC=F", "name": "Gold spot", "unit": "USD per troy ounce"},
     "gl.silver": {"stooq": "xagusd", "lbma": "silver", "yahoo": "SI=F", "name": "Silver spot", "unit": "USD per troy ounce"},
 }
+YAHOO_FROM = 946684800      # 2000-01-01 UTC, when GC=F's daily history starts
 YAHOO = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}"
 STOOQ = "https://stooq.com/q/d/l/"
 LBMA = "https://prices.lbma.org.uk/json/{file}.json"
@@ -101,11 +103,18 @@ def yahoo() -> list[str]:
     out = []
     for sid, m in METALS.items():
         url = YAHOO.format(sym=m["yahoo"])
-        r = get(url, params={"range": "max", "interval": "1d"}, timeout=60)
+        # explicit start and end: with range=max Yahoo silently returns monthly bars
+        r = get(url, params={"period1": YAHOO_FROM, "period2": int(time.time()), "interval": "1d"}, timeout=60)
+        data = r.json()
+        gran = ((((data.get("chart") or {}).get("result") or [{}])[0] or {}).get("meta") or {}).get("dataGranularity")
+        if gran not in (None, "1d"):
+            raise RuntimeError(f"Yahoo returned {gran} bars for {m['yahoo']}, not daily")
+        rows = parse_yahoo(data)
         name = ("Gold" if sid == "gl.gold" else "Silver") + " (COMEX front-month futures, " + m["yahoo"] + ")"
         meta = _meta(sid, "Yahoo Finance chart data (COMEX front-month futures)", f"Yahoo {m['yahoo']}", url, name)
         meta["note"] = "Front-month futures settle close to spot but roll each contract month; not the LBMA spot benchmark."
-        store.save_series(meta, parse_yahoo(r.json()))
+        # a complete daily download replaces whatever was stored over the same dates
+        store.save_series(meta, rows, replace_from=rows[0][0] if len(rows) > 1000 else None)
         out.append(sid)
     return out
 

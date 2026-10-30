@@ -84,16 +84,20 @@ def _dump(meta: dict, history: list[list]) -> str:
     return body + ',\n "history": [\n' + lines + "\n ]\n}\n"
 
 
-def save_series(meta: dict, rows: list, key_len: int = 1) -> dict:
+def save_series(meta: dict, rows: list, key_len: int = 1, replace_from: str | None = None) -> dict:
     """Merge ``rows`` into the stored history of ``meta['id']`` and write the file.
 
     ``rows`` are sequences whose first ``key_len`` items are the key (date, or date + ref).
-    Values for keys already stored are overwritten; other stored keys are kept.
+    Values for keys already stored are overwritten; other stored keys are kept, except that with
+    ``replace_from`` stored rows dated on or after it are dropped first (a complete download
+    replacing what an earlier, coarser one stored).
     """
     sid = meta["id"]
     old = load_series(sid) or {}
     merged: dict[tuple, list] = {}
     for r in old.get("history", []):
+        if replace_from and str(r[0]) >= replace_from:
+            continue
         merged[tuple(r[:key_len])] = list(r)
     changed = False
     for r in rows:
