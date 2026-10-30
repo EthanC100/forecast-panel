@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T08:23:39Z",
+ "generated_at": "2026-10-30T10:34:52Z",
  "as_of": "2026-10-30",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
@@ -118,8 +118,8 @@
    "country": "BR",
    "series": "br.td.pre_longest",
    "proxy": false,
-   "value": 14.93,
-   "date": "2026-10-28",
+   "value": 15.06,
+   "date": "2026-10-29",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged.",
@@ -140,8 +140,8 @@
    "country": "BR",
    "series": "br.di.f27.proxy",
    "proxy": true,
-   "value": 13.54,
-   "date": "2026-10-28",
+   "value": 13.51,
+   "date": "2026-10-29",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
@@ -166,8 +166,8 @@
    "country": "BR",
    "series": "br.di.f29.proxy",
    "proxy": true,
-   "value": 14.94,
-   "date": "2026-10-28",
+   "value": 14.86,
+   "date": "2026-10-29",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
@@ -192,8 +192,8 @@
    "country": "BR",
    "series": "br.di.f31.proxy",
    "proxy": true,
-   "value": 15.1,
-   "date": "2026-10-28",
+   "value": 15.17,
+   "date": "2026-10-29",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
@@ -264,18 +264,14 @@
    "name": "Gold (XAU/USD)",
    "kind": "price",
    "country": "GLOBAL",
-   "series": "gl.gold.wb_m",
+   "series": "gl.gold",
    "proxy": false,
-   "value": 4319.0,
-   "date": "2026-09-30",
+   "value": 3993.8999,
+   "date": "2026-10-30",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot gold in US dollars per ounce. Falls back to the World Bank's monthly average (low frequency) when no daily price is available.",
-   "degraded": {
-    "id": "gold",
-    "effect": "Monthly average prices from the World Bank instead of daily spot: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old.",
-    "upgrade": "none to add: Stooq and LBMA refuse automated requests from some networks; the book and the Gold page switch back to daily prices by themselves on the first run either answers"
-   },
+   "degraded": null,
    "scale": null,
    "favourable": 1,
    "rate_usd": "us.fed.upper",
@@ -290,18 +286,14 @@
    "name": "Silver (XAG/USD)",
    "kind": "price",
    "country": "GLOBAL",
-   "series": "gl.silver.wb_m",
+   "series": "gl.silver",
    "proxy": false,
-   "value": 64.6,
-   "date": "2026-09-30",
+   "value": 50.615,
+   "date": "2026-10-30",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot silver in US dollars per ounce. Falls back to the World Bank's monthly average when no daily price is available.",
-   "degraded": {
-    "id": "gold",
-    "effect": "Monthly average prices from the World Bank instead of daily spot: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old.",
-    "upgrade": "none to add: Stooq and LBMA refuse automated requests from some networks; the book and the Gold page switch back to daily prices by themselves on the first run either answers"
-   },
+   "degraded": null,
    "scale": null,
    "favourable": 1,
    "rate_usd": "us.fed.upper",
@@ -412,9 +404,9 @@
    "since_start": null,
    "last_12m": {
     "from": "2025-10-30",
-    "to": "2026-10-28",
-    "pnl_usd": -5775.0,
-    "return_pct": -5.78
+    "to": "2026-10-29",
+    "pnl_usd": -6490.0,
+    "return_pct": -6.49
    }
   },
   {
@@ -426,9 +418,9 @@
    "since_start": null,
    "last_12m": {
     "from": "2025-10-30",
-    "to": "2026-10-28",
-    "pnl_usd": 290.28,
-    "return_pct": 0.29
+    "to": "2026-10-29",
+    "pnl_usd": 321.38,
+    "return_pct": 0.32
    }
   },
   {
@@ -440,9 +432,9 @@
    "since_start": null,
    "last_12m": {
     "from": "2025-10-30",
-    "to": "2026-10-28",
-    "pnl_usd": -4682.35,
-    "return_pct": -4.68
+    "to": "2026-10-29",
+    "pnl_usd": -4458.04,
+    "return_pct": -4.46
    }
   },
   {
@@ -454,9 +446,9 @@
    "since_start": null,
    "last_12m": {
     "from": "2025-10-30",
-    "to": "2026-10-28",
-    "pnl_usd": -6832.65,
-    "return_pct": -6.83
+    "to": "2026-10-29",
+    "pnl_usd": -7151.51,
+    "return_pct": -7.15
    }
   },
   {
@@ -490,29 +482,29 @@
   {
    "code": "XAUUSD",
    "name": "Gold (XAU/USD)",
-   "series": "gl.gold.wb_m",
+   "series": "gl.gold",
    "proxy": false,
    "description": "long gold",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-31",
-    "to": "2026-09-30",
-    "pnl_usd": 2915.07,
-    "return_pct": 2.92
+    "from": "2025-11-01",
+    "to": "2026-10-30",
+    "pnl_usd": -9972.99,
+    "return_pct": -9.97
    }
   },
   {
    "code": "XAGUSD",
    "name": "Silver (XAG/USD)",
-   "series": "gl.silver.wb_m",
+   "series": "gl.silver",
    "proxy": false,
    "description": "long silver",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-31",
-    "to": "2026-09-30",
-    "pnl_usd": 27252.56,
-    "return_pct": 27.25
+    "from": "2025-11-01",
+    "to": "2026-10-30",
+    "pnl_usd": -14169.12,
+    "return_pct": -14.17
    }
   }
  ],

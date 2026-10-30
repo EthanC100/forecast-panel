@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T08:23:38Z",
+ "generated_at": "2026-10-30T10:34:51Z",
  "horizon": "2027-10-31",
  "events": [
   {
@@ -215,7 +215,14 @@
    "note": "Next review date from the AFT ratings table (fetched 2026-10-30).",
    "origin": "aft",
    "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
-   "attention": null,
+   "attention": {
+    "score": 1.593,
+    "share_30d": 6.843849187389755e-05,
+    "share_12m": 4.2964810725239604e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Standard\" France rating"
+   },
    "under_attended": false
   },
   {
@@ -353,7 +360,14 @@
    "note": "Constitution art. 47: if Parliament has not decided within 70 days of the bill being tabled, the budget can be enacted by ordinance. The PLF 2027 was filed at the National Assembly on 1 Oct 2026 (Senate legislative file, as recorded in em-macro), so day 70 is 10 Dec 2026.",
    "origin": "manual",
    "id": "2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
-   "attention": null,
+   "attention": {
+    "score": 3.476,
+    "share_30d": 8.845352251626383e-05,
+    "share_12m": 2.5448387891103458e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "France budget \"National Assembly\""
+   },
    "under_attended": false
   },
   {
@@ -8833,7 +8847,7 @@
  "notes": [
   "France: no censure motion is scheduled as of 2026-10-29. Motions are voted 48 hours after they are filed; add one here when it is tabled.",
   "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml.",
-  "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values."
+  "GDELT attention refresh stopped at its 9-minute budget; remaining queries keep their last values."
  ],
  "attention_definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away",
  "sources": {

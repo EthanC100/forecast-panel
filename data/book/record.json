@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T08:23:39Z",
+ "generated_at": "2026-10-30T10:34:53Z",
  "questions": {
   "n_resolved": 0,
   "n_ai_only": 0,
@@ -469,64 +469,5 @@
   },
   "rows": [],
   "min_group": 10
- },
- "horizons": {
-  "label": "Horizons' view, not financial advice",
-  "n_views": 0,
-  "n_open": 0,
-  "n_no_view": 0,
-  "n_resolved": 0,
-  "noisy": true,
-  "min_group": 10,
-  "min_overall": 100,
-  "overall": {
-   "n": 0,
-   "insufficient": true
-  },
-  "by_region": [
-   {
-    "group": "BR",
-    "n": 0,
-    "insufficient": true
-   },
-   {
-    "group": "MX",
-    "n": 0,
-    "insufficient": true
-   },
-   {
-    "group": "FR",
-    "n": 0,
-    "insufficient": true
-   },
-   {
-    "group": "GOLD",
-    "n": 0,
-    "insufficient": true
-   }
-  ],
-  "by_asset": [
-   {
-    "group": "bond",
-    "n": 0,
-    "insufficient": true
-   },
-   {
-    "group": "currency",
-    "n": 0,
-    "insufficient": true
-   },
-   {
-    "group": "gold",
-    "n": 0,
-    "insufficient": true
-   }
-  ],
-  "definition": "p_long = the view's probability that a long position gains by the horizon end; Brier and log scores as for my calls; hit = the lean pointed the right way.",
-  "vs_me": {
-   "n": 0,
-   "insufficient": true
-  },
-  "items": []
  }
 }

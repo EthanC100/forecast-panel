@@ -1,44 +1,48 @@
 {
- "generated_at": "2026-10-30T08:23:47Z",
+ "generated_at": "2026-10-30T10:35:01Z",
  "as_of": "2026-10-30",
  "prices": {
   "gold": {
-   "value": 4319.0,
-   "date": "2026-09-30",
-   "series": "gl.gold.wb_m",
-   "source": "World Bank Commodity Price Data (Pink Sheet)",
-   "source_id": "CMO monthly: Gold",
-   "url": "https://www.worldbank.org/en/research/commodity-markets",
-   "frequency": "monthly",
-   "degraded": "No daily price is stored (Stooq and LBMA unreachable), so this is the World Bank's monthly average.",
+   "value": 3993.8999,
+   "date": "2026-10-30",
+   "series": "gl.gold",
+   "source": "Yahoo Finance chart data (COMEX front-month futures)",
+   "source_id": "Yahoo GC=F",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F",
+   "frequency": "daily",
+   "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": null,
-   "chg_1m_pct": -2.09,
-   "chg_1y_pct": 17.75,
-   "z_1y": -0.4,
-   "high_1y": 5020.0,
-   "low_1y": 4058.0,
-   "history_from": "1960-01-31"
+   "chg_1w_pct": -0.93,
+   "chg_1m_pct": -4.61,
+   "chg_1y_pct": -0.07,
+   "z_1y": -1.18,
+   "high_1y": 4745.1001,
+   "low_1y": 3993.8999,
+   "history_from": "2000-09-01"
   },
   "silver": {
-   "value": 64.6,
-   "date": "2026-09-30",
-   "series": "gl.silver.wb_m",
-   "source": "World Bank Commodity Price Data (Pink Sheet)",
-   "source_id": "CMO monthly: Silver",
-   "url": "https://www.worldbank.org/en/research/commodity-markets",
-   "frequency": "monthly",
-   "degraded": "No daily price is stored (Stooq and LBMA unreachable), so this is the World Bank's monthly average.",
+   "value": 50.615,
+   "date": "2026-10-30",
+   "series": "gl.silver",
+   "source": "Yahoo Finance chart data (COMEX front-month futures)",
+   "source_id": "Yahoo SI=F",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SI=F",
+   "frequency": "daily",
+   "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": null,
-   "chg_1m_pct": -1.22,
-   "chg_1y_pct": 50.93,
-   "z_1y": -0.31,
-   "high_1y": 92.1,
-   "low_1y": 49.4,
-   "history_from": "1960-01-31"
+   "chg_1w_pct": -3.02,
+   "chg_1m_pct": -15.78,
+   "chg_1y_pct": 5.46,
+   "z_1y": -1.36,
+   "high_1y": 78.29,
+   "low_1y": 50.615,
+   "history_from": "2000-09-01"
   },
-  "ratio": null
+  "ratio": {
+   "value": 78.9,
+   "date": "2026-10-30",
+   "meaning": "Ounces of silver one ounce of gold buys. It rises when investors prefer gold's safety to silver's industrial demand."
+  }
  },
  "drivers": [
   {
@@ -176,17 +180,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": 12.65,
-    "silver_pct_1m": 0.79,
-    "gold_pct_6m": 10.93,
-    "silver_pct_6m": -10.03,
-    "gold_pct_24m": -14.05,
-    "silver_pct_24m": -42.22,
+    "gold_pct_1m": -11.38,
+    "silver_pct_1m": -27.96,
+    "gold_pct_6m": -6.49,
+    "silver_pct_6m": -17.07,
+    "gold_pct_24m": -23.65,
+    "silver_pct_24m": -43.73,
     "real_yield_bp_6m": -41.0,
     "dollar_pct_6m": 2.76,
     "cb_tonnes_12m": 453.1
    },
-   "basis": "monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -303,15 +307,15 @@
    "moves": {
     "gold_pct_1m": -1.56,
     "silver_pct_1m": -4.94,
-    "gold_pct_6m": 23.01,
-    "silver_pct_6m": 1.23,
+    "gold_pct_6m": 23.78,
+    "silver_pct_6m": 7.19,
     "gold_pct_24m": null,
     "silver_pct_24m": null,
     "real_yield_bp_6m": 1.0,
     "dollar_pct_6m": -2.05,
     "cb_tonnes_12m": 269.2
    },
-   "basis": "monthly averages",
+   "basis": "daily and monthly averages",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   },
   {
@@ -330,17 +334,17 @@
     }
    ],
    "moves": {
-    "gold_pct_1m": 9.33,
-    "silver_pct_1m": 4.55,
-    "gold_pct_6m": 26.13,
-    "silver_pct_6m": 22.4,
+    "gold_pct_1m": 1.28,
+    "silver_pct_1m": -2.83,
+    "gold_pct_6m": 17.09,
+    "silver_pct_6m": 13.77,
     "gold_pct_24m": null,
     "silver_pct_24m": null,
     "real_yield_bp_6m": -22.0,
     "dollar_pct_6m": -7.77,
     "cb_tonnes_12m": 259.0
    },
-   "basis": "monthly averages",
+   "basis": "daily",
    "note": "Moves are measured from the last price before the start date. They show what followed, not what caused it."
   }
  ],

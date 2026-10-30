@@ -122,7 +122,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -134,7 +134,8 @@
      6.585590727488255e-05
     ]
    ],
-   "last_success": "2026-10-29T13:57:28Z"
+   "last_success": "2026-10-29T13:57:28Z",
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "France budget \"National Assembly\"": {
    "country": "FR",
@@ -144,9 +145,16 @@
      137.0,
      1548836.0,
      8.845352251626383e-05
+    ],
+    [
+     "2026-10-30",
+     137.0,
+     1548836.0,
+     8.845352251626383e-05,
+     2.5448387891103458e-05
     ]
    ],
-   "last_success": "2026-10-29T13:57:46Z"
+   "last_success": "2026-10-30T10:32:25Z"
   },
   "Brazil budget Congress": {
    "country": "BR",
@@ -160,8 +168,16 @@
   },
   "\"Standard\" France rating": {
    "country": "FR",
-   "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "history": [
+    [
+     "2026-10-30",
+     106.0,
+     1548836.0,
+     6.843849187389755e-05,
+     4.2964810725239604e-05
+    ]
+   ],
+   "last_success": "2026-10-30T10:27:11Z"
   },
   "Mexico 2027 budget Chamber of Deputies": {
    "country": "MX",
@@ -169,6 +185,6 @@
    "error": "RuntimeError: GDELT 200: Your search contained a keyword that was too short.\n"
   }
  },
- "updated_at": "2026-10-30T08:23:38Z",
+ "updated_at": "2026-10-30T10:34:51Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
