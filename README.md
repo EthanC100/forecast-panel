@@ -1,8 +1,14 @@
-# Catalyst: macro research for France, Brazil and Mexico
+# Catalyst and Horizons: macro research for France, Brazil, Mexico and gold
 
-**Catalyst** is a macro research app for **France, Brazil and Mexico**, published at
-**https://ethanc100.github.io/forecast-panel/**. The original forecast panel lives on under the
-**Lab** link (https://ethanc100.github.io/forecast-panel/lab/).
+Two apps share one data pipeline:
+
+- **Catalyst**, at **https://ethanc100.github.io/forecast-panel/**, is the research terminal. Its
+  design and pages are frozen at the git tag `catalyst-v1`; the only later shared change it shows
+  is the comprehensive AI brief. The original forecast panel lives on under the **Lab** link
+  (https://ethanc100.github.io/forecast-panel/lab/).
+- **Horizons**, at **https://ethanc100.github.io/forecast-panel/horizons/**, is a second installable
+  app. It reads the same data files, with no pipeline of its own, and explains everything as it
+  goes (see [Horizons](#horizons) below).
 
 All five phases are built: **1** the data spine and the catalyst calendar, **2** the paper book,
 judgement forms and scoring, **3** scenario pages and the crowd module, **4** the daily AI brief,
@@ -82,6 +88,72 @@ Record > **Track record**:
 - **Trades.** Results in **R**, where 1R is the loss you set to your stop. Total R is split into
   price, carry and cost. It is compared with the systematic strategy and buy-and-hold over the same
   period, with hit rate and average win and loss by instrument and by thesis type.
+
+## Horizons
+
+**https://ethanc100.github.io/forecast-panel/horizons/** (`site/horizons/`). An installable web app
+with its own manifest, icon and service worker; on the home screen it is called "Horizons". The
+icon is a rising half-sun of five overlapping translucent circles (warm red, bright yellow, coral
+pink, bright blue, fresh green) above a horizon line, on a soft white rounded square. It reads the
+same files as Catalyst under `data/`; nothing is computed twice.
+
+Horizons is not a simplified Catalyst. It shows the same depth and explains it, and it gives a view:
+what is happening, why it matters, what followed similar situations before, and what Horizons would
+do.
+
+- **Explain mode** (menu ☰): **Full** (the default) puts "what this shows / how to read it / what to
+  look for right now" under every chart and table. It also explains each technical term inline the
+  first time it appears on a page. **Light** keeps only "what to look for right now". **Off** shows
+  clean data. Every dotted term can be tapped for its definition in any mode; the glossary is in
+  `site/horizons/hz-terms.js`.
+- **Help:**
+  - A welcome walkthrough on first open covers bonds, currencies and gold, how each makes or loses
+    money, catalysts, the scores, and a worked call and paper trade. It is shown once, then lives in
+    the menu.
+  - Short lessons use live data: carry, spreads, duration, why currencies fall in crises, elections,
+    fiscal policy, how to read each chart, crowd signals and the economic schools. Each ends with one
+    question.
+- **Home:**
+  - the full brief per region, facts and judgement apart;
+  - cards for Brazil, Mexico, France and Gold, each with status, Horizons' view and the next event;
+  - the nearest major catalyst without a call from you;
+  - open paper trades with P&L, and reminders.
+- **Country pages** (Brazil, Mexico, France) are a full policy playbook:
+  - the story now (from the brief);
+  - the government's approach on an interventionist-to-orthodox scale, with sources;
+  - what happened last time: past episodes at home and in the region, with inflation, growth, the
+    currency and 10-year yields 6 and 24 months later, from stored data or cited sources. These
+    show what followed, not proof of cause;
+  - what each school would say: Keynesian, Monetarist, Austrian, Supply-side and MMT, citing
+    published writing only;
+  - everything Catalyst shows for the country, explained;
+  - Horizons' view.
+- **Gold:**
+  - gold and silver prices;
+  - the drivers with current readings: real yields, the dollar, geopolitical risk and central-bank
+    buying;
+  - the frozen gold-events model's weekly expected move;
+  - past episodes, including the 2024 US election and the 2025 rally;
+  - upcoming US political and Fed events, including the 3 Nov 2026 midterms;
+  - Horizons' view, and "Make a gold call".
+
+  Gold (XAUUSD) and silver (XAGUSD) are in the shared paper book.
+- **Calendar, Scenarios, Crowd, Record:** the same content as Catalyst, explained, with the same
+  forms and scoring. Horizons' view is scored like any forecaster.
+- **Ask Claude** (bottom bar, and on every page) copies a clear text package of the page to the
+  clipboard: key data with dates, the brief section, Horizons' view, your calls and a suggested
+  opening question. It then opens the Claude app (`claude://`), or claude.ai if the app doesn't
+  open, so you can paste and ask with your own subscription. It makes no API calls.
+- **Design:**
+  - Separate pops of saturated colour, never a spectrum or stripes. Each country and section has
+    its own colour: Brazil yellow, Mexico coral, France blue, Gold orange, Calendar violet,
+    Scenarios cyan, Record plum.
+  - Soft translucent cards with overlapping colour shapes, animated progress rings, large type,
+    light and dark mode.
+  - Green and red are used only for your gains and losses, always with + or −. Market moves are
+    shown with a sign in neutral ink.
+- **Storage:** browser keys `horizons.*` and service-worker caches `horizons-*`. Catalyst keeps
+  `terminal.*` and `prism-*`, and each app clears only its own caches.
 
 ## The site
 
@@ -442,34 +514,56 @@ spending cap live in `data/terminal/inputs/brief.yaml`; country primers in `inpu
    dispersion (`disp:`), 20 to 40 headlines from GDELT and official press pages (`h:`, each with its
    URL), em-macro's findings (`em:`), the evidence badges (`badge:`) and the primers (`primer:`).
    Your own calls and probabilities are stripped before anything reaches a model.
-2. **Facts** (daily, the cheapest current Claude model): what changed since the last brief, from the
-   snapshot only, every fact citing ids. JSON via structured outputs.
-3. **Judgement** (Mondays, and on days within 3 days of an importance-3 catalyst; a mid-tier
-   current Claude model): for every open scenario question, a probability in 5% steps starting from
-   the page's base rate, up to three factors with their ids, what would change the view, confidence,
-   and the single most likely way it is wrong. One request per question; all six share a cached
-   prefix (role: a sceptical EM sovereign strategist looking for where consensus shares an error,
-   the primers, em-macro's findings, the badges, the snapshot and the day's facts).
+   Also: consensus forecasts (`fc:`), the policy tracker (`pol:`), independent fiscal assessments
+   (`fa:`), gold and silver, US real yields, geopolitical risk and central-bank gold buying (`s:`),
+   the gold-events model's expected weekly move (`gold:model`), US political and Fed events
+   (`gev:`) and the past episodes on the playbook and gold pages (`ep:`, background only).
+2. **Facts** (daily, a cost-efficient current Claude model). Per region (Brazil, Mexico, France,
+   gold): every material political, fiscal, central-bank and market development since the last
+   brief, with the numbers; what changed against a week ago; and the three facts that matter most
+   overall. From the snapshot only, every fact citing ids. The next 30 days of events per region
+   come straight from the calendar, not from a model.
+3. **Judgement** (Mondays, a stronger current Claude model). Per region: why the developments
+   matter for bonds and the currency (or gold), what to watch at each event in the next 30 days,
+   key risks, the consensus and where it might be wrong, and **Horizons' view** (below). For every
+   open scenario question: a probability in 5% steps from the page's base rate, up to three factors
+   with their ids, what would change the view, confidence and the most likely way it is wrong. On a
+   day within 3 days of an importance-3 catalyst it re-runs for that catalyst's region and its
+   questions only; everything else is carried from the last run. The requests share a cached
+   prefix (role, primers, research, badges, episodes, the snapshot and the day's facts).
 4. **Validation.** Every number in the output must match a snapshot value within rounding, every
-   cited id must exist, branch probabilities must sum to 100 and the YES branches to P(yes). A fact
-   with no source moves to the judgement side. Anything else that fails is published exactly as
-   written under a red **Unverified** banner, with the failing lines marked, never quietly fixed.
-5. **Display.** Facts and judgement sit in visibly separate boxes (the judgement box is dashed and
-   labelled "the model's opinion, not fact"). On scenario pages the AI column and the AI judgement
-   card stay hidden until you have made a call on that question; there is no reveal button. The
-   AI's probability is also recorded at entry on new calls for `sc:` questions, like the market's.
+   cited id must exist, branch probabilities must sum to 100 and the YES branches to P(yes), each
+   "what to watch" must name an event in that region's next 30 days. A fact with no source moves to
+   the judgement side. Anything else that fails is published exactly as written under a red
+   **Unverified** banner, with the failing lines marked, never quietly fixed.
+5. **Display.** Catalyst's Today card shows the three lines; `#brief/<date>` shows every region
+   with facts and judgement in visibly separate boxes (the judgement box is dashed and labelled
+   "the model's opinion, not fact"). On scenario pages the AI column and the AI judgement card stay
+   hidden until you have made a call on that question. The AI's probability is also recorded at
+   entry on new calls for `sc:` questions, like the market's.
 6. **Cost.** Batch API first (half price); if a batch has not ended after 40 minutes it is
-   cancelled and the rest goes through the standard API. Every call's tokens and dollars go into
-   `data/terminal/brief/spend.json` by month. At or above **$8** in a calendar month (or if a
-   judgement would take the month past it) only the facts step runs. The Today card shows the
-   month's spend against the cap.
+   cancelled and the rest goes through the standard API (where, if the judgement model declines, the
+   API may re-run the request on a fallback model). Every call's tokens and dollars go into
+   `data/terminal/brief/spend.json` by month. At or above **$15** in a calendar month (or if a
+   judgement would take the month past it) only the facts step runs: no judgement, no Horizons'
+   views.
 
-**Expected cost** (batch rates from brief.yaml, measured on the first run, 30 Oct 2026): the facts
-step read 26,501 tokens and wrote 2,067, $0.002. The judgement wrote the shared 34,005-token prefix
-to the one-hour cache once, read it five times, and wrote 900 to 2,300 tokens per question: $0.12
-for six questions. The schedule gives about 12 judgement days a month over the next quarter (13
-importance-3 catalysts plus Mondays), so **about $1.50 a month**; if no cache read ever landed it
-would be about $0.45 a run, **about $5.50 a month at worst**, still under the $8 cap.
+**Horizons' view** (`terminal/horizons.py`, `data/terminal/horizons/views.json`). In the weekly
+judgement, per region: lean long, lean short or no view on the 10-year bond and the currency
+(Brazil: 10-year Tesouro yield, USD/BRL; Mexico: 10-year M bono, USD/MXN; France: the OAT-Bund
+spread, EUR/USD) and on gold, over 4 to 13 weeks, with p = the probability the leaned way wins
+(5% steps, at least 50), confidence, up to three cited reasons, the past episode it most resembles,
+the main risk and what would change it. Labelled "Horizons' view, not financial advice". Each view
+is scored when its horizon passes, from the series, as the question "does a long position gain?";
+the track record (`record.json` → `horizons`) shows Brier, log score and hit rate with counts, and
+your calls on the same `hz:<region>.<asset>.<date>` questions side by side.
+
+**Expected cost** (`spend.json` → `expected_month_usd`, recomputed on every run from the snapshot
+size, the prices in brief.yaml and the calendar). On 30 Oct 2026: facts **$0.12** a month (about
+$0.004 a day), weekly judgement **$3.94** (10 requests, a 46,000-token shared prefix, about $0.92 a
+week), catalyst re-runs **$4.95** (9 days in the next 30), assessments under $0.01: **about $9 a
+month** against the $15 cap. Output is assumed at 5,000 tokens per judgement request including
+thinking; the first runs' actual usage is logged next to the estimate.
 
 **Headline sources.** BCB press notes (Atom), USTR (RSS), the Assemblée nationale sitting reports
 (RSS), SHCP (gob.mx list), Banco de México, Tesouro Nacional and Agence France Trésor (list pages),
@@ -494,7 +588,7 @@ the median moved over the last three months.
 - **Discovery:** for each body the job finds the latest publication (`inputs/assessments.yaml`) and reads it (HTML or PDF).
 - **Summary:** the cheapest current Claude model writes two or three lines, the key number and the date.
 - **Validation:** the brief's rules apply. Every number must appear in the document (decimal comma or point), and the year must match. A failing summary shows a red **unverified** mark with its problems.
-- **Spend:** counted in the brief's spend file, under the same $8 cap.
+- **Spend:** counted in the brief's spend file, under the same $15 cap.
 - **Access limits:**
   - IFI's report pages sit behind a browser security check, but its PDFs in the Senate's digital library are open.
   - When a newer report is listed but can't be read, the card says so and links it.

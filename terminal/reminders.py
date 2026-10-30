@@ -62,7 +62,7 @@ def _z_move(inst_code: str, cfg: dict, fill: dict) -> tuple[float, float, int] |
     after = [(d, v) for d, v in obs if d > fill["entry_date"]]
     if len(before) < 30 or not after:
         return None
-    if inst.kind == "fx":
+    if inst.kind in ("fx", "price"):
         ch = [100 * (b / a - 1) for a, b in zip(before, before[1:])]
         move = 100 * (after[-1][1] / fill["entry_value"] - 1)
     else:
@@ -144,7 +144,7 @@ def active(today: str | None = None) -> list[dict]:
             z = None
         if z and abs(z[0]) > 2:
             way = "up" if z[0] > 0 else "down"
-            unit = "%" if cfg["instruments"][op["instrument"]]["kind"] == "fx" else ""
+            unit = "%" if cfg["instruments"][op["instrument"]]["kind"] in ("fx", "price") else ""
             out.append({"key": f"move:{tid}:{way}", "kind": "move",
                         "title": f"{op['instrument']} moved {z[0]:+.1f} sd since {tid} opened",
                         "body": f"{op['instrument']} has moved {z[1]:+.3g}{unit} in {z[2]} closes since entry on {v['fill']['entry_date']} "

@@ -24,6 +24,7 @@ FRED = [
     ("mx.10y.oecd_m", "IRLTLT01MXM156N", "Mexico 10-year government yield (monthly, context)", "MX", "%", "monthly"),
     ("us.fedfunds", "DFF", "US effective federal funds rate (USD leg of FX carry)", "US", "% p.a.", "daily"),
     # external drivers
+    ("us.tips10", "DFII10", "US 10-year real yield (TIPS, constant maturity)", "US", "%", "daily"),
     ("us.ust2y", "DGS2", "US 2-year Treasury yield", "US", "%", "daily"),
     ("us.vix", "VIXCLS", "VIX (CBOE volatility index)", "US", "index", "daily"),
     ("us.fed.upper", "DFEDTARU", "Fed funds target range, upper limit", "US", "% p.a.", "daily"),

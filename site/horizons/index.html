@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Horizons</title>
+<meta name="description" content="Horizons: Brazil, Mexico, France and gold, explained. Bonds, currencies, catalysts, scenarios and your track record, with plain-English explanations and a weekly view.">
+<meta name="theme-color" content="#FDFBF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14151F" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Horizons">
+<meta name="application-name" content="Horizons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="hz.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i></div>
+<header class="top">
+  <a class="brand" href="#home" aria-label="Horizons home"><img src="icons/icon-96.png" alt="" width="34" height="34"><span>Horizons</span></a>
+  <nav class="places" aria-label="Countries and gold">
+    <a href="#country/BR" class="pl c-BR">Brazil</a><a href="#country/MX" class="pl c-MX">Mexico</a><a href="#country/FR" class="pl c-FR">France</a><a href="#gold" class="pl c-GOLD">Gold</a>
+  </nav>
+  <button id="menu" class="iconbtn" type="button" aria-label="Menu: help and settings" aria-haspopup="true">☰</button>
+</header>
+<div id="offline" class="offline" role="status">Offline: showing the last data this phone saw.</div>
+<main id="app" tabindex="-1"></main>
+<nav class="bar" aria-label="Main">
+  <a href="#home" data-p="home"><span class="ico i-home" aria-hidden="true"></span>Home</a>
+  <a href="#calendar" data-p="calendar"><span class="ico i-cal" aria-hidden="true"></span>Calendar</a>
+  <a href="#scenarios" data-p="scenarios"><span class="ico i-scen" aria-hidden="true"></span>Scenarios</a>
+  <a href="#record" data-p="record"><span class="ico i-rec" aria-hidden="true"></span>Record</a>
+  <button type="button" id="ask" class="ask"><span class="ico i-ask" aria-hidden="true"></span>Ask Claude</button>
+</nav>
+<div id="sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px">Horizons needs JavaScript.</p></noscript>
+<script src="hz.js"></script>
+</body>
+</html>

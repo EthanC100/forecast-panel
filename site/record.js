@@ -178,7 +178,7 @@
     f.append(...nn(el("div", { class: "sec" }, el("h1", {}, "Size a trade"), el("a", { class: "small", href: "#record/portfolio" }, "portfolio →")), body));
     load().then(() => T.need("charts")).then(() => {
       if (R.err) throw new Error("book data not found: " + R.err);
-      const b = R.book, codes = Object.keys(b.instruments); code = codes.includes((code || "").toUpperCase()) ? code.toUpperCase() : codes[0];
+      const b = R.book, codes = Object.keys(b.instruments).filter((k) => b.instruments[k].kind !== "price"); code = codes.includes((code || "").toUpperCase()) ? code.toUpperCase() : codes[0];
       const st = { code, dir: params.get("direction") || "long", entry: null, stop: params.get("stop") ? +params.get("stop") : null, target: params.get("target") ? +params.get("target") : null,
         risk: 1, days: params.get("horizon") ? Math.max(1, T.daysUntil(params.get("horizon"))) : 30, link: params.get("link") || "" };
       const out = el("div"), form = el("div", { class: "calc" });

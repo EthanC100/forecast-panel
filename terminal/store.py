@@ -55,6 +55,8 @@ def _clean(v):
     if isinstance(v, float):
         if math.isnan(v) or math.isinf(v):
             return None
+        if 0 < abs(v) < 1e-3:          # old currencies in today's units (e.g. cruzeiros in reais): keep 6 significant figures
+            return float(f"{v:.6g}")
         return round(v, 6)
     return v
 

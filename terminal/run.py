@@ -139,6 +139,16 @@ def main(argv=None) -> int:
             drivers.build()
         except Exception as exc:  # noqa: BLE001
             log.warning("external drivers not rebuilt: %s", exc)
+        try:
+            from terminal import gold
+            gold.build()
+        except Exception as exc:  # noqa: BLE001
+            log.warning("gold page not rebuilt: %s", exc)
+        try:
+            from terminal import playbook
+            playbook.build()
+        except Exception as exc:  # noqa: BLE001
+            log.warning("policy playbook not rebuilt: %s", exc)
     if a.cmd == "snapshot":
         from terminal import brief
         log.info("snapshot: %s", brief.build_snapshot(fetch_headlines=not a.no_headlines)["counts"])

@@ -15,6 +15,9 @@ Groups: catalyst type (election, budget, rating, central bank, trade, other), my
 confidence, and lead time (forecast made 90+, 30-90 or under 30 days before resolution).
 Blend: a 50/50 average of me and the AI, shown once 20 shared questions have resolved.
 
+Horizons' view: its weekly leans scored like any forecaster (terminal/horizons.py), and against my
+calls on the same hz: questions.
+
 Trades: P&L per unit of risk (R = P&L / risk to the stop at entry, after costs), split into price,
 carry and cost; the book against em-macro's systematic strategy and buy-and-hold over the same
 period; hit rate and average win and loss by instrument and by thesis type.
@@ -285,7 +288,15 @@ def trades_record() -> dict:
 
 
 def build() -> dict:
+    from terminal import horizons
     rec = {"generated_at": store.now_iso(), "questions": questions_record(), "trades": trades_record()}
+    try:
+        st = horizons.load()
+        if st.get("history"):
+            horizons.PATH.write_text(json.dumps(horizons.resolve(st), ensure_ascii=False, indent=1) + "\n")
+        rec["horizons"] = horizons.score(_read(BOOK / "judgements.json", {"questions": []}).get("questions", []))
+    except Exception as exc:  # noqa: BLE001
+        rec["horizons"] = {"error": str(exc)}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(rec, ensure_ascii=False, indent=1, default=str) + "\n")
     return rec

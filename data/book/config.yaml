@@ -12,6 +12,7 @@ assumptions:
   - "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows)."
   - "Duration: 8 years for the US 10-year and the France-Germany spread, 5.5 years for Brazil's and Mexico's 10-year positions. Brazil's NTN-F and Mexico's Mbonos pay coupons near 10-13% (and yield 9-15%), so their modified duration is about 5-6 years, not the 8 of a low-coupon US or euro bond; using 8 would overstate their P&L by about 45%. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry."
   - "No carry or roll-down on bond and spread positions."
+  - "Gold and silver (XAUUSD, XAGUSD): spot in US dollars per troy ounce; long = long the metal. P&L = direction x notional x (P_t - P_0) / P_0. Metals pay no interest, so a long pays the US funding rate (Fed funds target, upper limit) on the notional, actual/360, and a short earns it."
   - "Costs are a full round trip charged at entry, so open P&L is liquidation value: FX a percentage of notional, bonds a yield amount times duration times notional."
   - "Sizing by risk: notional = risk amount / loss per unit of notional between the entry close and the stop (costs excluded)."
 
@@ -108,3 +109,21 @@ instruments:
     close_utc: "21:00"
     duration: 8                   # on-the-run 10-year Treasury: ~8 years
     cost_round_trip_bp: 1
+  XAUUSD:
+    name: Gold (XAU/USD)
+    country: GLOBAL
+    kind: price
+    series: [gl.gold, gl.gold.wb_m]
+    close_utc: "21:00"            # Stooq daily close (New York evening); the LBMA PM price is set at 15:00 London
+    rate_usd: us.fed.upper        # funding cost of holding the metal
+    cost_round_trip_pct: 0.10     # assumption: spot bid-offer plus slippage for a retail-size order (about $4 an ounce at $4,300)
+    note: "Spot gold in US dollars per ounce. Falls back to the World Bank's monthly average (low frequency) when no daily price is available."
+  XAGUSD:
+    name: Silver (XAG/USD)
+    country: GLOBAL
+    kind: price
+    series: [gl.silver, gl.silver.wb_m]
+    close_utc: "21:00"
+    rate_usd: us.fed.upper
+    cost_round_trip_pct: 0.20     # assumption: silver spot is less liquid than gold, so twice the gold cost
+    note: "Spot silver in US dollars per ounce. Falls back to the World Bank's monthly average when no daily price is available."

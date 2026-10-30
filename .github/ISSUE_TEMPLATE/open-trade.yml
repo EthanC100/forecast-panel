@@ -7,10 +7,10 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: '**Entry is the first close published after you submit; you never choose the price.** Instruments: `USDBRL`, `USDMXN`, `EURUSD`, `OATBUND`, `BR10Y`, `DI27`, `DI29`, `DI31`, `MX10Y` (low frequency), `US10Y`.
+    value: '**Entry is the first close published after you submit; you never choose the price.** Instruments: `USDBRL`, `USDMXN`, `EURUSD`, `OATBUND`, `BR10Y`, `DI27`, `DI29`, `DI31`, `MX10Y` (low frequency), `US10Y`, `XAUUSD` (gold), `XAGUSD` (silver).
 
 
-      Long FX = long USD (for `EURUSD`, long = long EUR). Long a bond/DI = gains when the yield falls. Long `OATBUND` = long OAT vs Bund, gains when the spread narrows. Levels are in the instrument''s units: FX rate, yield in %, spread in bp. A warning is added if the loss to your stop exceeds 2% of equity.'
+      Long FX = long USD (for `EURUSD`, long = long EUR). Long a bond/DI = gains when the yield falls. Long `OATBUND` = long OAT vs Bund, gains when the spread narrows. Long `XAUUSD` (gold) or `XAGUSD` (silver) = long the metal, gains when its dollar price rises; a long pays US funding (carry). Levels are in the instrument''s units: FX rate, yield in %, spread in bp, metal price in USD per ounce. A warning is added if the loss to your stop exceeds 2% of equity.'
 - type: input
   id: instrument
   attributes:

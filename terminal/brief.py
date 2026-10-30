@@ -1,5 +1,5 @@
-"""AI brief (Phase 4): a daily snapshot, a cheap extraction of what changed, a weekly judgement,
-and a validator that refuses to trust either without checking.
+"""AI brief: a daily snapshot, a cost-efficient extraction of the facts per region, a weekly
+judgement with Horizons' views, and a validator that refuses to trust either without checking.
 
     snapshot    data/terminal/brief/snapshot.json   every item has an id the model must cite:
                 s:<series>      latest data point, previous observation, one-week change
@@ -8,16 +8,23 @@ and a validator that refuses to trust either without checking.
                                 without your own probabilities
                 pm:/ks:<id>     prediction-market odds
                 cot:<series>    CFTC positioning      disp:<n>   survey dispersion
+                fc:/pol:/fa:    consensus forecasts, the policy tracker, fiscal assessments
+                gold:model      gold-events' expected weekly move    gev:<event>  US events for gold
                 h:<hash>        headlines (GDELT and official press pages), each with its URL
                 em:<n>          em-macro findings     badge:<g>  evidence badges
-                primer:<cc>     country primers
-    extraction  daily, cheapest model: what changed since the last brief, every fact citing ids
-    judgement   weekly (and within 3 days of an importance-3 catalyst), mid-tier model: one
-                request per open scenario question sharing a cached prefix; never sees your calls
+                primer:<cc>     country primers       ep:<id>    past episodes (background)
+    extraction  daily, cost-efficient model: per region (BR, MX, FR, GOLD) every material
+                development since the last brief and what changed against a week ago, plus the
+                three facts that matter most; the next 30 days of events come from the calendar
+    judgement   weekly, stronger model: per region why it matters, what to watch, risks, consensus
+                and where it might be wrong, and Horizons' view (terminal/horizons.py); one request
+                per open scenario question. Within 3 days of an importance-3 catalyst it re-runs for
+                that catalyst's region only. Never sees your calls.
     validation  every number must match a snapshot value within rounding and every id must exist.
                 Facts without a source move to the judgement side; anything else that fails is
                 published as it is under a red "unverified" banner.
-    spend       data/terminal/brief/spend.json; above the monthly cap only extraction runs.
+    spend       data/terminal/brief/spend.json, with the expected monthly cost; above the monthly
+                cap only extraction runs (no judgement, no views).
 
 Batch API first (half price); if a batch has not ended within the configured time it is
 cancelled and the remaining requests go through the standard API.
@@ -54,6 +61,10 @@ SITE = "https://ethanc100.github.io/forecast-panel/"
 GRID = list(range(0, 101, 5))
 # withheld from the model: anything that carries your own probabilities or calls
 PRIVATE_KEYS = {"mine", "p_mine", "asymmetry", "calculator", "p_ai", "ai"}
+REGIONS = {"BR": "Brazil", "MX": "Mexico", "FR": "France", "GOLD": "Gold (with US rates, the dollar, the Fed and US politics)"}
+GOLD_SERIES = ["gl.gold", "gl.silver", "us.tips10", "gl.gpr", "gl.cbgold", "us.ust2y", "us.vix", "us.fed.upper", "eu.eurusd"]
+UPCOMING_DAYS = 30
+BACKGROUND = ("primer", "research", "evidence_badge", "episode")
 
 
 def conf() -> dict:
@@ -91,7 +102,7 @@ def _series_ids(summary: dict) -> list[str]:
                 break
     for c in summary.get("countries", {}).values():
         ids += [ch["series"] for ch in c.get("charts", [])]
-    ids += ["us.ust10y", "us.usd.broad", "us.fedfunds", "de.bund10y"]
+    ids += ["us.ust10y", "us.usd.broad", "us.fedfunds", "de.bund10y"] + GOLD_SERIES
     seen, out = set(), []
     for i in ids:
         if i not in seen and store.series_path(i).exists():
@@ -269,6 +280,77 @@ def primer_items() -> list[dict]:
     return [{"id": f"primer:{cc}", "kind": "primer", "country": cc, **v} for cc, v in p.items()]
 
 
+def consensus_items() -> list[dict]:
+    """Consensus forecasts (fc:), the policy tracker (pol:) and independent fiscal assessments (fa:)."""
+    c = _read(store.DATA / "consensus.json", {}) or {}
+    out = []
+    for rows in (c.get("forecasts") or {}).values():
+        for r in rows:
+            out.append(_strip_private({"id": r["id"], "kind": "consensus", "country": r.get("country"), "label": r.get("label"), "year": r.get("year"),
+                                       "unit": r.get("unit"), "median": r.get("median"), "min": r.get("min"), "max": r.get("max"),
+                                       "dispersion": r.get("dispersion"), "respondents": r.get("respondents"), "change_3m": r.get("change_3m"),
+                                       "as_of": r.get("as_of"), "source": r.get("source")}))
+    for rows in (c.get("policies") or {}).values():
+        for p in rows:
+            out.append({"id": f"pol:{p['id']}", "kind": "policy", "country": p.get("country"), "name": p.get("name"), "what": (p.get("what") or "").strip(),
+                        "claim": ((p.get("claim") or {}).get("text") or "").strip(), "assessment_by": (p.get("assessment") or {}).get("by"),
+                        "assessment": ((p.get("assessment") or {}).get("text") or "").strip(), "status": p.get("status"),
+                        "next": (p.get("next") or {}).get("title"), "next_date": (p.get("next") or {}).get("date"),
+                        "url": ((p.get("assessment") or {}).get("source") or {}).get("url")})
+    for a in (c.get("assessments") or {}).get("items", []):
+        if a.get("status") == "ok" and a.get("summary"):
+            out.append({"id": f"fa:{a['id']}", "kind": "assessment", "country": a.get("country"), "name": a.get("name"), "title": a.get("title"),
+                        "date": a.get("date") or a.get("listed_date"), "summary": a.get("summary"), "url": a.get("url")})
+    return out
+
+
+def gold_items() -> list[dict]:
+    """The frozen gold model's weekly expected move (gold:model) and US political and Fed events (gev:)."""
+    g = _read(store.DATA / "gold.json")
+    if not g:
+        return []
+    out = []
+    m = g.get("model") or {}
+    if m.get("available"):
+        out.append({"id": "gold:model", "kind": "model", "country": "GOLD", "name": "gold-events frozen model: expected 5-day move",
+                    "log_date": m.get("log_date"), "version": m.get("version"), "data_as_of": m.get("data_as_of"),
+                    "pred_gold_5d_pct": m.get("pred_gold_5d_pct"), "pred_silver_5d_pct": m.get("pred_silver_5d_pct"),
+                    "note": m.get("note"), "url": m.get("scorecard_url") or m.get("source_url")})
+    today = dt.date.today()
+    for i, e in enumerate(g.get("upcoming") or [], 1):
+        try:
+            days = (dt.date.fromisoformat(e["date"]) - today).days
+        except (KeyError, ValueError):
+            continue
+        if days < 0:
+            continue
+        slug = re.sub(r"[^a-z0-9]+", "-", (e.get("title") or str(i)).lower()).strip("-")[:40]
+        out.append({"id": f"gev:{e['date']}-{slug}", "kind": "event", "country": "US", "region": "GOLD", "date": e["date"], "days_to": days,
+                    "title": e.get("title"), "type": e.get("kind"), "importance": e.get("importance"), "note": e.get("what_to_watch"),
+                    "url": e.get("source_url")})
+    return out
+
+
+def episode_items() -> list[dict]:
+    """Past episodes (playbook and gold pages), as background for 'which past episode does this resemble'."""
+    out, seen = [], set()
+    pb = _read(store.DATA / "playbook.json", {}) or {}
+    eps = [e for c in (pb.get("countries") or {}).values() for e in c.get("episodes", [])] + list(pb.get("regional") or [])
+    eps += list((_read(store.DATA / "gold.json", {}) or {}).get("episodes") or [])
+    for e in eps:
+        if not e.get("id") or e["id"] in seen:
+            continue
+        seen.add(e["id"])
+        out.append({"id": f"ep:{e['id']}", "kind": "episode", "country": e.get("country") or ("GOLD" if "gold" in str(e.get("id")) else None),
+                    "name": e.get("name"), "start": e.get("start"), "end": e.get("end"), "type": e.get("kind"),
+                    "summary": (e.get("summary") or "")[:500], "outcomes": e.get("outcomes") or e.get("moves")})
+    return out
+
+
+def episode_ids(items: list[dict]) -> set[str]:
+    return {x["id"][3:] for x in items if x["kind"] == "episode"}
+
+
 def build_snapshot(fetch_headlines: bool = True) -> dict:
     cfg = conf()["snapshot"]
     summary = _read(store.DATA / "summary.json", {})
@@ -293,7 +375,9 @@ def build_snapshot(fetch_headlines: bool = True) -> dict:
                 items.append({"id": m["id"], "kind": "market", "country": sc_item["country"], "venue": m["venue"], "question": m["question"],
                               "yes_pct": m["yes_pct"], "volume": m.get("volume"), "scenario": sc_item["id"], "url": m.get("url")})
     cot, disp = crowd_items()
-    items += cot + disp
+    items += cot + disp + consensus_items()
+    have = {x["id"] for x in items}
+    items += [x for x in gold_items() if x["id"] not in have]
     heads, head_status = [], []
     if fetch_headlines:
         from terminal import headlines
@@ -301,7 +385,7 @@ def build_snapshot(fetch_headlines: bool = True) -> dict:
         heads = [{**h, "kind": "headline"} for h in heads]
     elif prev:
         heads = [x for x in prev["items"] if x["kind"] == "headline"]
-    items += heads + em_items() + badge_items() + primer_items()
+    items += heads + em_items() + badge_items() + primer_items() + episode_items()
     notes = []
     if fetch_headlines and len(heads) < cfg["headlines_min"]:
         notes.append(f"Only {len(heads)} headlines today (target {cfg['headlines_min']}-{cfg['headlines_max']}); sources that failed are listed.")
@@ -338,7 +422,7 @@ NUM = re.compile(r"(?<![\w.])[-+−]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?")
 
 def _scrub(text: str) -> str:
     """Remove dates, years and ids so only quantities are checked."""
-    t = re.sub(r"\b(?:s|ev|sc|pm|ks|cot|disp|h|em|badge|primer):[\w.\-]+", " ", text)
+    t = re.sub(r"\b(?:s|ev|sc|pm|ks|cot|disp|h|em|badge|primer|fc|pol|fa|gold|gev|ep|hz):[\w.\-]+", " ", text)
     t = re.sub(r"\b\d{4}-\d{2}(?:-\d{2})?\b", " ", t)
     t = re.sub(rf"\b\d{{1,2}}(?:st|nd|rd|th)?(?:\s*[-–]\s*\d{{1,2}})?\s+{MONTHS}", " ", t, flags=re.I)
     t = re.sub(rf"\b{MONTHS}\s+\d{{1,2}}(?:st|nd|rd|th)?\b", " ", t, flags=re.I)
@@ -437,42 +521,106 @@ def validate_judgement(j: dict, sc: dict, index: dict[str, dict], all_values: se
 # Prompts
 # --------------------------------------------------------------------------
 
-def _compact(items: list[dict], drop=("url", "frequency")) -> str:
-    return "\n".join(json.dumps({k: v for k, v in x.items() if k not in drop and v not in (None, [], "")},
-                                ensure_ascii=False, separators=(",", ":"), sort_keys=True) for x in items)
+def validate_report(data: dict, index: dict[str, dict]) -> tuple[dict, list[dict], list[dict], list[str]]:
+    """The extraction's per-region report: (regions, top three, moved_to_judgement, problems)."""
+    regions, moved, problems = {}, [], []
+    for r in REGIONS:
+        got = (data.get("regions") or {}).get(r) or {}
+        out = {}
+        for part in ("developments", "week_change"):
+            kept, mv, p = validate_facts(got.get(part) or [], index)
+            out[part] = kept
+            moved += [{**m, "region": r} for m in mv]
+            problems += [f"{r} {part.replace('_', ' ')}: {x}" for x in p]
+        regions[r] = out
+    top, mv, p = validate_facts(data.get("top") or [], index)
+    moved += mv
+    problems += [f"Top three: {x}" for x in p]
+    return regions, top[:3], moved, problems
 
 
-EXTRACTION_SYSTEM = """You write the factual half of a daily research brief on France, Brazil and Mexico sovereign debt and currencies.
+def upcoming_for(snap: dict, region: str, days: int = UPCOMING_DAYS) -> list[dict]:
+    """Events in the next ``days`` for a region, from the snapshot (data, not model output). Gold
+    takes US and global events."""
+    want = {"GOLD": ("US", "GLOBAL")}.get(region, (region,))
+    out = []
+    for x in snap["items"]:
+        if x["kind"] != "event" or x.get("days_to") is None or not 0 <= x["days_to"] <= days:
+            continue
+        if x.get("region") == region or (x.get("region") is None and x.get("country") in want):
+            out.append({"event_id": x["id"], "date": x["date"], "days_to": x["days_to"], "title": x.get("title"),
+                        "importance": x.get("importance"), "status": x.get("status"), "source_ids": [x["id"]]})
+    return sorted(out, key=lambda e: (e["date"], -(e.get("importance") or 0)))
 
-You get today's snapshot: one JSON object per line, each with an "id". Report what changed since the last brief (the snapshot says when that was). Changes include: data points with a new observation (compare value with prev_value, or with last_brief_value when present), new or moved calendar events in the next two weeks, market odds that moved, new positioning or survey readings, and new headlines from official press pages and news.
+
+def validate_region(j: dict, region: str, upcoming: list[dict], index: dict[str, dict], all_values: set[float],
+                    episodes: set[str]) -> list[str]:
+    """Checks on one region's judgement: ids exist, numbers are snapshot values, events are this
+    region's next 30 days, and each view passes the view rules."""
+    from terminal import horizons
+    probs = []
+    ids = [i for k in ("why_it_matters", "risks") for x in j.get(k) or [] for i in x.get("source_ids", [])]
+    ids += list((j.get("consensus") or {}).get("source_ids") or [])
+    probs += [f"unknown source id {i}" for i in ids if i not in index]
+    allowed = {e["event_id"] for e in upcoming}
+    probs += [f"event {w.get('event_id')} is not in this region's next {UPCOMING_DAYS} days" for w in j.get("watch") or []
+              if w.get("event_id") not in allowed]
+    texts = [x.get("text", "") for k in ("why_it_matters", "risks") for x in j.get(k) or []]
+    texts += [w.get("what_to_watch", "") for w in j.get("watch") or []] + [(j.get("consensus") or {}).get("view", ""), j.get("might_be_wrong", "")]
+    own = {float(v["p"]) for v in j.get("views") or [] if isinstance(v.get("p"), (int, float))}
+    for t in texts:
+        probs += check_text(t, all_values | own)
+    want = set(horizons.ASSETS[region])
+    got = [v.get("asset") for v in j.get("views") or []]
+    if sorted(got) != sorted(want):
+        probs.append(f"views for {sorted(got)}, expected one each for {sorted(want)}")
+    return probs
+
+
+EXTRACTION_SYSTEM = """You write the factual half of a daily research brief on the sovereign bonds and currencies of Brazil, Mexico and France, and on gold.
+
+You get today's snapshot: one JSON object per line, each with an "id". Write a report per region:
+  BR Brazil, MX Mexico, FR France, GOLD gold (gold and silver prices, US real rates, the dollar, the Fed, US politics, geopolitical risk, central-bank gold buying, the gold model).
+
+For each region:
+- developments: every material political, fiscal, central-bank and market development since the last brief, with the numbers. kind is one of political, fiscal, central_bank, market, data. Cover data points with a new observation (compare value with prev_value or last_brief_value), policy decisions, budget and fiscal news, ratings, prediction-market odds that moved, positioning and survey readings, consensus or assessment changes, and new headlines from official press pages and news. Complete coverage, concise writing: merge closely related items into one sentence; leave out what did not change.
+- week_change: what is different from a week ago, using week_ago_value, change_1w, change_pct_1w or change_bp_1w where items have them. Up to five sentences.
+Then top: the three facts that matter most across all regions, one sentence each.
 
 Rules:
 - Use only the snapshot. Every fact cites the id or ids it comes from in source_ids, copied exactly from an item's "id" field (never built from other fields).
-- Every number you write must be copied from the cited items (value, prev_value, change, change_pct, change_bp, yes_pct, change_pp_since_last_brief, percentile, and so on), rounded if you like. Do not compute new numbers. Dates are fine.
-- One fact per item or tight group of items, one sentence each, plain words, no adjectives about importance, no forecasts, no opinions.
+- Every number you write must be copied from the cited items (value, prev_value, week_ago_value, change, change_pct, change_bp, change_1w, change_pct_1w, change_bp_1w, yes_pct, change_pp_since_last_brief, median, percentile, and so on), rounded if you like. Do not compute new numbers. Dates are fine.
+- One sentence per fact, plain words, no adjectives about importance, no forecasts, no opinions, no explanations of why it matters (that is the judgement's job).
 - A headline is a fact only about what was said or published, never about whether it is true.
-- Order by importance for sovereign risk and currencies: official decisions and data first, then markets, then news.
-- Between 6 and 15 facts. If little changed, say so with fewer facts rather than padding.
+- Order each list by importance for sovereign risk, currencies and gold: official decisions and data first, then markets, then news.
+- If little changed in a region, say less rather than padding; an empty list is fine.
 - Items marked "degraded" come from a fallback source; mention that when you use them."""
 
-EXTRACTION_SCHEMA = {
-    "type": "object", "additionalProperties": False, "required": ["facts"],
-    "properties": {"facts": {"type": "array", "items": {
-        "type": "object", "additionalProperties": False, "required": ["text", "source_ids", "country", "kind"],
+_FACT = {"type": "object", "additionalProperties": False, "required": ["text", "source_ids"],
+         "properties": {"text": {"type": "string"}, "source_ids": {"type": "array", "items": {"type": "string"}}}}
+_DEV = {"type": "object", "additionalProperties": False, "required": ["text", "source_ids", "kind"],
         "properties": {"text": {"type": "string"}, "source_ids": {"type": "array", "items": {"type": "string"}},
-                       "country": {"type": "string", "enum": ["FR", "BR", "MX", "US", "GLOBAL"]},
-                       "kind": {"type": "string", "enum": ["data", "event", "market", "positioning", "survey", "headline", "scenario"]}}}}}}
+                       "kind": {"type": "string", "enum": ["political", "fiscal", "central_bank", "market", "data"]}}}
+_REGION_FACTS = {"type": "object", "additionalProperties": False, "required": ["developments", "week_change"],
+                 "properties": {"developments": {"type": "array", "items": _DEV}, "week_change": {"type": "array", "items": _FACT}}}
+EXTRACTION_SCHEMA = {
+    "type": "object", "additionalProperties": False, "required": ["top", "regions"],
+    "properties": {"top": {"type": "array", "items": _FACT},
+                   "regions": {"type": "object", "additionalProperties": False, "required": list(REGIONS),
+                               "properties": {r: _REGION_FACTS for r in REGIONS}}}}
 
-JUDGEMENT_ROLE = """You are a sceptical EM sovereign strategist looking for where consensus shares an error.
+JUDGEMENT_ROLE = """You are a sceptical sovereign-debt, currency and gold strategist looking for where consensus shares an error. You write the judgement half of a research brief on Brazil, Mexico, France and gold. Facts were written separately and validated; you interpret them.
 
-You give probabilities on open questions about France, Brazil and Mexico. Method, every time:
+Each request asks for one of two things:
+(A) A probability on an open scenario question. Method, every time:
 1. Start from the stated base rate on the question's scenario page (base_rate). If the page has no computed base rate, say so and name the starting point you use instead (the reference class you think fits, or the market price as a last resort).
 2. Move from there only for reasons in the snapshot or the facts list. Up to three factors, each citing the ids it rests on, copied exactly from an item's "id" field (market rows on scenario pages have their own ids).
 3. Ask where the crowd (markets, surveys, positioning, consensus headlines) might be making the same mistake, and whether the evidence badges say a signal is worth anything. Untested or tested_no_lead signals deserve little weight.
 4. Probabilities in 5% steps. Branch probabilities sum to 100 and the YES branches sum to P(yes).
 5. Say what would change your view, how confident you are, and the single most likely way you are wrong.
+(B) A region note and Horizons' view for one region: why the developments matter for its bonds and currency (or for gold), what to watch at each event in the next 30 days, key risks, the current consensus (surveys, forecasts, market pricing) and where it might be wrong, then a 1-3 month lean on each listed instrument: long, short or none, with p = the probability, in 5% steps and at least 50, that the instrument moves the leaned way by the end of your horizon (4 to 13 weeks). Say "none" when the evidence does not point either way; a lean you would not bet on is not a lean. Name the past episode (ep: items, give the id without "ep:") it most resembles and why, or leave it empty if none fits; the main risk; and what would change the view. This is a research opinion published as "Horizons' view, not financial advice".
 
-Every number you write in text must be a value from the snapshot or the facts list (or your own probabilities). Do not write adjustment sizes such as "+10pp"; the structured fields carry your probabilities. Dates are fine. Prefer plain words to jargon."""
+Every number you write in text must be a value from the snapshot or the facts list (or your own probabilities). Do not write adjustment sizes such as "+10pp" or invent targets. Dates are fine. Cite ids exactly as written. Prefer plain words to jargon; the reader is learning."""
 
 JUDGEMENT_SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -493,9 +641,45 @@ JUDGEMENT_SCHEMA = {
         "most_likely_wrong": {"type": "string"},
         "source_ids": {"type": "array", "items": {"type": "string"}}}}
 
+_IDS = {"type": "array", "items": {"type": "string"}}
+_VIEW = {"type": "object", "additionalProperties": False,
+         "required": ["asset", "lean", "p", "confidence", "horizon_weeks", "reasons", "resembles", "main_risk", "would_change", "source_ids"],
+         "properties": {"asset": {"type": "string", "enum": ["bond", "currency", "gold"]},
+                        "lean": {"type": "string", "enum": ["long", "short", "none"]},
+                        "p": {"type": "integer", "enum": GRID, "description": "0 when lean is none"},
+                        "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+                        "horizon_weeks": {"type": "integer", "enum": list(range(4, 14))},
+                        "reasons": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["text", "source_ids"],
+                                                                "properties": {"text": {"type": "string"}, "source_ids": _IDS}}},
+                        "resembles": {"type": "object", "additionalProperties": False, "required": ["episode_id", "why"],
+                                      "properties": {"episode_id": {"type": "string"}, "why": {"type": "string"}}},
+                        "main_risk": {"type": "string"}, "would_change": {"type": "string"}, "source_ids": _IDS}}
+_CITED = {"type": "object", "additionalProperties": False, "required": ["text", "source_ids"],
+          "properties": {"text": {"type": "string"}, "source_ids": _IDS}}
+REGION_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "required": ["why_it_matters", "watch", "risks", "consensus", "might_be_wrong", "views"],
+    "properties": {
+        "why_it_matters": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["text", "for", "source_ids"],
+                                                       "properties": {"text": {"type": "string"},
+                                                                      "for": {"type": "string", "enum": ["bonds", "currency", "gold"]},
+                                                                      "source_ids": _IDS}}},
+        "watch": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["event_id", "what_to_watch"],
+                                              "properties": {"event_id": {"type": "string"}, "what_to_watch": {"type": "string"}}}},
+        "risks": {"type": "array", "items": _CITED},
+        "consensus": {"type": "object", "additionalProperties": False, "required": ["view", "source_ids"],
+                      "properties": {"view": {"type": "string"}, "source_ids": _IDS}},
+        "might_be_wrong": {"type": "string"},
+        "views": {"type": "array", "items": _VIEW}}}
+
+
+def _compact(items: list[dict], drop=("url", "frequency")) -> str:
+    return "\n".join(json.dumps({k: v for k, v in x.items() if k not in drop and v not in (None, [], "")},
+                                ensure_ascii=False, separators=(",", ":"), sort_keys=True) for x in items)
+
 
 def extraction_params(cfg: dict, snap: dict) -> dict:
-    body = [x for x in snap["items"] if x["kind"] not in ("research", "evidence_badge", "primer")]
+    body = [x for x in snap["items"] if x["kind"] not in BACKGROUND]
     user = (f"Today is {snap['date']}. The last brief was on {snap.get('prev_date') or 'no earlier date (first brief)'}.\n\n"
             f"Snapshot items:\n{_compact(body)}")
     return {"model": cfg["models"]["extraction"], "max_tokens": cfg["max_tokens"]["extraction"],
@@ -504,25 +688,45 @@ def extraction_params(cfg: dict, snap: dict) -> dict:
 
 
 def judgement_system(snap: dict) -> str:
-    ctx = [x for x in snap["items"] if x["kind"] in ("primer", "research", "evidence_badge")]
+    ctx = [x for x in snap["items"] if x["kind"] in BACKGROUND]
     return JUDGEMENT_ROLE + "\n\nBackground (cite by id):\n" + _compact(ctx, drop=())
 
 
-def judgement_params(cfg: dict, snap: dict, facts: list[dict], sc_item: dict) -> dict:
+def _shared_text(snap: dict, facts: list[dict]) -> str:
+    shared = [x for x in snap["items"] if x["kind"] not in BACKGROUND]
+    facts_txt = "\n".join(f"- [{f.get('region', f.get('country', ''))}] {f['text']} [{', '.join(f['source_ids'])}]" for f in facts) or "- (none)"
+    return (f"Today is {snap['date']}.\n\nFacts that changed since the last brief (validated):\n{facts_txt}\n\n"
+            f"Snapshot items:\n{_compact(shared)}")
+
+
+def _judgement_request(cfg: dict, snap: dict, facts: list[dict], task: str, schema: dict) -> dict:
     ttl = cfg["judgement"].get("cache_ttl", "5m")
-    shared = [x for x in snap["items"] if x["kind"] not in ("primer", "research", "evidence_badge")]
-    facts_txt = "\n".join(f"- {f['text']} [{', '.join(f['source_ids'])}]" for f in facts) or "- (none)"
-    shared_txt = (f"Today is {snap['date']}.\n\nFacts that changed since the last brief (validated):\n{facts_txt}\n\n"
-                  f"Snapshot items:\n{_compact(shared)}")
-    q = (f"Question {sc_item['id']}: {sc_item['question']}\nResolves {sc_item['resolution_date']}: {sc_item['resolution']}\n"
-         f"Branches: {', '.join(b['id'] + ' (' + b['label'] + ')' for b in sc_item['branches'])}. YES branches: {', '.join(sc_item['yes_branches'])}.\n"
-         f"Give your judgement with question_id {sc_item['id']}.")
     cc = {"type": "ephemeral", "ttl": ttl}
     return {"model": cfg["models"]["judgement"], "max_tokens": cfg["max_tokens"]["judgement"],
             "system": [{"type": "text", "text": judgement_system(snap), "cache_control": cc}],
-            "messages": [{"role": "user", "content": [{"type": "text", "text": shared_txt, "cache_control": cc},
-                                                       {"type": "text", "text": q}]}],
-            "output_config": {"effort": cfg["effort"]["judgement"], "format": {"type": "json_schema", "schema": JUDGEMENT_SCHEMA}}}
+            "messages": [{"role": "user", "content": [{"type": "text", "text": _shared_text(snap, facts), "cache_control": cc},
+                                                       {"type": "text", "text": task}]}],
+            "output_config": {"effort": cfg["effort"]["judgement"], "format": {"type": "json_schema", "schema": schema}}}
+
+
+def judgement_params(cfg: dict, snap: dict, facts: list[dict], sc_item: dict) -> dict:
+    q = (f"Task (A). Question {sc_item['id']}: {sc_item['question']}\nResolves {sc_item['resolution_date']}: {sc_item['resolution']}\n"
+         f"Branches: {', '.join(b['id'] + ' (' + b['label'] + ')' for b in sc_item['branches'])}. YES branches: {', '.join(sc_item['yes_branches'])}.\n"
+         f"Give your judgement with question_id {sc_item['id']}.")
+    return _judgement_request(cfg, snap, facts, q, JUDGEMENT_SCHEMA)
+
+
+def region_params(cfg: dict, snap: dict, facts: list[dict], region: str, upcoming: list[dict], inst: dict) -> dict:
+    lines = [f"Task (B). Region {region}: {REGIONS[region]}.", "", "Instruments for Horizons' view (one view each):"]
+    for asset, x in inst.items():
+        lvl = f"{x['level']} on {x['level_date']} ({x['series']})" if x.get("level") is not None else "no data yet"
+        lines.append(f"- {asset}: {x['name']}. {x['meaning']} Latest level: {lvl}.")
+    lines += ["", f"Events in the next {UPCOMING_DAYS} days (give what to watch for each, by event_id):"]
+    lines += [f"- {e['event_id']}: {e['date']} {e['title']}" for e in upcoming] or ["- (none)"]
+    lines += ["", "why_it_matters: 2 to 6 points, each saying whether it is for bonds, currency or gold. risks: 2 to 5. "
+                  "consensus.view: what surveys, official forecasts and market prices currently expect, citing them. "
+                  "might_be_wrong: where that consensus could share an error."]
+    return _judgement_request(cfg, snap, facts, "\n".join(lines), REGION_SCHEMA)
 
 
 # --------------------------------------------------------------------------
@@ -610,8 +814,11 @@ def call_all(reqs: list[tuple[str, str, dict]], cfg: dict, sp: dict, use_batch: 
             if b.processing_status == "ended":
                 for r in client.messages.batches.results(b.id):
                     if r.result.type == "succeeded" and r.custom_id in pending:
-                        role, _ = pending.pop(r.custom_id)
+                        role, _ = pending[r.custom_id]
                         record_spend(sp, role, "batch", cost_of(r.result.message.usage, role, True, cfg))
+                        if r.result.message.stop_reason == "refusal" and role in (cfg.get("refusal_fallback") or []):
+                            continue        # retried below on the standard API, where the server-side fallback is allowed
+                        pending.pop(r.custom_id)
                         out[r.custom_id] = _parse(r.result.message)
                     else:
                         log.warning("batch request %s: %s", r.custom_id, r.result.type)
@@ -619,7 +826,11 @@ def call_all(reqs: list[tuple[str, str, dict]], cfg: dict, sp: dict, use_batch: 
             log.warning("batch API failed (%s); using the standard API", exc)
     for cid, (role, params) in pending.items():
         try:
-            msg = client.messages.create(**params)
+            if role in (cfg.get("refusal_fallback") or []):
+                # if the model declines, the API re-runs the request on a fallback model it chooses (not allowed in batches)
+                msg = client.beta.messages.create(**params, betas=["server-side-fallback-2026-07-01"], fallbacks="default")
+            else:
+                msg = client.messages.create(**params)
             record_spend(sp, role, "standard", cost_of(msg.usage, role, False, cfg))
             out[cid] = _parse(msg)
         except anthropic.APIError as exc:
@@ -648,13 +859,90 @@ def judgement_due(snap: dict, cfg: dict, force: bool = False) -> tuple[bool, str
                   f"or near an importance-{j['catalyst_importance']} catalyst); showing the judgement from {last}"
 
 
-def estimate_judgement_usd(snap: dict, cfg: dict, n: int) -> float:
-    """Rough upper bound before spending: prefix written once at the 1-hour rate, read n-1 times, plus
-    output, at batch prices (4 characters per token)."""
+def _event_region(x: dict) -> str | None:
+    if x.get("region") in REGIONS:
+        return x["region"]
+    c = x.get("country")
+    return c if c in ("BR", "MX", "FR") else "GOLD" if c in ("US", "GLOBAL") else None
+
+
+def near_catalysts(snap: dict, cfg: dict, day_offset: int = 0) -> list[dict]:
+    j = cfg["judgement"]
+    return [x for x in snap["items"] if x["kind"] == "event" and (x.get("importance") or 0) >= j["catalyst_importance"]
+            and 0 <= x["days_to"] - day_offset <= j["catalyst_window_days"]]
+
+
+def judgement_scope(snap: dict, cfg: dict, why: str, day_offset: int = 0) -> tuple[set[str], set[str]] | None:
+    """None = everything (weekly, first or on request). Near a catalyst: only the regions of the
+    catalysts within the window, and the scenario questions in those regions or tied to those events."""
+    if not why.startswith("within"):
+        return None
+    near = near_catalysts(snap, cfg, day_offset)
+    regions = {r for r in (_event_region(x) for x in near) if r}
+    ev = {x["id"] for x in near}
+    qs = {x["id"] for x in snap["items"] if x["kind"] == "scenario"
+          and (x.get("event") in ev or _event_region({"country": x.get("country")}) in regions)}
+    return regions, qs
+
+
+def _tokens(chars: int, cfg: dict) -> float:
+    """Characters to tokens: the snapshot is dense JSON, about 2.1 characters per token when measured
+    against the API's usage counts (estimate.chars_per_token)."""
+    return chars / float((cfg.get("estimate") or {}).get("chars_per_token", 2.1))
+
+
+def _prefix_tokens(snap: dict, cfg: dict) -> float:
+    return _tokens(len(judgement_system(snap)) + len(_shared_text(snap, [])), cfg)
+
+
+def estimate_judgement_usd(snap: dict, cfg: dict, n: int, groups: int = 1) -> float:
+    """Rough upper bound before spending: the shared prefix written once per request type (scenario
+    questions, region notes) at the 1-hour rate and read by the other requests, plus output, at batch
+    prices."""
+    if n <= 0:
+        return 0.0
     p = cfg["prices"]["judgement"]
-    prefix = len(judgement_system(snap)) / 4 + len(_compact(snap["items"])) / 4
-    toks = prefix * p["cache_write_1h"] + prefix * (n - 1) * p["cache_read"] + n * 300 * p["input"] + n * 3000 * p["output"]
+    est = cfg.get("estimate") or {}
+    prefix = _prefix_tokens(snap, cfg)
+    groups = max(1, min(groups, n))
+    toks = (prefix * groups * p["cache_write_1h"] + prefix * (n - groups) * p["cache_read"] + n * 600 * p["input"]
+            + n * est.get("judgement_output_tokens", 5000) * p["output"])
     return toks / 1e6 * cfg["batch_discount"]
+
+
+def expected_month(snap: dict, cfg: dict, sp: dict) -> dict:
+    """Expected spend for a typical month: the daily extraction, the weekly judgement, the extra
+    judgement runs within a few days of importance-3 catalysts (counted on the next 30 days of the
+    calendar) and the monthly assessments (from the spend log)."""
+    est = cfg.get("estimate") or {}
+    pe = cfg["prices"]["extraction"]
+    ext_in = _tokens(len(EXTRACTION_SYSTEM) + len(extraction_params(cfg, snap)["messages"][0]["content"]), cfg)
+    daily = (ext_in * pe["input"] + est.get("extraction_output_tokens", 8000) * pe["output"]) / 1e6 * cfg["batch_discount"]
+    n_sc = sum(1 for x in snap["items"] if x["kind"] == "scenario")
+    weekly = estimate_judgement_usd(snap, cfg, n_sc + len(REGIONS), groups=2)
+    wd = cfg["judgement"]["weekday"]
+    today = dt.date.fromisoformat(snap["date"])
+    refresh, days = 0.0, 0
+    for off in range(30):
+        d = today + dt.timedelta(days=off)
+        if d.weekday() == wd or not near_catalysts(snap, cfg, off):
+            continue
+        sc = judgement_scope(snap, cfg, "within", off)
+        regions, qs = sc if sc else (set(REGIONS), set())
+        refresh += estimate_judgement_usd(snap, cfg, len(regions) + len(qs), groups=int(bool(regions)) + int(bool(qs)))
+        days += 1
+    months = sorted(sp.get("months", {}))
+    assess = [sp["months"][m].get("by_role", {}).get("assessments", 0.0) for m in months[-3:]]
+    assessments = max(assess) if assess else est.get("assessments_usd", 0.02)
+    total = daily * 30 + weekly * 4.3 + refresh + assessments
+    return {"total_usd": round(total, 2), "cap_usd": cfg["monthly_cap_usd"], "computed_on": snap["date"],
+            "breakdown": {"extraction_daily_x30": round(daily * 30, 3), "judgement_weekly_x4.3": round(weekly * 4.3, 2),
+                          "judgement_near_catalysts": round(refresh, 2), "assessments_monthly": round(assessments, 3)},
+            "assumptions": {"extraction_per_day_usd": round(daily, 4), "judgement_per_week_usd": round(weekly, 3),
+                            "catalyst_refresh_days_next_30": days, "requests_per_weekly_judgement": n_sc + len(REGIONS),
+                            "prefix_tokens": int(_prefix_tokens(snap, cfg)), "batch_discount": cfg["batch_discount"],
+                            "output_tokens_per_judgement_request": est.get("judgement_output_tokens", 5000),
+                            "output_tokens_per_extraction": est.get("extraction_output_tokens", 8000)}}
 
 
 def sources_for(ids: set[str], index: dict[str, dict]) -> dict:
@@ -669,74 +957,135 @@ def sources_for(ids: set[str], index: dict[str, dict]) -> dict:
     return out
 
 
+def _legacy_facts(regions: dict) -> list[dict]:
+    """The flat fact list Catalyst's brief card reads: every development, region as country."""
+    return [{**f, "country": "GLOBAL" if r == "GOLD" else r, "region": r} for r, x in regions.items() for f in x.get("developments", [])]
+
+
 def run(force_judgement: bool = False, no_ai: bool = False, fetch_headlines: bool = True, use_batch: bool = True) -> dict:
+    from terminal import horizons
     cfg = conf()
     snap = build_snapshot(fetch_headlines)
     index = {x["id"]: x for x in snap["items"]}
     all_values = values_of(snap["items"])
+    episodes = episode_ids(snap["items"])
     sp = load_spend()
     month = month_spend(sp)
     cap = float(cfg["monthly_cap_usd"])
+    upcoming = {r: upcoming_for(snap, r) for r in REGIONS}
     brief = {"date": snap["date"], "generated_at": store.now_iso(), "snapshot": {"items": len(snap["items"]), "counts": snap["counts"],
              "headline_sources": snap["headline_sources"], "notes": snap["notes"], "prev_date": snap.get("prev_date")}}
     if no_ai or not store.secret("ANTHROPIC_API_KEY"):
-        brief.update({"status": "no_ai", "verified": None, "problems": [], "facts": [], "moved_to_judgement": [],
+        brief.update({"status": "no_ai", "verified": None, "problems": [], "facts": [], "top": [], "moved_to_judgement": [],
                       "judgement": {"ran": False, "why": "ANTHROPIC_API_KEY is not set" if not no_ai else "run without AI"}})
-        return _publish(brief, sp, cfg, index)
-    # 1. extraction
+        prev = _read(JUDGEMENT) or {}
+        brief["report"] = {"date": snap["date"], "regions": {r: {"developments": [], "week_change": [], "upcoming": upcoming[r],
+                                                                 "judgement": (prev.get("regions") or {}).get(r)} for r in REGIONS}}
+        return _publish(brief, sp, cfg, index, snap)
+    # 1. extraction (daily): facts per region
     res = call_all([("extraction", "extraction", extraction_params(cfg, snap))], cfg, sp, use_batch)
     data, err = res.get("extraction", (None, "no result"))
     problems = []
     if err:
         problems.append(f"Extraction failed: {err}")
-        facts, moved = [], []
+        regions, top, moved = {r: {"developments": [], "week_change": []} for r in REGIONS}, [], []
     else:
-        facts, moved, p = validate_facts(data.get("facts", []), index)
+        regions, top, moved, p = validate_report(data, index)
         problems += p
-    # 2. judgement
+    facts = _legacy_facts(regions)
+    # 2. judgement (weekly, and near importance-3 catalysts for the regions concerned)
     open_sc = [x for x in snap["items"] if x["kind"] == "scenario"]
     due, why = judgement_due(snap, cfg, force_judgement)
+    scope = judgement_scope(snap, cfg, why) if due else None
+    run_regions = [r for r in REGIONS if scope is None or r in scope[0]]
+    run_sc = [x for x in open_sc if scope is None or x["id"] in scope[1]]
     mode = "full"
+    est = estimate_judgement_usd(snap, cfg, len(run_regions) + len(run_sc), groups=int(bool(run_regions)) + int(bool(run_sc)))
     if due and month >= cap:
         due, why, mode = False, f"extraction only: ${month:.2f} spent this month, at or above the ${cap:.2f} cap", "extraction_only"
-    elif due and month + estimate_judgement_usd(snap, cfg, len(open_sc)) > cap:
+    elif due and month + est > cap:
         due, why, mode = False, f"extraction only: this judgement would take the month past the ${cap:.2f} cap", "extraction_only"
+    prev = _read(JUDGEMENT) or {}
     judgement = {"ran": False, "why": why}
-    if due and open_sc:
-        good_facts = [f for f in facts if f["ok"]]
-        reqs = [(f"j-{x['id'][3:]}", "judgement", judgement_params(cfg, snap, good_facts, x)) for x in open_sc]
+    regions_j = dict(prev.get("regions") or {})
+    if due and (run_sc or run_regions):
+        good_facts = [{**f, "region": r} for r, x in regions.items() for part in ("developments", "week_change") for f in x[part] if f["ok"]]
+        inst = horizons.instruments(snap["date"])
+        reqs = [(f"j-{x['id'][3:]}", "judgement", judgement_params(cfg, snap, good_facts, x)) for x in run_sc]
+        reqs += [(f"r-{r}", "judgement", region_params(cfg, snap, good_facts, r, upcoming[r], inst[r])) for r in run_regions]
         res = call_all(reqs, cfg, sp, use_batch)
-        qs = []
-        for x in open_sc:
-            j, err = res.get(f"j-{x['id'][3:]}", (None, "no result"))
-            if err:
-                qs.append({"question_id": x["id"], "scenario_id": x["id"][3:], "title": x["title"], "ok": False, "problems": [err]})
-                problems.append(f"Judgement {x['id']}: {err}")
+        fresh = []
+        for x in run_sc:
+            j, e = res.get(f"j-{x['id'][3:]}", (None, "no result"))
+            if e:
+                fresh.append({"question_id": x["id"], "scenario_id": x["id"][3:], "title": x["title"], "ok": False, "problems": [e], "date": snap["date"]})
+                problems.append(f"Judgement {x['id']}: {e}")
                 continue
             p = validate_judgement(j, x, index, all_values)
             j["question_id"] = x["id"]
-            qs.append({**j, "scenario_id": x["id"][3:], "title": x["title"], "country": x.get("country"), "ok": not p, "problems": p})
+            fresh.append({**j, "scenario_id": x["id"][3:], "title": x["title"], "country": x.get("country"), "ok": not p, "problems": p,
+                          "date": snap["date"]})
             problems += [f"Judgement {x['id']}: {q}" for q in p]
-        judgement = {"ran": True, "why": why, "date": snap["date"], "questions": qs}
-        _write(JUDGEMENT, {"date": snap["date"], "generated_at": store.now_iso(), "why": why,
-                           "verified": all(q["ok"] for q in qs), "questions": qs})
-    elif JUDGEMENT.exists():
-        last = _read(JUDGEMENT)
-        judgement.update({"carried": True, "date": last.get("date"), "verified": last.get("verified"), "questions": last.get("questions", [])})
-    cited = {i for f in facts for i in f["source_ids"]}
+        views: dict[str, dict] = {}
+        for r in run_regions:
+            j, e = res.get(f"r-{r}", (None, "no result"))
+            if e:
+                regions_j[r] = {"date": snap["date"], "ok": False, "verified": False, "problems": [e]}
+                problems.append(f"Region {r}: {e}")
+                continue
+            for v in j.get("views") or []:
+                if v.get("lean") == "none":
+                    v["p"] = None
+                v["resembles"] = {**(v.get("resembles") or {}), "episode_id": ((v.get("resembles") or {}).get("episode_id") or "").removeprefix("ep:")}
+            p = validate_region(j, r, upcoming[r], index, all_values, episodes)
+            done = {}
+            for v in j.get("views") or []:
+                vp = horizons.validate_view(v, r, index, all_values, episodes, check_text)
+                if v.get("asset") in horizons.ASSETS.get(r, {}):
+                    done[v["asset"]] = {**horizons.finish_view(v, r, snap["date"]), "ok": not vp, "problems": vp}
+                p += [f"view {v.get('asset')}: {x}" for x in vp]
+            titles = {e["event_id"]: e for e in upcoming[r]}
+            j["watch"] = [{**w, "event": (titles.get(w.get("event_id")) or {}).get("title"), "date": (titles.get(w.get("event_id")) or {}).get("date")}
+                          for w in j.get("watch") or []]
+            j.pop("views", None)
+            regions_j[r] = {**j, "date": snap["date"], "verified": not p, "problems": p}
+            views[r] = done
+            problems += [f"Region {r}: {x}" for x in p]
+        keep = {q["question_id"]: q for q in prev.get("questions", []) if q["question_id"] in {x["id"] for x in open_sc}}
+        keep.update({q["question_id"]: q for q in fresh})
+        qs = [keep[x["id"]] for x in open_sc if x["id"] in keep]
+        judgement = {"ran": True, "why": why, "date": snap["date"], "scope": None if scope is None else
+                     {"regions": run_regions, "questions": [x["id"] for x in run_sc]}, "questions": qs}
+        _write(JUDGEMENT, {"date": snap["date"], "generated_at": store.now_iso(), "why": why, "verified": all(q["ok"] for q in qs)
+                           and all(x.get("verified") is not False for x in regions_j.values()), "questions": qs, "regions": regions_j})
+        if views:
+            horizons.record(snap["date"], views, all(v["ok"] for d in views.values() for v in d.values()))
+    elif prev:
+        judgement.update({"carried": True, "date": prev.get("date"), "verified": prev.get("verified"), "questions": prev.get("questions", [])})
+    report = {"date": snap["date"], "regions": {r: {**regions[r], "upcoming": upcoming[r], "judgement": regions_j.get(r)} for r in REGIONS}}
+    cited = {i for f in facts + top for i in f["source_ids"]} | {i for r in regions.values() for f in r["week_change"] for i in f["source_ids"]}
     for q in judgement.get("questions", []):
         cited |= set(q.get("source_ids", [])) | {i for f in q.get("factors", []) for i in f.get("source_ids", [])} | {q["question_id"]}
+    for r in REGIONS:
+        rj = regions_j.get(r) or {}
+        cited |= {e["event_id"] for e in upcoming[r]} | set((rj.get("consensus") or {}).get("source_ids") or [])
+        cited |= {i for k in ("why_it_matters", "risks") for x in rj.get(k) or [] for i in x.get("source_ids", [])}
+    for v in [v for d in (horizons.load().get("views") or {}).values() for v in d.values()]:
+        cited |= set(v.get("source_ids") or []) | {i for x in v.get("reasons") or [] for i in x.get("source_ids", [])}
     brief.update({"status": "ok" if not err else "failed", "mode": mode, "verified": not problems, "problems": problems,
-                  "facts": facts, "moved_to_judgement": moved, "judgement": judgement, "sources": sources_for(cited, index)})
-    return _publish(brief, sp, cfg, index)
+                  "top": top, "facts": facts, "moved_to_judgement": moved, "judgement": judgement, "report": report,
+                  "sources": sources_for(cited, index)})
+    return _publish(brief, sp, cfg, index, snap)
 
 
-def _publish(brief: dict, sp: dict, cfg: dict, index: dict) -> dict:
+def _publish(brief: dict, sp: dict, cfg: dict, index: dict, snap: dict | None = None) -> dict:
     today = store.today()
     m = sp["months"].get(today[:7], {"usd": 0.0})
     run_usd = sum(e["usd"] for e in sp["log"] if e["at"][:10] == today)
+    if snap:
+        sp["expected_month_usd"] = expected_month(snap, cfg, sp)
     brief["cost"] = {"today_usd": round(run_usd, 4), "month_usd": round(m["usd"], 4), "cap_usd": cfg["monthly_cap_usd"],
-                     "month": today[:7]}
+                     "month": today[:7], "expected_month_usd": (sp.get("expected_month_usd") or {}).get("total_usd")}
     sp["cap_usd"] = cfg["monthly_cap_usd"]
     _write(SPEND, sp)
     _write(ARCHIVE / f"{today}.json", brief)
@@ -762,10 +1111,11 @@ def apply_ai(scenarios: list[dict]) -> None:
         bp = {b["id"]: b["p"] / 100 for b in q.get("branches", [])}
         for b in s.get("branches", []):
             b["p_ai"] = bp.get(b["id"])
-        s["ai"] = {"available": True, "p_yes": q["p_yes"] / 100, "date": j["date"], "confidence": q.get("confidence"),
+        d = q.get("date") or j["date"]
+        s["ai"] = {"available": True, "p_yes": q["p_yes"] / 100, "date": d, "confidence": q.get("confidence"),
                    "verified": q.get("ok"), "problems": q.get("problems", []), "base_rate_used": q.get("base_rate_used"),
                    "factors": q.get("factors", []), "what_would_change_view": q.get("what_would_change_view"),
-                   "most_likely_wrong": q.get("most_likely_wrong"), "brief": f"#brief/{j['date']}"}
+                   "most_likely_wrong": q.get("most_likely_wrong"), "brief": f"#brief/{d}"}
 
 
 def apply_to_scenarios() -> None:
@@ -782,5 +1132,6 @@ def ai_probability(qid: str) -> dict | None:
     j = _read(JUDGEMENT)
     for q in (j or {}).get("questions", []):
         if q.get("question_id") == qid and q.get("p_yes") is not None:
-            return {"prob": q["p_yes"] / 100, "source": f"AI brief judgement ({j['date']})", "as_of": j["date"]}
+            d = q.get("date") or j["date"]
+            return {"prob": q["p_yes"] / 100, "source": f"AI brief judgement ({d})", "as_of": d}
     return None

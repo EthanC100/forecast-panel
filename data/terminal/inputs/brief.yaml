@@ -2,8 +2,8 @@
 # Read by terminal/brief.py. Change a model here, not in code.
 
 models:
-  extraction: claude-haiku-5-5     # cheapest current model; daily list of what changed
-  judgement: claude-sonnet-5-5     # mid-tier current model; weekly and near importance-3 catalysts
+  extraction: claude-haiku-5-5     # cheapest current model; daily facts per region
+  judgement: claude-opus-5-5       # strongest model in budget; weekly region notes, Horizons' views and scenario probabilities
   assessments: claude-haiku-5-5    # monthly summaries of independent fiscal assessments
 
 effort:
@@ -12,8 +12,8 @@ effort:
   assessments: low
 
 max_tokens:
-  extraction: 8000
-  judgement: 8000
+  extraction: 16000
+  judgement: 16000
   assessments: 4000
 
 # USD per million tokens, standard (non-batch) API, prompts up to 100,000 tokens.
@@ -21,16 +21,29 @@ max_tokens:
 # Batch requests cost half of every line below.
 prices:
   extraction: {input: 0.10, cache_write_5m: 0.125, cache_write_1h: 0.20, cache_read: 0.01, output: 0.50}
-  judgement: {input: 2.00, cache_write_5m: 2.50, cache_write_1h: 4.00, cache_read: 0.10, output: 10.00}
+  judgement: {input: 4.00, cache_write_5m: 5.00, cache_write_1h: 8.00, cache_read: 0.20, output: 20.00}
   assessments: {input: 0.10, cache_write_5m: 0.125, cache_write_1h: 0.20, cache_read: 0.01, output: 0.50}
 batch_discount: 0.5
 
-monthly_cap_usd: 8.0        # above this in a calendar month: extraction only, no judgement
+monthly_cap_usd: 15.0       # above this in a calendar month: extraction only (no judgement, no Horizons' views)
+
+# Roles whose standard-API requests may be re-run by the API on a fallback model if the model
+# declines (server-side fallback; not available in batches, so a declined batch request is retried
+# on the standard API).
+refusal_fallback: [judgement]
+
+# Expected monthly cost (written to spend.json as expected_month_usd on every run). Output tokens
+# include thinking; the region notes are the longest answers.
+estimate:
+  chars_per_token: 2.1              # measured: the 2026-10-30 judgement prefix was 37,535 tokens for about 80,000 characters
+  extraction_output_tokens: 8000
+  judgement_output_tokens: 5000
+  assessments_usd: 0.02
 
 judgement:
   weekday: 0                # Monday (0 = Monday ... 6 = Sunday)
   catalyst_importance: 3
-  catalyst_window_days: 3   # also run on days within this many days of an importance-3 event
+  catalyst_window_days: 3   # also run within this many days of an importance-3 event, for that event's region only
   cache_ttl: 1h             # the shared prefix is reused by one request per question in a batch
 
 batch:
