@@ -18,6 +18,7 @@
 .r-strategy { --c: var(--orange); --ci: var(--orange-ink); }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.45 var(--font); padding-bottom: calc(76px + env(safe-area-inset-bottom)); -webkit-font-smoothing: antialiased; }
 button { font: inherit; color: inherit; }
