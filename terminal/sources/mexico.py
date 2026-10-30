@@ -33,9 +33,12 @@ SURVEY = {
     "mx.survey.gdp": ("Banxico survey: real GDP growth", "%", {0: "SR14448", 1: "SR14455"}),
     "mx.survey.usdmxn": ("Banxico survey: USD/MXN at year end", "MXN per USD", {0: "SR14770", 1: "SR14777"}),
     "mx.survey.balance": ("Banxico survey: public sector economic balance", "% of GDP", {0: "SR14938", 1: "SR14945"}),
-    # overnight interbank (fondeo) rate at the close of the fourth quarter of this year and next
-    "mx.survey.policy_rate": ("Banxico survey: interbank (policy) rate, Q4 close", "% p.a.", {0: "SR14673", 1: "SR14701"}),
 }
+# The interbank (fondeo) rate is asked for the close of quarters relative to the survey quarter t:
+# blocks for t, t+1, ..., t+7 start at these median ids (Banxico titles: "Cierre dentro de k trimestres").
+# Year-end of the survey year is t+(4-q), of the next year t+(8-q), q being the survey's quarter.
+POLICY_RATE = ("mx.survey.policy_rate", "Banxico survey: interbank (policy) rate, Q4 close", "% p.a.",
+               [f"SR{14659 + 7 * k}" for k in range(8)])
 SURVEY_FIELDS = ["median", "sd", "min", "max"]
 OFFSET = {"sd": 5, "min": 3, "max": 4}      # from the median id within its block
 
@@ -98,7 +101,33 @@ def _write(fetch, source: str, how: str, titles: dict | None = None) -> list[str
             meta["titles"] = {i: titles.get(i) for i in ids}
         store.save_series(meta, list(rows.values()), key_len=2)
         written.append(sid)
+    written.append(_policy_rate(fetch, source, how, titles))
     return written
+
+
+def _policy_rate(fetch, source: str, how: str, titles: dict | None) -> str:
+    sid, name, unit, meds = POLICY_RATE
+    ids = [x for med in meds for x in [med] + [_sid(med, o) for o in OFFSET.values()]]
+    data = fetch(ids)
+    by = {i: dict((d, v) for d, v in data.get(i, [])) for i in ids}
+    rows = []
+    dates = sorted(set(by[meds[0]]) | set(by[meds[4]]))
+    for d in dates:
+        q = (int(d[5:7]) - 1) // 3 + 1
+        for ref, k in ((int(d[:4]), 4 - q), (int(d[:4]) + 1, 8 - q)):
+            med = meds[k]
+            v = by[med].get(d)
+            if v is None:
+                continue
+            rows.append([d, str(ref), v, by[_sid(med, OFFSET["sd"])].get(d), by[_sid(med, OFFSET["min"])].get(d),
+                         by[_sid(med, OFFSET["max"])].get(d), f"t+{k}"])
+    meta = {"id": sid, "name": name, "country": "MX", "unit": unit, "frequency": "monthly", "source": source,
+            "source_id": "SIE " + ", ".join(meds) + " (+ sd, min, max): close of quarter t+k, k chosen so the quarter is Q4",
+            "source_url": how.format(id=",".join(meds)), "fields": SURVEY_FIELDS + ["horizon"], "key": ["date", "ref"]}
+    if titles:
+        meta["titles"] = {i: titles.get(i) for i in ids}
+    store.save_series(meta, rows, key_len=2)
+    return sid
 
 
 def banxico_api() -> list[str]:
@@ -112,6 +141,7 @@ def banxico_api() -> list[str]:
 def _titles(token: str) -> dict:
     """Banxico's own titles for every survey id, stored with the series so the id mapping can be checked."""
     ids = [x for _, _, h in SURVEY.values() for med in h.values() for x in [med] + [_sid(med, o) for o in OFFSET.values()]]
+    ids += [x for med in POLICY_RATE[3] for x in [med] + [_sid(med, o) for o in OFFSET.values()]]
     out = {}
     try:
         for i in range(0, len(ids), 20):

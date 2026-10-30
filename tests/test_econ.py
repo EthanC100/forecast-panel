@@ -101,3 +101,21 @@ def test_full_call_point_field(monkeypatch):
     monkeypatch.setattr(forms, "ai_probability", lambda q: None)
     path, rec, lines, ok = forms.full_call(issue, f)
     assert ok and rec["point"] == -0.6
+
+
+def test_banxico_policy_rate_quarter_mapping(series_dir):
+    """Fondeo answers are for quarters relative to the survey quarter: a September survey's year-end is
+    t+1 and next year-end t+5; a February survey's are t+3 and t+7."""
+    from terminal.sources import mexico
+    meds = mexico.POLICY_RATE[3]
+    fake = {}
+    for k, med in enumerate(meds):
+        for d in ("2026-09-01", "2027-02-01"):
+            fake.setdefault(med, []).append([d, 6.0 + k / 10])
+            for name, off in mexico.OFFSET.items():
+                fake.setdefault(mexico._sid(med, off), []).append([d, 0.1 * (k + 1) if name == "sd" else 6.0])
+    mexico._policy_rate(lambda ids: {i: fake.get(i, []) for i in ids}, "test", "{id}", None)
+    rows = {(r[0], r[1]): r for r in store.load_series("mx.survey.policy_rate")["history"]}
+    assert rows[("2026-09-01", "2026")][-1] == "t+1" and rows[("2026-09-01", "2027")][-1] == "t+5"
+    assert rows[("2027-02-01", "2027")][-1] == "t+3" and rows[("2027-02-01", "2028")][-1] == "t+7"
+    assert rows[("2026-09-01", "2026")][2] == pytest.approx(6.1)
