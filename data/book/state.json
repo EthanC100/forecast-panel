@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-30T02:41:42Z",
+ "generated_at": "2026-10-30T04:29:51Z",
  "as_of": "2026-10-30",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
  "start_date": "2026-10-29",
  "assumptions": [
-  "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t.",
-  "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it. Policy rates stand in for deposit rates.",
+  "FX: P&L in USD on a USD notional, long = long USD against the local currency, marked at the close: N x (S_t - S_0) / S_t. EUR/USD is quoted in dollars per euro, so long = long EUR and P&L = N x (S_t - S_0) / S_0.",
+  "FX carry accrues daily on calendar days (actual/360) at the rate differential: long USD/BRL pays the Selic and earns US fed funds, short earns it; long EUR/USD earns the ECB deposit rate and pays fed funds. Policy rates stand in for deposit rates.",
   "Bonds, DI proxies and the OAT-Bund spread: P&L = -direction x notional x duration x change in yield. Long = long the bond (gains when the yield falls); for the spread, long = long OAT against Bund (gains when the spread narrows).",
   "Duration: 8 years for the US 10-year and the France-Germany spread, 5.5 years for Brazil's and Mexico's 10-year positions. Brazil's NTN-F and Mexico's Mbonos pay coupons near 10-13% (and yield 9-15%), so their modified duration is about 5-6 years, not the 8 of a low-coupon US or euro bond; using 8 would overstate their P&L by about 45%. DI proxies are zero-coupon: duration = years to maturity / (1 + yield), fixed at entry.",
   "No carry or roll-down on bond and spread positions.",
@@ -21,8 +21,8 @@
    "country": "BR",
    "series": "br.usdbrl.ptax",
    "proxy": false,
-   "value": 5.342,
-   "date": "2026-10-28",
+   "value": 5.3744,
+   "date": "2026-10-29",
    "close_utc": "16:30",
    "low_frequency": false,
    "note": null,
@@ -57,6 +57,28 @@
    "unit": "MXN per USD",
    "duration": null,
    "cost": 0.075,
+   "cost_unit": "% of notional"
+  },
+  "EURUSD": {
+   "name": "EUR/USD",
+   "kind": "fx",
+   "country": "FR",
+   "series": "eu.eurusd",
+   "proxy": false,
+   "value": 1.1199,
+   "date": "2026-10-23",
+   "close_utc": "17:00",
+   "low_frequency": false,
+   "note": "FRED publishes the noon New York rate weekly (H.10), so the latest value can be up to a week old.",
+   "degraded": null,
+   "scale": null,
+   "favourable": 1,
+   "rate_usd": "us.fedfunds",
+   "rate_local": "eu.ecb.dfr",
+   "maturity": null,
+   "unit": "USD per EUR",
+   "duration": null,
+   "cost": 0.02,
    "cost_unit": "% of notional"
   },
   "OATBUND": {
@@ -273,9 +295,9 @@
    "since_start": null,
    "last_12m": {
     "from": "2025-10-30",
-    "to": "2026-10-28",
-    "pnl_usd": -11750.66,
-    "return_pct": -11.75
+    "to": "2026-10-29",
+    "pnl_usd": -11170.37,
+    "return_pct": -11.17
    }
   },
   {
@@ -290,6 +312,20 @@
     "to": "2026-10-29",
     "pnl_usd": -1644.32,
     "return_pct": -1.64
+   }
+  },
+  {
+   "code": "EURUSD",
+   "name": "EUR/USD",
+   "series": "eu.eurusd",
+   "proxy": false,
+   "description": "long EUR",
+   "since_start": null,
+   "last_12m": {
+    "from": "2025-10-30",
+    "to": "2026-10-23",
+    "pnl_usd": -4719.93,
+    "return_pct": -4.72
    }
   },
   {

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T01:57:34Z",
+ "generated_at": "2026-10-30T04:29:51Z",
  "horizon": "2027-10-31",
  "events": [
   {
@@ -14,7 +14,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-11-02-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -29,7 +36,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2026-11-02-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -44,7 +58,14 @@
    "note": "BCB 2026 calendar: 3-4 Nov. The six 2026 decisions so far match em-macro's record.",
    "origin": "manual",
    "id": "2026-11-04-br-copom-decision-3-4-nov",
-   "attention": null,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
@@ -64,7 +85,14 @@
    "note": "Banxico 2026 calendar (as reproduced in BBVA Research, Agenda Económica 2026). The six 2026 decisions so far match em-macro.",
    "origin": "manual",
    "id": "2026-11-05-mx-banxico-monetary-policy-decision",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -84,6 +112,28 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-11-09-br-focus-survey-bcb",
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
+   "under_attended": false
+  },
+  {
+   "date": "2026-11-15",
+   "country": "MX",
+   "type": "fiscal",
+   "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+   "importance": 2,
+   "status": "confirmed",
+   "source": "https://www.ppef.hacienda.gob.mx/",
+   "query": "Mexico 2027 budget Chamber of Deputies",
+   "note": "Constitution art. 74: the spending budget is approved by 15 November; the 2027 package was presented on 8 Sep 2026.",
+   "origin": "manual",
+   "id": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
    "attention": null,
    "under_attended": false
   },
@@ -99,7 +149,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-11-16-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -114,7 +171,14 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 1.786,
+    "share_30d": 2.5825845990150024e-06,
+    "share_12m": 1.4459311301763328e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -129,7 +193,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-11-23-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -141,7 +212,7 @@
    "status": "confirmed",
    "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
    "query": "\"Standard\" France rating",
-   "note": "Next review date from the AFT ratings table (fetched 2026-10-29).",
+   "note": "Next review date from the AFT ratings table (fetched 2026-10-30).",
    "origin": "aft",
    "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
    "attention": null,
@@ -159,7 +230,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-11-30-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -189,7 +267,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2026-12-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -204,7 +289,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-12-07-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -219,8 +311,15 @@
    "note": "",
    "origin": "manual",
    "id": "2026-12-09-br-copom-decision-8-9-dec",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -266,7 +365,7 @@
    "status": "confirmed",
    "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
    "query": "\"KBRA\" France rating",
-   "note": "Next review date from the AFT ratings table (fetched 2026-10-29).",
+   "note": "Next review date from the AFT ratings table (fetched 2026-10-30).",
    "origin": "aft",
    "id": "2026-12-11-fr-kbra-sovereign-rating-review-france",
    "attention": null,
@@ -284,6 +383,28 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-12-14-br-focus-survey-bcb",
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
+   "under_attended": false
+  },
+  {
+   "date": "2026-12-15",
+   "country": "BR",
+   "type": "fiscal",
+   "title": "Senate deadline to set the CBS reference rate",
+   "importance": 2,
+   "status": "confirmed",
+   "source": "https://netcpa.com.br/colunas/reforma-tributaria-tcu-tem-ate-30-de-outubro-para-enviar-ao-senado-calculos-da-aliquota-da-cbs/28404",
+   "query": "Brazil CBS rate Senate",
+   "note": "Consumption-tax reform: the federal CBS starts on 1 Jan 2027; the TCU sends its rate calculations to the Senate by 30 Oct.",
+   "origin": "manual",
+   "id": "2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate",
    "attention": null,
    "under_attended": false
   },
@@ -329,7 +450,14 @@
    "note": "",
    "origin": "manual",
    "id": "2026-12-17-mx-banxico-monetary-policy-decision",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -349,7 +477,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-12-21-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -364,7 +499,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2026-12-28-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -379,7 +521,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-01-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -394,7 +543,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-01-04-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -424,7 +580,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-01-11-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -454,7 +617,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-01-18-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -469,7 +639,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-01-25-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -484,8 +661,15 @@
    "note": "2027 calendar published by the BCB on 23 Jun 2026 (as reported; the BCB page is not machine-readable from the build).",
    "origin": "manual",
    "id": "2027-01-27-br-copom-decision-26-27-jan",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -519,7 +703,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-02-01-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -549,7 +740,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-02-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -579,7 +777,14 @@
    "note": "Follows the 2026 pattern (eight Thursdays). Banxico publishes the next year's calendar around December.",
    "origin": "manual",
    "id": "2027-02-04-mx-banxico-decision-2027-calendar-not-yet-published",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -599,7 +804,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-02-08-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -614,7 +826,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-02-15-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -629,7 +848,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-02-22-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -644,7 +870,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-03-01-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -659,7 +892,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-03-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -674,7 +914,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-03-08-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -689,7 +936,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-03-15-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -704,8 +958,15 @@
    "note": "",
    "origin": "manual",
    "id": "2027-03-17-br-copom-decision-16-17-mar",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -754,7 +1015,14 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-03-22-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 1.786,
+    "share_30d": 2.5825845990150024e-06,
+    "share_12m": 1.4459311301763328e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -769,7 +1037,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-03-22-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -784,7 +1059,14 @@
    "note": "",
    "origin": "manual",
    "id": "2027-03-25-mx-banxico-decision-estimated",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -804,7 +1086,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-03-29-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -819,7 +1108,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-04-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -849,7 +1145,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-04-05-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -879,7 +1182,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-04-12-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -909,7 +1219,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-04-19-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -939,7 +1256,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-04-26-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -954,8 +1278,15 @@
    "note": "",
    "origin": "manual",
    "id": "2027-04-28-br-copom-decision-27-28-apr",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -1004,7 +1335,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-05-03-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1019,7 +1357,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-05-03-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -1034,7 +1379,14 @@
    "note": "",
    "origin": "manual",
    "id": "2027-05-06-mx-banxico-decision-estimated",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -1054,7 +1406,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-05-10-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1069,7 +1428,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-05-17-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1084,7 +1450,14 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-05-21-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 1.786,
+    "share_30d": 2.5825845990150024e-06,
+    "share_12m": 1.4459311301763328e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -1099,7 +1472,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-05-24-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1114,7 +1494,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-05-31-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1129,7 +1516,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-06-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -1159,7 +1553,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-06-07-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1204,7 +1605,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-06-14-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1219,8 +1627,15 @@
    "note": "",
    "origin": "manual",
    "id": "2027-06-16-br-copom-decision-15-16-jun",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -1239,7 +1654,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-06-21-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1254,7 +1676,14 @@
    "note": "",
    "origin": "manual",
    "id": "2027-06-24-mx-banxico-decision-estimated",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -1274,7 +1703,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-06-28-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1304,7 +1740,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-07-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -1319,7 +1762,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-07-05-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1334,7 +1784,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-07-12-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1349,7 +1806,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-07-19-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1364,7 +1828,14 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-07-22-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 1.786,
+    "share_30d": 2.5825845990150024e-06,
+    "share_12m": 1.4459311301763328e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -1394,7 +1865,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-07-26-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1424,7 +1902,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-08-02-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1439,7 +1924,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-08-02-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -1454,8 +1946,15 @@
    "note": "",
    "origin": "manual",
    "id": "2027-08-04-br-copom-decision-3-4-aug",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -1474,7 +1973,14 @@
    "note": "",
    "origin": "manual",
    "id": "2027-08-05-mx-banxico-decision-estimated",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -1494,7 +2000,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-08-09-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1509,7 +2022,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-08-16-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1524,7 +2044,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-08-23-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1539,7 +2066,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-08-30-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1554,7 +2088,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-09-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -1569,7 +2110,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-09-06-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1599,7 +2147,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-09-13-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1629,7 +2184,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-09-20-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1644,8 +2206,15 @@
    "note": "",
    "origin": "manual",
    "id": "2027-09-22-br-copom-decision-21-22-sep",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -1664,7 +2233,14 @@
    "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
    "origin": "rule:rardp",
    "id": "2027-09-22-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": null,
+   "attention": {
+    "score": 1.786,
+    "share_30d": 2.5825845990150024e-06,
+    "share_12m": 1.4459311301763328e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Brazil \"primary deficit\""
+   },
    "under_attended": false
   },
   {
@@ -1679,7 +2255,14 @@
    "note": "",
    "origin": "manual",
    "id": "2027-09-23-mx-banxico-decision-estimated",
-   "attention": null,
+   "attention": {
+    "score": 1.323,
+    "share_30d": 2.647149213990377e-05,
+    "share_12m": 2.001581807344095e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico \"interest rate\""
+   },
    "under_attended": false,
    "base_rate": {
     "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
@@ -1699,7 +2282,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-09-27-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1714,7 +2304,14 @@
    "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
    "origin": "rule:banxico_survey",
    "id": "2027-10-01-mx-banxico-survey-of-private-sector-economists",
-   "attention": null,
+   "attention": {
+    "score": 0.996,
+    "share_30d": 5.165169198030005e-06,
+    "share_12m": 5.184695909632279e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "Banxico survey analysts"
+   },
    "under_attended": false
   },
   {
@@ -1729,7 +2326,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-10-04-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1744,7 +2348,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-10-11-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1759,7 +2370,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-10-18-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1774,7 +2392,14 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-10-25-br-focus-survey-bcb",
-   "attention": null,
+   "attention": {
+    "score": 1.132,
+    "share_30d": 3.2282307487687527e-06,
+    "share_12m": 2.8505499423476276e-06,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
    "under_attended": false
   },
   {
@@ -1789,8 +2414,15 @@
    "note": "",
    "origin": "manual",
    "id": "2027-10-27-br-copom-decision-26-27-oct",
-   "attention": null,
-   "under_attended": false,
+   "attention": {
+    "score": 0.484,
+    "share_30d": 4.584087663251629e-05,
+    "share_12m": 9.477045750355735e-05,
+    "as_of": "2026-10-30",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": true,
    "base_rate": {
     "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
     "changed": 17,
@@ -8200,7 +8832,8 @@
  ],
  "notes": [
   "France: no censure motion is scheduled as of 2026-10-29. Motions are voted 48 hours after they are filed; add one here when it is tabled.",
-  "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml."
+  "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml.",
+  "GDELT attention refresh stopped at its 9-minute budget; remaining queries keep their last values."
  ],
  "attention_definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away",
  "sources": {

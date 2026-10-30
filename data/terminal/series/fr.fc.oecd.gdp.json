@@ -1,0 +1,29 @@
+{
+ "id": "fr.fc.oecd.gdp",
+ "name": "OECD Economic Outlook: Real GDP growth (%)",
+ "country": "FR",
+ "unit": "%",
+ "frequency": "per forecast edition",
+ "source": "OECD Economic Outlook",
+ "source_id": "OECD Economic Outlook 119",
+ "source_url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html",
+ "edition": "OECD Economic Outlook 119",
+ "edition_date": "2026-06-01",
+ "key": [
+  "date",
+  "ref"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-30T04:17:49Z",
+ "updated_at": "2026-10-30T04:17:49Z",
+ "n": 3,
+ "first": "2026-06-01",
+ "last": "2026-06-01",
+ "history": [
+  ["2026-06-01","2025",0.939],
+  ["2026-06-01","2026",0.652],
+  ["2026-06-01","2027",0.815]
+ ]
+}

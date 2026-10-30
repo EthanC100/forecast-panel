@@ -1,0 +1,1343 @@
+{
+ "generated_at": "2026-10-30T04:29:54Z",
+ "year": 2026,
+ "forecasts": {
+  "FR": [
+   {
+    "id": "fc:FR.inflation.2026",
+    "country": "FR",
+    "var": "inflation",
+    "label": "Inflation (HICP; IMF: CPI)",
+    "year": 2026,
+    "unit": "%",
+    "median": 2.38,
+    "sd": 0.191,
+    "min": 2.06,
+    "max": 2.4,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.191,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 2.4,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 2.06,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 2.38,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.inflation.2027",
+    "country": "FR",
+    "var": "inflation",
+    "label": "Inflation (HICP; IMF: CPI)",
+    "year": 2027,
+    "unit": "%",
+    "median": 1.85,
+    "sd": 0.205,
+    "min": 1.84,
+    "max": 2.2,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.205,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 2.2,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 1.84,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 1.85,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.rate.2026",
+    "country": "FR",
+    "var": "rate",
+    "label": "Short-term rate (3-month, euro area; OECD only)",
+    "year": 2026,
+    "unit": "%",
+    "median": 2.24,
+    "sd": null,
+    "min": 2.24,
+    "max": 2.24,
+    "respondents": 1,
+    "as_of": "2026-06-01",
+    "median_3m_ago": 2.24,
+    "change_3m": 0.003,
+    "change_3m_note": null,
+    "dispersion": null,
+    "dispersion_kind": null,
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "OECD",
+      "value": 2.24,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.rate.2027",
+    "country": "FR",
+    "var": "rate",
+    "label": "Short-term rate (3-month, euro area; OECD only)",
+    "year": 2027,
+    "unit": "%",
+    "median": 2.24,
+    "sd": null,
+    "min": 2.24,
+    "max": 2.24,
+    "respondents": 1,
+    "as_of": "2026-06-01",
+    "median_3m_ago": 2.24,
+    "change_3m": 0.003,
+    "change_3m_note": null,
+    "dispersion": null,
+    "dispersion_kind": null,
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "OECD",
+      "value": 2.24,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.gdp.2026",
+    "country": "FR",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2026,
+    "unit": "%",
+    "median": 0.65,
+    "sd": 0.198,
+    "min": 0.4,
+    "max": 0.79,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.198,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 0.4,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 0.65,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 0.79,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.gdp.2027",
+    "country": "FR",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2027,
+    "unit": "%",
+    "median": 0.81,
+    "sd": 0.223,
+    "min": 0.7,
+    "max": 1.13,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.223,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": 0.7,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": 0.81,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": 1.13,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.balance.2026",
+    "country": "FR",
+    "var": "balance",
+    "label": "General government balance, % of GDP",
+    "year": 2026,
+    "unit": "%",
+    "median": -5.11,
+    "sd": 0.224,
+    "min": -5.4,
+    "max": -4.96,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.224,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": -5.4,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": -4.96,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": -5.11,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   },
+   {
+    "id": "fc:FR.balance.2027",
+    "country": "FR",
+    "var": "balance",
+    "label": "General government balance, % of GDP",
+    "year": 2027,
+    "unit": "%",
+    "median": -5.2,
+    "sd": 0.556,
+    "min": -5.69,
+    "max": -4.58,
+    "respondents": 3,
+    "as_of": "2026-10-01",
+    "median_3m_ago": null,
+    "change_3m": null,
+    "change_3m_note": "no earlier edition stored for every institution yet",
+    "dispersion": 0.556,
+    "dispersion_kind": "sd across the institutions",
+    "source": "IMF, OECD and European Commission",
+    "institutions": [
+     {
+      "institution": "IMF",
+      "value": -5.2,
+      "edition": "World Economic Outlook (October 2026)",
+      "edition_date": "2026-10-01",
+      "url": "https://www.imf.org/external/datamapper/profile/FRA"
+     },
+     {
+      "institution": "OECD",
+      "value": -4.58,
+      "edition": "OECD Economic Outlook 119",
+      "edition_date": "2026-06-01",
+      "url": "https://www.oecd.org/en/topics/sub-issues/economic-outlook.html"
+     },
+     {
+      "institution": "European Commission",
+      "value": -5.69,
+      "edition": "European Commission Spring 2026 Economic Forecast (AMECO, updated 2026-06-02)",
+      "edition_date": "2026-06-02",
+      "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
+     }
+    ],
+    "mine": null
+   }
+  ],
+  "BR": [
+   {
+    "id": "fc:BR.inflation.2026",
+    "country": "BR",
+    "var": "inflation",
+    "label": "Inflation (IPCA, Dec/Dec)",
+    "year": 2026,
+    "unit": "%",
+    "median": 5.19,
+    "mean": 5.18,
+    "sd": 0.146,
+    "min": 4.8,
+    "max": 5.75,
+    "respondents": 142,
+    "as_of": "2026-10-23",
+    "median_3m_ago": 5.12,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": 0.068,
+    "dispersion": 0.146,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/IPCA/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.inflation.2027",
+    "country": "BR",
+    "var": "inflation",
+    "label": "Inflation (IPCA, Dec/Dec)",
+    "year": 2027,
+    "unit": "%",
+    "median": 4.34,
+    "mean": 4.38,
+    "sd": 0.434,
+    "min": 3.25,
+    "max": 6.0,
+    "respondents": 142,
+    "as_of": "2026-10-23",
+    "median_3m_ago": 4.22,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": 0.121,
+    "dispersion": 0.434,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/IPCA/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.policy_rate.2026",
+    "country": "BR",
+    "var": "policy_rate",
+    "label": "Selic rate, year end",
+    "year": 2026,
+    "unit": "% p.a.",
+    "median": 13.25,
+    "mean": 13.31,
+    "sd": 0.184,
+    "min": 13.0,
+    "max": 14.0,
+    "respondents": 137,
+    "as_of": "2026-10-23",
+    "median_3m_ago": 14.0,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.75,
+    "dispersion": 0.184,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Selic/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.policy_rate.2027",
+    "country": "BR",
+    "var": "policy_rate",
+    "label": "Selic rate, year end",
+    "year": 2027,
+    "unit": "% p.a.",
+    "median": 11.75,
+    "mean": 11.6,
+    "sd": 0.775,
+    "min": 9.0,
+    "max": 14.0,
+    "respondents": 136,
+    "as_of": "2026-10-23",
+    "median_3m_ago": 12.0,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.25,
+    "dispersion": 0.775,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Selic/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.gdp.2026",
+    "country": "BR",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2026,
+    "unit": "%",
+    "median": 1.8,
+    "mean": 1.79,
+    "sd": 0.146,
+    "min": 1.25,
+    "max": 2.28,
+    "respondents": 113,
+    "as_of": "2026-10-23",
+    "median_3m_ago": 1.99,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.186,
+    "dispersion": 0.146,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/PIB Total/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.gdp.2027",
+    "country": "BR",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2027,
+    "unit": "%",
+    "median": 1.31,
+    "mean": 1.31,
+    "sd": 0.341,
+    "min": 0.29,
+    "max": 2.38,
+    "respondents": 113,
+    "as_of": "2026-10-23",
+    "median_3m_ago": 1.6,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.286,
+    "dispersion": 0.341,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/PIB Total/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.primary.2026",
+    "country": "BR",
+    "var": "primary",
+    "label": "Primary balance, % of GDP",
+    "year": 2026,
+    "unit": "% of GDP",
+    "median": -0.48,
+    "mean": -0.46,
+    "sd": 0.105,
+    "min": -0.7,
+    "max": -0.19,
+    "respondents": 58,
+    "as_of": "2026-10-23",
+    "median_3m_ago": -0.5,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": 0.02,
+    "dispersion": 0.105,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.primary.2027",
+    "country": "BR",
+    "var": "primary",
+    "label": "Primary balance, % of GDP",
+    "year": 2027,
+    "unit": "% of GDP",
+    "median": -0.3,
+    "mean": -0.27,
+    "sd": 0.286,
+    "min": -0.9,
+    "max": 0.5,
+    "respondents": 57,
+    "as_of": "2026-10-23",
+    "median_3m_ago": -0.4,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": 0.1,
+    "dispersion": 0.286,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.nominal.2026",
+    "country": "BR",
+    "var": "nominal",
+    "label": "Overall (nominal) balance, % of GDP",
+    "year": 2026,
+    "unit": "% of GDP",
+    "median": -8.93,
+    "mean": -8.9,
+    "sd": 0.525,
+    "min": -10.0,
+    "max": -6.96,
+    "respondents": 53,
+    "as_of": "2026-10-23",
+    "median_3m_ago": -8.7,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.23,
+    "dispersion": 0.525,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Resultado nominal/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   },
+   {
+    "id": "fc:BR.nominal.2027",
+    "country": "BR",
+    "var": "nominal",
+    "label": "Overall (nominal) balance, % of GDP",
+    "year": 2027,
+    "unit": "% of GDP",
+    "median": -8.5,
+    "mean": -8.48,
+    "sd": 0.815,
+    "min": -11.7,
+    "max": -6.7,
+    "respondents": 52,
+    "as_of": "2026-10-23",
+    "median_3m_ago": -8.2,
+    "date_3m_ago": "2026-07-24",
+    "change_3m": -0.3,
+    "dispersion": 0.815,
+    "dispersion_kind": "sd across respondents",
+    "source": "BCB Focus",
+    "source_id": "ExpectativasMercadoAnuais/Resultado nominal/baseCalculo=0",
+    "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
+    "titles": null,
+    "mine": null
+   }
+  ],
+  "MX": [
+   {
+    "id": "fc:MX.inflation.2026",
+    "country": "MX",
+    "var": "inflation",
+    "label": "Inflation, year end",
+    "year": 2026,
+    "unit": "%",
+    "median": 3.87,
+    "mean": null,
+    "sd": 0.18,
+    "min": 3.26,
+    "max": 4.25,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 4.2,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": -0.33,
+    "dispersion": 0.18,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150/datos (Bmx-Token header)",
+    "titles": {
+     "SR14139": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mediana",
+     "SR14144": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Desviación estándar",
+     "SR14142": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mínimo",
+     "SR14143": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Máximo",
+     "SR14146": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mediana",
+     "SR14151": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14149": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mínimo",
+     "SR14150": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.inflation.2027",
+    "country": "MX",
+    "var": "inflation",
+    "label": "Inflation, year end",
+    "year": 2027,
+    "unit": "%",
+    "median": 3.82,
+    "mean": null,
+    "sd": 0.17,
+    "min": 3.5,
+    "max": 4.41,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 3.84,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": -0.02,
+    "dispersion": 0.17,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150/datos (Bmx-Token header)",
+    "titles": {
+     "SR14139": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mediana",
+     "SR14144": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Desviación estándar",
+     "SR14142": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mínimo",
+     "SR14143": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Máximo",
+     "SR14146": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mediana",
+     "SR14151": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14149": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Mínimo",
+     "SR14150": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del siguiente año (año t+1) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.policy_rate.2026",
+    "country": "MX",
+    "var": "policy_rate",
+    "label": "Policy (interbank) rate, Q4 close",
+    "year": 2026,
+    "unit": "% p.a.",
+    "median": 6.5,
+    "mean": null,
+    "sd": 0.14,
+    "min": 6.25,
+    "max": 7.0,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 6.5,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": 0.0,
+    "dispersion": 0.14,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14673, SR14678, SR14676, SR14677, SR14701, SR14706, SR14704, SR14705 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14673,SR14678,SR14676,SR14677,SR14701,SR14706,SR14704,SR14705/datos (Bmx-Token header)",
+    "titles": {
+     "SR14673": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mediana",
+     "SR14678": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Desviación estándar",
+     "SR14676": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mínimo",
+     "SR14677": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Máximo",
+     "SR14701": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mediana",
+     "SR14706": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Desviación estándar",
+     "SR14704": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mínimo",
+     "SR14705": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.policy_rate.2027",
+    "country": "MX",
+    "var": "policy_rate",
+    "label": "Policy (interbank) rate, Q4 close",
+    "year": 2027,
+    "unit": "% p.a.",
+    "median": 6.5,
+    "mean": null,
+    "sd": 0.29,
+    "min": 5.75,
+    "max": 7.25,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 6.5,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": 0.0,
+    "dispersion": 0.29,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14673, SR14678, SR14676, SR14677, SR14701, SR14706, SR14704, SR14705 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14673,SR14678,SR14676,SR14677,SR14701,SR14706,SR14704,SR14705/datos (Bmx-Token header)",
+    "titles": {
+     "SR14673": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mediana",
+     "SR14678": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Desviación estándar",
+     "SR14676": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Mínimo",
+     "SR14677": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de dos trimestres (trimestre t+2) Máximo",
+     "SR14701": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mediana",
+     "SR14706": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Desviación estándar",
+     "SR14704": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mínimo",
+     "SR14705": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.gdp.2026",
+    "country": "MX",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2026,
+    "unit": "%",
+    "median": 1.4,
+    "mean": null,
+    "sd": 0.21,
+    "min": 0.84,
+    "max": 1.9,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 1.1,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": 0.3,
+    "dispersion": 0.21,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459/datos (Bmx-Token header)",
+    "titles": {
+     "SR14448": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mediana",
+     "SR14453": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Desviación estándar",
+     "SR14451": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mínimo",
+     "SR14452": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Máximo",
+     "SR14455": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mediana",
+     "SR14460": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Desviación estándar",
+     "SR14458": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mínimo",
+     "SR14459": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.gdp.2027",
+    "country": "MX",
+    "var": "gdp",
+    "label": "Real GDP growth",
+    "year": 2027,
+    "unit": "%",
+    "median": 1.8,
+    "mean": null,
+    "sd": 0.25,
+    "min": 1.0,
+    "max": 2.2,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": 1.8,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": 0.0,
+    "dispersion": 0.25,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459/datos (Bmx-Token header)",
+    "titles": {
+     "SR14448": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mediana",
+     "SR14453": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Desviación estándar",
+     "SR14451": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Mínimo",
+     "SR14452": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Año en curso  (año t) Máximo",
+     "SR14455": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mediana",
+     "SR14460": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Desviación estándar",
+     "SR14458": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Mínimo",
+     "SR14459": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Pronósticos de la Variación Porcentual Real Anual del PIB en el Año Indicado Cifras en por ciento Siguiente año (año t+1) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.balance.2026",
+    "country": "MX",
+    "var": "balance",
+    "label": "Public-sector economic balance, % of GDP",
+    "year": 2026,
+    "unit": "% of GDP",
+    "median": -3.85,
+    "mean": null,
+    "sd": 0.25,
+    "min": -4.2,
+    "max": -2.92,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": -3.8,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": -0.05,
+    "dispersion": 0.25,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949/datos (Bmx-Token header)",
+    "titles": {
+     "SR14938": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mediana",
+     "SR14943": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Desviación estándar",
+     "SR14941": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mínimo",
+     "SR14942": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Máximo",
+     "SR14945": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mediana",
+     "SR14950": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14948": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mínimo",
+     "SR14949": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Máximo"
+    },
+    "mine": null
+   },
+   {
+    "id": "fc:MX.balance.2027",
+    "country": "MX",
+    "var": "balance",
+    "label": "Public-sector economic balance, % of GDP",
+    "year": 2027,
+    "unit": "% of GDP",
+    "median": -3.7,
+    "mean": null,
+    "sd": 0.31,
+    "min": -4.1,
+    "max": -2.72,
+    "respondents": null,
+    "as_of": "2026-09-01",
+    "median_3m_ago": -3.7,
+    "date_3m_ago": "2026-06-01",
+    "change_3m": 0.0,
+    "dispersion": 0.31,
+    "dispersion_kind": "sd across respondents",
+    "source": "Banxico survey",
+    "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
+    "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949/datos (Bmx-Token header)",
+    "titles": {
+     "SR14938": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mediana",
+     "SR14943": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Desviación estándar",
+     "SR14941": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mínimo",
+     "SR14942": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Máximo",
+     "SR14945": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mediana",
+     "SR14950": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Desviación estándar",
+     "SR14948": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Mínimo",
+     "SR14949": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del siguiente año (año t+1) Máximo"
+    },
+    "mine": null
+   }
+  ]
+ },
+ "policies": {
+  "FR": [
+   {
+    "id": "fr-budget-2027",
+    "country": "FR",
+    "name": "2027 budget bills (PLF and PLFSS 2027)",
+    "what": "The 2027 finance and social-security bills presented on 1 October 2026: about 54 billion euros of consolidation, of which 43 billion of new measures (including a freeze of the civil-service pay index and of basic pensions except the lowest).\n",
+    "claim": {
+     "text": "The public deficit falls from 5.4% of GDP in 2026 to 5.0% in 2027, with growth of 1.0% in 2027 after 0.5% and inflation of 1.8%.\n",
+     "source": {
+      "label": "Government forecasts, as set out in the HCFP opinion",
+      "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
+      "date": "2026-10-01"
+     }
+    },
+    "assessment": {
+     "by": "HCFP (High Council of Public Finance)",
+     "text": "The 1.0% growth assumption looks optimistic; most forecasters are one to three tenths lower and downside risks dominate. The spending path is achievable only if every measure is adopted, which depends on Parliament passing the bills.\n",
+     "source": {
+      "label": "HCFP, Avis n° 2026-5",
+      "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
+      "date": "2026-10-01"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "Government target 5.0% of GDP in 2027 from 5.4%; HCFP: achievable only if all measures pass.",
+      "source": "HCFP"
+     },
+     "inflation": {
+      "text": "1.8% in 2027, described by HCFP as consensual but exposed to energy prices.",
+      "source": "HCFP"
+     },
+     "growth": {
+      "text": "Government 1.0%; Banque de France 0.9%, OFCE 0.7% (Euronews, 1 Oct 2026).",
+      "source": "https://fr.euronews.com/2026/10/01/budget-2027-le-gouvernement-propose-un-effort-de-54-milliards-deuros-pour-ramener-le-defic"
+     }
+    },
+    "status": "Before Parliament.",
+    "next": {
+     "event": "2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
+     "label": "Article 47 70-day deadline",
+     "date": "2026-12-10",
+     "title": "Budget (PLF 2027): Article 47 70-day deadline",
+     "status": "confirmed",
+     "importance": 3
+    },
+    "consensus": {
+     "ref": "fc:FR.balance.2027",
+     "note": "Consensus = median of the IMF, OECD and Commission forecasts.",
+     "label": "General government balance, % of GDP",
+     "year": 2027,
+     "median": -5.2,
+     "dispersion": 0.556,
+     "unit": "%",
+     "source": "IMF, OECD and European Commission",
+     "as_of": "2026-10-01"
+    },
+    "view": {
+     "question": "Will France's 2027 budget law be promulgated by 31 December 2026?",
+     "resolution_date": "2026-12-31",
+     "point_label": "My 2027 general government balance, % of GDP"
+    },
+    "question_id": "pol:fr-budget-2027",
+    "mine": null
+   },
+   {
+    "id": "fr-pensions",
+    "country": "FR",
+    "name": "Pension reform suspension and the 2027 pension freeze",
+    "what": "The 2026 social-security financing law suspended the 2023 pension reform until 1 January 2028, freezing the legal age at 62 years and 9 months and the contribution period at 170 quarters. The 2027 bill proposes freezing basic pensions in 2027 except the lowest.\n",
+    "claim": {
+     "text": "The suspension is a pause, not a repeal: the 2023 rules resume after 1 January 2028, and the 2027 freeze is part of the bill's savings.\n",
+     "source": {
+      "label": "CMS Francis Lefebvre, on the LFSS 2026",
+      "url": "https://cms.law/fr/fra/legal-updates/plfss-pour-2026-une-lettre-rectificative-pour-suspendre-la-reforme-des-retraites",
+      "date": "2025-10"
+     }
+    },
+    "assessment": {
+     "by": "HCFP",
+     "text": "Even after the under-indexation, pension benefits are one of the biggest spending increases in 2027 (+9 billion euros on the social-security field alone), behind interest costs.\n",
+     "source": {
+      "label": "HCFP, Avis n° 2026-5",
+      "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
+      "date": "2026-10-01"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "Pension spending +9 billion euros in 2027 after the freeze (HCFP).",
+      "source": "HCFP"
+     },
+     "inflation": {
+      "text": "Not quantified in the cited sources.",
+      "source": null
+     },
+     "growth": {
+      "text": "Not quantified in the cited sources.",
+      "source": null
+     }
+    },
+    "status": "Suspension in force until 1 January 2028; the 2027 freeze is in the PLFSS 2027 before Parliament.",
+    "next": {
+     "event": "2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
+     "label": "Budget deadlines (Article 47)",
+     "date": "2026-12-10",
+     "title": "Budget (PLF 2027): Article 47 70-day deadline",
+     "status": "confirmed",
+     "importance": 3
+    },
+    "consensus": null,
+    "view": {
+     "question": "Will the 2027 freeze of basic pensions (except the lowest) be in the adopted LFSS 2027?",
+     "resolution_date": "2027-01-31",
+     "point_label": null
+    },
+    "question_id": "pol:fr-pensions",
+    "mine": null
+   }
+  ],
+  "BR": [
+   {
+    "id": "br-fiscal-framework",
+    "country": "BR",
+    "name": "Fiscal framework (LC 200/2023) and the 2027 primary target",
+    "what": "Since 2023 federal policy runs on an annual primary-balance target with a tolerance band of 0.25 point of GDP either side, plus a cap on real primary-spending growth. For 2027 the target is a central-government surplus of 0.5% of GDP.\n",
+    "claim": {
+     "text": "The 2027 budget bill puts the result counted for the target at a surplus of R$83.4 billion (0.6% of GDP) after legal deductions, above the R$73.2 billion (0.5% of GDP) target, so the government says the framework is being met.\n",
+     "source": {
+      "label": "Ministério do Planejamento, PLOA 2027 (as tabulated by IFI, RAF 116)",
+      "url": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2027/ploa-2027",
+      "date": "2026-08-31"
+     }
+    },
+    "assessment": {
+     "by": "IFI (Senate's Independent Fiscal Institution)",
+     "text": "Formal compliance remains possible but rests on assumptions more optimistic than IFI's and a much thinner safety margin. In IFI's scenario the result counted for the target is a surplus of only R$0.9 billion, below even the lower tolerance bound, so about R$35.7 billion of discretionary spending would have to be frozen.\n",
+     "source": {
+      "label": "IFI, Relatório de Acompanhamento Fiscal nº 116",
+      "url": "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf",
+      "date": "2026-09"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "IFI projects a 2027 central-government primary deficit of R$86.1 billion (0.6% of GDP) before deductions, against the bill's R$18.6 billion surplus.",
+      "source": "IFI RAF 116"
+     },
+     "inflation": {
+      "text": "Not quantified for the framework itself in the cited sources.",
+      "source": null
+     },
+     "growth": {
+      "text": "Not quantified for the framework itself in the cited sources.",
+      "source": null
+     }
+    },
+    "status": "In force; the 2027 target is set in the budget guidelines bill (PLDO 2027).",
+    "next": {
+     "event": "2026-12-17-br-2027-budget-ploa-vote-in-congress",
+     "label": "2027 budget vote in Congress",
+     "date": "2026-12-17",
+     "title": "2027 budget (PLOA) vote in Congress",
+     "status": "estimated",
+     "importance": 3
+    },
+    "consensus": {
+     "ref": "fc:BR.primary.2027",
+     "note": "Focus measures the consolidated public sector; the target is for the central government.",
+     "label": "Primary balance, % of GDP",
+     "year": 2027,
+     "median": -0.3,
+     "dispersion": 0.286,
+     "unit": "% of GDP",
+     "source": "BCB Focus",
+     "as_of": "2026-10-23"
+    },
+    "view": {
+     "question": "Will Brazil's central government meet its 2027 primary target (at least the 0.25% of GDP lower bound) without changing the target?",
+     "resolution_date": "2028-01-31",
+     "point_label": "My 2027 primary balance, consolidated public sector, % of GDP"
+    },
+    "question_id": "pol:br-fiscal-framework",
+    "mine": null
+   },
+   {
+    "id": "br-ploa-2027",
+    "country": "BR",
+    "name": "2027 budget bill (PLOA 2027)",
+    "what": "The 2027 annual budget bill (PLN 24/2026), sent to Congress on 31 August 2026. Congress's joint budget committee amends it and both chambers vote it in December.\n",
+    "claim": {
+     "text": "An effective central-government primary surplus of R$18.6 billion (0.1% of GDP) in 2027, built on 2.5% GDP growth and 3.6% IPCA inflation.\n",
+     "source": {
+      "label": "PLOA 2027 parameters (IFI, RAF 116, table 1)",
+      "url": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/orcamentos-anuais/2027/ploa-2027",
+      "date": "2026-08-31"
+     }
+    },
+    "assessment": {
+     "by": "IFI",
+     "text": "Revenue could fall short if growth is below the 2.5% assumed, and assumed savings from benefit reviews may not materialise. IFI expects pension spending of R$1,239.2 billion against the bill's R$1,215.1 billion, part of a R$104.8 billion gap between the two projections of the effective result.\n",
+     "source": {
+      "label": "IFI, Relatório de Acompanhamento Fiscal nº 116",
+      "url": "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf",
+      "date": "2026-09"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "Bill: surplus of R$18.6 billion; IFI: deficit of R$86.1 billion (0.6% of GDP).",
+      "source": "IFI RAF 116"
+     },
+     "inflation": {
+      "text": "IPCA 2027: bill 3.6%, IFI 4.0%, Focus median 4.3% (at the time of RAF 116).",
+      "source": "IFI RAF 116"
+     },
+     "growth": {
+      "text": "GDP 2027: bill 2.5%, IFI 1.8%, Focus median 1.5% (at the time of RAF 116).",
+      "source": "IFI RAF 116"
+     }
+    },
+    "status": "Before Congress (joint budget committee).",
+    "next": {
+     "event": "2026-12-17-br-2027-budget-ploa-vote-in-congress",
+     "label": "2027 budget vote in Congress",
+     "date": "2026-12-17",
+     "title": "2027 budget (PLOA) vote in Congress",
+     "status": "estimated",
+     "importance": 3
+    },
+    "consensus": {
+     "ref": "fc:BR.gdp.2027",
+     "note": "The bill's revenue rests on its growth assumption.",
+     "label": "Real GDP growth",
+     "year": 2027,
+     "median": 1.31,
+     "dispersion": 0.341,
+     "unit": "%",
+     "source": "BCB Focus",
+     "as_of": "2026-10-23"
+    },
+    "view": {
+     "question": "Will Brazil's 2027 real GDP growth (first IBGE estimate) be at least the 2.5% the budget bill assumes?",
+     "resolution_date": "2028-03-15",
+     "point_label": "My 2027 real GDP growth, %"
+    },
+    "question_id": "pol:br-ploa-2027",
+    "mine": null
+   },
+   {
+    "id": "br-consumption-tax",
+    "country": "BR",
+    "name": "Consumption-tax reform (CBS and IBS)",
+    "what": "Constitutional Amendment 132/2023 and Complementary Law 214/2025 replace federal and local consumption taxes with a dual VAT. The federal CBS replaces PIS and Cofins from 1 January 2027; the state and municipal IBS is phased in afterwards. The reference CBS rate is still to be set.\n",
+    "claim": {
+     "text": "The government projects R$636 billion of CBS revenue in 2027 in the budget bill; the law includes a mechanism to cut rates if the combined burden of the new taxes rises.\n",
+     "source": {
+      "label": "Fenacon, reporting the PLOA 2027 projection",
+      "url": "https://fenacon.org.br/reforma-tributaria/governo-preve-arrecadar-r-636-bilhoes-com-nova-cbs-em-2027/",
+      "date": "2026-09-01"
+     }
+    },
+    "assessment": {
+     "by": "IFI",
+     "text": "The 2027 bill adds a R$33.8 billion payment into the fund that compensates states for replacing IPI with the selective tax. It sits outside the LC 200 spending cap but counts towards the primary target, an example of how the transition's design adds fiscal pressure.\n",
+     "source": {
+      "label": "IFI, Relatório de Acompanhamento Fiscal nº 116",
+      "url": "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf",
+      "date": "2026-09"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "R$33.8 billion compensation-fund payment in 2027, counted in the primary result (IFI).",
+      "source": "IFI RAF 116"
+     },
+     "inflation": {
+      "text": "Not quantified in the cited sources.",
+      "source": null
+     },
+     "growth": {
+      "text": "Not quantified in the cited sources.",
+      "source": null
+     }
+    },
+    "status": "CBS starts on 1 January 2027; the Senate must set the reference rate by 15 December 2026.",
+    "next": {
+     "event": "2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate",
+     "label": "Senate deadline to set the CBS reference rate",
+     "date": "2026-12-15",
+     "title": "Senate deadline to set the CBS reference rate",
+     "status": "confirmed",
+     "importance": 2
+    },
+    "consensus": null,
+    "view": {
+     "question": "Will the Senate set the CBS reference rate by 15 December 2026?",
+     "resolution_date": "2026-12-15",
+     "point_label": null
+    },
+    "question_id": "pol:br-consumption-tax",
+    "mine": null
+   }
+  ],
+  "MX": [
+   {
+    "id": "mx-paquete-2027",
+    "country": "MX",
+    "name": "2027 budget package (Paquete Económico 2027)",
+    "what": "The 2027 economic package (general policy criteria, revenue law and spending budget) presented to the Chamber of Deputies on 8 September 2026.\n",
+    "claim": {
+     "text": "The broadest deficit measure (RFSP) falls from 4.1% of GDP in 2026 to 3.9% in 2027, with a primary surplus and debt (SHRFSP) at 55% of GDP; growth of 1.5% to 2.5% and inflation of 3.0% in 2027.\n",
+     "source": {
+      "label": "SHCP, Criterios Generales de Política Económica 2027 (as summarised by IMCO)",
+      "url": "https://www.ppef.hacienda.gob.mx/",
+      "date": "2026-09-08"
+     }
+    },
+    "assessment": {
+     "by": "IMCO",
+     "text": "The package lowers the ambition of fiscal consolidation (3.9% against the 3.5% planned in April) and cuts the growth outlook. Private analysts surveyed by Banxico expect 1.8% growth; if growth undershoots, revenue would miss and push the deficit and debt up.\n",
+     "source": {
+      "label": "IMCO, Paquete Económico 2027",
+      "url": "https://imco.org.mx/wp-content/uploads/2026/09/IMCO_Paquete-economico-2027.pdf",
+      "date": "2026-09"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "RFSP 3.9% of GDP in 2027 (government), down from 4.1%.",
+      "source": "IMCO"
+     },
+     "inflation": {
+      "text": "Government 3.0% for 2027 against 3.8% expected by analysts in Banxico's survey (IMCO table).",
+      "source": "IMCO"
+     },
+     "growth": {
+      "text": "Government 1.5% to 2.5% against 1.8% in Banxico's survey and 1.9% from the IMF (IMCO).",
+      "source": "IMCO"
+     }
+    },
+    "status": "Before Congress; the Chamber must approve the spending budget by 15 November 2026.",
+    "next": {
+     "event": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
+     "label": "Chamber deadline for the 2027 spending budget",
+     "date": "2026-11-15",
+     "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+     "status": "confirmed",
+     "importance": 2
+    },
+    "consensus": {
+     "ref": "fc:MX.balance.2027",
+     "note": "The survey asks for the public-sector economic balance, a narrower measure than the RFSP.",
+     "label": "Public-sector economic balance, % of GDP",
+     "year": 2027,
+     "median": -3.7,
+     "dispersion": 0.31,
+     "unit": "% of GDP",
+     "source": "Banxico survey",
+     "as_of": "2026-09-01"
+    },
+    "view": {
+     "question": "Will Mexico's 2027 public-sector budget deficit come in at or below the planned level?",
+     "resolution_date": "2028-02-28",
+     "point_label": "My 2027 public-sector economic balance, % of GDP"
+    },
+    "question_id": "pol:mx-paquete-2027",
+    "mine": null
+   },
+   {
+    "id": "mx-judicial-reform",
+    "country": "MX",
+    "name": "Judicial reform and the second judicial election",
+    "what": "The 2024 constitutional reform makes federal judges elected by popular vote; the first judicial election was held in June 2025. In May 2026 Congress approved moving the second judicial election from 2027 to June 2028.\n",
+    "claim": {
+     "text": "The government proposed the postponement so the judicial vote would not coincide with the June 2027 federal and state elections, citing the operational risks flagged by the electoral institute.\n",
+     "source": {
+      "label": "El Imparcial",
+      "url": "https://www.elimparcial.com/mexico/2026/05/18/claudia-sheinbaum-pide-analizar-mover-la-eleccion-judicial-a-2028-estas-son-las-razones-detras-de-la-propuesta/",
+      "date": "2026-05-18"
+     }
+    },
+    "assessment": {
+     "by": "IMF staff",
+     "text": "The reform creates important uncertainties about the effectiveness of contract enforcement and the predictability of the rule of law (2024 Article IV mission; not updated in the cited sources).\n",
+     "source": {
+      "label": "IMF, Mexico: 2024 Article IV mission concluding statement",
+      "url": "https://imf.org/en/News/Articles/2024/10/15/mcs-mexico-staff-concluding-statement-of-the-2024-aiv-mission",
+      "date": "2024-10-15"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "No direct fiscal effect quantified in the cited sources.",
+      "source": null
+     },
+     "inflation": {
+      "text": "Not quantified in the cited sources.",
+      "source": null
+     },
+     "growth": {
+      "text": "Downside risk to investment through rule-of-law uncertainty (IMF); not quantified.",
+      "source": "IMF"
+     }
+    },
+    "status": "Second judicial election moved to June 2028 (approved by both chambers in May 2026, then sent to state legislatures).",
+    "next": {
+     "event": null,
+     "date": "2028-06-04",
+     "label": "Second judicial election",
+     "source": "https://www.razon.com.mx/mexico/2026/05/28/senado-aprueba-pasar-eleccion-judicial-al-2028-va-a-congresos-locales/"
+    },
+    "consensus": null,
+    "view": {
+     "question": "Will Mexico hold its second judicial election on 4 June 2028 as now scheduled?",
+     "resolution_date": "2028-06-30",
+     "point_label": null
+    },
+    "question_id": "pol:mx-judicial-reform",
+    "mine": null
+   },
+   {
+    "id": "mx-pemex",
+    "country": "MX",
+    "name": "Energy policy and support for Pemex",
+    "what": "The 2025 energy laws give state firms Pemex and CFE priority. The Pemex Strategic Plan 2025-2035 (August 2025) and a Treasury capitalisation strategy aim to put Pemex's finances on a sustainable footing.\n",
+    "claim": {
+     "text": "The plan aims to make Pemex financially self-sufficient from 2027, no longer needing Treasury support.\n",
+     "source": {
+      "label": "Enerdata, on the Pemex Strategic Plan",
+      "url": "https://www.enerdata.net/publications/daily-energy-news/mexico-targets-pemexs-self-sufficiency-2027-new-strategic-plan.html",
+      "date": "2025-08"
+     }
+    },
+    "assessment": {
+     "by": "IMCO",
+     "text": "The 2027 package still includes capital contributions to Pemex of 81.1 billion pesos (69.2% less than before), so the plan's original goal was not met. With losses of 28 billion pesos in the first half of 2026 and debt above US$77 billion, Pemex remains a risk to public finances.\n",
+     "source": {
+      "label": "IMCO, Paquete Económico 2027",
+      "url": "https://imco.org.mx/wp-content/uploads/2026/09/IMCO_Paquete-economico-2027.pdf",
+      "date": "2026-09"
+     }
+    },
+    "effects": {
+     "deficit": {
+      "text": "81.1 billion pesos of capital contributions in the 2027 budget (IMCO).",
+      "source": "IMCO"
+     },
+     "inflation": {
+      "text": "Not quantified in the cited sources.",
+      "source": null
+     },
+     "growth": {
+      "text": "Not quantified in the cited sources.",
+      "source": null
+     }
+    },
+    "status": "In force; the 2027 contributions depend on the spending budget due by 15 November 2026.",
+    "next": {
+     "event": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
+     "label": "Chamber deadline for the 2027 spending budget",
+     "date": "2026-11-15",
+     "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+     "status": "confirmed",
+     "importance": 2
+    },
+    "consensus": null,
+    "view": {
+     "question": "Will the approved 2027 budget keep Pemex capital contributions at or below 81.1 billion pesos?",
+     "resolution_date": "2026-11-30",
+     "point_label": null
+    },
+    "question_id": "pol:mx-pemex",
+    "mine": null
+   }
+  ]
+ },
+ "assessments": {
+  "items": [],
+  "note": "not yet run"
+ },
+ "gaps": [],
+ "n_flagged": 0,
+ "gap_rule": "Flagged when my point forecast differs from the consensus median by more than the consensus standard deviation, or (without a point) when my probability of beating the median is 84% or more, or 16% or less."
+}

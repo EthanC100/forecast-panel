@@ -1,0 +1,45 @@
+{
+ "id": "pm.5336170",
+ "name": "Will Luiz Inácio Lula da Silva win Brazil, Benjamin Netanyahu become Israeli PM, and Democrats win the US Senate?",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Polymarket CLOB",
+ "source_id": "market 5336170 / will-luiz-inacio-lula-da-silva-win-brazil-benjamin-netanyahu-become-israeli-pm-and-democrats-win-the-us-senate",
+ "source_url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo/will-luiz-inacio-lula-da-silva-win-brazil-benjamin-netanyahu-become-israeli-pm-and-democrats-win-the-us-senate",
+ "event": "Fall Elections Combo: Brazil, Israel, US Senate",
+ "end_date": "2026-11-05",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-10-30T04:18:19Z",
+ "updated_at": "2026-10-30T04:18:19Z",
+ "n": 20,
+ "first": "2026-10-06",
+ "last": "2026-10-30",
+ "history": [
+  ["2026-10-06",0.07],
+  ["2026-10-07",0.05],
+  ["2026-10-08",0.065],
+  ["2026-10-09",0.0585],
+  ["2026-10-10",0.0655],
+  ["2026-10-11",0.071],
+  ["2026-10-12",0.0695],
+  ["2026-10-13",0.034],
+  ["2026-10-14",0.012],
+  ["2026-10-15",0.0405],
+  ["2026-10-16",0.0425],
+  ["2026-10-17",0.0445],
+  ["2026-10-19",0.0445],
+  ["2026-10-20",0.045],
+  ["2026-10-21",0.0465],
+  ["2026-10-23",0.098],
+  ["2026-10-24",0.098],
+  ["2026-10-27",0.2105],
+  ["2026-10-28",0.268],
+  ["2026-10-30",0.2425]
+ ]
+}

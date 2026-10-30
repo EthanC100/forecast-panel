@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T02:41:49Z",
+ "generated_at": "2026-10-30T04:29:56Z",
  "gauges": [
   {
    "id": "a",
@@ -1011,7 +1011,7 @@
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-29T15:56:26Z",
+      "fetched_at": "2026-10-30T04:17:09Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1043,7 +1043,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-23",
-      "fetched_at": "2026-10-29T15:56:24Z",
+      "fetched_at": "2026-10-30T04:16:57Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1073,10 +1073,10 @@
      },
      "meta": {
       "source": "Banxico SIE API",
-      "source_id": "SIE SR14139, SR14144, SR14146, SR14151 (median, sd for years t and t+1)",
-      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14146,SR14151/datos (Bmx-Token header)",
+      "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
+      "source_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150/datos (Bmx-Token header)",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T02:41:38Z",
+      "fetched_at": "2026-10-30T04:17:40Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1179,7 +1179,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-10-20",
-      "fetched_at": "2026-10-29T15:57:54Z",
+      "fetched_at": "2026-10-30T04:18:04Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1209,7 +1209,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-10-20",
-      "fetched_at": "2026-10-29T15:57:55Z",
+      "fetched_at": "2026-10-30T04:18:07Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1374,6 +1374,29 @@
  ],
  "shared_errors": [
   {
+   "scenario": "fr-sp-2026-11",
+   "title": "S&P review of France, 27 Nov 2026",
+   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
+   "date": "2026-11-27",
+   "days": 28,
+   "score": 0.8,
+   "signals": [
+    {
+     "signal": "market vs base rate",
+     "detail": "market 32% vs base rate 0%",
+     "strength": 1.0,
+     "badge": "untested",
+     "hidden_market": true
+    },
+    {
+     "signal": "forced-flow threshold",
+     "detail": "Last AA-category rating among the big three: Moody's at Aa3 (negative) is the last; one notch removes it",
+     "strength": 1.0,
+     "badge": "context"
+    }
+   ]
+  },
+  {
    "scenario": "br-fiscal-2027",
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
@@ -1396,40 +1419,17 @@
    ]
   },
   {
-   "scenario": "fr-sp-2026-11",
-   "title": "S&P review of France, 27 Nov 2026",
-   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
-   "date": "2026-11-27",
-   "days": 28,
-   "score": 0.483,
-   "signals": [
-    {
-     "signal": "market vs base rate",
-     "detail": "market 11% vs base rate 0%",
-     "strength": 0.3666666666666667,
-     "badge": "untested",
-     "hidden_market": true
-    },
-    {
-     "signal": "forced-flow threshold",
-     "detail": "Last AA-category rating among the big three: Moody's at Aa3 (negative) is the last; one notch removes it",
-     "strength": 1.0,
-     "badge": "context"
-    }
-   ]
-  },
-  {
    "scenario": "fr-budget-2027",
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
    "days": 41,
-   "score": 0.017,
+   "score": 0.025,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 51% vs base rate 50%",
-     "strength": 0.03333333333333337,
+     "detail": "market 52% vs base rate 50%",
+     "strength": 0.050000000000000044,
      "badge": "untested",
      "hidden_market": true
     }

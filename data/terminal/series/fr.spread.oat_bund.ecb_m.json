@@ -2,7 +2,7 @@
  "unit": "bp",
  "frequency": "monthly",
  "source": "ECB Data Portal (IRS, derived)",
- "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE.L.L40.CI.0000.EUR.N.Z",
+ "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
  "id": "fr.spread.oat_bund.ecb_m",
  "name": "France-Germany 10-year spread (ECB, monthly)",
  "country": "FR",
@@ -13,7 +13,7 @@
  "fields": [
   "value"
  ],
- "fetched_at": "2026-10-29T15:57:49Z",
+ "fetched_at": "2026-10-30T04:17:44Z",
  "updated_at": "2026-10-29T12:55:43Z",
  "n": 441,
  "first": "1990-01-01",

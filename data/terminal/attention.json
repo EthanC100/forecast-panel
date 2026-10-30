@@ -20,9 +20,16 @@
      5.0,
      1548836.0,
      3.2282307487687527e-06
+    ],
+    [
+     "2026-10-30",
+     5.0,
+     1548836.0,
+     3.2282307487687527e-06,
+     2.8505499423476276e-06
     ]
    ],
-   "last_success": "2026-10-29T13:32:29Z"
+   "last_success": "2026-10-30T04:21:25Z"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -32,9 +39,16 @@
      8.0,
      1548836.0,
      5.165169198030005e-06
+    ],
+    [
+     "2026-10-30",
+     8.0,
+     1548836.0,
+     5.165169198030005e-06,
+     5.184695909632279e-06
     ]
    ],
-   "last_success": "2026-10-29T13:34:22Z"
+   "last_success": "2026-10-30T04:22:04Z"
   },
   "(Copom OR \"Selic rate\")": {
    "country": "BR",
@@ -44,9 +58,16 @@
      71.0,
      1548836.0,
      4.584087663251629e-05
+    ],
+    [
+     "2026-10-30",
+     71.0,
+     1548836.0,
+     4.584087663251629e-05,
+     9.477045750355735e-05
     ]
    ],
-   "last_success": "2026-10-29T13:36:13Z"
+   "last_success": "2026-10-30T04:22:44Z"
   },
   "Banxico \"interest rate\"": {
    "country": "MX",
@@ -56,9 +77,16 @@
      41.0,
      1548836.0,
      2.647149213990377e-05
+    ],
+    [
+     "2026-10-30",
+     41.0,
+     1548836.0,
+     2.647149213990377e-05,
+     2.001581807344095e-05
     ]
    ],
-   "last_success": "2026-10-29T13:38:04Z"
+   "last_success": "2026-10-30T04:23:27Z"
   },
   "Brazil \"primary deficit\"": {
    "country": "BR",
@@ -68,9 +96,16 @@
      4.0,
      1548836.0,
      2.5825845990150024e-06
+    ],
+    [
+     "2026-10-30",
+     4.0,
+     1548836.0,
+     2.5825845990150024e-06,
+     1.4459311301763328e-06
     ]
    ],
-   "last_success": "2026-10-29T13:54:33Z"
+   "last_success": "2026-10-30T04:26:03Z"
   },
   "\"S&P\" France rating": {
    "country": "FR",
@@ -87,7 +122,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -127,8 +162,13 @@
    "country": "FR",
    "history": [],
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+  },
+  "Mexico 2027 budget Chamber of Deputies": {
+   "country": "MX",
+   "history": [],
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-10-29T16:04:42Z",
+ "updated_at": "2026-10-30T04:29:50Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }

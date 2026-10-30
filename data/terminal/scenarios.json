@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T02:41:46Z",
+ "generated_at": "2026-10-30T04:29:54Z",
  "asymmetry_rules": {
   "gap_pp": 15,
   "reward_risk": 2.0,
@@ -241,10 +241,10 @@
      {
       "venue": "Polymarket",
       "id": "5458390",
-      "prob": 0.11,
+      "prob": 0.315,
       "question": "Moody's or S&P downgrades France by November 30, 2026?",
-      "volume": 7107.663170999999,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 7302.111706,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt",
       "note": "Moody's or S&P by 30 Nov 2026; Moody's already reviewed on 23 Oct, so this is mostly S&P",
       "related": false,
@@ -258,14 +258,14 @@
       "prob": 0.31,
       "question": "France credit rating downgrade in 2026?: Downgrade before 2027?",
       "volume": 2000.09,
-      "as_of": "2026-10-29T15:58:21Z",
+      "as_of": "2026-10-30T04:18:28Z",
       "url": "https://kalshi.com/markets/kxfrancedowngrade",
       "note": "any agency, any time in 2026: wider than this question",
       "related": true,
       "branches": []
      }
     ],
-    "yes": 0.11,
+    "yes": 0.315,
     "how": "Polymarket 5458390",
     "by_branch": null
    },
@@ -328,7 +328,7 @@
     "proxy": false,
     "frequency": "monthly",
     "source": "ECB Data Portal (IRS, derived)",
-    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE.L.L40.CI.0000.EUR.N.Z",
+    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
     "levels_are_defaults": true,
     "degraded": {
      "id": "webstat",
@@ -341,7 +341,7 @@
    },
    "asymmetry": {
     "yes_is_good": false,
-    "market_yes": 0.11,
+    "market_yes": 0.315,
     "market_source": "prediction market",
     "days": 28,
     "rules": {
@@ -703,10 +703,10 @@
      {
       "venue": "Polymarket",
       "id": "1722538",
-      "prob": 0.51,
+      "prob": 0.515,
       "question": "Will France pass a national budget by December 31?",
-      "volume": 22057.999729,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 22144.979729,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31",
       "note": "\"Will France pass a national budget by December 31?\"",
       "related": false,
@@ -720,8 +720,8 @@
       "id": "KXFRANCEBUDGET-27JAN01",
       "prob": 0.49,
       "question": "Will France enact its 2027 budget in 2026?: Yes",
-      "volume": 4034.62,
-      "as_of": "2026-10-29T15:58:21Z",
+      "volume": 4082.01,
+      "as_of": "2026-10-30T04:18:28Z",
       "url": "https://kalshi.com/markets/kxfrancebudget",
       "note": "\"Will France enact its 2027 budget in 2026?\"",
       "related": false,
@@ -736,14 +736,14 @@
       "prob": 0.66,
       "question": "Will France use Article 49.3 on its 2027 state budget in 2026?: Yes",
       "volume": 573.79,
-      "as_of": "2026-10-29T15:58:21Z",
+      "as_of": "2026-10-30T04:18:28Z",
       "url": "https://kalshi.com/markets/kxfrance493",
       "note": "49.3 used on the 2027 state budget in 2026",
       "related": true,
       "branches": []
      }
     ],
-    "yes": 0.51,
+    "yes": 0.515,
     "how": "Polymarket 1722538",
     "by_branch": null
    },
@@ -808,7 +808,7 @@
     "proxy": false,
     "frequency": "monthly",
     "source": "ECB Data Portal (IRS, derived)",
-    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE.L.L40.CI.0000.EUR.N.Z",
+    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
     "levels_are_defaults": true,
     "degraded": {
      "id": "webstat",
@@ -821,7 +821,7 @@
    },
    "asymmetry": {
     "yes_is_good": true,
-    "market_yes": 0.51,
+    "market_yes": 0.515,
     "market_source": "prediction market",
     "days": 41,
     "rules": {
@@ -968,7 +968,7 @@
       }
      ],
      "p_mine": null,
-     "p_market": 0.458,
+     "p_market": 0.4575,
      "p_ai": 0.4
     },
     {
@@ -994,7 +994,7 @@
       }
      ],
      "p_mine": null,
-     "p_market": 0.3863,
+     "p_market": 0.3796,
      "p_ai": 0.4
     },
     {
@@ -1031,7 +1031,7 @@
       }
      ],
      "p_mine": null,
-     "p_market": 0.1557,
+     "p_market": 0.163,
      "p_ai": 0.2
     }
    ],
@@ -1040,10 +1040,10 @@
      {
       "venue": "Polymarket",
       "id": "679018",
-      "prob": 0.4295,
+      "prob": 0.4215,
       "question": "Will Marine Le Pen win the 2027 French presidential election?",
-      "volume": 4638634.297526001,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 4674342.264276,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Le Pen",
       "related": false,
@@ -1054,10 +1054,10 @@
      {
       "venue": "Polymarket",
       "id": "679019",
-      "prob": 0.0205,
+      "prob": 0.022,
       "question": "Will Jordan Bardella win the 2027 French presidential election?",
-      "volume": 3182674.7015280006,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 3295209.4036119995,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Bardella",
       "related": false,
@@ -1070,8 +1070,8 @@
       "id": "679021",
       "prob": 0.165,
       "question": "Will Édouard Philippe win the 2027 French presidential election?",
-      "volume": 2695801.197889,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 2762086.994544,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Philippe",
       "related": false,
@@ -1082,10 +1082,10 @@
      {
       "venue": "Polymarket",
       "id": "679022",
-      "prob": 0.1615,
+      "prob": 0.1555,
       "question": "Will David Lisnard win the 2027 French presidential election?",
-      "volume": 5738878.202662,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 5754127.739724,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Lisnard",
       "related": false,
@@ -1098,8 +1098,8 @@
       "id": "679027",
       "prob": 0.0115,
       "question": "Will Bruno Retailleau win the 2027 French presidential election?",
-      "volume": 3444417.955821,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 3459998.2454549996,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Retailleau",
       "related": false,
@@ -1112,8 +1112,8 @@
       "id": "679026",
       "prob": 0.0045,
       "question": "Will Gabriel Attal win the 2027 French presidential election?",
-      "volume": 3326967.6189220008,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 3347374.2631720006,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Attal",
       "related": false,
@@ -1124,10 +1124,10 @@
      {
       "venue": "Polymarket",
       "id": "679060",
-      "prob": 0.037,
+      "prob": 0.0315,
       "question": "Will Christine Lagarde win the 2027 French presidential election?",
-      "volume": 1471638.445782,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 1622886.2969599997,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Lagarde",
       "related": false,
@@ -1140,8 +1140,8 @@
       "id": "679030",
       "prob": 0.105,
       "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
-      "volume": 2668463.7899329998,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 2687121.4754729997,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Mélenchon",
       "related": false,
@@ -1152,10 +1152,10 @@
      {
       "venue": "Polymarket",
       "id": "679029",
-      "prob": 0.0335,
+      "prob": 0.0305,
       "question": "Will Raphaël Glucksmann win the 2027 French presidential election?",
-      "volume": 3169561.3241000003,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 3198897.2580360007,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Glucksmann",
       "related": false,
@@ -1166,10 +1166,10 @@
      {
       "venue": "Polymarket",
       "id": "679028",
-      "prob": 0.0145,
+      "prob": 0.0225,
       "question": "Will François Hollande win the 2027 French presidential election?",
-      "volume": 2796475.5553550003,
-      "as_of": "2026-10-29T15:57:58Z",
+      "volume": 2817646.839728,
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/next-french-presidential-election",
       "note": "Hollande",
       "related": false,
@@ -1178,12 +1178,12 @@
       ]
      }
     ],
-    "yes": 0.458,
+    "yes": 0.4575,
     "how": "sum of 10 candidate markets, normalised to 100%; 0.0% on unlisted outcomes",
     "by_branch": {
-     "rn": 0.458,
-     "centre_right": 0.3863,
-     "left": 0.1557
+     "rn": 0.4575,
+     "centre_right": 0.3796,
+     "left": 0.163
     }
    },
    "mine": null,
@@ -1248,7 +1248,7 @@
     "proxy": false,
     "frequency": "monthly",
     "source": "ECB Data Portal (IRS, derived)",
-    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE.L.L40.CI.0000.EUR.N.Z",
+    "source_url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
     "levels_are_defaults": true,
     "degraded": {
      "id": "webstat",
@@ -1261,7 +1261,7 @@
    },
    "asymmetry": {
     "yes_is_good": false,
-    "market_yes": 0.458,
+    "market_yes": 0.4575,
     "market_source": "prediction market",
     "days": 177,
     "rules": {
@@ -1915,7 +1915,7 @@
       "prob": 0.8875,
       "question": "Will the National Regeneration Movement (Morena) win the most seats in the 2027 Mexico legislative election?",
       "volume": 58267.82440899999,
-      "as_of": "2026-10-29T15:57:58Z",
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/mexico-legislative-election-winner",
       "note": "Morena wins the most seats: implied by every branch except a large loss",
       "related": true,
@@ -1927,7 +1927,7 @@
       "prob": 0.86,
       "question": "Mexican Chamber of Deputies election winner?: Morena",
       "volume": 1426.21,
-      "as_of": "2026-10-29T15:58:21Z",
+      "as_of": "2026-10-30T04:18:28Z",
       "url": "https://kalshi.com/markets/kxmexicodeputies",
       "note": "same: the party with most seats",
       "related": true,
@@ -2168,10 +2168,10 @@
      {
       "venue": "Polymarket",
       "id": "2761052",
-      "prob": 0.08,
+      "prob": 0.085,
       "question": "USMCA extended in 2026?",
       "volume": 11728.304944999998,
-      "as_of": "2026-10-29T15:57:58Z",
+      "as_of": "2026-10-30T04:18:08Z",
       "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768",
       "note": "USMCA extended in 2026: the earlier review",
       "related": true,
@@ -2183,7 +2183,7 @@
       "prob": 0.24,
       "question": "Which USMCA outcomes will occur in 2026?: Trilateral revised deal",
       "volume": 695.68,
-      "as_of": "2026-10-29T15:58:21Z",
+      "as_of": "2026-10-30T04:18:28Z",
       "url": "https://kalshi.com/markets/kxusmcaoutcomes",
       "note": "trilateral revised deal in 2026",
       "related": true,
