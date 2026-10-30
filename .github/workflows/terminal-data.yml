@@ -87,7 +87,8 @@ jobs:
             echo "nothing to commit"
           else
             git commit -m "Terminal data: $(date -u +%Y-%m-%dT%H:%MZ) ${{ steps.pick.outputs.only || 'all' }}"
-            git pull --rebase origin main
+            # generated files: if a code push regenerated them meanwhile, this run's fresher copy wins
+            git pull --rebase -X theirs origin main
             git push origin HEAD:main
           fi
 

@@ -55,7 +55,7 @@ def fetch(only: set[str] | None = None) -> dict:
                        "note": "skipped; add the secret under Settings > Secrets and variables > Actions"})
             log.warning("%s: %s", key, exc)
         except Exception as exc:  # noqa: BLE001
-            st.update({"state": "error", "error": f"{type(exc).__name__}: {exc}"[:600]})
+            st.update({"state": "error", "error": f"{type(exc).__name__}: {exc}"[:600], "note": None})
             log.warning("%s: failed: %s", key, exc)
             log.debug(traceback.format_exc())
         store.save_status(status)

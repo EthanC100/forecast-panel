@@ -96,7 +96,7 @@ def banxico_api() -> list[str]:
     token = store.secret("BANXICO_TOKEN")
     if not token:
         raise MissingSecret("BANXICO_TOKEN")
-    return _write(lambda ids: _api_series(ids, token), "Banxico SIE API", SIE_API + "?(Bmx-Token)")
+    return _write(lambda ids: _api_series(ids, token), "Banxico SIE API", SIE_API.replace("{ids}", "{id}") + " (Bmx-Token header)")
 
 
 def banxico_public() -> list[str]:

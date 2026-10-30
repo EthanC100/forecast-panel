@@ -58,7 +58,8 @@ jobs:
             echo "nothing to commit"
           else
             git commit -m "Form #${{ github.event.issue.number }}: record and rebuild"
-            git pull --rebase origin main
+            # generated files: if a code push regenerated them meanwhile, this run's fresher copy wins
+            git pull --rebase -X theirs origin main
             git push origin HEAD:main
           fi
 
