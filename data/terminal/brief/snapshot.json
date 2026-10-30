@@ -1,7 +1,7 @@
 {
  "date": "2026-10-30",
- "generated_at": "2026-10-30T03:06:19Z",
- "prev_date": null,
+ "generated_at": "2026-10-30T03:29:41Z",
+ "prev_date": "2026-10-30",
  "items": [
   {
    "id": "s:br.usdbrl.ptax",
@@ -752,6 +752,45 @@
    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
   },
   {
+   "id": "ev:2027-04-25-fr-presidential-election-second-round",
+   "kind": "event",
+   "country": "FR",
+   "date": "2027-04-25",
+   "days_to": 177,
+   "title": "Presidential election, second round",
+   "type": "election",
+   "importance": 3,
+   "status": "estimated",
+   "note": "Two weeks after the first round, set by the same decree.",
+   "url": "https://www.interieur.gouv.fr/Elections"
+  },
+  {
+   "id": "ev:2027-06-06-mx-midterm-elections-chamber-of-deputies-governorsh",
+   "kind": "event",
+   "country": "MX",
+   "date": "2027-06-06",
+   "days_to": 219,
+   "title": "Midterm elections (Chamber of Deputies, governorships)",
+   "type": "election",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Federal elections are held on the first Sunday of June (LGIPE art. 22).",
+   "url": "https://www.ine.mx/"
+  },
+  {
+   "id": "ev:2027-07-01-mx-usmca-annual-joint-review",
+   "kind": "event",
+   "country": "MX",
+   "date": "2027-07-01",
+   "days_to": 244,
+   "title": "USMCA annual joint review",
+   "type": "trade",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "USMCA art. 34.7: without a 16-year extension at the 2026 review, joint reviews follow every year.",
+   "url": "https://ustr.gov/sites/default/files/files/agreements/FTA/USMCA/Text/34-Final-Provisions.pdf"
+  },
+  {
    "id": "sc:fr-sp-2026-11",
    "kind": "scenario",
    "country": "FR",
@@ -842,8 +881,8 @@
    ],
    "markets": [
     {
+     "id": "pm:5458390",
      "venue": "Polymarket",
-     "market_id": "5458390",
      "question": "Moody's or S&P downgrades France by November 30, 2026?",
      "yes_pct": 11.0,
      "volume": 7108.0,
@@ -855,8 +894,8 @@
      "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt"
     },
     {
+     "id": "ks:KXFRANCEDOWNGRADE-27JAN01-1",
      "venue": "Kalshi",
-     "market_id": "KXFRANCEDOWNGRADE-27JAN01-1",
      "question": "France credit rating downgrade in 2026?: Downgrade before 2027?",
      "yes_pct": 31.0,
      "volume": 2000.0,
@@ -975,8 +1014,8 @@
    ],
    "markets": [
     {
+     "id": "pm:1722538",
      "venue": "Polymarket",
-     "market_id": "1722538",
      "question": "Will France pass a national budget by December 31?",
      "yes_pct": 51.0,
      "volume": 22058.0,
@@ -989,8 +1028,8 @@
      "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31"
     },
     {
+     "id": "ks:KXFRANCEBUDGET-27JAN01",
      "venue": "Kalshi",
-     "market_id": "KXFRANCEBUDGET-27JAN01",
      "question": "Will France enact its 2027 budget in 2026?: Yes",
      "yes_pct": 49.0,
      "volume": 4035.0,
@@ -1003,8 +1042,8 @@
      "url": "https://kalshi.com/markets/kxfrancebudget"
     },
     {
+     "id": "ks:KXFRANCE493-27JAN01",
      "venue": "Kalshi",
-     "market_id": "KXFRANCE493-27JAN01",
      "question": "Will France use Article 49.3 on its 2027 state budget in 2026?: Yes",
      "yes_pct": 66.0,
      "volume": 574.0,
@@ -1115,8 +1154,8 @@
    ],
    "markets": [
     {
+     "id": "pm:679018",
      "venue": "Polymarket",
-     "market_id": "679018",
      "question": "Will Marine Le Pen win the 2027 French presidential election?",
      "yes_pct": 43.0,
      "volume": 4638634.0,
@@ -1128,8 +1167,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679019",
      "venue": "Polymarket",
-     "market_id": "679019",
      "question": "Will Jordan Bardella win the 2027 French presidential election?",
      "yes_pct": 2.1,
      "volume": 3182675.0,
@@ -1141,8 +1180,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679021",
      "venue": "Polymarket",
-     "market_id": "679021",
      "question": "Will Édouard Philippe win the 2027 French presidential election?",
      "yes_pct": 16.5,
      "volume": 2695801.0,
@@ -1154,8 +1193,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679022",
      "venue": "Polymarket",
-     "market_id": "679022",
      "question": "Will David Lisnard win the 2027 French presidential election?",
      "yes_pct": 16.2,
      "volume": 5738878.0,
@@ -1167,8 +1206,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679027",
      "venue": "Polymarket",
-     "market_id": "679027",
      "question": "Will Bruno Retailleau win the 2027 French presidential election?",
      "yes_pct": 1.1,
      "volume": 3444418.0,
@@ -1180,8 +1219,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679026",
      "venue": "Polymarket",
-     "market_id": "679026",
      "question": "Will Gabriel Attal win the 2027 French presidential election?",
      "yes_pct": 0.4,
      "volume": 3326968.0,
@@ -1193,8 +1232,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679060",
      "venue": "Polymarket",
-     "market_id": "679060",
      "question": "Will Christine Lagarde win the 2027 French presidential election?",
      "yes_pct": 3.7,
      "volume": 1471638.0,
@@ -1206,8 +1245,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679030",
      "venue": "Polymarket",
-     "market_id": "679030",
      "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
      "yes_pct": 10.5,
      "volume": 2668464.0,
@@ -1219,8 +1258,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679029",
      "venue": "Polymarket",
-     "market_id": "679029",
      "question": "Will Raphaël Glucksmann win the 2027 French presidential election?",
      "yes_pct": 3.4,
      "volume": 3169561.0,
@@ -1232,8 +1271,8 @@
      "url": "https://polymarket.com/event/next-french-presidential-election"
     },
     {
+     "id": "pm:679028",
      "venue": "Polymarket",
-     "market_id": "679028",
      "question": "Will François Hollande win the 2027 French presidential election?",
      "yes_pct": 1.5,
      "volume": 2796476.0,
@@ -1475,8 +1514,8 @@
    ],
    "markets": [
     {
+     "id": "pm:2271403",
      "venue": "Polymarket",
-     "market_id": "2271403",
      "question": "Will the National Regeneration Movement (Morena) win the most seats in the 2027 Mexico legislative election?",
      "yes_pct": 88.8,
      "volume": 58268.0,
@@ -1486,8 +1525,8 @@
      "url": "https://polymarket.com/event/mexico-legislative-election-winner"
     },
     {
+     "id": "ks:KXMEXICODEPUTIES-27-MORENA",
      "venue": "Kalshi",
-     "market_id": "KXMEXICODEPUTIES-27-MORENA",
      "question": "Mexican Chamber of Deputies election winner?: Morena",
      "yes_pct": 86.0,
      "volume": 1426.0,
@@ -1590,8 +1629,8 @@
    ],
    "markets": [
     {
+     "id": "pm:2761052",
      "venue": "Polymarket",
-     "market_id": "2761052",
      "question": "USMCA extended in 2026?",
      "yes_pct": 8.0,
      "volume": 11728.0,
@@ -1601,8 +1640,8 @@
      "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768"
     },
     {
+     "id": "ks:KXUSMCAOUTCOMES-27-TRI",
      "venue": "Kalshi",
-     "market_id": "KXUSMCAOUTCOMES-27-TRI",
      "question": "Which USMCA outcomes will occur in 2026?: Trilateral revised deal",
      "yes_pct": 24.0,
      "volume": 696.0,
@@ -2047,6 +2086,204 @@
    "url": "https://kalshi.com/markets/kxcbdecisionmexico"
   },
   {
+   "id": "pm:5458390",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Moody's or S&P downgrades France by November 30, 2026?",
+   "yes_pct": 11.0,
+   "volume": 7108.0,
+   "scenario": "sc:fr-sp-2026-11",
+   "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt"
+  },
+  {
+   "id": "ks:KXFRANCEDOWNGRADE-27JAN01-1",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "France credit rating downgrade in 2026?: Downgrade before 2027?",
+   "yes_pct": 31.0,
+   "volume": 2000.0,
+   "scenario": "sc:fr-sp-2026-11",
+   "url": "https://kalshi.com/markets/kxfrancedowngrade"
+  },
+  {
+   "id": "pm:1722538",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will France pass a national budget by December 31?",
+   "yes_pct": 51.0,
+   "volume": 22058.0,
+   "scenario": "sc:fr-budget-2027",
+   "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31"
+  },
+  {
+   "id": "ks:KXFRANCEBUDGET-27JAN01",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Will France enact its 2027 budget in 2026?: Yes",
+   "yes_pct": 49.0,
+   "volume": 4035.0,
+   "scenario": "sc:fr-budget-2027",
+   "url": "https://kalshi.com/markets/kxfrancebudget"
+  },
+  {
+   "id": "ks:KXFRANCE493-27JAN01",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Will France use Article 49.3 on its 2027 state budget in 2026?: Yes",
+   "yes_pct": 66.0,
+   "volume": 574.0,
+   "scenario": "sc:fr-budget-2027",
+   "url": "https://kalshi.com/markets/kxfrance493"
+  },
+  {
+   "id": "pm:679018",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Marine Le Pen win the 2027 French presidential election?",
+   "yes_pct": 43.0,
+   "volume": 4638634.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679019",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Jordan Bardella win the 2027 French presidential election?",
+   "yes_pct": 2.1,
+   "volume": 3182675.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679021",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Édouard Philippe win the 2027 French presidential election?",
+   "yes_pct": 16.5,
+   "volume": 2695801.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679022",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will David Lisnard win the 2027 French presidential election?",
+   "yes_pct": 16.2,
+   "volume": 5738878.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679027",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Bruno Retailleau win the 2027 French presidential election?",
+   "yes_pct": 1.1,
+   "volume": 3444418.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679026",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Gabriel Attal win the 2027 French presidential election?",
+   "yes_pct": 0.4,
+   "volume": 3326968.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679060",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Christine Lagarde win the 2027 French presidential election?",
+   "yes_pct": 3.7,
+   "volume": 1471638.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679030",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+   "yes_pct": 10.5,
+   "volume": 2668464.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679029",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Raphaël Glucksmann win the 2027 French presidential election?",
+   "yes_pct": 3.4,
+   "volume": 3169561.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679028",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will François Hollande win the 2027 French presidential election?",
+   "yes_pct": 1.5,
+   "volume": 2796476.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "ks:KXMEXICODEPUTIES-27-MORENA",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Mexican Chamber of Deputies election winner?: Morena",
+   "yes_pct": 86.0,
+   "volume": 1426.0,
+   "scenario": "sc:mx-midterms-2027",
+   "url": "https://kalshi.com/markets/kxmexicodeputies"
+  },
+  {
+   "id": "pm:2761052",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "USMCA extended in 2026?",
+   "yes_pct": 8.0,
+   "volume": 11728.0,
+   "scenario": "sc:usmca-2027",
+   "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768"
+  },
+  {
+   "id": "ks:KXUSMCAOUTCOMES-27-TRI",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Which USMCA outcomes will occur in 2026?: Trilateral revised deal",
+   "yes_pct": 24.0,
+   "volume": 696.0,
+   "scenario": "sc:usmca-2027",
+   "url": "https://kalshi.com/markets/kxusmcaoutcomes"
+  },
+  {
    "id": "cot:br.cot.brl",
    "kind": "positioning",
    "country": "BR",
@@ -2351,6 +2588,94 @@
    "kind": "headline"
   },
   {
+   "id": "h:106831eb",
+   "title": "Brazil Stocks Face Test After 13 . 9 % Plunge | Morning Call , Oct 27",
+   "url": "https://www.riotimesonline.com/brazils-financial-morning-call-for-tuesday-october-27-2026/",
+   "source": "riotimesonline.com",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:184bfe0a",
+   "title": "Brazil Stocks Plunge 13 . 9 % as Fed Week Begins | Global Economy , Oct 27",
+   "url": "https://www.riotimesonline.com/global-economy-briefing-october-27-2026/",
+   "source": "riotimesonline.com",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:a96b076f",
+   "title": "Lula mobilized millions to win Brazil election , while Bolsonaro contests loss and Trump cries foul",
+   "url": "https://www.manilatimes.net/2026/10/27/world/americas-emea/lula-mobilized-millions-to-win-brazils-election-while-bolsonaro-contests-loss-and-trump-cries-foul/2454610",
+   "source": "manilatimes.net",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:32ed3785",
+   "title": "Lula wins Brazil vote despite Bolsonaro challenge",
+   "url": "http://www.milwaukeesun.com/news/279398697/lula-wins-brazil-vote-despite-bolsonaro-challenge",
+   "source": "milwaukeesun.com",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:ac899e41",
+   "title": "Lula wins fourth term , but Bolsonaro refuses to accept result",
+   "url": "http://www.myanmarnews.net/news/279398697/lula-wins-fourth-term-but-bolsonaro-refuses-to-accept-result",
+   "source": "myanmarnews.net",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:fd2210ba",
+   "title": "Lula win in Brazil bucks regional shift to right , denies Trump ally",
+   "url": "https://www.sentinelandenterprise.com/2026/10/26/lula-win-brazil-election-regional-holdout/",
+   "source": "sentinelandenterprise.com",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:a5ab46f3",
+   "title": "How Lula turned the tables on the right in Brazil and the US with his comeback presidential victory",
+   "url": "https://www.suncommercial.com/brazil_times/news/national/article_7ef17163-e568-5e3f-a2de-4e9f0104a513.html",
+   "source": "suncommercial.com",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:64abb375",
+   "title": "Rio Today : Rainy Tuesday , Lula Market Fallout & Open Museums",
+   "url": "https://www.riotimesonline.com/rio-de-janeiro-daily-brief-for-tuesday-october-27-2026/",
+   "source": "riotimesonline.com",
+   "via": "GDELT DOC 2.0",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": false,
+   "kind": "headline"
+  },
+  {
    "id": "em:5",
    "kind": "research",
    "title": "em-macro: 5. Findings",
@@ -2540,14 +2865,14 @@
   },
   {
    "source": "GDELT FR",
-   "ok": true,
+   "ok": false,
    "n": 0,
-   "error": null
+   "error": "GDELT kept returning its rate-limit notice"
   },
   {
    "source": "GDELT BR",
    "ok": true,
-   "n": 0,
+   "n": 8,
    "error": null
   },
   {
@@ -2558,18 +2883,18 @@
   },
   {
    "source": "GDELT US",
-   "ok": true,
+   "ok": false,
    "n": 0,
-   "error": null
+   "error": "GDELT kept returning its rate-limit notice"
   }
  ],
  "notes": [],
  "counts": {
   "data": 17,
-  "event": 32,
+  "event": 35,
   "evidence_badge": 7,
-  "headline": 20,
-  "market": 36,
+  "headline": 28,
+  "market": 54,
   "positioning": 2,
   "primer": 4,
   "research": 3,
