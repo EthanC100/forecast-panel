@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T00:04:28Z",
+ "generated_at": "2026-10-31T01:49:29Z",
  "questions": {
   "n_resolved": 0,
   "n_ai_only": 0,
@@ -389,13 +389,17 @@
     "note": "no month since the start date yet"
    },
    "buy_and_hold": {
-    "equal_weight_return_pct": -1.965,
-    "n_instruments": 2,
+    "equal_weight_return_pct": -2.8933,
+    "n_instruments": 3,
     "rows": [
      {
       "code": "USDBRL",
       "name": "USD/BRL",
-      "description": "long USD"
+      "description": "long USD",
+      "from": "2026-10-29",
+      "to": "2026-10-30",
+      "pnl_usd": 835.86,
+      "return_pct": 0.84
      },
      {
       "code": "USDMXN",
@@ -448,8 +452,8 @@
       "description": "long gold",
       "from": "2026-10-29",
       "to": "2026-10-30",
-      "pnl_usd": -931.38,
-      "return_pct": -0.93
+      "pnl_usd": -3645.08,
+      "return_pct": -3.65
      },
      {
       "code": "XAGUSD",
@@ -457,8 +461,8 @@
       "description": "long silver",
       "from": "2026-10-29",
       "to": "2026-10-30",
-      "pnl_usd": -3002.05,
-      "return_pct": -3.0
+      "pnl_usd": -5866.53,
+      "return_pct": -5.87
      }
     ]
    },

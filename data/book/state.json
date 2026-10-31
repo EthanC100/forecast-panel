@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T00:04:27Z",
+ "generated_at": "2026-10-31T01:49:28Z",
  "as_of": "2026-10-31",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
@@ -22,8 +22,8 @@
    "country": "BR",
    "series": "br.usdbrl.ptax",
    "proxy": false,
-   "value": 5.3744,
-   "date": "2026-10-29",
+   "value": 5.4212,
+   "date": "2026-10-30",
    "close_utc": "16:30",
    "low_frequency": false,
    "note": null,
@@ -253,8 +253,8 @@
    "country": "US",
    "series": "us.ust10y",
    "proxy": false,
-   "value": 5.05,
-   "date": "2026-10-28",
+   "value": 4.98,
+   "date": "2026-10-29",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": null,
@@ -276,7 +276,7 @@
    "country": "GLOBAL",
    "series": "gl.gold",
    "proxy": false,
-   "value": 3994.3,
+   "value": 3884.8999,
    "date": "2026-10-30",
    "close_utc": "21:00",
    "low_frequency": false,
@@ -299,7 +299,7 @@
    "country": "GLOBAL",
    "series": "gl.silver",
    "proxy": false,
-   "value": 50.63,
+   "value": 49.135,
    "date": "2026-10-30",
    "close_utc": "21:00",
    "low_frequency": false,
@@ -357,12 +357,17 @@
    "series": "br.usdbrl.ptax",
    "proxy": false,
    "description": "long USD",
-   "since_start": null,
+   "since_start": {
+    "from": "2026-10-29",
+    "to": "2026-10-30",
+    "pnl_usd": 835.86,
+    "return_pct": 0.84
+   },
    "last_12m": {
     "from": "2025-10-31",
-    "to": "2026-10-29",
-    "pnl_usd": -11126.43,
-    "return_pct": -11.13
+    "to": "2026-10-30",
+    "pnl_usd": -10288.98,
+    "return_pct": -10.29
    }
   },
   {
@@ -486,9 +491,9 @@
    "since_start": null,
    "last_12m": {
     "from": "2025-10-31",
-    "to": "2026-10-28",
-    "pnl_usd": -7520.0,
-    "return_pct": -7.52
+    "to": "2026-10-29",
+    "pnl_usd": -6960.0,
+    "return_pct": -6.96
    }
   },
   {
@@ -500,14 +505,14 @@
    "since_start": {
     "from": "2026-10-29",
     "to": "2026-10-30",
-    "pnl_usd": -931.38,
-    "return_pct": -0.93
+    "pnl_usd": -3645.08,
+    "return_pct": -3.65
    },
    "last_12m": {
     "from": "2025-10-31",
     "to": "2026-10-30",
-    "pnl_usd": -3905.05,
-    "return_pct": -3.91
+    "pnl_usd": -6642.45,
+    "return_pct": -6.64
    }
   },
   {
@@ -519,14 +524,14 @@
    "since_start": {
     "from": "2026-10-29",
     "to": "2026-10-30",
-    "pnl_usd": -3002.05,
-    "return_pct": -3.0
+    "pnl_usd": -5866.53,
+    "return_pct": -5.87
    },
    "last_12m": {
     "from": "2025-10-31",
     "to": "2026-10-30",
-    "pnl_usd": 1642.35,
-    "return_pct": 1.64
+    "pnl_usd": -1472.62,
+    "return_pct": -1.47
    }
   }
  ],

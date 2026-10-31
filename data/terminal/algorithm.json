@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T00:04:37Z",
+ "generated_at": "2026-10-31T01:49:38Z",
  "source": "https://raw.githubusercontent.com/EthanC100/em-macro/main/results/systematic/",
  "source_page": "https://github.com/EthanC100/em-macro/tree/main/results/systematic",
  "as_of": "2026-09",
@@ -188,9 +188,9 @@
     "instrument": "USDBRL",
     "name": "USD/BRL",
     "direction": "short",
-    "level": 5.3744,
-    "level_date": "2026-10-29",
-    "suggested_stop": 5.694,
+    "level": 5.4212,
+    "level_date": "2026-10-30",
+    "suggested_stop": 5.7436,
     "stop_basis": "2 monthly sd = 2 x 10.3%/sqrt(12) = 5.95% of the level"
    }
   },
