@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-30T22:30:53Z",
- "as_of": "2026-10-30",
+ "generated_at": "2026-10-31T00:04:27Z",
+ "as_of": "2026-10-31",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
  "start_date": "2026-10-29",
@@ -359,10 +359,10 @@
    "description": "long USD",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-29",
-    "pnl_usd": -11170.37,
-    "return_pct": -11.17
+    "pnl_usd": -11126.43,
+    "return_pct": -11.13
    }
   },
   {
@@ -373,10 +373,10 @@
    "description": "long USD",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-29",
-    "pnl_usd": -1644.32,
-    "return_pct": -1.64
+    "pnl_usd": -1817.6,
+    "return_pct": -1.82
    }
   },
   {
@@ -387,10 +387,10 @@
    "description": "long EUR",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-23",
-    "pnl_usd": -4719.93,
-    "return_pct": -4.72
+    "pnl_usd": -4521.74,
+    "return_pct": -4.52
    }
   },
   {
@@ -415,10 +415,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-29",
-    "pnl_usd": -6490.0,
-    "return_pct": -6.49
+    "pnl_usd": -6710.0,
+    "return_pct": -6.71
    }
   },
   {
@@ -429,10 +429,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-29",
-    "pnl_usd": 321.38,
-    "return_pct": 0.32
+    "pnl_usd": 361.9,
+    "return_pct": 0.36
    }
   },
   {
@@ -443,10 +443,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-29",
-    "pnl_usd": -4458.04,
-    "return_pct": -4.46
+    "pnl_usd": -4511.06,
+    "return_pct": -4.51
    }
   },
   {
@@ -457,10 +457,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-29",
-    "pnl_usd": -7151.51,
-    "return_pct": -7.15
+    "pnl_usd": -7332.26,
+    "return_pct": -7.33
    }
   },
   {
@@ -485,7 +485,7 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-28",
     "pnl_usd": -7520.0,
     "return_pct": -7.52
@@ -504,10 +504,10 @@
     "return_pct": -0.93
    },
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-30",
-    "pnl_usd": -4398.97,
-    "return_pct": -4.4
+    "pnl_usd": -3905.05,
+    "return_pct": -3.91
    }
   },
   {
@@ -523,10 +523,10 @@
     "return_pct": -3.0
    },
    "last_12m": {
-    "from": "2025-10-30",
+    "from": "2025-10-31",
     "to": "2026-10-30",
-    "pnl_usd": 685.85,
-    "return_pct": 0.69
+    "pnl_usd": 1642.35,
+    "return_pct": 1.64
    }
   }
  ],

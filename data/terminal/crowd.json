@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T22:31:00Z",
+ "generated_at": "2026-10-31T00:04:33Z",
  "gauges": [
   {
    "id": "a",
@@ -1166,25 +1166,25 @@
     {
      "country": "BR",
      "label": "BRL futures, leveraged funds",
-     "as_of": "2026-10-20",
-     "net": 18677,
-     "net_pct_oi": 13.8,
-     "percentile": 92.3,
-     "extreme": true,
-     "crowded": "long BRL",
+     "as_of": "2026-10-27",
+     "net": 7600,
+     "net_pct_oi": 4.5,
+     "percentile": 67.3,
+     "extreme": false,
+     "crowded": null,
      "catalysts_30d": [
       {
        "date": "2026-11-04",
        "title": "Copom decision (3-4 Nov)"
       }
      ],
-     "flag": true,
+     "flag": false,
      "meta": {
       "source": "CFTC Commitments of Traders",
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-      "as_of": "2026-10-20",
-      "fetched_at": "2026-10-30T10:23:52Z",
+      "as_of": "2026-10-27",
+      "fetched_at": "2026-10-31T00:04:24Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1196,10 +1196,10 @@
     {
      "country": "MX",
      "label": "MXN futures, leveraged funds",
-     "as_of": "2026-10-20",
-     "net": 63814,
-     "net_pct_oi": 22.9,
-     "percentile": 73.7,
+     "as_of": "2026-10-27",
+     "net": 68335,
+     "net_pct_oi": 24.5,
+     "percentile": 79.5,
      "extreme": false,
      "crowded": null,
      "catalysts_30d": [
@@ -1213,8 +1213,8 @@
       "source": "CFTC Commitments of Traders",
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-      "as_of": "2026-10-20",
-      "fetched_at": "2026-10-30T10:23:56Z",
+      "as_of": "2026-10-27",
+      "fetched_at": "2026-10-31T00:04:26Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1383,7 +1383,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 28,
+   "days": 27,
    "score": 0.8,
    "signals": [
     {
@@ -1406,7 +1406,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 67,
+   "days": 66,
    "score": 0.7,
    "signals": [
     {
@@ -1428,7 +1428,7 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 41,
+   "days": 40,
    "score": 0.025,
    "signals": [
     {
@@ -1445,7 +1445,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 177,
+   "days": 176,
    "score": 0,
    "signals": []
   }
