@@ -1,0 +1,4439 @@
+{
+ "date": "2026-10-30",
+ "generated_at": "2026-10-30T08:32:30Z",
+ "prev_date": null,
+ "items": [
+  {
+   "id": "s:br.usdbrl.ptax",
+   "kind": "data",
+   "country": "BR",
+   "name": "USD/BRL PTAX (sell)",
+   "unit": "BRL per USD",
+   "date": "2026-10-29",
+   "value": 5.3744,
+   "frequency": "daily",
+   "source": "BCB SGS",
+   "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json",
+   "prev_date": "2026-10-28",
+   "prev_value": 5.342,
+   "change": 0.0324,
+   "change_pct": 0.61,
+   "week_ago_date": "2026-10-22",
+   "week_ago_value": 5.0383,
+   "change_1w": 0.3361,
+   "change_pct_1w": 6.67
+  },
+  {
+   "id": "s:mx.usdmxn.fix",
+   "kind": "data",
+   "country": "MX",
+   "name": "USD/MXN FIX",
+   "unit": "MXN per USD",
+   "date": "2026-10-29",
+   "value": 18.8148,
+   "frequency": "daily",
+   "source": "Banxico SIE (public chart data)",
+   "url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
+   "prev_date": "2026-10-28",
+   "prev_value": 18.6673,
+   "change": 0.1475,
+   "change_pct": 0.79,
+   "week_ago_date": "2026-10-22",
+   "week_ago_value": 18.7005,
+   "change_1w": 0.1143,
+   "change_pct_1w": 0.61
+  },
+  {
+   "id": "s:eu.eurusd",
+   "kind": "data",
+   "country": "GLOBAL",
+   "name": "EUR/USD (US dollars per euro, noon New York)",
+   "unit": "USD per EUR",
+   "date": "2026-10-23",
+   "value": 1.1199,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DEXUSEU",
+   "prev_date": "2026-10-22",
+   "prev_value": 1.1212,
+   "change": -0.0013,
+   "change_pct": -0.12,
+   "week_ago_date": "2026-10-16",
+   "week_ago_value": 1.1231,
+   "change_1w": -0.0032,
+   "change_pct_1w": -0.28
+  },
+  {
+   "id": "s:br.di.f27.proxy",
+   "kind": "data",
+   "country": "BR",
+   "name": "DI Jan-27 proxy (Tesouro LTN 2027)",
+   "unit": "% p.a. (252)",
+   "date": "2026-10-28",
+   "value": 13.54,
+   "frequency": "daily",
+   "source": "Tesouro Direto (Tesouro Transparente)",
+   "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+   "prev_date": "2026-10-27",
+   "prev_value": 13.6,
+   "change": -0.06,
+   "change_bp": -6.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 13.42,
+   "change_1w": 0.12,
+   "change_bp_1w": 12.0,
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
+  },
+  {
+   "id": "s:br.di.f29.proxy",
+   "kind": "data",
+   "country": "BR",
+   "name": "DI Jan-29 proxy (Tesouro LTN 2029)",
+   "unit": "% p.a. (252)",
+   "date": "2026-10-28",
+   "value": 14.94,
+   "frequency": "daily",
+   "source": "Tesouro Direto (Tesouro Transparente)",
+   "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+   "prev_date": "2026-10-27",
+   "prev_value": 14.94,
+   "change": 0.0,
+   "change_bp": 0.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 12.67,
+   "change_1w": 2.27,
+   "change_bp_1w": 227.0,
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
+  },
+  {
+   "id": "s:br.di.f31.proxy",
+   "kind": "data",
+   "country": "BR",
+   "name": "DI Jan-31 proxy (Tesouro LTN 2031)",
+   "unit": "% p.a. (252)",
+   "date": "2026-10-28",
+   "value": 15.1,
+   "frequency": "daily",
+   "source": "Tesouro Direto (Tesouro Transparente)",
+   "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+   "prev_date": "2026-10-27",
+   "prev_value": 15.06,
+   "change": 0.04,
+   "change_bp": 4.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 12.77,
+   "change_1w": 2.33,
+   "change_bp_1w": 233.0,
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
+  },
+  {
+   "id": "s:br.td.pre_longest",
+   "kind": "data",
+   "country": "BR",
+   "name": "Brazil 10y proxy: longest fixed-rate Tesouro bond (Prefixado / NTN-F)",
+   "unit": "% p.a.",
+   "date": "2026-10-28",
+   "value": 14.93,
+   "frequency": "daily",
+   "source": "Tesouro Direto (Tesouro Transparente)",
+   "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+   "prev_date": "2026-10-27",
+   "prev_value": 14.99,
+   "change": -0.06,
+   "change_bp": -6.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 12.89,
+   "change_1w": 2.04,
+   "change_bp_1w": 204.0
+  },
+  {
+   "id": "s:fr.spread.oat_bund.ecb_m",
+   "kind": "data",
+   "country": "FR",
+   "name": "France-Germany 10-year spread (ECB, monthly)",
+   "unit": "bp",
+   "date": "2026-09-01",
+   "value": 96.7,
+   "frequency": "monthly",
+   "source": "ECB Data Portal (IRS, derived)",
+   "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
+   "prev_date": "2026-08-01",
+   "prev_value": 81.5,
+   "change": 15.2,
+   "degraded": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on."
+  },
+  {
+   "id": "s:us.ust10y",
+   "kind": "data",
+   "country": "US",
+   "name": "US 10-year Treasury yield",
+   "unit": "%",
+   "date": "2026-10-28",
+   "value": 5.05,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DGS10",
+   "prev_date": "2026-10-27",
+   "prev_value": 4.99,
+   "change": 0.06,
+   "change_bp": 6.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 5.13,
+   "change_1w": -0.08,
+   "change_bp_1w": -8.0
+  },
+  {
+   "id": "s:mx.mbono10y.auction",
+   "kind": "data",
+   "country": "MX",
+   "name": "10-year Mbono auction yield (context)",
+   "unit": "% p.a.",
+   "date": "2026-10-22",
+   "value": 9.25,
+   "frequency": "per auction",
+   "source": "Banxico SIE (public chart data)",
+   "url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
+   "prev_date": "2026-09-24",
+   "prev_value": 9.35,
+   "change": -0.1,
+   "change_bp": -10.0
+  },
+  {
+   "id": "s:fr.oat10y.ecb_m",
+   "kind": "data",
+   "country": "FR",
+   "name": "France 10-year yield (ECB, monthly average)",
+   "unit": "%",
+   "date": "2026-09-01",
+   "value": 4.44,
+   "frequency": "monthly",
+   "source": "ECB Data Portal (IRS)",
+   "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR+DE+IT+ES.L.L40.CI.0000.EUR.N.Z",
+   "prev_date": "2026-08-01",
+   "prev_value": 4.0,
+   "change": 0.44,
+   "change_bp": 44.0,
+   "degraded": "Monthly averages from the ECB instead of daily Banque de France yields: a daily move, a stop or a target inside the month is invisible, and the latest value is up to five weeks old. New book trades switch to the daily series automatically once Webstat succeeds; open trades keep the series they were filled on."
+  },
+  {
+   "id": "s:de.bund10y",
+   "kind": "data",
+   "country": "DE",
+   "name": "Germany 10-year Bund yield",
+   "unit": "%",
+   "date": "2026-10-29",
+   "value": 3.39,
+   "frequency": "daily",
+   "source": "Deutsche Bundesbank",
+   "url": "https://api.statistiken.bundesbank.de/rest/download/BBSIS/D.I.ZAR.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A",
+   "prev_date": "2026-10-28",
+   "prev_value": 3.4,
+   "change": -0.01,
+   "change_bp": -1.0,
+   "week_ago_date": "2026-10-22",
+   "week_ago_value": 3.42,
+   "change_1w": -0.03,
+   "change_bp_1w": -3.0
+  },
+  {
+   "id": "s:br.td.ipca_longest",
+   "kind": "data",
+   "country": "BR",
+   "name": "Brazil real-rate proxy: longest IPCA+ Tesouro bond (NTN-B Principal / NTN-B)",
+   "unit": "% p.a.",
+   "date": "2026-10-28",
+   "value": 7.4,
+   "frequency": "daily",
+   "source": "Tesouro Direto (Tesouro Transparente)",
+   "url": "https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/PrecoTaxaTesouroDireto.csv",
+   "prev_date": "2026-10-27",
+   "prev_value": 7.4,
+   "change": 0.0,
+   "change_bp": 0.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 6.73,
+   "change_1w": 0.67,
+   "change_bp_1w": 67.0
+  },
+  {
+   "id": "s:br.selic.target",
+   "kind": "data",
+   "country": "BR",
+   "name": "Selic target rate (Copom)",
+   "unit": "% p.a.",
+   "date": "2026-10-30",
+   "value": 13.75,
+   "frequency": "daily",
+   "source": "BCB SGS",
+   "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json",
+   "prev_date": "2026-10-29",
+   "prev_value": 13.75,
+   "change": 0.0,
+   "change_bp": 0.0,
+   "week_ago_date": "2026-10-23",
+   "week_ago_value": 13.75,
+   "change_1w": 0.0,
+   "change_bp_1w": 0.0
+  },
+  {
+   "id": "s:mx.policy.target",
+   "kind": "data",
+   "country": "MX",
+   "name": "Banxico target rate",
+   "unit": "% p.a.",
+   "date": "2026-10-30",
+   "value": 6.5,
+   "frequency": "daily",
+   "source": "Banxico SIE (public chart data)",
+   "url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF61745,CF300,1",
+   "prev_date": "2026-10-29",
+   "prev_value": 6.5,
+   "change": 0.0,
+   "change_bp": 0.0,
+   "week_ago_date": "2026-10-23",
+   "week_ago_value": 6.5,
+   "change_1w": 0.0,
+   "change_bp_1w": 0.0
+  },
+  {
+   "id": "s:mx.tiie28",
+   "kind": "data",
+   "country": "MX",
+   "name": "TIIE 28-day",
+   "unit": "% p.a.",
+   "date": "2026-10-30",
+   "value": 6.786,
+   "frequency": "daily",
+   "source": "Banxico SIE (public chart data)",
+   "url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43783,CF300,1",
+   "prev_date": "2026-10-29",
+   "prev_value": 6.776,
+   "change": 0.01,
+   "change_bp": 1.0,
+   "week_ago_date": "2026-10-23",
+   "week_ago_value": 6.776,
+   "change_1w": 0.01,
+   "change_bp_1w": 1.0
+  },
+  {
+   "id": "s:us.usd.broad",
+   "kind": "data",
+   "country": "US",
+   "name": "US dollar index (broad, goods and services)",
+   "unit": "index Jan-2006=100",
+   "date": "2026-10-23",
+   "value": 121.3202,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXBGS",
+   "prev_date": "2026-10-22",
+   "prev_value": 121.3531,
+   "change": -0.0329,
+   "change_pct": -0.03,
+   "week_ago_date": "2026-10-16",
+   "week_ago_value": 121.4048,
+   "change_1w": -0.0846,
+   "change_pct_1w": -0.07
+  },
+  {
+   "id": "s:us.fedfunds",
+   "kind": "data",
+   "country": "US",
+   "name": "US effective federal funds rate (USD leg of FX carry)",
+   "unit": "% p.a.",
+   "date": "2026-10-28",
+   "value": 3.88,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DFF",
+   "prev_date": "2026-10-27",
+   "prev_value": 3.88,
+   "change": 0.0,
+   "change_bp": 0.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 3.88,
+   "change_1w": 0.0,
+   "change_bp_1w": 0.0
+  },
+  {
+   "id": "s:us.tips10",
+   "kind": "data",
+   "country": "US",
+   "name": "US 10-year real yield (TIPS, constant maturity)",
+   "unit": "%",
+   "date": "2026-10-28",
+   "value": 2.67,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DFII10",
+   "prev_date": "2026-10-27",
+   "prev_value": 2.64,
+   "change": 0.03,
+   "change_bp": 3.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 2.76,
+   "change_1w": -0.09,
+   "change_bp_1w": -9.0
+  },
+  {
+   "id": "s:gl.gpr",
+   "kind": "data",
+   "country": "GLOBAL",
+   "name": "Geopolitical Risk index (daily)",
+   "unit": "index, 1985-2019 average = 100",
+   "date": "2026-10-26",
+   "value": 165.253,
+   "frequency": "daily",
+   "source": "Caldara and Iacoviello, Geopolitical Risk Index",
+   "url": "https://www.matteoiacoviello.com/gpr.htm",
+   "prev_date": "2026-10-25",
+   "prev_value": 81.59,
+   "change": 83.663,
+   "change_pct": 102.54,
+   "week_ago_date": "2026-10-19",
+   "week_ago_value": 220.838,
+   "change_1w": -55.585,
+   "change_pct_1w": -25.17
+  },
+  {
+   "id": "s:gl.cbgold",
+   "kind": "data",
+   "country": "GLOBAL",
+   "name": "Central banks' net gold purchases (IMF reporters)",
+   "unit": "tonnes per month",
+   "date": "2026-09-30",
+   "value": 20.34,
+   "frequency": "monthly",
+   "source": "IMF International Reserves and Foreign Currency Liquidity (IRFCL)",
+   "url": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,IRFCL/.IRFCLDT1_IRFCL56V_FTO..M?startPeriod=1999-01",
+   "prev_date": "2026-08-31",
+   "prev_value": 45.76,
+   "change": -25.42,
+   "change_pct": -55.55
+  },
+  {
+   "id": "s:us.ust2y",
+   "kind": "data",
+   "country": "US",
+   "name": "US 2-year Treasury yield",
+   "unit": "%",
+   "date": "2026-10-28",
+   "value": 4.67,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DGS2",
+   "prev_date": "2026-10-27",
+   "prev_value": 4.7,
+   "change": -0.03,
+   "change_bp": -3.0,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 4.81,
+   "change_1w": -0.14,
+   "change_bp_1w": -14.0
+  },
+  {
+   "id": "s:us.vix",
+   "kind": "data",
+   "country": "US",
+   "name": "VIX (CBOE volatility index)",
+   "unit": "index",
+   "date": "2026-10-28",
+   "value": 16.91,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=VIXCLS",
+   "prev_date": "2026-10-27",
+   "prev_value": 17.52,
+   "change": -0.61,
+   "change_pct": -3.48,
+   "week_ago_date": "2026-10-21",
+   "week_ago_value": 16.68,
+   "change_1w": 0.23,
+   "change_pct_1w": 1.38
+  },
+  {
+   "id": "s:us.fed.upper",
+   "kind": "data",
+   "country": "US",
+   "name": "Fed funds target range, upper limit",
+   "unit": "% p.a.",
+   "date": "2026-10-29",
+   "value": 4.0,
+   "frequency": "daily",
+   "source": "FRED API",
+   "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DFEDTARU",
+   "prev_date": "2026-10-28",
+   "prev_value": 4.0,
+   "change": 0.0,
+   "change_bp": 0.0,
+   "week_ago_date": "2026-10-22",
+   "week_ago_value": 4.0,
+   "change_1w": 0.0,
+   "change_bp_1w": 0.0
+  },
+  {
+   "id": "ev:2026-11-02-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-11-02",
+   "days_to": 3,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-11-02-mx-banxico-survey-of-private-sector-economists",
+   "kind": "event",
+   "country": "MX",
+   "date": "2026-11-02",
+   "days_to": 3,
+   "title": "Banxico survey of private-sector economists",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
+   "url": "https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialistas-en-economia-del-sector-privado/"
+  },
+  {
+   "id": "ev:2026-11-04-br-copom-decision-3-4-nov",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-11-04",
+   "days_to": 5,
+   "title": "Copom decision (3-4 Nov)",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "BCB 2026 calendar: 3-4 Nov. The six 2026 decisions so far match em-macro's record.",
+   "url": "https://www.bcb.gov.br/en/monetarypolicy/copomcalendar"
+  },
+  {
+   "id": "ev:2026-11-05-mx-banxico-monetary-policy-decision",
+   "kind": "event",
+   "country": "MX",
+   "date": "2026-11-05",
+   "days_to": 6,
+   "title": "Banxico monetary policy decision",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Banxico 2026 calendar (as reproduced in BBVA Research, Agenda Económica 2026). The six 2026 decisions so far match em-macro.",
+   "url": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/"
+  },
+  {
+   "id": "ev:2026-11-09-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-11-09",
+   "days_to": 10,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
+   "kind": "event",
+   "country": "MX",
+   "date": "2026-11-15",
+   "days_to": 16,
+   "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+   "type": "fiscal",
+   "importance": 2,
+   "status": "confirmed",
+   "note": "Constitution art. 74: the spending budget is approved by 15 November; the 2027 package was presented on 8 Sep 2026.",
+   "url": "https://www.ppef.hacienda.gob.mx/"
+  },
+  {
+   "id": "ev:2026-11-16-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-11-16",
+   "days_to": 17,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-11-20",
+   "days_to": 21,
+   "title": "Bimonthly revenue and spending report (RARDP)",
+   "type": "fiscal",
+   "importance": 2,
+   "status": "estimated",
+   "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
+   "url": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/relatorios-de-avaliacao"
+  },
+  {
+   "id": "ev:2026-11-23-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-11-23",
+   "days_to": 24,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
+   "kind": "event",
+   "country": "FR",
+   "date": "2026-11-27",
+   "days_to": 28,
+   "title": "Standard & Poor's sovereign rating review: France",
+   "type": "ratings",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Next review date from the AFT ratings table (fetched 2026-10-30).",
+   "url": "https://www.aft.gouv.fr/en/frances-credit-ratings"
+  },
+  {
+   "id": "ev:2026-11-30-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-11-30",
+   "days_to": 31,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-11-30-mx-usmca-us-mexico-bilateral-round-next-round-not-a",
+   "kind": "event",
+   "country": "MX",
+   "date": "2026-11-30",
+   "days_to": 31,
+   "title": "USMCA: US-Mexico bilateral round (next round not announced)",
+   "type": "trade",
+   "importance": 2,
+   "status": "estimated",
+   "note": "Placeholder for the next bilateral round; replace with the announced date.",
+   "url": "https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement"
+  },
+  {
+   "id": "ev:2026-12-01-mx-banxico-survey-of-private-sector-economists",
+   "kind": "event",
+   "country": "MX",
+   "date": "2026-12-01",
+   "days_to": 32,
+   "title": "Banxico survey of private-sector economists",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
+   "url": "https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialistas-en-economia-del-sector-privado/"
+  },
+  {
+   "id": "ev:2026-12-07-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-12-07",
+   "days_to": 38,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-12-09-br-copom-decision-8-9-dec",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-12-09",
+   "days_to": 40,
+   "title": "Copom decision (8-9 Dec)",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": null,
+   "url": "https://www.bcb.gov.br/en/monetarypolicy/copomcalendar"
+  },
+  {
+   "id": "ev:2026-12-09-global-fomc-decision",
+   "kind": "event",
+   "country": "GLOBAL",
+   "date": "2026-12-09",
+   "days_to": 40,
+   "title": "FOMC decision",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Second day of the meeting; statement 14:00 ET.",
+   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "id": "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
+   "kind": "event",
+   "country": "FR",
+   "date": "2026-12-10",
+   "days_to": 41,
+   "title": "Budget (PLF 2027): Article 47 70-day deadline",
+   "type": "fiscal",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Constitution art. 47: if Parliament has not decided within 70 days of the bill being tabled, the budget can be enacted by ordinance. The PLF 2027 was filed at the National Assembly on 1 Oct 2026 (Senate legislative file, as recorded in em-macro), so day 70 is 10 Dec 2026.",
+   "url": "https://www.senat.fr/dossier-legislatif/pjlf2027.html"
+  },
+  {
+   "id": "ev:2026-12-11-fr-kbra-sovereign-rating-review-france",
+   "kind": "event",
+   "country": "FR",
+   "date": "2026-12-11",
+   "days_to": 42,
+   "title": "KBRA sovereign rating review: France",
+   "type": "ratings",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Next review date from the AFT ratings table (fetched 2026-10-30).",
+   "url": "https://www.aft.gouv.fr/en/frances-credit-ratings"
+  },
+  {
+   "id": "ev:2026-12-14-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-12-14",
+   "days_to": 45,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-12-15",
+   "days_to": 46,
+   "title": "Senate deadline to set the CBS reference rate",
+   "type": "fiscal",
+   "importance": 2,
+   "status": "confirmed",
+   "note": "Consumption-tax reform: the federal CBS starts on 1 Jan 2027; the TCU sends its rate calculations to the Senate by 30 Oct.",
+   "url": "https://netcpa.com.br/colunas/reforma-tributaria-tcu-tem-ate-30-de-outubro-para-enviar-ao-senado-calculos-da-aliquota-da-cbs/28404"
+  },
+  {
+   "id": "ev:2026-12-17-br-2027-budget-ploa-vote-in-congress",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-12-17",
+   "days_to": 48,
+   "title": "2027 budget (PLOA) vote in Congress",
+   "type": "fiscal",
+   "importance": 3,
+   "status": "estimated",
+   "note": "Joint session usually votes the budget in the week before the 22 Dec recess; date not yet scheduled.",
+   "url": "https://www.congressonacional.leg.br/materias/pesquisa/-/materia/"
+  },
+  {
+   "id": "ev:2026-12-17-global-ecb-monetary-policy-decision",
+   "kind": "event",
+   "country": "GLOBAL",
+   "date": "2026-12-17",
+   "days_to": 48,
+   "title": "ECB monetary policy decision",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Day 2 of the meeting, press conference follows.",
+   "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"
+  },
+  {
+   "id": "ev:2026-12-17-mx-banxico-monetary-policy-decision",
+   "kind": "event",
+   "country": "MX",
+   "date": "2026-12-17",
+   "days_to": 48,
+   "title": "Banxico monetary policy decision",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": null,
+   "url": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/"
+  },
+  {
+   "id": "ev:2026-12-21-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-12-21",
+   "days_to": 52,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2026-12-28-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2026-12-28",
+   "days_to": 59,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2027-01-01-mx-banxico-survey-of-private-sector-economists",
+   "kind": "event",
+   "country": "MX",
+   "date": "2027-01-01",
+   "days_to": 63,
+   "title": "Banxico survey of private-sector economists",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
+   "url": "https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialistas-en-economia-del-sector-privado/"
+  },
+  {
+   "id": "ev:2027-01-04-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2027-01-04",
+   "days_to": 66,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan",
+   "kind": "event",
+   "country": "BR",
+   "date": "2027-01-05",
+   "days_to": 67,
+   "title": "Presidential inauguration (5 Jan, not 1 Jan)",
+   "type": "politics",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Constitutional Amendment 111/2021 moved the start of the presidential term to 5 January from the 2026 election on (governors 6 Jan; Congress 1 Feb). The outgoing term runs until then.",
+   "url": "https://www12.senado.leg.br/radio/1/noticia/2026/01/05/posse-presidencial-em-2027-sera-em-5-de-janeiro-e-governadores-tomam-posse-no-dia-6"
+  },
+  {
+   "id": "ev:2027-01-11-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2027-01-11",
+   "days_to": 73,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2027-01-15-mx-midterms-candidate-registration-and-precampaigns",
+   "kind": "event",
+   "country": "MX",
+   "date": "2027-01-15",
+   "days_to": 77,
+   "title": "Midterms: candidate registration and precampaigns (January)",
+   "type": "election",
+   "importance": 2,
+   "status": "estimated",
+   "note": "Month from the INE electoral calendar as expected; exact dates to confirm.",
+   "url": "https://www.ine.mx/"
+  },
+  {
+   "id": "ev:2027-01-18-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2027-01-18",
+   "days_to": 80,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2027-01-25-br-focus-survey-bcb",
+   "kind": "event",
+   "country": "BR",
+   "date": "2027-01-25",
+   "days_to": 87,
+   "title": "Focus survey (BCB)",
+   "type": "survey",
+   "importance": 1,
+   "status": "estimated",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  {
+   "id": "ev:2027-01-27-br-copom-decision-26-27-jan",
+   "kind": "event",
+   "country": "BR",
+   "date": "2027-01-27",
+   "days_to": 89,
+   "title": "Copom decision (26-27 Jan)",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "2027 calendar published by the BCB on 23 Jun 2026 (as reported; the BCB page is not machine-readable from the build).",
+   "url": "https://www.bcb.gov.br/en/monetarypolicy/copomcalendar"
+  },
+  {
+   "id": "ev:2027-01-27-global-fomc-decision",
+   "kind": "event",
+   "country": "GLOBAL",
+   "date": "2027-01-27",
+   "days_to": 89,
+   "title": "FOMC decision",
+   "type": "rates",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Second day of the meeting; statement 14:00 ET.",
+   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "id": "ev:2027-04-25-fr-presidential-election-second-round",
+   "kind": "event",
+   "country": "FR",
+   "date": "2027-04-25",
+   "days_to": 177,
+   "title": "Presidential election, second round",
+   "type": "election",
+   "importance": 3,
+   "status": "estimated",
+   "note": "Two weeks after the first round, set by the same decree.",
+   "url": "https://www.interieur.gouv.fr/Elections"
+  },
+  {
+   "id": "ev:2027-06-06-mx-midterm-elections-chamber-of-deputies-governorsh",
+   "kind": "event",
+   "country": "MX",
+   "date": "2027-06-06",
+   "days_to": 219,
+   "title": "Midterm elections (Chamber of Deputies, governorships)",
+   "type": "election",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "Federal elections are held on the first Sunday of June (LGIPE art. 22).",
+   "url": "https://www.ine.mx/"
+  },
+  {
+   "id": "ev:2027-07-01-mx-usmca-annual-joint-review",
+   "kind": "event",
+   "country": "MX",
+   "date": "2027-07-01",
+   "days_to": 244,
+   "title": "USMCA annual joint review",
+   "type": "trade",
+   "importance": 3,
+   "status": "confirmed",
+   "note": "USMCA art. 34.7: without a 16-year extension at the 2026 review, joint reviews follow every year.",
+   "url": "https://ustr.gov/sites/default/files/files/agreements/FTA/USMCA/Text/34-Final-Provisions.pdf"
+  },
+  {
+   "id": "sc:fr-sp-2026-11",
+   "kind": "scenario",
+   "country": "FR",
+   "title": "S&P review of France, 27 Nov 2026",
+   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
+   "resolution": "YES if S&P publishes a downgrade of France (to A or lower) dated on or before 27 Nov 2026. NO if France is still A+ after S&P's 27 Nov publication. An outlook change alone is NO. Sources: S&P research update; AFT ratings table.",
+   "resolution_date": "2026-11-27",
+   "yes_branches": [
+    "downgrade"
+   ],
+   "event": "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
+   "event_date": "2026-11-27",
+   "days_to_event": 28,
+   "base_rate": {
+    "kind": "rating_review",
+    "reference_class": "S&P actions on the six EU sovereigns em-macro tracks (France, Germany, Italy, Spain, UK, Poland) since 2014, when the EU began requiring a published calendar of scheduled sovereign reviews, where the outlook going in was stable.",
+    "headline": "0 downgrades in 36 recorded S&P actions on a stable outlook (0%)",
+    "n": 36,
+    "counts": {
+     "affirmed": 19,
+     "outlook or watch to negative": 7,
+     "upgrade": 5,
+     "outlook to positive": 5
+    },
+    "range_note": "Recorded affirmations are incomplete. Assuming two scheduled reviews a year for each of the 6 sovereigns since 2014 (156 reviews) gives 0% as a lower bound. Both counts include unscheduled actions; em-macro does not mark which were scheduled.",
+    "pct_yes": 0.0,
+    "pct_yes_low": 0.0
+   },
+   "branches": [
+    {
+     "id": "affirm_stable",
+     "label": "Affirmed A+, stable outlook",
+     "side": "good",
+     "signposts": [
+      "Moody's affirmed Aa3 negative on 23 Oct 2026 (done): no peer pressure from a fresh cut",
+      "The National Assembly's first-reading vote on PLF 2027 passes the revenue part (November)",
+      "No censure motion succeeds before 27 Nov"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": -2.0,
+       "source": "judgement",
+       "basis": "small relief from removing a tail; em-macro has no estimate for affirmations"
+      }
+     ]
+    },
+    {
+     "id": "affirm_negative",
+     "label": "Affirmed A+, outlook to negative",
+     "side": "mixed",
+     "signposts": [
+      "PLF 2027 progresses only through Article 49.3, with a 2027 deficit target above the medium-term path",
+      "S&P sector commentary in November stresses political risk to consolidation"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 4.0,
+       "source": "judgement",
+       "basis": "about one third of the one-agency downgrade effect below"
+      }
+     ]
+    },
+    {
+     "id": "downgrade",
+     "label": "Downgraded to A or lower",
+     "side": "bad",
+     "signposts": [
+      "The government falls on a censure motion before 27 Nov",
+      "PLF 2027 rejected at first reading and a special law becomes the base case",
+      "The government raises its 2026 deficit estimate above the budget-law target"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 12.3,
+       "lo": 9.69,
+       "hi": 14.92,
+       "source": "em-macro what-if FRA spread_bp downgrade_1 (as of 2026-09-01) x 0.333",
+       "basis": "em-macro what-if: a one-notch cut by all three agencies widens the spread 37 bp [29, 45]; one agency taken as one third (assumption)"
+      }
+     ]
+    }
+   ],
+   "markets": [
+    {
+     "id": "pm:5458390",
+     "venue": "Polymarket",
+     "question": "Moody's or S&P downgrades France by November 30, 2026?",
+     "yes_pct": 28.5,
+     "volume": 7338.0,
+     "branches": [
+      "downgrade"
+     ],
+     "related_only": false,
+     "note": "Moody's or S&P by 30 Nov 2026; Moody's already reviewed on 23 Oct, so this is mostly S&P",
+     "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt"
+    },
+    {
+     "id": "ks:KXFRANCEDOWNGRADE-27JAN01-1",
+     "venue": "Kalshi",
+     "question": "France credit rating downgrade in 2026?: Downgrade before 2027?",
+     "yes_pct": 31.0,
+     "volume": 2000.0,
+     "branches": [],
+     "related_only": true,
+     "note": "any agency, any time in 2026: wider than this question",
+     "url": "https://kalshi.com/markets/kxfrancedowngrade"
+    }
+   ],
+   "url": "https://ethanc100.github.io/forecast-panel/#scenarios/fr-sp-2026-11"
+  },
+  {
+   "id": "sc:fr-budget-2027",
+   "kind": "scenario",
+   "country": "FR",
+   "title": "France 2027 budget and the Article 47 deadline",
+   "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
+   "resolution": "YES if a loi de finances pour 2027 is published in the Journal officiel dated on or before 31 Dec 2026, including one enacted by ordinance under Article 47. A special law (loi spéciale) is NO. Source: Légifrance / Journal officiel.",
+   "resolution_date": "2026-12-31",
+   "yes_branches": [
+    "adopted",
+    "ordinance"
+   ],
+   "event": "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
+   "event_date": "2026-12-10",
+   "days_to_event": 41,
+   "base_rate": {
+    "kind": "budget_cycles",
+    "reference_class": "Every French budget cycle in em-macro's calendar (budget laws for 2006-2026): was the budget law promulgated by 31 December, and did it need Article 49.3 or a special law? The subset since June 2022, when the government lost its majority, is shown separately.",
+    "headline": "19 of 21 budgets promulgated by 31 December",
+    "n": 21,
+    "pct_yes": 90.5
+   },
+   "branches": [
+    {
+     "id": "adopted",
+     "label": "Adopted and promulgated by 31 Dec (vote or 49.3)",
+     "side": "good",
+     "signposts": [
+      "PS or LR signals it will not vote a censure motion on the budget",
+      "Joint committee (CMP) agreement in mid-December",
+      "Government uses 49.3 on the CMP text and survives the censure vote"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": -6.7,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2026-01-01 72.3 to 2026-02-01 65.6",
+       "basis": "analog: the month the 2026 budget was finally adopted (monthly averages, Jan to Feb 2026)"
+      }
+     ]
+    },
+    {
+     "id": "special_law",
+     "label": "Special law in December, budget adopted in early 2027",
+     "side": "mixed",
+     "signposts": [
+      "No CMP agreement by mid-December",
+      "The government tables a loi spéciale (2024 and 2025 pattern)"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": -3.6,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2025-11-01 78.3 to 2025-12-01 74.7",
+       "basis": "analog: December 2025, when a special law replaced the budget (monthly averages); it was widely expected"
+      }
+     ]
+    },
+    {
+     "id": "censure_fall",
+     "label": "Government falls over the budget",
+     "side": "bad",
+     "signposts": [
+      "A censure motion gathers PS votes",
+      "Lecornu uses 49.3 without a non-censure agreement"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 4.7,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2024-11-01 78.5 to 2024-12-01 83.2",
+       "basis": "analog: December 2024, when the Barnier government fell over the budget (monthly averages understate the daily move)"
+      },
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 19.08,
+       "lo": 9.0,
+       "hi": 29.16,
+       "source": "em-macro what-if FRA spread_bp lose_majority (as of 2026-09-01)",
+       "basis": "em-macro what-if: government's seat share falls 10 points (already a minority)"
+      }
+     ]
+    },
+    {
+     "id": "ordinance",
+     "label": "Enacted by ordinance under Article 47",
+     "side": "mixed",
+     "signposts": [
+      "Parliament has not voted by day 70 (10 Dec) and the government says it will use Article 47"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 8.0,
+       "source": "judgement",
+       "basis": "never used under the Fifth Republic; a budget in force but a constitutional fight; judgement"
+      }
+     ]
+    }
+   ],
+   "markets": [
+    {
+     "id": "pm:1722538",
+     "venue": "Polymarket",
+     "question": "Will France pass a national budget by December 31?",
+     "yes_pct": 51.5,
+     "volume": 22145.0,
+     "branches": [
+      "adopted",
+      "ordinance"
+     ],
+     "related_only": false,
+     "note": "\"Will France pass a national budget by December 31?\"",
+     "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31"
+    },
+    {
+     "id": "ks:KXFRANCEBUDGET-27JAN01",
+     "venue": "Kalshi",
+     "question": "Will France enact its 2027 budget in 2026?: Yes",
+     "yes_pct": 49.0,
+     "volume": 4082.0,
+     "branches": [
+      "adopted",
+      "ordinance"
+     ],
+     "related_only": false,
+     "note": "\"Will France enact its 2027 budget in 2026?\"",
+     "url": "https://kalshi.com/markets/kxfrancebudget"
+    },
+    {
+     "id": "ks:KXFRANCE493-27JAN01",
+     "venue": "Kalshi",
+     "question": "Will France use Article 49.3 on its 2027 state budget in 2026?: Yes",
+     "yes_pct": 66.0,
+     "volume": 574.0,
+     "branches": [],
+     "related_only": true,
+     "note": "49.3 used on the 2027 state budget in 2026",
+     "url": "https://kalshi.com/markets/kxfrance493"
+    }
+   ],
+   "url": "https://ethanc100.github.io/forecast-panel/#scenarios/fr-budget-2027"
+  },
+  {
+   "id": "sc:fr-pres-2027",
+   "kind": "scenario",
+   "country": "FR",
+   "title": "France 2027 presidential election",
+   "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
+   "resolution": "YES if the Conseil constitutionnel proclaims the RN candidate elected (second round expected 25 Apr 2027). Source: Conseil constitutionnel proclamation.",
+   "resolution_date": "2027-04-25",
+   "yes_branches": [
+    "rn"
+   ],
+   "event": "ev:2027-04-25-fr-presidential-election-second-round",
+   "event_date": "2027-04-25",
+   "days_to_event": 177,
+   "base_rate": {
+    "kind": "election_polls",
+    "reference_class": "Final pre-vote polls in presidential run-offs: France 2012-2022, and all run-offs in em-macro's 13 countries. These are final polls; six months out the error is larger.",
+    "headline": "final-poll leader won 4 of 4; RMS poll error 5.78 pp"
+   },
+   "branches": [
+    {
+     "id": "rn",
+     "label": "RN candidate wins",
+     "side": "bad",
+     "signposts": [
+      "Whether Le Pen is on the ballot (her ineligibility case) or Bardella runs",
+      "RN programme costing: pension-age and VAT pledges kept or dropped",
+      "Second-round polls against the leading centre-right candidate"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 17.0,
+       "source": "analog on fr.spread.oat_bund.ecb_m: 2024-05-01 51.2 to 2024-07-01 68.2",
+       "basis": "analog: the June 2024 dissolution, when an RN majority became possible (monthly averages, May to July 2024)"
+      },
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 12.44,
+       "lo": -9.15,
+       "hi": 34.02,
+       "source": "em-macro what-if FRA spread_bp populism_plus1sd (as of 2026-09-01)",
+       "basis": "em-macro what-if: governing parties' populism +1 sd (interval includes zero)"
+      }
+     ]
+    },
+    {
+     "id": "centre_right",
+     "label": "Centre or centre-right candidate wins",
+     "side": "good",
+     "signposts": [
+      "One centre-right candidate consolidates (Philippe, Lisnard, Retailleau or Attal): others withdraw",
+      "Sponsorship (parrainages) totals in March 2027"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": -12.44,
+       "lo": -34.02,
+       "hi": 9.15,
+       "source": "em-macro what-if FRA spread_bp populism_plus1sd (as of 2026-09-01) x -1",
+       "basis": "em-macro what-if, reversed: populism -1 sd"
+      }
+     ]
+    },
+    {
+     "id": "left",
+     "label": "Left candidate wins",
+     "side": "bad",
+     "signposts": [
+      "A single left candidate (primary or withdrawal) and first-round polls above 20%"
+     ],
+     "moves": [
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 9.34,
+       "lo": 6.24,
+       "hi": 12.44,
+       "source": "em-macro what-if FRA spread_bp deficit_plus1 (as of 2026-09-01)",
+       "basis": "em-macro what-if for a deficit 1 point of GDP higher; that the left programme adds a point is an assumption"
+      },
+      {
+       "instrument": "OATBUND",
+       "unit": "bp",
+       "value": 12.44,
+       "lo": -9.15,
+       "hi": 34.02,
+       "source": "em-macro what-if FRA spread_bp populism_plus1sd (as of 2026-09-01)",
+       "basis": "em-macro what-if: populism +1 sd"
+      }
+     ]
+    }
+   ],
+   "markets": [
+    {
+     "id": "pm:679018",
+     "venue": "Polymarket",
+     "question": "Will Marine Le Pen win the 2027 French presidential election?",
+     "yes_pct": 40.8,
+     "volume": 4709712.0,
+     "branches": [
+      "rn"
+     ],
+     "related_only": false,
+     "note": "Le Pen",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679019",
+     "venue": "Polymarket",
+     "question": "Will Jordan Bardella win the 2027 French presidential election?",
+     "yes_pct": 3.5,
+     "volume": 3331253.0,
+     "branches": [
+      "rn"
+     ],
+     "related_only": false,
+     "note": "Bardella",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679021",
+     "venue": "Polymarket",
+     "question": "Will Édouard Philippe win the 2027 French presidential election?",
+     "yes_pct": 16.5,
+     "volume": 2764667.0,
+     "branches": [
+      "centre_right"
+     ],
+     "related_only": false,
+     "note": "Philippe",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679022",
+     "venue": "Polymarket",
+     "question": "Will David Lisnard win the 2027 French presidential election?",
+     "yes_pct": 16.2,
+     "volume": 5776216.0,
+     "branches": [
+      "centre_right"
+     ],
+     "related_only": false,
+     "note": "Lisnard",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679027",
+     "venue": "Polymarket",
+     "question": "Will Bruno Retailleau win the 2027 French presidential election?",
+     "yes_pct": 1.1,
+     "volume": 3462625.0,
+     "branches": [
+      "centre_right"
+     ],
+     "related_only": false,
+     "note": "Retailleau",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679026",
+     "venue": "Polymarket",
+     "question": "Will Gabriel Attal win the 2027 French presidential election?",
+     "yes_pct": 0.4,
+     "volume": 3352949.0,
+     "branches": [
+      "centre_right"
+     ],
+     "related_only": false,
+     "note": "Attal",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679060",
+     "venue": "Polymarket",
+     "question": "Will Christine Lagarde win the 2027 French presidential election?",
+     "yes_pct": 2.9,
+     "volume": 1623003.0,
+     "branches": [
+      "centre_right"
+     ],
+     "related_only": false,
+     "note": "Lagarde",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679030",
+     "venue": "Polymarket",
+     "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+     "yes_pct": 10.5,
+     "volume": 2688158.0,
+     "branches": [
+      "left"
+     ],
+     "related_only": false,
+     "note": "Mélenchon",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679029",
+     "venue": "Polymarket",
+     "question": "Will Raphaël Glucksmann win the 2027 French presidential election?",
+     "yes_pct": 3.0,
+     "volume": 3200587.0,
+     "branches": [
+      "left"
+     ],
+     "related_only": false,
+     "note": "Glucksmann",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    },
+    {
+     "id": "pm:679028",
+     "venue": "Polymarket",
+     "question": "Will François Hollande win the 2027 French presidential election?",
+     "yes_pct": 2.2,
+     "volume": 2817647.0,
+     "branches": [
+      "left"
+     ],
+     "related_only": false,
+     "note": "Hollande",
+     "url": "https://polymarket.com/event/next-french-presidential-election"
+    }
+   ],
+   "url": "https://ethanc100.github.io/forecast-panel/#scenarios/fr-pres-2027"
+  },
+  {
+   "id": "sc:br-fiscal-2027",
+   "kind": "scenario",
+   "country": "BR",
+   "title": "Brazil 2027: fiscal-framework credibility",
+   "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
+   "resolution": "YES if, on 31 Mar 2027, the 2027 target in force is +0.5% of GDP, no PLN/PLP changing the target or the LC 200/2023 limits has been sent, and the first bimonthly report (RARDP, ~22 Mar 2027) does not propose one. Sources: LDO 2027, Câmara/Senado bill trackers, Tesouro RARDP.",
+   "resolution_date": "2027-03-31",
+   "yes_branches": [
+    "credible",
+    "kept_exclusions"
+   ],
+   "event": "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan",
+   "event_date": "2027-01-05",
+   "days_to_event": 67,
+   "base_rate": {
+    "kind": "none",
+    "reason": "em-macro records no fiscal-target revisions for Brazil, so there is no computed reference class.",
+    "context": [
+     "Context, not computed: Brazil cut a primary target it had set for itself in July 2015 (2015 target 1.1% to 0.15% of GDP) and in April 2024 (2025 target 0.5% to 0%, in the PLDO 2025)."
+    ]
+   },
+   "branches": [
+    {
+     "id": "credible",
+     "label": "Target kept and backed by a spending freeze",
+     "side": "good",
+     "signposts": [
+      "2027 budget (PLOA) voted in December without new exclusions from the spending limit",
+      "Finance minister named in January who keeps the framework",
+      "First 2027 bimonthly report (~22 Mar) freezes spending to hit 0.5%",
+      "Focus 2027 primary-balance median moves toward the target"
+     ],
+     "moves": [
+      {
+       "instrument": "DI29",
+       "unit": "bp",
+       "value": -30.0,
+       "source": "judgement",
+       "basis": "partial reversal of the post-run-off repricing (em-macro: Brazil 10y +255 bp abnormal on the day after the 25 Oct 2026 run-off); judgement"
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "value": -1.5,
+       "source": "judgement",
+       "basis": "judgement, same reasoning"
+      }
+     ]
+    },
+    {
+     "id": "kept_exclusions",
+     "label": "Target kept on paper, met through exclusions or one-offs",
+     "side": "mixed",
+     "signposts": [
+      "New spending carved out of the limit in the 2027 budget or by provisional measure",
+      "Revenue measures counted that Congress has not passed"
+     ],
+     "moves": [
+      {
+       "instrument": "DI29",
+       "unit": "bp",
+       "value": 35.0,
+       "source": "judgement",
+       "basis": "about one third of the Nov 2024 package analog below; judgement"
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "value": 1.5,
+       "source": "judgement",
+       "basis": "about one third of the Nov 2024 analog; judgement"
+      }
+     ]
+    },
+    {
+     "id": "target_cut",
+     "label": "Target cut or spending rule loosened",
+     "side": "bad",
+     "signposts": [
+      "PLN to change the 2027 target or a PLP to change LC 200/2023 sent to Congress",
+      "Ministers publicly question the 0.5% target",
+      "Focus 2027 primary-balance median falls further below the target"
+     ],
+     "moves": [
+      {
+       "instrument": "DI29",
+       "unit": "bp",
+       "value": 112.0,
+       "source": "analog on br.di.f29.proxy: 2024-11-26 13.17 to 2024-11-29 14.29",
+       "basis": "analog: the Nov 2024 spending package paired with an income-tax exemption (3 trading days)"
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "value": 4.39,
+       "source": "analog on br.usdbrl.ptax: 2024-11-26 5.799 to 2024-11-29 6.0535",
+       "basis": "analog: same episode"
+      },
+      {
+       "instrument": "BR10Y",
+       "unit": "bp",
+       "value": 5.01,
+       "lo": 0.68,
+       "hi": 9.34,
+       "source": "em-macro what-if BRA spread_bp deficit_plus1 (as of 2026-10-01)",
+       "basis": "em-macro what-if: deficit +1 point of GDP (slow-moving; assumes the US 10y is unchanged)"
+      },
+      {
+       "instrument": "USDBRL",
+       "unit": "%",
+       "value": -0.51,
+       "lo": -0.94,
+       "hi": -0.08,
+       "source": "em-macro what-if BRA fx_pct deficit_plus1 (as of 2026-09-01)",
+       "basis": "em-macro what-if: deficit +1 point of GDP (sign counter to intuition; interval excludes zero)"
+      }
+     ]
+    }
+   ],
+   "markets": [],
+   "url": "https://ethanc100.github.io/forecast-panel/#scenarios/br-fiscal-2027"
+  },
+  {
+   "id": "sc:mx-midterms-2027",
+   "kind": "scenario",
+   "country": "MX",
+   "title": "Mexico midterms, 6 Jun 2027",
+   "question": "Will Morena and its allies (PVEM, PT) hold at least two-thirds of the Chamber of Deputies (334 of 500 seats) after the 6 June 2027 election?",
+   "resolution": "YES if the INE's seat allocation (proportional-representation seats are assigned in August) gives Morena, PVEM and PT together 334 or more seats. Source: INE acuerdo de asignación.",
+   "resolution_date": "2027-08-31",
+   "yes_branches": [
+    "supermajority"
+   ],
+   "event": "ev:2027-06-06-mx-midterm-elections-chamber-of-deputies-governorsh",
+   "event_date": "2027-06-06",
+   "days_to_event": 219,
+   "base_rate": {
+    "kind": "election_polls",
+    "reference_class": "Mexico's midterm legislative elections in em-macro (2009, 2015, 2021): final-poll leader vs result. In 2021 the governing coalition kept its majority but lost two-thirds.",
+    "headline": "final-poll leader won 3 of 3; RMS poll error 4.12 pp"
+   },
+   "branches": [
+    {
+     "id": "supermajority",
+     "label": "Coalition keeps two-thirds",
+     "side": "bad",
+     "signposts": [
+      "Polls put the coalition above 55% of the vote (two-thirds needs vote share plus the over-representation cap)",
+      "INE rules on coalition over-representation (the 2024 dispute)"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "value": 7.21,
+       "source": "em-macro event study, ab_5 abnormal move, 1 event(s)",
+       "basis": "event study: the June 2024 election that delivered the supermajority (5-day abnormal move)"
+      },
+      {
+       "instrument": "MX10Y",
+       "unit": "bp",
+       "value": 46.47,
+       "source": "em-macro event study, ab_5 abnormal move, 1 event(s)",
+       "basis": "event study: same election, 10-year yield"
+      }
+     ]
+    },
+    {
+     "id": "majority",
+     "label": "Simple majority, below two-thirds",
+     "side": "good",
+     "signposts": [
+      "Coalition vote share polls between 45% and 55%",
+      "PAN-PRI or MC alliances in key districts"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "value": -0.27,
+       "lo": -0.64,
+       "hi": 0.14,
+       "source": "em-macro event study, ab_1 abnormal move, 3 event(s)",
+       "basis": "event study: average of Mexico's midterms (2009, 2015, 2021)"
+      },
+      {
+       "instrument": "MX10Y",
+       "unit": "bp",
+       "value": -6.26,
+       "lo": -9.27,
+       "hi": -2.13,
+       "source": "em-macro event study, ab_1 abnormal move, 3 event(s)",
+       "basis": "event study: same midterms"
+      }
+     ]
+    },
+    {
+     "id": "lose_majority",
+     "label": "Coalition loses its majority",
+     "side": "mixed",
+     "signposts": [
+      "Coalition polls below 45%"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "value": 4.14,
+       "lo": 3.11,
+       "hi": 5.18,
+       "source": "em-macro what-if MEX fx_pct lose_majority (as of 2026-09-01)",
+       "basis": "em-macro what-if (pooled across countries): the peso weakens; this conflicts with the 2024 reaction to a stronger mandate"
+      },
+      {
+       "instrument": "MX10Y",
+       "unit": "bp",
+       "value": -29.76,
+       "lo": -69.1,
+       "hi": 9.58,
+       "source": "em-macro what-if MEX spread_bp lose_majority (as of 2026-10-01)",
+       "basis": "em-macro what-if: spread narrows (interval includes zero); assumes the US 10y is unchanged"
+      }
+     ]
+    }
+   ],
+   "markets": [
+    {
+     "id": "pm:2271403",
+     "venue": "Polymarket",
+     "question": "Will the National Regeneration Movement (Morena) win the most seats in the 2027 Mexico legislative election?",
+     "yes_pct": 86.5,
+     "volume": 58312.0,
+     "branches": [],
+     "related_only": true,
+     "note": "Morena wins the most seats: implied by every branch except a large loss",
+     "url": "https://polymarket.com/event/mexico-legislative-election-winner"
+    },
+    {
+     "id": "ks:KXMEXICODEPUTIES-27-MORENA",
+     "venue": "Kalshi",
+     "question": "Mexican Chamber of Deputies election winner?: Morena",
+     "yes_pct": 86.0,
+     "volume": 1426.0,
+     "branches": [],
+     "related_only": true,
+     "note": "same: the party with most seats",
+     "url": "https://kalshi.com/markets/kxmexicodeputies"
+    }
+   ],
+   "url": "https://ethanc100.github.io/forecast-panel/#scenarios/mx-midterms-2027"
+  },
+  {
+   "id": "sc:usmca-2027",
+   "kind": "scenario",
+   "country": "MX",
+   "title": "USMCA annual review, 1 Jul 2027",
+   "question": "At or before the 1 July 2027 joint review, will the United States, Mexico and Canada each confirm in writing that they wish to extend USMCA for a new 16-year term (art. 34.7)?",
+   "resolution": "YES if all three parties confirm the extension in writing by 1 Jul 2027. NO otherwise, including a withdrawal notice under art. 34.6. Sources: USTR, Secretaría de Economía, Global Affairs Canada.",
+   "resolution_date": "2027-07-01",
+   "yes_branches": [
+    "extended"
+   ],
+   "event": "ev:2027-07-01-mx-usmca-annual-joint-review",
+   "event_date": "2027-07-01",
+   "days_to_event": 244,
+   "base_rate": {
+    "kind": "none",
+    "reason": "No reference class: this is the agreement's first review cycle, and em-macro has no trade-agreement events."
+   },
+   "branches": [
+    {
+     "id": "extended",
+     "label": "Extended for 16 years",
+     "side": "good",
+     "signposts": [
+      "USTR's 2027 consultation report recommends extension",
+      "US tariffs on Mexican goods cut below 10%"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "value": -2.0,
+       "source": "judgement",
+       "basis": "judgement: removes the review overhang"
+      }
+     ]
+    },
+    {
+     "id": "annual",
+     "label": "No extension; annual reviews continue",
+     "side": "mixed",
+     "signposts": [
+      "Review ends with a list of open issues and no withdrawal notice"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "value": 0.5,
+       "source": "judgement",
+       "basis": "judgement: the status quo after the 2026 review"
+      }
+     ]
+    },
+    {
+     "id": "bilateral",
+     "label": "Replaced by bilateral deals",
+     "side": "bad",
+     "signposts": [
+      "US proposes separate US-Mexico and US-Canada texts"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "value": 3.0,
+       "source": "judgement",
+       "basis": "judgement: about a quarter of the 2016 analog below"
+      }
+     ]
+    },
+    {
+     "id": "withdrawal",
+     "label": "US gives notice of withdrawal (art. 34.6)",
+     "side": "bad",
+     "signposts": [
+      "US officials describe withdrawal as leverage; Federal Register notice"
+     ],
+     "moves": [
+      {
+       "instrument": "USDMXN",
+       "unit": "%",
+       "value": 13.74,
+       "source": "analog on mx.usdmxn.fix: 2016-11-08 18.5089 to 2016-11-11 21.0511",
+       "basis": "analog: the 2016 US election, when a NAFTA withdrawal became likely (3 days; included other shocks)"
+      }
+     ]
+    }
+   ],
+   "markets": [
+    {
+     "id": "pm:2761052",
+     "venue": "Polymarket",
+     "question": "USMCA extended in 2026?",
+     "yes_pct": 8.5,
+     "volume": 11728.0,
+     "branches": [],
+     "related_only": true,
+     "note": "USMCA extended in 2026: the earlier review",
+     "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768"
+    },
+    {
+     "id": "ks:KXUSMCAOUTCOMES-27-TRI",
+     "venue": "Kalshi",
+     "question": "Which USMCA outcomes will occur in 2026?: Trilateral revised deal",
+     "yes_pct": 24.0,
+     "volume": 696.0,
+     "branches": [],
+     "related_only": true,
+     "note": "trilateral revised deal in 2026",
+     "url": "https://kalshi.com/markets/kxusmcaoutcomes"
+    }
+   ],
+   "url": "https://ethanc100.github.io/forecast-panel/#scenarios/usmca-2027"
+  },
+  {
+   "id": "pm:679035",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Ségolène Royal win the 2027 French presidential election?",
+   "yes_pct": 0.1,
+   "volume": 6972761.0,
+   "end_date": "2027-04-19",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679033",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Olivier Faure win the 2027 French presidential election?",
+   "yes_pct": 0.1,
+   "volume": 6434139.0,
+   "end_date": "2027-04-19",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679049",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Mathilde Panot win the 2027 French presidential election?",
+   "yes_pct": 0.1,
+   "volume": 6426216.0,
+   "end_date": "2027-04-19",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679023",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Xavier Bertrand win the 2027 French presidential election?",
+   "yes_pct": 0.1,
+   "volume": 6378718.0,
+   "end_date": "2027-04-19",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679036",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will François Asselineau win the 2027 French presidential election?",
+   "yes_pct": 0.1,
+   "volume": 6293741.0,
+   "end_date": "2027-04-19",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679041",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will François Bayrou win the 2027 French presidential election?",
+   "yes_pct": 0.1,
+   "volume": 5949268.0,
+   "end_date": "2027-04-19",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "ks:KXFRENCHPRES-27-MLEP",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Next French presidential election winner?: Marine Le Pen",
+   "yes_pct": 44.0,
+   "volume": 320484.0,
+   "end_date": "2028-05-30",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxfrenchpres"
+  },
+  {
+   "id": "ks:KXFRENCHPRES-27-JBAR",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Next French presidential election winner?: Jordan Bardella",
+   "yes_pct": 1.4,
+   "volume": 134894.0,
+   "end_date": "2028-05-30",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxfrenchpres"
+  },
+  {
+   "id": "ks:KXFRENCHPRES-27-DLIS",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Next French presidential election winner?: David Lisnard",
+   "yes_pct": 15.0,
+   "volume": 88177.0,
+   "end_date": "2028-05-30",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxfrenchpres"
+  },
+  {
+   "id": "ks:KXFRENCHPRES-27-FHOL",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Next French presidential election winner?: François Hollande",
+   "yes_pct": 3.0,
+   "volume": 88158.0,
+   "end_date": "2028-05-30",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxfrenchpres"
+  },
+  {
+   "id": "ks:KXFRANCEEMERGENCY-27-26NOV01",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Will France declare a state of emergency?: Before Nov 1, 2026",
+   "yes_pct": 3.0,
+   "volume": 86832.0,
+   "end_date": "2026-11-01",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxfranceemergency"
+  },
+  {
+   "id": "ks:KXFRENCHPRES-27-JMEL",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Next French presidential election winner?: Jean-Luc Mélenchon",
+   "yes_pct": 9.0,
+   "volume": 68173.0,
+   "end_date": "2028-05-30",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxfrenchpres"
+  },
+  {
+   "id": "pm:1544795",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Polymarket",
+   "question": "Alexandre de Moraes out as Brazil Supreme Court Justice?",
+   "yes_pct": 6.3,
+   "volume": 260437.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/alexandre-de-moraes-out-as-brazil-supreme-court-justice"
+  },
+  {
+   "id": "pm:1125087",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Polymarket",
+   "question": "Any Brazil STF Justice removed by impeachment before 2027?",
+   "yes_pct": 2.4,
+   "volume": 102807.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/any-brazil-stf-justice-removed-by-impeachment-before-2027"
+  },
+  {
+   "id": "pm:5336164",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Polymarket",
+   "question": "Will Luiz Inácio Lula da Silva win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?",
+   "yes_pct": 36.0,
+   "volume": 64110.0,
+   "end_date": "2026-11-05",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo"
+  },
+  {
+   "id": "pm:3347919",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Polymarket",
+   "question": "Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the November meeting?",
+   "yes_pct": 20.5,
+   "volume": 45598.0,
+   "end_date": "2026-11-04",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/bank-of-brazil-decision-in-november-1785878499354"
+  },
+  {
+   "id": "pm:6257149",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Polymarket",
+   "question": "Brazil presidential election annulled by December 31?",
+   "yes_pct": 2.8,
+   "volume": 45063.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/brazil-presidential-election-annulled-by-december-31-20261026114556736"
+  },
+  {
+   "id": "pm:1243900",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Polymarket",
+   "question": "Will Brazil’s Annual Inflation in 2026 be between 4.50% and 4.99%?",
+   "yes_pct": 5.5,
+   "volume": 37523.0,
+   "end_date": "2027-01-13",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/brazil-annual-inflation-2026"
+  },
+  {
+   "id": "ks:KXBRAZILINF-26DEC-4.00",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Kalshi",
+   "question": "Will inflation in Brazil be below 4.00% in Dec 2026?: In Dec 2026",
+   "yes_pct": 11.0,
+   "volume": 151113.0,
+   "end_date": "2027-03-31",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxbrazilinf"
+  },
+  {
+   "id": "ks:KXBRRATECUT-27JAN01-T7",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Kalshi",
+   "question": "Number of Brazil rate cuts in 2026?: 7 or more cuts",
+   "yes_pct": 11.0,
+   "volume": 78805.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxbrratecut"
+  },
+  {
+   "id": "ks:KXCBDECISIONBRAZIL-26NOV04-H25P",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Kalshi",
+   "question": "Central Bank of Brazil rate decision in November: Hike more than 25bps",
+   "yes_pct": 2.0,
+   "volume": 61737.0,
+   "end_date": "2026-11-04",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxcbdecisionbrazil"
+  },
+  {
+   "id": "ks:KXBRRATECUT-27JAN01-E6",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Kalshi",
+   "question": "Number of Brazil rate cuts in 2026?: Exactly 6 cuts",
+   "yes_pct": 25.0,
+   "volume": 52339.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxbrratecut"
+  },
+  {
+   "id": "ks:KXBRRATECUT-27JAN01-E5",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Kalshi",
+   "question": "Number of Brazil rate cuts in 2026?: Exactly 5 cuts",
+   "yes_pct": 70.0,
+   "volume": 51024.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxbrratecut"
+  },
+  {
+   "id": "ks:KXBRRATECUT-27JAN01-E4",
+   "kind": "market",
+   "country": "BR",
+   "venue": "Kalshi",
+   "question": "Number of Brazil rate cuts in 2026?: Exactly 4 cuts",
+   "yes_pct": 1.0,
+   "volume": 21868.0,
+   "end_date": "2026-09-18",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxbrratecut"
+  },
+  {
+   "id": "pm:3388093",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "No change in Bank of Mexico’s interest rates after November 2026 meeting?",
+   "yes_pct": 86.5,
+   "volume": 67637.0,
+   "end_date": "2026-11-05",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/bank-of-mexico-decision-in-november"
+  },
+  {
+   "id": "pm:1419324",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "Will Ricardo Ruiz Velasco be arrested in 2026?",
+   "yes_pct": 13.8,
+   "volume": 63656.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026"
+  },
+  {
+   "id": "pm:1419327",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "Will Juan Carlos Valencia Gonzalez be arrested in 2026?",
+   "yes_pct": 11.0,
+   "volume": 60477.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026"
+  },
+  {
+   "id": "pm:2271403",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "Will the National Regeneration Movement (Morena) win the most seats in the 2027 Mexico legislative election?",
+   "yes_pct": 86.5,
+   "volume": 58312.0,
+   "end_date": "2027-06-07",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/mexico-legislative-election-winner"
+  },
+  {
+   "id": "pm:3388092",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "Bank of Mexico decreases interest rates by 25 bps after November 2026 meeting?",
+   "yes_pct": 12.0,
+   "volume": 47184.0,
+   "end_date": "2026-11-05",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/bank-of-mexico-decision-in-november"
+  },
+  {
+   "id": "pm:1430556",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "Claudia Sheinbaum out as President of Mexico by December 31?",
+   "yes_pct": 3.0,
+   "volume": 41174.0,
+   "end_date": "2027-01-01",
+   "as_of": "2026-10-30T08:19:34Z",
+   "url": "https://polymarket.com/event/claudia-sheinbaum-out-as-president-of-mexico-by-june-30"
+  },
+  {
+   "id": "ks:KXDEMBORDERHOUSESWEEP-26NOV03",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Will Democrats win all House seats bordering Mexico in 2026?: Yes",
+   "yes_pct": 36.0,
+   "volume": 19249.0,
+   "end_date": "2027-11-03",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxdemborderhousesweep"
+  },
+  {
+   "id": "ks:KXUE-MEX26OCT-2.9",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Mexico unemployment rate in October: Above 2.9%",
+   "yes_pct": 35.0,
+   "volume": 18560.0,
+   "end_date": "2026-11-26",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxue"
+  },
+  {
+   "id": "ks:KXCBDECISIONMEXICO-26NOV05-C25",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Bank of Mexico rate decision in November: Cut 25bps",
+   "yes_pct": 10.0,
+   "volume": 13775.0,
+   "end_date": "2026-11-05",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxcbdecisionmexico"
+  },
+  {
+   "id": "ks:KXCBDECISIONMEXICO-26NOV05-HOLD",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Bank of Mexico rate decision in November: Maintain current rate",
+   "yes_pct": 87.0,
+   "volume": 10086.0,
+   "end_date": "2026-11-05",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxcbdecisionmexico"
+  },
+  {
+   "id": "ks:KXUE-MEX26OCT-3.3",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Mexico unemployment rate in October: Above 3.3%",
+   "yes_pct": 1.0,
+   "volume": 7451.0,
+   "end_date": "2026-11-26",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxue"
+  },
+  {
+   "id": "ks:KXCBDECISIONMEXICO-26NOV05-C50P",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Bank of Mexico rate decision in November: Cut more than 50bps",
+   "yes_pct": 1.0,
+   "volume": 5745.0,
+   "end_date": "2026-11-05",
+   "as_of": "2026-10-30T08:19:55Z",
+   "url": "https://kalshi.com/markets/kxcbdecisionmexico"
+  },
+  {
+   "id": "pm:5458390",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Moody's or S&P downgrades France by November 30, 2026?",
+   "yes_pct": 28.5,
+   "volume": 7338.0,
+   "scenario": "sc:fr-sp-2026-11",
+   "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt"
+  },
+  {
+   "id": "ks:KXFRANCEDOWNGRADE-27JAN01-1",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "France credit rating downgrade in 2026?: Downgrade before 2027?",
+   "yes_pct": 31.0,
+   "volume": 2000.0,
+   "scenario": "sc:fr-sp-2026-11",
+   "url": "https://kalshi.com/markets/kxfrancedowngrade"
+  },
+  {
+   "id": "pm:1722538",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will France pass a national budget by December 31?",
+   "yes_pct": 51.5,
+   "volume": 22145.0,
+   "scenario": "sc:fr-budget-2027",
+   "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31"
+  },
+  {
+   "id": "ks:KXFRANCEBUDGET-27JAN01",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Will France enact its 2027 budget in 2026?: Yes",
+   "yes_pct": 49.0,
+   "volume": 4082.0,
+   "scenario": "sc:fr-budget-2027",
+   "url": "https://kalshi.com/markets/kxfrancebudget"
+  },
+  {
+   "id": "ks:KXFRANCE493-27JAN01",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Kalshi",
+   "question": "Will France use Article 49.3 on its 2027 state budget in 2026?: Yes",
+   "yes_pct": 66.0,
+   "volume": 574.0,
+   "scenario": "sc:fr-budget-2027",
+   "url": "https://kalshi.com/markets/kxfrance493"
+  },
+  {
+   "id": "pm:679018",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Marine Le Pen win the 2027 French presidential election?",
+   "yes_pct": 40.8,
+   "volume": 4709712.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679019",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Jordan Bardella win the 2027 French presidential election?",
+   "yes_pct": 3.5,
+   "volume": 3331253.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679021",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Édouard Philippe win the 2027 French presidential election?",
+   "yes_pct": 16.5,
+   "volume": 2764667.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679022",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will David Lisnard win the 2027 French presidential election?",
+   "yes_pct": 16.2,
+   "volume": 5776216.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679027",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Bruno Retailleau win the 2027 French presidential election?",
+   "yes_pct": 1.1,
+   "volume": 3462625.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679026",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Gabriel Attal win the 2027 French presidential election?",
+   "yes_pct": 0.4,
+   "volume": 3352949.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679060",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Christine Lagarde win the 2027 French presidential election?",
+   "yes_pct": 2.9,
+   "volume": 1623003.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679030",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
+   "yes_pct": 10.5,
+   "volume": 2688158.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679029",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will Raphaël Glucksmann win the 2027 French presidential election?",
+   "yes_pct": 3.0,
+   "volume": 3200587.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "pm:679028",
+   "kind": "market",
+   "country": "FR",
+   "venue": "Polymarket",
+   "question": "Will François Hollande win the 2027 French presidential election?",
+   "yes_pct": 2.2,
+   "volume": 2817647.0,
+   "scenario": "sc:fr-pres-2027",
+   "url": "https://polymarket.com/event/next-french-presidential-election"
+  },
+  {
+   "id": "ks:KXMEXICODEPUTIES-27-MORENA",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Mexican Chamber of Deputies election winner?: Morena",
+   "yes_pct": 86.0,
+   "volume": 1426.0,
+   "scenario": "sc:mx-midterms-2027",
+   "url": "https://kalshi.com/markets/kxmexicodeputies"
+  },
+  {
+   "id": "pm:2761052",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Polymarket",
+   "question": "USMCA extended in 2026?",
+   "yes_pct": 8.5,
+   "volume": 11728.0,
+   "scenario": "sc:usmca-2027",
+   "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768"
+  },
+  {
+   "id": "ks:KXUSMCAOUTCOMES-27-TRI",
+   "kind": "market",
+   "country": "MX",
+   "venue": "Kalshi",
+   "question": "Which USMCA outcomes will occur in 2026?: Trilateral revised deal",
+   "yes_pct": 24.0,
+   "volume": 696.0,
+   "scenario": "sc:usmca-2027",
+   "url": "https://kalshi.com/markets/kxusmcaoutcomes"
+  },
+  {
+   "id": "cot:br.cot.brl",
+   "kind": "positioning",
+   "country": "BR",
+   "label": "BRL futures, leveraged funds",
+   "as_of": "2026-10-20",
+   "net_contracts": 18677,
+   "net_pct_oi": 13.8,
+   "percentile": 92.3,
+   "crowded": "long BRL",
+   "extreme": true,
+   "evidence_badge": "tested_no_lead",
+   "source": "CFTC Commitments of Traders",
+   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
+  },
+  {
+   "id": "cot:mx.cot.mxn",
+   "kind": "positioning",
+   "country": "MX",
+   "label": "MXN futures, leveraged funds",
+   "as_of": "2026-10-20",
+   "net_contracts": 63814,
+   "net_pct_oi": 22.9,
+   "percentile": 73.7,
+   "crowded": null,
+   "extreme": false,
+   "evidence_badge": "tested_no_lead",
+   "source": "CFTC Commitments of Traders",
+   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
+  },
+  {
+   "id": "disp:1",
+   "kind": "survey_dispersion",
+   "country": "BR",
+   "label": "Focus: Selic for the next Copom (R7/2026)",
+   "as_of": "2026-10-23",
+   "sd": 0.0839,
+   "unit": "pp (sd)",
+   "median": 13.5,
+   "respondents": 133.0,
+   "percentile": 60.0,
+   "percentile_basis": "vs the last survey before each of the previous 40 meetings",
+   "extreme": false,
+   "event": "Copom decision (3-4 Nov)",
+   "evidence_badge": "tested_leads",
+   "source": "BCB Focus (Olinda)",
+   "url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic"
+  },
+  {
+   "id": "disp:2",
+   "kind": "survey_dispersion",
+   "country": "BR",
+   "label": "Focus: 2027 primary balance",
+   "as_of": "2026-10-23",
+   "sd": 0.2865,
+   "unit": "pp of GDP (sd)",
+   "median": -0.3,
+   "respondents": 57,
+   "percentile": 27.9,
+   "percentile_basis": "vs readings at the same horizon over 10 years",
+   "extreme": false,
+   "event": null,
+   "evidence_badge": "untested",
+   "source": "BCB Focus (Olinda)",
+   "url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais"
+  },
+  {
+   "id": "disp:3",
+   "kind": "survey_dispersion",
+   "country": "MX",
+   "label": "Banxico survey: 2026 inflation",
+   "as_of": "2026-09-01",
+   "sd": 0.18,
+   "unit": "pp (sd)",
+   "median": 3.87,
+   "respondents": null,
+   "percentile": 25.8,
+   "percentile_basis": "vs the same month +/-1 over the previous 10 years",
+   "extreme": false,
+   "event": "Banxico monetary policy decision",
+   "evidence_badge": "tested_no_lead",
+   "source": "Banxico SIE (public chart data)",
+   "url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1"
+  },
+  {
+   "id": "fc:FR.inflation.2026",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "Inflation (HICP; IMF: CPI)",
+   "year": 2026,
+   "unit": "%",
+   "median": 2.38,
+   "min": 2.06,
+   "max": 2.4,
+   "dispersion": 0.191,
+   "respondents": 3,
+   "change_3m": null,
+   "as_of": "2026-10-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:FR.inflation.2027",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "Inflation (HICP; IMF: CPI)",
+   "year": 2027,
+   "unit": "%",
+   "median": 1.85,
+   "min": 1.84,
+   "max": 2.2,
+   "dispersion": 0.205,
+   "respondents": 3,
+   "change_3m": null,
+   "as_of": "2026-10-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:FR.rate.2026",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "Short-term rate (3-month, euro area; OECD only)",
+   "year": 2026,
+   "unit": "%",
+   "median": 2.24,
+   "min": 2.24,
+   "max": 2.24,
+   "dispersion": null,
+   "respondents": 1,
+   "change_3m": 0.003,
+   "as_of": "2026-06-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:FR.rate.2027",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "Short-term rate (3-month, euro area; OECD only)",
+   "year": 2027,
+   "unit": "%",
+   "median": 2.24,
+   "min": 2.24,
+   "max": 2.24,
+   "dispersion": null,
+   "respondents": 1,
+   "change_3m": 0.003,
+   "as_of": "2026-06-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:FR.gdp.2026",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "Real GDP growth",
+   "year": 2026,
+   "unit": "%",
+   "median": 0.65,
+   "min": 0.4,
+   "max": 0.79,
+   "dispersion": 0.198,
+   "respondents": 3,
+   "change_3m": null,
+   "as_of": "2026-10-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:FR.gdp.2027",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "Real GDP growth",
+   "year": 2027,
+   "unit": "%",
+   "median": 0.81,
+   "min": 0.7,
+   "max": 1.13,
+   "dispersion": 0.223,
+   "respondents": 3,
+   "change_3m": null,
+   "as_of": "2026-10-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:FR.balance.2026",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "General government balance, % of GDP",
+   "year": 2026,
+   "unit": "%",
+   "median": -5.11,
+   "min": -5.4,
+   "max": -4.96,
+   "dispersion": 0.224,
+   "respondents": 3,
+   "change_3m": null,
+   "as_of": "2026-10-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:FR.balance.2027",
+   "kind": "consensus",
+   "country": "FR",
+   "label": "General government balance, % of GDP",
+   "year": 2027,
+   "unit": "%",
+   "median": -5.2,
+   "min": -5.69,
+   "max": -4.58,
+   "dispersion": 0.556,
+   "respondents": 3,
+   "change_3m": null,
+   "as_of": "2026-10-01",
+   "source": "IMF, OECD and European Commission"
+  },
+  {
+   "id": "fc:BR.inflation.2026",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Inflation (IPCA, Dec/Dec)",
+   "year": 2026,
+   "unit": "%",
+   "median": 5.19,
+   "min": 4.8,
+   "max": 5.75,
+   "dispersion": 0.146,
+   "respondents": 142,
+   "change_3m": 0.068,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.inflation.2027",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Inflation (IPCA, Dec/Dec)",
+   "year": 2027,
+   "unit": "%",
+   "median": 4.34,
+   "min": 3.25,
+   "max": 6.0,
+   "dispersion": 0.434,
+   "respondents": 142,
+   "change_3m": 0.121,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.policy_rate.2026",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Selic rate, year end",
+   "year": 2026,
+   "unit": "% p.a.",
+   "median": 13.25,
+   "min": 13.0,
+   "max": 14.0,
+   "dispersion": 0.184,
+   "respondents": 137,
+   "change_3m": -0.75,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.policy_rate.2027",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Selic rate, year end",
+   "year": 2027,
+   "unit": "% p.a.",
+   "median": 11.75,
+   "min": 9.0,
+   "max": 14.0,
+   "dispersion": 0.775,
+   "respondents": 136,
+   "change_3m": -0.25,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.gdp.2026",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Real GDP growth",
+   "year": 2026,
+   "unit": "%",
+   "median": 1.8,
+   "min": 1.25,
+   "max": 2.28,
+   "dispersion": 0.146,
+   "respondents": 113,
+   "change_3m": -0.186,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.gdp.2027",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Real GDP growth",
+   "year": 2027,
+   "unit": "%",
+   "median": 1.31,
+   "min": 0.29,
+   "max": 2.38,
+   "dispersion": 0.341,
+   "respondents": 113,
+   "change_3m": -0.286,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.primary.2026",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Primary balance, % of GDP",
+   "year": 2026,
+   "unit": "% of GDP",
+   "median": -0.48,
+   "min": -0.7,
+   "max": -0.19,
+   "dispersion": 0.105,
+   "respondents": 58,
+   "change_3m": 0.02,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.primary.2027",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Primary balance, % of GDP",
+   "year": 2027,
+   "unit": "% of GDP",
+   "median": -0.3,
+   "min": -0.9,
+   "max": 0.5,
+   "dispersion": 0.286,
+   "respondents": 57,
+   "change_3m": 0.1,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.nominal.2026",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Overall (nominal) balance, % of GDP",
+   "year": 2026,
+   "unit": "% of GDP",
+   "median": -8.93,
+   "min": -10.0,
+   "max": -6.96,
+   "dispersion": 0.525,
+   "respondents": 53,
+   "change_3m": -0.23,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:BR.nominal.2027",
+   "kind": "consensus",
+   "country": "BR",
+   "label": "Overall (nominal) balance, % of GDP",
+   "year": 2027,
+   "unit": "% of GDP",
+   "median": -8.5,
+   "min": -11.7,
+   "max": -6.7,
+   "dispersion": 0.815,
+   "respondents": 52,
+   "change_3m": -0.3,
+   "as_of": "2026-10-23",
+   "source": "BCB Focus"
+  },
+  {
+   "id": "fc:MX.inflation.2026",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Inflation, year end",
+   "year": 2026,
+   "unit": "%",
+   "median": 3.87,
+   "min": 3.26,
+   "max": 4.25,
+   "dispersion": 0.18,
+   "respondents": null,
+   "change_3m": -0.33,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "fc:MX.inflation.2027",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Inflation, year end",
+   "year": 2027,
+   "unit": "%",
+   "median": 3.82,
+   "min": 3.5,
+   "max": 4.41,
+   "dispersion": 0.17,
+   "respondents": null,
+   "change_3m": -0.02,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "fc:MX.policy_rate.2026",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Policy (interbank) rate, Q4 close",
+   "year": 2026,
+   "unit": "% p.a.",
+   "median": 6.5,
+   "min": 6.5,
+   "max": 6.75,
+   "dispersion": 0.04,
+   "respondents": null,
+   "change_3m": 0.0,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "fc:MX.policy_rate.2027",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Policy (interbank) rate, Q4 close",
+   "year": 2027,
+   "unit": "% p.a.",
+   "median": 6.5,
+   "min": 5.75,
+   "max": 7.25,
+   "dispersion": 0.26,
+   "respondents": null,
+   "change_3m": 0.0,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "fc:MX.gdp.2026",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Real GDP growth",
+   "year": 2026,
+   "unit": "%",
+   "median": 1.4,
+   "min": 0.84,
+   "max": 1.9,
+   "dispersion": 0.21,
+   "respondents": null,
+   "change_3m": 0.3,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "fc:MX.gdp.2027",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Real GDP growth",
+   "year": 2027,
+   "unit": "%",
+   "median": 1.8,
+   "min": 1.0,
+   "max": 2.2,
+   "dispersion": 0.25,
+   "respondents": null,
+   "change_3m": 0.0,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "fc:MX.balance.2026",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Public-sector economic balance, % of GDP",
+   "year": 2026,
+   "unit": "% of GDP",
+   "median": -3.85,
+   "min": -4.2,
+   "max": -2.92,
+   "dispersion": 0.25,
+   "respondents": null,
+   "change_3m": -0.05,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "fc:MX.balance.2027",
+   "kind": "consensus",
+   "country": "MX",
+   "label": "Public-sector economic balance, % of GDP",
+   "year": 2027,
+   "unit": "% of GDP",
+   "median": -3.7,
+   "min": -4.1,
+   "max": -2.72,
+   "dispersion": 0.31,
+   "respondents": null,
+   "change_3m": 0.0,
+   "as_of": "2026-09-01",
+   "source": "Banxico survey"
+  },
+  {
+   "id": "pol:fr-budget-2027",
+   "kind": "policy",
+   "country": "FR",
+   "name": "2027 budget bills (PLF and PLFSS 2027)",
+   "what": "The 2027 finance and social-security bills presented on 1 October 2026: about 54 billion euros of consolidation, of which 43 billion of new measures (including a freeze of the civil-service pay index and of basic pensions except the lowest).",
+   "claim": "The public deficit falls from 5.4% of GDP in 2026 to 5.0% in 2027, with growth of 1.0% in 2027 after 0.5% and inflation of 1.8%.",
+   "assessment_by": "HCFP (High Council of Public Finance)",
+   "assessment": "The 1.0% growth assumption looks optimistic; most forecasters are one to three tenths lower and downside risks dominate. The spending path is achievable only if every measure is adopted, which depends on Parliament passing the bills.",
+   "status": "Before Parliament.",
+   "next": "Budget (PLF 2027): Article 47 70-day deadline",
+   "next_date": "2026-12-10",
+   "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027"
+  },
+  {
+   "id": "pol:fr-pensions",
+   "kind": "policy",
+   "country": "FR",
+   "name": "Pension reform suspension and the 2027 pension freeze",
+   "what": "The 2026 social-security financing law suspended the 2023 pension reform until 1 January 2028, freezing the legal age at 62 years and 9 months and the contribution period at 170 quarters. The 2027 bill proposes freezing basic pensions in 2027 except the lowest.",
+   "claim": "The suspension is a pause, not a repeal: the 2023 rules resume after 1 January 2028, and the 2027 freeze is part of the bill's savings.",
+   "assessment_by": "HCFP",
+   "assessment": "Even after the under-indexation, pension benefits are one of the biggest spending increases in 2027 (+9 billion euros on the social-security field alone), behind interest costs.",
+   "status": "Suspension in force until 1 January 2028; the 2027 freeze is in the PLFSS 2027 before Parliament.",
+   "next": "Budget (PLF 2027): Article 47 70-day deadline",
+   "next_date": "2026-12-10",
+   "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027"
+  },
+  {
+   "id": "pol:br-fiscal-framework",
+   "kind": "policy",
+   "country": "BR",
+   "name": "Fiscal framework (LC 200/2023) and the 2027 primary target",
+   "what": "Since 2023 federal policy runs on an annual primary-balance target with a tolerance band of 0.25 point of GDP either side, plus a cap on real primary-spending growth. For 2027 the target is a central-government surplus of 0.5% of GDP.",
+   "claim": "The 2027 budget bill puts the result counted for the target at a surplus of R$83.4 billion (0.6% of GDP) after legal deductions, above the R$73.2 billion (0.5% of GDP) target, so the government says the framework is being met.",
+   "assessment_by": "IFI (Senate's Independent Fiscal Institution)",
+   "assessment": "Formal compliance remains possible but rests on assumptions more optimistic than IFI's and a much thinner safety margin. In IFI's scenario the result counted for the target is a surplus of only R$0.9 billion, below even the lower tolerance bound, so about R$35.7 billion of discretionary spending would have to be frozen.",
+   "status": "In force; the 2027 target is set in the budget guidelines bill (PLDO 2027).",
+   "next": "2027 budget (PLOA) vote in Congress",
+   "next_date": "2026-12-17",
+   "url": "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf"
+  },
+  {
+   "id": "pol:br-ploa-2027",
+   "kind": "policy",
+   "country": "BR",
+   "name": "2027 budget bill (PLOA 2027)",
+   "what": "The 2027 annual budget bill (PLN 24/2026), sent to Congress on 31 August 2026. Congress's joint budget committee amends it and both chambers vote it in December.",
+   "claim": "An effective central-government primary surplus of R$18.6 billion (0.1% of GDP) in 2027, built on 2.5% GDP growth and 3.6% IPCA inflation.",
+   "assessment_by": "IFI",
+   "assessment": "Revenue could fall short if growth is below the 2.5% assumed, and assumed savings from benefit reviews may not materialise. IFI expects pension spending of R$1,239.2 billion against the bill's R$1,215.1 billion, part of a R$104.8 billion gap between the two projections of the effective result.",
+   "status": "Before Congress (joint budget committee).",
+   "next": "2027 budget (PLOA) vote in Congress",
+   "next_date": "2026-12-17",
+   "url": "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf"
+  },
+  {
+   "id": "pol:br-consumption-tax",
+   "kind": "policy",
+   "country": "BR",
+   "name": "Consumption-tax reform (CBS and IBS)",
+   "what": "Constitutional Amendment 132/2023 and Complementary Law 214/2025 replace federal and local consumption taxes with a dual VAT. The federal CBS replaces PIS and Cofins from 1 January 2027; the state and municipal IBS is phased in afterwards. The reference CBS rate is still to be set.",
+   "claim": "The government projects R$636 billion of CBS revenue in 2027 in the budget bill; the law includes a mechanism to cut rates if the combined burden of the new taxes rises.",
+   "assessment_by": "IFI",
+   "assessment": "The 2027 bill adds a R$33.8 billion payment into the fund that compensates states for replacing IPI with the selective tax. It sits outside the LC 200 spending cap but counts towards the primary target, an example of how the transition's design adds fiscal pressure.",
+   "status": "CBS starts on 1 January 2027; the Senate must set the reference rate by 15 December 2026.",
+   "next": "Senate deadline to set the CBS reference rate",
+   "next_date": "2026-12-15",
+   "url": "https://www2.senado.leg.br/jspui/bitstream/id/962520/3/RAF116_SET2026_PLOA_2027.pdf"
+  },
+  {
+   "id": "pol:mx-paquete-2027",
+   "kind": "policy",
+   "country": "MX",
+   "name": "2027 budget package (Paquete Económico 2027)",
+   "what": "The 2027 economic package (general policy criteria, revenue law and spending budget) presented to the Chamber of Deputies on 8 September 2026.",
+   "claim": "The broadest deficit measure (RFSP) falls from 4.1% of GDP in 2026 to 3.9% in 2027, with a primary surplus and debt (SHRFSP) at 55% of GDP; growth of 1.5% to 2.5% and inflation of 3.0% in 2027.",
+   "assessment_by": "IMCO",
+   "assessment": "The package lowers the ambition of fiscal consolidation (3.9% against the 3.5% planned in April) and cuts the growth outlook. Private analysts surveyed by Banxico expect 1.8% growth; if growth undershoots, revenue would miss and push the deficit and debt up.",
+   "status": "Before Congress; the Chamber must approve the spending budget by 15 November 2026.",
+   "next": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+   "next_date": "2026-11-15",
+   "url": "https://imco.org.mx/wp-content/uploads/2026/09/IMCO_Paquete-economico-2027.pdf"
+  },
+  {
+   "id": "pol:mx-judicial-reform",
+   "kind": "policy",
+   "country": "MX",
+   "name": "Judicial reform and the second judicial election",
+   "what": "The 2024 constitutional reform makes federal judges elected by popular vote; the first judicial election was held in June 2025. In May 2026 Congress approved moving the second judicial election from 2027 to June 2028.",
+   "claim": "The government proposed the postponement so the judicial vote would not coincide with the June 2027 federal and state elections, citing the operational risks flagged by the electoral institute.",
+   "assessment_by": "IMF staff",
+   "assessment": "The reform creates important uncertainties about the effectiveness of contract enforcement and the predictability of the rule of law (2024 Article IV mission; not updated in the cited sources).",
+   "status": "Second judicial election moved to June 2028 (approved by both chambers in May 2026, then sent to state legislatures).",
+   "next": null,
+   "next_date": "2028-06-04",
+   "url": "https://imf.org/en/News/Articles/2024/10/15/mcs-mexico-staff-concluding-statement-of-the-2024-aiv-mission"
+  },
+  {
+   "id": "pol:mx-pemex",
+   "kind": "policy",
+   "country": "MX",
+   "name": "Energy policy and support for Pemex",
+   "what": "The 2025 energy laws give state firms Pemex and CFE priority. The Pemex Strategic Plan 2025-2035 (August 2025) and a Treasury capitalisation strategy aim to put Pemex's finances on a sustainable footing.",
+   "claim": "The plan aims to make Pemex financially self-sufficient from 2027, no longer needing Treasury support.",
+   "assessment_by": "IMCO",
+   "assessment": "The 2027 package still includes capital contributions to Pemex of 81.1 billion pesos (69.2% less than before), so the plan's original goal was not met. With losses of 28 billion pesos in the first half of 2026 and debt above US$77 billion, Pemex remains a risk to public finances.",
+   "status": "In force; the 2027 contributions depend on the spending budget due by 15 November 2026.",
+   "next": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
+   "next_date": "2026-11-15",
+   "url": "https://imco.org.mx/wp-content/uploads/2026/09/IMCO_Paquete-economico-2027.pdf"
+  },
+  {
+   "id": "fa:ifi",
+   "kind": "assessment",
+   "country": "BR",
+   "name": "IFI (Instituição Fiscal Independente, Federal Senate)",
+   "title": "Relatório de Acompanhamento Fiscal – Out/2026",
+   "date": "2026-10-29",
+   "summary": "The IFI expects a primary deficit of 0.5% of GDP in 2026 and a potential deficit of 1.0% of GDP in 2027, arguing that new spending commitments and lost revenue (about R$ 40 billion unbudgeted) call for a fiscal adjustment of roughly 3 percentage points of GDP. It also warns that the primary-result target misses large off-budget credit and fund operations, and that a higher neutral interest rate would raise the required primary surplus.",
+   "url": "https://www12.senado.leg.br/ifi/publicacoes-1/relatorio/2026/outubro/relatorio-de-acompanhamento-fiscal-out-2026"
+  },
+  {
+   "id": "fa:hcfp",
+   "kind": "assessment",
+   "country": "FR",
+   "name": "HCFP (Haut Conseil des finances publiques)",
+   "title": "Avis n°2026 – 5 Lois de finances 2027",
+   "date": "2026-10-01",
+   "summary": "The High Council of Public Finances judges the government's 2026 deficit forecast of 5.4% of GDP plausible, but considers the 2027 growth forecast of 1.0% optimistic and says risks to growth are mainly downward. It warns that the expected 2027 deficit reduction is too slow, that the debt-to-GDP ratio keeps rising toward about 122%, and that the 2029 target of a deficit below 3% of GDP is very unlikely to be met.",
+   "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027"
+  },
+  {
+   "id": "fa:mexico-evalua",
+   "kind": "assessment",
+   "country": "MX",
+   "name": "México Evalúa",
+   "title": "El reto del Paquete Económico 2027: recuperar el margen para invertir en desarrollo",
+   "date": "2026-10-27",
+   "summary": "México Evalúa finds that the 2027 Economic Package would lower the broad public deficit (RFSP) to 3.9% of GDP, a real improvement, but still above the 2.5% the IMF recommends, and that this effort is not enough to stabilize debt. The think tank warns that meeting the targets depends on record tax collection, a sharp cut in support for Pemex, and tight spending, with any shortfall likely falling on investment, health and education.",
+   "url": "https://mexicoevalua.org/el-reto-del-paquete-economico-2027-recuperar-el-margen-para-invertir-en-desarrollo/"
+  },
+  {
+   "id": "fa:imef",
+   "kind": "assessment",
+   "country": "MX",
+   "name": "IMEF (Instituto Mexicano de Ejecutivos de Finanzas)",
+   "title": "Información estratégica para líderes financieros: nuevo reporte IMEF",
+   "date": "2026-02",
+   "summary": "The IMEF says Mexico's public finances are under pressure, with a broad public-sector deficit of 4.8% at the end of 2025, well above the 3.9% the government initially planned. It warns that high debt, continued support for Pemex and new labour costs bring Mexico closer to losing its investment-grade rating, and it expects weak growth of 1.3% in 2026.",
+   "url": "https://www.imef.org.mx/2026/02/19/informacion-clave-para-lideres-financieros/"
+  },
+  {
+   "id": "gold:model",
+   "kind": "model",
+   "country": "GOLD",
+   "name": "gold-events frozen model: expected 5-day move",
+   "log_date": "2026-10-28",
+   "version": "v2-rolling",
+   "data_as_of": "2026-10-27",
+   "pred_gold_5d_pct": 0.27,
+   "pred_silver_5d_pct": -0.71,
+   "note": "Expected move over the next 5 trading days from the frozen gold-events model (v2-rolling): its regression on last week's changes in real yields, the dollar, VIX and the Geopolitical Risk index. The model predicts log returns; shown here as percentage changes. Out of sample it has been scored on 0 weeks so far.",
+   "url": "https://github.com/EthanC100/gold-events/blob/main/reports/forward_scorecard.md"
+  },
+  {
+   "id": "gev:2026-11-03-us-midterm-elections",
+   "kind": "event",
+   "country": "US",
+   "region": "GOLD",
+   "date": "2026-11-03",
+   "days_to": 4,
+   "title": "US midterm elections",
+   "type": "election",
+   "importance": 3,
+   "note": "Which party controls the House and the Senate, and how real yields and the dollar react in the days after. gold-events' study of every midterm since 2002 gives the average gold move afterwards (below).",
+   "url": "https://www.usa.gov/midterm-elections"
+  },
+  {
+   "id": "gev:2026-12-09-fomc-rate-decision-and-projections",
+   "kind": "event",
+   "country": "US",
+   "region": "GOLD",
+   "date": "2026-12-09",
+   "days_to": 40,
+   "title": "FOMC rate decision and projections",
+   "type": "fed",
+   "importance": 3,
+   "note": "The rate decision and the statement. A cut, or a signal that cuts are coming, tends to lower real yields and weaken the dollar, which supports gold; a hawkish surprise does the opposite. This meeting also publishes the Fed's economic projections, including the 'dot plot' of expected rates.",
+   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "id": "gev:2027-01-27-fomc-rate-decision",
+   "kind": "event",
+   "country": "US",
+   "region": "GOLD",
+   "date": "2027-01-27",
+   "days_to": 89,
+   "title": "FOMC rate decision",
+   "type": "fed",
+   "importance": 2,
+   "note": "The rate decision and the statement. A cut, or a signal that cuts are coming, tends to lower real yields and weaken the dollar, which supports gold; a hawkish surprise does the opposite.",
+   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  },
+  {
+   "id": "h:b6323090",
+   "title": "BC divulga Estatísticas Fiscais à imprensa",
+   "url": "https://www.bcb.gov.br/detalhenoticia/21306/nota",
+   "source": "Banco Central do Brasil (press notes)",
+   "via": "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa",
+   "country": "BR",
+   "date": "2026-10-29",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:d245d665",
+   "title": "BC divulga Estatísticas Monetárias e de Crédito à imprensa",
+   "url": "https://www.bcb.gov.br/detalhenoticia/21304/nota",
+   "source": "Banco Central do Brasil (press notes)",
+   "via": "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa",
+   "country": "BR",
+   "date": "2026-10-29",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:72f07795",
+   "title": "Banco Central decreta Liquidação Extrajudicial da MW Instituição de Pagamento Ltda.",
+   "url": "https://www.bcb.gov.br/detalhenoticia/21305/nota",
+   "source": "Banco Central do Brasil (press notes)",
+   "via": "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa",
+   "country": "BR",
+   "date": "2026-10-29",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:c981e802",
+   "title": "Em caráter excepcional, a divulgação das Estatísticas Fiscais de setembro será antecipada para quinta-feira (29/10)",
+   "url": "https://www.bcb.gov.br/detalhenoticia/21302/nota",
+   "source": "Banco Central do Brasil (press notes)",
+   "via": "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa",
+   "country": "BR",
+   "date": "2026-10-28",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:b0d99a48",
+   "title": "BC anuncia leilões de swap cambial tradicional para fins de rolagem dos contratos vincendos em 1º de dezembro de 2026",
+   "url": "https://www.bcb.gov.br/detalhenoticia/21301/nota",
+   "source": "Banco Central do Brasil (press notes)",
+   "via": "https://www.bcb.gov.br/api/feed/sitebcb/sitefeeds/notasImprensa",
+   "country": "BR",
+   "date": "2026-10-27",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:eed6c8f9",
+   "title": "Comunicado No. 89: La Secretaría de Hacienda pone a consulta pública la propuesta del objetivo de biodiversidad de la Taxonomía Sostenible de México",
+   "url": "https://www.gob.mx/shcp/prensa/comunicado-no-89-438734?idiom=es",
+   "source": "SHCP (press releases)",
+   "via": "https://www.gob.mx/shcp/archivo/prensa?idiom=es&order=DESC&page=1",
+   "country": "MX",
+   "date": "2026-10-22",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:abb57527",
+   "title": "Comunicado No. 88: La Secretaría de Hacienda y la Secretaría de la Defensa Nacional suscriben convenio de colaboración entre la UIF y la Guardia Nacional pa...",
+   "url": "https://www.gob.mx/shcp/prensa/comunicado-no-88-438685?idiom=es",
+   "source": "SHCP (press releases)",
+   "via": "https://www.gob.mx/shcp/archivo/prensa?idiom=es&order=DESC&page=1",
+   "country": "MX",
+   "date": "2026-10-21",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:bc25cdf0",
+   "title": "Comunicado No. 87 Hacienda activa acciones y mecanismos para que las participaciones federales estén en línea con el PEF 2026",
+   "url": "https://www.gob.mx/shcp/prensa/comunicado-no-87-hacienda-activa-acciones-y-mecanismos-para-que-las-participaciones-federales-esten-en-linea-con-el-pef-2026?idiom=es",
+   "source": "SHCP (press releases)",
+   "via": "https://www.gob.mx/shcp/archivo/prensa?idiom=es&order=DESC&page=1",
+   "country": "MX",
+   "date": "2026-10-20",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:7c8917c4",
+   "title": "Comunicado No. 86 La Secretaría de Hacienda, a través de la UIF, informa sobre el avance de la Evaluación Mutua de México ante el GAFI",
+   "url": "https://www.gob.mx/shcp/prensa/comunicado-no-86-la-secretaria-de-hacienda-a-traves-de-la-uif-informa-sobre-el-avance-de-la-evaluacion-mutua-de-mexico-ante-el-gafi?idiom=es",
+   "source": "SHCP (press releases)",
+   "via": "https://www.gob.mx/shcp/archivo/prensa?idiom=es&order=DESC&page=1",
+   "country": "MX",
+   "date": "2026-10-20",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:7110b4fe",
+   "title": "Comunicado No. 85 La Secretaría de Hacienda fortalece el perfil de la deuda pública mediante una operación de refinanciamiento",
+   "url": "https://www.gob.mx/shcp/prensa/comunicado-no-85-la-secretaria-de-hacienda-fortalece-el-perfil-de-la-deuda-publica-mediante-una-operacion-de-refinanciamiento?idiom=es",
+   "source": "SHCP (press releases)",
+   "via": "https://www.gob.mx/shcp/archivo/prensa?idiom=es&order=DESC&page=1",
+   "country": "MX",
+   "date": "2026-10-19",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:a3f7cbc7",
+   "title": "Compte rendu intégral de la deuxième séance du jeudi 29 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270045.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-10-29",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:ee2a8a18",
+   "title": "Compte rendu intégral de la première séance du jeudi 29 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270044.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-10-29",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:fb0d7db6",
+   "title": "Compte rendu intégral de la première séance du mardi 27 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270040.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-10-27",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:a9747c1f",
+   "title": "Compte rendu intégral de la deuxième séance du mercredi 28 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270043.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-10-28",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:36f45324",
+   "title": "Compte rendu intégral de la première séance du mercredi 28 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270042.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-10-28",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:559a763f",
+   "title": "America First Seafood Strategy Charts Course to Restoring U.S. Seafood Dominance",
+   "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/america-first-seafood-strategy-charts-course-restoring-us-seafood-dominance",
+   "source": "USTR (press releases)",
+   "via": "https://ustr.gov/rss.xml",
+   "country": "US",
+   "date": "2026-10-28",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:f2e450b8",
+   "title": "Ambassador Greer Issues Statement on the Status of the U.S.-EU Détente Following Record-Breaking Loan from the European Investment Bank to Airbus",
+   "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ambassador-greer-issues-statement-status-us-eu-detente-following-record-breaking-loan-european",
+   "source": "USTR (press releases)",
+   "via": "https://ustr.gov/rss.xml",
+   "country": "US",
+   "date": "2026-10-26",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:384c65f0",
+   "title": "United States Announces Successful Resolution of Rapid Response Labor Mechanism Matter at Amphenol Optimize",
+   "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-amphenol",
+   "source": "USTR (press releases)",
+   "via": "https://ustr.gov/rss.xml",
+   "country": "US",
+   "date": "2026-10-23",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:e9cc9e5e",
+   "title": "United States and Mexico Announce Course of Remediation at Minera Peñasquito",
+   "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-and-mexico-announce-course-remediation-minera-penasquito",
+   "source": "USTR (press releases)",
+   "via": "https://ustr.gov/rss.xml",
+   "country": "US",
+   "date": "2026-10-23",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:960898eb",
+   "title": "USTR Announces 2026 Award Recipients: USTR Announces 2026 Award Recipients pbrouillette Wed, 10/21/2026 - 19:05 WASHINGTON — Today, the Office of the United States Trade Representative (USTR) hosted",
+   "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ustr-announces-2026-award-recipients",
+   "source": "USTR (press releases)",
+   "via": "https://ustr.gov/rss.xml",
+   "country": "US",
+   "date": "2026-10-21",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:0caeface",
+   "title": "Mexican Peso Dollar Value Fell 9 . 6 % Ahead of Mexico Rate Decision",
+   "url": "https://econotimes.com/Mexican-Peso-s-Dollar-Value-Fell-9-6-Ahead-of-Mexico-s-Rate-Decision-1761799",
+   "source": "econotimes.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-24",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:1494bcdf",
+   "title": "How the death of two CIA agents in northern Mexico led to a treason case",
+   "url": "https://www.latimes.com/world-nation/story/2026-10-25/how-death-of-two-cia-agents-in-northern-mexico-led-to-treason-case",
+   "source": "latimes.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-25",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:e5970178",
+   "title": "How death of two CIA agents in northern Mexico led to a treason case",
+   "url": "https://www.akronnewsreporter.com/2026/10/22/mexico-cia-treason-case/",
+   "source": "akronnewsreporter.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-23",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:4a8deba9",
+   "title": "CIA agent deaths in northern Mexico spark rare treason prosecution against ex - official",
+   "url": "https://www.hindustantimes.com/world-news/cia-agents-deaths-in-northern-mexico-spark-rare-treason-prosecution-against-exofficial-101792808074430.html",
+   "source": "hindustantimes.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-24",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:39c5f888",
+   "title": "Mexican Peso Gains 0 . 3 % on Friday but Ends Week 0 . 8 % Lower",
+   "url": "https://econotimes.com/Mexican-Peso-Gains-0-3-on-Friday-but-Ends-Week-0-8-Lower-1762131",
+   "source": "econotimes.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-24",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:11777ab4",
+   "title": "FX Daily : Dollar has lost its safe - haven crown | Hellenic Shipping News Worldwide",
+   "url": "https://www.hellenicshippingnews.com/fx-daily-dollar-has-lost-its-safe-haven-crown/",
+   "source": "hellenicshippingnews.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-23",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:e8924c0f",
+   "title": "The Mexican prosecutor who let CIA agents into Chihuahua fled in May and remains at large",
+   "url": "https://english.elpais.com/international/2026-10-23/the-mexican-prosecutor-who-let-cia-agents-into-chihuahua-fled-in-may-and-remains-at-large.html",
+   "source": "english.elpais.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-24",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:2d41a455",
+   "title": "Caro Quintero : The legendary drug lord with whom the US will ultimately strike a deal",
+   "url": "https://english.elpais.com/international/2026-10-24/caro-quintero-the-legendary-drug-lord-with-whom-the-us-will-ultimately-strike-a-deal.html",
+   "source": "english.elpais.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-10-24",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "em:5",
+   "kind": "research",
+   "title": "em-macro: 5. Findings",
+   "text": "5. Findings — fit sample, 2005–2021\n\nAll files are in `results/fit/`. Moves are abnormal unless marked raw.\n\n**Rate decisions.**\n\nCurrencies respond to the direction of the decision, but holds are non-events:\n\n| FX, day 1 | n | mean % | t | variance ratio |\n|---|---|---|---|---|\n| hikes | 137 | +0.56 | 4.1 | 2.0 |\n| cuts | 227 | −0.17 | −1.9 | 1.4 |\n| holds | 611 | −0.02 | −0.5 | 0.9 |\n\n- **All decisions together:** the variance ratio is only 1.17. Most decisions are anticipated.\n- **Surprises do move markets:**\n  - **Brazil** (Focus, n=127): BRL gains 0.016% per bp of hawkish surprise on day 1 (t=1.9) and 0.028% by day 5\n    (t=2.7). A 25bp surprise is worth about 0.4–0.7%.\n  - **10y yields respond to surprises** in Mexico (+0.50bp per bp, t=6.1), Poland (+0.30, t=4.4) and South Africa\n    (+0.28, t=2.4).\n  - **Pooled across all countries** the FX effect is weak (t=1.3). Expectation coverage outside Brazil and Poland is\n    thin and partly qualitative.\n- **Long yields after hikes:** they fall 5bp on day 1 (curve flattening, t=−2.0), then rise 15bp by day 20 (t=2.8).\n\n**Elections.**\n- **Yields** move clearly. Day-1 10y yields fall 10.8bp on average (n=35, t=−2.6, z=−2.4), consistent with uncertainty\n  resolving. General elections fall 17bp (t=−2.0), with a variance ratio of 4.\n- **Currencies** on general elections (presidential and congressional votes together) have a day-1 variance ratio of\n  2.2. They gain +2.1% by day 5 (n=12, t=4.7), but n is small.\n- **Signed poll surprise:**\n  - **FX:** +0.06% per pp, not significant in-sample (t=1.3, n=26).\n  - **Yields:** −2.4bp per pp (t=−2.0, n=17). When the market-preferred side beats its polls, yields fall.\n- **The size of the poll miss** does not predict the size of the move (|move| on |poll error|: t=−1.4).\n\n**Drift vs reversal** (slope of day 1→5 on day 1; t in parentheses):\n\n| | abnormal | raw | placebo days (raw) |\n|---|---|---|---|\n| FX, elections | −0.46 (−2.1) | −0.55 (−2.0) | 0.00 (0.0) |\n| FX, rate decisions | −0.25 (−3.9) | −0.08 (−1.2) | — |\n| 10y, elections | +0.47 (3.1) | +0.39 (2.7) | +0.15 (1.7) |\n| 10y, rate decisions | +0.06 (0.7) | +0.13 (1.5) | — |\n\n- **Rate decisions:** the apparent FX reversal is mostly an artefact of the factor adjustment, mixing noon-NY FX with\n  end-of-day US factors. On raw moves it is small and insignificant, and placebo days show the same adjusted pattern\n  (−0.06 at h=5, −0.26 at h=20).\n- **Elections:** in-sample, currencies **reverse** part of their day-1 move. Bond moves **continue**.\n\nApplying the pre-registered fade-the-day-1-move rule to elections in-sample earns +1.0% a year with a Sharpe of 0.23\n(50 trades). That beats in-sample carry (Sharpe 0.06), but the rule was chosen on the same data.",
+   "url": "https://github.com/EthanC100/em-macro#readme"
+  },
+  {
+   "id": "em:6",
+   "kind": "research",
+   "title": "em-macro: 6. Hold-out",
+   "text": "6. Hold-out, 2022 to Oct 2026 — evaluated once\n\nAll files are in `results/test/`.\n\n**Trading rule vs carry** (`strategy_vs_carry.csv`, monthly, 2022-01 to 2026-09):\n\n| | ann. return % | Sharpe | max DD % | trades | hit rate |\n|---|---|---|---|---|---|\n| carry basket (the bar) | +2.6 | 0.46 | −10.1 | — | — |\n| fade election day-1 move, hold to day 5 | −3.3 | −1.00 | −15.7 | 14 | 29% |\n| fade election day-1 move, hold to day 20 | −4.8 | −0.53 | −26.2 | 14 | 43% |\n\n**The rule fails.** Hold-out election FX moves *continued* rather than reversed: the raw slope is +0.46 (t=1.7, n=14).\nIt lost on Brazil's 2022 run-off, Turkey's 2023 run-off and Mexico's 2024 election. The in-sample reversal is best\nread as a small-sample artefact, not a tradeable effect.\n\n**What did hold up** (`oos_surprise_predictions.csv`):\n- **Poll surprise and day-1 FX moves:** the frozen fit-sample regression predicts the hold-out moves with a\n  correlation of 0.72, the right sign in 8 of 9 elections, and an out-of-sample R² of 0.15 against a zero forecast.\n  The cases are Brazil 2022 and 2026, Poland 2023 and 2025, Turkey 2023 and Indonesia 2024 (chart below).\n- **But the fitted slope was not significant in-sample**, and 9 events is very few. Treat this as consistent evidence,\n  not proof.\n- **The bond-yield surprise regression did not hold up** (R² ≈ 0, correlation −0.17).\n- **The rate-surprise regressions add almost nothing out of sample** (pooled FX correlation 0.18, R² 0.02).\n- **Rate decisions overall:** hold-out decisions are even quieter than in-sample. The FX variance ratio is 0.82, hikes\n  average +0.15% with t=0.9, and the FX drift slopes are insignificant.\n\n\n\n**The biggest hold-out events:**\n- **Brazil, 2-Oct-2022, first round:** Bolsonaro beat his polls by 7.8pp. BRL +4.1% abnormal on day 1, 10y −31bp.\n- **Brazil, 4-Oct-2026, first round:** BRL +4.8%, 10y −120bp.\n- **Brazil, 25-Oct-2026, run-off:** Lula beat odds that gave Flávio Bolsonaro 80%. The 10y rose +255bp on day 1. The\n  FX move is outside the study because FRED's BRL ends on 23-Oct, but BCB PTAX shows BRL −8.4%.\n- **Turkey, 14-May-2023:** the 10y fell 298bp on day 1 and 533bp by day 5.\n- **Mexico, 2-Jun-2024:** MXN −3.5% on day 1 and −7.2% by day 5. Note this is *not* a poll miss on the presidency\n  (Sheinbaum led by 17pp and won by 33pp). The worry was Morena's congressional supermajority, which a two-candidate\n  margin cannot capture.",
+   "url": "https://github.com/EthanC100/em-macro#readme"
+  },
+  {
+   "id": "em:9",
+   "kind": "research",
+   "title": "em-macro: One-time test, 2020 onward",
+   "text": "One-time test, 2020 onward (`results/risk_model/test/`, v1 as specified)\n\nThe forecast of each spread change is −κ × gap. It is compared with \"no change\" by RMSE ratio (below 1 means the\nmodel is better) and a Diebold–Mariano t-statistic (positive means better), and also after dropping the five\nlargest moves.\n\n| v1 spread mispricing | 3 months: RMSE ratio (DM t) | without top-5 moves | 6 months: RMSE ratio (DM t) | without top-5 moves |\n|---|---|---|---|---|\n| all 12 countries | 1.00 (−0.2) | 1.01 (−0.5) | 0.98 (0.6) | 1.01 (−0.4) |\n| **Brazil** | 0.99 (1.1) | 0.99 (1.1) | 0.98 (0.5) | 0.97 (0.9) |\n| **Mexico** | 0.99 (0.9) | 0.99 (0.7) | 0.98 (0.6) | 1.00 (0.0) |\n| **France** | 1.59 (−3.3) | 1.72 (−3.4) | 2.34 (−3.6) | 2.44 (−3.5) |\n\n- **Brazil and Mexico:** at best 1–3% better than no change, not significant.\n- **France:** far worse. Its spread kept widening in 2024–26 while the v1 model put its fair value far below.\n- **The 6-month pooled edge (0.98)** disappears once the five largest moves are removed.\n- **Other countries:** the only ones with a gain of 5% or more are South Africa (0.88 at 6 months, DM 1.7) and\n  Indonesia (0.92). Spain and France are clearly worse.\n- **Currency mispricing** is worse than no change (pooled 1.04 and 1.10). Mexico is 0.95–0.99; Brazil is 1.09–1.29.\n\n**v2** (`results/risk_model/test_v2_posthoc/`) — **post-hoc: chosen after the 2020+ test; not a clean out-of-sample result**:\n\n| | 3 months | 6 months |\n|---|---|---|\n| pooled | 1.00 (DM −0.3) | 0.98 (DM 0.3) |\n| pooled, without top-5 moves | 1.01 | 1.02 |\n| Brazil | 0.98 | 0.97 |\n| Mexico | 0.99 | 0.97 |\n| France | 1.08 | 1.18 |\n\nv2 fixes France's level problem but does not create forecasting power.\n\n**Conclusion: no version of the mispricing signal beats no-change out of sample, and nothing survives removing the\nlargest moves.**",
+   "url": "https://github.com/EthanC100/em-macro#readme"
+  },
+  {
+   "id": "badge:a",
+   "kind": "evidence_badge",
+   "gauge": "Poll vs prediction-market gap",
+   "badge": "tested_no_lead",
+   "reason": "|gap| vs size of the poll miss: rho -0.141, p=0.7152, n=18; vs FX move: rho 0.238, n=8. Small sample: a lead of moderate size could be missed.",
+   "url": "https://ethanc100.github.io/forecast-panel/#crowd"
+  },
+  {
+   "id": "badge:b",
+   "kind": "evidence_badge",
+   "gauge": "Pollster concentration and house effects",
+   "badge": "untested",
+   "reason": "Not tested: em-macro has pollster-level polls for 8 countries' recent elections, too few to test whether concentration or herding predicts the size of the miss.",
+   "url": "https://ethanc100.github.io/forecast-panel/#crowd"
+  },
+  {
+   "id": "badge:c",
+   "kind": "evidence_badge",
+   "gauge": "Survey dispersion percentile",
+   "badge": "tested_leads",
+   "reason": "BR: tested_leads - move size: tested_no_lead (fit effect not significant (fit diff +0.26 sd, p=0.0669; hold-out diff +0.40 sd, p=0.0127)); miss vs survey median: tested_leads (fit p=0.0003, hold-out p=0.0071); MX: tested_no_lead - move size: tested_no_lead (fit effect not significant (fit diff +0.08 sd, p=0.2819; hold-out diff +0.19 sd, p=0.1307)); miss vs survey median: untested (only 1 extreme readings in the fit period (need 8))",
+   "url": "https://ethanc100.github.io/forecast-panel/#crowd"
+  },
+  {
+   "id": "badge:d",
+   "kind": "evidence_badge",
+   "gauge": "Official optimism gap",
+   "badge": "untested",
+   "reason": "Not tested: em-macro has no history of official targets against independent estimates.",
+   "url": "https://ethanc100.github.io/forecast-panel/#crowd"
+  },
+  {
+   "id": "badge:e",
+   "kind": "evidence_badge",
+   "gauge": "CFTC net positioning percentile",
+   "badge": "tested_no_lead",
+   "reason": "leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)",
+   "url": "https://ethanc100.github.io/forecast-panel/#crowd"
+  },
+  {
+   "id": "badge:f",
+   "kind": "evidence_badge",
+   "gauge": "Forced-flow thresholds",
+   "badge": "context",
+   "reason": "Mechanical thresholds, not forecasts; not tested.",
+   "url": "https://ethanc100.github.io/forecast-panel/#crowd"
+  },
+  {
+   "id": "badge:series",
+   "kind": "evidence_badge",
+   "gauge": "Badges on data series",
+   "series": {
+    "br.usdbrl.ptax": "untested",
+    "mx.usdmxn.fix": "untested",
+    "br.di": "untested",
+    "br.td": "untested",
+    "fr.spread": "untested",
+    "fr.oat10y": "untested",
+    "de.bund10y": "context",
+    "us.ust10y": "context",
+    "us.usd.broad": "context",
+    "eu.eurusd": "untested",
+    "us.ust2y": "context",
+    "us.vix": "context",
+    "us.fed.upper": "context",
+    "eu.ecb.dfr": "context",
+    "gl.": "context",
+    "it.spread": "context",
+    "es.spread": "context",
+    "mx.mbono10y.auction": "context",
+    "mx.10y.oecd_m": "context",
+    "br.selic.target": "context",
+    "mx.policy.target": "context",
+    "mx.tiie28": "context",
+    "br.ipca": "context",
+    "br.focus.selic": "tested_no_lead",
+    "br.focus": "untested",
+    "mx.survey": "untested",
+    "br.cot": "untested",
+    "mx.cot": "untested",
+    "pm.": "tested_no_lead",
+    "ks.": "tested_no_lead",
+    "attention": "untested",
+    "countdown": "context",
+    "fiscal_gap": "untested",
+    "ratings": "context",
+    "tension_index": "tested_leads"
+   },
+   "legend": "tested_leads: tested and leads its target; tested_no_lead: tested, no lead or did not hold out of sample; untested: not tested; context: background only",
+   "url": "https://ethanc100.github.io/forecast-panel/#status"
+  },
+  {
+   "id": "primer:FR",
+   "kind": "primer",
+   "country": "FR",
+   "name": "France",
+   "instruments": "OAT-Bund 10-year spread (primary); OAT 10-year yield.",
+   "structure": "Euro-area sovereign with no currency of its own; the ECB sets policy for the whole area and its Transmission Protection Instrument is conditional on fiscal compliance. Ratings sit in the AA/A band, and losing the last AA-category rating matters for some reserve managers.\n",
+   "politics": "Minority government since the 2024 dissolution. Budgets pass either by vote or by Article 49.3, which exposes the government to a censure motion. If no budget is adopted in time, Article 47 lets the government act by ordinance after the parliamentary deadline, and a special law can roll over taxes and spending into the new year. The next presidential election is in spring 2027.\n",
+   "where_consensus_errs": "Rating-agency timing (scheduled review dates are published, but agencies can affirm while moving the outlook), the gap between official deficit targets and independent estimates, and the speed at which a censure vote turns into a market move.\n"
+  },
+  {
+   "id": "primer:BR",
+   "kind": "primer",
+   "country": "BR",
+   "name": "Brazil",
+   "instruments": "USD/BRL (primary); DI futures and long Tesouro bonds (context).",
+   "structure": "Inflation-targeting central bank (Copom meets eight times a year). Fiscal policy runs under the LC 200/2023 framework: a primary-balance target with a tolerance band and a cap on real spending growth. The Focus survey gives weekly market expectations and their dispersion.\n",
+   "politics": "A new government term starts in January 2027 after the October 2026 elections. Fiscal credibility hinges on whether the framework is kept, loosened through exclusions, or rewritten.\n",
+   "where_consensus_errs": "Official fiscal targets versus Focus estimates, and Copom surprises, which em-macro found move the real within days when the Focus dispersion is high.\n"
+  },
+  {
+   "id": "primer:MX",
+   "kind": "primer",
+   "country": "MX",
+   "name": "Mexico",
+   "instruments": "USD/MXN (primary); Mbono yields (context).",
+   "structure": "Inflation-targeting central bank (Banxico). Investment-grade sovereign whose index eligibility depends on the middle of the three agency ratings; Pemex's support is a recurring fiscal burden.\n",
+   "politics": "Morena and its allies govern; the June 2027 midterms decide whether they keep the two-thirds majority needed to amend the constitution alone. Trade policy is tied to the USMCA joint review due in July 2027.\n",
+   "where_consensus_errs": "Congressional supermajorities that a two-candidate poll margin cannot capture (the 2024 case in em-macro), and US trade decisions that arrive outside the scheduled calendar.\n"
+  },
+  {
+   "id": "primer:US",
+   "kind": "primer",
+   "country": "US",
+   "name": "United States",
+   "instruments": "US 10-year Treasury yield and the broad dollar (global backdrop only).",
+   "structure": "The global rates and dollar backdrop for all three countries. USTR leads the USMCA review.\n",
+   "where_consensus_errs": "Tariff and trade announcements that are not on any calendar.\n"
+  },
+  {
+   "id": "ep:br-collor-1990",
+   "kind": "episode",
+   "country": "BR",
+   "name": "Collor Plan",
+   "start": "1990-03-16",
+   "end": "1991-05-31",
+   "type": "heterodox",
+   "summary": "A shock plan on the new president's first full day: 80% of private financial assets were frozen for 18 months, wages and prices were temporarily frozen, the cruzeiro replaced the cruzado novo, and the exchange rate was floated. Inflation was not durably beaten: a second Collor plan followed, then the Marcílio plan from May 1991.\n",
+   "outcomes": {
+    "m6": {
+     "date": "1990-09",
+     "inflation": 3304.7,
+     "inflation_chg_pp": -396.6,
+     "growth": -4.2,
+     "fx_pct": -68.7,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "1992-03",
+     "inflation": 567.2,
+     "inflation_chg_pp": -3134.1,
+     "growth": -0.5,
+     "fx_pct": -98.7,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ep:br-real-plan-1994",
+   "kind": "episode",
+   "country": "BR",
+   "name": "Real Plan",
+   "start": "1994-07-01",
+   "end": null,
+   "type": "orthodox",
+   "summary": "A plan that treated inflation as both a fiscal problem and an inertial one: a non-monetary unit of account (the URV, worth about one US dollar) let prices realign before the real replaced it on 1 July 1994. The real was kept close to the dollar and depreciated gradually until the maxi-devaluation of the January 1999 crisis. Hyperinflation ended.\n",
+   "outcomes": {
+    "m6": {
+     "date": "1995-01",
+     "inflation": 631.5,
+     "inflation_chg_pp": -4291.1,
+     "growth": 4.4,
+     "fx_pct": -1.3,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "1996-07",
+     "inflation": 14.8,
+     "inflation_chg_pp": -4907.8,
+     "growth": 2.2,
+     "fx_pct": -17.0,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ep:br-lula-orthodox-2003",
+   "kind": "episode",
+   "country": "BR",
+   "name": "Lula's first-term orthodoxy",
+   "start": "2003-01-01",
+   "end": "2006-12-31",
+   "type": "orthodox",
+   "summary": "A left-wing government kept its predecessor's macroeconomic framework of inflation targeting, a floating exchange rate and primary-surplus targets, with high real interest rates early on, during a commodity boom.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2003-07",
+     "inflation": 15.4,
+     "inflation_chg_pp": 2.9,
+     "growth": 0.7,
+     "fx_pct": 26.9,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "2005-01",
+     "inflation": 7.4,
+     "inflation_chg_pp": -5.1,
+     "growth": 5.8,
+     "fx_pct": 35.3,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ep:br-new-economic-matrix-2011",
+   "kind": "episode",
+   "country": "BR",
+   "name": "New Economic Matrix",
+   "start": "2011-09-01",
+   "end": "2014-12-31",
+   "type": "heterodox",
+   "summary": "Developmentalist measures under President Rousseff: the Selic was cut from 12.5% to 7.25% between August 2011 and April 2013, the real was allowed to weaken, industry got tax breaks, BNDES credit expanded and electricity tariffs were cut. The 2014–17 crisis followed.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2012-03",
+     "inflation": 5.2,
+     "inflation_chg_pp": -2.0,
+     "growth": 0.3,
+     "fx_pct": -11.1,
+     "y10": 11.15,
+     "y10_bp": -43
+    },
+    "m24": {
+     "date": "2013-09",
+     "inflation": 5.9,
+     "inflation_chg_pp": -1.4,
+     "growth": 2.4,
+     "fx_pct": -29.7,
+     "y10": 11.7,
+     "y10_bp": 12
+    }
+   }
+  },
+  {
+   "id": "ep:br-adjustment-2015",
+   "kind": "episode",
+   "country": "BR",
+   "name": "2015–16 recession and adjustment",
+   "start": "2015-01-01",
+   "end": "2016-12-31",
+   "type": "crisis",
+   "summary": "A new finance minister, Joaquim Levy, attempted a fiscal adjustment while the central bank kept raising the Selic. GDP fell by 3.5% in 2015 and 3.3% in 2016, alongside a political crisis that ended in President Rousseff's impeachment.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2015-07",
+     "inflation": 9.6,
+     "inflation_chg_pp": 3.2,
+     "growth": -4.2,
+     "fx_pct": -18.1,
+     "y10": 13.02,
+     "y10_bp": 65
+    },
+    "m24": {
+     "date": "2017-01",
+     "inflation": 5.3,
+     "inflation_chg_pp": -1.1,
+     "growth": 0.7,
+     "fx_pct": -17.4,
+     "y10": 10.86,
+     "y10_bp": -151
+    }
+   }
+  },
+  {
+   "id": "ep:br-spending-cap-2016",
+   "kind": "episode",
+   "country": "BR",
+   "name": "Spending cap (Constitutional Amendment 95)",
+   "start": "2016-12-15",
+   "end": null,
+   "type": "consolidation",
+   "summary": "A constitutional amendment capped federal spending in real terms for 20 years, and a labour reform followed in 2017. A small recovery followed the 2015–16 recession. The cap was replaced by a spending corridor in 2023.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2017-06",
+     "inflation": 3.0,
+     "inflation_chg_pp": -4.0,
+     "growth": 1.2,
+     "fx_pct": 1.4,
+     "y10": 10.61,
+     "y10_bp": -133
+    },
+    "m24": {
+     "date": "2018-12",
+     "inflation": 3.8,
+     "inflation_chg_pp": -3.2,
+     "growth": 1.2,
+     "fx_pct": -14.0,
+     "y10": 9.26,
+     "y10_bp": -268
+    }
+   }
+  },
+  {
+   "id": "ep:mx-tequila-1994",
+   "kind": "episode",
+   "country": "MX",
+   "name": "Tequila crisis",
+   "start": "1994-12-20",
+   "end": "1995-12-31",
+   "type": "crisis",
+   "summary": "After a rebellion in Chiapas and the assassination of a presidential candidate in 1994, reserves ran low and the government had issued dollar-linked short-term bills (tesobonos). On 20 December 1994 the new government devalued; two days later the peso floated and kept falling. A US-led rescue followed; 1995 brought recession and high inflation, then recovery under a floating peso.\n",
+   "outcomes": {
+    "m6": {
+     "date": "1995-06",
+     "inflation": 37.7,
+     "inflation_chg_pp": 30.8,
+     "growth": -8.9,
+     "fx_pct": -44.6,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "1996-12",
+     "inflation": 27.7,
+     "inflation_chg_pp": 20.8,
+     "growth": 8.3,
+     "fx_pct": -56.3,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ep:mx-deficit-2024",
+   "kind": "episode",
+   "country": "MX",
+   "name": "2024 election-year deficit",
+   "start": "2024-01-01",
+   "end": "2024-12-31",
+   "type": "fiscal expansion",
+   "summary": "Using an escape clause in its fiscal rule, the government ran a deficit of 5.7% of GDP in 2024, up from 4.3% in 2023. The peso weakened in 2024.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2024-07",
+     "inflation": 5.6,
+     "inflation_chg_pp": 0.9,
+     "growth": 1.4,
+     "fx_pct": -5.1,
+     "y10": 9.95,
+     "y10_bp": 56
+    },
+    "m24": {
+     "date": "2026-01",
+     "inflation": null,
+     "inflation_chg_pp": null,
+     "null_reasons": {
+      "inflation": "after the latest data (2025-12-31)"
+     },
+     "growth": 0.5,
+     "fx_pct": -2.8,
+     "y10": 9.21,
+     "y10_bp": -18
+    }
+   }
+  },
+  {
+   "id": "ep:mx-consolidation-2025",
+   "kind": "episode",
+   "country": "MX",
+   "name": "2025 consolidation",
+   "start": "2025-01-01",
+   "end": null,
+   "type": "consolidation",
+   "summary": "The new administration targeted a 3.9% of GDP deficit for 2025 by compressing capital spending and strengthening revenue administration. The IMF lists fiscal consolidation among the headwinds behind soft growth in 2025, alongside restrictive monetary policy and US tariffs.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2025-07",
+     "inflation": 3.8,
+     "inflation_chg_pp": -0.9,
+     "growth": -0.2,
+     "fx_pct": 8.3,
+     "y10": 9.47,
+     "y10_bp": -96
+    },
+    "m24": {
+     "date": "2027-01",
+     "inflation": null,
+     "inflation_chg_pp": null,
+     "null_reasons": {
+      "inflation": "after the latest data (2025-12-31)",
+      "growth": "after the latest data (2025-12-31)",
+      "fx_pct": "after the latest data (2026-09-01)",
+      "y10_bp": "after the latest data (2026-09-01)"
+     },
+     "growth": null,
+     "fx_pct": null,
+     "y10": null,
+     "y10_bp": null
+    }
+   }
+  },
+  {
+   "id": "ep:fr-rigueur-1983",
+   "kind": "episode",
+   "country": "FR",
+   "name": "Tournant de la rigueur",
+   "start": "1983-03-25",
+   "end": null,
+   "type": "consolidation",
+   "summary": "After the 1981–82 Keynesian relaunch and repeated franc devaluations inside the European Monetary System, a third devaluation on 22 March 1983 was followed by austerity measures announced on 25 March: France chose rigour and the EMS.\n",
+   "outcomes": {
+    "m6": {
+     "date": "1983-09",
+     "inflation": 10.1,
+     "inflation_chg_pp": 0.9,
+     "growth": 1.2,
+     "fx_pct": -14.6,
+     "y10": 14.03,
+     "y10_bp": -87
+    },
+    "m24": {
+     "date": "1985-03",
+     "inflation": 6.4,
+     "inflation_chg_pp": -2.8,
+     "growth": 1.3,
+     "fx_pct": -31.9,
+     "y10": 12.27,
+     "y10_bp": -263
+    }
+   }
+  },
+  {
+   "id": "ep:fr-juppe-1995",
+   "kind": "episode",
+   "country": "FR",
+   "name": "Juppé plan",
+   "start": "1995-11-15",
+   "end": null,
+   "type": "consolidation",
+   "summary": "A plan announced on 15 November 1995 to cut the social-security deficit, in the run-up to the euro. Strikes lasting more than three weeks forced the government to drop the pension part; the health and social-security measures went ahead by ordinance.\n",
+   "outcomes": {
+    "m6": {
+     "date": "1996-05",
+     "inflation": 2.4,
+     "inflation_chg_pp": 0.5,
+     "growth": 1.0,
+     "fx_pct": -4.9,
+     "y10": 6.47,
+     "y10_bp": -102
+    },
+    "m24": {
+     "date": "1997-11",
+     "inflation": 1.3,
+     "inflation_chg_pp": -0.6,
+     "growth": 3.5,
+     "fx_pct": -15.0,
+     "y10": 5.57,
+     "y10_bp": -192
+    }
+   }
+  },
+  {
+   "id": "ep:fr-consolidation-2011",
+   "kind": "episode",
+   "country": "FR",
+   "name": "Euro-crisis consolidation",
+   "start": "2011-01-01",
+   "end": "2013-12-31",
+   "type": "consolidation",
+   "summary": "France tightened its budget during the euro-area debt crisis, as most member states did. IMF economists later found that growth forecasts in Europe in that period underestimated the drag from consolidation.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2011-07",
+     "inflation": 1.9,
+     "inflation_chg_pp": 0.2,
+     "growth": 2.2,
+     "fx_pct": 8.1,
+     "y10": 3.4,
+     "y10_bp": 6
+    },
+    "m24": {
+     "date": "2013-01",
+     "inflation": 1.2,
+     "inflation_chg_pp": -0.6,
+     "growth": 0.1,
+     "fx_pct": 0.6,
+     "y10": 2.17,
+     "y10_bp": -117
+    }
+   }
+  },
+  {
+   "id": "ep:fr-dissolution-2024",
+   "kind": "episode",
+   "country": "FR",
+   "name": "Dissolution and the budget crisis",
+   "start": "2024-06-09",
+   "end": null,
+   "type": "political",
+   "summary": "The snap election of June–July 2024 produced a hung parliament; the government lost a no-confidence vote on 4 December 2024. The 2024 deficit reached 5.8% of GDP, and the 10-year OAT-Bund spread peaked at 88 basis points that December.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2024-12",
+     "inflation": 1.3,
+     "inflation_chg_pp": -1.0,
+     "growth": 0.9,
+     "fx_pct": -3.2,
+     "y10": 3.01,
+     "y10_bp": -2
+    },
+    "m24": {
+     "date": "2026-06",
+     "inflation": null,
+     "inflation_chg_pp": null,
+     "null_reasons": {
+      "inflation": "after the latest data (2025-12-31)"
+     },
+     "growth": 0.5,
+     "fx_pct": 6.5,
+     "y10": 3.68,
+     "y10_bp": 65
+    }
+   }
+  },
+  {
+   "id": "ep:ar-convertibility-1991",
+   "kind": "episode",
+   "country": "AR",
+   "name": "Convertibility (currency board)",
+   "start": "1991-04-01",
+   "end": "2001-12-31",
+   "type": "orthodox",
+   "summary": "The peso was pegged one-to-one to the US dollar with full convertibility, to end hyperinflation, along with mass privatisation and deregulation. It worked at first; the regime ended in the 2001–02 collapse, with default and frozen bank deposits (the corralito).\n",
+   "outcomes": {
+    "m6": {
+     "date": "1991-10",
+     "inflation": null,
+     "inflation_chg_pp": null,
+     "null_reasons": {
+      "inflation": "no free data",
+      "y10_bp": "no free data"
+     },
+     "growth": 10.5,
+     "fx_pct": -4.5,
+     "y10": null,
+     "y10_bp": null
+    },
+    "m24": {
+     "date": "1993-04",
+     "inflation": null,
+     "inflation_chg_pp": null,
+     "null_reasons": {
+      "inflation": "no free data",
+      "y10_bp": "no free data"
+     },
+     "growth": 6.3,
+     "fx_pct": -5.2,
+     "y10": null,
+     "y10_bp": null
+    }
+   }
+  },
+  {
+   "id": "ep:ar-cepo-2011",
+   "kind": "episode",
+   "country": "AR",
+   "name": "Exchange controls (cepo)",
+   "start": "2011-10-31",
+   "end": "2015-12-16",
+   "type": "heterodox",
+   "summary": "Restrictions on buying US dollars from 2011, with a parallel (\"blue\") dollar trading well above the official rate, until the controls were lifted at the start of Mauricio Macri's presidency in 2015.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2012-04",
+     "inflation": 10.0,
+     "inflation_chg_pp": -0.5,
+     "growth": -3.6,
+     "fx_pct": -4.4,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "2013-10",
+     "inflation": 10.6,
+     "inflation_chg_pp": 0.1,
+     "growth": 0.2,
+     "fx_pct": -28.2,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ep:ar-heterodox-2019",
+   "kind": "episode",
+   "country": "AR",
+   "name": "Fernández government",
+   "start": "2019-12-10",
+   "end": "2023-12-10",
+   "type": "heterodox",
+   "summary": "Exchange controls, reintroduced in late 2019, were tightened; the IMF programme was replaced by a new Extended Fund Facility in 2022. Inflation rose to 100% (the highest since 1991) and reached 211.4% for 2023 by INDEC's count.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2020-06",
+     "inflation": 42.0,
+     "inflation_chg_pp": 7.7,
+     "growth": -19.5,
+     "fx_pct": -14.1,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "2021-12",
+     "inflation": 48.4,
+     "inflation_chg_pp": 14.1,
+     "growth": 8.3,
+     "fx_pct": -41.4,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ep:ar-milei-2023",
+   "kind": "episode",
+   "country": "AR",
+   "name": "Milei shock therapy",
+   "start": "2023-12-13",
+   "end": null,
+   "type": "shock therapy",
+   "summary": "A 104% devaluation of the official peso, then a 2% monthly crawl, and spending cuts that delivered the first budget surplus since 2011. Monthly inflation fell from 25.5% in December 2023 to 8.8% in April 2024; activity cooled.\n",
+   "outcomes": {
+    "m6": {
+     "date": "2024-06",
+     "inflation": 219.9,
+     "inflation_chg_pp": 147.5,
+     "growth": -2.6,
+     "fx_pct": -60.9,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    },
+    "m24": {
+     "date": "2025-12",
+     "inflation": 41.9,
+     "inflation_chg_pp": -30.5,
+     "growth": 2.4,
+     "fx_pct": -75.6,
+     "y10": null,
+     "y10_bp": null,
+     "null_reasons": {
+      "y10_bp": "no free data"
+     }
+    }
+   }
+  },
+  {
+   "id": "ep:gfc-2008",
+   "kind": "episode",
+   "country": null,
+   "name": "2008: Lehman Brothers fails and the financial crisis",
+   "start": "2008-09-15",
+   "end": null,
+   "type": null,
+   "summary": "Lehman Brothers filed for bankruptcy and the financial crisis spread; the Fed cut rates to near zero in December 2008 and began buying assets.",
+   "outcomes": {
+    "gold_pct_1m": -3.81,
+    "silver_pct_1m": -28.77,
+    "gold_pct_6m": 10.13,
+    "silver_pct_6m": -10.27,
+    "gold_pct_24m": 51.49,
+    "silver_pct_24m": 40.41,
+    "real_yield_bp_6m": 9.0,
+    "dollar_pct_6m": 12.82,
+    "cb_tonnes_12m": -43.2
+   }
+  },
+  {
+   "id": "ep:peak-2011",
+   "kind": "episode",
+   "country": null,
+   "name": "2011: rates pinned near zero, gold's post-crisis peak",
+   "start": "2011-08-09",
+   "end": null,
+   "type": null,
+   "summary": "The FOMC said it expected to keep rates exceptionally low at least through mid-2013. Gold rose into a peak a few weeks later, then fell over the following years.",
+   "outcomes": {
+    "gold_pct_1m": 12.65,
+    "silver_pct_1m": 0.79,
+    "gold_pct_6m": 10.93,
+    "silver_pct_6m": -10.03,
+    "gold_pct_24m": -14.05,
+    "silver_pct_24m": -42.22,
+    "real_yield_bp_6m": -41.0,
+    "dollar_pct_6m": 2.76,
+    "cb_tonnes_12m": 453.1
+   }
+  },
+  {
+   "id": "ep:taper-2013",
+   "kind": "episode",
+   "country": null,
+   "name": "2013: the taper tantrum",
+   "start": "2013-05-22",
+   "end": null,
+   "type": null,
+   "summary": "Chairman Bernanke told Congress the Fed could slow its bond purchases; real yields rose sharply over the summer.",
+   "outcomes": {
+    "gold_pct_1m": -9.74,
+    "silver_pct_1m": -16.93,
+    "gold_pct_6m": -14.25,
+    "silver_pct_6m": -18.11,
+    "gold_pct_24m": -19.42,
+    "silver_pct_24m": -33.86,
+    "real_yield_bp_6m": 98.0,
+    "dollar_pct_6m": 0.31,
+    "cb_tonnes_12m": 180.0
+   }
+  },
+  {
+   "id": "ep:covid-2020",
+   "kind": "episode",
+   "country": null,
+   "name": "2020: Covid shock and emergency rate cuts",
+   "start": "2020-03-15",
+   "end": null,
+   "type": null,
+   "summary": "The Fed cut its target range to 0 to 1/4 percent in an emergency Sunday move and restarted large-scale bond buying.",
+   "outcomes": {
+    "gold_pct_1m": 5.39,
+    "silver_pct_1m": -15.64,
+    "gold_pct_6m": 20.35,
+    "silver_pct_6m": 43.58,
+    "gold_pct_24m": 21.98,
+    "silver_pct_24m": 41.34,
+    "real_yield_bp_6m": -102.0,
+    "dollar_pct_6m": -3.61,
+    "cb_tonnes_12m": 176.7
+   }
+  },
+  {
+   "id": "ep:hikes-2022",
+   "kind": "episode",
+   "country": null,
+   "name": "2022: the Fed starts its fastest hiking cycle in decades",
+   "start": "2022-03-16",
+   "end": null,
+   "type": null,
+   "summary": "The FOMC raised rates for the first time since 2018 and went on raising through 2023; real yields went from negative to strongly positive.",
+   "outcomes": {
+    "gold_pct_1m": 4.36,
+    "silver_pct_1m": 4.26,
+    "gold_pct_6m": -9.43,
+    "silver_pct_6m": -19.57,
+    "gold_pct_24m": 16.27,
+    "silver_pct_24m": 4.26,
+    "real_yield_bp_6m": 164.0,
+    "dollar_pct_6m": 6.15,
+    "cb_tonnes_12m": 354.6
+   }
+  },
+  {
+   "id": "ep:cuts-2024",
+   "kind": "episode",
+   "country": null,
+   "name": "2024: the Fed's first cut of the cycle",
+   "start": "2024-09-18",
+   "end": null,
+   "type": null,
+   "summary": "The FOMC cut its target range by half a percentage point, its first cut since 2020.",
+   "outcomes": {
+    "gold_pct_1m": 8.91,
+    "silver_pct_1m": 13.68,
+    "gold_pct_6m": 20.77,
+    "silver_pct_6m": 16.49,
+    "gold_pct_24m": 74.86,
+    "silver_pct_24m": 126.67,
+    "real_yield_bp_6m": 41.0,
+    "dollar_pct_6m": 3.45,
+    "cb_tonnes_12m": 308.5
+   }
+  },
+  {
+   "id": "ep:us-election-2024",
+   "kind": "episode",
+   "country": null,
+   "name": "2024: the US presidential election",
+   "start": "2024-11-05",
+   "end": null,
+   "type": null,
+   "summary": "The 2024 US presidential and congressional elections were held on 5 November 2024.",
+   "outcomes": {
+    "gold_pct_1m": -1.56,
+    "silver_pct_1m": -4.94,
+    "gold_pct_6m": 23.01,
+    "silver_pct_6m": 1.23,
+    "gold_pct_24m": null,
+    "silver_pct_24m": null,
+    "real_yield_bp_6m": 1.0,
+    "dollar_pct_6m": -2.05,
+    "cb_tonnes_12m": 269.2
+   }
+  },
+  {
+   "id": "ep:rally-2025",
+   "kind": "episode",
+   "country": null,
+   "name": "2025: the record rally",
+   "start": "2025-01-02",
+   "end": null,
+   "type": null,
+   "summary": "The World Gold Council reports that gold demand hit record levels in 2025, topping 5,000 tonnes including OTC, in a year with 53 all-time highs in the gold price. US reciprocal tariffs were announced in April 2025.",
+   "outcomes": {
+    "gold_pct_1m": 9.33,
+    "silver_pct_1m": 4.55,
+    "gold_pct_6m": 26.13,
+    "silver_pct_6m": 22.4,
+    "gold_pct_24m": null,
+    "silver_pct_24m": null,
+    "real_yield_bp_6m": -22.0,
+    "dollar_pct_6m": -7.77,
+    "cb_tonnes_12m": 259.0
+   }
+  }
+ ],
+ "headline_sources": [
+  {
+   "source": "Banco Central do Brasil (press notes)",
+   "ok": true,
+   "n": 5,
+   "error": null
+  },
+  {
+   "source": "Banco de México (press releases)",
+   "ok": false,
+   "n": 0,
+   "error": "HTTPError: 404 Client Error: Not Found for url: https://anterior.banxico.org.mx/publicaciones-y-prensa/comunicados-de-prensa-banxico/comunicados-de-prensa-banxico.html"
+  },
+  {
+   "source": "Tesouro Nacional (news)",
+   "ok": true,
+   "n": 0,
+   "error": "no recent items"
+  },
+  {
+   "source": "SHCP (press releases)",
+   "ok": true,
+   "n": 5,
+   "error": null
+  },
+  {
+   "source": "Agence France Trésor (news)",
+   "ok": false,
+   "n": 0,
+   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.aft.gouv.fr/en/actualites"
+  },
+  {
+   "source": "Assemblée nationale (sitting reports)",
+   "ok": true,
+   "n": 5,
+   "error": null
+  },
+  {
+   "source": "USTR (press releases)",
+   "ok": true,
+   "n": 5,
+   "error": null
+  },
+  {
+   "source": "GDELT FR",
+   "ok": false,
+   "n": 0,
+   "error": "GDELT kept returning its rate-limit notice"
+  },
+  {
+   "source": "GDELT BR",
+   "ok": false,
+   "n": 0,
+   "error": "GDELT kept returning its rate-limit notice"
+  },
+  {
+   "source": "GDELT MX",
+   "ok": true,
+   "n": 8,
+   "error": null
+  },
+  {
+   "source": "GDELT US",
+   "ok": false,
+   "n": 0,
+   "error": "skipped: GDELT time budget used up"
+  }
+ ],
+ "notes": [],
+ "counts": {
+  "assessment": 4,
+  "consensus": 26,
+  "data": 24,
+  "episode": 25,
+  "event": 40,
+  "evidence_badge": 7,
+  "headline": 28,
+  "market": 54,
+  "model": 1,
+  "policy": 8,
+  "positioning": 2,
+  "primer": 4,
+  "research": 3,
+  "scenario": 6,
+  "survey_dispersion": 3
+ }
+}

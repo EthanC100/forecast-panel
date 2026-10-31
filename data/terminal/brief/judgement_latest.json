@@ -1,7 +1,7 @@
 {
- "date": "2026-10-30",
- "generated_at": "2026-10-30T08:43:09Z",
- "why": "run on request",
+ "date": "2026-10-31",
+ "generated_at": "2026-10-31T02:58:55Z",
+ "why": "within 3 days of US midterm elections (2026-11-03)",
  "verified": true,
  "questions": [
   {
@@ -835,98 +835,112 @@
   "GOLD": {
    "why_it_matters": [
     {
-     "text": "US real yields are the main cost of holding gold, which pays no interest. The 10-year TIPS yield is 2.67%, very high by post-2008 standards, but it fell from 2.76% over the week. The fall helps a little at the margin; the level is still a headwind.",
+     "text": "Gold fell 3.63% to 3884.9 USD per ounce on 30 October, even though the US 10-year real yield (TIPS) fell 4 bp to 2.63% and the nominal 10-year fell 7 bp to 4.98% the day before. Lower real yields usually help gold, because they cut the income you give up by holding it. Here the usual driver pointed the other way. That suggests the drop came from selling pressure (positions being cut) rather than from rates.",
      "for": "gold",
      "source_ids": [
-      "s:us.tips10"
+      "s:gl.gold",
+      "s:us.tips10",
+      "s:us.ust10y"
      ]
     },
     {
-     "text": "Central banks were the steady buyer behind the 2025 record rally. Purchases reported to the IMF fell to 20.34 tonnes in September from 45.76 tonnes in August. One month is noisy, but this is the support most bulls rely on.",
+     "text": "Silver fell further than gold: 8.52% on the week against 3.07% for gold, and 5.86% in one day to 49.135. When the more speculative, more industrial metal leads a sell-off, it usually means investors are cutting positions broadly, not reacting to one piece of news.",
      "for": "gold",
      "source_ids": [
-      "s:gl.cbgold",
-      "ep:rally-2025"
+      "s:gl.silver",
+      "s:gl.gold"
      ]
     },
     {
-     "text": "Geopolitical fear has eased from its peak. The Geopolitical Risk index is 165.253, down from 220.838 a week earlier, although it doubled in a single day on 26 Oct. Gold's safe-haven bid is fading but jumpy.",
+     "text": "The safe-haven premium is fading. The Geopolitical Risk index fell from 220.838 to 165.253 over the week, a drop of 25.17%. A short spike on 26 October, up from 81.59, did not stop gold sliding. Some of the price that fear had added is being taken back out.",
      "for": "gold",
      "source_ids": [
       "s:gl.gpr"
      ]
     },
     {
-     "text": "The 2-year Treasury yield is 4.67%, well above the effective fed funds rate of 3.88% and the 4.0% upper limit. The market is not pricing Fed cuts, which keeps real yields high. The 14 bp drop over the week is the first sign that this could shift before the FOMC.",
+     "text": "A structural buyer slowed. Central banks' net purchases (IMF reporters) fell to 20.34 tonnes a month in September from 45.76 in August. Official buying has been the floor under gold. A halving in one month is not yet a trend, but it removes some support just as investors are selling.",
+     "for": "gold",
+     "source_ids": [
+      "s:gl.cbgold"
+     ]
+    },
+    {
+     "text": "The US bond market is not pricing early Fed cuts. The 2-year yield of 4.61% sits above the effective fed funds rate of 3.88% (target upper limit 4.0%). With the 10-year at 4.98% and the real yield at 2.63%, holding gold is still costly against Treasuries. Any midterm result that pushes yields higher would add to that cost.",
      "for": "bonds",
      "source_ids": [
       "s:us.ust2y",
       "s:us.fedfunds",
       "s:us.fed.upper",
-      "gev:2026-12-09-fomc-rate-decision-and-projections"
+      "s:us.ust10y",
+      "s:us.tips10"
      ]
     },
     {
-     "text": "The dollar is not currently driving gold. The broad index is flat at 121.3202 and EUR/USD is 1.1199. A move in gold over the coming weeks is more likely to come from rates or official demand than from the currency.",
+     "text": "The dollar does not explain the move. The broad dollar index barely changed, at 121.3202 against 121.4048 a week earlier. But that reading is dated 23 October, so we cannot see the dollar on the day gold fell. Treat this link as unobserved, not as absent.",
      "for": "currency",
      "source_ids": [
-      "s:us.usd.broad",
-      "s:eu.eurusd"
+      "s:us.usd.broad"
      ]
     }
    ],
    "watch": [
     {
      "event_id": "gev:2026-11-03-us-midterm-elections",
-     "what_to_watch": "Which party controls the House and the Senate, and what that implies for deficits and tariffs. In the days after, watch whether the 10-year yield (5.05%) and the real yield (2.67%) rise on a fiscal-loosening reading or fall on gridlock, and whether the broad dollar breaks out of its flat range. A result that lifts real yields is the clearest negative for gold. A surprise that raises doubts about US policy credibility, without higher real yields, is the bullish case.",
+     "what_to_watch": "Watch which party controls the House and the Senate. Then check whether the 10-year real yield (now 2.63%) and the broad dollar move in the days after. If real yields fall and gold still falls, the selling is about positioning and should run its course before rates matter again. If real yields rise, the direction to watch is up from 4.98% on the 10-year, which would add to gold's headwind. The event page cites a study of gold's average move after midterms, but that figure is not in this snapshot, so do not anchor on a number. Also check whether silver keeps falling faster than gold. That would show investors are still cutting positions.",
      "event": "US midterm elections",
      "date": "2026-11-03"
     }
    ],
    "risks": [
     {
-     "text": "Real yields climb back above the week-ago 2.76% after the midterms or a hawkish FOMC on 9 Dec with new projections. That would pull gold down, as it did when real yields rose in 2013 and 2022.",
+     "text": "The selling continues. Silver is leading, and the only forward-looking tool here, the frozen gold-events model, expects gold +0.27% and silver -0.71% over five days. That model has been scored on 0 weeks, so it should carry almost no weight as reassurance.",
      "source_ids": [
-      "s:us.tips10",
-      "gev:2026-12-09-fomc-rate-decision-and-projections",
-      "ep:taper-2013",
-      "ep:hikes-2022"
+      "gold:model",
+      "s:gl.silver"
      ]
     },
     {
-     "text": "Central-bank buying keeps slowing after September's 20.34 tonnes. That would remove the main buyer that has let gold ignore high real yields.",
+     "text": "Central-bank buying stays near 20.34 tonnes a month rather than returning to 45.76. That would remove the dip-buyer many investors assume will step in.",
      "source_ids": [
       "s:gl.cbgold"
      ]
     },
     {
-     "text": "A renewed geopolitical spike lifts gold quickly. The risk index doubled in one day on 26 Oct, so a short position carries real tail risk.",
+     "text": "A midterm result that raises expectations of bigger US deficits could lift long yields and the real yield together. That would raise the cost of holding gold.",
+     "source_ids": [
+      "gev:2026-11-03-us-midterm-elections",
+      "s:us.ust10y",
+      "s:us.tips10"
+     ]
+    },
+    {
+     "text": "Upside risk: the Geopolitical Risk index swings sharply day to day (81.59 to 165.253 in one day). A new spike could quickly reverse part of the drop.",
      "source_ids": [
       "s:gl.gpr"
      ]
     },
     {
-     "text": "Over-trusting the model: the gold-events model's +0.27% five-day forecast has been scored on 0 weeks, and the gold and US data series carry context badges only.",
+     "text": "The data are stale. US yields run to 29 October and the dollar to 23 October, while gold's biggest fall was on 30 October. The rates and dollar moves that coincided with it are not yet visible.",
      "source_ids": [
-      "gold:model",
-      "badge:series"
+      "s:us.usd.broad",
+      "s:us.ust10y",
+      "s:gl.gold"
      ]
     }
    ],
    "consensus": {
-    "view": "The pack has no surveyed gold forecast, so consensus has to be read from prices. Bond markets price no Fed easing: the 2-year is at 4.67% against an effective fed funds rate of 3.88%. Volatility is calm, with the VIX at 16.91. The dollar is steady at 121.3202 on the broad index. The frozen gold model expects a flat-to-slightly-up week (+0.27%), and an unofficial headline argues the dollar has lost its safe-haven role. Implicitly, the market treats gold as immune to real yields of 2.67% because of official buying.",
+    "view": "The snapshot has no gold survey and no gold positioning data. So consensus here means market prices and the model. Markets are calm: the VIX is 17.2, down from 19.03 a week ago. The Fed is on hold, with the upper limit at 4.0%, and the 2-year yield of 4.61% prices no near-term cuts. The next FOMC decision is not until 9 December. The frozen model expects gold to tick up 0.27% over five days. Taken together, the implied view is that gold's drop is noise in a benign setting, where real yields are edging down and the dollar is flat.",
     "source_ids": [
-     "s:us.ust2y",
-     "s:us.fedfunds",
      "s:us.vix",
-     "s:us.usd.broad",
-     "s:us.tips10",
-     "gold:model",
-     "h:11777ab4"
+     "s:us.fed.upper",
+     "s:us.ust2y",
+     "gev:2026-12-09-fomc-rate-decision-and-projections",
+     "gold:model"
     ]
    },
-   "might_be_wrong": "The shared assumption is that central-bank demand has permanently broken gold's link to real yields. That rests on steady official buying, and September purchases more than halved to 20.34 tonnes while the 10-year real yield sits at 2.67%. If official demand keeps fading, the older pattern of 2013 and 2022 could return. The opposite error is also possible: the bond market may be wrong to price no cuts, since the 2-year fell 14 bp in a week. Either error is plausible, which is why we do not take a side.",
-   "date": "2026-10-30",
+   "might_be_wrong": "The shared assumption is that gold trades on real yields and the dollar, plus a geopolitical kicker. That is exactly how the gold-events model is built. This week that framework failed: real yields fell and the dollar was flat, yet gold fell 3.63% in a day and silver fell more. The more likely drivers are flows the model does not see: central-bank buying halving, the haven premium unwinding as the risk index fell, and broad position-cutting. If so, a supportive move in real yields after the midterms may not lift gold until the selling is done. The model's forecast (scored on 0 weeks) and calm volatility are weak comfort. A second warning comes from em-macro's emerging-market election study. In-sample, currency moves after elections partly reversed. Out of sample they continued instead, and the fade rule lost money. That evidence is not about gold or the US, but it argues against assuming the midterms will set off a quick rebound in prices that have already moved.",
+   "date": "2026-10-31",
    "verified": true,
    "problems": []
   }
