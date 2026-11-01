@@ -1,7 +1,15 @@
 {
- "generated_at": "2026-10-31T16:15:48Z",
+ "generated_at": "2026-11-01T17:13:49Z",
  "dry_run": false,
  "open": [
+  {
+   "key": "catalyst:2026-11-04-br-copom-decision-3-4-nov",
+   "kind": "catalyst",
+   "title": "Horizons: Copom decision (3-4 Nov) in 3 days (2026-11-04), no Brazil decision yet",
+   "url": "https://github.com/EthanC100/forecast-panel/issues/2",
+   "number": 2,
+   "created_at": "2026-11-01T17:13:48Z"
+  },
   {
    "key": "catalyst:gold-2026-11-03-us-midterm-elections",
    "kind": "catalyst",
@@ -12,7 +20,7 @@
   }
  ],
  "created": [
-  "catalyst:gold-2026-11-03-us-midterm-elections"
+  "catalyst:2026-11-04-br-copom-decision-3-4-nov"
  ],
  "closed": []
 }
