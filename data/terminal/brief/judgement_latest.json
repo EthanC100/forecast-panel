@@ -1,7 +1,7 @@
 {
- "date": "2026-10-31",
- "generated_at": "2026-10-31T02:58:55Z",
- "why": "within 3 days of US midterm elections (2026-11-03)",
+ "date": "2026-11-01",
+ "generated_at": "2026-11-01T02:46:48Z",
+ "why": "within 3 days of Copom decision (3-4 Nov) (2026-11-04)",
  "verified": true,
  "questions": [
   {
@@ -235,8 +235,8 @@
   },
   {
    "question_id": "sc:br-fiscal-2027",
-   "base_rate_used": "The scenario page has no computed base rate: em-macro records no Brazilian fiscal-target revisions. Instead I start from the two context cases on the page. Brazil cut the 2015 target in July 2015, mid-year. In April 2024 it cut the following year's target in the budget-guidelines bill. Neither cut came in the first quarter of the year being targeted. A rough prior that the target and rule survive a window ending 31 March is about two in three, which is my start.",
-   "p_yes": 65,
+   "base_rate_used": "The scenario page has no computed base rate; em-macro records no Brazilian fiscal-target revisions. My starting point is a judgement-based reference class built on the two context cases on the page: the 2015 target cut (made in July) and the April 2024 cut (made in the PLDO 2025). Both came outside a January–March window. Brazilian governments more often keep the target on paper and lean on exclusions than send a bill to change it within the first quarter. That puts my start modestly above even odds for YES.",
+   "p_yes": 60,
    "branches": [
     {
      "id": "credible",
@@ -244,65 +244,67 @@
     },
     {
      "id": "kept_exclusions",
-     "p": 50
+     "p": 45
     },
     {
      "id": "target_cut",
-     "p": 35
+     "p": 40
     }
    ],
    "factors": [
     {
-     "text": "Timing favours YES. The window closes on 31 Mar 2027. The government's own 2027 budget bill claims compliance, with a counted surplus of R$83.4 billion (0.6% of GDP) against a target of R$73.2 billion. The natural place for any retreat is the next budget-guidelines bill in April, which changes the 2028 target, or a mid-year bimonthly report. A government that has just certified compliance rarely reverses within weeks. Meeting the target on paper through deductions and exclusions still resolves YES.",
-     "effect": "raises",
-     "source_ids": [
-      "pol:br-ploa-2027",
-      "pol:br-fiscal-framework",
-      "sc:br-fiscal-2027"
-     ]
-    },
-    {
-     "text": "The target is not credible on independent numbers, so a quick rewrite is a live option for the new term starting 5 Jan. The Focus 2027 primary-balance median is -0.3% of GDP, below the lower tolerance bound. IFI's scenario gives only R$0.9 billion counted for the target. IFI sees a potential 2027 deficit of 1.0% of GDP and calls for an adjustment of about 3 points. The Focus dispersion gauge is untested, so I lean on IFI more than on the survey spread.",
+     "text": "The gap between the target and independent estimates is large. The IFI sees a potential 2027 deficit of 1.0% of GDP and calls for an adjustment of roughly 3 points. In the IFI's scenario, the result counted for the target is a surplus of only R$0.9 billion, so about R$35.7 billion of spending would need freezing. The Focus 2027 median is -0.3% of GDP, below even the lower tolerance bound around the 0.5% target. A re-elected government starting its term on 5 Jan has both the motive and the early-term political capital to reset the target.",
      "effect": "lowers",
      "source_ids": [
-      "disp:2",
       "fa:ifi",
       "pol:br-fiscal-framework",
+      "disp:2",
+      "fc:BR.primary.2027",
       "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan"
      ]
     },
     {
-     "text": "Markets repriced hard after Lula's run-off win. The 10y rose 255bp on day 1 and BRL fell 8.4% on PTAX. Over the past week the DI Jan-29 proxy is up 227bp and USD/BRL up 6.67%. This shows investors expect looser policy. However, the bond and FX series are untested as fiscal-revision predictors, and the hold-out found bond-yield surprise regressions did not hold up. I read the selloff as pricing eventual loosening over the term, not a formal bill by 31 March. It lowers my estimate only a little.",
-     "effect": "lowers",
+     "text": "The resolution window is short, and the easier path is exclusions, not a formal bill. The 2027 budget already carries a R$33.8 billion payment that sits outside the spending cap but counts toward the target. Carve-outs like this let the government hit 0.5% on paper, which still counts as YES. Past cuts came in April or July, after this window closes. The first RARDP in March could propose a freeze instead of a change.",
+     "effect": "raises",
+     "source_ids": [
+      "pol:br-consumption-tax",
+      "pol:br-ploa-2027",
+      "sc:br-fiscal-2027"
+     ]
+    },
+    {
+     "text": "Markets have just punished the fiscal outlook hard. After the run-off, the 10y rose 255bp on day 1 and BRL fell 8.4% (PTAX). Over the week the DI Jan-29 proxy rose 205 bp and USD/BRL rose 7.61%. That market discipline raises the cost of sending a target-cut bill early in the new term. It pushes the government toward keeping the target and using one-offs, though not necessarily toward real credibility.",
+     "effect": "raises",
      "source_ids": [
       "em:6",
       "s:br.di.f29.proxy",
-      "s:br.usdbrl.ptax",
-      "badge:series"
+      "s:br.usdbrl.ptax"
      ]
     }
    ],
-   "what_would_change_view": "I would cut toward 40-45 if any of these appear: a finance minister named in late December or January who publicly questions the 0.5% target or LC 200; new exclusions in the 2027 budget (PLOA) vote in December paired with talk of a new rule; or the Focus 2027 primary-balance median falling further from -0.3%. I would raise toward 75 if the budget passes in December without a target change, a framework-keeping minister is named, and the DI curve retraces a meaningful part of the post-run-off move.",
+   "what_would_change_view": "I would move toward NO on any of these: ministers or the incoming finance minister publicly questioning the 0.5% target; Congress altering the 2027 target while voting the budget or guidelines in December; or a PLN or PLP appearing on the trackers. I would move toward YES if the December budget vote passes without new carve-outs and a finance minister named in January explicitly commits to the framework.",
    "confidence": "low",
-   "most_likely_wrong": "A re-elected Lula uses the political capital of a fresh term to send a bill rewriting LC 200/2023 in the first quarter, for example to exclude investment or set a new debt anchor. Markets' violent repricing may be correctly front-running exactly that. There is also a resolution risk: whether a bill filed by a legislator, rather than the government, counts as 'sent'.",
+   "most_likely_wrong": "I may underrate how fast a re-elected government acts. It could change the 2027 target in the December budget and guidelines votes, or send a PLN in January–February while it has maximum political capital. On the other side, the market's post-run-off panic, which priced the framework as doomed, may be wrong about timing more than direction. No crowd signal here is tested: the Focus primary-balance dispersion badge is untested, so neither the survey gap nor the market move tells us when a formal cut comes.",
    "source_ids": [
     "sc:br-fiscal-2027",
-    "pol:br-ploa-2027",
-    "pol:br-fiscal-framework",
-    "disp:2",
     "fa:ifi",
+    "pol:br-fiscal-framework",
+    "pol:br-ploa-2027",
+    "pol:br-consumption-tax",
+    "disp:2",
+    "fc:BR.primary.2027",
     "em:6",
     "s:br.di.f29.proxy",
     "s:br.usdbrl.ptax",
-    "badge:series",
-    "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan"
+    "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan",
+    "ev:2026-12-17-br-2027-budget-ploa-vote-in-congress"
    ],
    "scenario_id": "br-fiscal-2027",
    "title": "Brazil 2027: fiscal-framework credibility",
    "country": "BR",
    "ok": true,
    "problems": [],
-   "date": "2026-10-30"
+   "date": "2026-11-01"
   },
   {
    "question_id": "sc:mx-midterms-2027",
@@ -455,129 +457,151 @@
   "BR": {
    "why_it_matters": [
     {
-     "text": "The real fell hard after Lula won the 25 Oct run-off against odds that favoured Flávio Bolsonaro. PTAX shows BRL down 8.4%, and USD/BRL is now 5.3744, up 6.67% on the week. em-macro's hold-out test found that election currency moves kept going rather than reversing. Fading the day-1 move lost money, including on Brazil's 2022 run-off.",
+     "text": "The real fell sharply after Lula's run-off win, which came against odds that gave Flávio Bolsonaro 80%. USD/BRL PTAX rose from 5.0377 on 23 Oct to 5.4212 on 30 Oct, a 7.61% weakening of the real. The tempting trade is to fade this as an overreaction, but em-macro's hold-out test says election currency moves continued rather than reversed. The fade rule lost money, including on Brazil's 2022 run-off. Do not assume a quick snapback.",
      "for": "currency",
      "source_ids": [
-      "em:6",
-      "s:br.usdbrl.ptax"
-     ]
-    },
-    {
-     "text": "The repricing sits in the long end of the curve, not in the next rate decision. Over the week the longest fixed-rate bond rose 204 bp to 14.93% and the DI Jan-29 and Jan-31 proxies rose 227 bp and 233 bp. The DI Jan-27 proxy rose only 12 bp. That pattern points to a fiscal and term premium rather than to Copom expectations. The longest inflation-linked real rate jumped 67 bp to 7.4%.",
-     "for": "bonds",
-     "source_ids": [
-      "s:br.td.pre_longest",
-      "s:br.di.f29.proxy",
-      "s:br.di.f31.proxy",
-      "s:br.di.f27.proxy",
-      "s:br.td.ipca_longest"
-     ]
-    },
-    {
-     "text": "The fiscal gap is what investors are pricing. The government's 2027 budget bill shows R$83.4 billion (0.6% of GDP) counted for the target. IFI's scenario gives only R$0.9 billion, below the tolerance floor. The Focus 2027 primary median is -0.3% against a 0.5% target, and IFI sees a potential 2027 deficit of 1.0% of GDP and calls for an adjustment of about 3 points of GDP.",
-     "for": "bonds",
-     "source_ids": [
-      "pol:br-fiscal-framework",
-      "pol:br-ploa-2027",
-      "disp:2",
-      "fa:ifi"
-     ]
-    },
-    {
-     "text": "The rate survey and the betting markets now disagree. The Focus median for the 4 Nov Copom is a cut to 13.5%, but it was collected on 23 Oct, before the run-off. Polymarket gives only 20.5% to that cut. A hold would miss the survey median but match market prices. em-macro found that rate-surprise effects add almost nothing out of sample, so the decision matters mainly through its statement on fiscal policy and the real.",
-     "for": "currency",
-     "source_ids": [
-      "disp:1",
-      "pm:3347919",
+      "s:br.usdbrl.ptax",
       "em:6"
      ]
     },
     {
-     "text": "Inflation expectations were already drifting up before the shock. Focus IPCA is 5.19% for 2026 and 4.34% for 2027, the latter up 0.121 pp in three months. The 2027 year-end Selic median of 11.75% assumes a long easing path that a weaker real makes harder.",
+     "text": "The whole fixed-rate curve repriced in one week. The DI Jan-29 proxy rose 205 bp to 14.86%, the Jan-31 proxy rose 226 bp to 15.17%, and the longest fixed-rate Tesouro bond rose 203 bp to 15.06%. The inflation-linked (IPCA+) bond rose only 67 bp, to 7.37%. So most of the rise is extra compensation for future inflation and fiscal risk, not higher expected real rates. These DI figures are proxies built from Tesouro bonds, because B3 blocks automated requests, so read the levels with care.",
+     "for": "bonds",
+     "source_ids": [
+      "s:br.di.f29.proxy",
+      "s:br.di.f31.proxy",
+      "s:br.td.pre_longest",
+      "s:br.td.ipca_longest",
+      "em:6"
+     ]
+    },
+    {
+     "text": "The fiscal anchor is thinner than the official numbers suggest. The 2027 budget bill counts a result of 0.6% of GDP toward the 0.5% target. The Senate's independent fiscal office (IFI) puts that counted result at a surplus of only R$0.9 billion, which would require about R$35.7 billion of spending to be frozen. The IFI sees a potential 2027 deficit of 1.0% of GDP, against a Focus survey median of -0.3%. This gap between official targets and independent estimates is what long bonds are now pricing.",
+     "for": "bonds",
+     "source_ids": [
+      "pol:br-fiscal-framework",
+      "pol:br-ploa-2027",
+      "fa:ifi",
+      "disp:2"
+     ]
+    },
+    {
+     "text": "The 4 Nov Copom meeting has become a live event. The Focus survey median of 13.5% (a 25 bp cut) was taken on 23 Oct, before the run-off. Prediction markets now give a cut only 22.5%, and give 23.0% to a hike of more than 25 bp. In em-macro's history, a hawkish surprise strengthened the real by about 0.4–0.7% per 25 bp. Out of sample, however, rate-surprise effects were close to nil. The decision alone is unlikely to repair the real.",
+     "for": "currency",
+     "source_ids": [
+      "disp:1",
+      "pm:3347919",
+      "ks:KXCBDECISIONBRAZIL-26NOV04-H25P",
+      "em:5",
+      "em:6"
+     ]
+    },
+    {
+     "text": "A weaker real feeds into prices. The Focus inflation medians of 5.19% for 2026 and 4.34% for 2027 predate the currency drop and are likely to drift up. That would squeeze the room for the year-end Selic medians of 13.25% for 2026 and 11.75% for 2027.",
      "for": "bonds",
      "source_ids": [
       "fc:BR.inflation.2026",
       "fc:BR.inflation.2027",
-      "fc:BR.policy_rate.2027"
+      "fc:BR.policy_rate.2026",
+      "fc:BR.policy_rate.2027",
+      "s:br.usdbrl.ptax"
      ]
     },
     {
-     "text": "Leveraged funds were net long 18,677 BRL contracts, at the 92.3 percentile, as of 20 Oct, before the run-off. Unwinding that position could add to selling. The positioning gauge is tested_no_lead, though, so it gets little weight.",
+     "text": "Do not lean on 'the real is cheap' or 'funds are positioned' arguments. Leveraged-fund BRL futures positioning (7600 contracts, 67.3rd percentile) is not extreme, and that gauge is tested with no lead. em-macro's currency-mispricing model for Brazil did worse than assuming no change (RMSE ratio 1.09–1.29).",
      "for": "currency",
      "source_ids": [
       "cot:br.cot.brl",
-      "badge:e"
+      "badge:e",
+      "em:9"
      ]
     }
    ],
    "watch": [
     {
      "event_id": "ev:2026-11-02-br-focus-survey-bcb",
-     "what_to_watch": "This is the first Focus survey fully after the run-off. Watch whether the next-Copom median moves up from 13.5% toward a hold at 13.75%, whether 2027 IPCA rises above 4.34% and the 2027 Selic median above 11.75%, and whether the 2027 primary median falls below -0.3%.",
+     "what_to_watch": "This is the first Focus survey taken fully after the run-off. Watch three things. First, whether the next-meeting Selic median stays at 13.5% or moves to the current 13.75% (a hold). Second, whether its dispersion (standard deviation 0.0839, 60th percentile) widens; em-macro found that high dispersion is when Copom outcomes miss the survey median, and this gauge is tested_leads for Brazil. Third, any upward revision to 2027 IPCA from 4.34% or downward revision to the 2027 primary balance from -0.3%.",
      "event": "Focus survey (BCB)",
      "date": "2026-11-02"
     },
     {
      "event_id": "ev:2026-11-04-br-copom-decision-3-4-nov",
-     "what_to_watch": "Hold or cut. A cut, which Polymarket prices at 20.5%, would likely hit the real and steepen the curve. With a hold, watch whether the statement names fiscal risk and the weaker currency, and whether it drops easing guidance. A hike of more than 25 bp is priced at only 2% on Kalshi.",
+     "what_to_watch": "Whether the Selic is held at 13.75%, cut to 13.5% as the stale Focus median expects, or raised (the Kalshi tail of more than 25 bp at 23.0%). Read the statement for how much weight it gives to the real's 7.61% fall and to fiscal risk. A cut into a falling currency is the bigger danger for the real and long bonds. A hold mostly confirms what markets already price.",
      "event": "Copom decision (3-4 Nov)",
      "date": "2026-11-04"
     },
     {
      "event_id": "ev:2026-11-09-br-focus-survey-bcb",
-     "what_to_watch": "How the survey revises after the decision: the year-end 2026 Selic median against 13.25%, and whether the spread of 2027 inflation forecasts widens as the real moves through to prices.",
+     "what_to_watch": "How respondents reprice after the Copom meeting. Do the year-end Selic medians of 13.25% for 2026 and 11.75% for 2027 rise? Does the 2026 IPCA median move above 5.19%?",
      "event": "Focus survey (BCB)",
      "date": "2026-11-09"
     },
     {
      "event_id": "ev:2026-11-16-br-focus-survey-bcb",
-     "what_to_watch": "The 2027 primary-balance median and its spread (sd 0.2865 pp). A further slide away from the 0.5% target would confirm the market's fiscal worry. A move toward the target would be the first sign of relief.",
+     "what_to_watch": "The fiscal medians. Does the 2027 primary-balance median fall further below the 0.5% target, toward the IFI's 1.0% deficit? That is a signpost for the 'target cut' branch of the fiscal scenario.",
      "event": "Focus survey (BCB)",
      "date": "2026-11-16"
     },
     {
      "event_id": "ev:2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
-     "what_to_watch": "Whether the government freezes spending or revises its 2026 result toward IFI's expected deficit of 0.5% of GDP. Also watch for any new item counted outside the target or the spending limit.",
+     "what_to_watch": "Whether the Treasury freezes 2026 spending or revises its revenue and pension estimates toward the IFI's numbers (a 2026 deficit of 0.5% of GDP against a Focus median of -0.48%). Watch also for any new spending carved out of the limit, the kind of one-off that keeps the target only on paper.",
      "event": "Bimonthly revenue and spending report (RARDP)",
      "date": "2026-11-20"
     },
     {
      "event_id": "ev:2026-11-23-br-focus-survey-bcb",
-     "what_to_watch": "The trend in 2027 IPCA and the 2027 primary median ahead of the 9 Dec Copom and the December budget vote. Rising inflation expectations alongside a falling primary estimate is the worst combination for long bonds.",
+     "what_to_watch": "Pass-through from the weaker real into the 2026 and 2027 IPCA medians. Watch whether the dispersion of 2027 Selic expectations (now 9.0% to 14.0%) widens further.",
      "event": "Focus survey (BCB)",
      "date": "2026-11-23"
+    },
+    {
+     "event_id": "ev:2026-11-30-br-focus-survey-bcb",
+     "what_to_watch": "The last read before the 1 December rollover of BCB currency swaps and the 9 December Copom meeting. Watch the median and dispersion for the December Selic decision, and whether fiscal medians have moved before the budget (PLOA) vote.",
+     "event": "Focus survey (BCB)",
+     "date": "2026-11-30"
     }
    ],
    "risks": [
     {
-     "text": "The re-elected government could quickly signal orthodoxy: a finance team committed to the 0.5% target, a spending freeze and no new exclusions. That is the 'credible' branch of the fiscal scenario, and it would partly reverse the run-off repricing.",
+     "text": "The new term signals a looser fiscal stance before the budget vote. The November 2024 analog, a spending package paired with an income-tax exemption, moved the DI Jan-29 proxy up 112 bp and weakened the real 4.39% in three days. That would come on top of the run-off move, not instead of it.",
      "source_ids": [
-      "sc:br-fiscal-2027"
+      "sc:br-fiscal-2027",
+      "fa:ifi"
      ]
     },
     {
-     "text": "Copom could cut anyway, a 20.5% outcome on Polymarket. That would weaken the real and push long yields higher, beyond what our leans assume.",
+     "text": "The Copom follows the pre-election 13.5% expectation and cuts while the real is falling. That would raise inflation expectations and steepen the curve. Alternatively, a hike of more than 25 bp would shock the short end of the curve.",
      "source_ids": [
-      "pm:3347919",
-      "s:br.selic.target"
+      "disp:1",
+      "ks:KXCBDECISIONBRAZIL-26NOV04-H25P",
+      "pm:3347919"
      ]
     },
     {
-     "text": "The central bank is already rolling FX swaps maturing 1 Dec. New swap supply beyond rollovers could cap USD/BRL for weeks.",
+     "text": "The post-election move keeps going instead of reversing, as election currency moves did in em-macro's hold-out sample. In-sample, bond moves after elections also tended to continue.",
      "source_ids": [
-      "h:b0d99a48"
+      "em:6",
+      "em:5"
      ]
     },
     {
-     "text": "The global backdrop can swamp local news. The US 10-year yield is 5.05% and the real yield 2.67%, both lower on the week. A further fall in US yields would help emerging-market bonds and currencies whatever Brazil does.",
+     "text": "High US rates limit any relief for carry trades into the real. The US 10-year yield is 4.98% and the US 10-year real yield is 2.63%.",
      "source_ids": [
       "s:us.ust10y",
       "s:us.tips10"
      ]
+    },
+    {
+     "text": "The DI curve is measured through Tesouro bond proxies because B3 blocks automated requests. Curve moves may be mismeasured, especially on single days.",
+     "source_ids": [
+      "s:br.di.f29.proxy",
+      "s:br.di.f27.proxy",
+      "s:br.di.f31.proxy"
+     ]
     }
    ],
    "consensus": {
-    "view": "Surveys still describe a gentle easing path. As of 23 Oct, Focus expected a Copom cut to 13.5%, a year-end 2026 Selic of 13.25% and 11.75% for end-2027. Its inflation medians are 5.19% for 2026 and 4.34% for 2027, and its 2027 primary-balance median is -0.3%, below the 0.5% target. The government says its budget bill meets that target with 0.6% of GDP. Markets have moved past the survey. Polymarket gives only 20.5% to a November cut and Kalshi 2% to a large hike. Long yields (14.93%) and USD/BRL (5.3744) have repriced sharply since the run-off.",
+    "view": "Surveys and markets disagree, and the surveys are stale. The Focus survey (as of 23 Oct, before the run-off) expects a 25 bp cut to 13.5% on 4 Nov, a year-end Selic of 13.25% for 2026 and 11.75% for 2027, IPCA inflation of 5.19% and 4.34%, and a 2027 primary balance of -0.3% of GDP against the 0.5% target. Post-election prediction markets lean away from a cut: 22.5% for a 25 bp cut on Polymarket and 23.0% for a hike of more than 25 bp on Kalshi. These prediction-market gauges are tested with no lead. The bond curve priced a large fiscal risk premium: long fixed-rate yields are around 15%. The government's budget bill still claims the target is met with 0.6% of GDP counted, while the IFI says it is barely met even on paper.",
     "source_ids": [
      "disp:1",
      "fc:BR.policy_rate.2026",
@@ -585,15 +609,15 @@
      "fc:BR.inflation.2026",
      "fc:BR.inflation.2027",
      "disp:2",
-     "pol:br-fiscal-framework",
      "pm:3347919",
      "ks:KXCBDECISIONBRAZIL-26NOV04-H25P",
+     "badge:series",
      "s:br.td.pre_longest",
-     "s:br.usdbrl.ptax"
+     "pol:br-fiscal-framework"
     ]
    },
-   "might_be_wrong": "The survey figures predate the run-off, so the easing path down to 11.75% for 2027 is probably too optimistic. It assumes inflation expectations stay put while the real has fallen and the fiscal gap has widened. Both the government and the market seem to share a quieter assumption: that the framework will be met on paper through exclusions and one-offs, even though Focus itself sits at -0.3% against a 0.5% target and IFI sees a 3-point adjustment need. The other shared error could be the reflex to buy after a big shock. Funds were already crowded long the real before the vote, and em-macro's hold-out shows election currency moves continued rather than reversed. The survey-dispersion badge does lead Copom misses for Brazil, but dispersion is only at the 60th percentile, so it says little about this meeting. Where we could be wrong ourselves: if the government commits credibly to the target early, the repricing may already be overdone.",
-   "date": "2026-10-30",
+   "might_be_wrong": "The shared error may be treating the run-off shock as a one-off overreaction that December's budget vote or a firm Copom can contain. The fiscal medians were set before the result. 'Target kept' can still mean met through exclusions and one-offs, which the IFI's R$0.9 billion counted surplus hints at. And the hold-out evidence says election currency moves continued rather than reversed, so fading the selloff has a poor record. The single most likely way this note is wrong is that the incoming team names a framework-keeping finance minister and the budget passes without new exclusions. The selloff would then partly reverse, as the 'credible' branch sketches with the DI Jan-29 proxy down about 30 bp and the real about 1.5% stronger. I hold this view with moderate confidence, because the survey data predate the election and the curve data are proxies.",
+   "date": "2026-11-01",
    "verified": true,
    "problems": []
   },
@@ -835,16 +859,16 @@
   "GOLD": {
    "why_it_matters": [
     {
-     "text": "Gold fell 3.63% to 3884.9 USD per ounce on 30 October, even though the US 10-year real yield (TIPS) fell 4 bp to 2.63% and the nominal 10-year fell 7 bp to 4.98% the day before. Lower real yields usually help gold, because they cut the income you give up by holding it. Here the usual driver pointed the other way. That suggests the drop came from selling pressure (positions being cut) rather than from rates.",
+     "text": "Gold fell from 4007.9 on 2026-10-23 to 3884.9 on 2026-10-30, a drop of 3.07%, and most of it came on the last day (down 146.5). The usual drivers barely moved. The US 10-year real yield went from 2.64% to 2.63%, and the broad dollar was roughly flat at 121.3202, though that reading is dated 2026-10-23 and so is stale. When gold falls this hard without help from real yields or the dollar, the move is more likely positioning or momentum selling than a change in fundamentals. Such moves can either reverse quickly or keep going.",
      "for": "gold",
      "source_ids": [
       "s:gl.gold",
       "s:us.tips10",
-      "s:us.ust10y"
+      "s:us.usd.broad"
      ]
     },
     {
-     "text": "Silver fell further than gold: 8.52% on the week against 3.07% for gold, and 5.86% in one day to 49.135. When the more speculative, more industrial metal leads a sell-off, it usually means investors are cutting positions broadly, not reacting to one piece of news.",
+     "text": "Silver fell 8.52% over the week to 49.135, almost three times gold's fall. Silver behaves partly like an industrial metal and partly like a leveraged bet on gold. A drop this lopsided points to speculative money leaving precious metals broadly, not to a gold-specific story.",
      "for": "gold",
      "source_ids": [
       "s:gl.silver",
@@ -852,95 +876,88 @@
      ]
     },
     {
-     "text": "The safe-haven premium is fading. The Geopolitical Risk index fell from 220.838 to 165.253 over the week, a drop of 25.17%. A short spike on 26 October, up from 81.59, did not stop gold sliding. Some of the price that fear had added is being taken back out.",
+     "text": "Two supports for gold eased at the same time. The Geopolitical Risk index fell from 220.838 on 2026-10-19 to 165.253 on 2026-10-26, and the VIX fell from 19.03 to 17.2. Central banks' net purchases dropped to 20.34 tonnes in September from 45.76 in August. That is a single month of data, but central-bank buying has been the steady buyer that markets lean on.",
      "for": "gold",
      "source_ids": [
-      "s:gl.gpr"
-     ]
-    },
-    {
-     "text": "A structural buyer slowed. Central banks' net purchases (IMF reporters) fell to 20.34 tonnes a month in September from 45.76 in August. Official buying has been the floor under gold. A halving in one month is not yet a trend, but it removes some support just as investors are selling.",
-     "for": "gold",
-     "source_ids": [
+      "s:gl.gpr",
+      "s:us.vix",
       "s:gl.cbgold"
      ]
     },
     {
-     "text": "The US bond market is not pricing early Fed cuts. The 2-year yield of 4.61% sits above the effective fed funds rate of 3.88% (target upper limit 4.0%). With the 10-year at 4.98% and the real yield at 2.63%, holding gold is still costly against Treasuries. Any midterm result that pushes yields higher would add to that cost.",
+     "text": "US rates are the opportunity cost of holding gold, which pays no interest. The 10-year Treasury yield is 4.98% and the 2-year is 4.61%. The 2-year sits well above the effective fed funds rate of 3.88% (target ceiling 4.0%), which suggests the bond market is not counting on near-term Fed cuts to lower real yields. So real yields stay high, at 2.63%, and the bond market offers gold no tailwind.",
      "for": "bonds",
      "source_ids": [
+      "s:us.ust10y",
       "s:us.ust2y",
       "s:us.fedfunds",
       "s:us.fed.upper",
-      "s:us.ust10y",
       "s:us.tips10"
      ]
     },
     {
-     "text": "The dollar does not explain the move. The broad dollar index barely changed, at 121.3202 against 121.4048 a week earlier. But that reading is dated 23 October, so we cannot see the dollar on the day gold fell. Treat this link as unobserved, not as absent.",
+     "text": "The dollar is the other main channel. The broad index barely moved in the latest week, down 0.07% to 121.3202. EUR/USD was steady at 1.1199 even as headlines worried about France. A sharp dollar move after the US midterms would hit gold directly, because gold is priced in dollars.",
      "for": "currency",
      "source_ids": [
-      "s:us.usd.broad"
+      "s:us.usd.broad",
+      "s:eu.eurusd",
+      "gev:2026-11-03-us-midterm-elections"
      ]
     }
    ],
    "watch": [
     {
      "event_id": "gev:2026-11-03-us-midterm-elections",
-     "what_to_watch": "Watch which party controls the House and the Senate. Then check whether the 10-year real yield (now 2.63%) and the broad dollar move in the days after. If real yields fall and gold still falls, the selling is about positioning and should run its course before rates matter again. If real yields rise, the direction to watch is up from 4.98% on the 10-year, which would add to gold's headwind. The event page cites a study of gold's average move after midterms, but that figure is not in this snapshot, so do not anchor on a number. Also check whether silver keeps falling faster than gold. That would show investors are still cutting positions.",
+     "what_to_watch": "Watch which party wins the House and the Senate, and whether control ends up split. Then watch the next few days' moves in the 10-year real yield (now 2.63%) and the broad dollar (121.3202, stale), not gold's first reaction. A result read as looser fiscal policy would push long yields up from 4.98%, which is a headwind for gold. Gold gains only if the result instead raises inflation or institutional worries enough to outweigh that. Also check whether the 2-year (4.61%) moves, which would show the market changing its view of the Fed. Silver's reaction relative to gold's shows whether speculative selling is still going on.",
      "event": "US midterm elections",
      "date": "2026-11-03"
     }
    ],
    "risks": [
     {
-     "text": "The selling continues. Silver is leading, and the only forward-looking tool here, the frozen gold-events model, expects gold +0.27% and silver -0.71% over five days. That model has been scored on 0 weeks, so it should carry almost no weight as reassurance.",
+     "text": "The selling continues. The fall happened without real yields or the dollar moving, and silver fell far harder. This looks like crowded positions being cut, and that can run further than the drivers justify. The CFTC positioning gauge has shown no lead in testing for currencies, and no tested positioning measure for gold is available here.",
      "source_ids": [
-      "gold:model",
-      "s:gl.silver"
+      "s:gl.gold",
+      "s:gl.silver",
+      "s:us.tips10",
+      "badge:e"
      ]
     },
     {
-     "text": "Central-bank buying stays near 20.34 tonnes a month rather than returning to 45.76. That would remove the dip-buyer many investors assume will step in.",
+     "text": "Central-bank demand fades. If September's 20.34 tonnes, down from 45.76, turns out to be a trend rather than one weak month, gold loses its most dependable buyer near current prices.",
      "source_ids": [
       "s:gl.cbgold"
      ]
     },
     {
-     "text": "A midterm result that raises expectations of bigger US deficits could lift long yields and the real yield together. That would raise the cost of holding gold.",
-     "source_ids": [
-      "gev:2026-11-03-us-midterm-elections",
-      "s:us.ust10y",
-      "s:us.tips10"
-     ]
-    },
-    {
-     "text": "Upside risk: the Geopolitical Risk index swings sharply day to day (81.59 to 165.253 in one day). A new spike could quickly reverse part of the drop.",
+     "text": "An upside shock from geopolitics. The Geopolitical Risk index doubled in one day, from 81.59 on 2026-10-25 to 165.253 on 2026-10-26. A short gold position built on recent calm can be caught out by a sudden jump like that.",
      "source_ids": [
       "s:gl.gpr"
      ]
     },
     {
-     "text": "The data are stale. US yields run to 29 October and the dollar to 23 October, while gold's biggest fall was on 30 October. The rates and dollar moves that coincided with it are not yet visible.",
+     "text": "A rate shock from US politics or the Fed. With the 10-year near 5% at 4.98% and the 2-year above the funds rate, a midterm result or Fed signal that lifts real yields from 2.63% would add a fundamental reason for gold to fall.",
      "source_ids": [
-      "s:us.usd.broad",
       "s:us.ust10y",
-      "s:gl.gold"
+      "s:us.ust2y",
+      "s:us.tips10",
+      "gev:2026-11-03-us-midterm-elections",
+      "gev:2026-12-09-fomc-rate-decision-and-projections"
      ]
     }
    ],
    "consensus": {
-    "view": "The snapshot has no gold survey and no gold positioning data. So consensus here means market prices and the model. Markets are calm: the VIX is 17.2, down from 19.03 a week ago. The Fed is on hold, with the upper limit at 4.0%, and the 2-year yield of 4.61% prices no near-term cuts. The next FOMC decision is not until 9 December. The frozen model expects gold to tick up 0.27% over five days. Taken together, the implied view is that gold's drop is noise in a benign setting, where real yields are edging down and the dollar is flat.",
+    "view": "There is no survey forecast for gold in this snapshot. What exists is market pricing plus one model. Bond prices imply no near-term easing: the 2-year at 4.61% is above the 3.88% effective funds rate, and real yields are steady at 2.63%. Volatility is calm, with the VIX at 17.2. The frozen gold-events model, which reads changes in real yields, the dollar, the VIX and geopolitical risk, predicts a small 0.27% gain for gold over 5 days and a 0.71% fall for silver. Read together, the implied view is that the drivers are unchanged, so last week's drop is noise and gold should drift sideways to slightly higher.",
     "source_ids": [
-     "s:us.vix",
-     "s:us.fed.upper",
      "s:us.ust2y",
-     "gev:2026-12-09-fomc-rate-decision-and-projections",
+     "s:us.fedfunds",
+     "s:us.tips10",
+     "s:us.vix",
      "gold:model"
     ]
    },
-   "might_be_wrong": "The shared assumption is that gold trades on real yields and the dollar, plus a geopolitical kicker. That is exactly how the gold-events model is built. This week that framework failed: real yields fell and the dollar was flat, yet gold fell 3.63% in a day and silver fell more. The more likely drivers are flows the model does not see: central-bank buying halving, the haven premium unwinding as the risk index fell, and broad position-cutting. If so, a supportive move in real yields after the midterms may not lift gold until the selling is done. The model's forecast (scored on 0 weeks) and calm volatility are weak comfort. A second warning comes from em-macro's emerging-market election study. In-sample, currency moves after elections partly reversed. Out of sample they continued instead, and the fade rule lost money. That evidence is not about gold or the US, but it argues against assuming the midterms will set off a quick rebound in prices that have already moved.",
-   "date": "2026-10-31",
+   "might_be_wrong": "The shared assumption is that real yields and the dollar explain gold, so a fall they did not cause will correct itself. Last week contradicts that: gold fell 3.07% and silver 8.52% with real yields almost unchanged. The model saying 'small bounce' uses exactly those drivers, so it cannot see the flows that caused the drop. It has also been scored on 0 weeks, and the gold series carries only a context badge. If the real driver is speculative exit plus slower central-bank buying (20.34 tonnes against 45.76), the consensus is anchored on the wrong variables. In that case it would underestimate further downside, and equally the speed of any rebound once selling exhausts. A second shared error would be treating the midterms as a big gold event in themselves; what matters is whether they move real yields.",
+   "date": "2026-11-01",
    "verified": true,
    "problems": []
   }

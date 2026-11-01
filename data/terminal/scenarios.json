@@ -1493,7 +1493,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.5
+     "p_ai": 0.45
     },
     {
      "id": "target_cut",
@@ -1556,7 +1556,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.35
+     "p_ai": 0.4
     }
    ],
    "markets": {
@@ -1568,46 +1568,46 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.65,
-    "date": "2026-10-30",
+    "p_yes": 0.6,
+    "date": "2026-11-01",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page has no computed base rate: em-macro records no Brazilian fiscal-target revisions. Instead I start from the two context cases on the page. Brazil cut the 2015 target in July 2015, mid-year. In April 2024 it cut the following year's target in the budget-guidelines bill. Neither cut came in the first quarter of the year being targeted. A rough prior that the target and rule survive a window ending 31 March is about two in three, which is my start.",
+    "base_rate_used": "The scenario page has no computed base rate; em-macro records no Brazilian fiscal-target revisions. My starting point is a judgement-based reference class built on the two context cases on the page: the 2015 target cut (made in July) and the April 2024 cut (made in the PLDO 2025). Both came outside a January–March window. Brazilian governments more often keep the target on paper and lean on exclusions than send a bill to change it within the first quarter. That puts my start modestly above even odds for YES.",
     "factors": [
      {
-      "text": "Timing favours YES. The window closes on 31 Mar 2027. The government's own 2027 budget bill claims compliance, with a counted surplus of R$83.4 billion (0.6% of GDP) against a target of R$73.2 billion. The natural place for any retreat is the next budget-guidelines bill in April, which changes the 2028 target, or a mid-year bimonthly report. A government that has just certified compliance rarely reverses within weeks. Meeting the target on paper through deductions and exclusions still resolves YES.",
-      "effect": "raises",
-      "source_ids": [
-       "pol:br-ploa-2027",
-       "pol:br-fiscal-framework",
-       "sc:br-fiscal-2027"
-      ]
-     },
-     {
-      "text": "The target is not credible on independent numbers, so a quick rewrite is a live option for the new term starting 5 Jan. The Focus 2027 primary-balance median is -0.3% of GDP, below the lower tolerance bound. IFI's scenario gives only R$0.9 billion counted for the target. IFI sees a potential 2027 deficit of 1.0% of GDP and calls for an adjustment of about 3 points. The Focus dispersion gauge is untested, so I lean on IFI more than on the survey spread.",
+      "text": "The gap between the target and independent estimates is large. The IFI sees a potential 2027 deficit of 1.0% of GDP and calls for an adjustment of roughly 3 points. In the IFI's scenario, the result counted for the target is a surplus of only R$0.9 billion, so about R$35.7 billion of spending would need freezing. The Focus 2027 median is -0.3% of GDP, below even the lower tolerance bound around the 0.5% target. A re-elected government starting its term on 5 Jan has both the motive and the early-term political capital to reset the target.",
       "effect": "lowers",
       "source_ids": [
-       "disp:2",
        "fa:ifi",
        "pol:br-fiscal-framework",
+       "disp:2",
+       "fc:BR.primary.2027",
        "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan"
       ]
      },
      {
-      "text": "Markets repriced hard after Lula's run-off win. The 10y rose 255bp on day 1 and BRL fell 8.4% on PTAX. Over the past week the DI Jan-29 proxy is up 227bp and USD/BRL up 6.67%. This shows investors expect looser policy. However, the bond and FX series are untested as fiscal-revision predictors, and the hold-out found bond-yield surprise regressions did not hold up. I read the selloff as pricing eventual loosening over the term, not a formal bill by 31 March. It lowers my estimate only a little.",
-      "effect": "lowers",
+      "text": "The resolution window is short, and the easier path is exclusions, not a formal bill. The 2027 budget already carries a R$33.8 billion payment that sits outside the spending cap but counts toward the target. Carve-outs like this let the government hit 0.5% on paper, which still counts as YES. Past cuts came in April or July, after this window closes. The first RARDP in March could propose a freeze instead of a change.",
+      "effect": "raises",
+      "source_ids": [
+       "pol:br-consumption-tax",
+       "pol:br-ploa-2027",
+       "sc:br-fiscal-2027"
+      ]
+     },
+     {
+      "text": "Markets have just punished the fiscal outlook hard. After the run-off, the 10y rose 255bp on day 1 and BRL fell 8.4% (PTAX). Over the week the DI Jan-29 proxy rose 205 bp and USD/BRL rose 7.61%. That market discipline raises the cost of sending a target-cut bill early in the new term. It pushes the government toward keeping the target and using one-offs, though not necessarily toward real credibility.",
+      "effect": "raises",
       "source_ids": [
        "em:6",
        "s:br.di.f29.proxy",
-       "s:br.usdbrl.ptax",
-       "badge:series"
+       "s:br.usdbrl.ptax"
       ]
      }
     ],
-    "what_would_change_view": "I would cut toward 40-45 if any of these appear: a finance minister named in late December or January who publicly questions the 0.5% target or LC 200; new exclusions in the 2027 budget (PLOA) vote in December paired with talk of a new rule; or the Focus 2027 primary-balance median falling further from -0.3%. I would raise toward 75 if the budget passes in December without a target change, a framework-keeping minister is named, and the DI curve retraces a meaningful part of the post-run-off move.",
-    "most_likely_wrong": "A re-elected Lula uses the political capital of a fresh term to send a bill rewriting LC 200/2023 in the first quarter, for example to exclude investment or set a new debt anchor. Markets' violent repricing may be correctly front-running exactly that. There is also a resolution risk: whether a bill filed by a legislator, rather than the government, counts as 'sent'.",
-    "brief": "#brief/2026-10-30"
+    "what_would_change_view": "I would move toward NO on any of these: ministers or the incoming finance minister publicly questioning the 0.5% target; Congress altering the 2027 target while voting the budget or guidelines in December; or a PLN or PLP appearing on the trackers. I would move toward YES if the December budget vote passes without new carve-outs and a finance minister named in January explicitly commits to the framework.",
+    "most_likely_wrong": "I may underrate how fast a re-elected government acts. It could change the 2027 target in the December budget and guidelines votes, or send a PLN in January–February while it has maximum political capital. On the other side, the market's post-run-off panic, which priced the framework as doomed, may be wrong about timing more than direction. No crowd signal here is tested: the Focus primary-balance dispersion badge is untested, so neither the survey gap nor the market move tells us when a formal cut comes.",
+    "brief": "#brief/2026-11-01"
    },
    "calculator": {
     "instrument": "DI29",
