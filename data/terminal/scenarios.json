@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T01:49:31Z",
+ "generated_at": "2026-11-01T22:46:27Z",
  "asymmetry_rules": {
   "gap_pp": 15,
   "reward_risk": 2.0,
@@ -29,7 +29,7 @@
     "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
     "importance": 3
    },
-   "days_to_event": 27,
+   "days_to_event": 26,
    "base_rate": {
     "kind": "rating_review",
     "reference_class": "S&P actions on the six EU sovereigns em-macro tracks (France, Germany, Italy, Spain, UK, Poland) since 2014, when the EU began requiring a published calendar of scheduled sovereign reviews, where the outlook going in was stable.",
@@ -346,7 +346,7 @@
     "yes_is_good": false,
     "market_yes": 0.265,
     "market_source": "prediction market",
-    "days": 27,
+    "days": 26,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -365,7 +365,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 27,
+      "value": 26,
       "ok": true
      }
     },
@@ -396,7 +396,7 @@
     "source": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
     "importance": 3
    },
-   "days_to_event": 40,
+   "days_to_event": 39,
    "base_rate": {
     "kind": "budget_cycles",
     "reference_class": "Every French budget cycle in em-macro's calendar (budget laws for 2006-2026): was the budget law promulgated by 31 December, and did it need Article 49.3 or a special law? The subset since June 2022, when the government lost its majority, is shown separately.",
@@ -828,7 +828,7 @@
     "yes_is_good": true,
     "market_yes": 0.505,
     "market_source": "prediction market",
-    "days": 40,
+    "days": 39,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -847,7 +847,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 40,
+      "value": 39,
       "ok": true
      }
     },
@@ -877,7 +877,7 @@
     "source": "https://www.interieur.gouv.fr/Elections",
     "importance": 3
    },
-   "days_to_event": 176,
+   "days_to_event": 175,
    "base_rate": {
     "kind": "election_polls",
     "reference_class": "Final pre-vote polls in presidential run-offs: France 2012-2022, and all run-offs in em-macro's 13 countries. These are final polls; six months out the error is larger.",
@@ -1274,7 +1274,7 @@
     "yes_is_good": false,
     "market_yes": 0.4422,
     "market_source": "prediction market",
-    "days": 176,
+    "days": 175,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -1293,7 +1293,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 176,
+      "value": 175,
       "ok": true
      }
     },
@@ -1326,7 +1326,7 @@
     "source": "https://www12.senado.leg.br/radio/1/noticia/2026/01/05/posse-presidencial-em-2027-sera-em-5-de-janeiro-e-governadores-tomam-posse-no-dia-6",
     "importance": 3
    },
-   "days_to_event": 66,
+   "days_to_event": 65,
    "base_rate": {
     "kind": "none",
     "reference_class": null,
@@ -1644,7 +1644,7 @@
     "yes_is_good": true,
     "market_yes": null,
     "market_source": null,
-    "days": 66,
+    "days": 65,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -1663,7 +1663,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 66,
+      "value": 65,
       "ok": true
      }
     },
@@ -1715,7 +1715,7 @@
     "source": "https://www.ine.mx/",
     "importance": 3
    },
-   "days_to_event": 218,
+   "days_to_event": 217,
    "base_rate": {
     "kind": "election_polls",
     "reference_class": "Mexico's midterm legislative elections in em-macro (2009, 2015, 2021): final-poll leader vs result. In 2021 the governing coalition kept its majority but lost two-thirds.",
@@ -2000,8 +2000,8 @@
     "name": "USD/MXN",
     "kind": "fx",
     "series": "mx.usdmxn.fix",
-    "current": 18.8148,
-    "as_of": "2026-10-29",
+    "current": 18.7962,
+    "as_of": "2026-10-30",
     "unit": "MXN per USD",
     "good_branch": "majority",
     "bad_branch": "supermajority",
@@ -2023,14 +2023,14 @@
      "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "default_basis": "today's level plus the expected move of the good and bad branches",
-    "good_level": 18.764,
-    "bad_level": 20.1713
+    "good_level": 18.7455,
+    "bad_level": 20.1514
    },
    "asymmetry": {
     "yes_is_good": false,
     "market_yes": null,
     "market_source": null,
-    "days": 218,
+    "days": 217,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -2049,7 +2049,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 218,
+      "value": 217,
       "ok": false
      }
     },
@@ -2079,7 +2079,7 @@
     "source": "https://ustr.gov/sites/default/files/files/agreements/FTA/USMCA/Text/34-Final-Provisions.pdf",
     "importance": 3
    },
-   "days_to_event": 243,
+   "days_to_event": 242,
    "base_rate": {
     "kind": "none",
     "reference_class": null,
@@ -2263,8 +2263,8 @@
     "name": "USD/MXN",
     "kind": "fx",
     "series": "mx.usdmxn.fix",
-    "current": 18.8148,
-    "as_of": "2026-10-29",
+    "current": 18.7962,
+    "as_of": "2026-10-30",
     "unit": "MXN per USD",
     "good_branch": "extended",
     "bad_branch": "withdrawal",
@@ -2286,14 +2286,14 @@
      "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "default_basis": "today's level plus the expected move of the good and bad branches",
-    "good_level": 18.4385,
-    "bad_level": 21.4
+    "good_level": 18.4203,
+    "bad_level": 21.3788
    },
    "asymmetry": {
     "yes_is_good": true,
     "market_yes": null,
     "market_source": null,
-    "days": 243,
+    "days": 242,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -2312,7 +2312,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 243,
+      "value": 242,
       "ok": false
      }
     },

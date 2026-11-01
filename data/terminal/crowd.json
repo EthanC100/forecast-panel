@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T01:49:34Z",
+ "generated_at": "2026-11-01T22:46:30Z",
  "gauges": [
   {
    "id": "a",
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-10-30T10:23:18Z",
+      "fetched_at": "2026-11-01T22:46:09Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1383,7 +1383,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 27,
+   "days": 26,
    "score": 0.742,
    "signals": [
     {
@@ -1406,7 +1406,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 66,
+   "days": 65,
    "score": 0.7,
    "signals": [
     {
@@ -1428,7 +1428,7 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 40,
+   "days": 39,
    "score": 0.008,
    "signals": [
     {
@@ -1445,7 +1445,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 176,
+   "days": 175,
    "score": 0,
    "signals": []
   }
