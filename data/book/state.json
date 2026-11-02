@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-01T22:46:23Z",
- "as_of": "2026-11-01",
+ "generated_at": "2026-11-02T21:48:47Z",
+ "as_of": "2026-11-02",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
  "start_date": "2026-10-29",
@@ -329,6 +329,10 @@
    [
     "2026-10-30",
     100000.0
+   ],
+   [
+    "2026-11-02",
+    100000.0
    ]
   ],
   "worst_drawdown": {
@@ -411,10 +415,10 @@
    "description": "long OAT vs Bund",
    "since_start": null,
    "last_12m": {
-    "from": "2025-11-01",
+    "from": "2025-12-01",
     "to": "2026-09-01",
-    "pnl_usd": -1472.0,
-    "return_pct": -1.47
+    "pnl_usd": -1760.0,
+    "return_pct": -1.76
    }
   },
   {

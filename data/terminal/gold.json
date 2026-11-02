@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-01T22:46:35Z",
- "as_of": "2026-11-01",
+ "generated_at": "2026-11-02T21:48:56Z",
+ "as_of": "2026-11-02",
  "prices": {
   "gold": {
    "value": 3884.8999,
@@ -114,11 +114,11 @@
  ],
  "model": {
   "available": true,
-  "log_date": "2026-10-28",
+  "log_date": "2026-11-02",
   "version": "v2-rolling",
-  "data_as_of": "2026-10-27",
-  "pred_gold_5d_pct": 0.27,
-  "pred_silver_5d_pct": -0.71,
+  "data_as_of": "2026-10-30",
+  "pred_gold_5d_pct": 0.47,
+  "pred_silver_5d_pct": 1.02,
   "source_url": "https://github.com/EthanC100/gold-events/blob/main/data/forward_log.csv",
   "scorecard_url": "https://github.com/EthanC100/gold-events/blob/main/reports/forward_scorecard.md",
   "n_scored": 0,
@@ -131,6 +131,17 @@
     "data_as_of": "2026-10-27",
     "pred_gold_5d_pct": 0.27,
     "pred_silver_5d_pct": -0.71,
+    "realised_gold_5d_pct": null,
+    "realised_silver_5d_pct": null,
+    "gpr_level": 165.3,
+    "note": "prediction uses last week's control changes as the coming week's input"
+   },
+   {
+    "log_date": "2026-11-02",
+    "version": "v2-rolling",
+    "data_as_of": "2026-10-30",
+    "pred_gold_5d_pct": 0.47,
+    "pred_silver_5d_pct": 1.02,
     "realised_gold_5d_pct": null,
     "realised_silver_5d_pct": null,
     "gpr_level": 165.3,
