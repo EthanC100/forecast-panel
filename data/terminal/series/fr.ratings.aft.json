@@ -15,11 +15,11 @@
   "date",
   "ref"
  ],
- "fetched_at": "2026-10-31T01:38:25Z",
- "updated_at": "2026-10-31T01:38:25Z",
- "n": 18,
+ "fetched_at": "2026-11-03T03:30:12Z",
+ "updated_at": "2026-11-03T03:30:12Z",
+ "n": 24,
  "first": "2026-10-29",
- "last": "2026-10-31",
+ "last": "2026-11-03",
  "history": [
   ["2026-10-29","DBRS",["AA","Negative","18 September 2026","-"],["18 September 2026"]],
   ["2026-10-29","Fitch",["A+","Stable","28 August 2026","-"],["28 August 2026"]],
@@ -38,6 +38,12 @@
   ["2026-10-31","KBRA",["AA-","Stable","12 June 2026","11 December 2026"],["12 June 2026","11 December 2026"]],
   ["2026-10-31","Moody's",["Aa3","Negative","23 October 2026","-"],["23 October 2026"]],
   ["2026-10-31","Scope",["A+","Stable","18 September 2026","-"],["18 September 2026"]],
-  ["2026-10-31","Standard & Poor's",["A+","Stable","29 May 2026","27 November 2026"],["29 May 2026","27 November 2026"]]
+  ["2026-10-31","Standard & Poor's",["A+","Stable","29 May 2026","27 November 2026"],["29 May 2026","27 November 2026"]],
+  ["2026-11-03","DBRS",["AA","Negative","18 September 2026","-"],["18 September 2026"]],
+  ["2026-11-03","Fitch",["A+","Negative","30 October 2026","-"],["30 October 2026"]],
+  ["2026-11-03","KBRA",["AA-","Stable","12 June 2026","11 December 2026"],["12 June 2026","11 December 2026"]],
+  ["2026-11-03","Moody's",["Aa3","Negative","23 October 2026","-"],["23 October 2026"]],
+  ["2026-11-03","Scope",["A+","Stable","18 September 2026","-"],["18 September 2026"]],
+  ["2026-11-03","Standard & Poor's",["A+","Stable","29 May 2026","27 November 2026"],["29 May 2026","27 November 2026"]]
  ]
 }

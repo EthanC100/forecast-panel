@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T01:33:19Z",
+ "generated_at": "2026-11-03T03:43:49Z",
  "source": "https://raw.githubusercontent.com/EthanC100/em-macro/main/results/systematic/",
  "source_page": "https://github.com/EthanC100/em-macro/tree/main/results/systematic",
  "as_of": "2026-09",
@@ -105,9 +105,9 @@
     "instrument": "BR10Y",
     "name": "Brazil 10-year proxy (longest Tesouro Prefixado)",
     "direction": "short",
-    "level": 15.06,
-    "level_date": "2026-10-29",
-    "suggested_stop": 14.32,
+    "level": 15.29,
+    "level_date": "2026-10-30",
+    "suggested_stop": 14.55,
     "stop_basis": "2 monthly sd of the excess return (4.08%) / duration 5.5 = 0.74 pp of yield"
    }
   },

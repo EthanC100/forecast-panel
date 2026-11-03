@@ -1,0 +1,37 @@
+{
+ "id": "ks.KXFRENCHPRES1R-27APR18",
+ "name": "Will anyone win the next French presidential election in the first round?: First-round winner",
+ "country": "FR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Kalshi",
+ "source_id": "KXFRENCHPRES1R-27APR18",
+ "source_url": "https://kalshi.com/markets/KXFRENCHPRES1R",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-11-03T03:32:32Z",
+ "updated_at": "2026-11-03T03:32:32Z",
+ "n": 14,
+ "first": "2026-10-20",
+ "last": "2026-11-02",
+ "history": [
+  ["2026-10-20",0.03],
+  ["2026-10-21",0.04],
+  ["2026-10-22",0.04],
+  ["2026-10-23",0.045],
+  ["2026-10-24",0.045],
+  ["2026-10-25",0.05],
+  ["2026-10-26",0.04],
+  ["2026-10-27",0.05],
+  ["2026-10-28",0.035],
+  ["2026-10-29",0.035],
+  ["2026-10-30",0.05],
+  ["2026-10-31",0.05],
+  ["2026-11-01",0.055],
+  ["2026-11-02",0.055]
+ ]
+}
