@@ -1565,46 +1565,46 @@
    "ai": {
     "available": true,
     "p_yes": 0.65,
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page has no computed base rate; em-macro records no Brazilian fiscal-target revisions. My starting point is the page's context: Brazil cut a self-set primary target in July 2015 (mid-year, under fiscal stress) and in April 2024 (the following year's target, inside the PLDO). That suggests revisions are a real risk, but they usually come with the April budget-guidelines cycle, after this question's 31 March window closes. I start near 70% that the target and rule survive to 31 March.",
+    "base_rate_used": "The scenario page has no computed base rate: em-macro records no Brazilian fiscal-target revisions. I start from a judgement reference class instead. Brazil cut self-set targets in July 2015 and April 2024, but in both cases the cut came with or after mid-year reviews or the April budget-guidelines bill, not in the first quarter. Re-elected or new governments usually prefer workarounds to formal cuts in the first months. That points to a starting point of about two in three that the formal target and rule survive to 31 March.",
     "factors": [
      {
-      "text": "The government's own 2027 budget bill says the framework is met. It shows a counted surplus of R$83.4 billion against a R$73.2 billion target, and the target has a tolerance band of 0.25 point of GDP either side. A re-elected government entering its new term on 5 January has little reason to formally cut a target it claims to be meeting within its first three months. The more natural place to move goalposts is the April budget-guidelines cycle, which falls outside the window.",
+      "text": "Independent estimates are far below the 0.5% target. The IFI sees an effective 2027 surplus of only 0.1% of GDP, and a potential deficit of 1.0%, with about R$40 billion unbudgeted. The Focus median is -0.3%, below even the lower tolerance bound. That builds pressure to rewrite the target. But the 'official optimism gap' gauge is untested, so this is a direction, not a timing signal.",
+      "effect": "lowers",
+      "source_ids": [
+       "pol:br-ploa-2027",
+       "fa:ifi",
+       "fc:BR.primary.2027",
+       "disp:2",
+       "badge:d"
+      ]
+     },
+     {
+      "text": "The window is short and the government's own numbers say the target is met: the budget bill counts a surplus of 0.6% of GDP against the 0.5% target. The new term starts 5 January. The first 2027 bimonthly report (around 22 March) is built on budget-time assumptions, so it is more likely to freeze spending or lean on deductions than to propose a cut before 31 March. That favours the 'kept on paper' branch, which still resolves YES.",
       "effect": "raises",
       "source_ids": [
        "pol:br-fiscal-framework",
        "ev:2027-01-05-br-presidential-inauguration-5-jan-not-1-jan",
-       "sc:br-fiscal-2027"
+       "ev:2026-12-17-br-2027-budget-ploa-vote-in-congress"
       ]
      },
      {
-      "text": "Independent estimates sit far from the target. IFI puts the counted 2027 result at only R$0.9 billion, below even the lower tolerance bound, and says about R$35.7 billion of spending would have to be frozen. IFI also sees a potential 2027 deficit of 1.0% of GDP. The Focus 2027 median is -0.3% of GDP against the 0.5% target, though that dispersion gauge is untested. A spending freeze of that size early in a new term is politically hard, so the first bimonthly report around 22 March could instead propose a change.",
+      "text": "Markets have repriced sharply for fiscal loosening since Lula's run-off win: the DI Jan-29 proxy rose 212bp and the real fell 7.61% in a week. That makes a formal loosening plausible. It also raises the cost of one, which argues for quiet workarounds over a bill. The CBS transition adds a R$33.8 billion payment that counts toward the target, one more source of pressure.",
       "effect": "lowers",
       "source_ids": [
-       "pol:br-fiscal-framework",
-       "fa:ifi",
-       "disp:2",
-       "fc:BR.primary.2027",
-       "badge:series"
-      ]
-     },
-     {
-      "text": "Markets already treat the post-run-off fiscal path as at risk. USD/BRL rose 7.61% in the week to 30 October, and the DI Jan-29 proxy rose from 12.81% to 14.86%. This cuts both ways. It raises the chance that fiscal looseness is the plan. It also gives the finance team a strong reason to defend the formal target in the short run, as the BCB's FX swap rollovers show officials managing stress rather than adding to it.",
-      "effect": "lowers",
-      "source_ids": [
-       "s:br.usdbrl.ptax",
-       "s:br.di.f29.proxy",
        "em:6",
-       "h:b0d99a48"
+       "s:br.di.f29.proxy",
+       "s:br.usdbrl.ptax",
+       "pol:br-consumption-tax"
       ]
      }
     ],
-    "what_would_change_view": "I would move down if the December PLOA or LDO vote changes the 2027 target, or if a PLP is floated to alter the LC 200/2023 limits. I would also move down if the January finance-minister pick signals a framework rewrite, or if ministers publicly question the 0.5% target. I would move up if the PLOA passes in December without new exclusions and the Focus 2027 primary median moves toward the target.",
-    "most_likely_wrong": "The crowd's error may be treating 'will miss the target' as the same as 'will change the target'. Focus and IFI forecasts measure the first; this question resolves on the second, which is one reason I stay above even odds. My most likely error runs the other way: the LDO 2027 may still be open in Congress during the December budget session. That would let the target be lowered quietly by amendment before the window even starts in earnest, which my April-timing argument does not cover.",
-    "brief": "#brief/2026-11-02"
+    "what_would_change_view": "I would lower P(yes) if ministers publicly question the 0.5% target, if a PLN or PLP is drafted in December or January, if the December budget vote adds new carve-outs written into LC 200 itself, or if the new finance minister talks of 'revising' the framework. I would raise it if the first finance minister named commits to the framework and the March report announces a large spending freeze.",
+    "most_likely_wrong": "A newly re-elected Lula moves fast: in 2023 his government replaced the spending ceiling within months. Facing an IFI estimate of a 1.0% deficit, the government could send a bill early in 2027, before the April budget-guidelines cycle, to reset the 2027 target. That would collapse the 'kept on paper' branch, which carries most of my YES.",
+    "brief": "#brief/2026-11-03"
    },
    "calculator": {
     "instrument": "DI29",
@@ -1953,42 +1953,42 @@
    "ai": {
     "available": true,
     "p_yes": 0.35,
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page has no direct base rate for keeping two-thirds. Its reference class (Mexico's midterms in 2009, 2015 and 2021) says only that the final-poll leader won 3 of 3, with an RMS poll error of 4.12 pp. The closest precedent is 2021, when the governing coalition kept its majority but lost two-thirds. My starting point is that a midterm usually trims the governing bloc and that holding 334 of 500 seats is the harder outcome. That puts the start somewhat below even.",
+    "base_rate_used": "The scenario page's base rate (final-poll leader won 3 of 3 Mexican midterms, 2009, 2015 and 2021; RMS poll error 4.12 pp) is about who comes first, not about a two-thirds majority. So there is no computed base rate for this exact question. I start from the same three-midterm reference class, read for supermajority retention. The only case described as starting from a governing supermajority is 2021, when the coalition kept its majority but lost two-thirds. That points to a starting point below even odds, which I take as roughly 35-40%.",
     "factors": [
      {
-      "text": "Reference-class pull downward: in the one recent midterm of a dominant governing coalition (2021) it kept its majority but lost two-thirds. The page's signpost says two-thirds needs roughly 55% of the vote plus the over-representation cap, a high bar to clear twice in a row.",
+      "text": "Midterm precedent: in 2021 the governing coalition kept its majority but lost two-thirds. A two-thirds bloc needs a high vote share (the page's signpost is above 55%) plus favourable over-representation rulings, and both are harder to repeat in a midterm than in a presidential year.",
       "effect": "lowers",
       "source_ids": [
-       "sc:mx-midterms-2027",
-       "primer:MX"
+       "sc:mx-midterms-2027"
       ]
      },
      {
-      "text": "Morena's dominance is not in doubt: Polymarket gives it 86.6% and Kalshi 86% to win the most seats. In 2024 Sheinbaum beat her 17 pp poll lead by winning by 33 pp, so polls have recently understated this coalition. But these markets are related-only (most seats, not two-thirds), and prediction-market gauges are tested_no_lead, so they get little weight.",
+      "text": "Morena remains dominant. Polymarket gives it 87.4% to win the most seats and Kalshi 86.0%, and in 2024 Sheinbaum won by 33pp, well beyond her 17pp poll lead. These markets only price coming first, which every branch except a large loss satisfies, so they say little about two-thirds.",
       "effect": "raises",
       "source_ids": [
        "pm:2271403",
        "ks:KXMEXICODEPUTIES-27-MORENA",
-       "em:6",
-       "badge:series"
+       "em:6"
       ]
      },
      {
-      "text": "The vote is seven months away, and the page notes poll errors are larger that far out than the 4.12 pp final-poll figure. The seat count also depends on INE's over-representation rulings, which a headline poll margin cannot capture (em-macro's 2024 lesson). That widens the spread of outcomes rather than shifting the centre.",
+      "text": "The economic backdrop is soft for a ruling party heading into a midterm. The 2026 growth median is 1.4%, the 2027 package consolidates less (RFSP deficit 3.9%) and depends on record tax collection and tight spending, and US trade friction continues ahead of the July 2027 USMCA review.",
       "effect": "lowers",
       "source_ids": [
-       "sc:mx-midterms-2027",
-       "em:6"
+       "fc:MX.gdp.2026",
+       "pol:mx-paquete-2027",
+       "fa:mexico-evalua",
+       "primer:MX"
       ]
      }
     ],
-    "what_would_change_view": "I would move up if early-2027 polls put the coalition's vote share above 55%, or if INE signals it will apply over-representation as leniently as in 2024. I would move down if PAN-PRI or MC form district alliances, or if coalition polling falls into the 45-55% band. The crowd's likely shared error is reading the 86.6% 'most seats' price as confidence in two-thirds. Those are different questions, and the gap between them is where the market risk sits (the 2024 peso fell sharply on the supermajority, not the presidency).",
-    "most_likely_wrong": "Sheinbaum's popularity and a fragmented opposition could repeat 2024. The coalition's vote share and INE's seat formula could then deliver two-thirds comfortably, as when polls understated Morena's margin by a wide amount in 2024.",
-    "brief": "#brief/2026-11-02"
+    "what_would_change_view": "I would move up if early-2027 polls put the coalition's combined vote above 55%, or if the INE confirms the 2024 reading of the coalition over-representation rules. I would move down if coalition polls fall into the 45-55% band or the opposition forms PAN-PRI or MC alliances in key districts. Candidate registration in January 2027 is the first hard signpost.",
+    "most_likely_wrong": "The midterm-loss pattern may not apply: Sheinbaum's popularity and a fragmented opposition could repeat 2024, when the result beat the polls by a wide margin. Over-representation rulings could also convert a vote share near 55% into two-thirds of seats. Separately, the crowd may be making the opposite mistake to mine: the only liquid markets price 'most seats', so a headline near 87% can be misread as confidence in a supermajority. Prediction-market signals are tested_no_lead and pollster house effects are untested, so neither deserves much weight.",
+    "brief": "#brief/2026-11-03"
    },
    "calculator": {
     "instrument": "USDMXN",
@@ -2128,7 +2128,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.6
+     "p_ai": 0.55
     },
     {
      "id": "bilateral",
@@ -2176,7 +2176,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.1
+     "p_ai": 0.15
     }
    ],
    "markets": {
@@ -2214,42 +2214,44 @@
    "ai": {
     "available": true,
     "p_yes": 0.15,
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page has no computed base rate: this is the agreement's first review cycle and em-macro has no trade-agreement events. I start from the nearest market price, Polymarket's 8.5% for an extension in 2026 (pm:2761052). That market covers the earlier review, not this question. The scenario's own event note implies the 2026 review ended without an extension. I then widen the starting point for the extra time to 1 July 2027.",
+    "base_rate_used": "The scenario page has no computed base rate: this is the agreement's first review cycle and em-macro has no trade-agreement events. As a last resort I start from market prices on the earlier, 2026 version of the question: Kalshi puts a formal 16-year extension in 2026 at 12.0% and Polymarket puts USMCA extended in 2026 at 8.5%. Our question runs to 1 July 2027, so the window is longer and the starting point sits slightly higher, around 10-15%.",
     "factors": [
      {
-      "text": "At the first chance to extend, in 2026, the crowd gave only 8.5% to an extension. The default under art. 34.7 is a cycle of annual reviews, so the US keeps the review as standing leverage. YES needs all three governments to confirm in writing, which is a high bar, and the default favours the annual branch.",
+      "text": "The 2026 review is ending without a 16-year extension. The markets for an extension this year are low (12.0% and 8.5%). Under art. 34.7, failing to extend means annual joint reviews, with the next on 1 July 2027. Annual reviews are the default path, and they give Washington yearly leverage it has little reason to give up. The extra months to July 2027 raise the odds only modestly above the 2026 prices.",
       "effect": "lowers",
       "source_ids": [
        "pm:2761052",
-       "sc:usmca-2027"
+       "ks:KXUSMCAOUTCOMES-27-16Y",
+       "ev:2027-07-01-mx-usmca-annual-joint-review"
       ]
      },
      {
-      "text": "Kalshi gives 24% to a trilateral revised deal in 2026. A revised text is the most natural vehicle for an extension, and recent USTR releases show the US and Mexico settling disputes cooperatively (Rapid Response labour case, Minera Peñasquito remediation). That keeps extension a live path rather than a tail.",
-      "effect": "raises",
-      "source_ids": [
-       "ks:KXUSMCAOUTCOMES-27-TRI",
-       "h:384c65f0",
-       "h:e9cc9e5e"
-      ]
-     },
-     {
-      "text": "US trade decisions often arrive off-calendar. Mexico's June 2027 midterms fall just before the 1 July review, and Morena's possible supermajority is itself a US concern. Both give Washington reasons to hold back a 16-year commitment until after the vote.",
+      "text": "Kalshi prices a US withdrawal notice in 2026 at 13.0%, at or above the extension odds. A Trilateral revised deal in 2026 is priced at 24.0% and a formal amendment at 11.0%. The crowd sees renegotiation and threats as more likely than a clean renewal. A written confirmation from all three parties needs every capital to agree at once, and Canada's withdrawal notice is priced at 5.0%, so the US is not the only party in play.",
       "effect": "lowers",
       "source_ids": [
-       "primer:US",
-       "primer:MX",
-       "ev:2027-06-06-mx-midterm-elections-chamber-of-deputies-governorsh"
+       "ks:KXUSMCAOUTCOMES-27-USW",
+       "ks:KXUSMCAOUTCOMES-27-TRI",
+       "ks:KXUSMCAOUTCOMES-27-AMEND",
+       "ks:KXUSMCAOUTCOMES-27-CANW"
+      ]
+     },
+     {
+      "text": "On 2 November USTR did two things at once. It sought Mexico's review of alleged denial of workers' rights at Madobox, and it announced a memorandum of understanding at Industrias Tecnos. The labour-enforcement channel is working and disputes are being settled one plant at a time. That is a mild sign a cooperative path still exists, which keeps the YES case alive rather than near zero. The 2027 public consultation, a placeholder dated 1 February 2027, is the formal step where an extension recommendation could appear.",
+      "effect": "raises",
+      "source_ids": [
+       "h:59b31650",
+       "h:822df56f",
+       "ev:2027-02-01-mx-ustr-public-consultation-for-the-2027-usmca-revi"
       ]
      }
     ],
-    "what_would_change_view": "I would move up if USTR's consultation report recommends extension, if US tariffs on Mexican goods are cut below 10%, or if a trilateral revised text is signed. Any of these would make a written confirmation by 1 July 2027 plausible. I would move down toward the bilateral or withdrawal branches if the US proposes separate US-Mexico and US-Canada texts, or if officials describe withdrawal as leverage. A collapse of the next US-Mexico bilateral round (placeholder date 30 November) would also push me down.",
-    "most_likely_wrong": "A political deal arrives as a package: tariff relief plus a revised text, signed with a 16-year extension before the US 2028 cycle. In that case thin, related-only markets and my status-quo default understate how quickly an extension can be granted once the US has extracted concessions.",
-    "brief": "#brief/2026-11-02"
+    "what_would_change_view": "I would move up if USTR's 2027 consultation report recommends extension, or if US tariffs on Mexican goods are cut below 10% (the scenario's signposts). A joint statement after the next US-Mexico bilateral round, currently a placeholder for 30 November, would also count. I would move down if US officials describe withdrawal as leverage, a Federal Register notice appears, or the US proposes separate bilateral texts. Today's US midterm result matters too, as it shapes how much the administration wants a trade win versus continued leverage.",
+    "most_likely_wrong": "An administration that prizes deals could trade a headline 16-year extension for Mexican and Canadian concessions before July 2027, timed as a political win. Low-volume prediction markets (volumes in the low thousands) would not anticipate that kind of unscheduled announcement. The pm. and ks. signals are badged tested_no_lead, so the market starting point itself deserves little weight.",
+    "brief": "#brief/2026-11-03"
    },
    "calculator": {
     "instrument": "USDMXN",
