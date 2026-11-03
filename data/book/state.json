@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T03:43:39Z",
+ "generated_at": "2026-11-03T23:58:31Z",
  "as_of": "2026-11-03",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
@@ -45,8 +45,8 @@
    "country": "MX",
    "series": "mx.usdmxn.fix",
    "proxy": false,
-   "value": 18.7962,
-   "date": "2026-10-30",
+   "value": 18.7592,
+   "date": "2026-11-03",
    "close_utc": "18:30",
    "low_frequency": false,
    "note": null,
@@ -386,15 +386,15 @@
    "description": "long USD",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-10-30",
-    "pnl_usd": -106.23,
-    "return_pct": -0.11
+    "to": "2026-11-03",
+    "pnl_usd": -332.78,
+    "return_pct": -0.33
    },
    "last_12m": {
     "from": "2025-11-03",
-    "to": "2026-10-30",
-    "pnl_usd": -1418.73,
-    "return_pct": -1.42
+    "to": "2026-11-03",
+    "pnl_usd": -1641.79,
+    "return_pct": -1.64
    }
   },
   {

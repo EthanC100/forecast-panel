@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T03:43:40Z",
+ "generated_at": "2026-11-03T23:58:33Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -43,21 +43,21 @@
    "series_candidates": [
     "mx.usdmxn.fix"
    ],
-   "level": 18.7962,
-   "as_of": "2026-10-30",
-   "chg_1w": 0.692,
-   "chg_1m": 4.023,
-   "chg_1w_from": "2026-10-23",
-   "chg_1m_from": "2026-09-30",
-   "z_1y": 2.44,
-   "n_1y": 251,
+   "level": 18.7592,
+   "as_of": "2026-11-03",
+   "chg_1w": 0.572,
+   "chg_1m": 3.127,
+   "chg_1w_from": "2026-10-27",
+   "chg_1m_from": "2026-10-02",
+   "z_1y": 2.37,
+   "n_1y": 250,
    "unit": "MXN per USD",
    "meta": {
     "source": "Banxico SIE (public chart data)",
     "source_id": "SIE SF43718",
     "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
-    "as_of": "2026-10-30",
-    "fetched_at": "2026-11-03T03:29:50Z",
+    "as_of": "2026-11-03",
+    "fetched_at": "2026-11-03T23:58:12Z",
     "frequency": "daily",
     "series": "mx.usdmxn.fix",
     "evidence": {
@@ -354,7 +354,7 @@
     "source_id": "SIE SF44071",
     "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
     "as_of": "2026-10-22",
-    "fetched_at": "2026-11-03T03:29:52Z",
+    "fetched_at": "2026-11-03T23:58:13Z",
     "frequency": "per auction",
     "series": "mx.mbono10y.auction",
     "evidence": {
@@ -1901,8 +1901,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF43718",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
-      "as_of": "2026-10-30",
-      "fetched_at": "2026-11-03T03:29:50Z",
+      "as_of": "2026-11-03",
+      "fetched_at": "2026-11-03T23:58:12Z",
       "frequency": "daily",
       "series": "mx.usdmxn.fix",
       "evidence": {
@@ -1927,8 +1927,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF61745",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF61745,CF300,1",
-      "as_of": "2026-11-03",
-      "fetched_at": "2026-11-03T03:29:51Z",
+      "as_of": "2026-11-04",
+      "fetched_at": "2026-11-03T23:58:12Z",
       "frequency": "daily",
       "series": "mx.policy.target",
       "evidence": {
@@ -1953,8 +1953,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF43783",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43783,CF300,1",
-      "as_of": "2026-11-03",
-      "fetched_at": "2026-11-03T03:29:51Z",
+      "as_of": "2026-11-04",
+      "fetched_at": "2026-11-03T23:58:13Z",
       "frequency": "daily",
       "series": "mx.tiie28",
       "evidence": {
@@ -1980,7 +1980,7 @@
       "source_id": "SIE SF44071",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
       "as_of": "2026-10-22",
-      "fetched_at": "2026-11-03T03:29:52Z",
+      "fetched_at": "2026-11-03T23:58:13Z",
       "frequency": "per auction",
       "series": "mx.mbono10y.auction",
       "evidence": {
@@ -2039,9 +2039,9 @@
        "name": "Banxico survey median",
        "auto": "mx.survey.balance",
        "note": "the survey's 'balance económico' is the traditional public balance",
-       "value": -3.85,
+       "value": -3.9,
        "source": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
-       "as_of": "2026-09-01",
+       "as_of": "2026-10-01",
        "source_label": "Banxico SIE (public chart data)",
        "verified": true
       },
@@ -2052,7 +2052,7 @@
        "verified": true
       }
      ],
-     "gap": 0.23
+     "gap": 0.25
     }
    ],
    "surveys": [
@@ -2063,8 +2063,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
-      "as_of": "2026-09-01",
-      "fetched_at": "2026-11-03T03:29:54Z",
+      "as_of": "2026-10-01",
+      "fetched_at": "2026-11-03T23:58:16Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -2081,21 +2081,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": 3.87,
-       "sd": 0.18,
+       "median": 3.88,
+       "sd": 0.19,
        "respondents": null,
-       "min": 3.26,
-       "max": 4.25,
-       "sd_pct_10y": 20.0
+       "min": 3.28,
+       "max": 4.1,
+       "sd_pct_10y": 25.0
       },
       {
        "ref": "2027",
-       "median": 3.82,
-       "sd": 0.17,
+       "median": 3.85,
+       "sd": 0.19,
        "respondents": null,
-       "min": 3.5,
-       "max": 4.41,
-       "sd_pct_10y": 0.8
+       "min": 3.38,
+       "max": 4.25,
+       "sd_pct_10y": 1.7
       }
      ]
     },
@@ -2106,8 +2106,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459,CF300,1",
-      "as_of": "2026-09-01",
-      "fetched_at": "2026-11-03T03:29:56Z",
+      "as_of": "2026-10-01",
+      "fetched_at": "2026-11-03T23:58:19Z",
       "frequency": "monthly",
       "series": "mx.survey.gdp",
       "evidence": {
@@ -2124,21 +2124,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": 1.4,
-       "sd": 0.21,
+       "median": 1.5,
+       "sd": 0.27,
        "respondents": null,
-       "min": 0.84,
-       "max": 1.9,
-       "sd_pct_10y": 30.0
+       "min": 1.0,
+       "max": 2.1,
+       "sd_pct_10y": 49.2
       },
       {
        "ref": "2027",
-       "median": 1.8,
-       "sd": 0.25,
+       "median": 1.83,
+       "sd": 0.27,
        "respondents": null,
-       "min": 1.0,
-       "max": 2.2,
-       "sd_pct_10y": 2.5
+       "min": 1.2,
+       "max": 2.58,
+       "sd_pct_10y": 4.2
       }
      ]
     },
@@ -2149,8 +2149,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14770, SR14775, SR14773, SR14774, SR14777, SR14782, SR14780, SR14781 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14770,SR14775,SR14773,SR14774,SR14777,SR14782,SR14780,SR14781,CF300,1",
-      "as_of": "2026-09-01",
-      "fetched_at": "2026-11-03T03:29:58Z",
+      "as_of": "2026-10-01",
+      "fetched_at": "2026-11-03T23:58:21Z",
       "frequency": "monthly",
       "series": "mx.survey.usdmxn",
       "evidence": {
@@ -2167,21 +2167,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": 17.5,
-       "sd": 0.34,
+       "median": 18.39,
+       "sd": 0.44,
        "respondents": null,
-       "min": 16.8,
-       "max": 18.79,
-       "sd_pct_10y": 10.8
+       "min": 17.0,
+       "max": 19.0,
+       "sd_pct_10y": 30.8
       },
       {
        "ref": "2027",
-       "median": 18.04,
-       "sd": 0.47,
+       "median": 18.64,
+       "sd": 0.62,
        "respondents": null,
        "min": 17.0,
-       "max": 19.49,
-       "sd_pct_10y": 1.7
+       "max": 19.8,
+       "sd_pct_10y": 20.0
       }
      ]
     },
@@ -2192,8 +2192,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
-      "as_of": "2026-09-01",
-      "fetched_at": "2026-11-03T03:30:00Z",
+      "as_of": "2026-10-01",
+      "fetched_at": "2026-11-03T23:58:23Z",
       "frequency": "monthly",
       "series": "mx.survey.balance",
       "evidence": {
@@ -2210,21 +2210,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": -3.85,
-       "sd": 0.25,
+       "median": -3.9,
+       "sd": 0.32,
        "respondents": null,
-       "min": -4.2,
-       "max": -2.92,
-       "sd_pct_10y": 5.8
+       "min": -5.0,
+       "max": -3.0,
+       "sd_pct_10y": 18.3
       },
       {
        "ref": "2027",
        "median": -3.7,
-       "sd": 0.31,
+       "sd": 0.33,
        "respondents": null,
-       "min": -4.1,
-       "max": -2.72,
-       "sd_pct_10y": 9.2
+       "min": -4.5,
+       "max": -2.75,
+       "sd_pct_10y": 12.5
       }
      ]
     }
@@ -2768,7 +2768,7 @@
     "country": "MX",
     "error": "HTTPError: 413 Client Error: Request Entity Too Large for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14659,SR14664,SR14662,SR14663,SR14666,SR14671,SR14669,SR14670,SR14673,SR14678,SR14676,SR14677,SR14680,SR14685,SR14683,SR14684,SR14687,SR14692,SR14690,SR14691,SR14694,SR14699,SR14697,SR14698,SR14701,SR14706,SR14704,SR14705,SR14708,SR14713,SR14711,SR14712/datos",
     "fallback_for": null,
-    "last_attempt": "2026-11-03T03:29:23Z",
+    "last_attempt": "2026-11-03T23:57:45Z",
     "last_success": "2026-10-30T04:17:37Z",
     "n_series": 9,
     "name": "Banxico SIE API",
@@ -2793,8 +2793,8 @@
     "country": "MX",
     "error": null,
     "fallback_for": "banxico_api",
-    "last_attempt": "2026-11-03T03:29:49Z",
-    "last_success": "2026-11-03T03:29:49Z",
+    "last_attempt": "2026-11-03T23:58:11Z",
+    "last_success": "2026-11-03T23:58:11Z",
     "n_series": 9,
     "name": "Banxico SIE public chart data (fallback)",
     "note": null,
@@ -3303,7 +3303,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-03T03:43:38Z"
+  "updated_at": "2026-11-03T23:58:31Z"
  },
  "series_index": [
   "br.cot.brl",

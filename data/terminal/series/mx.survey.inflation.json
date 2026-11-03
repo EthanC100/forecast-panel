@@ -17,11 +17,11 @@
   "date",
   "ref"
  ],
- "fetched_at": "2026-11-03T03:29:54Z",
- "updated_at": "2026-10-30T04:17:40Z",
- "n": 655,
+ "fetched_at": "2026-11-03T23:58:16Z",
+ "updated_at": "2026-11-03T23:57:48Z",
+ "n": 657,
  "first": "1999-01-01",
- "last": "2026-09-01",
+ "last": "2026-10-01",
  "titles": {
   "SR14139": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Mediana",
   "SR14144": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de Inflación Anual Cifras en por ciento Inflación general Al cierre del año en curso (año t) Desviación estándar",
@@ -687,6 +687,8 @@
   ["2026-08-01","2026",3.9,0.2,3.29,4.3],
   ["2026-08-01","2027",3.84,0.21,3.5,4.54],
   ["2026-09-01","2026",3.87,0.18,3.26,4.25],
-  ["2026-09-01","2027",3.82,0.17,3.5,4.41]
+  ["2026-09-01","2027",3.82,0.17,3.5,4.41],
+  ["2026-10-01","2026",3.88,0.19,3.28,4.1],
+  ["2026-10-01","2027",3.85,0.19,3.38,4.25]
  ]
 }

@@ -28,11 +28,11 @@
   "SR14704": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Mínimo",
   "SR14705": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Expectativas de la Tasa de Fondeo Interbancario al Cierre del Trimestre Indicado Cifras en por ciento Tasa de fondeo interbancario Cierre dentro de seis trimestres (trimestre t+6) Máximo"
  },
- "fetched_at": "2026-11-03T03:30:08Z",
- "updated_at": "2026-10-30T04:36:03Z",
- "n": 388,
+ "fetched_at": "2026-11-03T23:58:31Z",
+ "updated_at": "2026-11-03T23:58:31Z",
+ "n": 390,
  "first": "2010-08-01",
- "last": "2026-09-01",
+ "last": "2026-10-01",
  "history": [
   ["2010-08-01","2010",4.5,0.13,4.5,4.92,"t+1"],
   ["2010-08-01","2011",5.0,0.63,4.5,6.82,"t+5"],
@@ -421,6 +421,8 @@
   ["2026-08-01","2026",6.5,0.06,6.25,6.5,"t+1"],
   ["2026-08-01","2027",6.5,0.27,5.75,7.25,"t+5"],
   ["2026-09-01","2026",6.5,0.04,6.5,6.75,"t+1"],
-  ["2026-09-01","2027",6.5,0.26,5.75,7.25,"t+5"]
+  ["2026-09-01","2027",6.5,0.26,5.75,7.25,"t+5"],
+  ["2026-10-01","2026",6.5,0.08,6.25,6.75,"t+0"],
+  ["2026-10-01","2027",6.5,0.23,6.0,7.25,"t+4"]
  ]
 }

@@ -17,11 +17,11 @@
   "date",
   "ref"
  ],
- "fetched_at": "2026-11-03T03:30:00Z",
- "updated_at": "2026-10-30T04:17:41Z",
- "n": 586,
+ "fetched_at": "2026-11-03T23:58:23Z",
+ "updated_at": "2026-11-03T23:57:49Z",
+ "n": 588,
  "first": "1999-01-01",
- "last": "2026-09-01",
+ "last": "2026-10-01",
  "titles": {
   "SR14938": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Mediana",
   "SR14943": "Encuestas Sobre las Expectativas de los Especialistas en Economía del Sector Privado Sector Público Balance Económico 1/ Cifras como porcentaje del PIB Para el cierre del año en curso (año t) Desviación estándar",
@@ -618,6 +618,8 @@
   ["2026-08-01","2026",-3.8,0.28,-4.3,-2.75],
   ["2026-08-01","2027",-3.7,0.39,-4.2,-2.5],
   ["2026-09-01","2026",-3.85,0.25,-4.2,-2.92],
-  ["2026-09-01","2027",-3.7,0.31,-4.1,-2.72]
+  ["2026-09-01","2027",-3.7,0.31,-4.1,-2.72],
+  ["2026-10-01","2026",-3.9,0.32,-5.0,-3.0],
+  ["2026-10-01","2027",-3.7,0.33,-4.5,-2.75]
  ]
 }

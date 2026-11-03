@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T03:43:45Z",
+ "generated_at": "2026-11-03T23:58:38Z",
  "gauges": [
   {
    "id": "a",
@@ -1055,11 +1055,11 @@
     {
      "label": "Banxico survey: 2026 inflation",
      "country": "MX",
-     "value": 0.18,
+     "value": 0.19,
      "unit": "pp (sd)",
-     "median": 3.87,
-     "as_of": "2026-09-01",
-     "percentile": 25.8,
+     "median": 3.88,
+     "as_of": "2026-10-01",
+     "percentile": 61.3,
      "percentile_basis": "vs the same month +/-1 over the previous 10 years",
      "extreme": false,
      "event": {
@@ -1075,8 +1075,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
-      "as_of": "2026-09-01",
-      "fetched_at": "2026-11-03T03:29:54Z",
+      "as_of": "2026-10-01",
+      "fetched_at": "2026-11-03T23:58:16Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1149,7 +1149,7 @@
      "official": -3.6,
      "independent_median": -3.8,
      "n_independent": 2,
-     "gap": 0.23,
+     "gap": 0.25,
      "verified": true
     }
    ]

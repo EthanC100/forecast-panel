@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T03:43:42Z",
+ "generated_at": "2026-11-03T23:58:35Z",
  "asymmetry_rules": {
   "gap_pp": 15,
   "reward_risk": 2.0,
@@ -1995,8 +1995,8 @@
     "name": "USD/MXN",
     "kind": "fx",
     "series": "mx.usdmxn.fix",
-    "current": 18.7962,
-    "as_of": "2026-10-30",
+    "current": 18.7592,
+    "as_of": "2026-11-03",
     "unit": "MXN per USD",
     "good_branch": "majority",
     "bad_branch": "supermajority",
@@ -2018,8 +2018,8 @@
      "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "default_basis": "today's level plus the expected move of the good and bad branches",
-    "good_level": 18.7455,
-    "bad_level": 20.1514
+    "good_level": 18.7086,
+    "bad_level": 20.1117
    },
    "asymmetry": {
     "yes_is_good": false,
@@ -2258,8 +2258,8 @@
     "name": "USD/MXN",
     "kind": "fx",
     "series": "mx.usdmxn.fix",
-    "current": 18.7962,
-    "as_of": "2026-10-30",
+    "current": 18.7592,
+    "as_of": "2026-11-03",
     "unit": "MXN per USD",
     "good_branch": "extended",
     "bad_branch": "withdrawal",
@@ -2281,8 +2281,8 @@
      "upgrade": "add the BANXICO_TOKEN secret under Settings > Secrets and variables > Actions; the next data run uses it and every feature switches over by itself"
     },
     "default_basis": "today's level plus the expected move of the good and bad branches",
-    "good_level": 18.4203,
-    "bad_level": 21.3788
+    "good_level": 18.384,
+    "bad_level": 21.3367
    },
    "asymmetry": {
     "yes_is_good": true,
