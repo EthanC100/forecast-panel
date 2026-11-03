@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T21:48:48Z",
+ "generated_at": "2026-11-03T01:33:05Z",
  "questions": {
   "n_resolved": 0,
   "n_ai_only": 0,
@@ -353,7 +353,7 @@
  },
  "trades": {
   "start_date": "2026-10-29",
-  "as_of": "2026-11-02",
+  "as_of": "2026-11-03",
   "closed": {
    "n": 0,
    "total_r": null,

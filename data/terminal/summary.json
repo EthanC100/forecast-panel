@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T21:48:49Z",
+ "generated_at": "2026-11-03T01:33:06Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -57,7 +57,7 @@
     "source_id": "SIE SF43718",
     "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
     "as_of": "2026-10-30",
-    "fetched_at": "2026-11-01T22:46:06Z",
+    "fetched_at": "2026-11-03T01:32:47Z",
     "frequency": "daily",
     "series": "mx.usdmxn.fix",
     "evidence": {
@@ -354,7 +354,7 @@
     "source_id": "SIE SF44071",
     "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
     "as_of": "2026-10-22",
-    "fetched_at": "2026-11-01T22:46:07Z",
+    "fetched_at": "2026-11-03T01:32:48Z",
     "frequency": "per auction",
     "series": "mx.mbono10y.auction",
     "evidence": {
@@ -1626,28 +1626,6 @@
    ],
    "events": [
     {
-     "date": "2026-11-02",
-     "country": "BR",
-     "type": "survey",
-     "title": "Focus survey (BCB)",
-     "importance": 1,
-     "status": "estimated",
-     "source": "https://www.bcb.gov.br/publicacoes/focus",
-     "query": "\"Focus survey\" Brazil",
-     "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
-     "origin": "rule:focus",
-     "id": "2026-11-02-br-focus-survey-bcb",
-     "attention": {
-      "score": 1.216,
-      "share_30d": 3.4783092634332303e-06,
-      "share_12m": 2.8602166721905465e-06,
-      "as_of": "2026-10-31",
-      "source": "GDELT DOC 2.0 (timelinevolraw)",
-      "query": "\"Focus survey\" Brazil"
-     },
-     "under_attended": false
-    },
-    {
      "date": "2026-11-04",
      "country": "BR",
      "type": "rates",
@@ -1884,6 +1862,28 @@
      "id": "2026-12-17-br-2027-budget-ploa-vote-in-congress",
      "attention": null,
      "under_attended": false
+    },
+    {
+     "date": "2026-12-21",
+     "country": "BR",
+     "type": "survey",
+     "title": "Focus survey (BCB)",
+     "importance": 1,
+     "status": "estimated",
+     "source": "https://www.bcb.gov.br/publicacoes/focus",
+     "query": "\"Focus survey\" Brazil",
+     "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+     "origin": "rule:focus",
+     "id": "2026-12-21-br-focus-survey-bcb",
+     "attention": {
+      "score": 1.216,
+      "share_30d": 3.4783092634332303e-06,
+      "share_12m": 2.8602166721905465e-06,
+      "as_of": "2026-10-31",
+      "source": "GDELT DOC 2.0 (timelinevolraw)",
+      "query": "\"Focus survey\" Brazil"
+     },
+     "under_attended": false
     }
    ]
   },
@@ -1902,7 +1902,7 @@
       "source_id": "SIE SF43718",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43718,CF300,1",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-11-01T22:46:06Z",
+      "fetched_at": "2026-11-03T01:32:47Z",
       "frequency": "daily",
       "series": "mx.usdmxn.fix",
       "evidence": {
@@ -1927,8 +1927,8 @@
       "source": "Banxico SIE (public chart data)",
       "source_id": "SIE SF61745",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF61745,CF300,1",
-      "as_of": "2026-11-02",
-      "fetched_at": "2026-11-01T22:46:06Z",
+      "as_of": "2026-11-03",
+      "fetched_at": "2026-11-03T01:32:48Z",
       "frequency": "daily",
       "series": "mx.policy.target",
       "evidence": {
@@ -1954,7 +1954,7 @@
       "source_id": "SIE SF43783",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF43783,CF300,1",
       "as_of": "2026-11-03",
-      "fetched_at": "2026-11-01T22:46:07Z",
+      "fetched_at": "2026-11-03T01:32:48Z",
       "frequency": "daily",
       "series": "mx.tiie28",
       "evidence": {
@@ -1980,7 +1980,7 @@
       "source_id": "SIE SF44071",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SF44071,CF300,1",
       "as_of": "2026-10-22",
-      "fetched_at": "2026-11-01T22:46:07Z",
+      "fetched_at": "2026-11-03T01:32:48Z",
       "frequency": "per auction",
       "series": "mx.mbono10y.auction",
       "evidence": {
@@ -2064,7 +2064,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-11-01T22:46:09Z",
+      "fetched_at": "2026-11-03T01:32:50Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -2107,7 +2107,7 @@
       "source_id": "SIE SR14448, SR14453, SR14451, SR14452, SR14455, SR14460, SR14458, SR14459 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14448,SR14453,SR14451,SR14452,SR14455,SR14460,SR14458,SR14459,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-11-01T22:46:11Z",
+      "fetched_at": "2026-11-03T01:32:52Z",
       "frequency": "monthly",
       "series": "mx.survey.gdp",
       "evidence": {
@@ -2150,7 +2150,7 @@
       "source_id": "SIE SR14770, SR14775, SR14773, SR14774, SR14777, SR14782, SR14780, SR14781 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14770,SR14775,SR14773,SR14774,SR14777,SR14782,SR14780,SR14781,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-11-01T22:46:13Z",
+      "fetched_at": "2026-11-03T01:32:54Z",
       "frequency": "monthly",
       "series": "mx.survey.usdmxn",
       "evidence": {
@@ -2193,7 +2193,7 @@
       "source_id": "SIE SR14938, SR14943, SR14941, SR14942, SR14945, SR14950, SR14948, SR14949 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14938,SR14943,SR14941,SR14942,SR14945,SR14950,SR14948,SR14949,CF300,1",
       "as_of": "2026-09-01",
-      "fetched_at": "2026-11-01T22:46:15Z",
+      "fetched_at": "2026-11-03T01:32:56Z",
       "frequency": "monthly",
       "series": "mx.survey.balance",
       "evidence": {
@@ -2475,28 +2475,6 @@
    ],
    "events": [
     {
-     "date": "2026-11-02",
-     "country": "MX",
-     "type": "survey",
-     "title": "Banxico survey of private-sector economists",
-     "importance": 1,
-     "status": "estimated",
-     "source": "https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialistas-en-economia-del-sector-privado/",
-     "query": "Banxico survey analysts",
-     "note": "Usually the first business day of the month at 12:00 CDMX; holidays not adjusted.",
-     "origin": "rule:banxico_survey",
-     "id": "2026-11-02-mx-banxico-survey-of-private-sector-economists",
-     "attention": {
-      "score": 0.936,
-      "share_30d": 4.869632968806523e-06,
-      "share_12m": 5.202278150143675e-06,
-      "as_of": "2026-10-31",
-      "source": "GDELT DOC 2.0 (timelinevolraw)",
-      "query": "Banxico survey analysts"
-     },
-     "under_attended": false
-    },
-    {
      "date": "2026-11-05",
      "country": "MX",
      "type": "rates",
@@ -2724,6 +2702,33 @@
       "query": "Banxico survey analysts"
      },
      "under_attended": false
+    },
+    {
+     "date": "2027-03-25",
+     "country": "MX",
+     "type": "rates",
+     "title": "Banxico decision (estimated)",
+     "importance": 3,
+     "status": "estimated",
+     "source": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/",
+     "query": "Banxico \"interest rate\"",
+     "note": "",
+     "origin": "manual",
+     "id": "2027-03-25-mx-banxico-decision-estimated",
+     "attention": {
+      "score": 1.248,
+      "share_30d": 2.504382669671926e-05,
+      "share_12m": 2.0062969120872817e-05,
+      "as_of": "2026-10-31",
+      "source": "GDELT DOC 2.0 (timelinevolraw)",
+      "query": "Banxico \"interest rate\""
+     },
+     "under_attended": false,
+     "base_rate": {
+      "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
+      "changed": 15,
+      "of": 24
+     }
     }
    ]
   }
@@ -2763,7 +2768,7 @@
     "country": "MX",
     "error": "HTTPError: 413 Client Error: Request Entity Too Large for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SR14659,SR14664,SR14662,SR14663,SR14666,SR14671,SR14669,SR14670,SR14673,SR14678,SR14676,SR14677,SR14680,SR14685,SR14683,SR14684,SR14687,SR14692,SR14690,SR14691,SR14694,SR14699,SR14697,SR14698,SR14701,SR14706,SR14704,SR14705,SR14708,SR14713,SR14711,SR14712/datos",
     "fallback_for": null,
-    "last_attempt": "2026-11-01T22:45:38Z",
+    "last_attempt": "2026-11-03T01:32:20Z",
     "last_success": "2026-10-30T04:17:37Z",
     "n_series": 9,
     "name": "Banxico SIE API",
@@ -2788,8 +2793,8 @@
     "country": "MX",
     "error": null,
     "fallback_for": "banxico_api",
-    "last_attempt": "2026-11-01T22:46:05Z",
-    "last_success": "2026-11-01T22:46:05Z",
+    "last_attempt": "2026-11-03T01:32:47Z",
+    "last_success": "2026-11-03T01:32:47Z",
     "n_series": 9,
     "name": "Banxico SIE public chart data (fallback)",
     "note": null,
@@ -3298,7 +3303,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-02T21:48:46Z"
+  "updated_at": "2026-11-03T01:33:04Z"
  },
  "series_index": [
   "br.cot.brl",
