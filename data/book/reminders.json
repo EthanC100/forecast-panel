@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T20:51:48Z",
+ "generated_at": "2026-11-03T18:38:21Z",
  "dry_run": false,
  "open": [
   {
@@ -11,14 +11,6 @@
    "created_at": "2026-11-02T20:51:47Z"
   },
   {
-   "key": "catalyst:2026-11-04-br-copom-decision-3-4-nov",
-   "kind": "catalyst",
-   "title": "Horizons: Copom decision (3-4 Nov) in 3 days (2026-11-04), no Brazil decision yet",
-   "url": "https://github.com/EthanC100/forecast-panel/issues/2",
-   "number": 2,
-   "created_at": "2026-11-01T17:13:48Z"
-  },
-  {
    "key": "catalyst:gold-2026-11-03-us-midterm-elections",
    "kind": "catalyst",
    "title": "Horizons: US midterm elections in 3 days (2026-11-03), no Gold decision yet",
@@ -27,8 +19,8 @@
    "created_at": "2026-10-31T16:15:48Z"
   }
  ],
- "created": [
-  "catalyst:2026-11-05-mx-banxico-monetary-policy-decision"
- ],
- "closed": []
+ "created": [],
+ "closed": [
+  "catalyst:2026-11-04-br-copom-decision-3-4-nov"
+ ]
 }
