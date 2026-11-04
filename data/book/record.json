@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T23:58:32Z",
+ "generated_at": "2026-11-04T02:35:52Z",
  "questions": {
   "n_resolved": 0,
   "n_ai_only": 0,
@@ -353,7 +353,7 @@
  },
  "trades": {
   "start_date": "2026-10-29",
-  "as_of": "2026-11-03",
+  "as_of": "2026-11-04",
   "closed": {
    "n": 0,
    "total_r": null,
@@ -389,7 +389,7 @@
     "note": "no month since the start date yet"
    },
    "buy_and_hold": {
-    "equal_weight_return_pct": 0.181,
+    "equal_weight_return_pct": 0.23,
     "n_instruments": 10,
     "rows": [
      {
@@ -397,9 +397,9 @@
       "name": "USD/BRL",
       "description": "long USD",
       "from": "2026-10-29",
-      "to": "2026-10-30",
-      "pnl_usd": 835.86,
-      "return_pct": 0.84
+      "to": "2026-11-03",
+      "pnl_usd": 2030.93,
+      "return_pct": 2.03
      },
      {
       "code": "USDMXN",
@@ -470,17 +470,17 @@
       "name": "US 10-year Treasury",
       "description": "long the bond",
       "from": "2026-10-29",
-      "to": "2026-10-30",
-      "pnl_usd": 320.0,
-      "return_pct": 0.32
+      "to": "2026-11-02",
+      "pnl_usd": 560.0,
+      "return_pct": 0.56
      },
      {
       "code": "XAUUSD",
       "name": "Gold (XAU/USD)",
       "description": "long gold",
       "from": "2026-10-29",
-      "to": "2026-11-02",
-      "pnl_usd": 1261.05,
+      "to": "2026-11-03",
+      "pnl_usd": 1257.64,
       "return_pct": 1.26
      },
      {
@@ -488,9 +488,9 @@
       "name": "Silver (XAG/USD)",
       "description": "long silver",
       "from": "2026-10-29",
-      "to": "2026-11-02",
-      "pnl_usd": 1855.88,
-      "return_pct": 1.86
+      "to": "2026-11-03",
+      "pnl_usd": 918.03,
+      "return_pct": 0.92
      }
     ]
    },

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-03T23:58:43Z",
- "as_of": "2026-11-03",
+ "generated_at": "2026-11-04T02:36:02Z",
+ "as_of": "2026-11-04",
  "prices": {
   "gold": {
-   "value": 3949.8,
-   "date": "2026-11-02",
+   "value": 3950.1001,
+   "date": "2026-11-03",
    "series": "gl.gold",
    "source": "Yahoo Finance chart data (COMEX front-month futures)",
    "source_id": "Yahoo GC=F",
@@ -12,17 +12,17 @@
    "frequency": "daily",
    "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": -3.06,
-   "chg_1m_pct": -5.11,
-   "chg_1y_pct": -1.17,
+   "chg_1w_pct": -2.51,
+   "chg_1m_pct": -4.97,
+   "chg_1y_pct": -1.59,
    "z_1y": -1.5,
    "high_1y": 5318.3999,
    "low_1y": 3898.8999,
    "history_from": "2000-08-29"
   },
   "silver": {
-   "value": 50.03,
-   "date": "2026-11-02",
+   "value": 49.575,
+   "date": "2026-11-03",
    "series": "gl.silver",
    "source": "Yahoo Finance chart data (COMEX front-month futures)",
    "source_id": "Yahoo SI=F",
@@ -30,17 +30,17 @@
    "frequency": "daily",
    "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": -7.85,
-   "chg_1m_pct": -16.58,
-   "chg_1y_pct": 4.24,
-   "z_1y": -1.54,
+   "chg_1w_pct": -7.26,
+   "chg_1m_pct": -18.55,
+   "chg_1y_pct": 3.52,
+   "z_1y": -1.58,
    "high_1y": 115.08,
    "low_1y": 47.13,
    "history_from": "2000-08-29"
   },
   "ratio": {
-   "value": 78.9,
-   "date": "2026-11-02",
+   "value": 79.7,
+   "date": "2026-11-03",
    "meaning": "Ounces of silver one ounce of gold buys. It rises when investors prefer gold's safety to silver's industrial demand."
   }
  },
@@ -48,17 +48,17 @@
   {
    "id": "real_yield",
    "name": "Real interest rates (US 10-year TIPS yield)",
-   "value": 2.6,
-   "date": "2026-10-30",
+   "value": 2.62,
+   "date": "2026-11-02",
    "unit": "%",
-   "chg_1m": -33,
+   "chg_1m": -30,
    "chg_unit": "bp",
    "series": "us.tips10",
    "source": "FRED API",
    "source_id": "FRED DFII10",
    "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DFII10",
    "frequency": "daily",
-   "reading": "The 10-year real yield is 2.60%, down 33bp over the past month. Gold pays no interest, so a higher real yield raises the cost of holding it: rising real yields are a headwind for gold and falling ones a tailwind. gold-events finds the link is not stable: gold's sensitivity to real yields was near zero before 2013, strong in 2014-2021 and weaker now.",
+   "reading": "The 10-year real yield is 2.62%, down 30bp over the past month. Gold pays no interest, so a higher real yield raises the cost of holding it: rising real yields are a headwind for gold and falling ones a tailwind. gold-events finds the link is not stable: gold's sensitivity to real yields was near zero before 2013, strong in 2014-2021 and weaker now.",
    "finding_url": "https://github.com/EthanC100/gold-events#findings"
   },
   {
@@ -96,10 +96,10 @@
   {
    "id": "cb_buying",
    "name": "Central-bank gold buying (IMF reporters)",
-   "value": 34.66,
+   "value": 34.35,
    "date": "2026-09-30",
    "unit": "tonnes in the month",
-   "last_12m_tonnes": 286.7,
+   "last_12m_tonnes": 286.4,
    "prior_12m_tonnes": 294.6,
    "chg_1m": null,
    "chg_unit": null,
@@ -108,7 +108,7 @@
    "source_id": "IRFCLDT1_IRFCL56V_FTO",
    "url": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,IRFCL/.IRFCLDT1_IRFCL56V_FTO..M?startPeriod=1999-01",
    "frequency": "monthly",
-   "reading": "Central banks reporting to the IMF added 287 tonnes in the 12 months to 2026-09, against 295 tonnes in the 12 months before. Official buying is demand that does not depend on interest rates; gold-events finds last month's buying does not help predict next week's move, so read it as background, not a timing signal. The latest months are incomplete until every reporter files, so they understate buying.",
+   "reading": "Central banks reporting to the IMF added 286 tonnes in the 12 months to 2026-09, against 295 tonnes in the 12 months before. Official buying is demand that does not depend on interest rates; gold-events finds last month's buying does not help predict next week's move, so read it as background, not a timing signal. The latest months are incomplete until every reporter files, so they understate buying.",
    "finding_url": "https://github.com/EthanC100/gold-events#findings"
   }
  ],
@@ -360,27 +360,6 @@
   }
  ],
  "upcoming": [
-  {
-   "date": "2026-11-03",
-   "title": "US midterm elections",
-   "kind": "election",
-   "importance": 3,
-   "summary": "All 435 House seats and a third of the Senate are elected; the result decides which party controls each chamber of Congress.",
-   "what_to_watch": "Which party controls the House and the Senate, and how real yields and the dollar react in the days after. gold-events' study of every midterm since 2002 gives the average gold move afterwards (below).",
-   "source_url": "https://www.usa.gov/midterm-elections",
-   "study": {
-    "n": 6,
-    "raw_1d": -0.83,
-    "net_1d": -0.75,
-    "raw_5d": 1.1,
-    "net_5d": 0.87,
-    "raw_20d": 2.26,
-    "net_20d": 1.79,
-    "unit": "% (log returns)",
-    "url": "https://github.com/EthanC100/gold-events/blob/main/reports/midterms.md",
-    "note": "Average gold move after every US midterm since 2002 (1994 and 1998 lack data); net = after removing the part explained by the dollar and real yields over the same days. gold-events' verdict: one or two years drive the averages, so there is no reliable midterm effect."
-   }
-  },
   {
    "date": "2026-12-09",
    "first_day": "2026-12-08",
