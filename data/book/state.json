@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-04T02:35:50Z",
- "as_of": "2026-11-04",
+ "generated_at": "2026-11-05T02:43:48Z",
+ "as_of": "2026-11-05",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
  "start_date": "2026-10-29",
@@ -22,8 +22,8 @@
    "country": "BR",
    "series": "br.usdbrl.ptax",
    "proxy": false,
-   "value": 5.4935,
-   "date": "2026-11-03",
+   "value": 5.4778,
+   "date": "2026-11-04",
    "close_utc": "16:30",
    "low_frequency": false,
    "note": null,
@@ -45,8 +45,8 @@
    "country": "MX",
    "series": "mx.usdmxn.fix",
    "proxy": false,
-   "value": 18.7592,
-   "date": "2026-11-03",
+   "value": 18.6285,
+   "date": "2026-11-04",
    "close_utc": "18:30",
    "low_frequency": false,
    "note": null,
@@ -253,8 +253,8 @@
    "country": "US",
    "series": "us.ust10y",
    "proxy": false,
-   "value": 4.91,
-   "date": "2026-11-02",
+   "value": 4.95,
+   "date": "2026-11-03",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": null,
@@ -276,8 +276,8 @@
    "country": "GLOBAL",
    "series": "gl.gold",
    "proxy": false,
-   "value": 3950.1001,
-   "date": "2026-11-03",
+   "value": 4135.7998,
+   "date": "2026-11-04",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot gold in US dollars per ounce. Falls back to the World Bank's monthly average (low frequency) when no daily price is available.",
@@ -299,8 +299,8 @@
    "country": "GLOBAL",
    "series": "gl.silver",
    "proxy": false,
-   "value": 49.575,
-   "date": "2026-11-03",
+   "value": 53.125,
+   "date": "2026-11-04",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot silver in US dollars per ounce. Falls back to the World Bank's monthly average when no daily price is available.",
@@ -341,6 +341,10 @@
    [
     "2026-11-04",
     100000.0
+   ],
+   [
+    "2026-11-05",
+    100000.0
    ]
   ],
   "worst_drawdown": {
@@ -371,15 +375,15 @@
    "description": "long USD",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-03",
-    "pnl_usd": 2030.93,
-    "return_pct": 2.03
+    "to": "2026-11-04",
+    "pnl_usd": 1723.12,
+    "return_pct": 1.72
    },
    "last_12m": {
-    "from": "2025-11-04",
-    "to": "2026-11-03",
-    "pnl_usd": -8973.21,
-    "return_pct": -8.97
+    "from": "2025-11-05",
+    "to": "2026-11-04",
+    "pnl_usd": -9163.02,
+    "return_pct": -9.16
    }
   },
   {
@@ -390,15 +394,15 @@
    "description": "long USD",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-03",
-    "pnl_usd": -332.78,
-    "return_pct": -0.33
+    "to": "2026-11-04",
+    "pnl_usd": -1043.75,
+    "return_pct": -1.04
    },
    "last_12m": {
-    "from": "2025-11-04",
-    "to": "2026-11-03",
-    "pnl_usd": -2323.64,
-    "return_pct": -2.32
+    "from": "2025-11-05",
+    "to": "2026-11-04",
+    "pnl_usd": -2917.14,
+    "return_pct": -2.92
    }
   },
   {
@@ -414,10 +418,10 @@
     "return_pct": -0.02
    },
    "last_12m": {
-    "from": "2025-11-04",
+    "from": "2025-11-05",
     "to": "2026-10-30",
-    "pnl_usd": -4418.94,
-    "return_pct": -4.42
+    "pnl_usd": -4362.99,
+    "return_pct": -4.36
    }
   },
   {
@@ -447,10 +451,10 @@
     "return_pct": -1.26
    },
    "last_12m": {
-    "from": "2025-11-04",
+    "from": "2025-11-05",
     "to": "2026-10-30",
-    "pnl_usd": -7975.0,
-    "return_pct": -7.97
+    "pnl_usd": -7810.0,
+    "return_pct": -7.81
    }
   },
   {
@@ -466,10 +470,10 @@
     "return_pct": -0.0
    },
    "last_12m": {
-    "from": "2025-11-04",
+    "from": "2025-11-05",
     "to": "2026-10-30",
-    "pnl_usd": 317.56,
-    "return_pct": 0.32
+    "pnl_usd": 286.24,
+    "return_pct": 0.29
    }
   },
   {
@@ -485,10 +489,10 @@
     "return_pct": -0.17
    },
    "last_12m": {
-    "from": "2025-11-04",
+    "from": "2025-11-05",
     "to": "2026-10-30",
-    "pnl_usd": -4831.89,
-    "return_pct": -4.83
+    "pnl_usd": -4855.99,
+    "return_pct": -4.86
    }
   },
   {
@@ -504,9 +508,9 @@
     "return_pct": -0.69
    },
    "last_12m": {
-    "from": "2025-11-04",
+    "from": "2025-11-05",
     "to": "2026-10-30",
-    "pnl_usd": -8272.63,
+    "pnl_usd": -8268.26,
     "return_pct": -8.27
    }
   },
@@ -532,15 +536,15 @@
    "description": "long the bond",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-02",
-    "pnl_usd": 560.0,
-    "return_pct": 0.56
+    "to": "2026-11-03",
+    "pnl_usd": 240.0,
+    "return_pct": 0.24
    },
    "last_12m": {
-    "from": "2025-11-04",
-    "to": "2026-11-02",
-    "pnl_usd": -6480.0,
-    "return_pct": -6.48
+    "from": "2025-11-05",
+    "to": "2026-11-03",
+    "pnl_usd": -6240.0,
+    "return_pct": -6.24
    }
   },
   {
@@ -551,15 +555,15 @@
    "description": "long gold",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-03",
-    "pnl_usd": 1257.64,
-    "return_pct": 1.26
+    "to": "2026-11-04",
+    "pnl_usd": 6009.4,
+    "return_pct": 6.01
    },
    "last_12m": {
-    "from": "2025-11-04",
-    "to": "2026-11-03",
-    "pnl_usd": -4112.59,
-    "return_pct": -4.11
+    "from": "2025-11-05",
+    "to": "2026-11-04",
+    "pnl_usd": -271.15,
+    "return_pct": -0.27
    }
   },
   {
@@ -570,250 +574,175 @@
    "description": "long silver",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-03",
-    "pnl_usd": 918.03,
-    "return_pct": 0.92
+    "to": "2026-11-04",
+    "pnl_usd": 8137.5,
+    "return_pct": 8.14
    },
    "last_12m": {
-    "from": "2025-11-04",
-    "to": "2026-11-03",
-    "pnl_usd": 1337.78,
-    "return_pct": 1.34
+    "from": "2025-11-05",
+    "to": "2026-11-04",
+    "pnl_usd": 7143.88,
+    "return_pct": 7.14
    }
   }
  ],
  "systematic": {
   "available": true,
   "source": "https://raw.githubusercontent.com/EthanC100/em-macro/main/results/systematic/",
-  "as_of": "2026-09",
-  "effective_from": "2026-10",
+  "as_of": "2026-10",
+  "effective_from": "2026-11",
   "positions": [
    {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
-    "book": "bond",
-    "instrument": "GB-DE",
-    "description": "United Kingdom 10y bond spread over the Bund (long United Kingdom, short Bund)",
-    "side": "long",
-    "size_pct_of_capital": "75.250",
-    "risk_share_pct": "6.300",
-    "instrument_vol_pct": "2.540",
-    "carry_z": "0.506",
-    "trend_z": "1.172",
-    "value_z": "-0.028",
-    "cost_pct_per_trade": "0.200",
-    "relevant": false
-   },
-   {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
-    "book": "bond",
-    "instrument": "PL-DE",
-    "description": "Poland 10y bond spread over the Bund (long Poland, short Bund)",
-    "side": "long",
-    "size_pct_of_capital": "50.030",
-    "risk_share_pct": "7.000",
-    "instrument_vol_pct": "4.250",
-    "carry_z": "1.257",
-    "trend_z": "0.504",
-    "value_z": "-0.112",
-    "cost_pct_per_trade": "0.200",
-    "relevant": false
-   },
-   {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
-    "book": "bond",
-    "instrument": "ZA10Y",
-    "description": "South Africa 10y local-currency bond (excess over local policy rate)",
-    "side": "long",
-    "size_pct_of_capital": "35.960",
-    "risk_share_pct": "8.200",
-    "instrument_vol_pct": "6.870",
-    "carry_z": "0.604",
-    "trend_z": "0.961",
-    "value_z": "-0.809",
-    "cost_pct_per_trade": "0.100",
-    "relevant": false
-   },
-   {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
     "book": "bond",
     "instrument": "MX10Y",
     "description": "Mexico 10y local-currency bond (excess over local policy rate)",
     "side": "long",
-    "size_pct_of_capital": "32.770",
-    "risk_share_pct": "6.200",
-    "instrument_vol_pct": "5.680",
-    "carry_z": "1.383",
-    "trend_z": "-0.396",
-    "value_z": "-0.179",
+    "size_pct_of_capital": "125.850",
+    "risk_share_pct": "19.400",
+    "instrument_vol_pct": "5.590",
+    "carry_z": "1.117",
+    "trend_z": "-0.098",
+    "value_z": "-0.274",
     "cost_pct_per_trade": "0.100",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
     "relevant": true
    },
    {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
     "book": "bond",
     "instrument": "TR10Y",
     "description": "Turkey 10y local-currency bond (excess over local policy rate)",
     "side": "short",
-    "size_pct_of_capital": "-15.500",
-    "risk_share_pct": "8.200",
-    "instrument_vol_pct": "15.930",
-    "carry_z": "-2.481",
-    "trend_z": "-1.611",
-    "value_z": "2.821",
+    "size_pct_of_capital": "-45.320",
+    "risk_share_pct": "19.400",
+    "instrument_vol_pct": "15.510",
+    "carry_z": "-1.115",
+    "trend_z": "-1.168",
+    "value_z": "1.482",
     "cost_pct_per_trade": "0.300",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
     "relevant": false
    },
    {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
-    "book": "bond",
-    "instrument": "BR10Y",
-    "description": "Brazil 10y local-currency bond (excess over local policy rate)",
-    "side": "short",
-    "size_pct_of_capital": "-26.990",
-    "risk_share_pct": "6.300",
-    "instrument_vol_pct": "7.070",
-    "carry_z": "-0.523",
-    "trend_z": "0.590",
-    "value_z": "-0.627",
-    "cost_pct_per_trade": "0.100",
-    "relevant": true
-   },
-   {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
-    "book": "bond",
-    "instrument": "CL10Y",
-    "description": "Chile 10y local-currency bond (excess over local policy rate)",
-    "side": "short",
-    "size_pct_of_capital": "-41.240",
-    "risk_share_pct": "8.200",
-    "instrument_vol_pct": "5.990",
-    "carry_z": "0.309",
-    "trend_z": "-0.665",
-    "value_z": "-0.377",
-    "cost_pct_per_trade": "0.300",
-    "relevant": false
-   },
-   {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
-    "book": "bond",
-    "instrument": "DE10Y",
-    "description": "German 10y Bund (excess over the ECB rate)",
-    "side": "short",
-    "size_pct_of_capital": "-41.280",
-    "risk_share_pct": "6.600",
-    "instrument_vol_pct": "4.850",
-    "carry_z": "-0.005",
-    "trend_z": "-1.239",
-    "value_z": "",
-    "cost_pct_per_trade": "0.100",
-    "relevant": true
-   },
-   {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
     "book": "fx",
     "instrument": "TRY",
     "description": "TRY vs USD (Turkey)",
     "side": "long",
-    "size_pct_of_capital": "46.170",
-    "risk_share_pct": "6.300",
-    "instrument_vol_pct": "4.130",
-    "carry_z": "2.658",
-    "trend_z": "1.133",
-    "value_z": "-1.183",
+    "size_pct_of_capital": "95.780",
+    "risk_share_pct": "10.200",
+    "instrument_vol_pct": "3.850",
+    "carry_z": "2.657",
+    "trend_z": "1.338",
+    "value_z": "-1.079",
     "cost_pct_per_trade": "0.300",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
     "relevant": false
    },
    {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
     "book": "fx",
     "instrument": "IDR",
     "description": "IDR vs USD (Indonesia)",
     "side": "long",
-    "size_pct_of_capital": "34.730",
-    "risk_share_pct": "7.600",
-    "instrument_vol_pct": "6.610",
-    "carry_z": "-0.380",
-    "trend_z": "-0.266",
-    "value_z": "1.725",
+    "size_pct_of_capital": "56.310",
+    "risk_share_pct": "10.200",
+    "instrument_vol_pct": "6.550",
+    "carry_z": "-0.385",
+    "trend_z": "-0.180",
+    "value_z": "1.532",
     "cost_pct_per_trade": "0.300",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
     "relevant": false
    },
    {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
     "book": "fx",
     "instrument": "BRL",
     "description": "BRL vs USD (Brazil)",
     "side": "long",
-    "size_pct_of_capital": "22.580",
-    "risk_share_pct": "7.700",
-    "instrument_vol_pct": "10.300",
-    "carry_z": "0.411",
-    "trend_z": "0.775",
-    "value_z": "0.148",
+    "size_pct_of_capital": "34.810",
+    "risk_share_pct": "10.200",
+    "instrument_vol_pct": "10.600",
+    "carry_z": "0.395",
+    "trend_z": "-0.009",
+    "value_z": "0.371",
     "cost_pct_per_trade": "0.100",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
     "relevant": true
    },
    {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
+    "book": "fx",
+    "instrument": "MXN",
+    "description": "MXN vs USD (Mexico)",
+    "side": "short",
+    "size_pct_of_capital": "-37.780",
+    "risk_share_pct": "10.200",
+    "instrument_vol_pct": "9.760",
+    "carry_z": "-0.311",
+    "trend_z": "-0.815",
+    "value_z": "0.328",
+    "cost_pct_per_trade": "0.100",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
+    "relevant": true
+   },
+   {
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
     "book": "fx",
     "instrument": "PLN",
     "description": "PLN vs USD (Poland)",
     "side": "short",
-    "size_pct_of_capital": "-23.770",
-    "risk_share_pct": "6.800",
-    "instrument_vol_pct": "8.620",
-    "carry_z": "-0.574",
-    "trend_z": "-0.939",
-    "value_z": "-0.119",
+    "size_pct_of_capital": "-44.380",
+    "risk_share_pct": "10.200",
+    "instrument_vol_pct": "8.310",
+    "carry_z": "-0.580",
+    "trend_z": "-0.798",
+    "value_z": "-0.056",
     "cost_pct_per_trade": "0.100",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
     "relevant": false
    },
    {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
-    "book": "fx",
-    "instrument": "GBP",
-    "description": "GBP vs USD (United Kingdom)",
-    "side": "short",
-    "size_pct_of_capital": "-31.580",
-    "risk_share_pct": "7.200",
-    "instrument_vol_pct": "6.850",
-    "carry_z": "-0.574",
-    "trend_z": "-0.335",
-    "value_z": "0.150",
-    "cost_pct_per_trade": "0.100",
-    "relevant": false
-   },
-   {
-    "as_of": "2026-09",
-    "effective_from": "2026-10",
+    "as_of": "2026-10",
+    "effective_from": "2026-11",
     "book": "fx",
     "instrument": "EUR",
     "description": "EUR vs USD (euro area)",
     "side": "short",
-    "size_pct_of_capital": "-32.740",
-    "risk_share_pct": "7.500",
-    "instrument_vol_pct": "6.960",
-    "carry_z": "-0.708",
-    "trend_z": "-0.684",
-    "value_z": "0.292",
+    "size_pct_of_capital": "-52.410",
+    "risk_share_pct": "10.200",
+    "instrument_vol_pct": "7.040",
+    "carry_z": "-0.702",
+    "trend_z": "-0.543",
+    "value_z": "0.265",
     "cost_pct_per_trade": "0.100",
+    "scheduled_date": "2026-11-03",
+    "run_date": "2026-11-04",
     "relevant": false
    }
   ],
-  "since_start": [],
+  "since_start": [
+   [
+    "2026-10",
+    99015.7
+   ]
+  ],
   "full_history": [
    [
     "2006-02",
@@ -1627,7 +1556,7 @@
    ],
    [
     "2019-08",
-    1.577364,
+    1.577365,
     "design 2005-2019 (in-sample)"
    ],
    [
@@ -1802,7 +1731,7 @@
    ],
    [
     "2022-07",
-    1.56783,
+    1.567832,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1817,7 +1746,7 @@
    ],
    [
     "2022-10",
-    1.63406,
+    1.634061,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1832,7 +1761,7 @@
    ],
    [
     "2023-01",
-    1.698486,
+    1.698487,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1842,7 +1771,7 @@
    ],
    [
     "2023-03",
-    1.787215,
+    1.787216,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1867,7 +1796,7 @@
    ],
    [
     "2023-08",
-    1.94991,
+    1.949911,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1922,12 +1851,12 @@
    ],
    [
     "2024-07",
-    2.152737,
+    2.152736,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
     "2024-08",
-    2.226954,
+    2.226953,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1962,12 +1891,12 @@
    ],
    [
     "2025-03",
-    2.233576,
+    2.233575,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
     "2025-04",
-    2.15249,
+    2.152489,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1982,7 +1911,7 @@
    ],
    [
     "2025-07",
-    2.201171,
+    2.20117,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -1992,7 +1921,7 @@
    ],
    [
     "2025-09",
-    2.240005,
+    2.240004,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -2032,17 +1961,17 @@
    ],
    [
     "2026-05",
-    2.212108,
+    2.212107,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
     "2026-06",
-    2.344029,
+    2.344028,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
     "2026-07",
-    2.381561,
+    2.38156,
     "test 2020+ (backtest, evaluated once)"
    ],
    [
@@ -2052,7 +1981,12 @@
    ],
    [
     "2026-09",
-    2.404727,
+    2.404726,
+    "test 2020+ (backtest, evaluated once)"
+   ],
+   [
+    "2026-10",
+    2.381056,
     "test 2020+ (backtest, evaluated once)"
    ]
   ],

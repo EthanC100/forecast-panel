@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T02:35:57Z",
+ "generated_at": "2026-11-05T02:43:54Z",
  "em_macro": "https://raw.githubusercontent.com/EthanC100/em-macro/main/",
  "countries": {
   "FR": {
@@ -797,162 +797,96 @@
   }
  },
  "systematic": {
-  "as_of": "2026-09",
-  "effective_from": "2026-10",
+  "as_of": "2026-10",
+  "effective_from": "2026-11",
   "rows": [
-   {
-    "book": "bond",
-    "instrument": "GB-DE",
-    "description": "United Kingdom 10y bond spread over the Bund (long United Kingdom, short Bund)",
-    "side": "long",
-    "size_pct": 75.25,
-    "carry_z": 0.506,
-    "trend_z": 1.172,
-    "value_z": -0.028,
-    "score": 0.55
-   },
-   {
-    "book": "bond",
-    "instrument": "PL-DE",
-    "description": "Poland 10y bond spread over the Bund (long Poland, short Bund)",
-    "side": "long",
-    "size_pct": 50.03,
-    "carry_z": 1.257,
-    "trend_z": 0.504,
-    "value_z": -0.112,
-    "score": 0.55
-   },
-   {
-    "book": "bond",
-    "instrument": "ZA10Y",
-    "description": "South Africa 10y local-currency bond (excess over local policy rate)",
-    "side": "long",
-    "size_pct": 35.96,
-    "carry_z": 0.604,
-    "trend_z": 0.961,
-    "value_z": -0.809,
-    "score": 0.252
-   },
    {
     "book": "bond",
     "instrument": "MX10Y",
     "description": "Mexico 10y local-currency bond (excess over local policy rate)",
     "side": "long",
-    "size_pct": 32.77,
-    "carry_z": 1.383,
-    "trend_z": -0.396,
-    "value_z": -0.179,
-    "score": 0.269
+    "size_pct": 125.85,
+    "carry_z": 1.117,
+    "trend_z": -0.098,
+    "value_z": -0.274,
+    "score": 0.248
    },
    {
     "book": "bond",
     "instrument": "TR10Y",
     "description": "Turkey 10y local-currency bond (excess over local policy rate)",
     "side": "short",
-    "size_pct": -15.5,
-    "carry_z": -2.481,
-    "trend_z": -1.611,
-    "value_z": 2.821,
-    "score": -0.424
-   },
-   {
-    "book": "bond",
-    "instrument": "BR10Y",
-    "description": "Brazil 10y local-currency bond (excess over local policy rate)",
-    "side": "short",
-    "size_pct": -26.99,
-    "carry_z": -0.523,
-    "trend_z": 0.59,
-    "value_z": -0.627,
-    "score": -0.187
-   },
-   {
-    "book": "bond",
-    "instrument": "CL10Y",
-    "description": "Chile 10y local-currency bond (excess over local policy rate)",
-    "side": "short",
-    "size_pct": -41.24,
-    "carry_z": 0.309,
-    "trend_z": -0.665,
-    "value_z": -0.377,
-    "score": -0.244
-   },
-   {
-    "book": "bond",
-    "instrument": "DE10Y",
-    "description": "German 10y Bund (excess over the ECB rate)",
-    "side": "short",
-    "size_pct": -41.28,
-    "carry_z": -0.005,
-    "trend_z": -1.239,
-    "value_z": null,
-    "score": -0.622
+    "size_pct": -45.32,
+    "carry_z": -1.115,
+    "trend_z": -1.168,
+    "value_z": 1.482,
+    "score": -0.267
    },
    {
     "book": "fx",
     "instrument": "TRY",
     "description": "TRY vs USD (Turkey)",
     "side": "long",
-    "size_pct": 46.17,
-    "carry_z": 2.658,
-    "trend_z": 1.133,
-    "value_z": -1.183,
-    "score": 0.869
+    "size_pct": 95.78,
+    "carry_z": 2.657,
+    "trend_z": 1.338,
+    "value_z": -1.079,
+    "score": 0.972
    },
    {
     "book": "fx",
     "instrument": "IDR",
     "description": "IDR vs USD (Indonesia)",
     "side": "long",
-    "size_pct": 34.73,
-    "carry_z": -0.38,
-    "trend_z": -0.266,
-    "value_z": 1.725,
-    "score": 0.36
+    "size_pct": 56.31,
+    "carry_z": -0.385,
+    "trend_z": -0.18,
+    "value_z": 1.532,
+    "score": 0.322
    },
    {
     "book": "fx",
     "instrument": "BRL",
     "description": "BRL vs USD (Brazil)",
     "side": "long",
-    "size_pct": 22.58,
-    "carry_z": 0.411,
-    "trend_z": 0.775,
-    "value_z": 0.148,
-    "score": 0.445
+    "size_pct": 34.81,
+    "carry_z": 0.395,
+    "trend_z": -0.009,
+    "value_z": 0.371,
+    "score": 0.252
+   },
+   {
+    "book": "fx",
+    "instrument": "MXN",
+    "description": "MXN vs USD (Mexico)",
+    "side": "short",
+    "size_pct": -37.78,
+    "carry_z": -0.311,
+    "trend_z": -0.815,
+    "value_z": 0.328,
+    "score": -0.266
    },
    {
     "book": "fx",
     "instrument": "PLN",
     "description": "PLN vs USD (Poland)",
     "side": "short",
-    "size_pct": -23.77,
-    "carry_z": -0.574,
-    "trend_z": -0.939,
-    "value_z": -0.119,
-    "score": -0.544
-   },
-   {
-    "book": "fx",
-    "instrument": "GBP",
-    "description": "GBP vs USD (United Kingdom)",
-    "side": "short",
-    "size_pct": -31.58,
-    "carry_z": -0.574,
-    "trend_z": -0.335,
-    "value_z": 0.15,
-    "score": -0.253
+    "size_pct": -44.38,
+    "carry_z": -0.58,
+    "trend_z": -0.798,
+    "value_z": -0.056,
+    "score": -0.478
    },
    {
     "book": "fx",
     "instrument": "EUR",
     "description": "EUR vs USD (euro area)",
     "side": "short",
-    "size_pct": -32.74,
-    "carry_z": -0.708,
-    "trend_z": -0.684,
-    "value_z": 0.292,
-    "score": -0.367
+    "size_pct": -52.41,
+    "carry_z": -0.702,
+    "trend_z": -0.543,
+    "value_z": 0.265,
+    "score": -0.327
    }
   ],
   "universe": {

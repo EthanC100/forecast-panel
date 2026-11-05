@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T02:35:52Z",
+ "generated_at": "2026-11-05T02:43:49Z",
  "questions": {
   "n_resolved": 0,
   "n_ai_only": 0,
@@ -353,7 +353,7 @@
  },
  "trades": {
   "start_date": "2026-10-29",
-  "as_of": "2026-11-04",
+  "as_of": "2026-11-05",
   "closed": {
    "n": 0,
    "total_r": null,
@@ -386,10 +386,12 @@
     "total_r": null
    },
    "systematic": {
-    "note": "no month since the start date yet"
+    "return_pct": -0.98,
+    "to": "2026-10",
+    "n_months": 1
    },
    "buy_and_hold": {
-    "equal_weight_return_pct": 0.23,
+    "equal_weight_return_pct": 1.293,
     "n_instruments": 10,
     "rows": [
      {
@@ -397,18 +399,18 @@
       "name": "USD/BRL",
       "description": "long USD",
       "from": "2026-10-29",
-      "to": "2026-11-03",
-      "pnl_usd": 2030.93,
-      "return_pct": 2.03
+      "to": "2026-11-04",
+      "pnl_usd": 1723.12,
+      "return_pct": 1.72
      },
      {
       "code": "USDMXN",
       "name": "USD/MXN",
       "description": "long USD",
       "from": "2026-10-29",
-      "to": "2026-11-03",
-      "pnl_usd": -332.78,
-      "return_pct": -0.33
+      "to": "2026-11-04",
+      "pnl_usd": -1043.75,
+      "return_pct": -1.04
      },
      {
       "code": "EURUSD",
@@ -470,27 +472,27 @@
       "name": "US 10-year Treasury",
       "description": "long the bond",
       "from": "2026-10-29",
-      "to": "2026-11-02",
-      "pnl_usd": 560.0,
-      "return_pct": 0.56
+      "to": "2026-11-03",
+      "pnl_usd": 240.0,
+      "return_pct": 0.24
      },
      {
       "code": "XAUUSD",
       "name": "Gold (XAU/USD)",
       "description": "long gold",
       "from": "2026-10-29",
-      "to": "2026-11-03",
-      "pnl_usd": 1257.64,
-      "return_pct": 1.26
+      "to": "2026-11-04",
+      "pnl_usd": 6009.4,
+      "return_pct": 6.01
      },
      {
       "code": "XAGUSD",
       "name": "Silver (XAG/USD)",
       "description": "long silver",
       "from": "2026-10-29",
-      "to": "2026-11-03",
-      "pnl_usd": 918.03,
-      "return_pct": 0.92
+      "to": "2026-11-04",
+      "pnl_usd": 8137.5,
+      "return_pct": 8.14
      }
     ]
    },
