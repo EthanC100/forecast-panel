@@ -1,5 +1,13 @@
 [
  {
+  "date": "2026-11-05",
+  "verified": true,
+  "status": "ok",
+  "n_facts": 61,
+  "judgement": true,
+  "mode": "full"
+ },
+ {
   "date": "2026-11-04",
   "verified": true,
   "status": "ok",

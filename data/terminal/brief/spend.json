@@ -11,11 +11,11 @@
    }
   },
   "2026-11": {
-   "usd": 4.676719,
-   "calls": 28,
+   "usd": 5.217424,
+   "calls": 32,
    "by_role": {
-    "extraction": 0.015229,
-    "judgement": 4.66149
+    "extraction": 0.020004,
+    "judgement": 5.19742
    }
   }
  },
@@ -668,25 +668,69 @@
    "cache_read": 0,
    "output": 3138,
    "usd": 0.221548
+  },
+  {
+   "at": "2026-11-05T03:54:01Z",
+   "role": "extraction",
+   "mode": "batch",
+   "input": 42948,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 0,
+   "output": 10509,
+   "usd": 0.004775
+  },
+  {
+   "at": "2026-11-05T04:00:36Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 383,
+   "cache_write_5m": 0,
+   "cache_write_1h": 53778,
+   "cache_read": 0,
+   "output": 5627,
+   "usd": 0.272148
+  },
+  {
+   "at": "2026-11-05T04:00:36Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 251,
+   "cache_write_5m": 0,
+   "cache_write_1h": 53897,
+   "cache_read": 0,
+   "output": 2163,
+   "usd": 0.23772
+  },
+  {
+   "at": "2026-11-05T04:00:36Z",
+   "role": "judgement",
+   "mode": "batch",
+   "input": 281,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 53897,
+   "output": 2011,
+   "usd": 0.026062
   }
  ],
  "cap_usd": 15.0,
  "expected_month_usd": {
-  "total_usd": 7.82,
+  "total_usd": 7.19,
   "cap_usd": 15.0,
-  "computed_on": "2026-11-04",
+  "computed_on": "2026-11-05",
   "breakdown": {
-   "extraction_daily_x30": 0.124,
-   "judgement_weekly_x4.3": 4.05,
-   "judgement_near_catalysts": 3.64,
+   "extraction_daily_x30": 0.125,
+   "judgement_weekly_x4.3": 4.07,
+   "judgement_near_catalysts": 2.99,
    "assessments_monthly": 0.004
   },
   "assumptions": {
-   "extraction_per_day_usd": 0.0041,
-   "judgement_per_week_usd": 0.943,
-   "catalyst_refresh_days_next_30": 6,
+   "extraction_per_day_usd": 0.0042,
+   "judgement_per_week_usd": 0.947,
+   "catalyst_refresh_days_next_30": 5,
    "requests_per_weekly_judgement": 10,
-   "prefix_tokens": 48963,
+   "prefix_tokens": 49388,
    "batch_discount": 0.5,
    "output_tokens_per_judgement_request": 5000,
    "output_tokens_per_extraction": 8000
