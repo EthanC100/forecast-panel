@@ -1,16 +1,9 @@
 {
- "generated_at": "2026-11-05T18:54:53Z",
+ "generated_at": "2026-11-06T18:18:07Z",
  "dry_run": false,
- "open": [
-  {
-   "key": "catalyst:2026-11-05-mx-banxico-monetary-policy-decision",
-   "kind": "catalyst",
-   "title": "Horizons: Banxico monetary policy decision in 3 days (2026-11-05), no Mexico decision yet",
-   "url": "https://github.com/EthanC100/forecast-panel/issues/3",
-   "number": 3,
-   "created_at": "2026-11-02T20:51:47Z"
-  }
- ],
+ "open": [],
  "created": [],
- "closed": []
+ "closed": [
+  "catalyst:2026-11-05-mx-banxico-monetary-policy-decision"
+ ]
 }
