@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T02:43:54Z",
+ "generated_at": "2026-11-06T02:44:05Z",
  "gauges": [
   {
    "id": "a",
@@ -1011,7 +1011,7 @@
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-11-05T02:30:08Z",
+      "fetched_at": "2026-11-06T02:29:37Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1043,7 +1043,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-11-05T02:30:05Z",
+      "fetched_at": "2026-11-06T02:29:34Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1063,7 +1063,7 @@
      "percentile_basis": "vs the same month +/-1 over the previous 10 years",
      "extreme": false,
      "event": {
-      "date": "2026-11-05",
+      "date": "2026-12-17",
       "title": "Banxico monetary policy decision"
      },
      "evidence": {
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-10-01",
-      "fetched_at": "2026-11-05T02:31:48Z",
+      "fetched_at": "2026-11-06T02:30:35Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1179,7 +1179,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-10-27",
-      "fetched_at": "2026-11-05T02:32:30Z",
+      "fetched_at": "2026-11-06T02:31:16Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1197,19 +1197,14 @@
      "percentile": 79.5,
      "extreme": false,
      "crowded": null,
-     "catalysts_30d": [
-      {
-       "date": "2026-11-05",
-       "title": "Banxico monetary policy decision"
-      }
-     ],
+     "catalysts_30d": [],
      "flag": false,
      "meta": {
       "source": "CFTC Commitments of Traders",
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-10-27",
-      "fetched_at": "2026-11-05T02:32:31Z",
+      "fetched_at": "2026-11-06T02:31:21Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1378,12 +1373,12 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 22,
+   "days": 21,
    "score": 0.8,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 48% vs base rate 0%",
+     "detail": "market 34% vs base rate 0%",
      "strength": 1.0,
      "badge": "untested",
      "hidden_market": true
@@ -1401,7 +1396,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 61,
+   "days": 60,
    "score": 0.75,
    "signals": [
     {
@@ -1423,13 +1418,13 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 35,
-   "score": 0.217,
+   "days": 34,
+   "score": 0.017,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 63% vs base rate 50%",
-     "strength": 0.43333333333333335,
+     "detail": "market 51% vs base rate 50%",
+     "strength": 0.03333333333333337,
      "badge": "untested",
      "hidden_market": true
     }
@@ -1440,7 +1435,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 171,
+   "days": 170,
    "score": 0,
    "signals": []
   }

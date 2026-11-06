@@ -1,0 +1,26 @@
+{
+ "id": "ks.KXFLAVIOBRAZIL-26NOV02-DEC01",
+ "name": "Will Flávio Bolsonaro return to Brazil?: Before Dec 1, 2026",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Kalshi",
+ "source_id": "KXFLAVIOBRAZIL-26NOV02-DEC01",
+ "source_url": "https://kalshi.com/markets/KXFLAVIOBRAZIL",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-11-06T02:32:33Z",
+ "updated_at": "2026-11-06T02:32:33Z",
+ "n": 3,
+ "first": "2026-11-03",
+ "last": "2026-11-05",
+ "history": [
+  ["2026-11-03",0.045],
+  ["2026-11-04",0.05],
+  ["2026-11-05",0.035]
+ ]
+}

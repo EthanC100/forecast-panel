@@ -1,34 +1,7 @@
 {
- "generated_at": "2026-11-05T02:43:47Z",
- "horizon": "2027-11-06",
+ "generated_at": "2026-11-06T02:43:58Z",
+ "horizon": "2027-11-07",
  "events": [
-  {
-   "date": "2026-11-05",
-   "country": "MX",
-   "type": "rates",
-   "title": "Banxico monetary policy decision",
-   "importance": 3,
-   "status": "confirmed",
-   "source": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/",
-   "query": "Banxico \"interest rate\"",
-   "note": "Banxico 2026 calendar (as reproduced in BBVA Research, Agenda Económica 2026). The six 2026 decisions so far match em-macro.",
-   "origin": "manual",
-   "id": "2026-11-05-mx-banxico-monetary-policy-decision",
-   "attention": {
-    "score": 1.234,
-    "share_30d": 2.4861006257515276e-05,
-    "share_12m": 2.0140744872091643e-05,
-    "as_of": "2026-11-05",
-    "source": "GDELT DOC 2.0 (timelinevolraw)",
-    "query": "Banxico \"interest rate\""
-   },
-   "under_attended": false,
-   "base_rate": {
-    "text": "Banxico changed the rate at 15 of its last 24 scheduled decisions (15 cuts, 0 hikes) since 2023-11-09; last: target for the overnight interbank interest rate (Tasa de Interés Interbancaria a 1 día): hold 0.0bp to 6.5% on 2026-09-24 (em-macro)",
-    "changed": 15,
-    "of": 24
-   }
-  },
   {
    "date": "2026-11-09",
    "country": "BR",
@@ -42,10 +15,10 @@
    "origin": "rule:focus",
    "id": "2026-11-09-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -79,10 +52,10 @@
    "origin": "rule:focus",
    "id": "2026-11-16-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -101,10 +74,10 @@
    "origin": "rule:rardp",
    "id": "2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
    "attention": {
-    "score": 1.141,
-    "share_30d": 1.657400417167685e-06,
-    "share_12m": 1.4521540189909336e-06,
-    "as_of": "2026-11-05",
+    "score": 1.122,
+    "share_30d": 1.6358513174737548e-06,
+    "share_12m": 1.457832819535298e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Brazil \"primary deficit\""
    },
@@ -123,10 +96,10 @@
    "origin": "rule:focus",
    "id": "2026-11-23-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -141,7 +114,7 @@
    "status": "confirmed",
    "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
    "query": "\"Standard\" France rating",
-   "note": "Next review date from the AFT ratings table (fetched 2026-11-05).",
+   "note": "Next review date from the AFT ratings table (fetched 2026-11-06).",
    "origin": "aft",
    "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
    "attention": {
@@ -167,10 +140,10 @@
    "origin": "rule:focus",
    "id": "2026-11-30-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -204,10 +177,10 @@
    "origin": "rule:banxico_survey",
    "id": "2026-12-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -226,10 +199,10 @@
    "origin": "rule:focus",
    "id": "2026-12-07-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -248,10 +221,10 @@
    "origin": "manual",
    "id": "2026-12-09-br-copom-decision-8-9-dec",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -275,10 +248,10 @@
    "origin": "fed:scraped",
    "id": "2026-12-09-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -315,7 +288,7 @@
    "status": "confirmed",
    "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
    "query": "\"KBRA\" France rating",
-   "note": "Next review date from the AFT ratings table (fetched 2026-11-05).",
+   "note": "Next review date from the AFT ratings table (fetched 2026-11-06).",
    "origin": "aft",
    "id": "2026-12-11-fr-kbra-sovereign-rating-review-france",
    "attention": null,
@@ -334,10 +307,10 @@
    "origin": "rule:focus",
    "id": "2026-12-14-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -428,10 +401,10 @@
    "origin": "rule:focus",
    "id": "2026-12-21-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -450,10 +423,10 @@
    "origin": "rule:focus",
    "id": "2026-12-28-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -472,10 +445,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-01-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -494,10 +467,10 @@
    "origin": "rule:focus",
    "id": "2027-01-04-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -531,10 +504,10 @@
    "origin": "rule:focus",
    "id": "2027-01-11-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -568,10 +541,10 @@
    "origin": "rule:focus",
    "id": "2027-01-18-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -590,10 +563,10 @@
    "origin": "rule:focus",
    "id": "2027-01-25-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -612,10 +585,10 @@
    "origin": "manual",
    "id": "2027-01-27-br-copom-decision-26-27-jan",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -639,10 +612,10 @@
    "origin": "fed:scraped",
    "id": "2027-01-27-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -661,10 +634,10 @@
    "origin": "rule:focus",
    "id": "2027-02-01-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -698,10 +671,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-02-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -762,10 +735,10 @@
    "origin": "rule:focus",
    "id": "2027-02-08-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -784,10 +757,10 @@
    "origin": "rule:focus",
    "id": "2027-02-15-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -806,10 +779,10 @@
    "origin": "rule:focus",
    "id": "2027-02-22-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -828,10 +801,10 @@
    "origin": "rule:focus",
    "id": "2027-03-01-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -850,10 +823,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-03-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -872,10 +845,10 @@
    "origin": "rule:focus",
    "id": "2027-03-08-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -894,10 +867,10 @@
    "origin": "rule:focus",
    "id": "2027-03-15-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -916,10 +889,10 @@
    "origin": "manual",
    "id": "2027-03-17-br-copom-decision-16-17-mar",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -943,10 +916,10 @@
    "origin": "fed:scraped",
    "id": "2027-03-17-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -980,10 +953,10 @@
    "origin": "rule:rardp",
    "id": "2027-03-22-br-bimonthly-revenue-and-spending-report-rardp",
    "attention": {
-    "score": 1.141,
-    "share_30d": 1.657400417167685e-06,
-    "share_12m": 1.4521540189909336e-06,
-    "as_of": "2026-11-05",
+    "score": 1.122,
+    "share_30d": 1.6358513174737548e-06,
+    "share_12m": 1.457832819535298e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Brazil \"primary deficit\""
    },
@@ -1002,10 +975,10 @@
    "origin": "rule:focus",
    "id": "2027-03-22-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1051,10 +1024,10 @@
    "origin": "rule:focus",
    "id": "2027-03-29-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1073,10 +1046,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-04-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1110,10 +1083,10 @@
    "origin": "rule:focus",
    "id": "2027-04-05-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1147,10 +1120,10 @@
    "origin": "rule:focus",
    "id": "2027-04-12-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1184,10 +1157,10 @@
    "origin": "rule:focus",
    "id": "2027-04-19-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1221,10 +1194,10 @@
    "origin": "rule:focus",
    "id": "2027-04-26-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1243,10 +1216,10 @@
    "origin": "manual",
    "id": "2027-04-28-br-copom-decision-27-28-apr",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -1270,10 +1243,10 @@
    "origin": "fed:scraped",
    "id": "2027-04-28-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -1307,10 +1280,10 @@
    "origin": "rule:focus",
    "id": "2027-05-03-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1329,10 +1302,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-05-03-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1378,10 +1351,10 @@
    "origin": "rule:focus",
    "id": "2027-05-10-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1400,10 +1373,10 @@
    "origin": "rule:focus",
    "id": "2027-05-17-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1422,10 +1395,10 @@
    "origin": "rule:rardp",
    "id": "2027-05-21-br-bimonthly-revenue-and-spending-report-rardp",
    "attention": {
-    "score": 1.141,
-    "share_30d": 1.657400417167685e-06,
-    "share_12m": 1.4521540189909336e-06,
-    "as_of": "2026-11-05",
+    "score": 1.122,
+    "share_30d": 1.6358513174737548e-06,
+    "share_12m": 1.457832819535298e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Brazil \"primary deficit\""
    },
@@ -1444,10 +1417,10 @@
    "origin": "rule:focus",
    "id": "2027-05-24-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1466,10 +1439,10 @@
    "origin": "rule:focus",
    "id": "2027-05-31-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1488,10 +1461,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-06-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1525,10 +1498,10 @@
    "origin": "rule:focus",
    "id": "2027-06-07-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1547,10 +1520,10 @@
    "origin": "fed:scraped",
    "id": "2027-06-09-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -1584,10 +1557,10 @@
    "origin": "rule:focus",
    "id": "2027-06-14-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1606,10 +1579,10 @@
    "origin": "manual",
    "id": "2027-06-16-br-copom-decision-15-16-jun",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -1633,10 +1606,10 @@
    "origin": "rule:focus",
    "id": "2027-06-21-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1682,10 +1655,10 @@
    "origin": "rule:focus",
    "id": "2027-06-28-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1719,10 +1692,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-07-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1741,10 +1714,10 @@
    "origin": "rule:focus",
    "id": "2027-07-05-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1763,10 +1736,10 @@
    "origin": "rule:focus",
    "id": "2027-07-12-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1785,10 +1758,10 @@
    "origin": "rule:focus",
    "id": "2027-07-19-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1807,10 +1780,10 @@
    "origin": "rule:rardp",
    "id": "2027-07-22-br-bimonthly-revenue-and-spending-report-rardp",
    "attention": {
-    "score": 1.141,
-    "share_30d": 1.657400417167685e-06,
-    "share_12m": 1.4521540189909336e-06,
-    "as_of": "2026-11-05",
+    "score": 1.122,
+    "share_30d": 1.6358513174737548e-06,
+    "share_12m": 1.457832819535298e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Brazil \"primary deficit\""
    },
@@ -1844,10 +1817,10 @@
    "origin": "rule:focus",
    "id": "2027-07-26-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1866,10 +1839,10 @@
    "origin": "fed:scraped",
    "id": "2027-07-28-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -1888,10 +1861,10 @@
    "origin": "rule:focus",
    "id": "2027-08-02-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1910,10 +1883,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-08-02-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1932,10 +1905,10 @@
    "origin": "manual",
    "id": "2027-08-04-br-copom-decision-3-4-aug",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -1986,10 +1959,10 @@
    "origin": "rule:focus",
    "id": "2027-08-09-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2008,10 +1981,10 @@
    "origin": "rule:focus",
    "id": "2027-08-16-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2030,10 +2003,10 @@
    "origin": "rule:focus",
    "id": "2027-08-23-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2052,10 +2025,10 @@
    "origin": "rule:focus",
    "id": "2027-08-30-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2074,10 +2047,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-09-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -2096,10 +2069,10 @@
    "origin": "rule:focus",
    "id": "2027-09-06-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2133,10 +2106,10 @@
    "origin": "rule:focus",
    "id": "2027-09-13-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2155,10 +2128,10 @@
    "origin": "fed:scraped",
    "id": "2027-09-15-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -2177,10 +2150,10 @@
    "origin": "rule:focus",
    "id": "2027-09-20-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2199,10 +2172,10 @@
    "origin": "manual",
    "id": "2027-09-22-br-copom-decision-21-22-sep",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -2226,10 +2199,10 @@
    "origin": "rule:rardp",
    "id": "2027-09-22-br-bimonthly-revenue-and-spending-report-rardp",
    "attention": {
-    "score": 1.141,
-    "share_30d": 1.657400417167685e-06,
-    "share_12m": 1.4521540189909336e-06,
-    "as_of": "2026-11-05",
+    "score": 1.122,
+    "share_30d": 1.6358513174737548e-06,
+    "share_12m": 1.457832819535298e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Brazil \"primary deficit\""
    },
@@ -2275,10 +2248,10 @@
    "origin": "rule:focus",
    "id": "2027-09-27-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2297,10 +2270,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-10-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -2319,10 +2292,10 @@
    "origin": "rule:focus",
    "id": "2027-10-04-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2341,10 +2314,10 @@
    "origin": "rule:focus",
    "id": "2027-10-11-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2363,10 +2336,10 @@
    "origin": "rule:focus",
    "id": "2027-10-18-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2385,10 +2358,10 @@
    "origin": "rule:focus",
    "id": "2027-10-25-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2407,10 +2380,10 @@
    "origin": "manual",
    "id": "2027-10-27-br-copom-decision-26-27-oct",
    "attention": {
-    "score": 0.516,
-    "share_30d": 4.889331230644671e-05,
-    "share_12m": 9.477641578382131e-05,
-    "as_of": "2026-11-04",
+    "score": 0.668,
+    "share_30d": 6.206184135850105e-05,
+    "share_12m": 9.295936344808252e-05,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -2434,10 +2407,10 @@
    "origin": "fed:scraped",
    "id": "2027-10-27-global-fomc-decision",
    "attention": {
-    "score": 0.559,
-    "share_30d": 6.993956056308007e-05,
-    "share_12m": 0.00012514179321959773,
-    "as_of": "2026-11-03",
+    "score": 0.558,
+    "share_30d": 7.022787311619855e-05,
+    "share_12m": 0.00012581204757575713,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -2471,10 +2444,10 @@
    "origin": "rule:focus",
    "id": "2027-11-01-br-focus-survey-bcb",
    "attention": {
-    "score": 1.437,
-    "share_30d": 4.143501042919212e-06,
-    "share_12m": 2.8832623275617084e-06,
-    "as_of": "2026-11-05",
+    "score": 1.413,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 2.8945376271932724e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2493,10 +2466,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-11-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 0.484,
-    "share_30d": 2.4978414486814313e-06,
-    "share_12m": 5.163719165593157e-06,
-    "as_of": "2026-11-03",
+    "score": 0.787,
+    "share_30d": 4.089628293684387e-06,
+    "share_12m": 5.197490921821497e-06,
+    "as_of": "2026-11-06",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },

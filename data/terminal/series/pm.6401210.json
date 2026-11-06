@@ -1,0 +1,31 @@
+{
+ "id": "pm.6401210",
+ "name": "Brazil's top courts strike down oil export tax by June 30, 2027?",
+ "country": "BR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Polymarket CLOB",
+ "source_id": "market 6401210 / brazils-top-courts-strike-down-oil-export-tax-by-june-30-2027",
+ "source_url": "https://polymarket.com/event/brazils-top-courts-strike-down-oil-export-tax-byptptpt/brazils-top-courts-strike-down-oil-export-tax-by-june-30-2027",
+ "event": "Brazil's top courts strike down oil export tax by...?",
+ "end_date": "2027-07-01",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-11-06T02:31:34Z",
+ "updated_at": "2026-11-06T02:31:34Z",
+ "n": 6,
+ "first": "2026-10-30",
+ "last": "2026-11-06",
+ "history": [
+  ["2026-10-30",0.315],
+  ["2026-11-02",0.115],
+  ["2026-11-03",0.115],
+  ["2026-11-04",0.085],
+  ["2026-11-05",0.085],
+  ["2026-11-06",0.105]
+ ]
+}
