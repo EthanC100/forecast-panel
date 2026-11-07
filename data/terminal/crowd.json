@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T02:44:05Z",
+ "generated_at": "2026-11-07T00:20:16Z",
  "gauges": [
   {
    "id": "a",
@@ -1166,20 +1166,20 @@
     {
      "country": "BR",
      "label": "BRL futures, leveraged funds",
-     "as_of": "2026-10-27",
-     "net": 7600,
-     "net_pct_oi": 4.5,
-     "percentile": 67.3,
-     "extreme": false,
-     "crowded": null,
+     "as_of": "2026-11-03",
+     "net": 38613,
+     "net_pct_oi": 22.2,
+     "percentile": 99.4,
+     "extreme": true,
+     "crowded": "long BRL",
      "catalysts_30d": [],
      "flag": false,
      "meta": {
       "source": "CFTC Commitments of Traders",
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-      "as_of": "2026-10-27",
-      "fetched_at": "2026-11-06T02:31:16Z",
+      "as_of": "2026-11-03",
+      "fetched_at": "2026-11-07T00:20:05Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1191,10 +1191,10 @@
     {
      "country": "MX",
      "label": "MXN futures, leveraged funds",
-     "as_of": "2026-10-27",
-     "net": 68335,
-     "net_pct_oi": 24.5,
-     "percentile": 79.5,
+     "as_of": "2026-11-03",
+     "net": 71381,
+     "net_pct_oi": 25.2,
+     "percentile": 80.8,
      "extreme": false,
      "crowded": null,
      "catalysts_30d": [],
@@ -1203,8 +1203,8 @@
       "source": "CFTC Commitments of Traders",
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-      "as_of": "2026-10-27",
-      "fetched_at": "2026-11-06T02:31:21Z",
+      "as_of": "2026-11-03",
+      "fetched_at": "2026-11-07T00:20:07Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1373,7 +1373,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 21,
+   "days": 20,
    "score": 0.8,
    "signals": [
     {
@@ -1396,7 +1396,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 60,
+   "days": 59,
    "score": 0.75,
    "signals": [
     {
@@ -1418,7 +1418,7 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 34,
+   "days": 33,
    "score": 0.017,
    "signals": [
     {
@@ -1435,7 +1435,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 170,
+   "days": 169,
    "score": 0,
    "signals": []
   }

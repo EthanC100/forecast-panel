@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T02:44:01Z",
+ "generated_at": "2026-11-07T00:20:11Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -1376,8 +1376,8 @@
      "source": "CFTC Commitments of Traders",
      "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-     "as_of": "2026-10-27",
-     "fetched_at": "2026-11-06T02:31:16Z",
+     "as_of": "2026-11-03",
+     "fetched_at": "2026-11-07T00:20:05Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "br.cot.brl",
      "evidence": {
@@ -1385,28 +1385,28 @@
       "reason": "Crowd lab test (e): leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)"
      }
     },
-    "as_of": "2026-10-27",
+    "as_of": "2026-11-03",
     "rows": [
      {
       "label": "Leveraged funds, net",
-      "value": 7600,
-      "pct_3y": 73.9,
+      "value": 38613,
+      "pct_3y": 100.0,
       "n_3y": 157
      },
      {
       "label": "Asset managers, net",
-      "value": 52010,
-      "pct_3y": 58.0,
+      "value": 49879,
+      "pct_3y": 52.2,
       "n_3y": 157
      },
      {
       "label": "Non-commercial (legacy), net",
-      "value": 32886,
-      "pct_3y": 52.9,
+      "value": 46033,
+      "pct_3y": 70.7,
       "n_3y": 157
      }
     ],
-    "open_interest": 168738
+    "open_interest": 173606
    },
    "markets": [
     {
@@ -2220,8 +2220,8 @@
      "source": "CFTC Commitments of Traders",
      "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-     "as_of": "2026-10-27",
-     "fetched_at": "2026-11-06T02:31:21Z",
+     "as_of": "2026-11-03",
+     "fetched_at": "2026-11-07T00:20:07Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "mx.cot.mxn",
      "evidence": {
@@ -2229,28 +2229,28 @@
       "reason": "Crowd lab test (e): leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)"
      }
     },
-    "as_of": "2026-10-27",
+    "as_of": "2026-11-03",
     "rows": [
      {
       "label": "Leveraged funds, net",
-      "value": 68335,
-      "pct_3y": 93.6,
+      "value": 71381,
+      "pct_3y": 94.3,
       "n_3y": 157
      },
      {
       "label": "Asset managers, net",
-      "value": -25201,
+      "value": -36349,
       "pct_3y": 0.6,
       "n_3y": 157
      },
      {
       "label": "Non-commercial (legacy), net",
-      "value": 20843,
-      "pct_3y": 14.0,
+      "value": 18017,
+      "pct_3y": 11.5,
       "n_3y": 157
      }
     ],
-    "open_interest": 279359
+    "open_interest": 283227
    },
    "markets": [
     {
@@ -2875,8 +2875,8 @@
     "country": "GLOBAL",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-11-06T02:31:14Z",
-    "last_success": "2026-11-06T02:31:14Z",
+    "last_attempt": "2026-11-07T00:20:02Z",
+    "last_success": "2026-11-07T00:20:02Z",
     "n_series": 3,
     "name": "CFTC Commitments of Traders (BRL, MXN, ZAR)",
     "note": null,
@@ -3283,7 +3283,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-06T02:43:58Z"
+  "updated_at": "2026-11-07T00:20:08Z"
  },
  "series_index": [
   "br.cot.brl",
