@@ -11,10 +11,10 @@
    }
   },
   "2026-11": {
-   "usd": 5.221136,
-   "calls": 33,
+   "usd": 5.224756,
+   "calls": 34,
    "by_role": {
-    "extraction": 0.023716,
+    "extraction": 0.027336,
     "judgement": 5.19742
    }
   }
@@ -723,25 +723,36 @@
    "cache_read": 0,
    "output": 6036,
    "usd": 0.003712
+  },
+  {
+   "at": "2026-11-07T03:18:11Z",
+   "role": "extraction",
+   "mode": "batch",
+   "input": 44558,
+   "cache_write_5m": 0,
+   "cache_write_1h": 0,
+   "cache_read": 0,
+   "output": 5569,
+   "usd": 0.00362
   }
  ],
  "cap_usd": 15.0,
  "expected_month_usd": {
-  "total_usd": 6.72,
+  "total_usd": 7.32,
   "cap_usd": 15.0,
-  "computed_on": "2026-11-06",
+  "computed_on": "2026-11-07",
   "breakdown": {
-   "extraction_daily_x30": 0.126,
-   "judgement_weekly_x4.3": 4.11,
-   "judgement_near_catalysts": 2.48,
+   "extraction_daily_x30": 0.127,
+   "judgement_weekly_x4.3": 4.13,
+   "judgement_near_catalysts": 3.06,
    "assessments_monthly": 0.004
   },
   "assumptions": {
    "extraction_per_day_usd": 0.0042,
-   "judgement_per_week_usd": 0.957,
-   "catalyst_refresh_days_next_30": 4,
+   "judgement_per_week_usd": 0.961,
+   "catalyst_refresh_days_next_30": 5,
    "requests_per_weekly_judgement": 10,
-   "prefix_tokens": 50534,
+   "prefix_tokens": 50987,
    "batch_discount": 0.5,
    "output_tokens_per_judgement_request": 5000,
    "output_tokens_per_extraction": 8000
