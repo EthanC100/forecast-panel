@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T00:20:16Z",
+ "generated_at": "2026-11-07T02:10:45Z",
  "gauges": [
   {
    "id": "a",
@@ -1011,7 +1011,7 @@
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-11-06T02:29:37Z",
+      "fetched_at": "2026-11-07T01:56:55Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1043,7 +1043,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-10-30",
-      "fetched_at": "2026-11-06T02:29:34Z",
+      "fetched_at": "2026-11-07T01:56:53Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-10-01",
-      "fetched_at": "2026-11-06T02:30:35Z",
+      "fetched_at": "2026-11-07T01:57:53Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1179,7 +1179,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-03",
-      "fetched_at": "2026-11-07T00:20:05Z",
+      "fetched_at": "2026-11-07T01:58:27Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1204,7 +1204,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-03",
-      "fetched_at": "2026-11-07T00:20:07Z",
+      "fetched_at": "2026-11-07T01:58:28Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1359,38 +1359,15 @@
      "scenarios": [
       "br-fiscal-2027"
      ],
-     "distance": "20-day move in DI Jan-29 (proxy) is 103 bp, percentile 92.6 over 3 years",
+     "distance": "20-day move in DI Jan-29 (proxy) is 239 bp, percentile 99.9 over 3 years",
      "near": true,
-     "percentile": 92.6,
+     "percentile": 99.9,
      "why": "When rates gap, the Treasury cuts fixed-rate supply and leans on floating (LFT) issuance; a move above the 90th percentile is the zone where that has happened."
     }
    ]
   }
  ],
  "shared_errors": [
-  {
-   "scenario": "fr-sp-2026-11",
-   "title": "S&P review of France, 27 Nov 2026",
-   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
-   "date": "2026-11-27",
-   "days": 20,
-   "score": 0.8,
-   "signals": [
-    {
-     "signal": "market vs base rate",
-     "detail": "market 34% vs base rate 0%",
-     "strength": 1.0,
-     "badge": "untested",
-     "hidden_market": true
-    },
-    {
-     "signal": "forced-flow threshold",
-     "detail": "Last AA-category rating among the big three: Moody's at Aa3 (negative) is the last; one notch removes it",
-     "strength": 1.0,
-     "badge": "context"
-    }
-   ]
-  },
   {
    "scenario": "br-fiscal-2027",
    "title": "Brazil 2027: fiscal-framework credibility",
@@ -1407,7 +1384,30 @@
     },
     {
      "signal": "forced-flow threshold",
-     "detail": "Auction stress: Tesouro shrinks or cancels fixed-rate auctions in volatile weeks: 20-day move in DI Jan-29 (proxy) is 103 bp, percentile 92.6 over 3 years",
+     "detail": "Auction stress: Tesouro shrinks or cancels fixed-rate auctions in volatile weeks: 20-day move in DI Jan-29 (proxy) is 239 bp, percentile 99.9 over 3 years",
+     "strength": 1.0,
+     "badge": "context"
+    }
+   ]
+  },
+  {
+   "scenario": "fr-sp-2026-11",
+   "title": "S&P review of France, 27 Nov 2026",
+   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
+   "date": "2026-11-27",
+   "days": 20,
+   "score": 0.417,
+   "signals": [
+    {
+     "signal": "market vs base rate",
+     "detail": "market 7% vs base rate 0%",
+     "strength": 0.23333333333333336,
+     "badge": "untested",
+     "hidden_market": true
+    },
+    {
+     "signal": "forced-flow threshold",
+     "detail": "Last AA-category rating among the big three: Moody's at Aa3 (negative) is the last; one notch removes it",
      "strength": 1.0,
      "badge": "context"
     }
@@ -1419,12 +1419,12 @@
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
    "days": 33,
-   "score": 0.017,
+   "score": 0.117,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 51% vs base rate 50%",
-     "strength": 0.03333333333333337,
+     "detail": "market 57% vs base rate 50%",
+     "strength": 0.23333333333333317,
      "badge": "untested",
      "hidden_market": true
     }
