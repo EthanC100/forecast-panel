@@ -1,7 +1,7 @@
 {
- "date": "2026-11-07",
- "generated_at": "2026-11-07T03:15:37Z",
- "prev_date": "2026-11-06",
+ "date": "2026-11-08",
+ "generated_at": "2026-11-08T02:48:23Z",
+ "prev_date": "2026-11-07",
  "items": [
   {
    "id": "s:br.usdbrl.ptax",
@@ -21,9 +21,7 @@
    "week_ago_date": "2026-10-30",
    "week_ago_value": 5.4212,
    "change_1w": 0.0801,
-   "change_pct_1w": 1.48,
-   "last_brief_value": 5.4621,
-   "last_brief_date": "2026-11-05"
+   "change_pct_1w": 1.48
   },
   {
    "id": "s:mx.usdmxn.fix",
@@ -43,9 +41,7 @@
    "week_ago_date": "2026-10-30",
    "week_ago_value": 18.7962,
    "change_1w": -0.1665,
-   "change_pct_1w": -0.89,
-   "last_brief_value": 18.7147,
-   "last_brief_date": "2026-11-05"
+   "change_pct_1w": -0.89
   },
   {
    "id": "s:eu.eurusd",
@@ -86,9 +82,7 @@
    "week_ago_value": 13.51,
    "change_1w": 0.13,
    "change_bp_1w": 13.0,
-   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
-   "last_brief_value": 13.54,
-   "last_brief_date": "2026-10-30"
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
   },
   {
    "id": "s:br.di.f29.proxy",
@@ -109,9 +103,7 @@
    "week_ago_value": 14.86,
    "change_1w": 0.14,
    "change_bp_1w": 14.0,
-   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
-   "last_brief_value": 14.95,
-   "last_brief_date": "2026-10-30"
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
   },
   {
    "id": "s:br.di.f31.proxy",
@@ -132,9 +124,7 @@
    "week_ago_value": 15.17,
    "change_1w": 0.16,
    "change_bp_1w": 16.0,
-   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
-   "last_brief_value": 15.36,
-   "last_brief_date": "2026-10-30"
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
   },
   {
    "id": "s:br.td.pre_longest",
@@ -154,9 +144,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 15.06,
    "change_1w": 0.21,
-   "change_bp_1w": 21.0,
-   "last_brief_value": 15.29,
-   "last_brief_date": "2026-10-30"
+   "change_bp_1w": 21.0
   },
   {
    "id": "s:fr.spread.oat_bund.ecb_m",
@@ -192,9 +180,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 4.98,
    "change_1w": -0.14,
-   "change_bp_1w": -14.0,
-   "last_brief_value": 4.9,
-   "last_brief_date": "2026-11-04"
+   "change_bp_1w": -14.0
   },
   {
    "id": "s:mx.mbono10y.auction",
@@ -247,9 +233,7 @@
    "week_ago_date": "2026-10-30",
    "week_ago_value": 3.38,
    "change_1w": -0.11,
-   "change_bp_1w": -11.0,
-   "last_brief_value": 3.31,
-   "last_brief_date": "2026-11-05"
+   "change_bp_1w": -11.0
   },
   {
    "id": "s:br.td.ipca_longest",
@@ -269,9 +253,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 7.37,
    "change_1w": 0.25,
-   "change_bp_1w": 25.0,
-   "last_brief_value": 7.48,
-   "last_brief_date": "2026-10-30"
+   "change_bp_1w": 25.0
   },
   {
    "id": "s:br.selic.target",
@@ -331,9 +313,7 @@
    "week_ago_date": "2026-10-30",
    "week_ago_value": 6.786,
    "change_1w": -0.2713,
-   "change_bp_1w": -27.1,
-   "last_brief_value": 6.7659,
-   "last_brief_date": "2026-11-06"
+   "change_bp_1w": -27.1
   },
   {
    "id": "s:us.usd.broad",
@@ -393,9 +373,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 3898.8999,
    "change_1w": 180.6001,
-   "change_pct_1w": 4.63,
-   "last_brief_value": 4076.7,
-   "last_brief_date": "2026-11-05"
+   "change_pct_1w": 4.63
   },
   {
    "id": "s:gl.silver",
@@ -415,9 +393,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 49.097,
    "change_1w": 2.868,
-   "change_pct_1w": 5.84,
-   "last_brief_value": 51.98,
-   "last_brief_date": "2026-11-05"
+   "change_pct_1w": 5.84
   },
   {
    "id": "s:us.tips10",
@@ -437,9 +413,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 2.63,
    "change_1w": -0.03,
-   "change_bp_1w": -3.0,
-   "last_brief_value": 2.64,
-   "last_brief_date": "2026-11-04"
+   "change_bp_1w": -3.0
   },
   {
    "id": "s:gl.gpr",
@@ -495,9 +469,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 4.61,
    "change_1w": -0.15,
-   "change_bp_1w": -15.0,
-   "last_brief_value": 4.58,
-   "last_brief_date": "2026-11-04"
+   "change_bp_1w": -15.0
   },
   {
    "id": "s:us.vix",
@@ -517,9 +489,7 @@
    "week_ago_date": "2026-10-29",
    "week_ago_value": 17.2,
    "change_1w": 10.98,
-   "change_pct_1w": 63.84,
-   "last_brief_value": 16.61,
-   "last_brief_date": "2026-11-04"
+   "change_pct_1w": 63.84
   },
   {
    "id": "s:us.fed.upper",
@@ -546,7 +516,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-11-09",
-   "days_to": 2,
+   "days_to": 1,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -559,7 +529,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2026-11-15",
-   "days_to": 8,
+   "days_to": 7,
    "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
    "type": "fiscal",
    "importance": 2,
@@ -572,7 +542,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-11-16",
-   "days_to": 9,
+   "days_to": 8,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -585,7 +555,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-11-20",
-   "days_to": 13,
+   "days_to": 12,
    "title": "Bimonthly revenue and spending report (RARDP)",
    "type": "fiscal",
    "importance": 2,
@@ -598,7 +568,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-11-23",
-   "days_to": 16,
+   "days_to": 15,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -611,7 +581,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2026-11-27",
-   "days_to": 20,
+   "days_to": 19,
    "title": "Standard & Poor's sovereign rating review: France",
    "type": "ratings",
    "importance": 3,
@@ -624,7 +594,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-11-30",
-   "days_to": 23,
+   "days_to": 22,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -637,7 +607,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2026-11-30",
-   "days_to": 23,
+   "days_to": 22,
    "title": "USMCA: US-Mexico bilateral round (next round not announced)",
    "type": "trade",
    "importance": 2,
@@ -650,7 +620,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2026-12-01",
-   "days_to": 24,
+   "days_to": 23,
    "title": "Banxico survey of private-sector economists",
    "type": "survey",
    "importance": 1,
@@ -663,7 +633,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-07",
-   "days_to": 30,
+   "days_to": 29,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -676,7 +646,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-09",
-   "days_to": 32,
+   "days_to": 31,
    "title": "Copom decision (8-9 Dec)",
    "type": "rates",
    "importance": 3,
@@ -689,7 +659,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2026-12-09",
-   "days_to": 32,
+   "days_to": 31,
    "title": "FOMC decision",
    "type": "rates",
    "importance": 3,
@@ -702,7 +672,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2026-12-10",
-   "days_to": 33,
+   "days_to": 32,
    "title": "Budget (PLF 2027): Article 47 70-day deadline",
    "type": "fiscal",
    "importance": 3,
@@ -715,7 +685,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2026-12-11",
-   "days_to": 34,
+   "days_to": 33,
    "title": "KBRA sovereign rating review: France",
    "type": "ratings",
    "importance": 3,
@@ -728,7 +698,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-14",
-   "days_to": 37,
+   "days_to": 36,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -741,7 +711,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-15",
-   "days_to": 38,
+   "days_to": 37,
    "title": "Senate deadline to set the CBS reference rate",
    "type": "fiscal",
    "importance": 2,
@@ -754,7 +724,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-17",
-   "days_to": 40,
+   "days_to": 39,
    "title": "2027 budget (PLOA) vote in Congress",
    "type": "fiscal",
    "importance": 3,
@@ -767,7 +737,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2026-12-17",
-   "days_to": 40,
+   "days_to": 39,
    "title": "ECB monetary policy decision",
    "type": "rates",
    "importance": 3,
@@ -780,7 +750,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2026-12-17",
-   "days_to": 40,
+   "days_to": 39,
    "title": "Banxico monetary policy decision",
    "type": "rates",
    "importance": 3,
@@ -793,7 +763,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-21",
-   "days_to": 44,
+   "days_to": 43,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -806,7 +776,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-28",
-   "days_to": 51,
+   "days_to": 50,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -819,7 +789,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-01-01",
-   "days_to": 55,
+   "days_to": 54,
    "title": "Banxico survey of private-sector economists",
    "type": "survey",
    "importance": 1,
@@ -832,7 +802,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-04",
-   "days_to": 58,
+   "days_to": 57,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -845,7 +815,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-05",
-   "days_to": 59,
+   "days_to": 58,
    "title": "Presidential inauguration (5 Jan, not 1 Jan)",
    "type": "politics",
    "importance": 3,
@@ -858,7 +828,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-11",
-   "days_to": 65,
+   "days_to": 64,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -871,7 +841,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-01-15",
-   "days_to": 69,
+   "days_to": 68,
    "title": "Midterms: candidate registration and precampaigns (January)",
    "type": "election",
    "importance": 2,
@@ -884,7 +854,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-18",
-   "days_to": 72,
+   "days_to": 71,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -897,7 +867,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-25",
-   "days_to": 79,
+   "days_to": 78,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -910,7 +880,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-27",
-   "days_to": 81,
+   "days_to": 80,
    "title": "Copom decision (26-27 Jan)",
    "type": "rates",
    "importance": 3,
@@ -923,7 +893,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2027-01-27",
-   "days_to": 81,
+   "days_to": 80,
    "title": "FOMC decision",
    "type": "rates",
    "importance": 3,
@@ -936,7 +906,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-02-01",
-   "days_to": 86,
+   "days_to": 85,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -949,7 +919,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-02-01",
-   "days_to": 86,
+   "days_to": 85,
    "title": "USTR public consultation for the 2027 USMCA review",
    "type": "trade",
    "importance": 2,
@@ -962,7 +932,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-02-01",
-   "days_to": 86,
+   "days_to": 85,
    "title": "Banxico survey of private-sector economists",
    "type": "survey",
    "importance": 1,
@@ -975,7 +945,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2027-02-04",
-   "days_to": 89,
+   "days_to": 88,
    "title": "ECB monetary policy decision",
    "type": "rates",
    "importance": 3,
@@ -988,7 +958,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-02-04",
-   "days_to": 89,
+   "days_to": 88,
    "title": "Banxico decision (2027 calendar not yet published)",
    "type": "rates",
    "importance": 3,
@@ -1001,7 +971,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2027-04-25",
-   "days_to": 169,
+   "days_to": 168,
    "title": "Presidential election, second round",
    "type": "election",
    "importance": 3,
@@ -1014,7 +984,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-06-06",
-   "days_to": 211,
+   "days_to": 210,
    "title": "Midterm elections (Chamber of Deputies, governorships)",
    "type": "election",
    "importance": 3,
@@ -1027,7 +997,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-07-01",
-   "days_to": 236,
+   "days_to": 235,
    "title": "USMCA annual joint review",
    "type": "trade",
    "importance": 3,
@@ -1921,10 +1891,7 @@
    "volume": 6793248.0,
    "end_date": "2027-04-19",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 15.2,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": -0.4
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679033",
@@ -1972,10 +1939,7 @@
    "volume": 364877.0,
    "end_date": "2028-05-30",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxfrenchpres",
-   "last_brief_value": 45.0,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": 1.0
+   "url": "https://kalshi.com/markets/kxfrenchpres"
   },
   {
    "id": "ks:KXFRENCHPRES-27-JBAR",
@@ -1987,10 +1951,7 @@
    "volume": 163776.0,
    "end_date": "2028-05-30",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxfrenchpres",
-   "last_brief_value": 1.7,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": 0.1
+   "url": "https://kalshi.com/markets/kxfrenchpres"
   },
   {
    "id": "ks:KXFRENCHPRES-27-DLIS",
@@ -2002,10 +1963,7 @@
    "volume": 124288.0,
    "end_date": "2028-05-30",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxfrenchpres",
-   "last_brief_value": 16.0,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": 1.0
+   "url": "https://kalshi.com/markets/kxfrenchpres"
   },
   {
    "id": "ks:KXFRENCHPRES-27-JMEL",
@@ -2017,10 +1975,7 @@
    "volume": 114263.0,
    "end_date": "2028-05-30",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxfrenchpres",
-   "last_brief_value": 11.0,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": 1.0
+   "url": "https://kalshi.com/markets/kxfrenchpres"
   },
   {
    "id": "ks:KXFRENCHPRES-27-FHOL",
@@ -2056,10 +2011,7 @@
    "volume": 263865.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/alexandre-de-moraes-out-as-brazil-supreme-court-justice",
-   "last_brief_value": 3.8,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": 3.3
+   "url": "https://polymarket.com/event/alexandre-de-moraes-out-as-brazil-supreme-court-justice"
   },
   {
    "id": "pm:6317343",
@@ -2071,10 +2023,7 @@
    "volume": 200931.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/will-trump-meet-with-flavio-bolsonaro-in-2026",
-   "last_brief_value": 23.5,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": 6.5
+   "url": "https://polymarket.com/event/will-trump-meet-with-flavio-bolsonaro-in-2026"
   },
   {
    "id": "pm:1125087",
@@ -2086,10 +2035,7 @@
    "volume": 105329.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/any-brazil-stf-justice-removed-by-impeachment-before-2027",
-   "last_brief_value": 4.7,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": -0.9
+   "url": "https://polymarket.com/event/any-brazil-stf-justice-removed-by-impeachment-before-2027"
   },
   {
    "id": "pm:5336164",
@@ -2101,10 +2047,7 @@
    "volume": 98732.0,
    "end_date": "2026-11-05",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo",
-   "last_brief_value": 59.0,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": 3.2
+   "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo"
   },
   {
    "id": "pm:6257149",
@@ -2128,10 +2071,7 @@
    "volume": 39488.0,
    "end_date": "2027-01-13",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/brazil-annual-inflation-2026",
-   "last_brief_value": 6.7,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": 0.7
+   "url": "https://polymarket.com/event/brazil-annual-inflation-2026"
   },
   {
    "id": "ks:KXBRRATECUT-27JAN01-T7",
@@ -2143,10 +2083,7 @@
    "volume": 98613.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxbrratecut",
-   "last_brief_value": 3.0,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": -2.0
+   "url": "https://kalshi.com/markets/kxbrratecut"
   },
   {
    "id": "ks:KXBRRATECUT-27JAN01-E5",
@@ -2170,10 +2107,7 @@
    "volume": 56242.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxbrratecut",
-   "last_brief_value": 8.0,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": 1.0
+   "url": "https://kalshi.com/markets/kxbrratecut"
   },
   {
    "id": "ks:KXFLAVIOBRAZIL-26NOV02-DEC01",
@@ -2209,10 +2143,7 @@
    "volume": 18285.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxdemoraesout",
-   "last_brief_value": 4.0,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": 1.0
+   "url": "https://kalshi.com/markets/kxdemoraesout"
   },
   {
    "id": "pm:1419324",
@@ -2224,10 +2155,7 @@
    "volume": 63985.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026",
-   "last_brief_value": 13.7,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": -1.7
+   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026"
   },
   {
    "id": "pm:1419327",
@@ -2239,10 +2167,7 @@
    "volume": 60778.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026",
-   "last_brief_value": 7.5,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": -1.5
+   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026"
   },
   {
    "id": "pm:2271403",
@@ -2266,10 +2191,7 @@
    "volume": 42202.0,
    "end_date": "2027-01-09",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/mexico-annual-inflation-2026",
-   "last_brief_value": 24.9,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": -4.7
+   "url": "https://polymarket.com/event/mexico-annual-inflation-2026"
   },
   {
    "id": "pm:1430556",
@@ -2281,10 +2203,7 @@
    "volume": 41413.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/claudia-sheinbaum-out-as-president-of-mexico-by-june-30",
-   "last_brief_value": 2.9,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": -0.2
+   "url": "https://polymarket.com/event/claudia-sheinbaum-out-as-president-of-mexico-by-june-30"
   },
   {
    "id": "pm:2325445",
@@ -2296,10 +2215,7 @@
    "volume": 40044.0,
    "end_date": "2027-06-07",
    "as_of": "2026-11-07T01:58:29Z",
-   "url": "https://polymarket.com/event/mexico-legislative-election-2nd-place",
-   "last_brief_value": 72.0,
-   "last_brief_date": "2026-11-06T02:31:23Z",
-   "change_pp_since_last_brief": 3.5
+   "url": "https://polymarket.com/event/mexico-legislative-election-2nd-place"
   },
   {
    "id": "ks:KXUSMCAOUTCOMES-27-16Y",
@@ -2335,10 +2251,7 @@
    "volume": 1977.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-07T01:58:48Z",
-   "url": "https://kalshi.com/markets/kxusmcaoutcomes",
-   "last_brief_value": 11.0,
-   "last_brief_date": "2026-11-06T02:31:43Z",
-   "change_pp_since_last_brief": -2.0
+   "url": "https://kalshi.com/markets/kxusmcaoutcomes"
   },
   {
    "id": "ks:KXUSMCAOUTCOMES-27-CANW",
@@ -2385,10 +2298,7 @@
    "yes_pct": 7.0,
    "volume": 7666.0,
    "scenario": "sc:fr-sp-2026-11",
-   "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt",
-   "last_brief_value": 34.5,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": -27.5
+   "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt"
   },
   {
    "id": "pm:1722538",
@@ -2399,10 +2309,7 @@
    "yes_pct": 57.0,
    "volume": 26689.0,
    "scenario": "sc:fr-budget-2027",
-   "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31",
-   "last_brief_value": 51.0,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": 6.0
+   "url": "https://polymarket.com/event/will-france-pass-a-national-budget-by-december-31"
   },
   {
    "id": "ks:KXFRANCEBUDGET-27JAN01",
@@ -2413,10 +2320,7 @@
    "yes_pct": 49.0,
    "volume": 4718.0,
    "scenario": "sc:fr-budget-2027",
-   "url": "https://kalshi.com/markets/kxfrancebudget",
-   "last_brief_value": 55.0,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": -6.0
+   "url": "https://kalshi.com/markets/kxfrancebudget"
   },
   {
    "id": "ks:KXFRANCE493-27JAN01",
@@ -2438,10 +2342,7 @@
    "yes_pct": 45.1,
    "volume": 5133921.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 44.2,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": 0.9
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679019",
@@ -2463,10 +2364,7 @@
    "yes_pct": 10.5,
    "volume": 3030810.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 11.5,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": -1.0
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679027",
@@ -2477,10 +2375,7 @@
    "yes_pct": 1.0,
    "volume": 3709850.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 0.9,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": 0.1
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679026",
@@ -2502,10 +2397,7 @@
    "yes_pct": 7.4,
    "volume": 2713958.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 6.7,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": 0.7
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679030",
@@ -2538,10 +2430,7 @@
    "yes_pct": 2.1,
    "volume": 3041609.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 2.4,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": -0.3
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:2761052",
@@ -2552,10 +2441,7 @@
    "yes_pct": 7.5,
    "volume": 12398.0,
    "scenario": "sc:usmca-2027",
-   "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768",
-   "last_brief_value": 7.0,
-   "last_brief_date": "2026-11-06",
-   "change_pp_since_last_brief": 0.5
+   "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768"
   },
   {
    "id": "ks:KXUSMCAOUTCOMES-27-TRI",
@@ -2581,9 +2467,7 @@
    "extreme": true,
    "evidence_badge": "tested_no_lead",
    "source": "CFTC Commitments of Traders",
-   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-   "last_brief_value": 7600,
-   "last_brief_date": "2026-10-27"
+   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
   },
   {
    "id": "cot:mx.cot.mxn",
@@ -2598,9 +2482,7 @@
    "extreme": false,
    "evidence_badge": "tested_no_lead",
    "source": "CFTC Commitments of Traders",
-   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-   "last_brief_value": 68335,
-   "last_brief_date": "2026-10-27"
+   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
   },
   {
    "id": "disp:1",
@@ -3243,7 +3125,7 @@
    "country": "US",
    "region": "GOLD",
    "date": "2026-12-09",
-   "days_to": 32,
+   "days_to": 31,
    "title": "FOMC rate decision and projections",
    "type": "fed",
    "importance": 3,
@@ -3256,7 +3138,7 @@
    "country": "US",
    "region": "GOLD",
    "date": "2027-01-27",
-   "days_to": 81,
+   "days_to": 80,
    "title": "FOMC rate decision",
    "type": "fed",
    "importance": 2,
@@ -3374,30 +3256,6 @@
    "kind": "headline"
   },
   {
-   "id": "h:09f6c308",
-   "title": "Compte rendu intégral de la troisième séance du jeudi 29 octobre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270046.asp",
-   "source": "Assemblée nationale (sitting reports)",
-   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
-   "country": "FR",
-   "date": "2026-10-29",
-   "official": true,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:a3f7cbc7",
-   "title": "Compte rendu intégral de la deuxième séance du jeudi 29 octobre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270045.asp",
-   "source": "Assemblée nationale (sitting reports)",
-   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
-   "country": "FR",
-   "date": "2026-10-29",
-   "official": true,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
    "id": "h:de1ddfbf",
    "title": "Compte rendu intégral de la deuxième séance du mardi 03 novembre 2026",
    "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270054.asp",
@@ -3416,6 +3274,28 @@
    "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
    "country": "FR",
    "date": "2026-11-04",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:09f6c308",
+   "title": "Compte rendu intégral de la troisième séance du jeudi 29 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270046.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-10-29",
+   "official": true,
+   "kind": "headline"
+  },
+  {
+   "id": "h:a3f7cbc7",
+   "title": "Compte rendu intégral de la deuxième séance du jeudi 29 octobre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270045.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-10-29",
    "official": true,
    "kind": "headline"
   },
@@ -3439,8 +3319,7 @@
    "country": "US",
    "date": "2026-11-06",
    "official": true,
-   "kind": "headline",
-   "new_since_last_brief": true
+   "kind": "headline"
   },
   {
    "id": "h:59b31650",
@@ -3487,29 +3366,6 @@
    "kind": "headline"
   },
   {
-   "id": "h:d33d5fa7",
-   "title": "Budget 2026 : Liberals pin tax changes , billions in spending on economic sovereignty",
-   "url": "https://www.chroniclejournal.com/news/national/budget-2026-liberals-pin-tax-changes-billions-in-spending-on-economic-sovereignty/article_71d63245-ffb2-535e-b04c-5a436e5b27ed.html",
-   "source": "chroniclejournal.com",
-   "via": "GDELT DOC 2.0",
-   "country": "FR",
-   "date": "2026-11-06",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:29bbddd6",
-   "title": "Brazil Stocks Slip as Wall Street Sells Off",
-   "url": "https://www.riotimesonline.com/brazil-stocks-slip-wall-street-tech-selloff-5-nov-2026/",
-   "source": "riotimesonline.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-05",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
    "id": "h:e6bee52b",
    "title": "Mexico Stocks Edge Up 0 . 3 % on Rate Cut | Mexico Market Report , Nov 5",
    "url": "https://www.riotimesonline.com/mexico-markets-ipc-peso-thursday-november-5-2026/",
@@ -3529,32 +3385,7 @@
    "country": "US",
    "date": "2026-11-05",
    "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:0e61d993",
-   "title": "More French Protests Planned For November 20 - 22",
-   "url": "https://whyn.iheart.com/content/2026-11-06-more-french-protests-planned-for-november-20-22/",
-   "source": "whyn.iheart.com",
-   "via": "GDELT DOC 2.0",
-   "country": "FR",
-   "date": "2026-11-07",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:d28a74d8",
-   "title": "Brazil Lula mocks Flavio Bolsonaro over Trump US midterm election defeat",
-   "url": "https://aa.com.tr/en/americas/brazils-lula-mocks-flavio-bolsonaro-over-trumps-us-midterm-election-defeat/4113750",
-   "source": "aa.com.tr",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-06",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
+   "kind": "headline"
   },
   {
    "id": "h:f30f5658",
@@ -3568,30 +3399,6 @@
    "kind": "headline"
   },
   {
-   "id": "h:7e5b363a",
-   "title": "More French Protests Planned For November 20 - 22 | News Radio 94 . 3 WSC",
-   "url": "https://943wsc.iheart.com/content/2026-11-06-more-french-protests-planned-for-november-20-22/",
-   "source": "943wsc.iheart.com",
-   "via": "GDELT DOC 2.0",
-   "country": "FR",
-   "date": "2026-11-07",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:5a5ad97f",
-   "title": "Analysis - Lula election win dashes US hopes of quick access to Brazil rare earths",
-   "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/06/analysis-lula-s-election-win-dashes-us-hopes-of-quick-access-to-brazil-s-rare-earths",
-   "source": "internazionale.it",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-06",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
    "id": "h:c01f2ffd",
    "title": "Colombia Stocks Slip 0 . 9 % as Peso Gains | Colombia Market Report …",
    "url": "https://www.riotimesonline.com/colombia-markets-colcap-peso-thursday-november-5-2026/",
@@ -3601,30 +3408,6 @@
    "date": "2026-11-06",
    "official": false,
    "kind": "headline"
-  },
-  {
-   "id": "h:ff80313e",
-   "title": "Mass protests sweep France as huge crowds demand higher wages , back student demands",
-   "url": "https://economictimes.indiatimes.com/news/international/world-news/mass-protests-sweep-france-as-huge-crowds-demand-higher-wages-back-students-demands/articleshow/135592377.cms",
-   "source": "economictimes.indiatimes.com",
-   "via": "GDELT DOC 2.0",
-   "country": "FR",
-   "date": "2026-11-06",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:cd5be55d",
-   "title": "Brazil Stocks Slip 0 . 8 % on Wall Street Rout | Brazil Market Report …",
-   "url": "https://www.riotimesonline.com/brazil-markets-ibovespa-real-thursday-november-5-2026/",
-   "source": "riotimesonline.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-06",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
   },
   {
    "id": "h:97cccc37",
@@ -3638,29 +3421,6 @@
    "kind": "headline"
   },
   {
-   "id": "h:1982d74f",
-   "title": "Largely peaceful marches take place across France as workers stage strike",
-   "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/05/france-braces-for-fresh-protests-as-macron-seeks-to-prevent-repeat-of-october-unrest",
-   "source": "internazionale.it",
-   "via": "GDELT DOC 2.0",
-   "country": "FR",
-   "date": "2026-11-05",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:da75896f",
-   "title": "Brazil Lula to join other world leaders at Asean summit",
-   "url": "https://www.freemalaysiatoday.com/category/world/2026/11/06/brazil-s-lula-to-join-other-world-leaders-at-asean-summit",
-   "source": "freemalaysiatoday.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-06",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
    "id": "h:378697b3",
    "title": "Argentina Stocks Drop 4 . 1 % in Global Rout | Argentina Market Report …",
    "url": "https://www.riotimesonline.com/argentina-markets-merval-peso-thursday-november-5-2026/",
@@ -3668,28 +3428,6 @@
    "via": "GDELT DOC 2.0",
    "country": "MX",
    "date": "2026-11-06",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:eb1dfc94",
-   "title": "World News : Largely peaceful marches take place across France",
-   "url": "https://www.gdnonline.com:443/Details/1412027",
-   "source": "gdnonline.com",
-   "via": "GDELT DOC 2.0",
-   "country": "FR",
-   "date": "2026-11-06",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:e7f4fee5",
-   "title": "Opinion : This was never about Trump",
-   "url": "https://www.sltrib.com/opinion/commentary/2026/11/05/opinion-this-was-never-about-trump/",
-   "source": "sltrib.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-05",
    "official": false,
    "kind": "headline"
   },
@@ -3705,15 +3443,28 @@
    "kind": "headline"
   },
   {
-   "id": "h:34cabed9",
-   "title": "Rise of far - right groups should not curb Canada bid for stronger ties with EU , ambassador says",
-   "url": "https://www.theglobeandmail.com/politics/article-rise-of-far-right-groups-should-not-curb-canadas-bid-for-stronger-ties/",
-   "source": "theglobeandmail.com",
+   "id": "h:f240b13f",
+   "title": "JP Morgan to add Philippines and Saudi Arabia to key EM bond index over 10 months",
+   "url": "https://interaksyon.philstar.com/business/2026/11/06/321537/jp-morgan-to-add-philippines-and-saudi-arabia-to-key-em-bond-index-over-10-months/",
+   "source": "interaksyon.philstar.com",
    "via": "GDELT DOC 2.0",
-   "country": "FR",
+   "country": "MX",
    "date": "2026-11-06",
    "official": false,
-   "kind": "headline"
+   "kind": "headline",
+   "new_since_last_brief": true
+  },
+  {
+   "id": "h:6423fd00",
+   "title": "Steel Stocks Fall 3 . 5 % as Mexico , Brazil Mills Slide",
+   "url": "https://www.riotimesonline.com/steel-markets-latam-thursday-november-5-2026/",
+   "source": "riotimesonline.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-11-06",
+   "official": false,
+   "kind": "headline",
+   "new_since_last_brief": true
   },
   {
    "id": "em:5",
@@ -3913,15 +3664,15 @@
   },
   {
    "source": "GDELT FR",
-   "ok": true,
-   "n": 8,
-   "error": null
+   "ok": false,
+   "n": 0,
+   "error": "GDELT kept returning its rate-limit notice"
   },
   {
    "source": "GDELT BR",
-   "ok": true,
-   "n": 8,
-   "error": null
+   "ok": false,
+   "n": 0,
+   "error": "GDELT kept returning its rate-limit notice"
   },
   {
    "source": "GDELT MX",
@@ -3943,7 +3694,7 @@
   "data": 26,
   "event": 40,
   "evidence_badge": 7,
-  "headline": 40,
+  "headline": 29,
   "market": 51,
   "model": 1,
   "policy": 8,
