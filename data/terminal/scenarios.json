@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T02:10:42Z",
+ "generated_at": "2026-11-08T18:00:05Z",
  "asymmetry_rules": {
   "gap_pp": 15,
   "reward_risk": 2.0,
@@ -29,7 +29,7 @@
     "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
     "importance": 3
    },
-   "days_to_event": 20,
+   "days_to_event": 19,
    "base_rate": {
     "kind": "rating_review",
     "reference_class": "S&P actions on the six EU sovereigns em-macro tracks (France, Germany, Italy, Spain, UK, Poland) since 2014, when the EU began requiring a published calendar of scheduled sovereign reviews, where the outlook going in was stable.",
@@ -347,7 +347,7 @@
     "yes_is_good": false,
     "market_yes": 0.07,
     "market_source": "prediction market",
-    "days": 20,
+    "days": 19,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -366,7 +366,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 20,
+      "value": 19,
       "ok": true
      }
     },
@@ -397,7 +397,7 @@
     "source": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
     "importance": 3
    },
-   "days_to_event": 33,
+   "days_to_event": 32,
    "base_rate": {
     "kind": "budget_cycles",
     "reference_class": "Every French budget cycle in em-macro's calendar (budget laws for 2006-2026): was the budget law promulgated by 31 December, and did it need Article 49.3 or a special law? The subset since June 2022, when the government lost its majority, is shown separately.",
@@ -827,7 +827,7 @@
     "yes_is_good": true,
     "market_yes": 0.57,
     "market_source": "prediction market",
-    "days": 33,
+    "days": 32,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -846,7 +846,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 33,
+      "value": 32,
       "ok": true
      }
     },
@@ -876,7 +876,7 @@
     "source": "https://www.interieur.gouv.fr/Elections",
     "importance": 3
    },
-   "days_to_event": 169,
+   "days_to_event": 168,
    "base_rate": {
     "kind": "election_polls",
     "reference_class": "Final pre-vote polls in presidential run-offs: France 2012-2022, and all run-offs in em-macro's 13 countries. These are final polls; six months out the error is larger.",
@@ -1270,7 +1270,7 @@
     "yes_is_good": false,
     "market_yes": 0.4785,
     "market_source": "prediction market",
-    "days": 169,
+    "days": 168,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -1289,7 +1289,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 169,
+      "value": 168,
       "ok": true
      }
     },
@@ -1322,7 +1322,7 @@
     "source": "https://www12.senado.leg.br/radio/1/noticia/2026/01/05/posse-presidencial-em-2027-sera-em-5-de-janeiro-e-governadores-tomam-posse-no-dia-6",
     "importance": 3
    },
-   "days_to_event": 59,
+   "days_to_event": 58,
    "base_rate": {
     "kind": "none",
     "reference_class": null,
@@ -1639,7 +1639,7 @@
     "yes_is_good": true,
     "market_yes": null,
     "market_source": null,
-    "days": 59,
+    "days": 58,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -1658,7 +1658,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 59,
+      "value": 58,
       "ok": true
      }
     },
@@ -1710,7 +1710,7 @@
     "source": "https://www.ine.mx/",
     "importance": 3
    },
-   "days_to_event": 211,
+   "days_to_event": 210,
    "base_rate": {
     "kind": "election_polls",
     "reference_class": "Mexico's midterm legislative elections in em-macro (2009, 2015, 2021): final-poll leader vs result. In 2021 the governing coalition kept its majority but lost two-thirds.",
@@ -2029,7 +2029,7 @@
     "yes_is_good": false,
     "market_yes": null,
     "market_source": null,
-    "days": 211,
+    "days": 210,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -2048,7 +2048,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 211,
+      "value": 210,
       "ok": false
      }
     },
@@ -2078,7 +2078,7 @@
     "source": "https://ustr.gov/sites/default/files/files/agreements/FTA/USMCA/Text/34-Final-Provisions.pdf",
     "importance": 3
    },
-   "days_to_event": 236,
+   "days_to_event": 235,
    "base_rate": {
     "kind": "none",
     "reference_class": null,
@@ -2290,7 +2290,7 @@
     "yes_is_good": true,
     "market_yes": null,
     "market_source": null,
-    "days": 236,
+    "days": 235,
     "rules": {
      "gap_pp": 15,
      "reward_risk": 2.0,
@@ -2309,7 +2309,7 @@
       "why": "needs the gap first"
      },
      "timing": {
-      "value": 236,
+      "value": 235,
       "ok": false
      }
     },

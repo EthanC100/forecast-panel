@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T02:10:41Z",
+ "generated_at": "2026-11-08T18:00:04Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -24,7 +24,7 @@
     "source_id": "SGS 1",
     "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json",
     "as_of": "2026-11-06",
-    "fetched_at": "2026-11-07T01:56:48Z",
+    "fetched_at": "2026-11-08T18:00:00Z",
     "frequency": "daily",
     "series": "br.usdbrl.ptax",
     "evidence": {
@@ -972,7 +972,7 @@
       "source_id": "SGS 1",
       "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json",
       "as_of": "2026-11-06",
-      "fetched_at": "2026-11-07T01:56:48Z",
+      "fetched_at": "2026-11-08T18:00:00Z",
       "frequency": "daily",
       "series": "br.usdbrl.ptax",
       "evidence": {
@@ -1112,8 +1112,8 @@
       "source": "BCB SGS",
       "source_id": "SGS 432",
       "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json",
-      "as_of": "2026-11-07",
-      "fetched_at": "2026-11-07T01:56:48Z",
+      "as_of": "2026-11-08",
+      "fetched_at": "2026-11-08T17:59:59Z",
       "frequency": "daily",
       "series": "br.selic.target",
       "evidence": {
@@ -2822,8 +2822,8 @@
     "country": "BR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-11-07T01:56:47Z",
-    "last_success": "2026-11-07T01:56:47Z",
+    "last_attempt": "2026-11-08T17:59:58Z",
+    "last_success": "2026-11-08T17:59:58Z",
     "n_series": 4,
     "name": "BCB SGS (Selic, PTAX, IPCA)",
     "note": null,
@@ -3283,7 +3283,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-07T02:10:39Z"
+  "updated_at": "2026-11-08T18:00:02Z"
  },
  "series_index": [
   "br.cot.brl",
