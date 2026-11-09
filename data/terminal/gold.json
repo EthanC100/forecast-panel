@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-08T18:00:11Z",
- "as_of": "2026-11-08",
+ "generated_at": "2026-11-09T22:32:00Z",
+ "as_of": "2026-11-09",
  "prices": {
   "gold": {
    "value": 4079.5,
@@ -114,16 +114,16 @@
  ],
  "model": {
   "available": true,
-  "log_date": "2026-11-02",
+  "log_date": "2026-11-09",
   "version": "v2-rolling",
-  "data_as_of": "2026-10-30",
-  "pred_gold_5d_pct": 0.47,
-  "pred_silver_5d_pct": 1.02,
+  "data_as_of": "2026-11-06",
+  "pred_gold_5d_pct": -0.12,
+  "pred_silver_5d_pct": -2.47,
   "source_url": "https://github.com/EthanC100/gold-events/blob/main/data/forward_log.csv",
   "scorecard_url": "https://github.com/EthanC100/gold-events/blob/main/reports/forward_scorecard.md",
-  "n_scored": 0,
-  "direction_hits": 0,
-  "note": "Expected move over the next 5 trading days from the frozen gold-events model (v2-rolling): its regression on last week's changes in real yields, the dollar, VIX and the Geopolitical Risk index. The model predicts log returns; shown here as percentage changes. Out of sample it has been scored on 0 weeks so far.",
+  "n_scored": 1,
+  "direction_hits": 1,
+  "note": "Expected move over the next 5 trading days from the frozen gold-events model (v2-rolling): its regression on last week's changes in real yields, the dollar, VIX and the Geopolitical Risk index. The model predicts log returns; shown here as percentage changes. Out of sample it has been scored on 1 week so far.",
   "recent": [
    {
     "log_date": "2026-10-28",
@@ -131,8 +131,8 @@
     "data_as_of": "2026-10-27",
     "pred_gold_5d_pct": 0.27,
     "pred_silver_5d_pct": -0.71,
-    "realised_gold_5d_pct": null,
-    "realised_silver_5d_pct": null,
+    "realised_gold_5d_pct": 0.53,
+    "realised_silver_5d_pct": -2.5,
     "gpr_level": 165.3,
     "note": "prediction uses last week's control changes as the coming week's input"
    },
@@ -145,6 +145,17 @@
     "realised_gold_5d_pct": null,
     "realised_silver_5d_pct": null,
     "gpr_level": 165.3,
+    "note": "prediction uses last week's control changes as the coming week's input"
+   },
+   {
+    "log_date": "2026-11-09",
+    "version": "v2-rolling",
+    "data_as_of": "2026-11-06",
+    "pred_gold_5d_pct": -0.12,
+    "pred_silver_5d_pct": -2.47,
+    "realised_gold_5d_pct": null,
+    "realised_silver_5d_pct": null,
+    "gpr_level": 97.7,
     "note": "prediction uses last week's control changes as the coming week's input"
    }
   ]
