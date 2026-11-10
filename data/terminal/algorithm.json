@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T22:37:13Z",
+ "generated_at": "2026-11-10T04:23:15Z",
  "source": "https://raw.githubusercontent.com/EthanC100/em-macro/main/results/systematic/",
  "source_page": "https://github.com/EthanC100/em-macro/tree/main/results/systematic",
  "as_of": "2026-10",
@@ -113,9 +113,9 @@
     "instrument": "USDMXN",
     "name": "USD/MXN",
     "direction": "long",
-    "level": 18.6297,
-    "level_date": "2026-11-06",
-    "suggested_stop": 17.5799,
+    "level": 18.5983,
+    "level_date": "2026-11-09",
+    "suggested_stop": 17.5503,
     "stop_basis": "2 monthly sd = 2 x 9.76%/sqrt(12) = 5.63% of the level"
    }
   },

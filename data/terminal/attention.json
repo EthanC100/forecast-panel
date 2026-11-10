@@ -69,9 +69,16 @@
      1270650.0,
      3.934993900759454e-06,
      2.9021772642246827e-06
+    ],
+    [
+     "2026-11-10",
+     6.0,
+     1355070.0,
+     4.42781553720472e-06,
+     2.9434876604624702e-06
     ]
    ],
-   "last_success": "2026-11-07T02:00:41Z"
+   "last_success": "2026-11-10T04:15:54Z"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -260,7 +267,8 @@
      1.461680519937979e-06
     ]
    ],
-   "last_success": "2026-11-07T02:03:41Z"
+   "last_success": "2026-11-07T02:03:41Z",
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "\"S&P\" France rating": {
    "country": "FR",
@@ -277,7 +285,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -374,6 +382,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-07T02:10:39Z",
+ "updated_at": "2026-11-10T04:23:05Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }

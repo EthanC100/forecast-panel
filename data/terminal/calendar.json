@@ -1,29 +1,7 @@
 {
- "generated_at": "2026-11-07T02:10:39Z",
- "horizon": "2027-11-08",
+ "generated_at": "2026-11-10T04:23:06Z",
+ "horizon": "2027-11-11",
  "events": [
-  {
-   "date": "2026-11-09",
-   "country": "BR",
-   "type": "survey",
-   "title": "Focus survey (BCB)",
-   "importance": 1,
-   "status": "estimated",
-   "source": "https://www.bcb.gov.br/publicacoes/focus",
-   "query": "\"Focus survey\" Brazil",
-   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
-   "origin": "rule:focus",
-   "id": "2026-11-09-br-focus-survey-bcb",
-   "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
-    "source": "GDELT DOC 2.0 (timelinevolraw)",
-    "query": "\"Focus survey\" Brazil"
-   },
-   "under_attended": false
-  },
   {
    "date": "2026-11-15",
    "country": "MX",
@@ -52,10 +30,10 @@
    "origin": "rule:focus",
    "id": "2026-11-16-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -96,10 +74,10 @@
    "origin": "rule:focus",
    "id": "2026-11-23-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -140,10 +118,10 @@
    "origin": "rule:focus",
    "id": "2026-11-30-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -199,10 +177,10 @@
    "origin": "rule:focus",
    "id": "2026-12-07-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -307,10 +285,10 @@
    "origin": "rule:focus",
    "id": "2026-12-14-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -401,10 +379,10 @@
    "origin": "rule:focus",
    "id": "2026-12-21-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -423,10 +401,10 @@
    "origin": "rule:focus",
    "id": "2026-12-28-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -467,10 +445,10 @@
    "origin": "rule:focus",
    "id": "2027-01-04-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -504,10 +482,10 @@
    "origin": "rule:focus",
    "id": "2027-01-11-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -541,10 +519,10 @@
    "origin": "rule:focus",
    "id": "2027-01-18-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -563,10 +541,10 @@
    "origin": "rule:focus",
    "id": "2027-01-25-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -634,10 +612,10 @@
    "origin": "rule:focus",
    "id": "2027-02-01-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -735,10 +713,10 @@
    "origin": "rule:focus",
    "id": "2027-02-08-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -757,10 +735,10 @@
    "origin": "rule:focus",
    "id": "2027-02-15-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -779,10 +757,10 @@
    "origin": "rule:focus",
    "id": "2027-02-22-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -801,10 +779,10 @@
    "origin": "rule:focus",
    "id": "2027-03-01-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -845,10 +823,10 @@
    "origin": "rule:focus",
    "id": "2027-03-08-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -867,10 +845,10 @@
    "origin": "rule:focus",
    "id": "2027-03-15-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -975,10 +953,10 @@
    "origin": "rule:focus",
    "id": "2027-03-22-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1024,10 +1002,10 @@
    "origin": "rule:focus",
    "id": "2027-03-29-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1083,10 +1061,10 @@
    "origin": "rule:focus",
    "id": "2027-04-05-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1120,10 +1098,10 @@
    "origin": "rule:focus",
    "id": "2027-04-12-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1157,10 +1135,10 @@
    "origin": "rule:focus",
    "id": "2027-04-19-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1194,10 +1172,10 @@
    "origin": "rule:focus",
    "id": "2027-04-26-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1280,10 +1258,10 @@
    "origin": "rule:focus",
    "id": "2027-05-03-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1351,10 +1329,10 @@
    "origin": "rule:focus",
    "id": "2027-05-10-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1373,10 +1351,10 @@
    "origin": "rule:focus",
    "id": "2027-05-17-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1417,10 +1395,10 @@
    "origin": "rule:focus",
    "id": "2027-05-24-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1439,10 +1417,10 @@
    "origin": "rule:focus",
    "id": "2027-05-31-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1498,10 +1476,10 @@
    "origin": "rule:focus",
    "id": "2027-06-07-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1557,10 +1535,10 @@
    "origin": "rule:focus",
    "id": "2027-06-14-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1606,10 +1584,10 @@
    "origin": "rule:focus",
    "id": "2027-06-21-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1655,10 +1633,10 @@
    "origin": "rule:focus",
    "id": "2027-06-28-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1714,10 +1692,10 @@
    "origin": "rule:focus",
    "id": "2027-07-05-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1736,10 +1714,10 @@
    "origin": "rule:focus",
    "id": "2027-07-12-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1758,10 +1736,10 @@
    "origin": "rule:focus",
    "id": "2027-07-19-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1817,10 +1795,10 @@
    "origin": "rule:focus",
    "id": "2027-07-26-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1861,10 +1839,10 @@
    "origin": "rule:focus",
    "id": "2027-08-02-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1959,10 +1937,10 @@
    "origin": "rule:focus",
    "id": "2027-08-09-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -1981,10 +1959,10 @@
    "origin": "rule:focus",
    "id": "2027-08-16-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2003,10 +1981,10 @@
    "origin": "rule:focus",
    "id": "2027-08-23-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2025,10 +2003,10 @@
    "origin": "rule:focus",
    "id": "2027-08-30-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2069,10 +2047,10 @@
    "origin": "rule:focus",
    "id": "2027-09-06-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2106,10 +2084,10 @@
    "origin": "rule:focus",
    "id": "2027-09-13-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2150,10 +2128,10 @@
    "origin": "rule:focus",
    "id": "2027-09-20-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2248,10 +2226,10 @@
    "origin": "rule:focus",
    "id": "2027-09-27-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2292,10 +2270,10 @@
    "origin": "rule:focus",
    "id": "2027-10-04-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2314,10 +2292,10 @@
    "origin": "rule:focus",
    "id": "2027-10-11-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2336,10 +2314,10 @@
    "origin": "rule:focus",
    "id": "2027-10-18-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2358,10 +2336,10 @@
    "origin": "rule:focus",
    "id": "2027-10-25-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2444,10 +2422,10 @@
    "origin": "rule:focus",
    "id": "2027-11-01-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
@@ -2488,10 +2466,10 @@
    "origin": "rule:focus",
    "id": "2027-11-08-br-focus-survey-bcb",
    "attention": {
-    "score": 1.356,
-    "share_30d": 3.934993900759454e-06,
-    "share_12m": 2.9021772642246827e-06,
-    "as_of": "2026-11-07",
+    "score": 1.504,
+    "share_30d": 4.42781553720472e-06,
+    "share_12m": 2.9434876604624702e-06,
+    "as_of": "2026-11-10",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Focus survey\" Brazil"
    },
