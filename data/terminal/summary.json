@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T04:23:07Z",
+ "generated_at": "2026-11-10T19:54:35Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -10,21 +10,21 @@
    "series_candidates": [
     "br.usdbrl.ptax"
    ],
-   "level": 5.5146,
-   "as_of": "2026-11-09",
-   "chg_1w": 1.723,
-   "chg_1m": 10.531,
-   "chg_1w_from": "2026-10-30",
+   "level": 5.584,
+   "as_of": "2026-11-10",
+   "chg_1w": 1.647,
+   "chg_1m": 11.922,
+   "chg_1w_from": "2026-11-03",
    "chg_1m_from": "2026-10-09",
-   "z_1y": 2.14,
+   "z_1y": 2.56,
    "n_1y": 249,
    "unit": "BRL per USD",
    "meta": {
     "source": "BCB SGS",
     "source_id": "SGS 1",
     "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json",
-    "as_of": "2026-11-09",
-    "fetched_at": "2026-11-10T04:08:27Z",
+    "as_of": "2026-11-10",
+    "fetched_at": "2026-11-10T19:54:31Z",
     "frequency": "daily",
     "series": "br.usdbrl.ptax",
     "evidence": {
@@ -971,8 +971,8 @@
       "source": "BCB SGS",
       "source_id": "SGS 1",
       "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json",
-      "as_of": "2026-11-09",
-      "fetched_at": "2026-11-10T04:08:27Z",
+      "as_of": "2026-11-10",
+      "fetched_at": "2026-11-10T19:54:31Z",
       "frequency": "daily",
       "series": "br.usdbrl.ptax",
       "evidence": {
@@ -1113,7 +1113,7 @@
       "source_id": "SGS 432",
       "source_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json",
       "as_of": "2026-11-10",
-      "fetched_at": "2026-11-10T04:08:26Z",
+      "fetched_at": "2026-11-10T19:54:30Z",
       "frequency": "daily",
       "series": "br.selic.target",
       "evidence": {
@@ -2822,8 +2822,8 @@
     "country": "BR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-11-10T04:08:25Z",
-    "last_success": "2026-11-10T04:08:25Z",
+    "last_attempt": "2026-11-10T19:54:29Z",
+    "last_success": "2026-11-10T19:54:29Z",
     "n_series": 4,
     "name": "BCB SGS (Selic, PTAX, IPCA)",
     "note": null,
@@ -3282,7 +3282,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-10T04:23:06Z"
+  "updated_at": "2026-11-10T19:54:33Z"
  },
  "series_index": [
   "br.cot.brl",

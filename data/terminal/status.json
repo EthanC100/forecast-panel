@@ -107,8 +107,8 @@
    "country": "BR",
    "error": null,
    "fallback_for": null,
-   "last_attempt": "2026-11-10T04:08:25Z",
-   "last_success": "2026-11-10T04:08:25Z",
+   "last_attempt": "2026-11-10T19:54:29Z",
+   "last_success": "2026-11-10T19:54:29Z",
    "n_series": 4,
    "name": "BCB SGS (Selic, PTAX, IPCA)",
    "note": null,
@@ -567,5 +567,5 @@
    "state": "ok"
   }
  },
- "updated_at": "2026-11-10T04:23:06Z"
+ "updated_at": "2026-11-10T19:54:33Z"
 }

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T04:23:07Z",
+ "generated_at": "2026-11-10T19:54:34Z",
  "questions": {
   "n_resolved": 0,
   "n_ai_only": 0,
@@ -391,7 +391,7 @@
     "n_months": 1
    },
    "buy_and_hold": {
-    "equal_weight_return_pct": 1.483,
+    "equal_weight_return_pct": 1.601,
     "n_instruments": 10,
     "rows": [
      {
@@ -399,9 +399,9 @@
       "name": "USD/BRL",
       "description": "long USD",
       "from": "2026-10-29",
-      "to": "2026-11-09",
-      "pnl_usd": 2240.76,
-      "return_pct": 2.24
+      "to": "2026-11-10",
+      "pnl_usd": 3424.58,
+      "return_pct": 3.42
      },
      {
       "code": "USDMXN",
