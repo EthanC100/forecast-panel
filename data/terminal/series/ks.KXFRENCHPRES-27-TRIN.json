@@ -1,0 +1,24 @@
+{
+ "id": "ks.KXFRENCHPRES-27-TRIN",
+ "name": "Next French presidential election winner?: Teddy Riner",
+ "country": "FR",
+ "unit": "probability (Yes)",
+ "frequency": "daily",
+ "source": "Kalshi",
+ "source_id": "KXFRENCHPRES-27-TRIN",
+ "source_url": "https://kalshi.com/markets/KXFRENCHPRES",
+ "key": [
+  "date"
+ ],
+ "fields": [
+  "value"
+ ],
+ "fetched_at": "2026-11-11T02:03:25Z",
+ "updated_at": "2026-11-11T02:03:25Z",
+ "n": 1,
+ "first": "2026-11-10",
+ "last": "2026-11-10",
+ "history": [
+  ["2026-11-10",0.01]
+ ]
+}

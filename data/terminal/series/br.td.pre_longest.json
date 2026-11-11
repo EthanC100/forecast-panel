@@ -15,11 +15,11 @@
  "key": [
   "date"
  ],
- "fetched_at": "2026-11-10T04:08:59Z",
- "updated_at": "2026-11-10T04:08:59Z",
- "n": 5454,
+ "fetched_at": "2026-11-11T01:57:39Z",
+ "updated_at": "2026-11-11T01:57:39Z",
+ "n": 5455,
  "first": "2004-12-31",
- "last": "2026-11-06",
+ "last": "2026-11-09",
  "history": [
   ["2004-12-31",17.19,"2008-01-01","Tesouro Prefixado com Juros Semestrais"],
   ["2005-01-03",17.19,"2008-01-01","Tesouro Prefixado com Juros Semestrais"],
@@ -5474,6 +5474,7 @@
   ["2026-11-03",15.56,"2037-01-01","Tesouro Prefixado com Juros Semestrais"],
   ["2026-11-04",15.48,"2037-01-01","Tesouro Prefixado com Juros Semestrais"],
   ["2026-11-05",15.27,"2037-01-01","Tesouro Prefixado com Juros Semestrais"],
-  ["2026-11-06",15.15,"2037-01-01","Tesouro Prefixado com Juros Semestrais"]
+  ["2026-11-06",15.15,"2037-01-01","Tesouro Prefixado com Juros Semestrais"],
+  ["2026-11-09",15.06,"2037-01-01","Tesouro Prefixado com Juros Semestrais"]
  ]
 }
