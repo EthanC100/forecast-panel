@@ -76,10 +76,16 @@
      1355070.0,
      4.42781553720472e-06,
      2.9434876604624702e-06
+    ],
+    [
+     "2026-11-12",
+     6.0,
+     1390805.0,
+     4.314048338911637e-06,
+     2.965244307015637e-06
     ]
    ],
-   "last_success": "2026-11-10T04:15:54Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-12T03:07:44Z"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -117,10 +123,16 @@
      1222605.0,
      4.089628293684387e-06,
      5.197490921821497e-06
+    ],
+    [
+     "2026-11-12",
+     8.0,
+     1390805.0,
+     5.752064451882183e-06,
+     5.3073575640062486e-06
     ]
    ],
-   "last_success": "2026-11-06T02:38:32Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-12T03:13:19Z"
   },
   "(Copom OR \"Selic rate\")": {
    "country": "BR",
@@ -167,7 +179,8 @@
      9.274256980128221e-05
     ]
    ],
-   "last_success": "2026-11-07T02:10:39Z"
+   "last_success": "2026-11-07T02:10:39Z",
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "Banxico \"interest rate\"": {
    "country": "MX",
@@ -286,7 +299,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -383,6 +396,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-11T02:08:08Z",
+ "updated_at": "2026-11-12T03:15:38Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
