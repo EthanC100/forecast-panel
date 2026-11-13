@@ -83,9 +83,16 @@
      1390805.0,
      4.314048338911637e-06,
      2.965244307015637e-06
+    ],
+    [
+     "2026-11-13",
+     6.0,
+     1407341.0,
+     4.263359057968183e-06,
+     2.9743901131617497e-06
     ]
    ],
-   "last_success": "2026-11-12T03:07:44Z"
+   "last_success": "2026-11-13T02:42:54Z"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -130,9 +137,16 @@
      1390805.0,
      5.752064451882183e-06,
      5.3073575640062486e-06
+    ],
+    [
+     "2026-11-13",
+     8.0,
+     1407341.0,
+     5.684478743957577e-06,
+     5.323727231528639e-06
     ]
    ],
-   "last_success": "2026-11-12T03:13:19Z"
+   "last_success": "2026-11-13T02:46:57Z"
   },
   "(Copom OR \"Selic rate\")": {
    "country": "BR",
@@ -177,10 +191,16 @@
      1270650.0,
      6.374690119230315e-05,
      9.274256980128221e-05
+    ],
+    [
+     "2026-11-13",
+     107.0,
+     1407341.0,
+     7.602990320043259e-05,
+     9.285270005435374e-05
     ]
    ],
-   "last_success": "2026-11-07T02:10:39Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-13T02:47:50Z"
   },
   "Banxico \"interest rate\"": {
    "country": "MX",
@@ -332,7 +352,8 @@
      0.00012581204757575713
     ]
    ],
-   "last_success": "2026-11-06T02:39:08Z"
+   "last_success": "2026-11-06T02:39:08Z",
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "France budget \"National Assembly\"": {
    "country": "FR",
@@ -380,15 +401,21 @@
      1201037.0,
      6.910694674685292e-05,
      4.275224977181379e-05
+    ],
+    [
+     "2026-11-13",
+     96.0,
+     1407341.0,
+     6.821374492749093e-05,
+     4.192165775434495e-05
     ]
    ],
-   "last_success": "2026-11-03T03:39:21Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-13T02:46:15Z"
   },
   "Mexico 2027 budget Chamber of Deputies": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "error": "RuntimeError: GDELT 200: Your search contained a keyword that was too short.\n"
   },
   "Brazil CBS rate Senate": {
    "country": "BR",
@@ -396,6 +423,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-12T03:15:38Z",
+ "updated_at": "2026-11-13T02:52:28Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
