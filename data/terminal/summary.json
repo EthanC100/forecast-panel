@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T02:52:31Z",
+ "generated_at": "2026-11-14T01:03:52Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -1377,7 +1377,7 @@
      "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-11-03",
-     "fetched_at": "2026-11-13T02:40:35Z",
+     "fetched_at": "2026-11-14T01:03:36Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "br.cot.brl",
      "evidence": {
@@ -2221,7 +2221,7 @@
      "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-11-03",
-     "fetched_at": "2026-11-13T02:40:35Z",
+     "fetched_at": "2026-11-14T01:03:47Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "mx.cot.mxn",
      "evidence": {
@@ -2875,8 +2875,8 @@
     "country": "GLOBAL",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-11-13T02:40:33Z",
-    "last_success": "2026-11-13T02:40:33Z",
+    "last_attempt": "2026-11-14T01:03:33Z",
+    "last_success": "2026-11-14T01:03:33Z",
     "n_series": 3,
     "name": "CFTC Commitments of Traders (BRL, MXN, ZAR)",
     "note": null,
@@ -3283,7 +3283,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-13T02:52:28Z"
+  "updated_at": "2026-11-14T01:03:49Z"
  },
  "series_index": [
   "br.cot.brl",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T02:52:34Z",
+ "generated_at": "2026-11-14T01:03:56Z",
  "gauges": [
   {
    "id": "a",
@@ -1184,7 +1184,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-03",
-      "fetched_at": "2026-11-13T02:40:35Z",
+      "fetched_at": "2026-11-14T01:03:36Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1209,7 +1209,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-03",
-      "fetched_at": "2026-11-13T02:40:35Z",
+      "fetched_at": "2026-11-14T01:03:47Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1378,7 +1378,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 53,
+   "days": 52,
    "score": 0.75,
    "signals": [
     {
@@ -1400,7 +1400,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 14,
+   "days": 13,
    "score": 0.408,
    "signals": [
     {
@@ -1423,7 +1423,7 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 27,
+   "days": 26,
    "score": 0.167,
    "signals": [
     {
@@ -1440,7 +1440,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 163,
+   "days": 162,
    "score": 0,
    "signals": []
   }

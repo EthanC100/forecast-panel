@@ -160,8 +160,8 @@
    "country": "GLOBAL",
    "error": null,
    "fallback_for": null,
-   "last_attempt": "2026-11-13T02:40:33Z",
-   "last_success": "2026-11-13T02:40:33Z",
+   "last_attempt": "2026-11-14T01:03:33Z",
+   "last_success": "2026-11-14T01:03:33Z",
    "n_series": 3,
    "name": "CFTC Commitments of Traders (BRL, MXN, ZAR)",
    "note": null,
@@ -568,5 +568,5 @@
    "state": "ok"
   }
  },
- "updated_at": "2026-11-13T02:52:28Z"
+ "updated_at": "2026-11-14T01:03:49Z"
 }
