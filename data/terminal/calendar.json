@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-13T02:52:28Z",
- "horizon": "2027-11-14",
+ "generated_at": "2026-11-14T02:52:12Z",
+ "horizon": "2027-11-15",
  "events": [
   {
    "date": "2026-11-15",
@@ -2465,6 +2465,28 @@
    "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
    "origin": "rule:focus",
    "id": "2027-11-08-br-focus-survey-bcb",
+   "attention": {
+    "score": 1.433,
+    "share_30d": 4.263359057968183e-06,
+    "share_12m": 2.9743901131617497e-06,
+    "as_of": "2026-11-13",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Focus survey\" Brazil"
+   },
+   "under_attended": false
+  },
+  {
+   "date": "2027-11-15",
+   "country": "BR",
+   "type": "survey",
+   "title": "Focus survey (BCB)",
+   "importance": 1,
+   "status": "estimated",
+   "source": "https://www.bcb.gov.br/publicacoes/focus",
+   "query": "\"Focus survey\" Brazil",
+   "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+   "origin": "rule:focus",
+   "id": "2027-11-15-br-focus-survey-bcb",
    "attention": {
     "score": 1.433,
     "share_30d": 4.263359057968183e-06,
@@ -8849,7 +8871,7 @@
  "notes": [
   "France: no censure motion is scheduled as of 2026-10-29. Motions are voted 48 hours after they are filed; add one here when it is tabled.",
   "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml.",
-  "GDELT attention refresh stopped at its 9-minute budget; remaining queries keep their last values."
+  "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values."
  ],
  "attention_definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away",
  "sources": {

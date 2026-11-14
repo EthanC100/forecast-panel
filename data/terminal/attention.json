@@ -92,7 +92,8 @@
      2.9743901131617497e-06
     ]
    ],
-   "last_success": "2026-11-13T02:42:54Z"
+   "last_success": "2026-11-13T02:42:54Z",
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -423,6 +424,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-13T02:52:28Z",
+ "updated_at": "2026-11-14T02:52:12Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }

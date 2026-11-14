@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T01:04:00Z",
+ "generated_at": "2026-11-14T02:52:25Z",
  "source": "https://raw.githubusercontent.com/EthanC100/em-macro/main/results/systematic/",
  "source_page": "https://github.com/EthanC100/em-macro/tree/main/results/systematic",
  "as_of": "2026-10",
@@ -90,9 +90,9 @@
     "instrument": "USDBRL",
     "name": "USD/BRL",
     "direction": "short",
-    "level": 5.6143,
-    "level_date": "2026-11-12",
-    "suggested_stop": 5.9579,
+    "level": 5.6518,
+    "level_date": "2026-11-13",
+    "suggested_stop": 5.9977,
     "stop_basis": "2 monthly sd = 2 x 10.6%/sqrt(12) = 6.12% of the level"
    }
   },
@@ -113,9 +113,9 @@
     "instrument": "USDMXN",
     "name": "USD/MXN",
     "direction": "long",
-    "level": 18.6188,
-    "level_date": "2026-11-12",
-    "suggested_stop": 17.5696,
+    "level": 18.5525,
+    "level_date": "2026-11-13",
+    "suggested_stop": 17.5071,
     "stop_basis": "2 monthly sd = 2 x 9.76%/sqrt(12) = 5.63% of the level"
    }
   },
