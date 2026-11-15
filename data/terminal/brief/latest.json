@@ -1,15 +1,15 @@
 {
- "date": "2026-11-14",
- "generated_at": "2026-11-14T03:40:37Z",
+ "date": "2026-11-15",
+ "generated_at": "2026-11-15T03:07:33Z",
  "snapshot": {
-  "items": 201,
+  "items": 218,
   "counts": {
    "assessment": 4,
    "consensus": 26,
    "data": 26,
    "event": 40,
    "evidence_badge": 7,
-   "headline": 20,
+   "headline": 37,
    "market": 51,
    "model": 1,
    "policy": 8,
@@ -64,15 +64,15 @@
    },
    {
     "source": "GDELT FR",
-    "ok": false,
-    "n": 0,
-    "error": "GDELT kept returning its rate-limit notice"
+    "ok": true,
+    "n": 8,
+    "error": null
    },
    {
     "source": "GDELT BR",
-    "ok": false,
-    "n": 0,
-    "error": "GDELT kept returning its rate-limit notice"
+    "ok": true,
+    "n": 8,
+    "error": null
    },
    {
     "source": "GDELT MX",
@@ -82,13 +82,13 @@
    },
    {
     "source": "GDELT US",
-    "ok": false,
-    "n": 0,
-    "error": "skipped: GDELT time budget used up"
+    "ok": true,
+    "n": 1,
+    "error": null
    }
   ],
   "notes": [],
-  "prev_date": "2026-11-13"
+  "prev_date": "2026-11-14"
  },
  "status": "ok",
  "mode": "full",
@@ -96,27 +96,25 @@
  "problems": [],
  "top": [
   {
-   "text": "USD/BRL PTAX rose to 5.6518 from 5.6143 at the last brief, and the Brazil DI Jan-27 proxy stayed at 13.62% p.a.",
-   "source_ids": [
-    "s:br.usdbrl.ptax",
-    "s:br.di.f27.proxy"
-   ],
-   "ok": true,
-   "problems": []
-  },
-  {
-   "text": "Gold fell to 3887.6001 USD per troy ounce from 4074.8999 a week earlier, and silver fell to 48.65 from 51.803, while the US 10-year yield rose to 5.1% and the US 10-year real yield to 2.86%.",
+   "text": "Gold fell 4.6% over the week to 3887.6 USD per ounce while the US 10-year real yield rose to 2.86%.",
    "source_ids": [
     "s:gl.gold",
-    "s:gl.silver",
-    "s:us.ust10y",
     "s:us.tips10"
    ],
    "ok": true,
    "problems": []
   },
   {
-   "text": "S&P reviews France's rating on 27 November 2026, and the Polymarket market on a Moody's or S&P downgrade of France by 30 November stood at 7.0% yes.",
+   "text": "USD/BRL PTAX rose to 5.6518, up 2.74% over the week, while leveraged-fund BRL futures positioning sat at the 99.4 percentile.",
+   "source_ids": [
+    "s:br.usdbrl.ptax",
+    "cot:br.cot.brl"
+   ],
+   "ok": true,
+   "problems": []
+  },
+  {
+   "text": "S&P reviews France's rating on 27 November 2026, and Polymarket puts the odds of a Moody's or S&P downgrade by 30 November at 7.0%.",
    "source_ids": [
     "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
     "pm:5458390"
@@ -127,18 +125,7 @@
  ],
  "facts": [
   {
-   "text": "USD/BRL PTAX (sell) was 5.6518 on 2026-11-13, up from 5.6143 on 2026-11-12, and up from 5.5013 a week earlier.",
-   "source_ids": [
-    "s:br.usdbrl.ptax"
-   ],
-   "kind": "data",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "The Selic target rate was unchanged at 13.75% p.a. on 2026-11-14.",
+   "text": "The Copom Selic target was unchanged at 13.75% on 14 November.",
    "source_ids": [
     "s:br.selic.target"
    ],
@@ -149,8 +136,21 @@
    "region": "BR"
   },
   {
-   "text": "The Focus survey Selic median for the next Copom was 13.75 with a standard deviation of 0.2073 pp across 144 respondents, at the 97.5 percentile of the last survey before each of the previous 40 meetings.",
+   "text": "The BCB published the minutes of the 282nd Copom meeting on 10 November.",
    "source_ids": [
+    "h:f9b5c139"
+   ],
+   "kind": "central_bank",
+   "ok": true,
+   "problems": [],
+   "country": "BR",
+   "region": "BR"
+  },
+  {
+   "text": "The Focus year-end 2026 Selic median is 13.75% and the 2027 median is 12.5%, with the next-Copom Selic dispersion at the 97.5 percentile.",
+   "source_ids": [
+    "fc:BR.policy_rate.2026",
+    "fc:BR.policy_rate.2027",
     "disp:1"
    ],
    "kind": "data",
@@ -160,10 +160,10 @@
    "region": "BR"
   },
   {
-   "text": "The Focus 2026 year-end Selic median was 13.75% (range 13.25 to 14.0) and the 2027 median was 12.5% (range 10.25 to 15.0).",
+   "text": "The Focus 2027 primary balance median is -0.4% of GDP, and the Focus 2026 inflation median is 5.22% after a 0.202 point rise over three months.",
    "source_ids": [
-    "fc:BR.policy_rate.2026",
-    "fc:BR.policy_rate.2027"
+    "fc:BR.primary.2027",
+    "fc:BR.inflation.2026"
    ],
    "kind": "data",
    "ok": true,
@@ -172,43 +172,64 @@
    "region": "BR"
   },
   {
-   "text": "The Focus 2026 IPCA median was 5.22% and the 2027 median was 4.9%, with the 2027 median up 0.678 pp over three months.",
+   "text": "The 2027 budget bill counts a surplus of R$83.4 billion (0.6% of GDP) against a R$73.2 billion (0.5% of GDP) target, while IFI puts the effective 2027 primary surplus at R$18.6 billion (0.1% of GDP).",
    "source_ids": [
-    "fc:BR.inflation.2026",
-    "fc:BR.inflation.2027"
+    "pol:br-fiscal-framework",
+    "pol:br-ploa-2027"
    ],
-   "kind": "data",
+   "kind": "fiscal",
    "ok": true,
    "problems": [],
    "country": "BR",
    "region": "BR"
   },
   {
-   "text": "The Focus 2027 primary-balance median was -0.4% of GDP, with 62 respondents and a standard deviation of 0.2937 pp.",
+   "text": "IFI expects a 2026 primary deficit of 0.5% of GDP and a potential 2027 deficit of 1.0% of GDP.",
    "source_ids": [
-    "disp:2",
-    "fc:BR.primary.2027"
+    "fa:ifi"
    ],
-   "kind": "data",
+   "kind": "fiscal",
    "ok": true,
    "problems": [],
    "country": "BR",
    "region": "BR"
   },
   {
-   "text": "The BCB Focus 2026 GDP median was 1.75% and the 2027 median was 1.15%.",
+   "text": "The federal CBS consumption tax starts on 1 January 2027, and the Senate must set its reference rate by 15 December 2026.",
    "source_ids": [
-    "fc:BR.gdp.2026",
-    "fc:BR.gdp.2027"
+    "pol:br-consumption-tax",
+    "ev:2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate"
    ],
-   "kind": "data",
+   "kind": "fiscal",
    "ok": true,
    "problems": [],
    "country": "BR",
    "region": "BR"
   },
   {
-   "text": "The DI Jan-27 proxy (Tesouro LTN 2027) was 13.62% p.a. on 2026-11-12, down 0.01 from 13.63 at the last brief; the DI Jan-29 proxy was 14.71% and the DI Jan-31 proxy was 15.09%.",
+   "text": "USD/BRL PTAX rose from 5.6143 to 5.6518, up 0.67% on the day.",
+   "source_ids": [
+    "s:br.usdbrl.ptax"
+   ],
+   "kind": "market",
+   "ok": true,
+   "problems": [],
+   "country": "BR",
+   "region": "BR"
+  },
+  {
+   "text": "Leveraged funds held a net long of 38613 BRL futures contracts (22.2% of open interest) as of 3 November, at the 99.4 percentile.",
+   "source_ids": [
+    "cot:br.cot.brl"
+   ],
+   "kind": "market",
+   "ok": true,
+   "problems": [],
+   "country": "BR",
+   "region": "BR"
+  },
+  {
+   "text": "Degraded DI proxies from Tesouro LTN yields: Jan-27 at 13.62% (-0.01), Jan-29 at 14.71% (unchanged) and Jan-31 at 15.09% (+0.02).",
    "source_ids": [
     "s:br.di.f27.proxy",
     "s:br.di.f29.proxy",
@@ -221,19 +242,9 @@
    "region": "BR"
   },
   {
-   "text": "The longest fixed-rate Tesouro bond yield was 15.15% p.a. on 2026-11-12, up from 15.11 at the last brief.",
+   "text": "The longest fixed-rate Tesouro bond yield, a 10-year proxy, rose to 15.15% (+0.04), and the longest IPCA+ bond real-rate proxy rose to 7.57% (+0.02).",
    "source_ids": [
-    "s:br.td.pre_longest"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "The longest IPCA+ Tesouro bond yield was 7.57% p.a. on 2026-11-12, up from 7.55 at the last brief.",
-   "source_ids": [
+    "s:br.td.pre_longest",
     "s:br.td.ipca_longest"
    ],
    "kind": "market",
@@ -243,40 +254,7 @@
    "region": "BR"
   },
   {
-   "text": "The BCB published a press note on the extrajudicial liquidation of Cooperativa Administradora de Consórcios Roma on 2026-11-12.",
-   "source_ids": [
-    "h:3e7afb5c"
-   ],
-   "kind": "political",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "The BCB published a press note on the extrajudicial liquidation of Cooperagre on 2026-11-12.",
-   "source_ids": [
-    "h:25875302"
-   ],
-   "kind": "political",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "The BCB published the Copom minutes of the 282nd meeting on 2026-11-10.",
-   "source_ids": [
-    "h:f9b5c139"
-   ],
-   "kind": "central_bank",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "Kalshi odds on exactly 5 Brazil rate cuts in 2026 were 88.0% and on exactly 6 cuts were 12.0%.",
+   "text": "Kalshi prices 88.0% for exactly 5 Brazil rate cuts in 2026 and 12.0% for exactly 6.",
    "source_ids": [
     "ks:KXBRRATECUT-27JAN01-E5",
     "ks:KXBRRATECUT-27JAN01-E6"
@@ -288,85 +266,19 @@
    "region": "BR"
   },
   {
-   "text": "Polymarket odds on Brazil 2026 annual inflation between 5.00% and 5.49% rose to 44.9%, up 1.3 pp since the last brief.",
+   "text": "The BCB put the Roma consortium administrator cooperative and the Cooperagre rural credit cooperative into extrajudicial liquidation on 12 November.",
    "source_ids": [
-    "pm:1243901"
+    "h:3e7afb5c",
+    "h:25875302"
    ],
-   "kind": "market",
+   "kind": "central_bank",
    "ok": true,
    "problems": [],
    "country": "BR",
    "region": "BR"
   },
   {
-   "text": "Polymarket odds on Alexandre de Moraes leaving the Supreme Court were 4.9%, down 0.2 pp since the last brief.",
-   "source_ids": [
-    "pm:1544795"
-   ],
-   "kind": "political",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "The CFTC leveraged-fund net long in BRL futures was 38,613 contracts on 2026-11-03, at the 99.4 percentile, flagged as extreme.",
-   "source_ids": [
-    "cot:br.cot.brl"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "The 2027 budget bill sets a central-government primary target of 0.5% of GDP, and the budget bill puts the result counted for the target at a surplus of R$83.4 billion, according to the government.",
-   "source_ids": [
-    "pol:br-fiscal-framework"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "IFI's 2027 projection for the budget bill is an effective primary surplus of R$18.6 billion (0.1% of GDP) on 2.5% growth and 3.6% inflation.",
-   "source_ids": [
-    "pol:br-ploa-2027"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "The consumption-tax reform's federal CBS starts on 1 January 2027, and the Senate must set the reference rate by 15 December 2026.",
-   "source_ids": [
-    "pol:br-consumption-tax",
-    "ev:2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "BR",
-   "region": "BR"
-  },
-  {
-   "text": "USD/MXN FIX was 18.5525 on 2026-11-13, down from 18.6188 on 2026-11-12, and down from 18.6297 a week earlier.",
-   "source_ids": [
-    "s:mx.usdmxn.fix"
-   ],
-   "kind": "data",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "The Banxico target rate was unchanged at 6.25% p.a. on 2026-11-14.",
+   "text": "Banxico's target rate was unchanged at 6.25% on 14 November.",
    "source_ids": [
     "s:mx.policy.target"
    ],
@@ -377,9 +289,56 @@
    "region": "MX"
   },
   {
-   "text": "The TIIE 28-day rate was 6.5147% p.a., unchanged from the previous reading.",
+   "text": "The Chamber of Deputies must approve the 2027 spending budget (PEF) by 15 November 2026.",
    "source_ids": [
-    "s:mx.tiie28"
+    "ev:2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027"
+   ],
+   "kind": "fiscal",
+   "ok": true,
+   "problems": [],
+   "country": "MX",
+   "region": "MX"
+  },
+  {
+   "text": "The 2027 economic package lowers the broad public deficit (RFSP) from 4.1% of GDP in 2026 to 3.9% in 2027, with debt at 55% of GDP, and the package includes 81.1 billion pesos of capital contributions to Pemex.",
+   "source_ids": [
+    "pol:mx-paquete-2027",
+    "pol:mx-pemex"
+   ],
+   "kind": "fiscal",
+   "ok": true,
+   "problems": [],
+   "country": "MX",
+   "region": "MX"
+  },
+  {
+   "text": "México Evalúa says the 3.9% RFSP target is still above the 2.5% the IMF recommends, and IMEF reports a broad public-sector deficit of 4.8% at the end of 2025.",
+   "source_ids": [
+    "fa:mexico-evalua",
+    "fa:imef"
+   ],
+   "kind": "fiscal",
+   "ok": true,
+   "problems": [],
+   "country": "MX",
+   "region": "MX"
+  },
+  {
+   "text": "Congress approved moving the second judicial election from 2027 to June 2028.",
+   "source_ids": [
+    "pol:mx-judicial-reform"
+   ],
+   "kind": "political",
+   "ok": true,
+   "problems": [],
+   "country": "MX",
+   "region": "MX"
+  },
+  {
+   "text": "The Banxico survey median for 2026 year-end inflation is 3.88%, and the median for the Q4 2026 policy rate is 6.5%.",
+   "source_ids": [
+    "fc:MX.inflation.2026",
+    "fc:MX.policy_rate.2026"
    ],
    "kind": "data",
    "ok": true,
@@ -388,19 +347,29 @@
    "region": "MX"
   },
   {
-   "text": "The Banxico survey median for 2026 year-end inflation was 3.88%, with a standard deviation of 0.19 pp.",
+   "text": "USD/MXN FIX fell from 18.6188 to 18.5525, down 0.36% on the day.",
    "source_ids": [
-    "disp:3",
-    "fc:MX.inflation.2026"
+    "s:mx.usdmxn.fix"
    ],
-   "kind": "data",
+   "kind": "market",
    "ok": true,
    "problems": [],
    "country": "MX",
    "region": "MX"
   },
   {
-   "text": "The 10-year Mbono auction yield was 9.25% on 2026-10-22, down 0.1 from 9.35 on 2026-09-24.",
+   "text": "Leveraged funds held a net long of 71381 MXN futures contracts (25.2% of open interest) as of 3 November, at the 80.8 percentile.",
+   "source_ids": [
+    "cot:mx.cot.mxn"
+   ],
+   "kind": "market",
+   "ok": true,
+   "problems": [],
+   "country": "MX",
+   "region": "MX"
+  },
+  {
+   "text": "The 10-year Mbono auction yield was 9.25% on 22 October, down from 9.35%.",
    "source_ids": [
     "s:mx.mbono10y.auction"
    ],
@@ -411,65 +380,10 @@
    "region": "MX"
   },
   {
-   "text": "The Chamber of Deputies must approve the 2027 spending budget (PEF) by 15 November 2026.",
+   "text": "Polymarket gives Morena 87.6% to win the most seats in the 2027 legislative election, Kalshi gives Morena 86.0%, and Polymarket gives PAN 75.0% to win the second most.",
    "source_ids": [
-    "ev:2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
-    "pol:mx-paquete-2027"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "The 2027 package sets the RFSP deficit at 3.9% of GDP, down from 4.1% in 2026, according to IMCO; México Evalúa said this is still above the 2.5% the IMF recommends.",
-   "source_ids": [
-    "pol:mx-paquete-2027",
-    "fa:mexico-evalua"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "The Pemex plan includes capital contributions of 81.1 billion pesos for 2027, 69.2% less than before, according to IMCO.",
-   "source_ids": [
-    "pol:mx-pemex"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "The Comisión de Cambios announced on 2026-11-12 that the IMF ratified the soundness of Mexico's macroeconomic fundamentals and the continuity of the Flexible Credit Line.",
-   "source_ids": [
-    "h:37408d78"
-   ],
-   "kind": "central_bank",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "Polymarket odds on Morena winning the most seats in the 2027 legislative election were 87.6%, down 0.8 pp since the last brief.",
-   "source_ids": [
-    "pm:2271403"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "Polymarket odds on PAN winning the second most seats were 75.0%, up 1.0 pp since the last brief.",
-   "source_ids": [
+    "pm:2271403",
+    "ks:KXMEXICODEPUTIES-27-MORENA",
     "pm:2325445"
    ],
    "kind": "market",
@@ -479,18 +393,7 @@
    "region": "MX"
   },
   {
-   "text": "Polymarket odds on Mexico 2026 annual inflation between 3.00% and 3.49% rose to 7.5%, up 1.7 pp since the last brief.",
-   "source_ids": [
-    "pm:1353323"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "Kalshi odds on a formal USMCA 16-year extension in 2026 were 7.0%, and on a U.S. withdrawal notice were 13.0%.",
+   "text": "Kalshi prices a formal USMCA 16-year extension in 2026 at 7.0% and a US withdrawal notice at 13.0%.",
    "source_ids": [
     "ks:KXUSMCAOUTCOMES-27-16Y",
     "ks:KXUSMCAOUTCOMES-27-USW"
@@ -502,7 +405,18 @@
    "region": "MX"
   },
   {
-   "text": "The USTR published a request for Mexico's review of alleged denial of workers' rights at Industrias FG on 2026-11-13.",
+   "text": "The IMF reaffirmed Mexico's macroeconomic fundamentals and the continuity of the Flexible Credit Line, per an SHCP announcement on 12 November.",
+   "source_ids": [
+    "h:37408d78"
+   ],
+   "kind": "central_bank",
+   "ok": true,
+   "problems": [],
+   "country": "MX",
+   "region": "MX"
+  },
+  {
+   "text": "The USTR seeks Mexico's review of alleged denial of workers' rights at Industrias FG.",
    "source_ids": [
     "h:78f1303b"
    ],
@@ -513,51 +427,29 @@
    "region": "MX"
   },
   {
-   "text": "The SHCP/UIF published Comunicado No. 95 on 2026-11-13 on partial access to funds for a former Sinaloa government official.",
+   "text": "The France-Germany 10-year spread was 147.4 bp in October, up from 96.7 bp in September (degraded: ECB monthly average, not daily).",
    "source_ids": [
-    "h:8875afa2"
-   ],
-   "kind": "political",
-   "ok": true,
-   "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "The CFTC leveraged-fund net long in MXN futures was 71,381 contracts on 2026-11-03, at the 80.8 percentile.",
-   "source_ids": [
-    "cot:mx.cot.mxn"
+    "s:fr.spread.oat_bund.ecb_m"
    ],
    "kind": "market",
    "ok": true,
    "problems": [],
-   "country": "MX",
-   "region": "MX"
-  },
-  {
-   "text": "The France-Germany 10-year spread was 147.4 bp in the ECB monthly series for 2026-10-01, up from 96.7 bp on 2026-09-01; this series is monthly and up to five weeks old.",
-   "source_ids": [
-    "s:fr.spread.oat_bund.ecb_m"
-   ],
-   "kind": "data",
-   "ok": true,
-   "problems": [],
    "country": "FR",
    "region": "FR"
   },
   {
-   "text": "The France 10-year yield was 4.89% in the ECB monthly average for 2026-10-01, up 0.45 pp from 4.44% on 2026-09-01.",
+   "text": "The France 10-year yield averaged 4.89% in October, up from 4.44% in September (degraded: ECB monthly average).",
    "source_ids": [
     "s:fr.oat10y.ecb_m"
    ],
-   "kind": "data",
+   "kind": "market",
    "ok": true,
    "problems": [],
    "country": "FR",
    "region": "FR"
   },
   {
-   "text": "The Germany 10-year Bund yield was 3.41% on 2026-11-13, up from 3.33% at the last brief and from 3.27% a week earlier.",
+   "text": "The German 10-year Bund yield rose to 3.41% from 3.33%.",
    "source_ids": [
     "s:de.bund10y"
    ],
@@ -568,54 +460,9 @@
    "region": "FR"
   },
   {
-   "text": "S&P's sovereign rating review of France is scheduled for 27 November 2026, and KBRA's is scheduled for 11 December 2026.",
+   "text": "The 2027 budget bills (PLF and PLFSS) were presented on 1 October with about 54 billion euros of consolidation, and HCFP calls the 2027 growth forecast of 1.0% optimistic.",
    "source_ids": [
-    "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
-    "ev:2026-12-11-fr-kbra-sovereign-rating-review-france"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "The Polymarket odds on a Moody's or S&P downgrade of France by 30 November 2026 were 7.0%, up 0.5 pp since the last brief.",
-   "source_ids": [
-    "pm:5458390"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "The Article 47 70-day deadline for the 2027 budget is 10 December 2026.",
-   "source_ids": [
-    "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
-    "pol:fr-budget-2027"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "The 2027 finance and social-security bills contain about 54 billion euros of consolidation, of which 43 billion are new measures, according to the government's 1 October 2026 presentation.",
-   "source_ids": [
-    "pol:fr-budget-2027"
-   ],
-   "kind": "fiscal",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "The HCFP judged the 2026 deficit forecast of 5.4% of GDP plausible and the 2027 growth forecast of 1.0% optimistic.",
-   "source_ids": [
+    "pol:fr-budget-2027",
     "fa:hcfp"
    ],
    "kind": "fiscal",
@@ -625,66 +472,7 @@
    "region": "FR"
   },
   {
-   "text": "Polymarket odds on a French national budget passed by 31 December were 40.0%, and Kalshi odds on the 2027 budget enacted in 2026 were 41.0%.",
-   "source_ids": [
-    "pm:1722538",
-    "ks:KXFRANCEBUDGET-27JAN01"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "Polymarket odds on Marine Le Pen winning the 2027 presidential election were 47.4%, up 1.3 pp since the last brief; Kalshi odds on Le Pen winning the next French presidential election were 52.0%, up 1.0 pp.",
-   "source_ids": [
-    "pm:679018",
-    "ks:KXFRENCHPRES-27-MLEP"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "Polymarket odds on David Lisnard winning the 2027 presidential election were 18.1%, up 1.7 pp since the last brief.",
-   "source_ids": [
-    "pm:679022"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "Polymarket odds on Édouard Philippe winning the 2027 presidential election were 4.5%, down 1.0 pp since the last brief.",
-   "source_ids": [
-    "pm:679021"
-   ],
-   "kind": "market",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "The Assemblée nationale published sitting reports on 2026-11-09, 2026-11-10 and 2026-11-12.",
-   "source_ids": [
-    "h:e5f2f09a",
-    "h:ddeaf42c",
-    "h:fc68d209"
-   ],
-   "kind": "political",
-   "ok": true,
-   "problems": [],
-   "country": "FR",
-   "region": "FR"
-  },
-  {
-   "text": "Consensus expects France's 2026 deficit at a median of -5.11% of GDP and 2027 at -5.2%.",
+   "text": "The consensus median puts the 2026 general government balance at -5.11% of GDP and the 2027 balance at -5.2% of GDP.",
    "source_ids": [
     "fc:FR.balance.2026",
     "fc:FR.balance.2027"
@@ -696,7 +484,77 @@
    "region": "FR"
   },
   {
-   "text": "Gold (COMEX front-month) was 3887.6001 USD per troy ounce on 2026-11-13, up from 3885.3 on 2026-11-12 and down from 4074.8999 a week earlier.",
+   "text": "The 2026 social-security law suspended the 2023 pension reform until 1 January 2028.",
+   "source_ids": [
+    "pol:fr-pensions"
+   ],
+   "kind": "fiscal",
+   "ok": true,
+   "problems": [],
+   "country": "FR",
+   "region": "FR"
+  },
+  {
+   "text": "The Article 47 70-day budget deadline falls on 10 December 2026.",
+   "source_ids": [
+    "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline"
+   ],
+   "kind": "fiscal",
+   "ok": true,
+   "problems": [],
+   "country": "FR",
+   "region": "FR"
+  },
+  {
+   "text": "Polymarket gives 40.0% and Kalshi 41.0% to France passing a 2027 budget by 31 December, and Kalshi gives 58.0% to a 49.3 budget.",
+   "source_ids": [
+    "pm:1722538",
+    "ks:KXFRANCEBUDGET-27JAN01",
+    "ks:KXFRANCE493-27JAN01"
+   ],
+   "kind": "market",
+   "ok": true,
+   "problems": [],
+   "country": "FR",
+   "region": "FR"
+  },
+  {
+   "text": "Polymarket gives Marine Le Pen 47.4% and Kalshi 52.0% to win the 2027 presidential election.",
+   "source_ids": [
+    "pm:679018",
+    "ks:KXFRENCHPRES-27-MLEP"
+   ],
+   "kind": "market",
+   "ok": true,
+   "problems": [],
+   "country": "FR",
+   "region": "FR"
+  },
+  {
+   "text": "The S&P review of France is scheduled for 27 November, and the base-rate table shows 0 downgrades in 36 recorded S&P actions.",
+   "source_ids": [
+    "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
+    "sc:fr-sp-2026-11"
+   ],
+   "kind": "central_bank",
+   "ok": true,
+   "problems": [],
+   "country": "FR",
+   "region": "FR"
+  },
+  {
+   "text": "Protests in France entered a fifth straight Saturday with police using tear gas.",
+   "source_ids": [
+    "h:26ae2bce"
+   ],
+   "kind": "political",
+   "ok": true,
+   "problems": [],
+   "country": "FR",
+   "region": "FR"
+  },
+  {
+   "text": "COMEX gold futures were 3887.6 USD per ounce, up 2.3 from 3885.3.",
    "source_ids": [
     "s:gl.gold"
    ],
@@ -707,7 +565,7 @@
    "region": "GOLD"
   },
   {
-   "text": "Silver (COMEX front-month) was 48.65 USD per troy ounce on 2026-11-13, down 2.65% from 49.972 on 2026-11-12.",
+   "text": "COMEX silver futures fell 2.65% to 48.65 USD per ounce from 49.972.",
    "source_ids": [
     "s:gl.silver"
    ],
@@ -718,8 +576,9 @@
    "region": "GOLD"
   },
   {
-   "text": "The US 10-year Treasury yield was 5.1% on 2026-11-12, up 12 bp from 4.98 at the last brief.",
+   "text": "The US 10-year real yield (TIPS) rose to 2.86% from 2.78%, and the US 10-year Treasury yield rose to 5.1% from 4.98%.",
    "source_ids": [
+    "s:us.tips10",
     "s:us.ust10y"
    ],
    "kind": "data",
@@ -729,9 +588,10 @@
    "region": "GOLD"
   },
   {
-   "text": "The US 10-year real yield (TIPS) was 2.86% on 2026-11-12, up 8 bp from 2.78 at the last brief.",
+   "text": "The US 2-year Treasury yield rose to 4.86% from 4.73%, and the effective federal funds rate was unchanged at 3.88%.",
    "source_ids": [
-    "s:us.tips10"
+    "s:us.ust2y",
+    "s:us.fedfunds"
    ],
    "kind": "data",
    "ok": true,
@@ -740,29 +600,19 @@
    "region": "GOLD"
   },
   {
-   "text": "The US 2-year Treasury yield was 4.86% on 2026-11-12, up 13 bp from 4.73 at the last brief.",
+   "text": "The broad US dollar index rose to 121.8803 from 121.5061, and EUR/USD fell to 1.1154 from 1.1235.",
    "source_ids": [
-    "s:us.ust2y"
+    "s:us.usd.broad",
+    "s:eu.eurusd"
    ],
-   "kind": "data",
+   "kind": "market",
    "ok": true,
    "problems": [],
    "country": "GLOBAL",
    "region": "GOLD"
   },
   {
-   "text": "The US broad dollar index was 121.8803 on 2026-11-06, up from 121.5061 on 2026-11-05.",
-   "source_ids": [
-    "s:us.usd.broad"
-   ],
-   "kind": "data",
-   "ok": true,
-   "problems": [],
-   "country": "GLOBAL",
-   "region": "GOLD"
-  },
-  {
-   "text": "The VIX was 18.7 on 2026-11-12, up 1.21 from 17.49 at the last brief.",
+   "text": "The VIX rose to 18.7 from 17.49.",
    "source_ids": [
     "s:us.vix"
    ],
@@ -773,7 +623,7 @@
    "region": "GOLD"
   },
   {
-   "text": "The Geopolitical Risk index was 113.946 on 2026-11-02, up 27.681 from 86.265 on 2026-11-01.",
+   "text": "The Geopolitical Risk index was 113.946 on 2 November, up from 86.265.",
    "source_ids": [
     "s:gl.gpr"
    ],
@@ -784,7 +634,7 @@
    "region": "GOLD"
   },
   {
-   "text": "Central banks' net gold purchases were 5.54 tonnes per month for 2026-10-31, down from 34.31 tonnes for 2026-09-30.",
+   "text": "Central-bank net gold purchases by IMF reporters were 5.54 tonnes in October, down from 34.31 tonnes in September.",
    "source_ids": [
     "s:gl.cbgold"
    ],
@@ -795,7 +645,7 @@
    "region": "GOLD"
   },
   {
-   "text": "The gold-events frozen model's expected 5-day move, based on data as of 2026-11-06, was -0.12% for gold and -2.47% for silver.",
+   "text": "The gold-events model expects gold to move -0.12% and silver -2.47% over the next five trading days.",
    "source_ids": [
     "gold:model"
    ],
@@ -806,23 +656,11 @@
    "region": "GOLD"
   },
   {
-   "text": "The US effective federal funds rate was 3.88% on 2026-11-12, and the Fed funds target upper limit was 4.0% on 2026-11-13, both unchanged.",
-   "source_ids": [
-    "s:us.fedfunds",
-    "s:us.fed.upper"
-   ],
-   "kind": "central_bank",
-   "ok": true,
-   "problems": [],
-   "country": "GLOBAL",
-   "region": "GOLD"
-  },
-  {
-   "text": "The FOMC rate decision and projections are scheduled for 9 December 2026.",
+   "text": "The next FOMC rate decision and projections are on 9 December 2026.",
    "source_ids": [
     "gev:2026-12-09-fomc-rate-decision-and-projections"
    ],
-   "kind": "central_bank",
+   "kind": "data",
    "ok": true,
    "problems": [],
    "country": "GLOBAL",
@@ -1279,21 +1117,12 @@
   ]
  },
  "report": {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "regions": {
    "BR": {
     "developments": [
      {
-      "text": "USD/BRL PTAX (sell) was 5.6518 on 2026-11-13, up from 5.6143 on 2026-11-12, and up from 5.5013 a week earlier.",
-      "source_ids": [
-       "s:br.usdbrl.ptax"
-      ],
-      "kind": "data",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The Selic target rate was unchanged at 13.75% p.a. on 2026-11-14.",
+      "text": "The Copom Selic target was unchanged at 13.75% on 14 November.",
       "source_ids": [
        "s:br.selic.target"
       ],
@@ -1302,8 +1131,19 @@
       "problems": []
      },
      {
-      "text": "The Focus survey Selic median for the next Copom was 13.75 with a standard deviation of 0.2073 pp across 144 respondents, at the 97.5 percentile of the last survey before each of the previous 40 meetings.",
+      "text": "The BCB published the minutes of the 282nd Copom meeting on 10 November.",
       "source_ids": [
+       "h:f9b5c139"
+      ],
+      "kind": "central_bank",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "The Focus year-end 2026 Selic median is 13.75% and the 2027 median is 12.5%, with the next-Copom Selic dispersion at the 97.5 percentile.",
+      "source_ids": [
+       "fc:BR.policy_rate.2026",
+       "fc:BR.policy_rate.2027",
        "disp:1"
       ],
       "kind": "data",
@@ -1311,47 +1151,64 @@
       "problems": []
      },
      {
-      "text": "The Focus 2026 year-end Selic median was 13.75% (range 13.25 to 14.0) and the 2027 median was 12.5% (range 10.25 to 15.0).",
+      "text": "The Focus 2027 primary balance median is -0.4% of GDP, and the Focus 2026 inflation median is 5.22% after a 0.202 point rise over three months.",
       "source_ids": [
-       "fc:BR.policy_rate.2026",
-       "fc:BR.policy_rate.2027"
+       "fc:BR.primary.2027",
+       "fc:BR.inflation.2026"
       ],
       "kind": "data",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The Focus 2026 IPCA median was 5.22% and the 2027 median was 4.9%, with the 2027 median up 0.678 pp over three months.",
+      "text": "The 2027 budget bill counts a surplus of R$83.4 billion (0.6% of GDP) against a R$73.2 billion (0.5% of GDP) target, while IFI puts the effective 2027 primary surplus at R$18.6 billion (0.1% of GDP).",
       "source_ids": [
-       "fc:BR.inflation.2026",
-       "fc:BR.inflation.2027"
+       "pol:br-fiscal-framework",
+       "pol:br-ploa-2027"
       ],
-      "kind": "data",
+      "kind": "fiscal",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The Focus 2027 primary-balance median was -0.4% of GDP, with 62 respondents and a standard deviation of 0.2937 pp.",
+      "text": "IFI expects a 2026 primary deficit of 0.5% of GDP and a potential 2027 deficit of 1.0% of GDP.",
       "source_ids": [
-       "disp:2",
-       "fc:BR.primary.2027"
+       "fa:ifi"
       ],
-      "kind": "data",
+      "kind": "fiscal",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The BCB Focus 2026 GDP median was 1.75% and the 2027 median was 1.15%.",
+      "text": "The federal CBS consumption tax starts on 1 January 2027, and the Senate must set its reference rate by 15 December 2026.",
       "source_ids": [
-       "fc:BR.gdp.2026",
-       "fc:BR.gdp.2027"
+       "pol:br-consumption-tax",
+       "ev:2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate"
       ],
-      "kind": "data",
+      "kind": "fiscal",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The DI Jan-27 proxy (Tesouro LTN 2027) was 13.62% p.a. on 2026-11-12, down 0.01 from 13.63 at the last brief; the DI Jan-29 proxy was 14.71% and the DI Jan-31 proxy was 15.09%.",
+      "text": "USD/BRL PTAX rose from 5.6143 to 5.6518, up 0.67% on the day.",
+      "source_ids": [
+       "s:br.usdbrl.ptax"
+      ],
+      "kind": "market",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "Leveraged funds held a net long of 38613 BRL futures contracts (22.2% of open interest) as of 3 November, at the 99.4 percentile.",
+      "source_ids": [
+       "cot:br.cot.brl"
+      ],
+      "kind": "market",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "Degraded DI proxies from Tesouro LTN yields: Jan-27 at 13.62% (-0.01), Jan-29 at 14.71% (unchanged) and Jan-31 at 15.09% (+0.02).",
       "source_ids": [
        "s:br.di.f27.proxy",
        "s:br.di.f29.proxy",
@@ -1362,17 +1219,9 @@
       "problems": []
      },
      {
-      "text": "The longest fixed-rate Tesouro bond yield was 15.15% p.a. on 2026-11-12, up from 15.11 at the last brief.",
+      "text": "The longest fixed-rate Tesouro bond yield, a 10-year proxy, rose to 15.15% (+0.04), and the longest IPCA+ bond real-rate proxy rose to 7.57% (+0.02).",
       "source_ids": [
-       "s:br.td.pre_longest"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The longest IPCA+ Tesouro bond yield was 7.57% p.a. on 2026-11-12, up from 7.55 at the last brief.",
-      "source_ids": [
+       "s:br.td.pre_longest",
        "s:br.td.ipca_longest"
       ],
       "kind": "market",
@@ -1380,34 +1229,7 @@
       "problems": []
      },
      {
-      "text": "The BCB published a press note on the extrajudicial liquidation of Cooperativa Administradora de Consórcios Roma on 2026-11-12.",
-      "source_ids": [
-       "h:3e7afb5c"
-      ],
-      "kind": "political",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The BCB published a press note on the extrajudicial liquidation of Cooperagre on 2026-11-12.",
-      "source_ids": [
-       "h:25875302"
-      ],
-      "kind": "political",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The BCB published the Copom minutes of the 282nd meeting on 2026-11-10.",
-      "source_ids": [
-       "h:f9b5c139"
-      ],
-      "kind": "central_bank",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "Kalshi odds on exactly 5 Brazil rate cuts in 2026 were 88.0% and on exactly 6 cuts were 12.0%.",
+      "text": "Kalshi prices 88.0% for exactly 5 Brazil rate cuts in 2026 and 12.0% for exactly 6.",
       "source_ids": [
        "ks:KXBRRATECUT-27JAN01-E5",
        "ks:KXBRRATECUT-27JAN01-E6"
@@ -1417,64 +1239,19 @@
       "problems": []
      },
      {
-      "text": "Polymarket odds on Brazil 2026 annual inflation between 5.00% and 5.49% rose to 44.9%, up 1.3 pp since the last brief.",
+      "text": "The BCB put the Roma consortium administrator cooperative and the Cooperagre rural credit cooperative into extrajudicial liquidation on 12 November.",
       "source_ids": [
-       "pm:1243901"
+       "h:3e7afb5c",
+       "h:25875302"
       ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "Polymarket odds on Alexandre de Moraes leaving the Supreme Court were 4.9%, down 0.2 pp since the last brief.",
-      "source_ids": [
-       "pm:1544795"
-      ],
-      "kind": "political",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The CFTC leveraged-fund net long in BRL futures was 38,613 contracts on 2026-11-03, at the 99.4 percentile, flagged as extreme.",
-      "source_ids": [
-       "cot:br.cot.brl"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The 2027 budget bill sets a central-government primary target of 0.5% of GDP, and the budget bill puts the result counted for the target at a surplus of R$83.4 billion, according to the government.",
-      "source_ids": [
-       "pol:br-fiscal-framework"
-      ],
-      "kind": "fiscal",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "IFI's 2027 projection for the budget bill is an effective primary surplus of R$18.6 billion (0.1% of GDP) on 2.5% growth and 3.6% inflation.",
-      "source_ids": [
-       "pol:br-ploa-2027"
-      ],
-      "kind": "fiscal",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The consumption-tax reform's federal CBS starts on 1 January 2027, and the Senate must set the reference rate by 15 December 2026.",
-      "source_ids": [
-       "pol:br-consumption-tax",
-       "ev:2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate"
-      ],
-      "kind": "fiscal",
+      "kind": "central_bank",
       "ok": true,
       "problems": []
      }
     ],
     "week_change": [
      {
-      "text": "USD/BRL PTAX rose 2.74% over the week from 5.5013 to 5.6518.",
+      "text": "USD/BRL PTAX went from 5.5013 on 6 November to 5.6518, up 2.74%.",
       "source_ids": [
        "s:br.usdbrl.ptax"
       ],
@@ -1482,17 +1259,17 @@
       "problems": []
      },
      {
-      "text": "The DI Jan-27 proxy fell 2 bp over the week to 13.62%, the DI Jan-29 proxy fell 29 bp to 14.71%, and the DI Jan-31 proxy fell 24 bp to 15.09%.",
+      "text": "The Jan-29 DI proxy fell 29 bp from 15.0% to 14.71%, the Jan-31 proxy fell 24 bp from 15.33% to 15.09%, and the Jan-27 proxy fell 2 bp from 13.64% to 13.62%.",
       "source_ids": [
-       "s:br.di.f27.proxy",
        "s:br.di.f29.proxy",
-       "s:br.di.f31.proxy"
+       "s:br.di.f31.proxy",
+       "s:br.di.f27.proxy"
       ],
       "ok": true,
       "problems": []
      },
      {
-      "text": "The longest fixed-rate Tesouro bond fell 12 bp over the week to 15.15%, and the longest IPCA+ bond fell 5 bp to 7.57%.",
+      "text": "The 10-year proxy fell 12 bp from 15.27% to 15.15%, and the IPCA+ real-rate proxy fell 5 bp from 7.62% to 7.57%.",
       "source_ids": [
        "s:br.td.pre_longest",
        "s:br.td.ipca_longest"
@@ -1505,7 +1282,7 @@
      {
       "event_id": "ev:2026-11-16-br-focus-survey-bcb",
       "date": "2026-11-16",
-      "days_to": 2,
+      "days_to": 1,
       "title": "Focus survey (BCB)",
       "importance": 1,
       "status": "estimated",
@@ -1516,7 +1293,7 @@
      {
       "event_id": "ev:2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
       "date": "2026-11-20",
-      "days_to": 6,
+      "days_to": 5,
       "title": "Bimonthly revenue and spending report (RARDP)",
       "importance": 2,
       "status": "estimated",
@@ -1527,7 +1304,7 @@
      {
       "event_id": "ev:2026-11-23-br-focus-survey-bcb",
       "date": "2026-11-23",
-      "days_to": 9,
+      "days_to": 8,
       "title": "Focus survey (BCB)",
       "importance": 1,
       "status": "estimated",
@@ -1538,7 +1315,7 @@
      {
       "event_id": "ev:2026-11-30-br-focus-survey-bcb",
       "date": "2026-11-30",
-      "days_to": 16,
+      "days_to": 15,
       "title": "Focus survey (BCB)",
       "importance": 1,
       "status": "estimated",
@@ -1549,7 +1326,7 @@
      {
       "event_id": "ev:2026-12-07-br-focus-survey-bcb",
       "date": "2026-12-07",
-      "days_to": 23,
+      "days_to": 22,
       "title": "Focus survey (BCB)",
       "importance": 1,
       "status": "estimated",
@@ -1560,7 +1337,7 @@
      {
       "event_id": "ev:2026-12-09-br-copom-decision-8-9-dec",
       "date": "2026-12-09",
-      "days_to": 25,
+      "days_to": 24,
       "title": "Copom decision (8-9 Dec)",
       "importance": 3,
       "status": "confirmed",
@@ -1571,12 +1348,23 @@
      {
       "event_id": "ev:2026-12-14-br-focus-survey-bcb",
       "date": "2026-12-14",
-      "days_to": 30,
+      "days_to": 29,
       "title": "Focus survey (BCB)",
       "importance": 1,
       "status": "estimated",
       "source_ids": [
        "ev:2026-12-14-br-focus-survey-bcb"
+      ]
+     },
+     {
+      "event_id": "ev:2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate",
+      "date": "2026-12-15",
+      "days_to": 30,
+      "title": "Senate deadline to set the CBS reference rate",
+      "importance": 2,
+      "status": "confirmed",
+      "source_ids": [
+       "ev:2026-12-15-br-senate-deadline-to-set-the-cbs-reference-rate"
       ]
      }
     ],
@@ -1742,16 +1530,7 @@
    "MX": {
     "developments": [
      {
-      "text": "USD/MXN FIX was 18.5525 on 2026-11-13, down from 18.6188 on 2026-11-12, and down from 18.6297 a week earlier.",
-      "source_ids": [
-       "s:mx.usdmxn.fix"
-      ],
-      "kind": "data",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The Banxico target rate was unchanged at 6.25% p.a. on 2026-11-14.",
+      "text": "Banxico's target rate was unchanged at 6.25% on 14 November.",
       "source_ids": [
        "s:mx.policy.target"
       ],
@@ -1760,26 +1539,73 @@
       "problems": []
      },
      {
-      "text": "The TIIE 28-day rate was 6.5147% p.a., unchanged from the previous reading.",
+      "text": "The Chamber of Deputies must approve the 2027 spending budget (PEF) by 15 November 2026.",
       "source_ids": [
-       "s:mx.tiie28"
+       "ev:2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027"
+      ],
+      "kind": "fiscal",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "The 2027 economic package lowers the broad public deficit (RFSP) from 4.1% of GDP in 2026 to 3.9% in 2027, with debt at 55% of GDP, and the package includes 81.1 billion pesos of capital contributions to Pemex.",
+      "source_ids": [
+       "pol:mx-paquete-2027",
+       "pol:mx-pemex"
+      ],
+      "kind": "fiscal",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "México Evalúa says the 3.9% RFSP target is still above the 2.5% the IMF recommends, and IMEF reports a broad public-sector deficit of 4.8% at the end of 2025.",
+      "source_ids": [
+       "fa:mexico-evalua",
+       "fa:imef"
+      ],
+      "kind": "fiscal",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "Congress approved moving the second judicial election from 2027 to June 2028.",
+      "source_ids": [
+       "pol:mx-judicial-reform"
+      ],
+      "kind": "political",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "The Banxico survey median for 2026 year-end inflation is 3.88%, and the median for the Q4 2026 policy rate is 6.5%.",
+      "source_ids": [
+       "fc:MX.inflation.2026",
+       "fc:MX.policy_rate.2026"
       ],
       "kind": "data",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The Banxico survey median for 2026 year-end inflation was 3.88%, with a standard deviation of 0.19 pp.",
+      "text": "USD/MXN FIX fell from 18.6188 to 18.5525, down 0.36% on the day.",
       "source_ids": [
-       "disp:3",
-       "fc:MX.inflation.2026"
+       "s:mx.usdmxn.fix"
       ],
-      "kind": "data",
+      "kind": "market",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The 10-year Mbono auction yield was 9.25% on 2026-10-22, down 0.1 from 9.35 on 2026-09-24.",
+      "text": "Leveraged funds held a net long of 71381 MXN futures contracts (25.2% of open interest) as of 3 November, at the 80.8 percentile.",
+      "source_ids": [
+       "cot:mx.cot.mxn"
+      ],
+      "kind": "market",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "The 10-year Mbono auction yield was 9.25% on 22 October, down from 9.35%.",
       "source_ids": [
        "s:mx.mbono10y.auction"
       ],
@@ -1788,55 +1614,10 @@
       "problems": []
      },
      {
-      "text": "The Chamber of Deputies must approve the 2027 spending budget (PEF) by 15 November 2026.",
+      "text": "Polymarket gives Morena 87.6% to win the most seats in the 2027 legislative election, Kalshi gives Morena 86.0%, and Polymarket gives PAN 75.0% to win the second most.",
       "source_ids": [
-       "ev:2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
-       "pol:mx-paquete-2027"
-      ],
-      "kind": "fiscal",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The 2027 package sets the RFSP deficit at 3.9% of GDP, down from 4.1% in 2026, according to IMCO; México Evalúa said this is still above the 2.5% the IMF recommends.",
-      "source_ids": [
-       "pol:mx-paquete-2027",
-       "fa:mexico-evalua"
-      ],
-      "kind": "fiscal",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The Pemex plan includes capital contributions of 81.1 billion pesos for 2027, 69.2% less than before, according to IMCO.",
-      "source_ids": [
-       "pol:mx-pemex"
-      ],
-      "kind": "fiscal",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The Comisión de Cambios announced on 2026-11-12 that the IMF ratified the soundness of Mexico's macroeconomic fundamentals and the continuity of the Flexible Credit Line.",
-      "source_ids": [
-       "h:37408d78"
-      ],
-      "kind": "central_bank",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "Polymarket odds on Morena winning the most seats in the 2027 legislative election were 87.6%, down 0.8 pp since the last brief.",
-      "source_ids": [
-       "pm:2271403"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "Polymarket odds on PAN winning the second most seats were 75.0%, up 1.0 pp since the last brief.",
-      "source_ids": [
+       "pm:2271403",
+       "ks:KXMEXICODEPUTIES-27-MORENA",
        "pm:2325445"
       ],
       "kind": "market",
@@ -1844,16 +1625,7 @@
       "problems": []
      },
      {
-      "text": "Polymarket odds on Mexico 2026 annual inflation between 3.00% and 3.49% rose to 7.5%, up 1.7 pp since the last brief.",
-      "source_ids": [
-       "pm:1353323"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "Kalshi odds on a formal USMCA 16-year extension in 2026 were 7.0%, and on a U.S. withdrawal notice were 13.0%.",
+      "text": "Kalshi prices a formal USMCA 16-year extension in 2026 at 7.0% and a US withdrawal notice at 13.0%.",
       "source_ids": [
        "ks:KXUSMCAOUTCOMES-27-16Y",
        "ks:KXUSMCAOUTCOMES-27-USW"
@@ -1863,36 +1635,27 @@
       "problems": []
      },
      {
-      "text": "The USTR published a request for Mexico's review of alleged denial of workers' rights at Industrias FG on 2026-11-13.",
+      "text": "The IMF reaffirmed Mexico's macroeconomic fundamentals and the continuity of the Flexible Credit Line, per an SHCP announcement on 12 November.",
+      "source_ids": [
+       "h:37408d78"
+      ],
+      "kind": "central_bank",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "The USTR seeks Mexico's review of alleged denial of workers' rights at Industrias FG.",
       "source_ids": [
        "h:78f1303b"
       ],
       "kind": "political",
       "ok": true,
       "problems": []
-     },
-     {
-      "text": "The SHCP/UIF published Comunicado No. 95 on 2026-11-13 on partial access to funds for a former Sinaloa government official.",
-      "source_ids": [
-       "h:8875afa2"
-      ],
-      "kind": "political",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The CFTC leveraged-fund net long in MXN futures was 71,381 contracts on 2026-11-03, at the 80.8 percentile.",
-      "source_ids": [
-       "cot:mx.cot.mxn"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
      }
     ],
     "week_change": [
      {
-      "text": "USD/MXN FIX fell 0.41% over the week from 18.6297 to 18.5525.",
+      "text": "USD/MXN FIX went from 18.6297 on 6 November to 18.5525, down 0.41%.",
       "source_ids": [
        "s:mx.usdmxn.fix"
       ],
@@ -1900,9 +1663,9 @@
       "problems": []
      },
      {
-      "text": "The 10-year Mbono auction yield context reading fell 10 bp to 9.25% on 2026-10-22, the latest reading.",
+      "text": "The Banxico target rate was 6.25% a week ago and is unchanged today.",
       "source_ids": [
-       "s:mx.mbono10y.auction"
+       "s:mx.policy.target"
       ],
       "ok": true,
       "problems": []
@@ -1912,7 +1675,7 @@
      {
       "event_id": "ev:2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
       "date": "2026-11-15",
-      "days_to": 1,
+      "days_to": 0,
       "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
       "importance": 2,
       "status": "confirmed",
@@ -1923,7 +1686,7 @@
      {
       "event_id": "ev:2026-11-30-mx-usmca-us-mexico-bilateral-round-next-round-not-a",
       "date": "2026-11-30",
-      "days_to": 16,
+      "days_to": 15,
       "title": "USMCA: US-Mexico bilateral round (next round not announced)",
       "importance": 2,
       "status": "estimated",
@@ -1934,7 +1697,7 @@
      {
       "event_id": "ev:2026-12-01-mx-banxico-survey-of-private-sector-economists",
       "date": "2026-12-01",
-      "days_to": 17,
+      "days_to": 16,
       "title": "Banxico survey of private-sector economists",
       "importance": 1,
       "status": "estimated",
@@ -2093,25 +1856,25 @@
    "FR": {
     "developments": [
      {
-      "text": "The France-Germany 10-year spread was 147.4 bp in the ECB monthly series for 2026-10-01, up from 96.7 bp on 2026-09-01; this series is monthly and up to five weeks old.",
+      "text": "The France-Germany 10-year spread was 147.4 bp in October, up from 96.7 bp in September (degraded: ECB monthly average, not daily).",
       "source_ids": [
        "s:fr.spread.oat_bund.ecb_m"
       ],
-      "kind": "data",
+      "kind": "market",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The France 10-year yield was 4.89% in the ECB monthly average for 2026-10-01, up 0.45 pp from 4.44% on 2026-09-01.",
+      "text": "The France 10-year yield averaged 4.89% in October, up from 4.44% in September (degraded: ECB monthly average).",
       "source_ids": [
        "s:fr.oat10y.ecb_m"
       ],
-      "kind": "data",
+      "kind": "market",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The Germany 10-year Bund yield was 3.41% on 2026-11-13, up from 3.33% at the last brief and from 3.27% a week earlier.",
+      "text": "The German 10-year Bund yield rose to 3.41% from 3.33%.",
       "source_ids": [
        "s:de.bund10y"
       ],
@@ -2120,46 +1883,9 @@
       "problems": []
      },
      {
-      "text": "S&P's sovereign rating review of France is scheduled for 27 November 2026, and KBRA's is scheduled for 11 December 2026.",
+      "text": "The 2027 budget bills (PLF and PLFSS) were presented on 1 October with about 54 billion euros of consolidation, and HCFP calls the 2027 growth forecast of 1.0% optimistic.",
       "source_ids": [
-       "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
-       "ev:2026-12-11-fr-kbra-sovereign-rating-review-france"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The Polymarket odds on a Moody's or S&P downgrade of France by 30 November 2026 were 7.0%, up 0.5 pp since the last brief.",
-      "source_ids": [
-       "pm:5458390"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The Article 47 70-day deadline for the 2027 budget is 10 December 2026.",
-      "source_ids": [
-       "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
-       "pol:fr-budget-2027"
-      ],
-      "kind": "fiscal",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The 2027 finance and social-security bills contain about 54 billion euros of consolidation, of which 43 billion are new measures, according to the government's 1 October 2026 presentation.",
-      "source_ids": [
-       "pol:fr-budget-2027"
-      ],
-      "kind": "fiscal",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The HCFP judged the 2026 deficit forecast of 5.4% of GDP plausible and the 2027 growth forecast of 1.0% optimistic.",
-      "source_ids": [
+       "pol:fr-budget-2027",
        "fa:hcfp"
       ],
       "kind": "fiscal",
@@ -2167,17 +1893,46 @@
       "problems": []
      },
      {
-      "text": "Polymarket odds on a French national budget passed by 31 December were 40.0%, and Kalshi odds on the 2027 budget enacted in 2026 were 41.0%.",
+      "text": "The consensus median puts the 2026 general government balance at -5.11% of GDP and the 2027 balance at -5.2% of GDP.",
+      "source_ids": [
+       "fc:FR.balance.2026",
+       "fc:FR.balance.2027"
+      ],
+      "kind": "data",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "The 2026 social-security law suspended the 2023 pension reform until 1 January 2028.",
+      "source_ids": [
+       "pol:fr-pensions"
+      ],
+      "kind": "fiscal",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "The Article 47 70-day budget deadline falls on 10 December 2026.",
+      "source_ids": [
+       "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline"
+      ],
+      "kind": "fiscal",
+      "ok": true,
+      "problems": []
+     },
+     {
+      "text": "Polymarket gives 40.0% and Kalshi 41.0% to France passing a 2027 budget by 31 December, and Kalshi gives 58.0% to a 49.3 budget.",
       "source_ids": [
        "pm:1722538",
-       "ks:KXFRANCEBUDGET-27JAN01"
+       "ks:KXFRANCEBUDGET-27JAN01",
+       "ks:KXFRANCE493-27JAN01"
       ],
       "kind": "market",
       "ok": true,
       "problems": []
      },
      {
-      "text": "Polymarket odds on Marine Le Pen winning the 2027 presidential election were 47.4%, up 1.3 pp since the last brief; Kalshi odds on Le Pen winning the next French presidential election were 52.0%, up 1.0 pp.",
+      "text": "Polymarket gives Marine Le Pen 47.4% and Kalshi 52.0% to win the 2027 presidential election.",
       "source_ids": [
        "pm:679018",
        "ks:KXFRENCHPRES-27-MLEP"
@@ -2187,48 +1942,28 @@
       "problems": []
      },
      {
-      "text": "Polymarket odds on David Lisnard winning the 2027 presidential election were 18.1%, up 1.7 pp since the last brief.",
+      "text": "The S&P review of France is scheduled for 27 November, and the base-rate table shows 0 downgrades in 36 recorded S&P actions.",
       "source_ids": [
-       "pm:679022"
+       "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
+       "sc:fr-sp-2026-11"
       ],
-      "kind": "market",
+      "kind": "central_bank",
       "ok": true,
       "problems": []
      },
      {
-      "text": "Polymarket odds on Édouard Philippe winning the 2027 presidential election were 4.5%, down 1.0 pp since the last brief.",
+      "text": "Protests in France entered a fifth straight Saturday with police using tear gas.",
       "source_ids": [
-       "pm:679021"
-      ],
-      "kind": "market",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The Assemblée nationale published sitting reports on 2026-11-09, 2026-11-10 and 2026-11-12.",
-      "source_ids": [
-       "h:e5f2f09a",
-       "h:ddeaf42c",
-       "h:fc68d209"
+       "h:26ae2bce"
       ],
       "kind": "political",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "Consensus expects France's 2026 deficit at a median of -5.11% of GDP and 2027 at -5.2%.",
-      "source_ids": [
-       "fc:FR.balance.2026",
-       "fc:FR.balance.2027"
-      ],
-      "kind": "data",
       "ok": true,
       "problems": []
      }
     ],
     "week_change": [
      {
-      "text": "The Bund 10-year yield rose 14 bp over the week to 3.41%.",
+      "text": "The German 10-year Bund yield rose 14 bp from 3.27% on 6 November to 3.41%.",
       "source_ids": [
        "s:de.bund10y"
       ],
@@ -2240,7 +1975,7 @@
      {
       "event_id": "ev:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
       "date": "2026-11-27",
-      "days_to": 13,
+      "days_to": 12,
       "title": "Standard & Poor's sovereign rating review: France",
       "importance": 3,
       "status": "confirmed",
@@ -2251,7 +1986,7 @@
      {
       "event_id": "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
       "date": "2026-12-10",
-      "days_to": 26,
+      "days_to": 25,
       "title": "Budget (PLF 2027): Article 47 70-day deadline",
       "importance": 3,
       "status": "confirmed",
@@ -2262,7 +1997,7 @@
      {
       "event_id": "ev:2026-12-11-fr-kbra-sovereign-rating-review-france",
       "date": "2026-12-11",
-      "days_to": 27,
+      "days_to": 26,
       "title": "KBRA sovereign rating review: France",
       "importance": 3,
       "status": "confirmed",
@@ -2388,7 +2123,7 @@
    "GOLD": {
     "developments": [
      {
-      "text": "Gold (COMEX front-month) was 3887.6001 USD per troy ounce on 2026-11-13, up from 3885.3 on 2026-11-12 and down from 4074.8999 a week earlier.",
+      "text": "COMEX gold futures were 3887.6 USD per ounce, up 2.3 from 3885.3.",
       "source_ids": [
        "s:gl.gold"
       ],
@@ -2397,7 +2132,7 @@
       "problems": []
      },
      {
-      "text": "Silver (COMEX front-month) was 48.65 USD per troy ounce on 2026-11-13, down 2.65% from 49.972 on 2026-11-12.",
+      "text": "COMEX silver futures fell 2.65% to 48.65 USD per ounce from 49.972.",
       "source_ids": [
        "s:gl.silver"
       ],
@@ -2406,8 +2141,9 @@
       "problems": []
      },
      {
-      "text": "The US 10-year Treasury yield was 5.1% on 2026-11-12, up 12 bp from 4.98 at the last brief.",
+      "text": "The US 10-year real yield (TIPS) rose to 2.86% from 2.78%, and the US 10-year Treasury yield rose to 5.1% from 4.98%.",
       "source_ids": [
+       "s:us.tips10",
        "s:us.ust10y"
       ],
       "kind": "data",
@@ -2415,34 +2151,27 @@
       "problems": []
      },
      {
-      "text": "The US 10-year real yield (TIPS) was 2.86% on 2026-11-12, up 8 bp from 2.78 at the last brief.",
+      "text": "The US 2-year Treasury yield rose to 4.86% from 4.73%, and the effective federal funds rate was unchanged at 3.88%.",
       "source_ids": [
-       "s:us.tips10"
+       "s:us.ust2y",
+       "s:us.fedfunds"
       ],
       "kind": "data",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The US 2-year Treasury yield was 4.86% on 2026-11-12, up 13 bp from 4.73 at the last brief.",
+      "text": "The broad US dollar index rose to 121.8803 from 121.5061, and EUR/USD fell to 1.1154 from 1.1235.",
       "source_ids": [
-       "s:us.ust2y"
+       "s:us.usd.broad",
+       "s:eu.eurusd"
       ],
-      "kind": "data",
+      "kind": "market",
       "ok": true,
       "problems": []
      },
      {
-      "text": "The US broad dollar index was 121.8803 on 2026-11-06, up from 121.5061 on 2026-11-05.",
-      "source_ids": [
-       "s:us.usd.broad"
-      ],
-      "kind": "data",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The VIX was 18.7 on 2026-11-12, up 1.21 from 17.49 at the last brief.",
+      "text": "The VIX rose to 18.7 from 17.49.",
       "source_ids": [
        "s:us.vix"
       ],
@@ -2451,7 +2180,7 @@
       "problems": []
      },
      {
-      "text": "The Geopolitical Risk index was 113.946 on 2026-11-02, up 27.681 from 86.265 on 2026-11-01.",
+      "text": "The Geopolitical Risk index was 113.946 on 2 November, up from 86.265.",
       "source_ids": [
        "s:gl.gpr"
       ],
@@ -2460,7 +2189,7 @@
       "problems": []
      },
      {
-      "text": "Central banks' net gold purchases were 5.54 tonnes per month for 2026-10-31, down from 34.31 tonnes for 2026-09-30.",
+      "text": "Central-bank net gold purchases by IMF reporters were 5.54 tonnes in October, down from 34.31 tonnes in September.",
       "source_ids": [
        "s:gl.cbgold"
       ],
@@ -2469,7 +2198,7 @@
       "problems": []
      },
      {
-      "text": "The gold-events frozen model's expected 5-day move, based on data as of 2026-11-06, was -0.12% for gold and -2.47% for silver.",
+      "text": "The gold-events model expects gold to move -0.12% and silver -2.47% over the next five trading days.",
       "source_ids": [
        "gold:model"
       ],
@@ -2478,55 +2207,30 @@
       "problems": []
      },
      {
-      "text": "The US effective federal funds rate was 3.88% on 2026-11-12, and the Fed funds target upper limit was 4.0% on 2026-11-13, both unchanged.",
-      "source_ids": [
-       "s:us.fedfunds",
-       "s:us.fed.upper"
-      ],
-      "kind": "central_bank",
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The FOMC rate decision and projections are scheduled for 9 December 2026.",
+      "text": "The next FOMC rate decision and projections are on 9 December 2026.",
       "source_ids": [
        "gev:2026-12-09-fomc-rate-decision-and-projections"
       ],
-      "kind": "central_bank",
+      "kind": "data",
       "ok": true,
       "problems": []
      }
     ],
     "week_change": [
      {
-      "text": "Gold fell 4.6% over the week from 4074.8999 to 3887.6001.",
+      "text": "Gold fell from 4074.9 on 6 November to 3887.6, down 4.6%, and silver fell from 51.803 to 48.65, down 6.09%.",
       "source_ids": [
-       "s:gl.gold"
-      ],
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "Silver fell 6.09% over the week from 51.803 to 48.65.",
-      "source_ids": [
+       "s:gl.gold",
        "s:gl.silver"
       ],
       "ok": true,
       "problems": []
      },
      {
-      "text": "The US 2-year yield rose 40 bp over the week to 4.86%, and the US 10-year real yield rose 26 bp to 2.86%.",
+      "text": "The US 10-year real yield rose 26 bp from 2.6% to 2.86%, and the Geopolitical Risk index fell from 194.433 to 113.946.",
       "source_ids": [
-       "s:us.ust2y",
-       "s:us.tips10"
-      ],
-      "ok": true,
-      "problems": []
-     },
-     {
-      "text": "The VIX fell 9.48 over the week to 18.7.",
-      "source_ids": [
-       "s:us.vix"
+       "s:us.tips10",
+       "s:gl.gpr"
       ],
       "ok": true,
       "problems": []
@@ -2536,7 +2240,7 @@
      {
       "event_id": "ev:2026-12-09-global-fomc-decision",
       "date": "2026-12-09",
-      "days_to": 25,
+      "days_to": 24,
       "title": "FOMC decision",
       "importance": 3,
       "status": "confirmed",
@@ -2547,7 +2251,7 @@
      {
       "event_id": "gev:2026-12-09-fomc-rate-decision-and-projections",
       "date": "2026-12-09",
-      "days_to": 25,
+      "days_to": 24,
       "title": "FOMC rate decision and projections",
       "importance": 3,
       "status": null,
@@ -2741,14 +2445,6 @@
    "date": "2026-11-06",
    "source": "BCB Focus (Olinda)"
   },
-  "disp:3": {
-   "label": "Banxico survey: 2026 inflation",
-   "url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
-   "kind": "survey_dispersion",
-   "country": "MX",
-   "date": "2026-10-01",
-   "source": "Banxico SIE (public chart data)"
-  },
   "em:5": {
    "label": "em-macro: 5. Findings",
    "url": "https://github.com/EthanC100/em-macro#readme",
@@ -2941,14 +2637,6 @@
    "date": "2026-10-27",
    "source": null
   },
-  "fc:BR.gdp.2026": {
-   "label": "Real GDP growth",
-   "url": null,
-   "kind": "consensus",
-   "country": "BR",
-   "date": "2026-11-06",
-   "source": "BCB Focus"
-  },
   "fc:BR.gdp.2027": {
    "label": "Real GDP growth",
    "url": null,
@@ -3109,6 +2797,14 @@
    "date": "2026-11-12",
    "source": "Banco Central do Brasil (press notes)"
   },
+  "h:26ae2bce": {
+   "label": "Thousands take to the streets in France for the fifth Saturday in a row : Police use tear gas and charge at crowds during anti - government protests",
+   "url": "https://www.dailymail.com/news/article-16292889/Thousands-France-Police-tear-gas-crowds-government-protests.html",
+   "kind": "headline",
+   "country": "FR",
+   "date": "2026-11-14",
+   "source": "dailymail.com"
+  },
   "h:37408d78": {
    "label": "Anuncio de la Comisión de Cambios: El FMI ratifica la solidez de los fundamentos macroeconómicos de México y la continuidad de la Línea de Crédito Flexible",
    "url": "https://www.gob.mx/shcp/prensa/anuncio-de-la-comision-de-cambios-440675?idiom=es",
@@ -3149,30 +2845,6 @@
    "date": "2026-11-02",
    "source": "USTR (press releases)"
   },
-  "h:8875afa2": {
-   "label": "Comunicado No. 95 La UIF da cumplimiento a resolución judicial sobre acceso parcial de recursos a ex funcionario del gobierno de Sinaloa",
-   "url": "https://www.gob.mx/shcp/prensa/comunicado-no-95-la-uif-da-cumplimiento-a-resolucion-judicial-sobre-acceso-parcial-de-recursos-a-ex-funcionario-del-gobierno-de-sinaloa?idiom=es",
-   "kind": "headline",
-   "country": "MX",
-   "date": "2026-11-13",
-   "source": "SHCP (press releases)"
-  },
-  "h:ddeaf42c": {
-   "label": "Compte rendu intégral de la première séance du mardi 10 novembre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270059.asp",
-   "kind": "headline",
-   "country": "FR",
-   "date": "2026-11-10",
-   "source": "Assemblée nationale (sitting reports)"
-  },
-  "h:e5f2f09a": {
-   "label": "Compte rendu intégral de la deuxième séance du lundi 09 novembre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270058.asp",
-   "kind": "headline",
-   "country": "FR",
-   "date": "2026-11-09",
-   "source": "Assemblée nationale (sitting reports)"
-  },
   "h:f9b5c139": {
    "label": "BC divulga Ata da 282ª reunião do Copom",
    "url": "https://www.bcb.gov.br/detalhenoticia/21312/nota",
@@ -3180,14 +2852,6 @@
    "country": "BR",
    "date": "2026-11-10",
    "source": "Banco Central do Brasil (press notes)"
-  },
-  "h:fc68d209": {
-   "label": "Compte rendu intégral de la première séance du jeudi 12 novembre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270060.asp",
-   "kind": "headline",
-   "country": "FR",
-   "date": "2026-11-12",
-   "source": "Assemblée nationale (sitting reports)"
   },
   "ks:KXBRRATECUT-27JAN01-E5": {
    "label": "Number of Brazil rate cuts in 2026?: Exactly 5 cuts",
@@ -3268,30 +2932,6 @@
    "country": "MX",
    "date": "2026-11-14T02:47:58Z",
    "source": "Kalshi"
-  },
-  "pm:1243901": {
-   "label": "Will Brazil’s Annual Inflation in 2026 be between 5.00% and 5.49%?",
-   "url": "https://polymarket.com/event/brazil-annual-inflation-2026",
-   "kind": "market",
-   "country": "BR",
-   "date": "2026-11-14T02:47:40Z",
-   "source": "Polymarket"
-  },
-  "pm:1353323": {
-   "label": "Will Mexico’s 2026 Annual Inflation be between 3.00% and 3.49%?",
-   "url": "https://polymarket.com/event/mexico-annual-inflation-2026",
-   "kind": "market",
-   "country": "MX",
-   "date": "2026-11-14T02:47:40Z",
-   "source": "Polymarket"
-  },
-  "pm:1544795": {
-   "label": "Alexandre de Moraes out as Brazil Supreme Court Justice?",
-   "url": "https://polymarket.com/event/alexandre-de-moraes-out-as-brazil-supreme-court-justice",
-   "kind": "market",
-   "country": "BR",
-   "date": "2026-11-14T02:47:40Z",
-   "source": "Polymarket"
   },
   "pm:1722538": {
    "label": "Will France pass a national budget by December 31?",
@@ -3418,6 +3058,14 @@
    "url": "https://www.hcfp.fr/liste-avis/avis-ndeg2026-5-lois-de-finances-2027",
    "kind": "policy",
    "country": "FR",
+   "date": null,
+   "source": null
+  },
+  "pol:mx-judicial-reform": {
+   "label": "Judicial reform and the second judicial election",
+   "url": "https://imf.org/en/News/Articles/2024/10/15/mcs-mexico-staff-concluding-statement-of-the-2024-aiv-mission",
+   "kind": "policy",
+   "country": "MX",
    "date": null,
    "source": null
   },
@@ -3719,10 +3367,10 @@
   }
  },
  "cost": {
-  "today_usd": 0.0038,
-  "month_usd": 6.0722,
+  "today_usd": 0.0045,
+  "month_usd": 6.0767,
   "cap_usd": 15.0,
   "month": "2026-11",
-  "expected_month_usd": 9.85
+  "expected_month_usd": 9.93
  }
 }
