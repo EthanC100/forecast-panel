@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T02:52:19Z",
+ "generated_at": "2026-11-16T22:20:26Z",
  "gauges": [
   {
    "id": "a",
@@ -989,12 +989,12 @@
     {
      "label": "Focus: Selic for the next Copom (R8/2026)",
      "country": "BR",
-     "value": 0.2073,
+     "value": 0.1586,
      "unit": "pp (sd)",
      "median": 13.75,
      "respondents": 144.0,
-     "as_of": "2026-11-06",
-     "percentile": 97.5,
+     "as_of": "2026-11-13",
+     "percentile": 95.0,
      "percentile_basis": "vs the last survey before each of the previous 40 meetings",
      "extreme": true,
      "event": {
@@ -1010,8 +1010,8 @@
       "source": "BCB Focus (Olinda)",
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
-      "as_of": "2026-11-06",
-      "fetched_at": "2026-11-14T02:44:55Z",
+      "as_of": "2026-11-13",
+      "fetched_at": "2026-11-16T22:20:19Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1023,12 +1023,12 @@
     {
      "label": "Focus: 2027 primary balance",
      "country": "BR",
-     "value": 0.2937,
+     "value": 0.2882,
      "unit": "pp of GDP (sd)",
      "median": -0.4,
-     "respondents": 62,
-     "as_of": "2026-11-06",
-     "percentile": 30.8,
+     "respondents": 61,
+     "as_of": "2026-11-13",
+     "percentile": 28.4,
      "percentile_basis": "vs readings at the same horizon over 10 years",
      "extreme": false,
      "scenarios": [
@@ -1042,8 +1042,8 @@
       "source": "BCB Focus (Olinda)",
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-      "as_of": "2026-11-06",
-      "fetched_at": "2026-11-14T02:44:52Z",
+      "as_of": "2026-11-13",
+      "fetched_at": "2026-11-16T22:20:15Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1117,9 +1117,9 @@
      "year": 2026,
      "measure": "Primary balance (official: central government; Focus: consolidated public sector)",
      "official": 0.25,
-     "independent_median": -0.5,
+     "independent_median": -0.49,
      "n_independent": 1,
-     "gap": 0.75,
+     "gap": 0.74,
      "verified": true
     },
     {
@@ -1378,7 +1378,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 52,
+   "days": 50,
    "score": 0.75,
    "signals": [
     {
@@ -1400,7 +1400,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 13,
+   "days": 11,
    "score": 0.417,
    "signals": [
     {
@@ -1423,7 +1423,7 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 26,
+   "days": 24,
    "score": 0.167,
    "signals": [
     {
@@ -1440,7 +1440,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 162,
+   "days": 160,
    "score": 0,
    "signals": []
   }

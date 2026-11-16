@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T02:52:15Z",
+ "generated_at": "2026-11-16T22:20:22Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -372,21 +372,6 @@
  ],
  "next_catalysts": [
   {
-   "date": "2026-11-15",
-   "country": "MX",
-   "type": "fiscal",
-   "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
-   "importance": 2,
-   "status": "confirmed",
-   "source": "https://www.ppef.hacienda.gob.mx/",
-   "query": "Mexico 2027 budget Chamber of Deputies",
-   "note": "Constitution art. 74: the spending budget is approved by 15 November; the 2027 package was presented on 8 Sep 2026.",
-   "origin": "manual",
-   "id": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
-   "attention": null,
-   "under_attended": false
-  },
-  {
    "date": "2026-11-20",
    "country": "BR",
    "type": "fiscal",
@@ -428,6 +413,21 @@
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Standard\" France rating"
    },
+   "under_attended": false
+  },
+  {
+   "date": "2026-11-30",
+   "country": "MX",
+   "type": "trade",
+   "title": "USMCA: US-Mexico bilateral round (next round not announced)",
+   "importance": 2,
+   "status": "estimated",
+   "source": "https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement",
+   "query": "(USMCA OR T-MEC) Mexico",
+   "note": "Placeholder for the next bilateral round; replace with the announced date.",
+   "origin": "manual",
+   "id": "2026-11-30-mx-usmca-us-mexico-bilateral-round-next-round-not-a",
+   "attention": null,
    "under_attended": false
   }
  ],
@@ -1139,9 +1139,9 @@
        "name": "Focus survey median",
        "auto": "br.focus.primary",
        "note": "Focus measures the consolidated public sector, a broader perimeter than the target",
-       "value": -0.5,
+       "value": -0.49,
        "source": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-       "as_of": "2026-11-06",
+       "as_of": "2026-11-13",
        "source_label": "BCB Focus (Olinda)",
        "verified": true
       },
@@ -1152,7 +1152,7 @@
        "note": "fill in"
       }
      ],
-     "gap": 0.75
+     "gap": 0.74
     },
     {
      "metric": "Primary balance (official: central government; Focus: consolidated public sector)",
@@ -1170,7 +1170,7 @@
        "auto": "br.focus.primary",
        "value": -0.4,
        "source": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-       "as_of": "2026-11-06",
+       "as_of": "2026-11-13",
        "source_label": "BCB Focus (Olinda)",
        "verified": true
       }
@@ -1186,8 +1186,8 @@
       "source": "BCB Focus (Olinda)",
       "source_id": "ExpectativasMercadoAnuais/IPCA/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-      "as_of": "2026-11-06",
-      "fetched_at": "2026-11-14T02:44:49Z",
+      "as_of": "2026-11-13",
+      "fetched_at": "2026-11-16T22:20:10Z",
       "frequency": "daily (business days)",
       "series": "br.focus.ipca",
       "evidence": {
@@ -1199,21 +1199,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": 5.2195,
-       "sd": 0.1445,
+       "median": 5.1082,
+       "sd": 0.1461,
        "respondents": 146,
-       "min": 4.9102,
-       "max": 5.9168,
-       "sd_pct_10y": 11.4
+       "min": 4.7481,
+       "max": 5.8005,
+       "sd_pct_10y": 11.6
       },
       {
        "ref": "2027",
-       "median": 4.9005,
-       "sd": 0.6093,
+       "median": 5.0,
+       "sd": 0.5992,
        "respondents": 146,
-       "min": 3.2483,
+       "min": 3.5046,
        "max": 6.46,
-       "sd_pct_10y": 97.4
+       "sd_pct_10y": 96.1
       }
      ]
     },
@@ -1224,8 +1224,8 @@
       "source": "BCB Focus (Olinda)",
       "source_id": "ExpectativasMercadoAnuais/Selic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-      "as_of": "2026-11-06",
-      "fetched_at": "2026-11-14T02:44:50Z",
+      "as_of": "2026-11-13",
+      "fetched_at": "2026-11-16T22:20:11Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic",
       "evidence": {
@@ -1238,20 +1238,20 @@
       {
        "ref": "2026",
        "median": 13.75,
-       "sd": 0.2073,
+       "sd": 0.1586,
        "respondents": 144,
        "min": 13.25,
-       "max": 14.0,
-       "sd_pct_10y": 27.3
+       "max": 13.75,
+       "sd_pct_10y": 19.2
       },
       {
        "ref": "2027",
-       "median": 12.5,
-       "sd": 0.9087,
+       "median": 12.75,
+       "sd": 0.9142,
        "respondents": 144,
        "min": 10.25,
        "max": 15.0,
-       "sd_pct_10y": 70.5
+       "sd_pct_10y": 71.3
       }
      ]
     },
@@ -1262,8 +1262,8 @@
       "source": "BCB Focus (Olinda)",
       "source_id": "ExpectativasMercadoAnuais/Câmbio/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-      "as_of": "2026-11-06",
-      "fetched_at": "2026-11-14T02:44:51Z",
+      "as_of": "2026-11-13",
+      "fetched_at": "2026-11-16T22:20:13Z",
       "frequency": "daily (business days)",
       "series": "br.focus.brl",
       "evidence": {
@@ -1275,21 +1275,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": 5.35,
-       "sd": 0.1753,
-       "respondents": 122,
+       "median": 5.4,
+       "sd": 0.1709,
+       "respondents": 121,
        "min": 4.9,
        "max": 6.0,
-       "sd_pct_10y": 66.6
+       "sd_pct_10y": 64.3
       },
       {
        "ref": "2027",
-       "median": 5.4,
-       "sd": 0.2242,
-       "respondents": 121,
+       "median": 5.45,
+       "sd": 0.2285,
+       "respondents": 120,
        "min": 4.7,
-       "max": 6.0,
-       "sd_pct_10y": 50.6
+       "max": 6.3,
+       "sd_pct_10y": 53.6
       }
      ]
     },
@@ -1300,8 +1300,8 @@
       "source": "BCB Focus (Olinda)",
       "source_id": "ExpectativasMercadoAnuais/PIB Total/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-      "as_of": "2026-11-06",
-      "fetched_at": "2026-11-14T02:44:51Z",
+      "as_of": "2026-11-13",
+      "fetched_at": "2026-11-16T22:20:14Z",
       "frequency": "daily (business days)",
       "series": "br.focus.gdp",
       "evidence": {
@@ -1313,21 +1313,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": 1.7546,
-       "sd": 0.1659,
-       "respondents": 118,
-       "min": 1.0,
+       "median": 1.7215,
+       "sd": 0.1519,
+       "respondents": 119,
+       "min": 1.2515,
        "max": 2.2825,
-       "sd_pct_10y": 13.9
+       "sd_pct_10y": 10.0
       },
       {
        "ref": "2027",
-       "median": 1.1513,
-       "sd": 0.4705,
-       "respondents": 117,
-       "min": -0.2198,
+       "median": 1.0224,
+       "sd": 0.4791,
+       "respondents": 118,
+       "min": -0.3315,
        "max": 2.3755,
-       "sd_pct_10y": 49.9
+       "sd_pct_10y": 50.7
       }
      ]
     },
@@ -1338,8 +1338,8 @@
       "source": "BCB Focus (Olinda)",
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
-      "as_of": "2026-11-06",
-      "fetched_at": "2026-11-14T02:44:52Z",
+      "as_of": "2026-11-13",
+      "fetched_at": "2026-11-16T22:20:15Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1351,21 +1351,21 @@
      "rows": [
       {
        "ref": "2026",
-       "median": -0.5,
-       "sd": 0.1066,
-       "respondents": 63,
+       "median": -0.49,
+       "sd": 0.1165,
+       "respondents": 62,
        "min": -0.7,
-       "max": -0.1902,
-       "sd_pct_10y": 0.2
+       "max": -0.15,
+       "sd_pct_10y": 0.7
       },
       {
        "ref": "2027",
        "median": -0.4,
-       "sd": 0.2937,
-       "respondents": 62,
+       "sd": 0.2882,
+       "respondents": 61,
        "min": -1.0,
        "max": 0.5,
-       "sd_pct_10y": 30.8
+       "sd_pct_10y": 28.4
       }
      ]
     }
@@ -2460,21 +2460,6 @@
    ],
    "events": [
     {
-     "date": "2026-11-15",
-     "country": "MX",
-     "type": "fiscal",
-     "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
-     "importance": 2,
-     "status": "confirmed",
-     "source": "https://www.ppef.hacienda.gob.mx/",
-     "query": "Mexico 2027 budget Chamber of Deputies",
-     "note": "Constitution art. 74: the spending budget is approved by 15 November; the 2027 package was presented on 8 Sep 2026.",
-     "origin": "manual",
-     "id": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
-     "attention": null,
-     "under_attended": false
-    },
-    {
      "date": "2026-11-30",
      "country": "MX",
      "type": "trade",
@@ -2709,6 +2694,21 @@
       "query": "Banxico survey analysts"
      },
      "under_attended": false
+    },
+    {
+     "date": "2027-04-04",
+     "country": "MX",
+     "type": "election",
+     "title": "Midterm campaigns begin",
+     "importance": 2,
+     "status": "estimated",
+     "source": "https://www.ine.mx/",
+     "query": "Mexico \"midterm elections\"",
+     "note": "2021 campaigns began 4 April; confirm in the INE calendar.",
+     "origin": "manual",
+     "id": "2027-04-04-mx-midterm-campaigns-begin",
+     "attention": null,
+     "under_attended": false
     }
    ]
   }
@@ -2798,8 +2798,8 @@
     "country": "BR",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-11-14T02:44:48Z",
-    "last_success": "2026-11-14T02:44:48Z",
+    "last_attempt": "2026-11-16T22:20:09Z",
+    "last_success": "2026-11-16T22:20:09Z",
     "n_series": 8,
     "name": "BCB Focus survey (Olinda)",
     "note": null,
@@ -3283,7 +3283,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-14T02:52:12Z"
+  "updated_at": "2026-11-16T22:20:19Z"
  },
  "series_index": [
   "br.cot.brl",
