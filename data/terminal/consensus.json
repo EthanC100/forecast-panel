@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:20:24Z",
+ "generated_at": "2026-11-17T04:44:53Z",
  "year": 2026,
  "forecasts": {
   "FR": [
@@ -1201,10 +1201,7 @@
     "next": {
      "event": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
      "label": "Chamber deadline for the 2027 spending budget",
-     "date": "2026-11-15",
-     "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
-     "status": "confirmed",
-     "importance": 2
+     "missing_event": true
     },
     "consensus": {
      "ref": "fc:MX.balance.2027",
@@ -1317,10 +1314,7 @@
     "next": {
      "event": "2026-11-15-mx-chamber-of-deputies-deadline-to-approve-the-2027",
      "label": "Chamber deadline for the 2027 spending budget",
-     "date": "2026-11-15",
-     "title": "Chamber of Deputies deadline to approve the 2027 spending budget (PEF)",
-     "status": "confirmed",
-     "importance": 2
+     "missing_event": true
     },
     "consensus": null,
     "view": {
