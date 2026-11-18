@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T04:44:55Z",
+ "generated_at": "2026-11-18T03:57:06Z",
  "gauges": [
   {
    "id": "a",
@@ -1011,7 +1011,7 @@
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
       "as_of": "2026-11-13",
-      "fetched_at": "2026-11-17T04:30:16Z",
+      "fetched_at": "2026-11-18T03:43:20Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1043,7 +1043,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-11-13",
-      "fetched_at": "2026-11-17T04:30:13Z",
+      "fetched_at": "2026-11-18T03:43:18Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-10-01",
-      "fetched_at": "2026-11-17T04:31:18Z",
+      "fetched_at": "2026-11-18T03:45:02Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1188,7 +1188,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-10",
-      "fetched_at": "2026-11-17T04:32:11Z",
+      "fetched_at": "2026-11-18T03:45:47Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1218,7 +1218,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-10",
-      "fetched_at": "2026-11-17T04:32:14Z",
+      "fetched_at": "2026-11-18T03:45:56Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1373,9 +1373,9 @@
      "scenarios": [
       "br-fiscal-2027"
      ],
-     "distance": "20-day move in DI Jan-29 (proxy) is 221 bp, percentile 99.2 over 3 years",
+     "distance": "20-day move in DI Jan-29 (proxy) is 196 bp, percentile 98.3 over 3 years",
      "near": true,
-     "percentile": 99.2,
+     "percentile": 98.3,
      "why": "When rates gap, the Treasury cuts fixed-rate supply and leans on floating (LFT) issuance; a move above the 90th percentile is the zone where that has happened."
     }
    ]
@@ -1387,7 +1387,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 49,
+   "days": 48,
    "score": 0.75,
    "signals": [
     {
@@ -1398,7 +1398,7 @@
     },
     {
      "signal": "forced-flow threshold",
-     "detail": "Auction stress: Tesouro shrinks or cancels fixed-rate auctions in volatile weeks: 20-day move in DI Jan-29 (proxy) is 221 bp, percentile 99.2 over 3 years",
+     "detail": "Auction stress: Tesouro shrinks or cancels fixed-rate auctions in volatile weeks: 20-day move in DI Jan-29 (proxy) is 196 bp, percentile 98.3 over 3 years",
      "strength": 1.0,
      "badge": "context"
     }
@@ -1409,13 +1409,13 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 10,
-   "score": 0.492,
+   "days": 9,
+   "score": 0.458,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 12% vs base rate 0%",
-     "strength": 0.38333333333333336,
+     "detail": "market 10% vs base rate 0%",
+     "strength": 0.3166666666666667,
      "badge": "untested",
      "hidden_market": true
     },
@@ -1432,13 +1432,13 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 23,
-   "score": 0.108,
+   "days": 22,
+   "score": 0.158,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 44% vs base rate 50%",
-     "strength": 0.21666666666666667,
+     "detail": "market 40% vs base rate 50%",
+     "strength": 0.3166666666666666,
      "badge": "untested",
      "hidden_market": true
     }
@@ -1449,7 +1449,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 159,
+   "days": 158,
    "score": 0,
    "signals": []
   }

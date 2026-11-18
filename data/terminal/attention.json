@@ -97,9 +97,16 @@
      1078311.0,
      5.564257435934531e-06,
      2.998982994518669e-06
+    ],
+    [
+     "2026-11-18",
+     5.0,
+     1002148.0,
+     4.9892830200728834e-06,
+     2.94653177268299e-06
     ]
    ],
-   "last_success": "2026-11-17T04:34:43Z"
+   "last_success": "2026-11-18T03:50:23Z"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -151,10 +158,16 @@
      1407341.0,
      5.684478743957577e-06,
      5.323727231528639e-06
+    ],
+    [
+     "2026-11-18",
+     8.0,
+     1002148.0,
+     7.982852832116614e-06,
+     5.4093045976120555e-06
     ]
    ],
-   "last_success": "2026-11-13T02:46:57Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-18T03:51:54Z"
   },
   "(Copom OR \"Selic rate\")": {
    "country": "BR",
@@ -206,10 +219,16 @@
      1407341.0,
      7.602990320043259e-05,
      9.285270005435374e-05
+    ],
+    [
+     "2026-11-18",
+     84.0,
+     1002148.0,
+     8.381995473722444e-05,
+     9.32995097872681e-05
     ]
    ],
-   "last_success": "2026-11-13T02:47:50Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-18T03:52:19Z"
   },
   "Banxico \"interest rate\"": {
    "country": "MX",
@@ -315,9 +334,16 @@
      1078311.0,
      1.8547524786448436e-06,
      1.4666559170273784e-06
+    ],
+    [
+     "2026-11-18",
+     2.0,
+     1002148.0,
+     1.9957132080291535e-06,
+     1.473265886341495e-06
     ]
    ],
-   "last_success": "2026-11-17T04:34:24Z"
+   "last_success": "2026-11-18T03:49:11Z"
   },
   "\"S&P\" France rating": {
    "country": "FR",
@@ -334,7 +360,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -430,9 +456,16 @@
      1078311.0,
      7.23353466671489e-05,
      4.211710424418919e-05
+    ],
+    [
+     "2026-11-18",
+     72.0,
+     1002148.0,
+     7.184567548904952e-05,
+     4.195509419611302e-05
     ]
    ],
-   "last_success": "2026-11-17T04:35:28Z"
+   "last_success": "2026-11-18T03:50:45Z"
   },
   "Mexico 2027 budget Chamber of Deputies": {
    "country": "MX",
@@ -445,6 +478,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-17T04:44:49Z",
+ "updated_at": "2026-11-18T03:56:59Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
