@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:57:01Z",
+ "generated_at": "2026-11-19T03:45:55Z",
  "questions": {
   "n_resolved": 0,
   "n_ai_only": 0,
@@ -353,7 +353,7 @@
  },
  "trades": {
   "start_date": "2026-10-29",
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-19",
   "closed": {
    "n": 0,
    "total_r": null,
@@ -391,7 +391,7 @@
     "n_months": 1
    },
    "buy_and_hold": {
-    "equal_weight_return_pct": -0.844,
+    "equal_weight_return_pct": -1.281,
     "n_instruments": 10,
     "rows": [
      {
@@ -399,18 +399,18 @@
       "name": "USD/BRL",
       "description": "long USD",
       "from": "2026-10-29",
-      "to": "2026-11-17",
-      "pnl_usd": 6578.36,
-      "return_pct": 6.58
+      "to": "2026-11-18",
+      "pnl_usd": 6952.27,
+      "return_pct": 6.95
      },
      {
       "code": "USDMXN",
       "name": "USD/MXN",
       "description": "long USD",
       "from": "2026-10-29",
-      "to": "2026-11-17",
-      "pnl_usd": -2010.14,
-      "return_pct": -2.01
+      "to": "2026-11-18",
+      "pnl_usd": -900.38,
+      "return_pct": -0.9
      },
      {
       "code": "EURUSD",
@@ -431,17 +431,17 @@
       "name": "Brazil 10-year proxy (longest Tesouro Prefixado)",
       "description": "long the bond",
       "from": "2026-10-29",
-      "to": "2026-11-16",
-      "pnl_usd": -1155.0,
-      "return_pct": -1.16
+      "to": "2026-11-17",
+      "pnl_usd": -1595.0,
+      "return_pct": -1.59
      },
      {
       "code": "DI27",
       "name": "DI Jan-27 (proxy until B3 is reachable)",
       "description": "long the bond",
       "from": "2026-10-29",
-      "to": "2026-11-16",
-      "pnl_usd": -16.16,
+      "to": "2026-11-17",
+      "pnl_usd": -19.39,
       "return_pct": -0.02
      },
      {
@@ -449,18 +449,18 @@
       "name": "DI Jan-29 (proxy until B3 is reachable)",
       "description": "long the bond",
       "from": "2026-10-29",
-      "to": "2026-11-16",
-      "pnl_usd": 94.87,
-      "return_pct": 0.09
+      "to": "2026-11-17",
+      "pnl_usd": -341.53,
+      "return_pct": -0.34
      },
      {
       "code": "DI31",
       "name": "DI Jan-31 (proxy until B3 is reachable)",
       "description": "long the bond",
       "from": "2026-10-29",
-      "to": "2026-11-16",
-      "pnl_usd": -36.28,
-      "return_pct": -0.04
+      "to": "2026-11-17",
+      "pnl_usd": -580.42,
+      "return_pct": -0.58
      },
      {
       "code": "MX10Y",
@@ -472,27 +472,27 @@
       "name": "US 10-year Treasury",
       "description": "long the bond",
       "from": "2026-10-29",
-      "to": "2026-11-16",
-      "pnl_usd": -1120.0,
-      "return_pct": -1.12
+      "to": "2026-11-17",
+      "pnl_usd": -960.0,
+      "return_pct": -0.96
      },
      {
       "code": "XAUUSD",
       "name": "Gold (XAU/USD)",
       "description": "long gold",
       "from": "2026-10-29",
-      "to": "2026-11-17",
-      "pnl_usd": -2924.69,
-      "return_pct": -2.92
+      "to": "2026-11-18",
+      "pnl_usd": -5044.1,
+      "return_pct": -5.04
      },
      {
       "code": "XAGUSD",
       "name": "Silver (XAG/USD)",
       "description": "long silver",
       "from": "2026-10-29",
-      "to": "2026-11-17",
-      "pnl_usd": -6610.69,
-      "return_pct": -6.61
+      "to": "2026-11-18",
+      "pnl_usd": -9096.49,
+      "return_pct": -9.1
      }
     ]
    },
