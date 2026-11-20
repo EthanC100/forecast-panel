@@ -15,11 +15,11 @@
  "key": [
   "date"
  ],
- "fetched_at": "2026-11-19T03:32:08Z",
- "updated_at": "2026-11-19T03:32:08Z",
- "n": 5461,
+ "fetched_at": "2026-11-20T03:20:07Z",
+ "updated_at": "2026-11-20T03:20:07Z",
+ "n": 5462,
  "first": "2004-12-31",
- "last": "2026-11-17",
+ "last": "2026-11-18",
  "history": [
   ["2004-12-31",9.1,"2045-05-15","Tesouro IPCA+ com Juros Semestrais"],
   ["2005-01-03",9.1,"2045-05-15","Tesouro IPCA+ com Juros Semestrais"],
@@ -5481,6 +5481,7 @@
   ["2026-11-12",7.57,"2060-08-15","Tesouro IPCA+ com Juros Semestrais"],
   ["2026-11-13",7.6,"2060-08-15","Tesouro IPCA+ com Juros Semestrais"],
   ["2026-11-16",7.6,"2060-08-15","Tesouro IPCA+ com Juros Semestrais"],
-  ["2026-11-17",7.57,"2060-08-15","Tesouro IPCA+ com Juros Semestrais"]
+  ["2026-11-17",7.57,"2060-08-15","Tesouro IPCA+ com Juros Semestrais"],
+  ["2026-11-18",7.59,"2060-08-15","Tesouro IPCA+ com Juros Semestrais"]
  ]
 }
