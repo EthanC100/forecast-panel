@@ -111,10 +111,16 @@
      856091.0,
      2.3362002403950047e-06,
      2.955525494969464e-06
+    ],
+    [
+     "2026-11-21",
+     2.0,
+     577900.0,
+     3.460806367883717e-06,
+     2.9983636929872804e-06
     ]
    ],
-   "last_success": "2026-11-19T03:38:52Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-21T03:18:32Z"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -173,10 +179,16 @@
      1002148.0,
      7.982852832116614e-06,
      5.4093045976120555e-06
+    ],
+    [
+     "2026-11-21",
+     5.0,
+     577900.0,
+     8.652015919709293e-06,
+     5.441474850236175e-06
     ]
    ],
-   "last_success": "2026-11-18T03:51:54Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-21T03:24:18Z"
   },
   "(Copom OR \"Selic rate\")": {
    "country": "BR",
@@ -237,7 +249,8 @@
      9.32995097872681e-05
     ]
    ],
-   "last_success": "2026-11-18T03:52:19Z"
+   "last_success": "2026-11-18T03:52:19Z",
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "Banxico \"interest rate\"": {
    "country": "MX",
@@ -489,6 +502,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-20T03:28:31Z",
+ "updated_at": "2026-11-21T03:28:59Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
