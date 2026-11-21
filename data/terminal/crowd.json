@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T03:28:37Z",
+ "generated_at": "2026-11-21T01:44:35Z",
  "gauges": [
   {
    "id": "a",
@@ -1166,10 +1166,10 @@
     {
      "country": "BR",
      "label": "BRL futures, leveraged funds",
-     "as_of": "2026-11-10",
-     "net": 30780,
-     "net_pct_oi": 27.7,
-     "percentile": 100.0,
+     "as_of": "2026-11-17",
+     "net": 27429,
+     "net_pct_oi": 25.0,
+     "percentile": 99.4,
      "extreme": true,
      "crowded": "long BRL",
      "catalysts_30d": [
@@ -1187,8 +1187,8 @@
       "source": "CFTC Commitments of Traders",
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-      "as_of": "2026-11-10",
-      "fetched_at": "2026-11-20T03:22:20Z",
+      "as_of": "2026-11-17",
+      "fetched_at": "2026-11-21T01:44:24Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1200,10 +1200,10 @@
     {
      "country": "MX",
      "label": "MXN futures, leveraged funds",
-     "as_of": "2026-11-10",
-     "net": 68019,
-     "net_pct_oi": 24.2,
-     "percentile": 77.6,
+     "as_of": "2026-11-17",
+     "net": 62245,
+     "net_pct_oi": 22.3,
+     "percentile": 69.9,
      "extreme": false,
      "crowded": null,
      "catalysts_30d": [
@@ -1217,8 +1217,8 @@
       "source": "CFTC Commitments of Traders",
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-      "as_of": "2026-11-10",
-      "fetched_at": "2026-11-20T03:22:23Z",
+      "as_of": "2026-11-17",
+      "fetched_at": "2026-11-21T01:44:26Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1387,7 +1387,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 46,
+   "days": 45,
    "score": 0.75,
    "signals": [
     {
@@ -1409,7 +1409,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 7,
+   "days": 6,
    "score": 0.458,
    "signals": [
     {
@@ -1432,7 +1432,7 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 20,
+   "days": 19,
    "score": 0.158,
    "signals": [
     {
@@ -1449,7 +1449,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 156,
+   "days": 155,
    "score": 0,
    "signals": []
   }

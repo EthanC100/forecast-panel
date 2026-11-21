@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T03:28:33Z",
+ "generated_at": "2026-11-21T01:44:30Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -372,28 +372,6 @@
  ],
  "next_catalysts": [
   {
-   "date": "2026-11-20",
-   "country": "BR",
-   "type": "fiscal",
-   "title": "Bimonthly revenue and spending report (RARDP)",
-   "importance": 2,
-   "status": "estimated",
-   "source": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/relatorios-de-avaliacao",
-   "query": "Brazil \"primary deficit\"",
-   "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
-   "origin": "rule:rardp",
-   "id": "2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
-   "attention": {
-    "score": 1.355,
-    "share_30d": 1.9957132080291535e-06,
-    "share_12m": 1.473265886341495e-06,
-    "as_of": "2026-11-18",
-    "source": "GDELT DOC 2.0 (timelinevolraw)",
-    "query": "Brazil \"primary deficit\""
-   },
-   "under_attended": false
-  },
-  {
    "date": "2026-11-27",
    "country": "FR",
    "type": "ratings",
@@ -429,6 +407,33 @@
    "id": "2026-11-30-mx-usmca-us-mexico-bilateral-round-next-round-not-a",
    "attention": null,
    "under_attended": false
+  },
+  {
+   "date": "2026-12-09",
+   "country": "BR",
+   "type": "rates",
+   "title": "Copom decision (8-9 Dec)",
+   "importance": 3,
+   "status": "confirmed",
+   "source": "https://www.bcb.gov.br/en/monetarypolicy/copomcalendar",
+   "query": "(Copom OR \"Selic rate\")",
+   "note": "",
+   "origin": "manual",
+   "id": "2026-12-09-br-copom-decision-8-9-dec",
+   "attention": {
+    "score": 0.898,
+    "share_30d": 8.381995473722444e-05,
+    "share_12m": 9.32995097872681e-05,
+    "as_of": "2026-11-18",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "(Copom OR \"Selic rate\")"
+   },
+   "under_attended": false,
+   "base_rate": {
+    "text": "Copom changed the rate at 17 of its last 24 scheduled decisions (10 cuts, 7 hikes) since 2023-11-01; last: Selic target: cut -25.0bp to 13.75% on 2026-09-16 (em-macro)",
+    "changed": 17,
+    "of": 24
+   }
   }
  ],
  "countries": {
@@ -1376,8 +1381,8 @@
      "source": "CFTC Commitments of Traders",
      "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-     "as_of": "2026-11-10",
-     "fetched_at": "2026-11-20T03:22:20Z",
+     "as_of": "2026-11-17",
+     "fetched_at": "2026-11-21T01:44:24Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "br.cot.brl",
      "evidence": {
@@ -1385,28 +1390,28 @@
       "reason": "Crowd lab test (e): leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)"
      }
     },
-    "as_of": "2026-11-10",
+    "as_of": "2026-11-17",
     "rows": [
      {
       "label": "Leveraged funds, net",
-      "value": 30780,
-      "pct_3y": 99.4,
+      "value": 27429,
+      "pct_3y": 98.1,
       "n_3y": 157
      },
      {
       "label": "Asset managers, net",
-      "value": 39980,
-      "pct_3y": 41.4,
+      "value": 31278,
+      "pct_3y": 35.0,
       "n_3y": 157
      },
      {
       "label": "Non-commercial (legacy), net",
-      "value": 59214,
-      "pct_3y": 89.2,
+      "value": 49566,
+      "pct_3y": 77.1,
       "n_3y": 157
      }
     ],
-    "open_interest": 110985
+    "open_interest": 109912
    },
    "markets": [
     {
@@ -1615,28 +1620,6 @@
     }
    ],
    "events": [
-    {
-     "date": "2026-11-20",
-     "country": "BR",
-     "type": "fiscal",
-     "title": "Bimonthly revenue and spending report (RARDP)",
-     "importance": 2,
-     "status": "estimated",
-     "source": "https://www.gov.br/planejamento/pt-br/assuntos/orcamento/relatorios-de-avaliacao",
-     "query": "Brazil \"primary deficit\"",
-     "note": "Due by the 22nd after each bimester (LRF art. 9); earlier business day when the 22nd is a weekend.",
-     "origin": "rule:rardp",
-     "id": "2026-11-20-br-bimonthly-revenue-and-spending-report-rardp",
-     "attention": {
-      "score": 1.355,
-      "share_30d": 1.9957132080291535e-06,
-      "share_12m": 1.473265886341495e-06,
-      "as_of": "2026-11-18",
-      "source": "GDELT DOC 2.0 (timelinevolraw)",
-      "query": "Brazil \"primary deficit\""
-     },
-     "under_attended": false
-    },
     {
      "date": "2026-11-23",
      "country": "BR",
@@ -1861,6 +1844,28 @@
      "origin": "manual",
      "id": "2027-01-05-br-presidential-inauguration-5-jan-not-1-jan",
      "attention": null,
+     "under_attended": false
+    },
+    {
+     "date": "2027-01-11",
+     "country": "BR",
+     "type": "survey",
+     "title": "Focus survey (BCB)",
+     "importance": 1,
+     "status": "estimated",
+     "source": "https://www.bcb.gov.br/publicacoes/focus",
+     "query": "\"Focus survey\" Brazil",
+     "note": "Published Mondays ~08:25 BRT; moves to the next business day on holidays.",
+     "origin": "rule:focus",
+     "id": "2027-01-11-br-focus-survey-bcb",
+     "attention": {
+      "score": 0.79,
+      "share_30d": 2.3362002403950047e-06,
+      "share_12m": 2.955525494969464e-06,
+      "as_of": "2026-11-19",
+      "source": "GDELT DOC 2.0 (timelinevolraw)",
+      "query": "\"Focus survey\" Brazil"
+     },
      "under_attended": false
     }
    ]
@@ -2213,8 +2218,8 @@
      "source": "CFTC Commitments of Traders",
      "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-     "as_of": "2026-11-10",
-     "fetched_at": "2026-11-20T03:22:23Z",
+     "as_of": "2026-11-17",
+     "fetched_at": "2026-11-21T01:44:26Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "mx.cot.mxn",
      "evidence": {
@@ -2222,28 +2227,28 @@
       "reason": "Crowd lab test (e): leveraged funds (the gauge as shown): fit effect not significant (fit diff +0.16 sd, p=0.0942; hold-out diff +0.05 sd, p=0.3659). Legacy non-commercial (robustness): fit effect not significant (fit diff +0.04 sd, p=0.2861; hold-out diff +0.09 sd, p=0.2975)"
      }
     },
-    "as_of": "2026-11-10",
+    "as_of": "2026-11-17",
     "rows": [
      {
       "label": "Leveraged funds, net",
-      "value": 68019,
-      "pct_3y": 92.4,
+      "value": 62245,
+      "pct_3y": 86.0,
       "n_3y": 157
      },
      {
       "label": "Asset managers, net",
-      "value": -41109,
-      "pct_3y": 0.6,
+      "value": -39550,
+      "pct_3y": 1.3,
       "n_3y": 157
      },
      {
       "label": "Non-commercial (legacy), net",
-      "value": 21793,
-      "pct_3y": 15.3,
+      "value": 25247,
+      "pct_3y": 17.2,
       "n_3y": 157
      }
     ],
-    "open_interest": 280942
+    "open_interest": 279437
    },
    "markets": [
     {
@@ -2868,8 +2873,8 @@
     "country": "GLOBAL",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-11-20T03:22:18Z",
-    "last_success": "2026-11-20T03:22:18Z",
+    "last_attempt": "2026-11-21T01:44:23Z",
+    "last_success": "2026-11-21T01:44:23Z",
     "n_series": 3,
     "name": "CFTC Commitments of Traders (BRL, MXN, ZAR)",
     "note": null,
@@ -3273,7 +3278,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-20T03:28:31Z"
+  "updated_at": "2026-11-21T01:44:27Z"
  },
  "series_index": [
   "br.cot.brl",
