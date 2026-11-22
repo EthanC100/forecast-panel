@@ -1,7 +1,7 @@
 {
- "date": "2026-11-21",
- "generated_at": "2026-11-21T04:20:26Z",
- "prev_date": "2026-11-20",
+ "date": "2026-11-22",
+ "generated_at": "2026-11-22T03:36:04Z",
+ "prev_date": "2026-11-21",
  "items": [
   {
    "id": "s:br.usdbrl.ptax",
@@ -41,9 +41,7 @@
    "week_ago_date": "2026-11-13",
    "week_ago_value": 18.5525,
    "change_1w": 0.4703,
-   "change_pct_1w": 2.53,
-   "last_brief_value": 19.027,
-   "last_brief_date": "2026-11-19"
+   "change_pct_1w": 2.53
   },
   {
    "id": "s:eu.eurusd",
@@ -105,9 +103,7 @@
    "week_ago_value": 14.71,
    "change_1w": 0.39,
    "change_bp_1w": 39.0,
-   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
-   "last_brief_value": 15.0,
-   "last_brief_date": "2026-11-18"
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
   },
   {
    "id": "s:br.di.f31.proxy",
@@ -128,9 +124,7 @@
    "week_ago_value": 15.09,
    "change_1w": 0.32,
    "change_bp_1w": 32.0,
-   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve).",
-   "last_brief_value": 15.26,
-   "last_brief_date": "2026-11-18"
+   "degraded": "B3 blocks automated requests, so DI rates are proxied by Tesouro's January-dated LTN yields (sovereign zero-coupon, close to but not the same as the DI swap curve)."
   },
   {
    "id": "s:br.td.pre_longest",
@@ -150,9 +144,7 @@
    "week_ago_date": "2026-11-12",
    "week_ago_value": 15.15,
    "change_1w": 0.27,
-   "change_bp_1w": 27.0,
-   "last_brief_value": 15.28,
-   "last_brief_date": "2026-11-18"
+   "change_bp_1w": 27.0
   },
   {
    "id": "s:fr.spread.oat_bund.ecb_m",
@@ -188,9 +180,7 @@
    "week_ago_date": "2026-11-12",
    "week_ago_value": 5.1,
    "change_1w": -0.06,
-   "change_bp_1w": -6.0,
-   "last_brief_value": 5.07,
-   "last_brief_date": "2026-11-18"
+   "change_bp_1w": -6.0
   },
   {
    "id": "s:mx.mbono10y.auction",
@@ -243,9 +233,7 @@
    "week_ago_date": "2026-11-13",
    "week_ago_value": 3.41,
    "change_1w": -0.04,
-   "change_bp_1w": -4.0,
-   "last_brief_value": 3.42,
-   "last_brief_date": "2026-11-19"
+   "change_bp_1w": -4.0
   },
   {
    "id": "s:br.td.ipca_longest",
@@ -265,9 +253,7 @@
    "week_ago_date": "2026-11-12",
    "week_ago_value": 7.57,
    "change_1w": 0.07,
-   "change_bp_1w": 7.0,
-   "last_brief_value": 7.59,
-   "last_brief_date": "2026-11-18"
+   "change_bp_1w": 7.0
   },
   {
    "id": "s:br.selic.target",
@@ -387,9 +373,7 @@
    "week_ago_date": "2026-11-13",
    "week_ago_value": 3886.3,
    "change_1w": -347.3,
-   "change_pct_1w": -8.94,
-   "last_brief_value": 3525.0,
-   "last_brief_date": "2026-11-19"
+   "change_pct_1w": -8.94
   },
   {
    "id": "s:gl.silver",
@@ -409,9 +393,7 @@
    "week_ago_date": "2026-11-13",
    "week_ago_value": 49.031,
    "change_1w": -7.951,
-   "change_pct_1w": -16.22,
-   "last_brief_value": 41.17,
-   "last_brief_date": "2026-11-19"
+   "change_pct_1w": -16.22
   },
   {
    "id": "s:us.tips10",
@@ -487,9 +469,7 @@
    "week_ago_date": "2026-11-12",
    "week_ago_value": 4.86,
    "change_1w": -0.1,
-   "change_bp_1w": -10.0,
-   "last_brief_value": 4.8,
-   "last_brief_date": "2026-11-18"
+   "change_bp_1w": -10.0
   },
   {
    "id": "s:us.vix",
@@ -509,9 +489,7 @@
    "week_ago_date": "2026-11-12",
    "week_ago_value": 18.7,
    "change_1w": 9.74,
-   "change_pct_1w": 52.09,
-   "last_brief_value": 24.56,
-   "last_brief_date": "2026-11-18"
+   "change_pct_1w": 52.09
   },
   {
    "id": "s:us.fed.upper",
@@ -538,7 +516,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-11-23",
-   "days_to": 2,
+   "days_to": 1,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -551,7 +529,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2026-11-27",
-   "days_to": 6,
+   "days_to": 5,
    "title": "Standard & Poor's sovereign rating review: France",
    "type": "ratings",
    "importance": 3,
@@ -564,7 +542,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-11-30",
-   "days_to": 9,
+   "days_to": 8,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -577,7 +555,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2026-11-30",
-   "days_to": 9,
+   "days_to": 8,
    "title": "USMCA: US-Mexico bilateral round (next round not announced)",
    "type": "trade",
    "importance": 2,
@@ -590,7 +568,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2026-12-01",
-   "days_to": 10,
+   "days_to": 9,
    "title": "Banxico survey of private-sector economists",
    "type": "survey",
    "importance": 1,
@@ -603,7 +581,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-07",
-   "days_to": 16,
+   "days_to": 15,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -616,7 +594,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-09",
-   "days_to": 18,
+   "days_to": 17,
    "title": "Copom decision (8-9 Dec)",
    "type": "rates",
    "importance": 3,
@@ -629,7 +607,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2026-12-09",
-   "days_to": 18,
+   "days_to": 17,
    "title": "FOMC decision",
    "type": "rates",
    "importance": 3,
@@ -642,7 +620,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2026-12-10",
-   "days_to": 19,
+   "days_to": 18,
    "title": "Budget (PLF 2027): Article 47 70-day deadline",
    "type": "fiscal",
    "importance": 3,
@@ -655,7 +633,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2026-12-11",
-   "days_to": 20,
+   "days_to": 19,
    "title": "KBRA sovereign rating review: France",
    "type": "ratings",
    "importance": 3,
@@ -668,7 +646,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-14",
-   "days_to": 23,
+   "days_to": 22,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -681,7 +659,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-15",
-   "days_to": 24,
+   "days_to": 23,
    "title": "Senate deadline to set the CBS reference rate",
    "type": "fiscal",
    "importance": 2,
@@ -694,7 +672,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-17",
-   "days_to": 26,
+   "days_to": 25,
    "title": "2027 budget (PLOA) vote in Congress",
    "type": "fiscal",
    "importance": 3,
@@ -707,7 +685,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2026-12-17",
-   "days_to": 26,
+   "days_to": 25,
    "title": "ECB monetary policy decision",
    "type": "rates",
    "importance": 3,
@@ -720,7 +698,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2026-12-17",
-   "days_to": 26,
+   "days_to": 25,
    "title": "Banxico monetary policy decision",
    "type": "rates",
    "importance": 3,
@@ -733,7 +711,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-21",
-   "days_to": 30,
+   "days_to": 29,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -746,7 +724,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2026-12-28",
-   "days_to": 37,
+   "days_to": 36,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -759,7 +737,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-01-01",
-   "days_to": 41,
+   "days_to": 40,
    "title": "Banxico survey of private-sector economists",
    "type": "survey",
    "importance": 1,
@@ -772,7 +750,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-04",
-   "days_to": 44,
+   "days_to": 43,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -785,7 +763,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-05",
-   "days_to": 45,
+   "days_to": 44,
    "title": "Presidential inauguration (5 Jan, not 1 Jan)",
    "type": "politics",
    "importance": 3,
@@ -798,7 +776,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-11",
-   "days_to": 51,
+   "days_to": 50,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -811,7 +789,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-01-15",
-   "days_to": 55,
+   "days_to": 54,
    "title": "Midterms: candidate registration and precampaigns (January)",
    "type": "election",
    "importance": 2,
@@ -824,7 +802,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-18",
-   "days_to": 58,
+   "days_to": 57,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -837,7 +815,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-25",
-   "days_to": 65,
+   "days_to": 64,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -850,7 +828,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-01-27",
-   "days_to": 67,
+   "days_to": 66,
    "title": "Copom decision (26-27 Jan)",
    "type": "rates",
    "importance": 3,
@@ -863,7 +841,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2027-01-27",
-   "days_to": 67,
+   "days_to": 66,
    "title": "FOMC decision",
    "type": "rates",
    "importance": 3,
@@ -876,7 +854,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-02-01",
-   "days_to": 72,
+   "days_to": 71,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -889,7 +867,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-02-01",
-   "days_to": 72,
+   "days_to": 71,
    "title": "USTR public consultation for the 2027 USMCA review",
    "type": "trade",
    "importance": 2,
@@ -902,7 +880,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-02-01",
-   "days_to": 72,
+   "days_to": 71,
    "title": "Banxico survey of private-sector economists",
    "type": "survey",
    "importance": 1,
@@ -915,7 +893,7 @@
    "kind": "event",
    "country": "GLOBAL",
    "date": "2027-02-04",
-   "days_to": 75,
+   "days_to": 74,
    "title": "ECB monetary policy decision",
    "type": "rates",
    "importance": 3,
@@ -928,7 +906,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-02-04",
-   "days_to": 75,
+   "days_to": 74,
    "title": "Banxico decision (2027 calendar not yet published)",
    "type": "rates",
    "importance": 3,
@@ -941,7 +919,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-02-08",
-   "days_to": 79,
+   "days_to": 78,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -954,7 +932,7 @@
    "kind": "event",
    "country": "BR",
    "date": "2027-02-15",
-   "days_to": 86,
+   "days_to": 85,
    "title": "Focus survey (BCB)",
    "type": "survey",
    "importance": 1,
@@ -967,7 +945,7 @@
    "kind": "event",
    "country": "FR",
    "date": "2027-04-25",
-   "days_to": 155,
+   "days_to": 154,
    "title": "Presidential election, second round",
    "type": "election",
    "importance": 3,
@@ -980,7 +958,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-06-06",
-   "days_to": 197,
+   "days_to": 196,
    "title": "Midterm elections (Chamber of Deputies, governorships)",
    "type": "election",
    "importance": 3,
@@ -993,7 +971,7 @@
    "kind": "event",
    "country": "MX",
    "date": "2027-07-01",
-   "days_to": 222,
+   "days_to": 221,
    "title": "USMCA annual joint review",
    "type": "trade",
    "importance": 3,
@@ -1863,10 +1841,7 @@
    "volume": 8391729.0,
    "end_date": "2027-04-19",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 18.9,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": -1.7
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679023",
@@ -1938,10 +1913,7 @@
    "volume": 611802.0,
    "end_date": "2028-05-30",
    "as_of": "2026-11-21T03:16:37Z",
-   "url": "https://kalshi.com/markets/kxfrenchpres",
-   "last_brief_value": 53.0,
-   "last_brief_date": "2026-11-20T03:22:43Z",
-   "change_pp_since_last_brief": -2.0
+   "url": "https://kalshi.com/markets/kxfrenchpres"
   },
   {
    "id": "ks:KXFRENCHPRES-27-DLIS",
@@ -1953,10 +1925,7 @@
    "volume": 370514.0,
    "end_date": "2028-05-30",
    "as_of": "2026-11-21T03:16:37Z",
-   "url": "https://kalshi.com/markets/kxfrenchpres",
-   "last_brief_value": 14.0,
-   "last_brief_date": "2026-11-20T03:22:43Z",
-   "change_pp_since_last_brief": 1.0
+   "url": "https://kalshi.com/markets/kxfrenchpres"
   },
   {
    "id": "ks:KXFRENCHPRES-27-JMEL",
@@ -1980,10 +1949,7 @@
    "volume": 315446.0,
    "end_date": "2028-05-30",
    "as_of": "2026-11-21T03:16:37Z",
-   "url": "https://kalshi.com/markets/kxfrenchpres",
-   "last_brief_value": 3.0,
-   "last_brief_date": "2026-11-20T03:22:43Z",
-   "change_pp_since_last_brief": -0.1
+   "url": "https://kalshi.com/markets/kxfrenchpres"
   },
   {
    "id": "ks:KXFRENCHPRES-27-MPAN",
@@ -2019,10 +1985,7 @@
    "volume": 272198.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/alexandre-de-moraes-out-as-brazil-supreme-court-justice",
-   "last_brief_value": 3.6,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": 0.6
+   "url": "https://polymarket.com/event/alexandre-de-moraes-out-as-brazil-supreme-court-justice"
   },
   {
    "id": "pm:6317343",
@@ -2046,10 +2009,7 @@
    "volume": 112124.0,
    "end_date": "2026-11-05",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo",
-   "last_brief_value": 63.5,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": -4.6
+   "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo"
   },
   {
    "id": "pm:1125087",
@@ -2085,10 +2045,7 @@
    "volume": 51663.0,
    "end_date": "2026-11-05",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo",
-   "last_brief_value": 20.5,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": -1.6
+   "url": "https://polymarket.com/event/fall-elections-three-way-brazil-israel-us-senate-combo"
   },
   {
    "id": "ks:KXBRRATECUT-27JAN01-T7",
@@ -2172,10 +2129,7 @@
    "volume": 64693.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026",
-   "last_brief_value": 5.3,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": 0.1
+   "url": "https://polymarket.com/event/which-cartel-leaders-will-be-arrested-in-2026"
   },
   {
    "id": "pm:1419327",
@@ -2199,10 +2153,7 @@
    "volume": 60086.0,
    "end_date": "2027-06-07",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/mexico-legislative-election-winner",
-   "last_brief_value": 88.2,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": 0.1
+   "url": "https://polymarket.com/event/mexico-legislative-election-winner"
   },
   {
    "id": "pm:1353323",
@@ -2214,10 +2165,7 @@
    "volume": 47115.0,
    "end_date": "2027-01-09",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/mexico-annual-inflation-2026",
-   "last_brief_value": 3.5,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": -0.1
+   "url": "https://polymarket.com/event/mexico-annual-inflation-2026"
   },
   {
    "id": "pm:1430556",
@@ -2229,10 +2177,7 @@
    "volume": 41959.0,
    "end_date": "2027-01-01",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/claudia-sheinbaum-out-as-president-of-mexico-by-june-30",
-   "last_brief_value": 2.1,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": 0.2
+   "url": "https://polymarket.com/event/claudia-sheinbaum-out-as-president-of-mexico-by-june-30"
   },
   {
    "id": "pm:2325445",
@@ -2244,10 +2189,7 @@
    "volume": 41586.0,
    "end_date": "2027-06-07",
    "as_of": "2026-11-21T03:16:15Z",
-   "url": "https://polymarket.com/event/mexico-legislative-election-2nd-place",
-   "last_brief_value": 74.0,
-   "last_brief_date": "2026-11-20T03:22:24Z",
-   "change_pp_since_last_brief": 1.0
+   "url": "https://polymarket.com/event/mexico-legislative-election-2nd-place"
   },
   {
    "id": "ks:KXUSMCAOUTCOMES-27-16Y",
@@ -2330,10 +2272,7 @@
    "yes_pct": 23.5,
    "volume": 8719.0,
    "scenario": "sc:fr-sp-2026-11",
-   "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt",
-   "last_brief_value": 9.5,
-   "last_brief_date": "2026-11-20",
-   "change_pp_since_last_brief": 14.0
+   "url": "https://polymarket.com/event/moodys-or-sp-downgrades-france-byptptpt"
   },
   {
    "id": "pm:1722538",
@@ -2355,10 +2294,7 @@
    "yes_pct": 36.0,
    "volume": 4879.0,
    "scenario": "sc:fr-budget-2027",
-   "url": "https://kalshi.com/markets/kxfrancebudget",
-   "last_brief_value": 41.0,
-   "last_brief_date": "2026-11-20",
-   "change_pp_since_last_brief": -5.0
+   "url": "https://kalshi.com/markets/kxfrancebudget"
   },
   {
    "id": "ks:KXFRANCE493-27JAN01",
@@ -2413,10 +2349,7 @@
    "yes_pct": 0.7,
    "volume": 4484359.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 0.4,
-   "last_brief_date": "2026-11-20",
-   "change_pp_since_last_brief": 0.3
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679026",
@@ -2438,10 +2371,7 @@
    "yes_pct": 3.9,
    "volume": 3479521.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 5.3,
-   "last_brief_date": "2026-11-20",
-   "change_pp_since_last_brief": -1.4
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:679030",
@@ -2474,10 +2404,7 @@
    "yes_pct": 3.0,
    "volume": 3568293.0,
    "scenario": "sc:fr-pres-2027",
-   "url": "https://polymarket.com/event/next-french-presidential-election",
-   "last_brief_value": 2.6,
-   "last_brief_date": "2026-11-20",
-   "change_pp_since_last_brief": 0.4
+   "url": "https://polymarket.com/event/next-french-presidential-election"
   },
   {
    "id": "pm:2761052",
@@ -2488,10 +2415,7 @@
    "yes_pct": 2.9,
    "volume": 13049.0,
    "scenario": "sc:usmca-2027",
-   "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768",
-   "last_brief_value": 5.6,
-   "last_brief_date": "2026-11-20",
-   "change_pp_since_last_brief": -2.7
+   "url": "https://polymarket.com/event/usmca-extended-in-2026-20260701162719768"
   },
   {
    "id": "ks:KXUSMCAOUTCOMES-27-TRI",
@@ -2517,9 +2441,7 @@
    "extreme": true,
    "evidence_badge": "tested_no_lead",
    "source": "CFTC Commitments of Traders",
-   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-   "last_brief_value": 30780,
-   "last_brief_date": "2026-11-10"
+   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
   },
   {
    "id": "cot:mx.cot.mxn",
@@ -2534,9 +2456,7 @@
    "extreme": false,
    "evidence_badge": "tested_no_lead",
    "source": "CFTC Commitments of Traders",
-   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
-   "last_brief_value": 68019,
-   "last_brief_date": "2026-11-10"
+   "url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
   },
   {
    "id": "disp:1",
@@ -3179,7 +3099,7 @@
    "country": "US",
    "region": "GOLD",
    "date": "2026-12-09",
-   "days_to": 18,
+   "days_to": 17,
    "title": "FOMC rate decision and projections",
    "type": "fed",
    "importance": 3,
@@ -3192,7 +3112,7 @@
    "country": "US",
    "region": "GOLD",
    "date": "2027-01-27",
-   "days_to": 67,
+   "days_to": 66,
    "title": "FOMC rate decision",
    "type": "fed",
    "importance": 2,
@@ -3205,7 +3125,7 @@
    "country": "US",
    "region": "GOLD",
    "date": "2027-03-17",
-   "days_to": 116,
+   "days_to": 115,
    "title": "FOMC rate decision",
    "type": "fed",
    "importance": 2,
@@ -3323,25 +3243,13 @@
    "kind": "headline"
   },
   {
-   "id": "h:1a49b4d4",
-   "title": "Compte rendu intégral de la séance du vendredi 20 novembre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270071.asp",
+   "id": "h:3d009b61",
+   "title": "Compte rendu intégral de la première séance du mardi 17 novembre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270064.asp",
    "source": "Assemblée nationale (sitting reports)",
    "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
    "country": "FR",
-   "date": "2026-11-20",
-   "official": true,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:06072dde",
-   "title": "Compte rendu intégral de la deuxième séance du jeudi 19 novembre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270069.asp",
-   "source": "Assemblée nationale (sitting reports)",
-   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
-   "country": "FR",
-   "date": "2026-11-19",
+   "date": "2026-11-17",
    "official": true,
    "kind": "headline"
   },
@@ -3357,20 +3265,32 @@
    "kind": "headline"
   },
   {
-   "id": "h:3d009b61",
-   "title": "Compte rendu intégral de la première séance du mardi 17 novembre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270064.asp",
+   "id": "h:11627cbb",
+   "title": "Compte rendu intégral de la première séance du mercredi 18 novembre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270066.asp",
    "source": "Assemblée nationale (sitting reports)",
    "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
    "country": "FR",
-   "date": "2026-11-17",
+   "date": "2026-11-18",
+   "official": true,
+   "kind": "headline",
+   "new_since_last_brief": true
+  },
+  {
+   "id": "h:1a49b4d4",
+   "title": "Compte rendu intégral de la séance du vendredi 20 novembre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270071.asp",
+   "source": "Assemblée nationale (sitting reports)",
+   "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
+   "country": "FR",
+   "date": "2026-11-20",
    "official": true,
    "kind": "headline"
   },
   {
-   "id": "h:6ffa6953",
-   "title": "Compte rendu intégral de la troisième séance du jeudi 19 novembre 2026",
-   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270070.asp",
+   "id": "h:d45b41bc",
+   "title": "Compte rendu intégral de la première séance du jeudi 19 novembre 2026",
+   "url": "https://www.assemblee-nationale.fr/17/cri/2026-2027/20270068.asp",
    "source": "Assemblée nationale (sitting reports)",
    "via": "https://www2.assemblee-nationale.fr/feeds/detail/crs",
    "country": "FR",
@@ -3435,25 +3355,13 @@
    "kind": "headline"
   },
   {
-   "id": "h:2c0c1ab4",
-   "title": "France Should Have Listened To Cantillon , Turgot , And Bastiat - OpEd",
-   "url": "https://www.eurasiareview.com/20112026-france-should-have-listened-to-cantillon-turgot-and-bastiat-oped/",
-   "source": "eurasiareview.com",
+   "id": "h:7e8eae13",
+   "title": "The social media sensation who wants to become French president",
+   "url": "https://www.telegraph.co.uk/world-news/2026/11/21/the-social-media-sensation-who-wants-to-become-french-presi/",
+   "source": "telegraph.co.uk",
    "via": "GDELT DOC 2.0",
    "country": "FR",
-   "date": "2026-11-20",
-   "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:b4ffedb0",
-   "title": "Brazil Markets Closed as Dollar Hits 5 . 93 Reals | Morning Call , Nov 20",
-   "url": "https://www.riotimesonline.com/brazils-financial-morning-call-for-friday-november-20-2026/",
-   "source": "riotimesonline.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-20",
+   "date": "2026-11-21",
    "official": false,
    "kind": "headline",
    "new_since_last_brief": true
@@ -3470,13 +3378,48 @@
    "kind": "headline"
   },
   {
-   "id": "h:34853610",
-   "title": "Donald Trump tariffs : U . S . trade adviser accuses Canada of arrogance",
-   "url": "https://www.cp24.com/politics/2026/11/20/trump-trade-adviser-hurls-insults-at-federal-government-as-canada-us-trade-talks-heat-up/",
-   "source": "cp24.com",
+   "id": "h:d18ee8c6",
+   "title": "Former French premier de Villepin launches presidential bid , warns against Le Pen victory",
+   "url": "https://www.arabtimesonline.com/news/former-french-premier-de-villepin-launches-presidential-bid-warns-against-le-pen-victory/",
+   "source": "arabtimesonline.com",
    "via": "GDELT DOC 2.0",
-   "country": "US",
+   "country": "FR",
+   "date": "2026-11-21",
+   "official": false,
+   "kind": "headline",
+   "new_since_last_brief": true
+  },
+  {
+   "id": "h:e67ea993",
+   "title": "Mexican Stocks Post Worst Week Since August",
+   "url": "https://www.riotimesonline.com/mexican-stocks-post-worst-week-since-august/",
+   "source": "riotimesonline.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-11-21",
+   "official": false,
+   "kind": "headline",
+   "new_since_last_brief": true
+  },
+  {
+   "id": "h:2c0c1ab4",
+   "title": "France Should Have Listened To Cantillon , Turgot , And Bastiat - OpEd",
+   "url": "https://www.eurasiareview.com/20112026-france-should-have-listened-to-cantillon-turgot-and-bastiat-oped/",
+   "source": "eurasiareview.com",
+   "via": "GDELT DOC 2.0",
+   "country": "FR",
    "date": "2026-11-20",
+   "official": false,
+   "kind": "headline"
+  },
+  {
+   "id": "h:8d7d93b5",
+   "title": "11 killed in burst of violence in northern Mexico after capture of cartel leader",
+   "url": "https://www.kob.com/ap-top-news/11-killed-in-burst-of-violence-in-northern-mexico-after-capture-of-cartel-leader/",
+   "source": "kob.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-11-21",
    "official": false,
    "kind": "headline",
    "new_since_last_brief": true
@@ -3493,71 +3436,16 @@
    "kind": "headline"
   },
   {
-   "id": "h:ea4294f8",
-   "title": "Brazil Sells US$1 Billion , Real Still Falls",
-   "url": "https://www.riotimesonline.com/brazil-central-bank-sells-us-1-billion-real-still-falls/",
-   "source": "riotimesonline.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-20",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:2be4c6e9",
-   "title": "U . S . and Mexico Failed to Meet Key Anti - Drug Commitments Despite Billions in Aid , New Report Finds",
-   "url": "https://www.latintimes.com/us-mexico-counternarcotics-program-report-violence-601631",
-   "source": "latintimes.com",
+   "id": "h:e7e5c6cc",
+   "title": "FBI most wanted cartel boss captured as gunfire , chaos erupt across Mexico",
+   "url": "https://wlos.com/news/nation-world/fbis-most-wanted-cartel-boss-captured-as-gunfire-chaos-erupt-across-mexico-united-states-america-drugs-el-chapo-isidro-kingpin",
+   "source": "wlos.com",
    "via": "GDELT DOC 2.0",
    "country": "MX",
-   "date": "2026-11-20",
+   "date": "2026-11-21",
    "official": false,
    "kind": "headline",
    "new_since_last_brief": true
-  },
-  {
-   "id": "h:c614db91",
-   "title": "No real progres reported in trade talks with Trump",
-   "url": "https://www.therecord.com/politics/federal/donald-trump-s-midterm-drubbing-hasn-t-sped-up-canada-s-trade-talks-sources-say/article_d3822e6c-f43d-5d80-9cd7-32d0a8047d76.html",
-   "source": "therecord.com",
-   "via": "GDELT DOC 2.0",
-   "country": "US",
-   "date": "2026-11-20",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:0e174bd6",
-   "title": "Mistral AI not French president personal project : CEO",
-   "url": "https://www.enca.com/business/mistral-ai-not-french-presidents-personal-project-ceo",
-   "source": "enca.com",
-   "via": "GDELT DOC 2.0",
-   "country": "FR",
-   "date": "2026-11-18",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:f1e7c20d",
-   "title": "BofA sees path for capital return to Brazil if fiscal homework is done",
-   "url": "https://www.aol.com/articles/bofa-sees-path-capital-return-182141000.html",
-   "source": "aol.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-19",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:a5e5cac9",
-   "title": "APEC leaders back Shenzhen trade agenda as Xi meets Trump and Putin",
-   "url": "https://macaudailytimes.com.mo/apec-leaders-back-shenzhen-trade-agenda-as-xi-meets-trump-and-putin.html",
-   "source": "macaudailytimes.com.mo",
-   "via": "GDELT DOC 2.0",
-   "country": "MX",
-   "date": "2026-11-20",
-   "official": false,
-   "kind": "headline"
   },
   {
    "id": "h:ecf16c34",
@@ -3571,24 +3459,13 @@
    "kind": "headline"
   },
   {
-   "id": "h:462b3eea",
-   "title": "Brazil Lula moves to protect Chief Raoni birthplace in the Amazon rainforest | World",
-   "url": "http://www.cecildaily.com/ap/world/brazils-lula-moves-to-protect-chief-raoni-s-birthplace-in-the-amazon-rainforest/article_2893ff12-a91f-5de7-943c-4cf83706604e.html",
-   "source": "cecildaily.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-20",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:dc6d531c",
-   "title": "Seminario de Microeconomía Aplicada - Violation and Enforcement of Workplace Regulations : Evidence from Mexican Firm Inspections",
-   "url": "https://www.banrep.gov.co:443/es/seminario-microeconomia-aplicada-violation-and-enforcement-workplace-regulations-evidence-mexican",
-   "source": "banrep.gov.co",
+   "id": "h:673eb494",
+   "title": "Mexico detains top cartel boss El Chapo Isidro , one of FBI 10 most wanted fugitives",
+   "url": "http://www.idahopress.com/news/world/mexico-detains-top-cartel-boss-el-chapo-isidro-one-of-fbis-10-most-wanted-fugitives/article_d6338143-d6c7-5f3b-9a54-e1590ffb3ade.html",
+   "source": "idahopress.com",
    "via": "GDELT DOC 2.0",
    "country": "MX",
-   "date": "2026-11-20",
+   "date": "2026-11-21",
    "official": false,
    "kind": "headline",
    "new_since_last_brief": true
@@ -3602,31 +3479,18 @@
    "country": "FR",
    "date": "2026-11-20",
    "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
-  },
-  {
-   "id": "h:2f3278ab",
-   "title": "Brazil Supreme Court installs Yoruba symbol of justice ahead of Black Consciousness Day",
-   "url": "http://www.brazilsun.com/news/279443963/brazil-supreme-court-installs-yoruba-symbol-of-justice-ahead-of-black-consciousness-day",
-   "source": "brazilsun.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-20",
-   "official": false,
    "kind": "headline"
   },
   {
-   "id": "h:1cc2d43f",
-   "title": "APEC live : How events in Shenzhen unfolded",
-   "url": "https://asia.nikkei.com/politics/international-relations/apec/apec-live-how-events-in-shenzhen-unfolded",
-   "source": "asia.nikkei.com",
+   "id": "h:2be4c6e9",
+   "title": "U . S . and Mexico Failed to Meet Key Anti - Drug Commitments Despite Billions in Aid , New Report Finds",
+   "url": "https://www.latintimes.com/us-mexico-counternarcotics-program-report-violence-601631",
+   "source": "latintimes.com",
    "via": "GDELT DOC 2.0",
    "country": "MX",
    "date": "2026-11-20",
    "official": false,
-   "kind": "headline",
-   "new_since_last_brief": true
+   "kind": "headline"
   },
   {
    "id": "h:a0e5636a",
@@ -3640,26 +3504,40 @@
    "kind": "headline"
   },
   {
-   "id": "h:b139cd78",
-   "title": "Braskem Races to Dodge Court Bankruptcy",
-   "url": "https://www.riotimesonline.com/braskem-creditor-talks-judicial-recovery-deadline/",
-   "source": "riotimesonline.com",
-   "via": "GDELT DOC 2.0",
-   "country": "BR",
-   "date": "2026-11-20",
-   "official": false,
-   "kind": "headline"
-  },
-  {
-   "id": "h:56802933",
-   "title": "Multiple trade issue outstanding in Canada , U . S . trade talks : Sources - National",
-   "url": "https://globalnews.ca/news/12158821/canada-us-trade-talks-outstanding-issues/",
-   "source": "globalnews.ca",
+   "id": "h:44af1a25",
+   "title": "Mexico detains top cartel boss El Chapo Isidro , setting off violence",
+   "url": "https://www.wclk.com/2026-11-21/mexico-detains-top-cartel-boss-el-chapo-isidro-setting-off-violence",
+   "source": "wclk.com",
    "via": "GDELT DOC 2.0",
    "country": "MX",
+   "date": "2026-11-21",
+   "official": false,
+   "kind": "headline",
+   "new_since_last_brief": true
+  },
+  {
+   "id": "h:96fb0d5b",
+   "title": "Expensive junkets with little to show for",
+   "url": "https://www.thenational.com.pg/expensive-junkets-with-little-to-show-for/",
+   "source": "thenational.com.pg",
+   "via": "GDELT DOC 2.0",
+   "country": "FR",
    "date": "2026-11-20",
    "official": false,
-   "kind": "headline"
+   "kind": "headline",
+   "new_since_last_brief": true
+  },
+  {
+   "id": "h:1d921725",
+   "title": "Mexico captures top drug lord El Chapo Isidro",
+   "url": "https://cyprus-mail.com/2026/11/21/mexico-captures-top-drug-lord-el-chapo-isidro",
+   "source": "cyprus-mail.com",
+   "via": "GDELT DOC 2.0",
+   "country": "MX",
+   "date": "2026-11-21",
+   "official": false,
+   "kind": "headline",
+   "new_since_last_brief": true
   },
   {
    "id": "em:5",
@@ -3865,9 +3743,9 @@
   },
   {
    "source": "GDELT BR",
-   "ok": true,
-   "n": 8,
-   "error": null
+   "ok": false,
+   "n": 0,
+   "error": "GDELT kept returning its rate-limit notice"
   },
   {
    "source": "GDELT MX",
@@ -3877,9 +3755,9 @@
   },
   {
    "source": "GDELT US",
-   "ok": true,
-   "n": 3,
-   "error": null
+   "ok": false,
+   "n": 0,
+   "error": "GDELT kept returning its rate-limit notice"
   }
  ],
  "notes": [],
@@ -3889,7 +3767,7 @@
   "data": 26,
   "event": 39,
   "evidence_badge": 7,
-  "headline": 40,
+  "headline": 36,
   "market": 51,
   "model": 1,
   "policy": 8,
