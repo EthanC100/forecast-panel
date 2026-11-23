@@ -1,11 +1,11 @@
-# Scorecard (regenerated 2026-11-16)
+# Scorecard (regenerated 2026-11-23)
 
 Brier score (mean squared error, lower is better; 0.25 is a flat 50%) of every source and of the
 track-record-weighted aggregate on the questions that have resolved. Each forecaster is scored on
 the Monday snapshot of every week before the question's resolution date, so all of them are
 compared on the same days. See reports/method.md for the aggregation rule.
 
-- Weekly scoring snapshots logged: 4 (2026-10-28 to 2026-11-16) (weeks without a Monday snapshot use their first day: 2026-10-28)
+- Weekly scoring snapshots logged: 5 (2026-10-28 to 2026-11-23) (weeks without a Monday snapshot use their first day: 2026-10-28)
 - Questions resolved: 0 of 5
 
 ## Brier by forecaster
@@ -41,13 +41,13 @@ that have a value on the day.
 | my_prob |  | 0.167 |
 | claude_prob |  | 0.167 |
 
-## Latest aggregate (2026-11-16)
+## Latest aggregate (2026-11-23)
 
 | id | question | plain | extremized | sources | weights used |
 |---|---|---:|---:|---:|---|
 | q1 | US-Iran ceasefire still in effect on 31 December 2026? | 0.3000 | 0.2191 | 1 | `{"claude_prob": 1.0}` |
-| q2 | Official Russia-Ukraine ceasefire agreed by 31 December 2026? | 0.1175 | 0.0463 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
-| q3 | Official Russia-Ukraine ceasefire agreed by 30 June 2027? | 0.4950 | 0.4925 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
-| q4 | Sudan ceasefire agreed by 31 December 2026? | 0.0950 | 0.0329 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
-| q5 | US or Israeli strikes on Iranian territory resume by 31 March 2027? | 0.4633 | 0.4451 | 3 | `{"claude_prob": 0.3333, "gjopen": 0.3333, "polymarket": 0.3333}` |
+| q2 | Official Russia-Ukraine ceasefire agreed by 31 December 2026? | 0.1075 | 0.0401 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
+| q3 | Official Russia-Ukraine ceasefire agreed by 30 June 2027? | 0.5025 | 0.5037 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
+| q4 | Sudan ceasefire agreed by 31 December 2026? | 0.0800 | 0.0250 | 2 | `{"claude_prob": 0.5, "polymarket": 0.5}` |
+| q5 | US or Israeli strikes on Iranian territory resume by 31 March 2027? | 0.4277 | 0.3925 | 3 | `{"claude_prob": 0.3333, "gjopen": 0.3333, "polymarket": 0.3333}` |
 
