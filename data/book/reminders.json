@@ -1,7 +1,15 @@
 {
- "generated_at": "2026-11-23T22:52:01Z",
+ "generated_at": "2026-11-24T21:27:40Z",
  "dry_run": false,
  "open": [
+  {
+   "key": "catalyst:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
+   "kind": "catalyst",
+   "title": "Horizons: Standard & Poor's sovereign rating review: France in 3 days (2026-11-27), no France decision yet",
+   "url": "https://github.com/EthanC100/forecast-panel/issues/6",
+   "number": 6,
+   "created_at": "2026-11-24T21:27:39Z"
+  },
   {
    "key": "stale:BR:501ce805-ce7a-45c1-b8d5-6ad29a602634",
    "kind": "stale",
@@ -19,6 +27,8 @@
    "created_at": "2026-11-13T18:41:47Z"
   }
  ],
- "created": [],
+ "created": [
+  "catalyst:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france"
+ ],
  "closed": []
 }
