@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T06:14:26Z",
+ "generated_at": "2026-11-25T05:08:56Z",
  "gauges": [
   {
    "id": "a",
@@ -1011,7 +1011,7 @@
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
       "as_of": "2026-11-19",
-      "fetched_at": "2026-11-24T06:04:49Z",
+      "fetched_at": "2026-11-25T04:54:20Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1043,7 +1043,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-11-19",
-      "fetched_at": "2026-11-24T06:04:46Z",
+      "fetched_at": "2026-11-25T04:54:16Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-10-01",
-      "fetched_at": "2026-11-24T06:06:36Z",
+      "fetched_at": "2026-11-25T04:56:52Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1188,7 +1188,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-17",
-      "fetched_at": "2026-11-24T06:08:02Z",
+      "fetched_at": "2026-11-25T04:58:03Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1218,7 +1218,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-17",
-      "fetched_at": "2026-11-24T06:08:04Z",
+      "fetched_at": "2026-11-25T04:58:05Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1387,7 +1387,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 42,
+   "days": 41,
    "score": 0.75,
    "signals": [
     {
@@ -1409,7 +1409,7 @@
    "title": "S&P review of France, 27 Nov 2026",
    "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
    "date": "2026-11-27",
-   "days": 3,
+   "days": 2,
    "score": 0.392,
    "signals": [
     {
@@ -1432,13 +1432,13 @@
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 16,
-   "score": 0.142,
+   "days": 15,
+   "score": 0.1,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 42% vs base rate 50%",
-     "strength": 0.28333333333333344,
+     "detail": "market 44% vs base rate 50%",
+     "strength": 0.2,
      "badge": "untested",
      "hidden_market": true
     }
@@ -1449,7 +1449,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 152,
+   "days": 151,
    "score": 0,
    "signals": []
   }

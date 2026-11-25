@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T06:14:24Z",
+ "generated_at": "2026-11-25T05:08:54Z",
  "year": 2026,
  "forecasts": {
   "FR": [
@@ -15,7 +15,7 @@
     "min": 2.06,
     "max": 2.6,
     "respondents": 3,
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-24",
     "median_3m_ago": null,
     "change_3m": null,
     "change_3m_note": "no earlier edition stored for every institution yet",
@@ -40,8 +40,8 @@
      {
       "institution": "European Commission",
       "value": 2.6,
-      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-16)",
-      "edition_date": "2026-11-16",
+      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-24)",
+      "edition_date": "2026-11-24",
       "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
      }
     ],
@@ -59,7 +59,7 @@
     "min": 1.84,
     "max": 2.91,
     "respondents": 3,
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-24",
     "median_3m_ago": null,
     "change_3m": null,
     "change_3m_note": "no earlier edition stored for every institution yet",
@@ -84,8 +84,8 @@
      {
       "institution": "European Commission",
       "value": 2.91,
-      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-16)",
-      "edition_date": "2026-11-16",
+      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-24)",
+      "edition_date": "2026-11-24",
       "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
      }
     ],
@@ -163,7 +163,7 @@
     "min": 0.36,
     "max": 0.65,
     "respondents": 3,
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-24",
     "median_3m_ago": null,
     "change_3m": null,
     "change_3m_note": "no earlier edition stored for every institution yet",
@@ -188,8 +188,8 @@
      {
       "institution": "European Commission",
       "value": 0.36,
-      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-16)",
-      "edition_date": "2026-11-16",
+      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-24)",
+      "edition_date": "2026-11-24",
       "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
      }
     ],
@@ -207,7 +207,7 @@
     "min": 0.65,
     "max": 0.81,
     "respondents": 3,
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-24",
     "median_3m_ago": null,
     "change_3m": null,
     "change_3m_note": "no earlier edition stored for every institution yet",
@@ -232,8 +232,8 @@
      {
       "institution": "European Commission",
       "value": 0.65,
-      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-16)",
-      "edition_date": "2026-11-16",
+      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-24)",
+      "edition_date": "2026-11-24",
       "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
      }
     ],
@@ -251,7 +251,7 @@
     "min": -5.47,
     "max": -4.96,
     "respondents": 3,
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-24",
     "median_3m_ago": null,
     "change_3m": null,
     "change_3m_note": "no earlier edition stored for every institution yet",
@@ -276,8 +276,8 @@
      {
       "institution": "European Commission",
       "value": -5.47,
-      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-16)",
-      "edition_date": "2026-11-16",
+      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-24)",
+      "edition_date": "2026-11-24",
       "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
      }
     ],
@@ -295,7 +295,7 @@
     "min": -5.37,
     "max": -4.58,
     "respondents": 3,
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-24",
     "median_3m_ago": null,
     "change_3m": null,
     "change_3m_note": "no earlier edition stored for every institution yet",
@@ -320,8 +320,8 @@
      {
       "institution": "European Commission",
       "value": -5.37,
-      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-16)",
-      "edition_date": "2026-11-16",
+      "edition": "European Commission Autumn 2026 Economic Forecast (AMECO, updated 2026-11-24)",
+      "edition_date": "2026-11-24",
       "url": "https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/economic-forecasts_en"
      }
     ],
@@ -911,7 +911,7 @@
      "dispersion": 0.416,
      "unit": "%",
      "source": "IMF, OECD and European Commission",
-     "as_of": "2026-11-16"
+     "as_of": "2026-11-24"
     },
     "view": {
      "question": "Will France's 2027 budget law be promulgated by 31 December 2026?",

@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-24T06:14:20Z",
- "horizon": "2027-11-25",
+ "generated_at": "2026-11-25T05:08:49Z",
+ "horizon": "2027-11-26",
  "events": [
   {
    "date": "2026-11-27",
@@ -15,10 +15,10 @@
    "origin": "aft",
    "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
    "attention": {
-    "score": 1.712,
-    "share_30d": 7.184567548904952e-05,
-    "share_12m": 4.195509419611302e-05,
-    "as_of": "2026-11-18",
+    "score": 1.608,
+    "share_30d": 6.818991142888172e-05,
+    "share_12m": 4.239670697628372e-05,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Standard\" France rating"
    },
@@ -74,10 +74,10 @@
    "origin": "rule:banxico_survey",
    "id": "2026-12-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -342,10 +342,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-01-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -568,10 +568,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-02-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -720,10 +720,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-03-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -943,10 +943,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-04-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1199,10 +1199,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-05-03-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1358,10 +1358,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-06-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1589,10 +1589,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-07-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1780,10 +1780,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-08-02-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1944,10 +1944,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-09-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -2167,10 +2167,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-10-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -2363,10 +2363,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-11-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 1.59,
-    "share_30d": 8.652015919709293e-06,
-    "share_12m": 5.441474850236175e-06,
-    "as_of": "2026-11-21",
+    "score": 2.312,
+    "share_30d": 1.2627761375718836e-05,
+    "share_12m": 5.462566169266672e-06,
+    "as_of": "2026-11-25",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -8856,7 +8856,7 @@
  "notes": [
   "France: no censure motion is scheduled as of 2026-10-29. Motions are voted 48 hours after they are filed; add one here when it is tabled.",
   "France: Moody's and Fitch review dates are taken from the AFT ratings table when it is reachable; otherwise see data/terminal/inputs/france_ratings.yaml.",
-  "GDELT attention not refreshed today (GDELT kept returning its rate-limit notice); showing the last values."
+  "GDELT attention refresh stopped at its 9-minute budget; remaining queries keep their last values."
  ],
  "attention_definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away",
  "sources": {

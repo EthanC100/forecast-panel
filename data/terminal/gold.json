@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-24T06:14:29Z",
- "as_of": "2026-11-24",
+ "generated_at": "2026-11-25T05:09:00Z",
+ "as_of": "2026-11-25",
  "prices": {
   "gold": {
-   "value": 3630.5,
+   "value": 3547.2,
    "date": "2026-11-24",
    "series": "gl.gold",
    "source": "Yahoo Finance chart data (COMEX front-month futures)",
@@ -12,16 +12,16 @@
    "frequency": "daily",
    "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": -6.05,
-   "chg_1m_pct": -10.1,
-   "chg_1y_pct": -11.33,
-   "z_1y": -2.27,
+   "chg_1w_pct": -8.2,
+   "chg_1m_pct": -12.16,
+   "chg_1y_pct": -13.36,
+   "z_1y": -2.49,
    "high_1y": 5318.3999,
    "low_1y": 3515.3999,
    "history_from": "2000-08-29"
   },
   "silver": {
-   "value": 42.185,
+   "value": 40.57,
    "date": "2026-11-24",
    "series": "gl.silver",
    "source": "Yahoo Finance chart data (COMEX front-month futures)",
@@ -30,16 +30,16 @@
    "frequency": "daily",
    "degraded": null,
    "unit": "USD per troy ounce",
-   "chg_1w_pct": -10.79,
-   "chg_1m_pct": -22.04,
-   "chg_1y_pct": -16.12,
-   "z_1y": -2.13,
+   "chg_1w_pct": -14.21,
+   "chg_1m_pct": -25.02,
+   "chg_1y_pct": -19.34,
+   "z_1y": -2.25,
    "high_1y": 115.08,
-   "low_1y": 41.035,
+   "low_1y": 40.57,
    "history_from": "2000-08-29"
   },
   "ratio": {
-   "value": 86.1,
+   "value": 87.4,
    "date": "2026-11-24",
    "meaning": "Ounces of silver one ounce of gold buys. It rises when investors prefer gold's safety to silver's industrial demand."
   }
@@ -48,17 +48,17 @@
   {
    "id": "real_yield",
    "name": "Real interest rates (US 10-year TIPS yield)",
-   "value": 2.77,
-   "date": "2026-11-20",
+   "value": 2.79,
+   "date": "2026-11-23",
    "unit": "%",
-   "chg_1m": 1,
+   "chg_1m": 13,
    "chg_unit": "bp",
    "series": "us.tips10",
    "source": "FRED API",
    "source_id": "FRED DFII10",
    "url": "https://api.stlouisfed.org/fred/series/observations?series_id=DFII10",
    "frequency": "daily",
-   "reading": "The 10-year real yield is 2.77%, up 1bp over the past month. Gold pays no interest, so a higher real yield raises the cost of holding it: rising real yields are a headwind for gold and falling ones a tailwind. gold-events finds the link is not stable: gold's sensitivity to real yields was near zero before 2013, strong in 2014-2021 and weaker now.",
+   "reading": "The 10-year real yield is 2.79%, up 13bp over the past month. Gold pays no interest, so a higher real yield raises the cost of holding it: rising real yields are a headwind for gold and falling ones a tailwind. gold-events finds the link is not stable: gold's sensitivity to real yields was near zero before 2013, strong in 2014-2021 and weaker now.",
    "finding_url": "https://github.com/EthanC100/gold-events#findings"
   },
   {
