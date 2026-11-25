@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T21:27:40Z",
+ "generated_at": "2026-11-25T20:36:37Z",
  "dry_run": false,
  "open": [
   {
@@ -27,8 +27,6 @@
    "created_at": "2026-11-13T18:41:47Z"
   }
  ],
- "created": [
-  "catalyst:2026-11-27-fr-standard-poor-s-sovereign-rating-review-france"
- ],
+ "created": [],
  "closed": []
 }
