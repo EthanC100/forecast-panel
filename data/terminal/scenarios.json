@@ -182,7 +182,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.55
+     "p_ai": 0.6
     },
     {
      "id": "affirm_negative",
@@ -206,7 +206,7 @@
      ],
      "p_mine": null,
      "p_market": null,
-     "p_ai": 0.4
+     "p_ai": 0.35
     },
     {
      "id": "downgrade",
@@ -273,42 +273,45 @@
    "ai": {
     "available": true,
     "p_yes": 0.05,
-    "date": "2026-11-25",
-    "confidence": "medium",
+    "date": "2026-11-26",
+    "confidence": "high",
     "verified": true,
     "problems": [],
-    "base_rate_used": "Scenario page base rate: 0 downgrades in 36 recorded S&P actions on the six tracked EU sovereigns since 2014 where the outlook going in was stable (0%; 0% is also the lower bound across an assumed 156 scheduled reviews). Agencies almost always signal a cut with a negative outlook first. Zero events in 36 does not mean zero risk, so I start a little above zero.",
+    "base_rate_used": "Scenario page base rate: 0 downgrades in 36 recorded S&P actions on EU sovereigns going into a review with a stable outlook (0%), with a lower-bound note that it stays 0% across about 156 assumed scheduled reviews. S&P's usual practice is to signal with a negative outlook before cutting, so the starting point is close to zero. I round up to 5 because the reference class is small and does not mark which actions were scheduled.",
     "factors": [
      {
-      "text": "The reference class is strongly against a cut from a stable outlook: 0 downgrades in 36 S&P actions, against 19 affirmations and 7 moves to a negative outlook or watch. S&P's normal step under stress is to change the outlook, which this question counts as NO.",
+      "text": "The reference class is very lopsided: no S&P downgrade from a stable outlook in 36 recorded actions on the six tracked EU sovereigns. A cut with no warning would break S&P's normal sequence of outlook change first, then downgrade.",
       "effect": "lowers",
       "source_ids": [
        "sc:fr-sp-2026-11"
       ]
      },
      {
-      "text": "Market stress is real. The OAT-Bund spread's monthly average jumped from 96.7 bp in September to 147.4 bp in October, and the French 10-year rose from 4.44% to 4.89%. HCFP calls the 2027 growth assumption of 1.0% optimistic, sees debt rising toward about 122% of GDP, and judges the deficit below 3% by 2029 very unlikely. That gives S&P grounds to act, which keeps the downgrade tail above zero and makes a negative outlook nearly as likely as a plain affirmation.",
+      "text": "Market stress has risen sharply. The OAT-Bund spread, a monthly ECB average, is 147.4 bp against 96.7 bp a month earlier. Budget passage is a coin flip at best (Polymarket 44.5%, Kalshi 42.0%). HCFP calls the 2027 growth forecast of 1.0% optimistic. This gives S&P grounds to act, but more plausibly through a negative outlook than a cut, so it mostly feeds affirm_negative.",
       "effect": "raises",
       "source_ids": [
        "s:fr.spread.oat_bund.ecb_m",
-       "s:fr.oat10y.ecb_m",
-       "fa:hcfp"
+       "pm:1722538",
+       "ks:KXFRANCEBUDGET-27JAN01",
+       "fa:hcfp",
+       "pol:fr-budget-2027"
       ]
      },
      {
-      "text": "Budget uncertainty is high but unresolved. Markets give 44.0% and 42.0% that a 2027 budget is enacted in 2026, far below the 90.5% base rate for budget cycles, and the Article 47 deadline falls on 10 Dec, after this review. An agency facing an open process usually waits and moves the outlook rather than cutting before the outcome is known.",
+      "text": "Nothing new has hit the 2026 numbers. HCFP judges the 5.4% 2026 deficit plausible, and the consensus median is -5.4% for 2026 and -5.2% for 2027, so there is no fresh fiscal slippage to justify skipping the outlook step. Moody's affirmed Aa3 negative on 23 Oct, so S&P faces no peer pressure from a fresh cut. The Polymarket downgrade price of 6.0% (mostly S&P) agrees with a low number.",
       "effect": "lowers",
       "source_ids": [
-       "pm:1722538",
-       "ks:KXFRANCEBUDGET-27JAN01",
-       "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
-       "sc:fr-budget-2027"
+       "fa:hcfp",
+       "fc:FR.balance.2026",
+       "fc:FR.balance.2027",
+       "pm:5458390",
+       "sc:fr-sp-2026-11"
       ]
      }
     ],
-    "what_would_change_view": "I would raise the odds if the government fell on a censure motion before 27 Nov, if the budget were rejected and a special law became the base case, or if the 2026 deficit estimate were raised above 5.4%. These are the downgrade signposts on the scenario page. I would lower them toward zero if the Assembly's first reading passes cleanly. The Polymarket downgrade price of 5.5% matches my view. Prediction-market gauges are tested_no_lead, so I give it little independent weight; a sharp move in it would matter only if backed by news.",
-    "most_likely_wrong": "The October spread widening of 50.7 bp is a regime break that the calm 2014–2026 reference class does not capture. On a spread that wide, S&P might skip the negative-outlook step and cut directly, as agencies sometimes do when market stress runs ahead of politics. The shared crowd error would be assuming the usual outlook-first sequence. Separately, the main split I am uncertain about is affirm_stable versus affirm_negative, which does not change the YES probability.",
-    "brief": "#brief/2026-11-25"
+    "what_would_change_view": "A government falling on a censure motion, or an announcement that the 2026 deficit will overshoot 5.4%, before the Friday publication. Either would push me toward 10-15. A clear signal that the budget's revenue part has passed would push affirm_stable higher but leave P(yes) at 5.",
+    "most_likely_wrong": "The spread has already widened by about half a point in a single month, and the budget may slide into a special law or Article 47. S&P could decide that political paralysis justifies a direct cut rather than waiting for the outlook step. That is exactly the timing error the France primer says consensus tends to make about agencies. Note that the crowd and I share the same anchor here (agencies move outlook first), and the Polymarket price has thin volume, so it is weak independent confirmation.",
+    "brief": "#brief/2026-11-26"
    },
    "calculator": {
     "instrument": "OATBUND",
@@ -753,44 +756,42 @@
    "ai": {
     "available": true,
     "p_yes": 0.4,
-    "date": "2026-11-25",
-    "confidence": "low",
+    "date": "2026-11-26",
+    "confidence": "medium",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page gives 19 of 21 budgets promulgated by 31 December (90.5%) across 2006-2026. That is the wrong starting point for a minority parliament. The page shows the post-June-2022 subset separately but gives no figure for it. Its own analogs show the last two cycles failed: a special law in December 2024 after the Barnier government fell, and another special law in December 2025, with the 2026 budget adopted only in early 2026. I therefore start well below 90.5% and close to an even chance for the minority era, then check against the markets: Polymarket at 44.0% and Kalshi at 42.0%.",
+    "base_rate_used": "The scenario page's computed base rate is 19 of 21 budgets promulgated by 31 December (90.5%). That full-sample rate mostly reflects years when governments had a majority. The page's own analogs show the two most recent cycles (December 2024 and December 2025) both ended in a special law, so I start well below the headline rate and close to the minority-era record.",
     "factors": [
      {
-      "text": "France has had a minority government since the 2024 dissolution. In the two most recent cycles the budget missed 31 December: the government fell in December 2024, and a special law replaced the budget in December 2025. The 90.5% full-history rate mostly reflects years with a working majority, so it overstates the odds now.",
+      "text": "The headline 90.5% base rate mostly comes from majority governments. Since the 2024 dissolution France has had a minority government. The page's own analogs show December 2024 (Barnier fell) and December 2025 (special law) both missed 31 December, so the relevant recent record is much weaker than the headline.",
       "effect": "lowers",
       "source_ids": [
-       "primer:FR",
-       "sc:fr-budget-2027"
+       "sc:fr-budget-2027",
+       "primer:FR"
       ]
      },
      {
-      "text": "Stress is visible in bonds. The OAT-Bund spread's monthly average jumped to 147.4 bp in October from 96.7 bp in September. HCFP calls the 1.0% growth assumption optimistic. The bill relies on about 43 billion euros of new measures, including a pension freeze, which makes it hard to pass by vote and invites a censure motion if Article 49.3 is used. Kalshi prices 49.3 at 58.0%.",
-      "effect": "lowers",
-      "source_ids": [
-       "s:fr.spread.oat_bund.ecb_m",
-       "pol:fr-budget-2027",
-       "fa:hcfp",
-       "ks:KXFRANCE493-27JAN01"
-      ]
-     },
-     {
-      "text": "Some signs favour adoption. An unofficial report says the right backs Macron's plan to put spending limits in the Constitution, which hints at LR cooperation. Both budget markets rose on the day, to 44.0% and 42.0%. Article 47 also offers a never-used ordinance route after the 10 Dec 2026 deadline.",
+      "text": "Kalshi puts the use of Article 49.3 at 58.0%, which suggests the government is ready to force the text through and accept a censure vote. The budget bill's plan to cut the deficit from 5.4% to 5.0% of GDP is modest, which may make a non-censure deal with PS or LR easier. The spread widening to 147.4 bp from 96.7 bp also raises the cost of failure and the pressure to pass something by 31 December.",
       "effect": "raises",
       "source_ids": [
-       "h:d66628e7",
-       "pm:1722538",
-       "ks:KXFRANCEBUDGET-27JAN01",
-       "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline"
+       "ks:KXFRANCE493-27JAN01",
+       "pol:fr-budget-2027",
+       "s:fr.spread.oat_bund.ecb_m"
+      ]
+     },
+     {
+      "text": "The Assembly was still sitting on the bill through 25 November, with the 10 December day-70 deadline close. HCFP calls the 1.0% growth forecast optimistic and says the spending path holds only if every measure passes. That leaves room for the bill to be rejected or stall, and for a special law to become the default, as in 2024 and 2025. Ordinance under Article 47 has never been used and would trigger a constitutional fight, so I give it little weight.",
+      "effect": "lowers",
+      "source_ids": [
+       "h:52627922",
+       "ev:2026-12-10-fr-budget-plf-2027-article-47-70-day-deadline",
+       "fa:hcfp"
       ]
      }
     ],
-    "what_would_change_view": "I would move up if the joint committee (CMP) agrees in mid-December and PS or LR say publicly they will not vote censure on a 49.3 text. I would also move up if the government says it will use Article 47 after 10 Dec 2026. I would move down if a loi spéciale is tabled, if no CMP deal exists by mid-December, or if a censure motion starts to gather PS votes. A downgrade by S&P on 27 Nov 2026 could cut either way: it could pressure parties into a deal, or it could harden the opposition.",
-    "most_likely_wrong": "The most likely way I am wrong is underrating Article 49.3. The government could use it on the CMP text and survive censure because the parties fear a third failed cycle and a wider spread before the 2027 presidential race. Adoption would then be more likely than I assume. The market odds near 42-44% may be right or even too low, although the prediction-market badge says these markets have shown no lead, so I give them little weight.",
-    "brief": "#brief/2026-11-25"
+    "what_would_change_view": "I would move higher if PS or LR publicly commit not to censure, or if the joint committee (CMP) agrees in mid-December and the government survives a 49.3 censure vote. I would also move higher if the government says it will use Article 47 ordinances after 10 December. I would move lower if a special law is tabled, the Assembly rejects the bill at first reading, or a censure motion gathers PS votes.",
+    "most_likely_wrong": "The two markets (44.5% and 42.0%) and I may share the same mistake: over-weighting the last two failed cycles. A government that has learned from 2024 and 2025, and is under spread pressure, may secure a non-censure deal and promulgate on time by 49.3, which would make the true probability nearer one half or higher. The French spread series is untested and monthly, so it gives no early warning either way.",
+    "brief": "#brief/2026-11-26"
    },
    "calculator": {
     "instrument": "OATBUND",
@@ -973,7 +974,7 @@
      ],
      "p_mine": null,
      "p_market": 0.4685,
-     "p_ai": 0.45
+     "p_ai": 0.4
     },
     {
      "id": "centre_right",
@@ -1036,7 +1037,7 @@
      ],
      "p_mine": null,
      "p_market": 0.2091,
-     "p_ai": 0.15
+     "p_ai": 0.2
     }
    ],
    "markets": {
@@ -1193,51 +1194,49 @@
    "mine": null,
    "ai": {
     "available": true,
-    "p_yes": 0.45,
-    "date": "2026-11-25",
+    "p_yes": 0.4,
+    "date": "2026-11-26",
     "confidence": "low",
     "verified": true,
     "problems": [],
-    "base_rate_used": "The scenario page's base rate (final-poll leader won 4 of 4, RMS poll error 5.78 pp) is about final polls in run-offs. It gives no probability for the RN today, and the snapshot has no 2027 polls. As a last resort I start from market prices. Le Pen is at 45.5% on Polymarket (pm:679018) and 47.0% on Kalshi (ks:KXFRENCHPRES-27-MLEP). Bardella is at 1.6% (pm:679019) and 1.8% (ks:KXFRENCHPRES-27-JBAR). That puts the RN at roughly 47%. The prediction-market series carries a tested_no_lead badge, so this is an anchor, not evidence.",
+    "base_rate_used": "The scenario page's base rate is not a probability for this question: the final-poll leader won 4 of 4 run-offs, with an RMS poll error of 5.78 pp. That only helps once final run-off polls exist, and the snapshot has no polls while we are 150 days out. I therefore start from the market price as a last resort. Polymarket's Le Pen (44.5%) plus Bardella (1.6%) gives about 46% for the RN, and Kalshi has Le Pen at 45.0%. I then adjust for the history that the RN candidate lost the 2017 and 2022 run-offs.",
     "factors": [
      {
-      "text": "The fiscal backdrop is souring, which helps an anti-incumbent candidate. The OAT-Bund spread jumped to 147.4 bp from 96.7 bp in October. HCFP says the 2027 growth forecast is optimistic and debt keeps rising toward about 122% of GDP. The budget is stuck: markets give 44.0% and 42.0% to adoption by year-end. A prolonged fiscal mess under the current camp favours the RN.",
-      "effect": "raises",
-      "source_ids": [
-       "s:fr.spread.oat_bund.ecb_m",
-       "fa:hcfp",
-       "pm:1722538",
-       "ks:KXFRANCEBUDGET-27JAN01"
-      ]
-     },
-     {
-      "text": "The centre-right is starting to gather behind one name. Lisnard rose to 25.1% on Polymarket and 26.0% on Kalshi while Philippe, Retailleau and Attal slipped. A single centre-right candidate is the branch's own signpost for beating the RN in a run-off. A press report says the right backs Macron's plan to put spending limits in the Constitution, which hints at a working coalition. Markets still split the centre-right total across five names, so it may be underpriced against a left that is unlikely to win a run-off with Mélenchon as its main name.",
-      "effect": "lowers",
-      "source_ids": [
-       "pm:679022",
-       "ks:KXFRENCHPRES-27-DLIS",
-       "pm:679021",
-       "pm:679027",
-       "h:d66628e7",
-       "pm:679030"
-      ]
-     },
-     {
-      "text": "The crowd's shared error is candidate risk. Le Pen holds about 45-47% and Bardella under 2%. That only makes sense if Le Pen is almost sure to be on the ballot, yet her ineligibility case is an open signpost on the scenario page. The interior-ministry leak probe touching the RN adds legal noise. Markets give little credit to a forced switch to Bardella, or to a messy one. Six months out, poll error is also larger than the 5.78 pp final-poll figure.",
+      "text": "Markets put the RN candidate near even odds. Polymarket has Le Pen at 44.5% and Bardella at 1.6%; Kalshi has Le Pen at 45.0%. Both Le Pen prices slipped this week. The badge says prediction-market prices are tested_no_lead, and the poll-versus-market gap is also tested_no_lead. So the price is a starting point, not evidence of an edge.",
       "effect": "lowers",
       "source_ids": [
        "pm:679018",
        "pm:679019",
-       "h:efd85a8a",
-       "h:c427f576",
-       "badge:a",
-       "badge:series"
+       "ks:KXFRENCHPRES-27-MLEP",
+       "badge:series",
+       "badge:a"
+      ]
+     },
+     {
+      "text": "The centre-right vote is split across several names: Lisnard 22.9%, Philippe 4.0%, Lagarde 3.9%, Attal 0.5%, Retailleau 0.4%. Mélenchon at 14.5% looks rich as a run-off winner. What matters is who faces the RN candidate in the second round, and a consolidated centre-right finalist has historically gathered the anti-RN vote. The crowd may be pricing first-round fragmentation as if it were second-round weakness.",
+      "effect": "lowers",
+      "source_ids": [
+       "pm:679022",
+       "pm:679021",
+       "pm:679060",
+       "pm:679030",
+       "sc:fr-pres-2027"
+      ]
+     },
+     {
+      "text": "The fiscal backdrop feeds an anti-incumbent mood. HCFP calls the 2027 growth forecast optimistic and sees debt rising toward about 122% of GDP. Markets give only about 42 to 44.5% to a budget being enacted in 2026. The OAT-Bund spread widened to 147.4 bp from 96.7 bp. A messy budget ending would strengthen the case for change that the RN runs on.",
+      "effect": "raises",
+      "source_ids": [
+       "fa:hcfp",
+       "pm:1722538",
+       "ks:KXFRANCEBUDGET-27JAN01",
+       "s:fr.spread.oat_bund.ecb_m"
       ]
      }
     ],
-    "what_would_change_view": "Each of these would move me:\n- A final ruling on Le Pen's eligibility either way.\n- Run-off polls showing the RN candidate ahead of a single centre-right candidate beyond the poll-error range.\n- Other centre-right candidates withdrawing for Lisnard (lowers RN).\n- A government collapse over the budget, or a downgrade-driven spread blowout that lifts anti-system votes (raises RN).",
-    "most_likely_wrong": "I may be over-weighting centre-right consolidation. If the fiscal crisis deepens and Le Pen stays eligible, the usual anti-RN run-off coalition may not hold. In that case the RN's chances are above the market, not below it.",
-    "brief": "#brief/2026-11-25"
+    "what_would_change_view": "Head-to-head run-off polls showing the RN candidate ahead of the leading centre-right candidate would move me back toward or above the market. So would centre-right withdrawals failing to happen before the March 2027 sponsorship deadline, or a government fall over the budget around the 10 Dec Article 47 deadline. A ruling that clears Le Pen's eligibility would settle the candidate question but not the run-off arithmetic. Clear consolidation behind one centre-right candidate would push me lower.",
+    "most_likely_wrong": "The idea that the anti-RN vote holds in the run-off may be out of date. If voters are worn out by fiscal austerity and budget chaos, the old pattern of rallying against the RN may not repeat. In that case the market's roughly 46% is right or even too low.",
+    "brief": "#brief/2026-11-26"
    },
    "calculator": {
     "instrument": "OATBUND",
