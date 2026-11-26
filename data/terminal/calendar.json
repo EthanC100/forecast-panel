@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-25T05:08:49Z",
- "horizon": "2027-11-26",
+ "generated_at": "2026-11-26T04:26:54Z",
+ "horizon": "2027-11-27",
  "events": [
   {
    "date": "2026-11-27",
@@ -15,10 +15,10 @@
    "origin": "aft",
    "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
    "attention": {
-    "score": 1.608,
-    "share_30d": 6.818991142888172e-05,
-    "share_12m": 4.239670697628372e-05,
-    "as_of": "2026-11-25",
+    "score": 1.737,
+    "share_30d": 7.353970313682417e-05,
+    "share_12m": 4.234030975466824e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Standard\" France rating"
    },
@@ -74,10 +74,10 @@
    "origin": "rule:banxico_survey",
    "id": "2026-12-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -118,10 +118,10 @@
    "origin": "manual",
    "id": "2026-12-09-br-copom-decision-8-9-dec",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -145,10 +145,10 @@
    "origin": "fed:scraped",
    "id": "2026-12-09-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -342,10 +342,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-01-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -482,10 +482,10 @@
    "origin": "manual",
    "id": "2027-01-27-br-copom-decision-26-27-jan",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -509,10 +509,10 @@
    "origin": "fed:scraped",
    "id": "2027-01-27-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -568,10 +568,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-02-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -720,10 +720,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-03-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -786,10 +786,10 @@
    "origin": "manual",
    "id": "2027-03-17-br-copom-decision-16-17-mar",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -813,10 +813,10 @@
    "origin": "fed:scraped",
    "id": "2027-03-17-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -943,10 +943,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-04-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1113,10 +1113,10 @@
    "origin": "manual",
    "id": "2027-04-28-br-copom-decision-27-28-apr",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -1140,10 +1140,10 @@
    "origin": "fed:scraped",
    "id": "2027-04-28-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -1199,10 +1199,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-05-03-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1358,10 +1358,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-06-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1417,10 +1417,10 @@
    "origin": "fed:scraped",
    "id": "2027-06-09-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -1476,10 +1476,10 @@
    "origin": "manual",
    "id": "2027-06-16-br-copom-decision-15-16-jun",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -1589,10 +1589,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-07-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1736,10 +1736,10 @@
    "origin": "fed:scraped",
    "id": "2027-07-28-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -1780,10 +1780,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-08-02-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -1802,10 +1802,10 @@
    "origin": "manual",
    "id": "2027-08-04-br-copom-decision-3-4-aug",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -1944,10 +1944,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-09-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -2025,10 +2025,10 @@
    "origin": "fed:scraped",
    "id": "2027-09-15-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -2069,10 +2069,10 @@
    "origin": "manual",
    "id": "2027-09-22-br-copom-decision-21-22-sep",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -2167,10 +2167,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-10-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -2277,10 +2277,10 @@
    "origin": "manual",
    "id": "2027-10-27-br-copom-decision-26-27-oct",
    "attention": {
-    "score": 0.898,
-    "share_30d": 8.381995473722444e-05,
-    "share_12m": 9.32995097872681e-05,
-    "as_of": "2026-11-18",
+    "score": 1.575,
+    "share_30d": 0.000149451654761933,
+    "share_12m": 9.487658115510636e-05,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "(Copom OR \"Selic rate\")"
    },
@@ -2304,10 +2304,10 @@
    "origin": "fed:scraped",
    "id": "2027-10-27-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },
@@ -2363,10 +2363,10 @@
    "origin": "rule:banxico_survey",
    "id": "2027-11-01-mx-banxico-survey-of-private-sector-economists",
    "attention": {
-    "score": 2.312,
-    "share_30d": 1.2627761375718836e-05,
-    "share_12m": 5.462566169266672e-06,
-    "as_of": "2026-11-25",
+    "score": 2.164,
+    "share_30d": 1.1861242441423254e-05,
+    "share_12m": 5.481457256464775e-06,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "Banxico survey analysts"
    },
@@ -2429,10 +2429,10 @@
    "origin": "fed:scraped",
    "id": "2027-11-17-global-fomc-decision",
    "attention": {
-    "score": 0.558,
-    "share_30d": 7.022787311619855e-05,
-    "share_12m": 0.00012581204757575713,
-    "as_of": "2026-11-06",
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
     "source": "GDELT DOC 2.0 (timelinevolraw)",
     "query": "\"Federal Reserve\" FOMC"
    },

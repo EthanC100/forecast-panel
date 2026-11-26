@@ -194,9 +194,16 @@
      395953.0,
      1.2627761375718836e-05,
      5.462566169266672e-06
+    ],
+    [
+     "2026-11-26",
+     5.0,
+     421541.0,
+     1.1861242441423254e-05,
+     5.481457256464775e-06
     ]
    ],
-   "last_success": "2026-11-25T05:06:23Z"
+   "last_success": "2026-11-26T04:21:53Z"
   },
   "(Copom OR \"Selic rate\")": {
    "country": "BR",
@@ -255,10 +262,16 @@
      1002148.0,
      8.381995473722444e-05,
      9.32995097872681e-05
+    ],
+    [
+     "2026-11-26",
+     63.0,
+     421541.0,
+     0.000149451654761933,
+     9.487658115510636e-05
     ]
    ],
-   "last_success": "2026-11-18T03:52:19Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-26T04:23:42Z"
   },
   "Banxico \"interest rate\"": {
    "country": "MX",
@@ -391,7 +404,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -422,10 +435,16 @@
      1224585.0,
      7.022787311619855e-05,
      0.00012581204757575713
+    ],
+    [
+     "2026-11-26",
+     29.0,
+     421541.0,
+     6.879520616025488e-05,
+     0.00012666001026769428
     ]
    ],
-   "last_success": "2026-11-06T02:39:08Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-26T04:24:27Z"
   },
   "France budget \"National Assembly\"": {
    "country": "FR",
@@ -501,9 +520,16 @@
      395953.0,
      6.818991142888172e-05,
      4.239670697628372e-05
+    ],
+    [
+     "2026-11-26",
+     31.0,
+     421541.0,
+     7.353970313682417e-05,
+     4.234030975466824e-05
     ]
    ],
-   "last_success": "2026-11-25T05:00:52Z"
+   "last_success": "2026-11-26T04:17:06Z"
   },
   "Mexico 2027 budget Chamber of Deputies": {
    "country": "MX",
@@ -516,6 +542,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-25T05:08:49Z",
+ "updated_at": "2026-11-26T04:26:54Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
