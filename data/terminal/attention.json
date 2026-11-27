@@ -529,7 +529,8 @@
      4.234030975466824e-05
     ]
    ],
-   "last_success": "2026-11-26T04:17:06Z"
+   "last_success": "2026-11-26T04:17:06Z",
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "Mexico 2027 budget Chamber of Deputies": {
    "country": "MX",
@@ -542,6 +543,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-26T04:26:54Z",
+ "updated_at": "2026-11-27T04:26:44Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }

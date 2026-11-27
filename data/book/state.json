@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-26T04:26:54Z",
- "as_of": "2026-11-26",
+ "generated_at": "2026-11-27T04:26:44Z",
+ "as_of": "2026-11-27",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
  "start_date": "2026-10-29",
@@ -45,8 +45,8 @@
    "country": "MX",
    "series": "mx.usdmxn.fix",
    "proxy": false,
-   "value": 19.704,
-   "date": "2026-11-25",
+   "value": 19.7203,
+   "date": "2026-11-26",
    "close_utc": "18:30",
    "low_frequency": false,
    "note": null,
@@ -122,8 +122,8 @@
    "country": "BR",
    "series": "br.td.pre_longest",
    "proxy": false,
-   "value": 15.42,
-   "date": "2026-11-19",
+   "value": 15.28,
+   "date": "2026-11-25",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": "If Tesouro lists a longer bond during a trade, the proxy switches bonds; the trade is flagged.",
@@ -145,8 +145,8 @@
    "country": "BR",
    "series": "br.di.f27.proxy",
    "proxy": true,
-   "value": 13.62,
-   "date": "2026-11-19",
+   "value": 13.6,
+   "date": "2026-11-25",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
@@ -172,8 +172,8 @@
    "country": "BR",
    "series": "br.di.f29.proxy",
    "proxy": true,
-   "value": 15.1,
-   "date": "2026-11-19",
+   "value": 14.95,
+   "date": "2026-11-25",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
@@ -199,8 +199,8 @@
    "country": "BR",
    "series": "br.di.f31.proxy",
    "proxy": true,
-   "value": 15.41,
-   "date": "2026-11-19",
+   "value": 15.24,
+   "date": "2026-11-25",
    "close_utc": "13:00",
    "low_frequency": false,
    "note": null,
@@ -276,8 +276,8 @@
    "country": "GLOBAL",
    "series": "gl.gold",
    "proxy": false,
-   "value": 3603.5,
-   "date": "2026-11-25",
+   "value": 3655.8,
+   "date": "2026-11-26",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot gold in US dollars per ounce. Falls back to the World Bank's monthly average (low frequency) when no daily price is available.",
@@ -299,8 +299,8 @@
    "country": "GLOBAL",
    "series": "gl.silver",
    "proxy": false,
-   "value": 41.96,
-   "date": "2026-11-25",
+   "value": 43.76,
+   "date": "2026-11-26",
    "close_utc": "21:00",
    "low_frequency": false,
    "note": "Spot silver in US dollars per ounce. Falls back to the World Bank's monthly average when no daily price is available.",
@@ -405,6 +405,10 @@
    [
     "2026-11-26",
     100000.0
+   ],
+   [
+    "2026-11-27",
+    100000.0
    ]
   ],
   "worst_drawdown": {
@@ -440,10 +444,10 @@
     "return_pct": 7.53
    },
    "last_12m": {
-    "from": "2025-11-26",
+    "from": "2025-11-27",
     "to": "2026-11-24",
-    "pnl_usd": -2521.72,
-    "return_pct": -2.52
+    "pnl_usd": -2142.55,
+    "return_pct": -2.14
    }
   },
   {
@@ -454,15 +458,15 @@
    "description": "long USD",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-25",
-    "pnl_usd": 4329.48,
-    "return_pct": 4.33
+    "to": "2026-11-26",
+    "pnl_usd": 4401.83,
+    "return_pct": 4.4
    },
    "last_12m": {
-    "from": "2025-11-26",
-    "to": "2026-11-25",
-    "pnl_usd": 3801.22,
-    "return_pct": 3.8
+    "from": "2025-11-27",
+    "to": "2026-11-26",
+    "pnl_usd": 3928.16,
+    "return_pct": 3.93
    }
   },
   {
@@ -478,10 +482,10 @@
     "return_pct": -1.73
    },
    "last_12m": {
-    "from": "2025-11-26",
+    "from": "2025-11-28",
     "to": "2026-11-20",
-    "pnl_usd": -6793.09,
-    "return_pct": -6.79
+    "pnl_usd": -6856.15,
+    "return_pct": -6.86
    }
   },
   {
@@ -506,15 +510,15 @@
    "description": "long the bond",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-19",
-    "pnl_usd": -1980.0,
-    "return_pct": -1.98
+    "to": "2026-11-25",
+    "pnl_usd": -1210.0,
+    "return_pct": -1.21
    },
    "last_12m": {
-    "from": "2025-11-26",
-    "to": "2026-11-19",
-    "pnl_usd": -10010.0,
-    "return_pct": -10.01
+    "from": "2025-11-27",
+    "to": "2026-11-25",
+    "pnl_usd": -9680.0,
+    "return_pct": -9.68
    }
   },
   {
@@ -525,15 +529,15 @@
    "description": "long the bond",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-19",
-    "pnl_usd": -17.78,
-    "return_pct": -0.02
+    "to": "2026-11-25",
+    "pnl_usd": -14.54,
+    "return_pct": -0.01
    },
    "last_12m": {
-    "from": "2025-11-26",
-    "to": "2026-11-19",
-    "pnl_usd": -116.94,
-    "return_pct": -0.12
+    "from": "2025-11-27",
+    "to": "2026-11-25",
+    "pnl_usd": -106.94,
+    "return_pct": -0.11
    }
   },
   {
@@ -544,15 +548,15 @@
    "description": "long the bond",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-19",
-    "pnl_usd": -455.38,
-    "return_pct": -0.46
+    "to": "2026-11-25",
+    "pnl_usd": -170.77,
+    "return_pct": -0.17
    },
    "last_12m": {
-    "from": "2025-11-26",
-    "to": "2026-11-19",
-    "pnl_usd": -6100.56,
-    "return_pct": -6.1
+    "from": "2025-11-27",
+    "to": "2026-11-25",
+    "pnl_usd": -5795.33,
+    "return_pct": -5.8
    }
   },
   {
@@ -563,15 +567,15 @@
    "description": "long the bond",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-19",
-    "pnl_usd": -870.62,
-    "return_pct": -0.87
+    "to": "2026-11-25",
+    "pnl_usd": -253.93,
+    "return_pct": -0.25
    },
    "last_12m": {
-    "from": "2025-11-26",
-    "to": "2026-11-19",
-    "pnl_usd": -9774.33,
-    "return_pct": -9.77
+    "from": "2025-11-27",
+    "to": "2026-11-25",
+    "pnl_usd": -9278.65,
+    "return_pct": -9.28
    }
   },
   {
@@ -601,10 +605,10 @@
     "return_pct": 0.56
    },
    "last_12m": {
-    "from": "2025-11-26",
+    "from": "2025-11-28",
     "to": "2026-11-24",
-    "pnl_usd": -7280.0,
-    "return_pct": -7.28
+    "pnl_usd": -7120.0,
+    "return_pct": -7.12
    }
   },
   {
@@ -615,15 +619,15 @@
    "description": "long gold",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-25",
-    "pnl_usd": -7876.49,
-    "return_pct": -7.88
+    "to": "2026-11-26",
+    "pnl_usd": -6546.2,
+    "return_pct": -6.55
    },
    "last_12m": {
-    "from": "2025-11-26",
-    "to": "2026-11-25",
-    "pnl_usd": -17335.55,
-    "return_pct": -17.34
+    "from": "2025-11-28",
+    "to": "2026-11-26",
+    "pnl_usd": -17919.12,
+    "return_pct": -17.92
    }
   },
   {
@@ -634,15 +638,15 @@
    "description": "long silver",
    "since_start": {
     "from": "2026-10-29",
-    "to": "2026-11-25",
-    "pnl_usd": -14836.53,
-    "return_pct": -14.84
+    "to": "2026-11-26",
+    "pnl_usd": -11181.43,
+    "return_pct": -11.18
    },
    "last_12m": {
-    "from": "2025-11-26",
-    "to": "2026-11-25",
-    "pnl_usd": -24554.51,
-    "return_pct": -24.55
+    "from": "2025-11-28",
+    "to": "2026-11-26",
+    "pnl_usd": -26313.47,
+    "return_pct": -26.31
    }
   }
  ],
