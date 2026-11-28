@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T04:26:46Z",
+ "generated_at": "2026-11-28T02:57:30Z",
  "tiles": [
   {
    "key": "usdbrl",
@@ -372,28 +372,6 @@
  ],
  "next_catalysts": [
   {
-   "date": "2026-11-27",
-   "country": "FR",
-   "type": "ratings",
-   "title": "Standard & Poor's sovereign rating review: France",
-   "importance": 3,
-   "status": "confirmed",
-   "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
-   "query": "\"Standard\" France rating",
-   "note": "Next review date from the AFT ratings table (fetched 2026-11-07).",
-   "origin": "aft",
-   "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
-   "attention": {
-    "score": 1.737,
-    "share_30d": 7.353970313682417e-05,
-    "share_12m": 4.234030975466824e-05,
-    "as_of": "2026-11-26",
-    "source": "GDELT DOC 2.0 (timelinevolraw)",
-    "query": "\"Standard\" France rating"
-   },
-   "under_attended": false
-  },
-  {
    "date": "2026-11-30",
    "country": "MX",
    "type": "trade",
@@ -434,6 +412,28 @@
     "changed": 17,
     "of": 24
    }
+  },
+  {
+   "date": "2026-12-09",
+   "country": "GLOBAL",
+   "type": "rates",
+   "title": "FOMC decision",
+   "importance": 3,
+   "status": "confirmed",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "query": "\"Federal Reserve\" FOMC",
+   "note": "Second day of the meeting; statement 14:00 ET.",
+   "origin": "fed:scraped",
+   "id": "2026-12-09-global-fomc-decision",
+   "attention": {
+    "score": 0.543,
+    "share_30d": 6.879520616025488e-05,
+    "share_12m": 0.00012666001026769428,
+    "as_of": "2026-11-26",
+    "source": "GDELT DOC 2.0 (timelinevolraw)",
+    "query": "\"Federal Reserve\" FOMC"
+   },
+   "under_attended": false
   }
  ],
  "countries": {
@@ -778,28 +778,6 @@
     }
    ],
    "events": [
-    {
-     "date": "2026-11-27",
-     "country": "FR",
-     "type": "ratings",
-     "title": "Standard & Poor's sovereign rating review: France",
-     "importance": 3,
-     "status": "confirmed",
-     "source": "https://www.aft.gouv.fr/en/frances-credit-ratings",
-     "query": "\"Standard\" France rating",
-     "note": "Next review date from the AFT ratings table (fetched 2026-11-07).",
-     "origin": "aft",
-     "id": "2026-11-27-fr-standard-poor-s-sovereign-rating-review-france",
-     "attention": {
-      "score": 1.737,
-      "share_30d": 7.353970313682417e-05,
-      "share_12m": 4.234030975466824e-05,
-      "as_of": "2026-11-26",
-      "source": "GDELT DOC 2.0 (timelinevolraw)",
-      "query": "\"Standard\" France rating"
-     },
-     "under_attended": false
-    },
     {
      "date": "2026-12-10",
      "country": "FR",
@@ -1382,7 +1360,7 @@
      "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-11-17",
-     "fetched_at": "2026-11-27T04:20:21Z",
+     "fetched_at": "2026-11-28T02:57:23Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "br.cot.brl",
      "evidence": {
@@ -2219,7 +2197,7 @@
      "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
      "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
      "as_of": "2026-11-17",
-     "fetched_at": "2026-11-27T04:20:28Z",
+     "fetched_at": "2026-11-28T02:57:25Z",
      "frequency": "weekly (Tuesday positions, released Friday)",
      "series": "mx.cot.mxn",
      "evidence": {
@@ -2873,8 +2851,8 @@
     "country": "GLOBAL",
     "error": null,
     "fallback_for": null,
-    "last_attempt": "2026-11-27T04:20:19Z",
-    "last_success": "2026-11-27T04:20:19Z",
+    "last_attempt": "2026-11-28T02:57:21Z",
+    "last_success": "2026-11-28T02:57:21Z",
     "n_series": 3,
     "name": "CFTC Commitments of Traders (BRL, MXN, ZAR)",
     "note": null,
@@ -3281,7 +3259,7 @@
     "state": "ok"
    }
   },
-  "updated_at": "2026-11-27T04:26:44Z"
+  "updated_at": "2026-11-28T02:57:28Z"
  },
  "series_index": [
   "br.cot.brl",

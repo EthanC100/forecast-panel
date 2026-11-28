@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T04:26:49Z",
+ "generated_at": "2026-11-28T02:57:34Z",
  "gauges": [
   {
    "id": "a",
@@ -1188,7 +1188,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-17",
-      "fetched_at": "2026-11-27T04:20:21Z",
+      "fetched_at": "2026-11-28T02:57:23Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1218,7 +1218,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-17",
-      "fetched_at": "2026-11-27T04:20:28Z",
+      "fetched_at": "2026-11-28T02:57:25Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1387,7 +1387,7 @@
    "title": "Brazil 2027: fiscal-framework credibility",
    "question": "By 31 March 2027, will Brazil keep its 2027 primary-balance target at +0.5% of GDP and the LC 200/2023 spending rule unchanged, with no bill sent to Congress to change either?",
    "date": "2027-01-05",
-   "days": 39,
+   "days": 38,
    "score": 0.45,
    "signals": [
     {
@@ -1399,34 +1399,11 @@
    ]
   },
   {
-   "scenario": "fr-sp-2026-11",
-   "title": "S&P review of France, 27 Nov 2026",
-   "question": "Will S&P Global Ratings lower France's long-term foreign-currency rating below A+ at or before its scheduled review on Friday 27 November 2026?",
-   "date": "2026-11-27",
-   "days": 0,
-   "score": 0.392,
-   "signals": [
-    {
-     "signal": "market vs base rate",
-     "detail": "market 6% vs base rate 0%",
-     "strength": 0.18333333333333335,
-     "badge": "untested",
-     "hidden_market": true
-    },
-    {
-     "signal": "forced-flow threshold",
-     "detail": "Last AA-category rating among the big three: Moody's at Aa3 (negative) is the last; one notch removes it",
-     "strength": 1.0,
-     "badge": "context"
-    }
-   ]
-  },
-  {
    "scenario": "fr-budget-2027",
    "title": "France 2027 budget and the Article 47 deadline",
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
-   "days": 13,
+   "days": 12,
    "score": 0.108,
    "signals": [
     {
@@ -1443,7 +1420,7 @@
    "title": "France 2027 presidential election",
    "question": "Will the Rassemblement National's candidate (Marine Le Pen or Jordan Bardella) win the 2027 French presidential election?",
    "date": "2027-04-25",
-   "days": 149,
+   "days": 148,
    "score": 0,
    "signals": []
   }

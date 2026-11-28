@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-27T04:26:44Z",
- "as_of": "2026-11-27",
+ "generated_at": "2026-11-28T02:57:28Z",
+ "as_of": "2026-11-28",
  "repo": "EthanC100/forecast-panel",
  "starting_capital_usd": 100000.0,
  "start_date": "2026-10-29",
@@ -444,10 +444,10 @@
     "return_pct": 7.53
    },
    "last_12m": {
-    "from": "2025-11-27",
+    "from": "2025-11-28",
     "to": "2026-11-24",
-    "pnl_usd": -2142.55,
-    "return_pct": -2.14
+    "pnl_usd": -1852.16,
+    "return_pct": -1.85
    }
   },
   {
@@ -463,10 +463,10 @@
     "return_pct": 4.4
    },
    "last_12m": {
-    "from": "2025-11-27",
+    "from": "2025-11-28",
     "to": "2026-11-26",
-    "pnl_usd": 3928.16,
-    "return_pct": 3.93
+    "pnl_usd": 4136.3,
+    "return_pct": 4.14
    }
   },
   {
@@ -515,10 +515,10 @@
     "return_pct": -1.21
    },
    "last_12m": {
-    "from": "2025-11-27",
+    "from": "2025-11-28",
     "to": "2026-11-25",
-    "pnl_usd": -9680.0,
-    "return_pct": -9.68
+    "pnl_usd": -9845.0,
+    "return_pct": -9.85
    }
   },
   {
@@ -534,10 +534,10 @@
     "return_pct": -0.01
    },
    "last_12m": {
-    "from": "2025-11-27",
+    "from": "2025-11-28",
     "to": "2026-11-25",
-    "pnl_usd": -106.94,
-    "return_pct": -0.11
+    "pnl_usd": -38.77,
+    "return_pct": -0.04
    }
   },
   {
@@ -553,10 +553,10 @@
     "return_pct": -0.17
    },
    "last_12m": {
-    "from": "2025-11-27",
+    "from": "2025-11-28",
     "to": "2026-11-25",
-    "pnl_usd": -5795.33,
-    "return_pct": -5.8
+    "pnl_usd": -5650.37,
+    "return_pct": -5.65
    }
   },
   {
@@ -572,10 +572,10 @@
     "return_pct": -0.25
    },
    "last_12m": {
-    "from": "2025-11-27",
+    "from": "2025-11-28",
     "to": "2026-11-25",
-    "pnl_usd": -9278.65,
-    "return_pct": -9.28
+    "pnl_usd": -9273.71,
+    "return_pct": -9.27
    }
   },
   {
@@ -586,10 +586,10 @@
    "description": "long the bond",
    "since_start": null,
    "last_12m": {
-    "from": "2025-11-27",
+    "from": "2025-12-24",
     "to": "2026-11-19",
-    "pnl_usd": -1759.57,
-    "return_pct": -1.76
+    "pnl_usd": -439.57,
+    "return_pct": -0.44
    }
   },
   {
