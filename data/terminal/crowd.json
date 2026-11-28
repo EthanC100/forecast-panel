@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T02:57:34Z",
+ "generated_at": "2026-11-28T04:10:36Z",
  "gauges": [
   {
    "id": "a",
@@ -1011,7 +1011,7 @@
       "source_id": "ExpectativasMercadoSelic/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
       "as_of": "2026-11-19",
-      "fetched_at": "2026-11-27T04:17:47Z",
+      "fetched_at": "2026-11-28T03:56:01Z",
       "frequency": "daily (business days)",
       "series": "br.focus.selic_meeting",
       "evidence": {
@@ -1043,7 +1043,7 @@
       "source_id": "ExpectativasMercadoAnuais/Resultado primário/baseCalculo=0",
       "source_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais",
       "as_of": "2026-11-19",
-      "fetched_at": "2026-11-27T04:17:44Z",
+      "fetched_at": "2026-11-28T03:55:58Z",
       "frequency": "daily (business days)",
       "series": "br.focus.primary",
       "evidence": {
@@ -1076,7 +1076,7 @@
       "source_id": "SIE SR14139, SR14144, SR14142, SR14143, SR14146, SR14151, SR14149, SR14150 (median, sd, min, max for years t and t+1)",
       "source_url": "https://www.banxico.org.mx/SieInternet/consultaSerieGrafica.do?s=SR14139,SR14144,SR14142,SR14143,SR14146,SR14151,SR14149,SR14150,CF300,1",
       "as_of": "2026-10-01",
-      "fetched_at": "2026-11-27T04:19:40Z",
+      "fetched_at": "2026-11-28T03:58:31Z",
       "frequency": "monthly",
       "series": "mx.survey.inflation",
       "evidence": {
@@ -1188,7 +1188,7 @@
       "source_id": "CFTC contract 102741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-17",
-      "fetched_at": "2026-11-28T02:57:23Z",
+      "fetched_at": "2026-11-28T03:59:10Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "br.cot.brl",
       "evidence": {
@@ -1218,7 +1218,7 @@
       "source_id": "CFTC contract 095741: TFF gpe5-46if + legacy 6dca-aqww",
       "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
       "as_of": "2026-11-17",
-      "fetched_at": "2026-11-28T02:57:25Z",
+      "fetched_at": "2026-11-28T03:59:11Z",
       "frequency": "weekly (Tuesday positions, released Friday)",
       "series": "mx.cot.mxn",
       "evidence": {
@@ -1404,12 +1404,12 @@
    "question": "Will France's 2027 budget law (loi de finances pour 2027) be promulgated by 31 December 2026?",
    "date": "2026-12-10",
    "days": 12,
-   "score": 0.108,
+   "score": 0.083,
    "signals": [
     {
      "signal": "market vs base rate",
-     "detail": "market 44% vs base rate 50%",
-     "strength": 0.21666666666666667,
+     "detail": "market 45% vs base rate 50%",
+     "strength": 0.16666666666666663,
      "badge": "untested",
      "hidden_market": true
     }

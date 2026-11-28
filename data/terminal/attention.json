@@ -118,10 +118,16 @@
      577900.0,
      3.460806367883717e-06,
      2.9983636929872804e-06
+    ],
+    [
+     "2026-11-28",
+     7.0,
+     477112.0,
+     1.4671607505156022e-05,
+     3.1766436459083366e-06
     ]
    ],
-   "last_success": "2026-11-21T03:18:32Z",
-   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
+   "last_success": "2026-11-28T04:01:32Z"
   },
   "Banxico survey analysts": {
    "country": "MX",
@@ -201,9 +207,16 @@
      421541.0,
      1.1861242441423254e-05,
      5.481457256464775e-06
+    ],
+    [
+     "2026-11-28",
+     5.0,
+     477112.0,
+     1.0479719646540016e-05,
+     5.5137457568266125e-06
     ]
    ],
-   "last_success": "2026-11-26T04:21:53Z"
+   "last_success": "2026-11-28T04:04:29Z"
   },
   "(Copom OR \"Selic rate\")": {
    "country": "BR",
@@ -269,9 +282,16 @@
      421541.0,
      0.000149451654761933,
      9.487658115510636e-05
+    ],
+    [
+     "2026-11-28",
+     75.0,
+     477112.0,
+     0.00015719579469810024,
+     9.532199968900659e-05
     ]
    ],
-   "last_success": "2026-11-26T04:23:42Z"
+   "last_success": "2026-11-28T04:06:18Z"
   },
   "Banxico \"interest rate\"": {
    "country": "MX",
@@ -404,7 +424,7 @@
   "(USMCA OR T-MEC) Mexico": {
    "country": "MX",
    "history": [],
-   "error": "RuntimeError: GDELT 200: One or more of your keywords contained an illegal character. To use a dash in a word, place it in quotes like \"f-16\".\n"
+   "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   },
   "\"Federal Reserve\" FOMC": {
    "country": "GLOBAL",
@@ -442,9 +462,16 @@
      421541.0,
      6.879520616025488e-05,
      0.00012666001026769428
+    ],
+    [
+     "2026-11-28",
+     30.0,
+     477112.0,
+     6.287831787924009e-05,
+     0.00012674808147174264
     ]
    ],
-   "last_success": "2026-11-26T04:24:27Z"
+   "last_success": "2026-11-28T04:08:08Z"
   },
   "France budget \"National Assembly\"": {
    "country": "FR",
@@ -543,6 +570,6 @@
    "error": "RuntimeError: GDELT kept returning its rate-limit notice"
   }
  },
- "updated_at": "2026-11-27T04:26:44Z",
+ "updated_at": "2026-11-28T04:10:31Z",
  "definition": "score = share of GDELT-monitored articles matching the event's keywords over the last 30 days / the same share over the last 12 months (1.0 = normal coverage); under-attended = importance 3, score < 0.5, 30+ days away"
 }
